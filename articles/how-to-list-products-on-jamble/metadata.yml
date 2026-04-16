@@ -1,0 +1,24 @@
+intercom_id: 14288093
+slug: how-to-list-products-on-jamble
+collection_id: 19177935
+
+# Primary source = pt-br per Policy #3. EN must be a 1:1 mirror.
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+reviewers:
+  - aymar
+locales:
+  pt-br:
+    title: Como Listar Produtos na Jamble
+    description: Crie um anuncio em 11 passos. Cobre titulos, modos de venda, precos, fotos e todos os campos obrigatorios.
+    # Bootstrapped from the live Intercom body (2026-04-16) via pandoc html → md.
+    # Mockups referenced by Intercom attachment URLs (intercom-attachments-1.com), not yet rewritten
+    # to raw.githubusercontent.com. Pending editorial refresh to match the pt-BR primary policy.
+  en:
+    title: How to List Products on Jamble
+    description: Create a listing in 11 steps. Covers titles, sell modes, prices, photos, and every required field.
+    # Bootstrapped from the live Intercom body (2026-04-16) via pandoc html → md.
+    # Contains the refined EN rewrite from 2026-04-15/16 (after Mahaut/Caio review integration).

@@ -77,7 +77,14 @@ node --input-type=module -e "
   }
 
   const body = { translated_content: translatedContent };
-  const defaultEntry = translatedContent[toIntercomLocale(defaultLocale)];
+  // Intercom expects top-level body/title/description to match the locale it knows as
+  // 'default_locale' on its side. That is currently 'en' for every Jamble article, regardless
+  // of what metadata.yml says (the repo-side 'default_locale' is a content-policy flag, not an
+  // Intercom API field). Passing 'default_locale' in the PUT body does not flip Intercom's
+  // default, Intercom ignores unknown fields and keeps its own.
+  // See TODO in CHANGELOG: flip Intercom default_locale to pt-BR as a separate manual op.
+  const intercomDefaultLocale = 'en';
+  const defaultEntry = translatedContent[intercomDefaultLocale];
   if (defaultEntry) {
     body.body = defaultEntry.body;
     body.description = defaultEntry.description;
