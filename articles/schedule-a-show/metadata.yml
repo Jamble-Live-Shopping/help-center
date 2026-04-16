@@ -1,0 +1,17 @@
+intercom_id: 14288114
+slug: schedule-a-show
+collection_id: 19177936
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Agendar um Show'
+    description: ''
+  en:
+    title: 'Schedule a Show'
+    description: "This guide explains how to create and schedule a live show on Jamble. You'll learn how to set up your show title, choose a category, add a cover image, set the date and time, and use repeat settings to schedule recurring shows."

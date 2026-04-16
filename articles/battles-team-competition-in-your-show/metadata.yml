@@ -1,0 +1,17 @@
+intercom_id: 14288121
+slug: battles-team-competition-in-your-show
+collection_id: 19177936
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Batalhas — Competição por Times no Seu Show'
+    description: ''
+  en:
+    title: 'Battles — Team Competition in Your Show'
+    description: 'This guide explains how Battles work on Jamble. A Battle is a live competition that happens inside your own show — your audience splits into two teams (Red and Blue) and earns points by placing offers and sending gems. The winning team gets rewards,'

@@ -1,0 +1,17 @@
+intercom_id: 14288110
+slug: cloning-items
+collection_id: 19177935
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Duplicar (Clonar) Produtos'
+    description: ''
+  en:
+    title: 'Cloning Items'
+    description: "This guide explains how to clone (duplicate) products on Jamble. Cloning lets you quickly add products from your previous shows or your shop into a new show, without creating each listing from scratch. You'll learn the two cloning methods, how to use"

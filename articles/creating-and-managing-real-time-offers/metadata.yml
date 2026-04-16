@@ -1,0 +1,17 @@
+intercom_id: 14288164
+slug: creating-and-managing-real-time-offers
+collection_id: 19177939
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Criar e Gerenciar Ofertas em Tempo Real'
+    description: ''
+  en:
+    title: 'Creating and Managing Real-Time Offers'
+    description: "This guide explains how to start, manage, and complete sales during your live show on Jamble. You'll learn the difference between the three sell modes, how timers work, and how to handle common situations like no offers or canceling a sale."

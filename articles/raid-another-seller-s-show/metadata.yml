@@ -1,0 +1,17 @@
+intercom_id: 14288118
+slug: raid-another-seller-s-show
+collection_id: 19177936
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Fazer um Raid no Show de Outro Vendedor'
+    description: ''
+  en:
+    title: "Raid Another Seller's Show"
+    description: "This guide explains how the **Jamble Raid** works. A raid lets you send your viewers to another seller's live show when you're done selling — it's a great way to support the community and help other sellers get more viewers."

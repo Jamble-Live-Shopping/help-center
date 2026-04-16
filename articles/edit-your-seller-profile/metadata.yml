@@ -1,0 +1,17 @@
+intercom_id: 14288090
+slug: edit-your-seller-profile
+collection_id: 19177934
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Editar Seu Perfil de Vendedor'
+    description: ''
+  en:
+    title: 'Edit Your Seller Profile'
+    description: 'This guide explains how to edit your seller profile on Jamble. Your profile is the first thing buyers see when they visit your shop or join your show — keeping it updated helps build trust and attract more viewers.'

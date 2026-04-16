@@ -1,0 +1,17 @@
+intercom_id: 14288101
+slug: understanding-listing-conditions-and-expectations
+collection_id: 19177935
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Entendendo as Condições e Expectativas de Listagem'
+    description: ''
+  en:
+    title: 'Understanding Listing Conditions and Expectations'
+    description: 'This guide explains the condition system on Jamble — how to accurately rate the condition of your items, what buyers expect from each condition level, and how to set the right expectations so you avoid returns and disputes.'

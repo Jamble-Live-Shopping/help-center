@@ -1,0 +1,17 @@
+intercom_id: 14288150
+slug: check-your-earnings-or-payout-status
+collection_id: 19177938
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Verificar Seus Ganhos ou Status do Saque'
+    description: ''
+  en:
+    title: 'Check Your Earnings or Payout Status'
+    description: 'This guide shows you how to check your current earnings, see the status of your payouts, and understand what each balance and status means in your wallet.'

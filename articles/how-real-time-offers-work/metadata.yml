@@ -1,0 +1,17 @@
+intercom_id: 14288115
+slug: how-real-time-offers-work
+collection_id: 19177936
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Como Funcionam as Ofertas em Tempo Real'
+    description: ''
+  en:
+    title: 'How Real-time Offers Work'
+    description: 'Real-time offers are the heart of live selling on Jamble. When you start a product sale during your show, buyers compete by placing offers in real time. This guide explains exactly how the system works — from setting up the sale to what happens when'

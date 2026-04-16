@@ -1,0 +1,17 @@
+intercom_id: 14288158
+slug: notification-settings
+collection_id: 19177939
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Configurações de Notificações'
+    description: ''
+  en:
+    title: 'Notification Settings'
+    description: 'This guide explains how to manage your push notification preferences on Jamble. You can choose exactly which notifications you want to receive, so you stay informed about what matters most without being overwhelmed.'

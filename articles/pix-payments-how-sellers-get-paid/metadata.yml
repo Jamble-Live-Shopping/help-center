@@ -1,0 +1,17 @@
+intercom_id: 14288155
+slug: pix-payments-how-sellers-get-paid
+collection_id: 19177938
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Pagamentos via PIX — Como Vendedores Recebem'
+    description: ''
+  en:
+    title: 'PIX Payments — How Sellers Get Paid'
+    description: "This guide explains how payments work for sellers on Jamble. You'll learn how your earnings are calculated, how to set up your bank account, how to request a payout via PIX, and how to troubleshoot payment issues."

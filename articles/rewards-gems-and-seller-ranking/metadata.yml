@@ -1,0 +1,17 @@
+intercom_id: 14288166
+slug: rewards-gems-and-seller-ranking
+collection_id: 19177939
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Recompensas, Gems e Ranking de Vendedores'
+    description: ''
+  en:
+    title: 'Rewards, Gems, and Seller Ranking'
+    description: 'This guide explains how the Jamble rewards system works, how buyers earn and spend gems during your shows, and how the seller ranking and badge system recognizes top sellers.'

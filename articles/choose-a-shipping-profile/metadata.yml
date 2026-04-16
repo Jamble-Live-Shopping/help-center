@@ -1,0 +1,17 @@
+intercom_id: 14288104
+slug: choose-a-shipping-profile
+collection_id: 19177935
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Escolher um Perfil de Envio'
+    description: ''
+  en:
+    title: 'Choose a Shipping Profile'
+    description: "This guide explains how shipping profiles work on Jamble. You'll learn what each profile is designed for, how to choose the right one for your products, and how shipping profiles affect the cost your buyers pay."

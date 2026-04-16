@@ -1,0 +1,17 @@
+intercom_id: 14288122
+slug: pre-offers-let-buyers-place-offers-before-your-show
+collection_id: 19177936
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Pré-ofertas — Deixe Compradores Fazerem Ofertas Antes do Show'
+    description: ''
+  en:
+    title: 'Pre-offers — Let Buyers Place Offers Before Your Show'
+    description: 'This guide explains how pre-offers work on Jamble. Pre-offers allow buyers to place offers on your products before your show starts, building excitement and guaranteeing competition from the first second you go live.'

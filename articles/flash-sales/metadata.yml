@@ -1,0 +1,17 @@
+intercom_id: 14288107
+slug: flash-sales
+collection_id: 19177935
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Vendas Relâmpago'
+    description: ''
+  en:
+    title: 'Flash Sales'
+    description: 'A Flash Sale lets you sell a Buy It Now product at a discounted price for a limited time during your live show. You set a discount percentage and a countdown timer — buyers have to act fast before time runs out. This guide shows you how to set up and'

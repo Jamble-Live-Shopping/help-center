@@ -1,0 +1,17 @@
+intercom_id: 14288096
+slug: coins-and-money-best-practices-for-sellers
+collection_id: 19177935
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Moedas e Dinheiro: Melhores Práticas para Vendedores'
+    description: ''
+  en:
+    title: 'Coins and Money: Best Practices for Sellers'
+    description: "This guide covers best practices for selling coins, banknotes, and numismatic items on Jamble in Brazil. You'll learn how to properly describe your items, take the right photos, and avoid common issues that lead to returns."

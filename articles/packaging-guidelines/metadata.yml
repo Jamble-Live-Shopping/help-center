@@ -1,0 +1,17 @@
+intercom_id: 14288140
+slug: packaging-guidelines
+collection_id: 19177937
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Diretrizes de Embalagem'
+    description: ''
+  en:
+    title: 'Packaging Guidelines'
+    description: "This guide covers how to properly package your items for shipping through Correios. Good packaging protects your products, reduces returns, and keeps your buyers happy. You'll find general rules plus specific tips for the most common Jamble categorie"

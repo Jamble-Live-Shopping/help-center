@@ -1,0 +1,17 @@
+intercom_id: 14288112
+slug: buy-it-now-sell-at-a-fixed-price
+collection_id: 19177935
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Compra Direta — Venda a Preço Fixo'
+    description: ''
+  en:
+    title: 'Buy It Now — Sell at a Fixed Price'
+    description: "This guide explains how the Buy It Now sell mode works on Jamble. Buy It Now lets you sell products at a fixed price during your live show — buyers purchase instantly without competing with other buyers. You'll learn how to set it up, what buyers see"
