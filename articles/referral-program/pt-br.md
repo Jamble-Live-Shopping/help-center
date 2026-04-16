@@ -25,18 +25,7 @@ As duas opções estão disponíveis no seu perfil no app.
 
 Vá ao seu perfil e toque em **Invite Friends** (para convidar compradores) ou **Refer Sellers** (para convidar outros vendedores).
 
-```
-┌─────────────────────────────────┐
-│  Perfil                         │
-│                                 │
-│  ▶ Invite Friends               │
-│    Ganhe R$ 30 por amigo        │
-│                                 │
-│  ▶ Refer Sellers                │
-│    Ganhe R$ 500 por vendedor    │
-│                                 │
-└─────────────────────────────────┘
-```
+![Menu de configurações de programa de referência mostrando opções de convidar amigos e indicar vendedores com valores de ganho](./assets/mockups/referral-program__referral-program__pt-br.png)
 
 ### Passo 2: Compartilhe seu link de indicação (Indicação de compradores)
 
@@ -44,37 +33,13 @@ Quando você toca em **Invite Friends**, você vê seu código de indicação pe
 
 Seu amigo recebe um link como: `jamble.com/invite/buyer/seunomeusuario`
 
-```
-┌─────────────────────────────────┐
-│  Ganhe R$ 30 por amigo          │
-│                                 │
-│  Seu código: SEUBUY             │
-│                                 │
-│  Seus amigos têm 14 dias para: │
-│                                 │
-│  1. Resgatar o código           │
-│     → R$ 30 aplicados na hora   │
-│                                 │
-│  2. Comprar 1 item em um Show   │
-│                                 │
-│  Sua recompensa:                │
-│  R$ 30 depois que comprarem     │
-│  1 item                         │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │      Share Friends        │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Tela de detalhes do programa de indicação mostrando recompensa de R$ 30 por amigo, código SEUBUY, e termos do programa com botão Compartilhar Amigos](./assets/mockups/referral-program__referral-program-details__pt-br.png)
 
 **Veja como a indicação de compradores funciona:**
 
-| Etapa | O que acontece |
-|-------|---------------|
-| Seu amigo clica no seu link | Ele chega a uma página onde digita o número de telefone |
-| Ele baixa a Jamble e resgata seu código | R$ 30 são automaticamente adicionados à conta dele |
-| Ele compra 1 item durante um Show em até 14 dias após resgatar o código | A indicação está completa — você ganha seus R$ 30 |
-
+- **Seu amigo clica no seu link** — Ele chega a uma página onde digita o número de telefone
+- **Ele baixa a Jamble e resgata seu código** — R$ 30 são automaticamente adicionados à conta dele
+- **Ele compra 1 item durante um Show em até 14 dias após resgatar o código** — A indicação está completa — você ganha seus R$ 30
 - Seu amigo ganha os R$ 30 quando resgata seu código
 - Você ganha seus R$ 30 quando seu amigo faz uma compra em até **14 dias** após resgatar o código
 - Sua recompensa de R$ 30 expira **14 dias** depois de ser creditada — use antes que desapareça
@@ -84,42 +49,14 @@ Seu amigo recebe um link como: `jamble.com/invite/buyer/seunomeusuario`
 
 Quando você toca em **Refer Sellers**, você vê uma tela diferente com recompensas maiores.
 
-```
-┌─────────────────────────────────┐
-│  Ganhe R$ 500 por amigo         │
-│                                 │
-│  Seu código: SEUBUY-LIVE        │
-│                                 │
-│  Seu amigo tem 30 dias para:    │
-│                                 │
-│  1. Resgatar o código           │
-│     → R$ 50 aplicados na hora   │
-│                                 │
-│  2. Se tornar Live Seller       │
-│     → Se inscrever e ser aceito │
-│                                 │
-│  3. Completar a primeira Live   │
-│     → Ele desbloqueia R$ 150    │
-│       extras                    │
-│                                 │
-│  Sua recompensa:                │
-│  R$ 500 após a primeira Live    │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │      Share Friends        │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![referral-program-rewards: Ganhe R$ 500 por amigo com passos e botão de compartilhamento](./assets/mockups/referral-program__referral-program-rewards__pt-br.png)
 
 **Veja como a indicação de vendedores funciona:**
 
-| Etapa | O que acontece |
-|-------|---------------|
-| Seu amigo clica no seu link | Ele chega a uma página onde digita o número de telefone |
-| Ele baixa a Jamble e se cadastra | R$ 50 são automaticamente adicionados à conta dele |
-| Ele se inscreve para vender e é aceito | Ele se torna um vendedor na Jamble |
-| Ele completa sua primeira Live | Ele ganha R$ 150 extras, e você ganha R$ 500 |
-
+- **Seu amigo clica no seu link** — Ele chega a uma página onde digita o número de telefone
+- **Ele baixa a Jamble e se cadastra** — R$ 50 são automaticamente adicionados à conta dele
+- **Ele se inscreve para vender e é aceito** — Ele se torna um vendedor na Jamble
+- **Ele completa sua primeira Live** — Ele ganha R$ 150 extras, e você ganha R$ 500
 - Seu amigo tem **30 dias** para completar todas as etapas
 - Recompensa total para o novo vendedor: **R$ 200** (R$ 50 + R$ 150)
 - Sua recompensa: **R$ 500**

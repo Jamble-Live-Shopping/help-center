@@ -29,42 +29,10 @@ Go live as you normally would on your **main phone** — the one you want to use
 On your **second phone** (logged into the same Jamble account), open the app and go to your live show. Since you're already broadcasting from your main device, a dialog appears:
 
 **On iOS:**
-```
-┌─────────────────────────────────┐
-│  Remote Control                 │
-│                                 │
-│  Select the first option if     │
-│  you want to use this device    │
-│  as a remote. In case you want  │
-│  to livestream from this        │
-│  device, use the second option  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │   Use as a remote         │  │
-│  └───────────────────────────┘  │
-│  ┌───────────────────────────┐  │
-│  │   Livestream from this    │  │
-│  │   device                  │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Remote Control screen with device role selection: Use as a remote or Livestream from this device buttons](./assets/mockups/use-two-devices-while-hosting__remote-control-picker__en.png)
 
 **On Android:**
-```
-┌─────────────────────────────────┐
-│  Another device is broadcasting │
-│                                 │
-│  Do you want to take over       │
-│  broadcasting from this device? │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │   Take over               │  │
-│  └───────────────────────────┘  │
-│  ┌───────────────────────────┐  │
-│  │   Stay as remote control  │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Device broadcast takeover alert: dialog asking user to take over broadcasting from another device](./assets/mockups/use-two-devices-while-hosting__device-broadcast-takeover__en.png)
 
 ### Step 3: Choose "Use as a remote" (or "Stay as remote control")
 
@@ -93,17 +61,7 @@ This is useful if your main phone is running low on battery, or if you want to s
 
 If the phone that's broadcasting loses connection (battery dies, app crashes, Wi-Fi drops), your remote device will show a message:
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  Hold on                        │
-│                                 │
-│  Your main device seems offline │
-│                                 │
-│  ⏳ (loading spinner)           │
-│                                 │
-└─────────────────────────────────┘
-```
+![device-offline-loading: dialog showing "Hold on" title and "Your main device seems offline" message with loading spinner](./assets/mockups/use-two-devices-while-hosting__device-offline-loading__en.png)
 
 You can then **take over the broadcast** from the remote device to continue your show without interruption.
 

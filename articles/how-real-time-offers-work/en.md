@@ -14,12 +14,9 @@ Real-time offers are the heart of live selling on Jamble. When you start a produ
 
 When you list a product on Jamble, you choose one of three sell modes:
 
-| Sell mode | How it works |
-|-----------|-------------|
-| **Real-time offers** | Buyers compete by placing offers. Timer extends when new offers come in. Highest offer wins |
-| **Sudden Death** | Same as real-time offers, but the timer does NOT extend. When time runs out, it's over — no second chances |
-| **Buy It Now** | Fixed price. Buyers purchase instantly at the price you set. No competition |
-
+- ****Real-time offers**** — Buyers compete by placing offers. Timer extends when new offers come in. Highest offer wins
+- ****Sudden Death**** — Same as real-time offers, but the timer does NOT extend. When time runs out, it's over — no second chances
+- ****Buy It Now**** — Fixed price. Buyers purchase instantly at the price you set. No competition
 This article focuses on **Real-time offers** and **Sudden Death** — the two competitive sell modes.
 
 ## How a real-time offer sale works
@@ -33,19 +30,7 @@ Configure two key settings:
 - **Starting price** — the minimum amount for the first offer (minimum R$ 5.00)
 - **Duration** — how long the sale lasts (5 to 90 seconds)
 
-```
-┌─────────────────────────────────┐
-│  Sell Mode                      │
-│                                 │
-│  ● Real-time offers             │
-│  ○ Sudden Death                 │
-│  ○ Buy It Now                   │
-│                                 │
-│  Starting price: R$ ____        │
-│  Duration: [30 seconds ▼]       │
-│                                 │
-└─────────────────────────────────┘
-```
+![Sell Mode screen with Real-time offers selected, showing price and duration inputs](./assets/mockups/how-real-time-offers-work__sell-mode-picker__en.png)
 
 ### Step 2: Start the sale during your show
 
@@ -55,22 +40,7 @@ When you're live, find the product in your product list and tap **"Start"**. Her
 2. The countdown timer begins
 3. Buyers can start placing offers
 
-```
-┌─────────────────────────────────┐
-│  What buyers see:               │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  Nike Air Max 90          │  │
-│  │                           │  │
-│  │  Current offer: R$45      │  │
-│  │  ⏱ 0:18                   │  │
-│  │                           │  │
-│  │  ┌─────────────────────┐  │  │
-│  │  │  Place offer: R$50  │  │  │
-│  │  └─────────────────────┘  │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![real-time-offer-card: Nike Air Max 90 product with current offer R$45, countdown timer 0:18, and Place offer R$50 button](./assets/mockups/how-real-time-offers-work__real-time-offer-card__en.png)
 
 ### Step 3: Buyers place offers
 

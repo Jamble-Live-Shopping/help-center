@@ -16,12 +16,9 @@ A Jamble não usa comandos digitados (como /ban ou /mute). Todas as ações de m
 
 Existem três papéis com poderes de moderação:
 
-| Papel | O que pode fazer |
-|-------|-----------------|
-| **Vendedor (apresentador)** | Excluir mensagens, bloquear usuários do show |
-| **Moderador** | Excluir mensagens, bloquear usuários do show |
-| **Admin (equipe Jamble)** | Tudo acima + silenciar, banir |
-
+- ****Vendedor (apresentador)**** — Excluir mensagens, bloquear usuários do show
+- ****Moderador**** — Excluir mensagens, bloquear usuários do show
+- ****Admin (equipe Jamble)**** — Tudo acima + silenciar, banir
 Como vendedor, você tem controle total de moderação sobre seu próprio show.
 
 ## Gerenciando seu chat
@@ -85,19 +82,7 @@ Moderadores são usuários de confiança que podem ajudar a gerenciar seu chat d
 3. Você verá uma lista de perfis que você segue
 4. Toque no botão **Adicionar** ao lado da pessoa que quer tornar moderadora
 
-```
-┌─────────────────────────────────┐
-│  My Moderators                  │
-│                                 │
-│  ┌───┐ username1        [Add]   │
-│  │ 👤│ @user1                   │
-│  └───┘                          │
-│  ┌───┐ username2      [Remove]  │
-│  │ 👤│ @user2 (moderador)       │
-│  └───┘                          │
-│                                 │
-└─────────────────────────────────┘
-```
+![Tela Meus Moderadores exibindo lista de moderadores com nome de usuário, handle e botões de ação para adicionar ou remover moderadores](./assets/mockups/chat-and-moderation-tools-during-your-show__my-moderators__pt-br.png)
 
 Você só pode adicionar pessoas que você segue como moderadores.
 

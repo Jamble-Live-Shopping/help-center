@@ -48,23 +48,7 @@ If you haven't generated a label yet for a bundle:
 
 **Step 2:** The **Shipping Label** screen opens, showing your label as a PDF. If the shipment includes a content declaration, you'll see two tabs:
 
-```
-┌─────────────────────────────────┐
-│  Shipping Label                 │
-│                                 │
-│  [ Label ] [ Content Declaration]│
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │                           │  │
-│  │     [PDF Preview]         │  │
-│  │                           │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │         Print             │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Shipping Label screen with Label and Content Declaration tabs, PDF preview area, and Print button](./assets/mockups/change-or-fix-your-shipping-label__shipping-label-view__en.png)
 
 **Step 3:** Tap **Print** to export the PDF. This opens your phone's share menu where you can print directly, save to Files, or send to another device
 

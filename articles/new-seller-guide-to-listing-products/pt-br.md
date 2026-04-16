@@ -23,18 +23,7 @@ Alguns campos são **obrigatórios** (título, modo de venda, perfil de envio, p
 
 Vá ao show que você criou, depois toque na opção de adicionar um produto.
 
-```
-┌─────────────────────────────────┐
-│  Seu Show                       │
-│                                 │
-│  Produtos (0)                   │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │   + Adicionar Produto     │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Tela de produtos do vendedor vazia com título "Seu Show" e botão "Adicionar Produto"](./assets/mockups/new-seller-guide-to-listing-products__seller-products-empty__pt-br.png)
 
 ### Passo 2: Adicione um título
 
@@ -56,16 +45,7 @@ Selecione como você quer vender este item durante seu show:
 - **Sudden Death** — similar às ofertas em tempo real, mas tempo extra não é adicionado quando alguém faz uma oferta. O cronômetro conta sem extensões
 - **Compra Direta** — preço fixo. Os compradores compram instantaneamente pelo preço que você definiu. Você também pode ativar uma Venda Relâmpago com um desconto percentual e um cronômetro
 
-```
-┌─────────────────────────────────┐
-│  Modo de Venda                  │
-│                                 │
-│  ○ Ofertas em tempo real        │
-│  ○ Sudden Death                 │
-│  ○ Compra Direta                │
-│                                 │
-└─────────────────────────────────┘
-```
+![sell-mode-picker: Seletor de modo de venda com três opções - Ofertas em tempo real, Sudden Death ou Compra Direta](./assets/mockups/new-seller-guide-to-listing-products__sell-mode-picker__pt-br.png)
 
 ### Passo 4: Defina seu preço
 
@@ -80,37 +60,24 @@ Você também pode adicionar um **preço de varejo** (opcional) — isso mostra 
 
 Selecione o perfil de envio que corresponde ao tamanho e peso do seu item embalado.
 
-| Perfil | Melhor para |
-|--------|-------------|
-| Carta | Cartas, itens planos |
-| Booster | Pacotes de cartas, múltiplas cartas |
-| Acessórios leves | Joias, lenços, itens pequenos |
-| Roupas leves | Camisetas, regatas, blusas |
-| Roupas padrão | Camisas, vestidos, suéteres |
-| Roupas mais pesadas | Jeans, vestidos grossos, calças |
-| Itens volumosos | Jaquetas, casacos de inverno |
-| Pacotes pequenos | Grupos pequenos de itens |
-| Pacotes médios | Grupos médios de itens |
-| Pacotes grandes | Grupos grandes de itens |
-| Pacotes extra-grandes | Pedidos muito grandes |
-
+- **Carta** — Cartas, itens planos
+- **Booster** — Pacotes de cartas, múltiplas cartas
+- **Acessórios leves** — Joias, lenços, itens pequenos
+- **Roupas leves** — Camisetas, regatas, blusas
+- **Roupas padrão** — Camisas, vestidos, suéteres
+- **Roupas mais pesadas** — Jeans, vestidos grossos, calças
+- **Itens volumosos** — Jaquetas, casacos de inverno
+- **Pacotes pequenos** — Grupos pequenos de itens
+- **Pacotes médios** — Grupos médios de itens
+- **Pacotes grandes** — Grupos grandes de itens
+- **Pacotes extra-grandes** — Pedidos muito grandes
 **Escolha com cuidado** — o perfil de envio determina o custo de frete que o comprador paga. Se o perfil for pequeno demais, você pode ter problemas para enviar. Se for grande demais, o comprador paga mais do que o necessário.
 
 ### Passo 6: Adicione fotos (opcional mas recomendado)
 
 Adicione até **10 fotos** do seu produto. As fotos são opcionais ao listar para um show, mas fazem uma grande diferença — os compradores têm muito mais chance de fazer ofertas em itens que conseguem ver claramente.
 
-```
-┌─────────────────────────────────┐
-│  Selecionar fotos               │
-│                                 │
-│  ┌───┐ ┌───┐ ┌───┐ ┌───┐      │
-│  │ 1 │ │ 2 │ │ 3 │ │ + │      │
-│  └───┘ └───┘ └───┘ └───┘      │
-│                                 │
-│  Até 10 fotos                   │
-└─────────────────────────────────┘
-```
+![Grade de fotos do produto com 3 espaços numerados e botão adicionar, até 10 fotos permitidas](./assets/mockups/new-seller-guide-to-listing-products__product-photo-grid__pt-br.png)
 
 **Dicas para ótimas fotos:**
 - Use boa iluminação (luz natural funciona melhor)
@@ -128,14 +95,11 @@ Você também pode preencher estes campos para deixar sua listagem mais completa
 - **Cor** — escolha entre 28 opções de cores (Preto, Branco, Cinza, Azul, Vermelho, etc.)
 - **Estado** — o nível de uso do item:
 
-| Estado | O que significa |
-|--------|----------------|
-| Novo com etiquetas | Novo, nunca usado, etiquetas originais ainda presas |
-| Novo sem etiquetas | Nunca usado, em perfeito estado, mas sem as etiquetas originais |
-| Muito bom | Como novo, pouco usado, excelente estado |
-| Bom | Usado com cuidado, alguns sinais de uso |
-| Satisfatório | Bem usado, desgaste visível, pode precisar de reparo |
-
+- **Novo com etiquetas** — Novo, nunca usado, etiquetas originais ainda presas
+- **Novo sem etiquetas** — Nunca usado, em perfeito estado, mas sem as etiquetas originais
+- **Muito bom** — Como novo, pouco usado, excelente estado
+- **Bom** — Usado com cuidado, alguns sinais de uso
+- **Satisfatório** — Bem usado, desgaste visível, pode precisar de reparo
 **Seja honesto sobre o estado.** Os compradores confiam em vendedores que descrevem seus itens com precisão. Exagerar no estado leva a devoluções e avaliações ruins.
 
 **Para colecionáveis:** A Jamble também suporta categorias como Trading Card Games (Pokémon, Magic, Yu-Gi-Oh!, One Piece), Diecast Cars (Hot Wheels, Matchbox) e mais.
@@ -144,15 +108,7 @@ Você também pode preencher estes campos para deixar sua listagem mais completa
 
 Quando todos os campos obrigatórios estiverem preenchidos, o botão **Add Listing** fica ativo. Toque nele para salvar sua listagem.
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │       Add Listing         │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Botão Add Listing para criar um novo anúncio de produto](./assets/mockups/new-seller-guide-to-listing-products__add-listing__pt-br.png)
 
 Seu produto agora está adicionado ao seu show e pronto para ser vendido durante sua live.
 

@@ -17,17 +17,7 @@ You need:
 
 Go to your profile, then tap **Settings**. Scroll down and tap **Shipping Preferences**.
 
-```
-┌─────────────────────────────────┐
-│  Settings                       │
-│                                 │
-│  Profile Settings               │
-│  Payment Settings               │
-│  ▶ Shipping Preferences         │
-│  Notification Settings          │
-│                                 │
-└─────────────────────────────────┘
-```
+![Settings menu with navigation rows including Profile, Payment, Shipping Preferences, and Notification Settings](./assets/mockups/set-up-shipping-before-you-sell__settings-menu__en.png)
 
 This opens the screen where you configure everything related to shipping.
 
@@ -40,23 +30,7 @@ Fill in:
 - **Street number** — your house or building number
 - **Apartment/suite** (optional) — if you live in an apartment building
 
-```
-┌─────────────────────────────────┐
-│  Shipping Address               │
-│                                 │
-│  CEP: _____-___                 │
-│  Street: [auto-filled]          │
-│  Number: ____                   │
-│  Apt/Suite: ____ (optional)     │
-│  Neighborhood: [auto-filled]    │
-│  City: [auto-filled]            │
-│  State: [auto-filled]           │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │       Save Address        │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Shipping Address form with CEP, street, number, apartment, neighborhood, city, and state fields, plus Save Address button](./assets/mockups/set-up-shipping-before-you-sell__shipping-address-form__en.png)
 
 **Why this matters:** Your address determines which Correios agency is closest to you for drop-offs, and it affects the shipping cost that buyers see at checkout.
 
@@ -70,16 +44,7 @@ You have three options:
 - **Full-page PDF** — uses a full sheet of paper. Good if you prefer larger, easier-to-read labels
 - **4×6 thermal label** — for sellers who have a thermal label printer (like a Zebra or similar). These are peel-and-stick labels, no cutting needed
 
-```
-┌─────────────────────────────────┐
-│  Label Format                   │
-│                                 │
-│  ○ Half-page PDF (default)      │
-│  ○ Full-page PDF                │
-│  ○ 4×6 Thermal Label            │
-│                                 │
-└─────────────────────────────────┘
-```
+![Label Format picker screen with three radio button options: Half-page PDF (default), Full-page PDF, and 4×6 Thermal Label](./assets/mockups/set-up-shipping-before-you-sell__label-format-picker__en.png)
 
 **If you're not sure which one to pick:** Start with Half-page PDF. It works with any printer and is the most common choice.
 

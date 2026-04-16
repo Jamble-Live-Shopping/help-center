@@ -100,30 +100,7 @@ Siga estes passos:
 2. **Considere o peso** — itens mais pesados precisam de um perfil maior mesmo sendo pequenos. Botas pesadas são "Itens volumosos" mesmo que caibam em uma caixa média
 3. **Na dúvida, vá um tamanho acima** — é melhor o custo de frete ser levemente maior do que ter dificuldade para embalar o item
 
-```
-┌─────────────────────────────────┐
-│  Guia rápido                    │
-│                                 │
-│  Cabe em um envelope?           │
-│  → Carta ou Booster             │
-│                                 │
-│  Pequeno e leve (joia, etc)?    │
-│  → Acessórios leves             │
-│                                 │
-│  Uma peça de roupa?             │
-│  → Leve / Padrão / Mais pesada  │
-│    (baseado no peso)            │
-│                                 │
-│  Item volumoso único?           │
-│  → Itens volumosos              │
-│                                 │
-│  Múltiplos itens?               │
-│  → Pacotes Pequeno / Médio /    │
-│    Grande / Extra-grande        │
-│    (baseado na quantidade)      │
-│                                 │
-└─────────────────────────────────┘
-```
+![Guia de seleção de perfil de envio mostrando árvore de decisão para escolher categorias de envio apropriadas conforme tipo e características do pacote](./assets/mockups/choose-a-shipping-profile__shipping-guide-quick-reference__pt-br.png)
 
 ## Como o perfil afeta o comprador
 

@@ -28,23 +28,7 @@ Before generating a label, you may be asked to confirm the weight of your packag
 
 A screen titled **"CONFIRM WEIGHT"** appears showing:
 
-```
-┌─────────────────────────────────┐
-│  CONFIRM WEIGHT                 │
-│                                 │
-│  Current weight: 0.99 lbs       │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │    Enter new weight       │  │
-│  │    [___] lbs              │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │        Confirm            │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Confirm Weight screen with current weight display and new weight input field](./assets/mockups/make-a-shipping-adjustment__confirm-weight__en.png)
 
 - The **current weight** is based on the shipping profile assigned to the product
 - You can adjust the weight if the actual packaged item is different from the estimate

@@ -32,20 +32,7 @@ When creating a listing, select the category before the size. The category uses 
 
 Once you select all three levels, the **Size** field appears automatically with the right size options for your selection.
 
-```
-┌─────────────────────────────────┐
-│  Category Selection             │
-│                                 │
-│  Gender:      [Women ▼]         │
-│  Category:    [Shoes ▼]         │
-│  Subcategory: [Sneakers ▼]     │
-│                                 │
-│  ↓ Size field appears:          │
-│                                 │
-│  Size: [US 7 ▼]                │
-│                                 │
-└─────────────────────────────────┘
-```
+![Category Selection form with dropdown fields for Gender, Category, Subcategory, and dynamically appearing Size field](./assets/mockups/variants-for-sellers-sizes-and-colors__category-selection__en.png)
 
 **If you don't select a category, the size field won't appear.** That's by design — Jamble needs to know what kind of item you're selling to show you the right size options.
 
@@ -101,21 +88,7 @@ The 28 available colors are:
 
 **"Multi"** is for items with multiple colors — like a tie-dye shirt, a patterned dress, or a multicolored sneaker.
 
-```
-┌─────────────────────────────────┐
-│  Select Color                   │
-│                                 │
-│  ● ● ● ● ● ● ●                │
-│  ● ● ● ● ● ● ●                │
-│  ● ● ● ● ● ● ●                │
-│  ● ● ● ● ● ● ●                │
-│                                 │
-│  Tap a color to select          │
-│                                 │
-│  [CLEAR]                        │
-│                                 │
-└─────────────────────────────────┘
-```
+![Select Color screen with grid of colored circle options and Clear button](./assets/mockups/variants-for-sellers-sizes-and-colors__select-color-picker__en.png)
 
 You can tap **"CLEAR"** to remove your color selection if you want to leave it empty.
 

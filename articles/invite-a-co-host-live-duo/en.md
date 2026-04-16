@@ -50,24 +50,7 @@ This icon only appears when you don't already have a guest on screen.
 
 A bottom sheet titled **"Invite for a Duo"** appears, showing the viewers currently watching your show. You can scroll through the list or use the **search bar** to find someone by username.
 
-```
-┌─────────────────────────────────┐
-│  Invite for a Duo               │
-│                                 │
-│  [Search by username...]        │
-│                                 │
-│  ┌───┐ ┌───┐ ┌───┐             │
-│  │ 👤│ │ 👤│ │ 👤│             │
-│  └───┘ └───┘ └───┘             │
-│  ┌───┐ ┌───┐ ┌───┐             │
-│  │ 👤│ │ 👤│ │ 👤│             │
-│  └───┘ └───┘ └───┘             │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │    Invite your friend     │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Invite for a Duo screen with search field and 6 user profile photo slots in a grid layout, plus an Invite your friend button](./assets/mockups/invite-a-co-host-live-duo__invite-duo-grid__en.png)
 
 Tap on a viewer to select them, then tap **"Invite your friend"** to send the invitation.
 
@@ -77,21 +60,7 @@ If nobody is watching yet, you'll see a message: *"No one in your Show? You can 
 
 Your guest receives a notification inviting them to join. On their screen, they see:
 
-```
-┌─────────────────────────────────┐
-│  Live Duo                       │
-│                                 │
-│  You have been invited to join  │
-│  [your username] as a guest!    │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │    Accept and Join        │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Don't Join                     │
-│                                 │
-└─────────────────────────────────┘
-```
+![Live Duo invite dialog: You have been invited to join (your username) as a guest with Accept and Join and Don't Join buttons](./assets/mockups/invite-a-co-host-live-duo__live-duo-invite-dialog__en.png)
 
 They can tap **"Accept and Join"** (which requires camera and microphone access) or **"Don't Join"** to decline.
 
@@ -128,13 +97,10 @@ The guest can also leave on their own by tapping their broadcasting button and c
 
 ## What the guest can and can't do
 
-| Guest CAN do | Guest CANNOT do |
-|--------------|-----------------|
-| Stream their camera and audio | Start or end the show |
-| Be seen and heard by the audience | Manage products or sales |
-| Interact with the chat | Access any host tools |
-| Stop broadcasting and rejoin | Invite other guests |
-
+- **Stream their camera and audio** — Start or end the show
+- **Be seen and heard by the audience** — Manage products or sales
+- **Interact with the chat** — Access any host tools
+- **Stop broadcasting and rejoin** — Invite other guests
 The guest is essentially a viewer who appears on camera — they have no host controls.
 
 ## Important tips

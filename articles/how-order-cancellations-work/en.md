@@ -42,24 +42,7 @@ Go to your sales and find the order you need to cancel.
 
 Tap the cancel option. You'll see a screen titled **"What's making you cancel?"**
 
-```
-┌─────────────────────────────────┐
-│  What's making you cancel?      │
-│                                 │
-│  Our team will review your      │
-│  request within 2 hours.        │
-│                                 │
-│  ● Unable to ship the item      │
-│  ○ Item lost                    │
-│  ○ Item damaged                 │
-│  ○ Buyer requested cancellation │
-│  ○ Other reasons                │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │         Submit            │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Cancellation reason picker with 5 radio options and submit button](./assets/mockups/how-order-cancellations-work__cancellation-reason-picker__en.png)
 
 ### Step 3: Select a reason and submit
 
@@ -67,20 +50,7 @@ Choose the reason that best describes your situation and tap **Submit**.
 
 A confirmation alert appears:
 
-```
-┌─────────────────────────────────┐
-│  Cancel this sale               │
-│                                 │
-│  Abusive or repeated            │
-│  cancellations may lead to      │
-│  temporary restrictions or      │
-│  account suspension.            │
-│                                 │
-│  [ Don't Cancel ]               │
-│  [ Cancel Sale  ]               │
-│                                 │
-└─────────────────────────────────┘
-```
+![Cancel sale dialog: title "Cancel this sale" with warning message and two action buttons](./assets/mockups/how-order-cancellations-work__cancel-sale-dialog__en.png)
 
 Tap **Cancel Sale** to confirm, or **Don't Cancel** to go back.
 

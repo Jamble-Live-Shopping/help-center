@@ -28,20 +28,15 @@ Durante seu show, quando você fixa o produto:
 
 Ao criar ou editar um produto para seu show, role até o campo **Quantidade**. Por padrão, a quantidade é 1.
 
-```
-┌─────────────────────────────────┐│  Quantidade                     ││                                 ││  [ - ]     1     [ + ]         ││                                 │└─────────────────────────────────┘
-```
+![quantity-stepper: campo de entrada com botões de menos e mais para ajustar valor de quantidade](./assets/mockups/choose-quantities-when-listing-products__quantity-stepper__pt-br.png)
 
 ## Passo 2: Defina a quantidade
 
 Toque no botão **+** ou digite o número de unidades idênticas que você tem. A quantidade máxima depende do modo de venda:
 
-| Modo de venda | Quantidade máxima |
-|---|---|
-| Ofertas em tempo real | 1.000 |
-| Sudden Death | 1.000 |
-| Buy It Now | 1.000 |
-
+- **Ofertas em tempo real** — 1.000
+- **Sudden Death** — 1.000
+- **Buy It Now** — 1.000
 ## Passo 3: Salve e liste
 
 Depois de definir a quantidade, salve sua listagem. O produto agora mostra a contagem total disponível na lista de produtos do show.

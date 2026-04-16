@@ -32,19 +32,7 @@ While the Buy It Now sale is active, open your product list and **Pin** a differ
 
 The new sale becomes the **pinned** (featured) sale that your audience sees front and center. The Buy It Now sale continues running in the background — buyers can still purchase it.
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  [PINNED: Product B]            │
-│  Real-time offers - active      │
-│                                 │
-│  R$ 25,00  ⏱ 0:45  [3 offers]  │
-│                                 │
-│  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  │
-│  Product A (Buy It Now)         │
-│  still available in background  │
-└─────────────────────────────────┘
-```
+![Real-time offers list showing pinned Product B with R$ 25,00 and 0:45 countdown, 3 active offers, with Product A still available in background](./assets/mockups/running-simultaneous-sales-during-your-show__pinned-real-time-offers__en.png)
 
 ### Step 3: Manage overlapping sales
 

@@ -29,41 +29,13 @@ Enquanto navega pelo app ou assiste a um show ao vivo, você verá produtos exib
 
 Toque no **ícone de salvar** (ícone de marcador) no card do produto. O ícone se preenche para confirmar que o produto foi salvo.
 
-```
-┌─────────────────────────────────┐
-│  ┌───────────────────────────┐  │
-│  │  [Foto do produto]        │  │
-│  │                    🔖     │  │
-│  │  Nike Air Max 90          │  │
-│  │  R$200                    │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Toque no ícone de salvar (🔖) │
-│  para salvar este produto       │
-└─────────────────────────────────┘
-```
+![product-save-instruction: Cartão de produto com ícone de salvar, mostrando Nike Air Max 90 por R$200 e texto de instrução](./assets/mockups/wishlist-and-favorites__product-save-instruction__pt-br.png)
 
 ### Passo 3: Veja seus produtos salvos
 
 Para ver todos os seus produtos salvos, vá para sua **Wishlist**. Você a encontra na página do seu perfil. Sua wishlist tem duas abas:
 
-```
-┌─────────────────────────────────┐
-│  Wishlist                       │
-│                                 │
-│  ┌──────────┐ ┌──────────┐     │
-│  │ Bookmarks│ │   Bids   │     │
-│  └──────────┘ └──────────┘     │
-│                                 │
-│  ┌─────┐  ┌─────┐              │
-│  │     │  │     │              │
-│  │ Air │  │ Dunk│              │
-│  │ Max │  │ Low │              │
-│  │R$200│  │R$150│              │
-│  └─────┘  └─────┘              │
-│                                 │
-└─────────────────────────────────┘
-```
+![Tela de lista de desejos mostrando grade de cartões de produtos com abas para Favoritos e Lances, exibindo itens Air Max e Dunk Low com preços](./assets/mockups/wishlist-and-favorites__wishlist-items-grid__pt-br.png)
 
 - **Bookmarks** — todos os produtos que você salvou
 - **Bids** — produtos onde você tem pré-ofertas ativas (esta aba acompanha suas ofertas abertas em produtos futuros)
@@ -88,11 +60,8 @@ Vá para **Settings** → **"Bookmarked shows"** para ver todos os shows que voc
 
 A Jamble pode enviar notificações push para seus itens salvos. Vá para **Settings** → **Notifications** → **Live Shows** para configurar:
 
-| Notificação | O que faz |
-|-------------|-----------|
-| **Bookmarked shows** | Notifica você antes de um show salvo começar |
-| **Bookmarked product from show** | Notifica quando um produto que você salvou aparece em um show ao vivo |
-
+- ****Bookmarked shows**** — Notifica você antes de um show salvo começar
+- ****Bookmarked product from show**** — Notifica quando um produto que você salvou aparece em um show ao vivo
 Essas notificações ajudam você a aparecer na hora certa e não perder os produtos que você mais quer.
 
 ## Por que favoritos importam para vendedores

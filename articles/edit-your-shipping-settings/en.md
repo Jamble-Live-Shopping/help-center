@@ -16,17 +16,7 @@ You need:
 
 Go to your profile, tap **Settings**, then tap **Shipping Preferences**.
 
-```
-┌─────────────────────────────────┐
-│  Settings                       │
-│                                 │
-│  Profile Settings               │
-│  Payment Settings               │
-│  ▶ Shipping Preferences         │
-│  Notification Settings          │
-│                                 │
-└─────────────────────────────────┘
-```
+![Settings menu with Profile Settings, Payment Settings, Shipping Preferences, and Notification Settings rows](./assets/mockups/edit-your-shipping-settings__settings-menu__en.png)
 
 This screen shows all your current shipping settings. Each setting has its own section that you can edit.
 
@@ -45,12 +35,9 @@ Your shipping address determines where packages ship from and affects the shippi
 
 You can switch between three label formats at any time:
 
-| Format | Best for |
-|--------|----------|
-| **Half-page PDF** (default) | Regular home/office printers. Prints on half a sheet |
-| **Full-page PDF** | Regular printers. Uses a full sheet of paper |
-| **4×6 Thermal Label** | Thermal label printers (Zebra, etc.). Peel and stick |
-
+- ****Half-page PDF** (default)** — Regular home/office printers. Prints on half a sheet
+- ****Full-page PDF**** — Regular printers. Uses a full sheet of paper
+- ****4×6 Thermal Label**** — Thermal label printers (Zebra, etc.). Peel and stick
 To change:
 1. Find the **Label Format** section
 2. Select the format you want

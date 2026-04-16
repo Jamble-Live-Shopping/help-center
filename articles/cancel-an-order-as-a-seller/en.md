@@ -24,16 +24,7 @@ In both cases, the buyer is automatically refunded and no commission is charged.
 
 Open the Jamble app and go to **My Sales** from your settings.
 
-```
-┌─────────────────────────────────┐
-│  Settings                       │
-│                                 │
-│  ▶ My Sales                     │
-│  My Wallet                      │
-│  Shipping Preferences           │
-│                                 │
-└─────────────────────────────────┘
-```
+![Settings menu with navigation options including My Sales, My Wallet, and Shipping Preferences](./assets/mockups/cancel-an-order-as-a-seller__settings-menu__en.png)
 
 ### Step 2: Find the order
 

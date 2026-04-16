@@ -79,40 +79,17 @@ The item has been **well-used** and shows **visible wear**. It may need minor re
 
 Follow this simple rule: **when in doubt, go one level lower.** It's always better for a buyer to receive an item that's slightly better than expected than slightly worse.
 
-```
-┌─────────────────────────────────┐
-│  Quick decision guide           │
-│                                 │
-│  Tags still on?                 │
-│  → New with Tags                │
-│                                 │
-│  Never worn, no tags?           │
-│  → New without Tags             │
-│                                 │
-│  Worn 1-2 times, looks perfect? │
-│  → Very Good                    │
-│                                 │
-│  Regular use, minor wear?       │
-│  → Good                         │
-│                                 │
-│  Heavy use, visible flaws?      │
-│  → Satisfactory                 │
-│                                 │
-└─────────────────────────────────┘
-```
+![listing-conditions-guide: Quick decision guide showing condition categories with descriptions from New with Tags to Satisfactory](./assets/mockups/understanding-listing-conditions-and-expectations__listing-conditions-guide__en.png)
 
 ## What to include in your description
 
 The condition level gives buyers a general idea, but your **description** and **photos** fill in the details. Here's what to mention for each level:
 
-| Condition | What to describe |
-|-----------|-----------------|
-| New with Tags | Tag details, original packaging, where you bought it |
-| New without Tags | Why tags are missing, that it was never worn |
-| Very Good | Any tiny details that prevent it from being "New" |
-| Good | Specific signs of wear (where, what kind) |
-| Satisfactory | Every flaw in detail — stains, damage, wear areas |
-
+- **New with Tags** — Tag details, original packaging, where you bought it
+- **New without Tags** — Why tags are missing, that it was never worn
+- **Very Good** — Any tiny details that prevent it from being "New"
+- **Good** — Specific signs of wear (where, what kind)
+- **Satisfactory** — Every flaw in detail — stains, damage, wear areas
 **The lower the condition, the more detail you should provide.** A "Satisfactory" listing needs thorough descriptions and close-up photos of every flaw. A "New with Tags" listing speaks mostly for itself.
 
 ## Photos and condition

@@ -40,19 +40,7 @@ Open your show and tap the **"+"** button or the add product option. You'll see 
 **During a live show:**
 Tap the **"+"** button while live. You'll see options including **"Clone from Shows"**.
 
-```
-┌─────────────────────────────────┐
-│  Add products to your show      │
-│                                 │
-│  ▶ New Quickie Listing          │
-│    Create a product from scratch│
-│                                 │
-│  ▶ Clone Past Shows Listings    │
-│    Copy products from other     │
-│    shows                        │
-│                                 │
-└─────────────────────────────────┘
-```
+![Add products to your show screen with two option rows: New Quickie Listing and Clone Past Shows Listings](./assets/mockups/cloning-items__add-products-to-show__en.png)
 
 ### Step by step
 
@@ -92,33 +80,7 @@ Each product shows its image, title, quantity available, and price. Tap a produc
 
 Products that have already been cloned into your current show appear greyed out with **(Added)** and can't be selected again.
 
-```
-┌─────────────────────────────────┐
-│  Select Listings                │
-│                                 │
-│  Fashion Finds Friday           │
-│  March 15 · 12 available       │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ ☑ Nike Air Max 90         │  │
-│  │   2 Available · R$200     │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ ☐ Camiseta Vintage        │  │
-│  │   1 Available · R$80      │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ (Added) Jeans Levis 501   │  │
-│  │   Already in this show    │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  Clone [1] listing(s)     │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Select Listings screen for cloning items: Fashion Finds Friday show with checkbox list of products (Nike Air Max 90 checked, Camiseta Vintage unchecked, Jeans Levis 501 marked as already added) and Clone button.](./assets/mockups/cloning-items__select-listings-clone__en.png)
 
 You can go back and select products from **multiple shows** before importing. The counter at the bottom tracks how many products you've selected in total.
 
@@ -137,23 +99,7 @@ Tap the **"+"** button while you're live. You'll see an option called **"Import 
 
 **Note:** Import from Shop is only available during a live show — not from the show preview screen.
 
-```
-┌─────────────────────────────────┐
-│  Add products to your show      │
-│                                 │
-│  ▶ Quickie Upload               │
-│    Create a product from scratch│
-│                                 │
-│  ▶ Import from Shop             │
-│    Bring products from your     │
-│    shop profile                 │
-│                                 │
-│  ▶ Clone from Shows             │
-│    Copy products from other     │
-│    shows                        │
-│                                 │
-└─────────────────────────────────┘
-```
+![Add products to your show: menu with Quickie Upload, Import from Shop, and Clone from Shows options](./assets/mockups/cloning-items__add-products-options__en.png)
 
 ### Step by step
 
@@ -161,24 +107,7 @@ Tap the **"+"** button while you're live. You'll see an option called **"Import 
 
 After tapping **"Import from Shop"**, you see a grid of your marketplace products — showing the product image, title, price, and size.
 
-```
-┌─────────────────────────────────┐
-│  Import Listings from Shop      │
-│                                 │
-│  ┌─────┐ ┌─────┐ ┌─────┐      │
-│  │     │ │     │ │     │      │
-│  │  1  │ │     │ │     │      │
-│  │     │ │     │ │     │      │
-│  ├─────┤ ├─────┤ ├─────┤      │
-│  │Nike │ │Bag  │ │Ring │      │
-│  │R$200│ │R$150│ │R$45 │      │
-│  └─────┘ └─────┘ └─────┘      │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  Import [1] products      │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Import Listings from Shop screen showing photo grid with 3 product cards: Nike R$200, Bag R$150, Ring R$45, with Import button](./assets/mockups/cloning-items__import-listings-photo-grid__en.png)
 
 #### Step 2: Select products
 

@@ -23,25 +23,7 @@ Your profile has two main editing screens:
 
 Go to your profile and tap the **edit button**. This opens the **"My Profile"** screen.
 
-```
-┌─────────────────────────────────┐
-│  ← My Profile                   │
-│                                 │
-│        ┌──────────┐             │
-│        │  Photo   │  ← tap to  │
-│        │          │    change   │
-│        └──────────┘             │
-│                                 │
-│  Username: __________________   │
-│  Name: ______________________   │
-│  Bio: _______________________   │
-│       _______________________   │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │          Save             │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Edit seller profile form with photo upload, username, name, and bio text fields](./assets/mockups/edit-your-seller-profile__edit-seller-profile__en.png)
 
 ### Step 2: Change your profile photo
 
@@ -89,30 +71,7 @@ The button stays disabled (greyed out) until you make at least one change — th
 
 Go to your profile, tap **Settings**, then tap **Personal Information**. This opens the **"Personal Information"** screen.
 
-```
-┌─────────────────────────────────┐
-│  Personal Information            │
-│                                 │
-│  Personal Information           │
-│  ─────────────────────────────  │
-│  First Name: ________________   │
-│  Last Name: _________________   │
-│  Birth Date: ________________   │
-│                                 │
-│  Contact Information            │
-│  ─────────────────────────────  │
-│  Email: _____________________   │
-│  Phone Number: ______________   │
-│                                 │
-│  Legal Information              │
-│  ─────────────────────────────  │
-│  CPF: ___.___.___-__           │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │          Save             │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Edit seller profile form with personal, contact, and legal information fields](./assets/mockups/edit-your-seller-profile__edit-seller-profile__en.png)
 
 ### Step 2: Review and update your details
 

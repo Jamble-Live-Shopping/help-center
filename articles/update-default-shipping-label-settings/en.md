@@ -25,34 +25,7 @@ There are two default settings:
 
 Go to your profile → **Settings** → **Shipping Preferences**.
 
-```
-┌─────────────────────────────────┐
-│  Shipping Preferences           │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ Shipping Address          │  │
-│  │ [Your current address]    │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ Label Format              │  │
-│  │ ○ Half-page PDF ←        │  │
-│  │ ○ Full-page PDF           │  │
-│  │ ○ 4×6 Thermal Label       │  │
-│  └───────────────────────────┘  │
-│                                 │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ Package Insurance         │  │
-│  │ ○ Yes  ○ No ←             │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │          Save             │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Shipping Preferences form with address, label format, and insurance options](./assets/mockups/update-default-shipping-label-settings__shipping-preferences__en.png)
 
 ### Step 2: Update the label format
 
@@ -74,12 +47,9 @@ All labels generated after this point will use your updated settings. Previously
 
 ## When to update your defaults
 
-| Situation | What to change |
-|-----------|---------------|
-| You bought a thermal printer | Switch label format to 4×6 Thermal Label |
-| You sell high-value items | Turn on package insurance |
-| Your current printer broke and you're using a different one | Switch to the format your new printer supports |
-
+- **You bought a thermal printer** — Switch label format to 4×6 Thermal Label
+- **You sell high-value items** — Turn on package insurance
+- **Your current printer broke and you're using a different one** — Switch to the format your new printer supports
 ## Important tips
 
 - **Defaults apply to ALL future labels.** Every new label will use these settings until you change them again

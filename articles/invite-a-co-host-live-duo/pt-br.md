@@ -40,21 +40,7 @@ Este ícone só aparece quando você ainda não tem um convidado na tela.
 
 Uma tela com o título **"Invite for a Duo"** aparece, mostrando os espectadores assistindo seu show. Você pode rolar pela lista ou usar a **barra de busca** para encontrar alguém pelo nome de usuário.
 
-```
-┌─────────────────────────────────┐
-│  Invite for a Duo               │
-│                                 │
-│  [Buscar por nome de usuário]   │
-│                                 │
-│  ┌───┐ ┌───┐ ┌───┐             │
-│  │ 👤│ │ 👤│ │ 👤│             │
-│  └───┘ └───┘ └───┘             │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │   Invite your friend      │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Tela Convite para Duo com campo de busca por nome de usuário, três slots de avatar de usuário e botão Convide seu amigo](./assets/mockups/invite-a-co-host-live-duo__invite-duo-cohost__pt-br.png)
 
 Toque em um espectador para selecioná-lo, depois toque em **"Invite your friend"** para enviar o convite.
 
@@ -62,21 +48,7 @@ Toque em um espectador para selecioná-lo, depois toque em **"Invite your friend
 
 Seu convidado recebe uma notificação convidando-o a participar. Na tela dele, ele vê:
 
-```
-┌─────────────────────────────────┐
-│  Live Duo                       │
-│                                 │
-│  You have been invited to join  │
-│  [seu nome] as a guest!         │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │    Accept and Join        │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Don't Join                     │
-│                                 │
-└─────────────────────────────────┘
-```
+![Tela de convite Live Duo com título, mensagem sobre participação como convidado e botões de aceitar/rejeitar](./assets/mockups/invite-a-co-host-live-duo__live-duo-invitation__pt-br.png)
 
 Ele pode tocar em **"Accept and Join"** (que requer acesso à câmera e microfone) ou **"Don't Join"** para recusar.
 
@@ -112,13 +84,10 @@ O convidado também pode sair por conta própria tocando no botão de transmiss�
 
 ## O que o convidado pode e não pode fazer
 
-| Convidado PODE fazer | Convidado NÃO PODE fazer |
-|---------------------|--------------------------|
-| Transmitir câmera e áudio | Iniciar ou encerrar o show |
-| Ser visto e ouvido pela audiência | Gerenciar produtos ou vendas |
-| Interagir com o chat | Acessar ferramentas de apresentador |
-| Parar de transmitir e voltar | Convidar outros convidados |
-
+- **Transmitir câmera e áudio** — Iniciar ou encerrar o show
+- **Ser visto e ouvido pela audiência** — Gerenciar produtos ou vendas
+- **Interagir com o chat** — Acessar ferramentas de apresentador
+- **Parar de transmitir e voltar** — Convidar outros convidados
 O convidado é basicamente um espectador que aparece na câmera — ele não tem controles de apresentador.
 
 ## Dicas importantes

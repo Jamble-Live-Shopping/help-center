@@ -28,39 +28,13 @@ Go to your profile and tap **Settings** (the gear icon).
 
 Scroll down to the **SELL** section. You'll see **"Vacation mode"** with a toggle.
 
-```
-┌─────────────────────────────────┐
-│  Settings                       │
-│                                 │
-│  SELL                           │
-│  ▶ My Sales                     │
-│  ▶ My Wallet                    │
-│  ▶ Shipping Preferences         │
-│  ☐ Vacation mode                │
-│                                 │
-└─────────────────────────────────┘
-```
+![Settings screen showing SELL section with navigation rows: My Sales, My Wallet, Shipping Preferences, and Vacation mode checkbox](./assets/mockups/pause-your-shop-with-vacation-mode__settings-sell-menu__en.png)
 
 ### Step 3: Turn on Vacation Mode
 
 Tap **"Vacation mode"**. A confirmation screen appears:
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  Vacation Mode                  │
-│                                 │
-│  When turning on Vacation Mode, │
-│  all your items will become     │
-│  unavailable for others to      │
-│  purchase                       │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │        Turn On            │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Vacation Mode screen with explanation text and Turn On button](./assets/mockups/pause-your-shop-with-vacation-mode__vacation-mode-intro__en.png)
 
 Tap **"Turn On"** to activate Vacation Mode.
 
@@ -68,22 +42,7 @@ Tap **"Turn On"** to activate Vacation Mode.
 
 When you want to start selling again, go back to Settings > SELL > Vacation mode. The screen now shows:
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  Vacation Mode                  │
-│                                 │
-│  You are currently in Vacation  │
-│  Mode. Turning it off will make │
-│  all your items available to    │
-│  purchase                       │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │        Turn Off           │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Vacation Mode status screen with description and Turn Off button](./assets/mockups/pause-your-shop-with-vacation-mode__vacation-mode-status__en.png)
 
 Tap **"Turn Off"** and your shop is back to normal.
 

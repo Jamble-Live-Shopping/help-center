@@ -43,17 +43,7 @@ Vá ao seu perfil, toque em **Configurações**, depois toque em **My Wallet**.
 
 Se sua conta bancária não estiver configurada, você verá um botão **"Register Bank"** na parte inferior da tela.
 
-```
-┌─────────────────────────────────┐
-│  ← My Wallet              🕐 ? │
-│                                 │
-│  [Seções da carteira...]        │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │      Register Bank        │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![wallet-header: Minha Carteira com seta para voltar, ícones de hora e ajuda, seções da carteira e botão Registrar Banco](./assets/mockups/pix-payments-how-sellers-get-paid__wallet-header__pt-br.png)
 
 Toque em **"Register Bank"** e escolha:
 - **Individual** — se você vende como pessoa física (CPF)
@@ -79,27 +69,7 @@ Seus dados bancários também aparecem na parte inferior da tela da carteira. Se
 
 Quando você tiver fundos disponíveis, um botão **"Withdraw"** aparece na parte inferior da tela da carteira.
 
-```
-┌─────────────────────────────────┐
-│  ← My Wallet              🕐 ? │
-│                                 │
-│  Disponível        R$ 250,00    │
-│  Seu saldo disponível           │
-│  ─────────────────────────────  │
-│  Aguardando        R$ 120,00    │
-│  Pendente liberação             │
-│  ─────────────────────────────  │
-│  Transferido       R$ 1.500,00  │
-│  Total sacado                   │
-│                                 │
-│  Bank Details                   │
-│  Banco 260 0001 12345-6 [Update]│
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │        Withdraw           │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Tela de saldo da carteira exibindo saldo disponível de R$ 250,00, aguardando R$ 120,00 e total sacado de R$ 1.500,00 com botão Withdraw](./assets/mockups/pix-payments-how-sellers-get-paid__wallet-balance__pt-br.png)
 
 Toque em **"Withdraw"** para solicitar um saque via PIX. Todo o saldo disponível é enviado para sua conta bancária registrada.
 
@@ -119,13 +89,10 @@ Cada saque mostra:
 
 Seus ganhos não ficam disponíveis instantaneamente após uma venda. Veja o cronograma:
 
-| Evento | O que acontece |
-|--------|---------------|
-| Comprador adquire seu item | Dinheiro é retido como "aguardando liberação" |
-| Você envia o pedido | Dinheiro permanece em "aguardando" |
-| Comprador recebe e confirma | Dinheiro passa para "disponível" |
-| Entrega confirmada automaticamente | Dinheiro passa para "disponível" (se comprador não confirmar manualmente) |
-
+- **Comprador adquire seu item** — Dinheiro é retido como "aguardando liberação"
+- **Você envia o pedido** — Dinheiro permanece em "aguardando"
+- **Comprador recebe e confirma** — Dinheiro passa para "disponível"
+- **Entrega confirmada automaticamente** — Dinheiro passa para "disponível" (se comprador não confirmar manualmente)
 ## Dicas importantes
 
 - **Configure sua conta bancária antes do primeiro show.** Este é o erro mais comum de vendedores novos. Se você vender sem dados bancários, seus ganhos ficam retidos até completar a configuração

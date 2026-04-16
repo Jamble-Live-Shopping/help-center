@@ -17,33 +17,13 @@ You need:
 
 Tap the **create button** (the + icon) at the bottom of the app, then select the option to create a new show.
 
-```
-┌─────────────────────────────────┐
-│  Create                         │
-│                                 │
-│  ▶ New Listing                  │
-│  ▶ Schedule a Show              │
-│                                 │
-└─────────────────────────────────┘
-```
+![Create menu with options for New Listing and Schedule a Show](./assets/mockups/schedule-a-show__create-menu__en.png)
 
 ### Step 2: Enter your show title
 
 The first screen asks you to type your show title. This is what buyers will see when browsing upcoming shows, so make it clear and specific.
 
-```
-┌─────────────────────────────────┐
-│  Create a new live show         │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ Type your show title      │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │          Next             │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Create a new live show form with title input field and Next button](./assets/mockups/schedule-a-show__create-live-show__en.png)
 
 **Good titles:**
 - "Sneakers Nike e Adidas - Vários tamanhos"
@@ -58,31 +38,7 @@ The first screen asks you to type your show title. This is what buyers will see 
 
 Choose a tag that best describes what you'll be selling. Buyers use tags to find shows that match their interests.
 
-```
-┌─────────────────────────────────┐
-│  Select 1 Tag                   │
-│                                 │
-│  ┌──────────┐ ┌──────────┐     │
-│  │Collectib.│ │ Pokémon  │     │
-│  └──────────┘ └──────────┘     │
-│  ┌──────────┐ ┌──────────┐     │
-│  │ Die-cast │ │  Magic   │     │
-│  └──────────┘ └──────────┘     │
-│  ┌──────────┐ ┌──────────┐     │
-│  │Other TCGs│ │Activewear│     │
-│  └──────────┘ └──────────┘     │
-│  ┌──────────┐ ┌──────────┐     │
-│  │Contemp.  │ │  Beauty  │     │
-│  └──────────┘ └──────────┘     │
-│  ┌──────────┐ ┌──────────┐     │
-│  │  Shoes   │ │  Luxury  │     │
-│  └──────────┘ └──────────┘     │
-│  ┌──────────┐ ┌──────────┐     │
-│  │ Jewelry  │ │   Kids   │     │
-│  └──────────┘ └──────────┘     │
-│                                 │
-└─────────────────────────────────┘
-```
+![Select 1 Tag screen with grid of category buttons including Collectible, Pokémon, Die-cast, Magic, Other TCGs, Activewear, Contemporary, Beauty, Shoes, Luxury, Jewelry, and Kids](./assets/mockups/schedule-a-show__select-tag-picker__en.png)
 
 You can only select **one tag per show**. Choose the one that best matches the majority of what you'll sell. If you skip this step, your show will default to "Collectibles."
 
@@ -94,20 +50,7 @@ You have two options:
 - **Import from library** — pick a photo from your phone's gallery
 - **Unsplash** — search and pick a free stock photo from Unsplash
 
-```
-┌─────────────────────────────────┐
-│  Select a cover image           │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │   Import from library     │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │   Search Unsplash         │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Select a cover image screen with Import from library and Search Unsplash options](./assets/mockups/schedule-a-show__select-cover-image__en.png)
 
 After selecting an image, you can crop it to fit the display format. A clear, eye-catching image of the products you'll be selling works best.
 
@@ -115,17 +58,7 @@ After selecting an image, you can crop it to fit the display format. A clear, ey
 
 Pick when your show will go live. Tap **Select your date** to open the date and time picker.
 
-```
-┌─────────────────────────────────┐
-│  Complete your show             │
-│                                 │
-│  DATE                           │
-│  ┌───────────────────────────┐  │
-│  │    Select your date       │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![schedule-show-date form with title and date selection field](./assets/mockups/schedule-a-show__schedule-show-date__en.png)
 
 **Scheduling rules:**
 - You cannot schedule a show in the past
@@ -139,20 +72,7 @@ You can add two types of extra text:
 - **Description** — a short summary of your show. Shown to buyers browsing the show calendar. Keep it concise
 - **Notes** — additional notes visible to your audience during the show (up to 200 characters). Great for rules, announcements, or reminders
 
-```
-┌─────────────────────────────────┐
-│  DESCRIPTION (optional)         │
-│  ┌───────────────────────────┐  │
-│  │ Describe your live here   │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  NOTES (optional, 200 char)     │
-│  ┌───────────────────────────┐  │
-│  │ Additional notes          │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![schedule-show-form: form with description and notes textarea fields for live event details](./assets/mockups/schedule-a-show__schedule-show-form__en.png)
 
 ### Step 7: Set up recurring shows (optional)
 
@@ -162,17 +82,7 @@ Toggle the repeat option on, then configure:
 - **How often**: every X days, weeks, or months
 - **When to stop**: after a specific number of shows (1, 3, 5, or 10) or on a specific date
 
-```
-┌─────────────────────────────────┐
-│  REPEAT                         │
-│  [Toggle: ON]                   │
-│                                 │
-│  Every [ 1 ] [ Week ▼ ]        │
-│                                 │
-│  End: [ After 3 lives ▼ ]      │
-│                                 │
-└─────────────────────────────────┘
-```
+![repeat-schedule: Form with toggle for repeat settings, stepper input for frequency (1 week), and dropdown for end condition (after 3 lives)](./assets/mockups/schedule-a-show__repeat-schedule__en.png)
 
 When you enable repeat, Jamble creates multiple shows at once. You can create up to **10 shows** in a single batch.
 
@@ -182,15 +92,7 @@ When you enable repeat, Jamble creates multiple shows at once. You can create up
 
 When everything looks good, tap **Create Show** (or **Create X shows** if using repeat). Your show is now scheduled and visible to buyers.
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │       Create Show         │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Create Show primary button screen](./assets/mockups/schedule-a-show__create-show__en.png)
 
 Your followers will see your upcoming show in their feed, and it will appear on the show calendar.
 
@@ -211,16 +113,7 @@ You **cannot** change the repeat settings once a show is created.
 
 When you hit the limit, you'll see:
 
-```
-┌─────────────────────────────────┐
-│  Postpone Limit                 │
-│                                 │
-│  This Show was already          │
-│  postponed too many times.      │
-│  You cannot postpone it.        │
-│                                 │
-└─────────────────────────────────┘
-```
+![Postpone Limit alert dialog explaining show cannot be postponed](./assets/mockups/schedule-a-show__postpone-limit-dialog__en.png)
 
 ## Canceling a show
 

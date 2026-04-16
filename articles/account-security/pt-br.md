@@ -12,35 +12,12 @@ Este guia cobre como proteger sua conta na Jamble — desde os métodos de login
 
 A Jamble suporta **3 métodos de login** no iOS (número de telefone, Google, Apple) e **apenas número de telefone** no Android:
 
-| Método | Como funciona |
-|--------|--------------|
-| **Número de telefone** (principal) | Digite seu número, receba um código SMS ou WhatsApp e confirme |
-| **Continue with Google** | Entre usando sua conta Google |
-| **Continue with Apple** | Entre usando seu Apple ID |
-
+- ****Número de telefone** (principal)** — Digite seu número, receba um código SMS ou WhatsApp e confirme
+- ****Continue with Google**** — Entre usando sua conta Google
+- ****Continue with Apple**** — Entre usando seu Apple ID
 Quando você abre a Jamble pela primeira vez, verá a tela de **Sign up**. O método principal é o **número de telefone** — digite seu número, toque em **"Get verification code"** e insira o código que você recebeu por SMS ou WhatsApp.
 
-```
-┌─────────────────────────────────┐
-│  Sign up                        │
-│                                 │
-│  Enter your phone number        │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  🇧🇷 +55  │ (11) 9XXXX-XXXX│  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │   Get verification code   │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Other sign-up methods           │
-│                                 │
-│  By continuing you agree to our │
-│  Terms of Service and           │
-│  Privacy Policy                 │
-└─────────────────────────────────┘
-```
+![Tela de cadastro com campo de entrada de número de telefone e botão para obter código de verificação](./assets/mockups/account-security__signup-phone-entry__pt-br.png)
 
 Para usar Google ou Apple, toque em **"Other sign-up methods"** na parte inferior. Um modal vai aparecer com as duas opções.
 
@@ -68,33 +45,7 @@ Você pode visualizar e editar os seguintes campos:
 **Legal Information (Brasil):**
 - **CPF** — seu número de CPF (obrigatório para usuários brasileiros)
 
-```
-┌─────────────────────────────────┐
-│  Information                    │
-│                                 │
-│  Personal Information           │
-│  ┌───────────────────────────┐  │
-│  │  First Name: Maria        │  │
-│  │  Last Name: Silva         │  │
-│  │  Birth Date: 15/03/1990   │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Contact Information            │
-│  ┌───────────────────────────┐  │
-│  │  Email: maria@email.com   │  │
-│  │  Phone: +55 11 9XXXX-XXXX│  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Legal Information              │
-│  ┌───────────────────────────┐  │
-│  │  CPF: XXX.XXX.XXX-XX     │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │         Save              │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Formulário de informações da conta com seções de dados pessoais, contato e informações legais para editar perfil do usuário](./assets/mockups/account-security__account-information__pt-br.png)
 
 Depois de fazer alterações, toque em **"Save"** para atualizar suas informações.
 

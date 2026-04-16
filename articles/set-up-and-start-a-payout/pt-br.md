@@ -18,17 +18,7 @@ Você precisa de:
 
 Vá ao seu perfil, depois toque em **Settings**. Encontre e toque em **My Wallet**.
 
-```
-┌─────────────────────────────────┐
-│  Settings                       │
-│                                 │
-│  SELL                           │
-│  My Sales                       │
-│  ▶ My Wallet                    │
-│  Shipping Preferences           │
-│                                 │
-└─────────────────────────────────┘
-```
+![Menu de configurações com seção Vender mostrando opções Minhas Vendas, Minha Carteira e Preferências de Envio](./assets/mockups/set-up-and-start-a-payout__settings-menu__pt-br.png)
 
 Você também pode acessar sua carteira diretamente da sua página de perfil.
 
@@ -36,34 +26,11 @@ Você também pode acessar sua carteira diretamente da sua página de perfil.
 
 Se é sua primeira vez, você verá um botão **Register Bank** na parte inferior da tela da carteira. Toque nele.
 
-```
-┌─────────────────────────────────┐
-│  My Wallet                      │
-│                                 │
-│  [Seções da carteira...]        │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │      Register Bank        │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Tela Minha Carteira com botão para Registrar Banco](./assets/mockups/set-up-and-start-a-payout__wallet-register-bank__pt-br.png)
 
 Um alerta aparece:
 
-```
-┌─────────────────────────────────┐
-│  Registration                   │
-│                                 │
-│  You must first verify your     │
-│  identity and bank details.     │
-│  Jamble is powered by Pagar.me  │
-│  for more secure transactions   │
-│                                 │
-│  [ Individual ]                 │
-│  [ Company ]                    │
-│  [ Later ]                      │
-└─────────────────────────────────┘
-```
+![Tela de registro com requisito de verificação de identidade e três botões de tipo de conta](./assets/mockups/set-up-and-start-a-payout__registration-type-picker__pt-br.png)
 
 Escolha a opção que corresponde à sua situação:
 - **Individual** — se você vende como pessoa física (usando seu CPF)
@@ -75,23 +42,7 @@ Isso abre um formulário de registro onde você informará seus dados de identid
 
 Após o registro, sua tela da carteira mostra suas informações bancárias em uma seção **Bank Details** na parte inferior.
 
-```
-┌─────────────────────────────────┐
-│  My Wallet                      │
-│                                 │
-│  [Seções de saldo]              │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ Bank Details              │  │
-│  │ Banco XXX - Ag XXXX      │  │
-│  │ CC XXXXX-X        [Update]│  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │       Withdraw            │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![wallet-header: seção Minha Carteira com card de detalhes bancários mostrando nome do banco, agência e número da conta com botão de atualizar, e botão de sacar abaixo](./assets/mockups/set-up-and-start-a-payout__wallet-header__pt-br.png)
 
 Se precisar mudar seus dados bancários, toque no botão **Update** ao lado das informações do banco.
 
@@ -107,21 +58,7 @@ Pronto — um toque só. A Jamble envia seu saldo disponível para sua conta ban
 
 Após solicitar um saque, você pode acompanhar o progresso. Toque no **ícone de relógio** no canto superior direito da tela da carteira para abrir o **Payouts History**.
 
-```
-┌─────────────────────────────────┐
-│  Payouts History                │
-│                                 │
-│  #PAY-12345        R$ 350,00   │
-│  Completed         19/03/2026   │
-│  ─────────────────────────────  │
-│  #PAY-12340        R$ 520,00   │
-│  Processing        18/03/2026   │
-│  ─────────────────────────────  │
-│  #PAY-12335        R$ 180,00   │
-│  Failed            17/03/2026   │
-│                                 │
-└─────────────────────────────────┘
-```
+![Lista do Histórico de Pagamentos com IDs de pagamento, valores em Real brasileiro e badges de status mostrando transações concluídas, em processamento e falhas com datas.](./assets/mockups/set-up-and-start-a-payout__payouts-history__pt-br.png)
 
 Cada saque mostra:
 - **ID do saque** — um número de referência único
@@ -131,15 +68,12 @@ Cada saque mostra:
 
 ### Status dos saques
 
-| Status | O que significa |
-|--------|----------------|
-| Created | Sua solicitação de saque foi recebida |
-| Processing | A Pagar.me está processando a transferência para seu banco |
-| Pending | A transferência está aguardando para ser concluída |
-| Completed | O dinheiro chegou na sua conta bancária |
-| Failed | Algo deu errado (veja o artigo de resolução de problemas) |
-| Canceled | O saque foi cancelado |
-
+- **Created** — Sua solicitação de saque foi recebida
+- **Processing** — A Pagar.me está processando a transferência para seu banco
+- **Pending** — A transferência está aguardando para ser concluída
+- **Completed** — O dinheiro chegou na sua conta bancária
+- **Failed** — Algo deu errado (veja o artigo de resolução de problemas)
+- **Canceled** — O saque foi cancelado
 ## Dicas importantes
 
 - **Registre seu banco ANTES da primeira venda.** Não espere até ter ganhos — configure seus dados bancários cedo para que os saques sejam instantâneos quando precisar

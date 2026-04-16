@@ -27,22 +27,7 @@ Ao criar ou editar uma listagem, selecione **Compra Direta** como modo de venda.
 
 Ative para revelar dois novos campos:
 
-```
-┌─────────────────────────────────┐
-│  Modo de Venda: Compra Direta   │
-│                                 │
-│  Preço: R$ [200]                │
-│                                 │
-│  ⚡ Flash sale: [ON]            │
-│                                 │
-│  Desconto (%): [30]             │
-│  (10% a 90%)                    │
-│                                 │
-│  Cronômetro (Segundos): [60]    │
-│  (30 a 600 segundos)            │
-│                                 │
-└─────────────────────────────────┘
-```
+![Formulário de configuração de flash sales com preço, desconto e cronômetro](./assets/mockups/flash-sales__flash-sales-config__pt-br.png)
 
 - **Desconto (%)** — A porcentagem de desconto sobre o preço original. Você pode definir qualquer valor de **10% a 90%**. Se seu produto custa R$200 e você define 30%, os compradores pagam R$140
 
@@ -54,24 +39,7 @@ Salve sua listagem. A Venda Relâmpago está agora configurada e pronta para ser
 
 Quando estiver ao vivo, encontre o produto na sua lista e toque em **"Start"**. Como este produto tem Venda Relâmpago ativada, o app mostra uma escolha:
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  Começar como Venda Relâmpago   │
-│  ou Compra Direta?              │
-│                                 │
-│  ▶ Flash Sale                   │
-│    Vender com preço de desconto │
-│    com cronômetro regressivo    │
-│                                 │
-│  ▶ Buy It Now                   │
-│    Vender pelo preço cheio,     │
-│    sem cronômetro               │
-│                                 │
-│  Later                          │
-│                                 │
-└─────────────────────────────────┘
-```
+![flash-sale-mode-picker: Escolha entre Venda Relâmpago com cronômetro regressivo ou Compra Direta pelo preço cheio](./assets/mockups/flash-sales__flash-sale-mode-picker__pt-br.png)
 
 Toque em **"Flash Sale"** para iniciar a venda com desconto. Toque em **"Buy It Now"** se quiser vender pelo preço cheio. Toque em **"Later"** para cancelar.
 
@@ -83,26 +51,7 @@ Quando você inicia a Venda Relâmpago:
 2. Um **cronômetro regressivo** começa (a duração que você definiu)
 3. Os compradores veem um banner verde **"Flash Sale - X% OFF"** com o cronômetro
 
-```
-┌─────────────────────────────────┐
-│  O que os compradores veem:     │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  ⚡ Flash Sale - 30% OFF   │  │
-│  │                           │  │
-│  │  Nike Air Max 90          │  │
-│  │  R̶$̶2̶0̶0̶  → R$140           │  │
-│  │  3 restante(s)            │  │
-│  │                           │  │
-│  │  ⏱ 0:42 restante          │  │
-│  │                           │  │
-│  │  ┌─────────────────────┐  │  │
-│  │  │ Deslize para comprar│  │  │
-│  │  │      R$140           │  │  │
-│  │  └─────────────────────┘  │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Cartão de flash sale mostrando Nike Air Max 90 com 30% de desconto, timer de contagem regressiva e botão deslizar para comprar](./assets/mockups/flash-sales__flash-sale-product-card__pt-br.png)
 
 **O que os compradores veem durante uma Venda Relâmpago:**
 - Um banner verde brilhante com "Flash Sale - X% OFF" e a porcentagem de desconto

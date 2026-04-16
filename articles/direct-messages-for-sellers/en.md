@@ -28,14 +28,11 @@ All your conversations are in the **Activity** tab — one of the main tabs at t
 
 At the top, you'll see filter tabs to organize your conversations:
 
-| Tab | What it shows |
-|-----|--------------|
-| **All** | Every conversation you have |
-| **Unread** | Only conversations with new messages you haven't read |
-| **Purchases** | Conversations about items you bought from other sellers |
-| **Sales** | Conversations about items you sold — this is your main tab as a seller |
-| **Archived** | Conversations you've archived |
-
+- ****All**** — Every conversation you have
+- ****Unread**** — Only conversations with new messages you haven't read
+- ****Purchases**** — Conversations about items you bought from other sellers
+- ****Sales**** — Conversations about items you sold — this is your main tab as a seller
+- ****Archived**** — Conversations you've archived
 As a seller, the **Sales** tab is where you'll spend most of your time. It shows all conversations related to your sales — buyer questions, order confirmations, and shipping discussions.
 
 ## Types of conversations
@@ -80,17 +77,7 @@ You can message any user on Jamble:
 2. Tap the **"Message"** button (next to the "Follow" button)
 3. Type your message and send
 
-```
-┌─────────────────────────────────┐
-│  @username                      │
-│  1.2k followers                 │
-│                                 │
-│  ┌──────────┐  ┌─────────────┐  │
-│  │  Follow  │  │   Message   │  │
-│  └──────────┘  └─────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![user-profile-header showing @username with 1.2k followers and Follow and Message action buttons](./assets/mockups/direct-messages-for-sellers__user-profile-header__en.png)
 
 If you've already chatted with this person, it opens your existing conversation. If not, a new conversation is created when you send your first message.
 

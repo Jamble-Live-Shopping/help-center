@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+
+.picker-title { font-size: 15px; font-weight: 600; color: #A0A7B7; text-transform: uppercase; padding: 14px 20px 8px; letter-spacing: 0.5px; }
+.group { margin: 0 12px 14px; border: 1px solid #E9EAEF; border-radius: 12px; overflow: hidden; }
+.opt { display: flex; align-items: center; padding: 14px 16px; border-bottom: 1px solid #F0F1F5; }
+.opt:last-child { border-bottom: none; }
+.opt.selected { background: #F9F8FF; }
+.opt-icon { width: 24px; height: 24px; background: #E9EAEF; border-radius: 6px; margin-right: 12px; flex-shrink: 0; }
+.opt-text { flex: 1; }
+.opt-name { font-size: 17px; font-weight: 600; color: #162233; line-height: 22px; }
+.opt-sub { font-size: 13px; color: #A0A7B7; line-height: 18px; margin-top: 2px; }
+.radio { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid #A0A7B7; flex-shrink: 0; margin-left: 12px; }
+.radio.selected { border-color: #162233; position: relative; }
+.radio.selected::after { content: ""; position: absolute; top: 3px; left: 3px; width: 10px; height: 10px; border-radius: 50%; background: #162233; }
+</style></head><body><div class="phone"><div class="picker-title">Start as a Flash Sale or Buy It Now?</div><div class="group"><div class="opt "><div class="opt-icon"></div><div class="opt-text"><div class="opt-name">Flash Sale</div><div class="opt-sub">Sell at discounted price with a countdown timer</div></div><div class="radio "></div></div><div class="opt "><div class="opt-icon"></div><div class="opt-text"><div class="opt-name">Buy It Now</div><div class="opt-sub">Sell at full price, no timer</div></div><div class="radio "></div></div></div></div></body></html>

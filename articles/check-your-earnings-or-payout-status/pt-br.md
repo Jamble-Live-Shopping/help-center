@@ -16,29 +16,7 @@ Você precisa de:
 
 Vá ao seu perfil, depois toque em **Settings** → **My Wallet**.
 
-```
-┌─────────────────────────────────┐
-│  My Wallet              [?] [⏰]│
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ Título da seção           │  │
-│  │ Descrição                 │  │
-│  │ R$ XXX,XX                 │  │
-│  └───────────────────────────┘  │
-│  ┌───────────────────────────┐  │
-│  │ Título da seção           │  │
-│  │ Descrição                 │  │
-│  │ R$ XXX,XX                 │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Bank Details                   │
-│  Banco XXX - Ag XXXX    [Update]│
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │       Withdraw            │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Tela Minha Carteira com cartões de saldo, detalhes bancários e botão Sacar](./assets/mockups/check-your-earnings-or-payout-status__my-wallet__pt-br.png)
 
 Sua carteira mostra várias seções, cada uma com um título, descrição e valor. Essas seções dão um detalhamento dos seus ganhos:
 - Seu saldo disponível (o que pode sacar agora)
@@ -49,21 +27,7 @@ Sua carteira mostra várias seções, cada uma com um título, descrição e val
 
 Para ver todos os seus saques passados e atuais, toque no **ícone de relógio** (⏰) no canto superior direito da tela da carteira. Isso abre a tela **Payouts History**.
 
-```
-┌─────────────────────────────────┐
-│  Payouts History                │
-│                                 │
-│  #PAY-12345        R$ 350,00   │
-│  Completed         19/03/2026   │
-│  ─────────────────────────────  │
-│  #PAY-12340        R$ 520,00   │
-│  Processing        18/03/2026   │
-│  ─────────────────────────────  │
-│  #PAY-12335        R$ 180,00   │
-│  Failed            17/03/2026   │
-│                                 │
-└─────────────────────────────────┘
-```
+![Histórico de Payouts exibindo três transações de pagamento com IDs, valores em reais, status e datas](./assets/mockups/check-your-earnings-or-payout-status__payouts-history__pt-br.png)
 
 Cada entrada mostra:
 - **ID do saque** — identificador único do saque

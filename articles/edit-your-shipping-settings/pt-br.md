@@ -16,17 +16,7 @@ Você precisa de:
 
 Vá ao seu perfil, toque em **Settings**, depois toque em **Shipping Preferences**.
 
-```
-┌─────────────────────────────────┐
-│  Settings                       │
-│                                 │
-│  Profile Settings               │
-│  Payment Settings               │
-│  ▶ Shipping Preferences         │
-│  Notification Settings          │
-│                                 │
-└─────────────────────────────────┘
-```
+![Lista de configurações com opções de Perfil, Pagamento, Preferências de Envio e Notificações](./assets/mockups/edit-your-shipping-settings__settings-row-list__pt-br.png)
 
 Esta tela mostra todas as suas configurações de envio atuais. Cada configuração tem sua própria seção que você pode editar.
 
@@ -45,12 +35,9 @@ Seu endereço de envio determina de onde os pacotes são enviados e afeta o cust
 
 Você pode alternar entre três formatos de etiqueta a qualquer momento:
 
-| Formato | Melhor para |
-|---------|-------------|
-| **PDF meia página** (padrão) | Impressoras comuns. Imprime em meia folha |
-| **PDF página inteira** | Impressoras comuns. Usa uma folha inteira |
-| **Etiqueta térmica 4×6** | Impressoras de etiqueta térmica (Zebra, etc.). Destaque e cole |
-
+- ****PDF meia página** (padrão)** — Impressoras comuns. Imprime em meia folha
+- ****PDF página inteira**** — Impressoras comuns. Usa uma folha inteira
+- ****Etiqueta térmica 4×6**** — Impressoras de etiqueta térmica (Zebra, etc.). Destaque e cole
 Para mudar:
 1. Encontre a seção **Label Format**
 2. Selecione o formato que deseja

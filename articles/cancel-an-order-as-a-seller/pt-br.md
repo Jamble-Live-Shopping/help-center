@@ -24,16 +24,7 @@ Em ambos os casos, o comprador é automaticamente reembolsado e nenhuma comissã
 
 Abra o app da Jamble e vá em **My Sales** nas configurações.
 
-```
-┌─────────────────────────────────┐
-│  Settings                       │
-│                                 │
-│  ▶ My Sales                     │
-│  My Wallet                      │
-│  Shipping Preferences           │
-│                                 │
-└─────────────────────────────────┘
-```
+![Menu de Configurações com opções Minhas Vendas, Minha Carteira e Preferências de Envio](./assets/mockups/cancel-an-order-as-a-seller__settings-seller-menu__pt-br.png)
 
 ### Passo 2: Encontre o pedido
 
@@ -43,19 +34,7 @@ Toque no pedido que deseja cancelar.
 
 Se o pedido está em status "Created", você verá dois botões:
 
-```
-┌─────────────────────────────────┐
-│  Detalhes do pedido             │
-│                                 │
-│  [Foto do produto] Nome        │
-│  R$ XX,XX                       │
-│                                 │
-│  ┌──────────┐ ┌──────────────┐  │
-│  │  Reject  │ │   Confirm    │  │
-│  └──────────┘ └──────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Diálogo de confirmação de detalhes do pedido com foto do produto, nome, preço e botões Reject/Confirm](./assets/mockups/cancel-an-order-as-a-seller__order-details-confirmation__pt-br.png)
 
 Toque em **Reject** para recusar o pedido. O comprador é automaticamente reembolsado.
 

@@ -28,14 +28,11 @@ Todas as suas conversas estao na aba **Atividade** — uma das abas principais n
 
 No topo, voce vera abas de filtro para organizar suas conversas:
 
-| Aba | O que mostra |
-|-----|-------------|
-| **Todos** | Todas as conversas que voce tem |
-| **Nao lido** | Apenas conversas com mensagens novas que voce nao leu |
-| **Compras** | Conversas sobre itens que voce comprou de outros vendedores |
-| **Vendas** | Conversas sobre itens que voce vendeu — essa e sua aba principal como vendedor |
-| **Arquivados** | Conversas que voce arquivou |
-
+- ****Todos**** — Todas as conversas que voce tem
+- ****Nao lido**** — Apenas conversas com mensagens novas que voce nao leu
+- ****Compras**** — Conversas sobre itens que voce comprou de outros vendedores
+- ****Vendas**** — Conversas sobre itens que voce vendeu — essa e sua aba principal como vendedor
+- ****Arquivados**** — Conversas que voce arquivou
 Como vendedor, a aba **Vendas** e onde voce vai passar a maior parte do tempo. Ela mostra todas as conversas relacionadas as suas vendas — perguntas de compradores, confirmacoes de pedido e discussoes sobre envio.
 
 ## Tipos de conversas
@@ -81,17 +78,7 @@ Voce pode enviar mensagem para qualquer usuario na Jamble:
 2. Toque no botao **"Mensagem"** (ao lado do botao "Seguir")
 3. Digite sua mensagem e envie
 
-```
-┌─────────────────────────────────┐
-│  @nomedousuario                 │
-│  1.2k seguidores                │
-│                                 │
-│  ┌──────────┐  ┌─────────────┐  │
-│  │  Seguir  │  │  Mensagem   │  │
-│  └──────────┘  └─────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![user-profile-header mostrando nome de usuário, contagem de seguidores e botões de ação Seguir e Mensagem](./assets/mockups/direct-messages-for-sellers__user-profile-header__pt-br.png)
 
 Se voce ja conversou com essa pessoa, abre a conversa existente. Se nao, uma nova conversa e criada quando voce envia a primeira mensagem.
 

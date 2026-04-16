@@ -14,12 +14,9 @@ As ofertas em tempo real são o coração das vendas ao vivo na Jamble. Quando v
 
 Quando você lista um produto na Jamble, escolhe um dos três modos de venda:
 
-| Modo de venda | Como funciona |
-|--------------|--------------|
-| **Ofertas em tempo real** | Compradores competem fazendo ofertas. O timer se estende quando novas ofertas chegam. A oferta mais alta vence |
-| **Sudden Death** | Igual às ofertas em tempo real, mas o timer NÃO se estende. Quando o tempo acaba, acabou — sem segunda chance |
-| **Buy It Now** | Preço fixo. Compradores compram instantaneamente pelo preço que você definiu. Sem competição |
-
+- ****Ofertas em tempo real**** — Compradores competem fazendo ofertas. O timer se estende quando novas ofertas chegam. A oferta mais alta vence
+- ****Sudden Death**** — Igual às ofertas em tempo real, mas o timer NÃO se estende. Quando o tempo acaba, acabou — sem segunda chance
+- ****Buy It Now**** — Preço fixo. Compradores compram instantaneamente pelo preço que você definiu. Sem competição
 Este artigo foca em **Ofertas em tempo real** e **Sudden Death** — os dois modos de venda competitivos.
 
 ## Como funciona uma venda com ofertas em tempo real
@@ -33,19 +30,7 @@ Configure duas opções principais:
 - **Preço inicial** — o valor mínimo para a primeira oferta (mínimo R$ 5,00)
 - **Duração** — quanto tempo a venda dura (5 a 90 segundos)
 
-```
-┌─────────────────────────────────┐
-│  Sell Mode                      │
-│                                 │
-│  ● Real-time offers             │
-│  ○ Sudden Death                 │
-│  ○ Buy It Now                   │
-│                                 │
-│  Starting price: R$ ____        │
-│  Duration: [30 seconds ▼]       │
-│                                 │
-└─────────────────────────────────┘
-```
+![Seletor de modo de venda com ofertas em tempo real selecionadas, opções Morte Súbita e Compre Agora](./assets/mockups/how-real-time-offers-work__sell-mode-picker__pt-br.png)
 
 ### Passo 2: Inicie a venda durante seu show
 
@@ -55,22 +40,7 @@ Quando você estiver ao vivo, encontre o produto na sua lista de produtos e toqu
 2. O timer começa a contagem regressiva
 3. Os compradores podem começar a fazer ofertas
 
-```
-┌─────────────────────────────────┐
-│  O que os compradores veem:     │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  Nike Air Max 90          │  │
-│  │                           │  │
-│  │  Oferta atual: R$45       │  │
-│  │  ⏱ 0:18                   │  │
-│  │                           │  │
-│  │  ┌─────────────────────┐  │  │
-│  │  │  Fazer oferta: R$50 │  │  │
-│  │  └─────────────────────┘  │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![real-time-offer-card exibindo Nike Air Max 90 com oferta atual de R$45, cronômetro em 0:18, e botão Fazer oferta por R$50](./assets/mockups/how-real-time-offers-work__real-time-offer-card__pt-br.png)
 
 ### Passo 3: Compradores fazem ofertas
 

@@ -17,17 +17,7 @@ Você precisa de:
 
 Vá ao seu perfil, depois toque em **Configurações**. Role para baixo e toque em **Shipping Preferences**.
 
-```
-┌─────────────────────────────────┐
-│  Configurações                  │
-│                                 │
-│  Configurações do Perfil        │
-│  Configurações de Pagamento     │
-│  ▶ Shipping Preferences         │
-│  Configurações de Notificação   │
-│                                 │
-└─────────────────────────────────┘
-```
+![Tela de menu de configurações exibindo opções de perfil, pagamento, shipping e notificações](./assets/mockups/set-up-shipping-before-you-sell__settings-menu__pt-br.png)
 
 Isso abre a tela onde você configura tudo relacionado ao envio.
 
@@ -40,23 +30,7 @@ Preencha:
 - **Número** — o número da sua casa ou prédio
 - **Complemento** (opcional) — se você mora em apartamento
 
-```
-┌─────────────────────────────────┐
-│  Endereço de Envio              │
-│                                 │
-│  CEP: _____-___                 │
-│  Rua: [preenchido auto]         │
-│  Número: ____                   │
-│  Complemento: ____ (opcional)   │
-│  Bairro: [preenchido auto]      │
-│  Cidade: [preenchido auto]      │
-│  Estado: [preenchido auto]      │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │     Salvar Endereço       │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Formulário de endereço de envio com CEP, rua, número e campos preenchidos automaticamente, mais botão Salvar Endereço](./assets/mockups/set-up-shipping-before-you-sell__shipping-address-form__pt-br.png)
 
 **Por que isso importa:** Seu endereço determina qual agência dos Correios é a mais próxima para entregas, e afeta o custo de frete que os compradores veem no checkout.
 
@@ -70,16 +44,7 @@ Você tem três opções:
 - **PDF página inteira** — usa uma folha inteira. Bom se você prefere etiquetas maiores e mais fáceis de ler
 - **Etiqueta térmica 4×6** — para vendedores que têm uma impressora térmica de etiquetas (como Zebra ou similar). São etiquetas adesivas, não precisa cortar
 
-```
-┌─────────────────────────────────┐
-│  Formato da Etiqueta            │
-│                                 │
-│  ○ PDF meia página (padrão)     │
-│  ○ PDF página inteira           │
-│  ○ Etiqueta térmica 4×6         │
-│                                 │
-└─────────────────────────────────┘
-```
+![Seletor de formato de etiqueta: PDF meia página, página inteira ou opções de etiqueta térmica 4×6](./assets/mockups/set-up-shipping-before-you-sell__label-format-picker__pt-br.png)
 
 **Se não tem certeza de qual escolher:** Comece com PDF meia página. Funciona com qualquer impressora e é a escolha mais comum.
 

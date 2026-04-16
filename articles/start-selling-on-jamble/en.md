@@ -18,21 +18,7 @@ You need:
 
 Download Jamble from the App Store (iPhone) or Google Play Store (Android). Open the app and create your account with your email or phone number.
 
-```
-┌─────────────────────────────────┐
-│  Welcome to Jamble              │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  Sign up with Email       │  │
-│  └───────────────────────────┘  │
-│  ┌───────────────────────────┐  │
-│  │  Sign up with Phone       │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Already have an account?       │
-│  Log in                         │
-└─────────────────────────────────┘
-```
+![Welcome to Jamble auth screen with sign up and log in options](./assets/mockups/start-selling-on-jamble__welcome-signup__en.png)
 
 Enter your Phone Number and confirm it via SMS or WhatsApp. Then fill your Email and add your CPF. Once it's done, your account is created and you need to apply for Live seller access.
 
@@ -40,22 +26,7 @@ Enter your Phone Number and confirm it via SMS or WhatsApp. Then fill your Email
 
 In the app, you'll see a screen titled **"Become a Live Seller"**. Tap the button that says **"Apply to Sell Live"**.
 
-```
-┌─────────────────────────────────┐
-│  Become a Live Seller           │
-│                                 │
-│  ✦ Elevate Earnings,            │
-│    Effortlessly                 │
-│  ✦ Instant Access to Buyers     │
-│  ✦ Dedicated Seller Support     │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │   Apply to Sell Live      │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Do it later                    │
-└─────────────────────────────────┘
-```
+![Become a Live Seller screen with benefits list and Apply to Sell Live button](./assets/mockups/start-selling-on-jamble__become-live-seller__en.png)
 
 This opens a short application form. You'll be asked:
 
@@ -121,23 +92,7 @@ Before going live, add the products you want to sell. For each product, you'll e
 
 Tap the create button to schedule a live show.
 
-```
-┌─────────────────────────────────┐
-│  Create a Show                  │
-│                                 │
-│  Title: ____________________   │
-│  Date: [Pick a date ▼]         │
-│  Time: [Pick a time ▼]         │
-│  Category: [Select ▼]          │
-│                                 │
-│  Add a show cover that           │
-│  shows what you'll be selling   │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │   Schedule a Show         │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Create a Show form with title input, date and time dropdowns, category selector, and cover upload area](./assets/mockups/start-selling-on-jamble__create-show__en.png)
 
 Tips for your show setup:
 - **Title** - tell buyers what to expect (e.g., "Camisetas vintage e streetwear")

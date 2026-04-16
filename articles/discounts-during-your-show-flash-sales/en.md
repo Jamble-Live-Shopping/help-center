@@ -38,22 +38,7 @@ During your live show, tap on a product that is set to the **Buy It Now** sell m
 
 You'll see a prompt asking how you want to sell this item:
 
-```
-┌─────────────────────────────────┐
-│  Start as a Flash Sale or       │
-│  Buy It Now?                    │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │       Flash Sale          │  │
-│  └───────────────────────────┘  │
-│  ┌───────────────────────────┐  │
-│  │       Buy It Now          │  │
-│  └───────────────────────────┘  │
-│  ┌───────────────────────────┐  │
-│  │       Later               │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Flash sale mode picker showing three options: Flash Sale, Buy It Now, and Later](./assets/mockups/discounts-during-your-show-flash-sales__flash-sale-mode-picker__en.png)
 
 ### Step 2: Select Flash Sale
 

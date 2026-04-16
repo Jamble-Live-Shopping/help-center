@@ -27,16 +27,7 @@ Não há cronômetro regressivo e não há competição entre compradores. O pre
 
 Ao criar ou editar um produto para seu show, escolha **Buy It Now** como modo de venda.
 
-```
-┌─────────────────────────────────┐
-│  Modo de Venda                  │
-│                                 │
-│  ○ Ofertas em tempo real        │
-│  ○ Sudden Death                 │
-│  ● Buy It Now ←                │
-│                                 │
-└─────────────────────────────────┘
-```
+![sell-mode-picker: opções de rádio para Ofertas em tempo real, Sudden Death ou Buy It Now](./assets/mockups/buy-it-now-sell-at-a-fixed-price__sell-mode-picker__pt-br.png)
 
 ### Passo 2: Defina seu preço
 

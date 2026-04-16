@@ -42,24 +42,7 @@ Vá às suas vendas e encontre o pedido que precisa cancelar.
 
 Toque na opção de cancelar. Você verá uma tela com o título **"What's making you cancel?"**
 
-```
-┌─────────────────────────────────┐
-│  What's making you cancel?      │
-│                                 │
-│  Our team will review your      │
-│  request within 2 hours.        │
-│                                 │
-│  ● Unable to ship the item      │
-│  ○ Item lost                    │
-│  ○ Item damaged                 │
-│  ○ Buyer requested cancellation │
-│  ○ Other reasons                │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │         Submit            │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Tela de seleção de motivo de cancelamento: "What's making you cancel?" com 5 opções de radio button e botão Enviar](./assets/mockups/how-order-cancellations-work__cancel-reason-picker__pt-br.png)
 
 ### Passo 3: Selecione um motivo e envie
 
@@ -67,20 +50,7 @@ Escolha o motivo que melhor descreve sua situação e toque em **Submit**.
 
 Um alerta de confirmação aparece:
 
-```
-┌─────────────────────────────────┐
-│  Cancel this sale               │
-│                                 │
-│  Abusive or repeated            │
-│  cancellations may lead to      │
-│  temporary restrictions or      │
-│  account suspension.            │
-│                                 │
-│  [ Don't Cancel ]               │
-│  [ Cancel Sale  ]               │
-│                                 │
-└─────────────────────────────────┘
-```
+![Diálogo de confirmação de cancelamento de venda com aviso sobre cancelamentos abusivos](./assets/mockups/how-order-cancellations-work__cancel-sale-confirmation__pt-br.png)
 
 Toque em **Cancel Sale** para confirmar, ou **Don't Cancel** para voltar.
 

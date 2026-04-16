@@ -1,0 +1,39 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; padding: 0 0 16px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+
+/* Top bar — Your Show */
+.topbar { background: #E9EAEF; padding: 14px 20px; display: flex; align-items: center; justify-content: center; }
+.topbar-title { font-size: 18px; font-weight: 600; color: #162233; }
+
+/* Content area */
+.content { padding: 16px 20px 0; }
+.section-label { font-size: 12px; font-weight: 600; color: #A0A7B7; text-transform: uppercase; letter-spacing: 0.5px; padding: 8px 0 12px; }
+
+/* Empty state */
+.empty { display: flex; flex-direction: column; align-items: center; padding: 24px 16px 12px; text-align: center; }
+.empty-icon { width: 48px; height: 48px; border-radius: 12px; background: #F2F2F7; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 22px; color: #A0A7B7; }
+.empty-title { font-size: 17px; font-weight: 600; color: #162233; line-height: 22px; margin-bottom: 4px; }
+.empty-sub { font-size: 14px; color: #6B7A92; line-height: 20px; max-width: 240px; margin-bottom: 20px; }
+
+/* JambleButton brand */
+.btn-brand { background: #7E53F8; color: #FFFFFF; border: none; padding: 14px 32px; border-radius: 28px; font-size: 16px; font-weight: 600; font-family: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+.btn-brand .plus { font-size: 18px; font-weight: 500; }
+</style></head><body>
+<div class="phone">
+  <div class="topbar">
+    <div class="topbar-title">Your Show</div>
+  </div>
+  <div class="content">
+    <div class="section-label">Products (0)</div>
+    <div class="empty">
+      <div class="empty-icon">📦</div>
+      <div class="empty-title">There is nothing here yet!</div>
+      <div class="empty-sub">Add products to your Show to gain visibility</div>
+      <button class="btn-brand"><span class="plus">+</span> Add a listing</button>
+    </div>
+  </div>
+</div>
+</body></html>

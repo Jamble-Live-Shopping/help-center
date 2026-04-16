@@ -24,20 +24,7 @@ Notes are different from the show **description**:
 
 When you create or edit a show, you'll see two text fields in the details section:
 
-```
-┌─────────────────────────────────┐
-│  DESCRIPTION (Optional)         │
-│  ┌───────────────────────────┐  │
-│  │ Describe your live here   │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  NOTES (Optional)               │
-│  ┌───────────────────────────┐  │
-│  │ Additional notes          │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Add and edit show notes form with description and notes fields](./assets/mockups/add-and-edit-show-notes__add-edit-show-notes__en.png)
 
 Tap on the **NOTES** field and type your message. You have a maximum of **200 characters**.
 

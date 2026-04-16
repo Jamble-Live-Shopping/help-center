@@ -24,45 +24,15 @@ Existem duas configurações padrão:
 
 Vá ao seu perfil → **Settings** → **Shipping Preferences**.
 
-```
-┌─────────────────────────────────┐
-│  Shipping Preferences           │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ Shipping Address          │  │
-│  │ [Seu endereço atual]      │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ Label Format              │  │
-│  │ ○ Half-page PDF ←        │  │
-│  │ ○ Full-page PDF           │  │
-│  │ ○ 4×6 Thermal Label       │  │
-│  └───────────────────────────┘  │
-│                                 │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ Package Insurance         │  │
-│  │ ○ Yes  ○ No ←             │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │          Save             │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Formulário de Preferências de Envio com campo de endereço, opções de formato de etiqueta, toggle de seguro de pacote e botão Salvar](./assets/mockups/update-default-shipping-label-settings__shipping-preferences__pt-br.png)
 
 ### Passo 2: Atualize o formato da etiqueta
 
 Escolha o formato que corresponde à sua impressora:
 
-| Formato | Quando usar |
-|---------|------------|
-| **PDF meia página** | Você tem uma impressora comum. Este é o padrão |
-| **PDF página inteira** | Você prefere uma etiqueta maior em uma folha inteira |
-| **Etiqueta térmica 4×6** | Você tem uma impressora de etiqueta térmica |
-
+- ****PDF meia página**** — Você tem uma impressora comum. Este é o padrão
+- ****PDF página inteira**** — Você prefere uma etiqueta maior em uma folha inteira
+- ****Etiqueta térmica 4×6**** — Você tem uma impressora de etiqueta térmica
 Selecione a opção que deseja. A seta (←) mostra sua seleção atual.
 
 ### Passo 3: Salve suas alterações
@@ -73,12 +43,9 @@ Todas as etiquetas geradas a partir deste ponto usarão suas configurações atu
 
 ## Quando atualizar seus padrões
 
-| Situação | O que mudar |
-|----------|------------|
-| Você comprou uma impressora térmica | Mude o formato para Etiqueta Térmica 4×6 |
-| Você vende itens de alto valor | Ative o seguro do pacote |
-| Sua impressora atual quebrou e está usando outra | Mude para o formato que sua nova impressora suporta |
-
+- **Você comprou uma impressora térmica** — Mude o formato para Etiqueta Térmica 4×6
+- **Você vende itens de alto valor** — Ative o seguro do pacote
+- **Sua impressora atual quebrou e está usando outra** — Mude para o formato que sua nova impressora suporta
 ## Dicas importantes
 
 - **Os padrões se aplicam a TODAS as etiquetas futuras.** Toda nova etiqueta usará essas configurações até você mudá-las novamente

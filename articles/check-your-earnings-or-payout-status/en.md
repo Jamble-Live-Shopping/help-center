@@ -16,29 +16,7 @@ You need:
 
 Go to your profile, then tap **Settings** → **My Wallet**.
 
-```
-┌─────────────────────────────────┐
-│  My Wallet              [?] [⏰]│
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ Section title             │  │
-│  │ Description               │  │
-│  │ R$ XXX,XX                 │  │
-│  └───────────────────────────┘  │
-│  ┌───────────────────────────┐  │
-│  │ Section title             │  │
-│  │ Description               │  │
-│  │ R$ XXX,XX                 │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Bank Details                   │
-│  Banco XXX - Ag XXXX    [Update]│
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │       Withdraw            │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![My Wallet screen showing balance cards, bank details and withdraw button with help and history icons](./assets/mockups/check-your-earnings-or-payout-status__wallet-overview__en.png)
 
 Your wallet shows multiple sections, each with a title, description, and value. These sections give you a breakdown of your earnings:
 - Your available balance (what you can withdraw now)
@@ -49,21 +27,7 @@ Your wallet shows multiple sections, each with a title, description, and value. 
 
 To see all your past and current payouts, tap the **clock icon** (⏰) in the top-right corner of the wallet screen. This opens the **Payouts History** screen.
 
-```
-┌─────────────────────────────────┐
-│  Payouts History                │
-│                                 │
-│  #PAY-12345        R$ 350,00   │
-│  Completed         19/03/2026   │
-│  ─────────────────────────────  │
-│  #PAY-12340        R$ 520,00   │
-│  Processing        18/03/2026   │
-│  ─────────────────────────────  │
-│  #PAY-12335        R$ 180,00   │
-│  Failed            17/03/2026   │
-│                                 │
-└─────────────────────────────────┘
-```
+![Payouts History screen showing list of completed, processing, and failed payout transactions with ID, amount, status, and date](./assets/mockups/check-your-earnings-or-payout-status__payouts-history__en.png)
 
 Each entry shows:
 - **Payout ID** — unique identifier for the payout

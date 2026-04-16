@@ -1,0 +1,31 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; padding: 16px 0 12px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+
+.phone { display: flex; align-items: center; justify-content: center; min-height: 380px; background: rgba(0,0,0,0.08); }
+.alert { width: 270px; background: rgba(255,255,255,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 14px; overflow: hidden; text-align: center; }
+.alert-body { padding: 20px 16px 0; }
+.alert-title { font-size: 17px; font-weight: 600; color: #000; line-height: 22px; }
+.alert-msg { font-size: 13px; color: #000; line-height: 18px; margin-top: 8px; }
+.alert-btns { margin-top: 20px; border-top: 0.5px solid rgba(60,60,67,0.2); }
+.alert-btn { display: block; width: 100%; padding: 11px 8px; font-size: 17px; border: none; background: transparent; cursor: pointer; font-family: inherit; border-bottom: 0.5px solid rgba(60,60,67,0.2); }
+.alert-btn:last-child { border-bottom: none; }
+.alert-btn.purple { color: #7E53F8; }
+.alert-btn.blue { color: #007AFF; }
+</style></head><body>
+<div class="phone">
+  <div class="alert">
+    <div class="alert-body">
+      <div class="alert-title">Pending Application</div>
+      <div class="alert-msg">It seems that you already submitted an application to Go Live. We'll be updating you as soon as possible. Any question? Feel free to reach out!</div>
+    </div>
+    <div class="alert-btns">
+      <button class="alert-btn purple">Ok I will wait!</button>
+      <button class="alert-btn blue">Reach out</button>
+    </div>
+  </div>
+</div>
+</body></html>
