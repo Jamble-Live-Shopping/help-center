@@ -36,19 +36,7 @@ After typing your notes, continue with the rest of the show creation (or save yo
 
 When your show is live and a viewer joins, your notes appear as a **pinned message** in the chat area:
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ [Your avatar]             │  │
-│  │ Free shipping on 3+ items!│  │
-│  │ Use code: LIVE30          │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Chat messages below...         │
-│                                 │
-└─────────────────────────────────┘
-```
+![Promo banner with avatar and free shipping offer, code LIVE30](./assets/mockups/add-and-edit-show-notes__promo-banner-shipping__en.png)
 
 The pinned message shows your profile picture and note text. It auto-dismisses after a few seconds (based on reading time), but viewers can bring it back by tapping the **notes icon** in the top-right area of the show.
 

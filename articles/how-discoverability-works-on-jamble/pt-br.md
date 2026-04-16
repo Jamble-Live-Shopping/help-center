@@ -24,17 +24,7 @@ Cada um funciona de forma diferente, e entender como eles operam ajuda voce a ot
 
 Quando um comprador abre a Jamble, ele ve tres abas no topo da tela:
 
-```
-┌─────────────────────────────────┐
-│  ┌───────┐ ┌───────┐ ┌───────┐ │
-│  │Ofertas│ │Explorar│ │Seguindo│ │
-│  └───────┘ └───────┘ └───────┘ │
-│                                 │
-│  [Shows e produtos aparecem     │
-│   abaixo conforme a aba]        │
-│                                 │
-└─────────────────────────────────┘
-```
+![discoverability-tabs: Barra de abas com três opções de navegação Ofertas, Explorar, Seguindo para navegar shows e produtos](./assets/mockups/how-discoverability-works-on-jamble__discoverability-tabs__pt-br.png)
 
 ### Aba Ofertas
 
@@ -48,11 +38,7 @@ A aba Explorar mostra **shows ao vivo e proximos**. Essa e a principal forma dos
 
 No topo da aba Explorar, ha filtros de categoria:
 
-```
-┌─────────────────────────────────────────────────┐
-│ Para Voce │ Calcados │ Contemporaneo │ Beleza │..│
-└─────────────────────────────────────────────────┘
-```
+![Abas de navegação de categorias: Para Voce, Calcados, Contemporaneo, Beleza, e mais](./assets/mockups/how-discoverability-works-on-jamble__category-tabs__pt-br.png)
 
 - **Para Voce** — mostra shows que a Jamble acha que o comprador vai gostar, baseado na atividade dele
 - **Tags de categoria** — so aparecem se houver shows ativos naquela categoria (Calcados, Contemporaneo, Beleza, Colecionaveis, Luxo, Infantil, Joias, Moda Fitness, entre outras)
@@ -73,24 +59,18 @@ A Jamble usa varios sinais para decidir quais shows aparecem primeiro no feed. V
 
 Quando seu show esta ao vivo, essas coisas ajudam voce a aparecer mais alto:
 
-| O que importa | Por que ajuda |
-|--------------|--------------|
-| **Vendas durante o show** | Vender ativamente e o sinal mais forte. Shows com mais vendas e maior faturamento por minuto ficam mais altos |
-| **Espectadores atuais** | Mais pessoas assistindo = mais visivel. Shows com 30 ou mais espectadores ganham um aumento significativo de visibilidade |
-| **Salvos** | Pessoas que salvaram seu show antes dele comecar contam a seu favor |
-| **Itens vendidos** | Cada item vendido durante o show melhora sua posicao |
-
+- ****Vendas durante o show**** — Vender ativamente e o sinal mais forte. Shows com mais vendas e maior faturamento por minuto ficam mais altos
+- ****Espectadores atuais**** — Mais pessoas assistindo = mais visivel. Shows com 30 ou mais espectadores ganham um aumento significativo de visibilidade
+- ****Salvos**** — Pessoas que salvaram seu show antes dele comecar contam a seu favor
+- ****Itens vendidos**** — Cada item vendido durante o show melhora sua posicao
 ### Para shows proximos (antes de comecar)
 
 Antes do show comecar, o ranking depende de:
 
-| O que importa | Por que ajuda |
-|--------------|--------------|
-| **Salvos** | Este e de longe o fator mais importante para shows proximos. Quanto mais pessoas salvarem seu show, mais alto ele aparece |
-| **Produtos listados** | Shows com mais produtos listados ficam acima de shows com poucos produtos |
-| **Sua reputacao como vendedor** | Seu historico geral como vendedor contribui para o ranking |
-| **Quando o show comeca** | Shows que comecam mais cedo aparecem antes de shows agendados para o futuro |
-
+- ****Salvos**** — Este e de longe o fator mais importante para shows proximos. Quanto mais pessoas salvarem seu show, mais alto ele aparece
+- ****Produtos listados**** — Shows com mais produtos listados ficam acima de shows com poucos produtos
+- ****Sua reputacao como vendedor**** — Seu historico geral como vendedor contribui para o ranking
+- ****Quando o show comeca**** — Shows que comecam mais cedo aparecem antes de shows agendados para o futuro
 ## Como a busca funciona
 
 Os compradores podem buscar produtos, marcas e vendedores pela tela de busca.

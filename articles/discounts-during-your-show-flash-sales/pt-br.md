@@ -46,18 +46,7 @@ Toque em **"Flash Sale"** para iniciar a venda com desconto.
 
 A Venda Relâmpago ativa com o percentual de desconto que você configurou ao listar o produto. O banner do produto fica **verde** para sinalizar uma Venda Relâmpago para sua audiência.
 
-```
-┌─────────────────────────────────┐
-│  ┌─────────────────────────┐    │
-│  │ 🟢 Flash Sale  -20%    │    │
-│  │ R$ 80,00 (era R$ 100)  │    │
-│  │ Timer: 0:45             │    │
-│  └─────────────────────────┘    │
-│                                 │
-│  [Imagem do produto]            │
-│                                 │
-└─────────────────────────────────┘
-```
+![Cartão de produto Flash Sale com desconto de 20%, preço R$ 80,00 antes era R$ 100, com timer de 45 segundos](./assets/mockups/discounts-during-your-show-flash-sales__flash-sale-product-card__pt-br.png)
 
 ### Passo 3: Sua audiência compra
 

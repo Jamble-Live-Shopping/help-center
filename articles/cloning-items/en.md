@@ -48,29 +48,7 @@ Tap the **"+"** button while live. You'll see options including **"Clone from Sh
 
 After tapping **"Clone Past Shows Listings"** (or **"Clone from Shows"**), you see a list of your shows — both past and upcoming. Each show displays its title, date, and how many products it contains.
 
-```
-┌─────────────────────────────────┐
-│  Clone Listings from Shows      │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  Fashion Finds Friday     │  │
-│  │  March 15, 2026           │  │
-│  │  12 products available    │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  Weekend Sneaker Drop     │  │
-│  │  March 10, 2026           │  │
-│  │  8 products available     │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  Import [0] products      │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-
-**Note:** The button at the bottom tracks the total products you've selected across all shows.
-```
+![Clone Listings from Shows screen displaying Fashion Finds Friday and Weekend Sneaker Drop events with product counts and Import button](./assets/mockups/cloning-items__clone-listings-from-shows__en.png)
 
 #### Step 2: Select products from a show
 

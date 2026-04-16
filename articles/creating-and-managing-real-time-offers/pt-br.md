@@ -47,18 +47,7 @@ Abra sua lista de produtos (toque no **ícone de sacola** na parte inferior da t
 
 O produto aparece na tela para sua audiência. Neste momento, nenhuma venda começou — você está apenas mostrando o produto.
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  [Imagem + detalhes do produto] │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  Nome do Produto          │  │
-│  │  R$ 15,00    [Start]      │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![product-offer-card exibindo imagem do produto, nome, preço R$ 15,00 e botão Start](./assets/mockups/creating-and-managing-real-time-offers__product-offer-card__pt-br.png)
 
 ### Passo 2: Inicie a venda
 

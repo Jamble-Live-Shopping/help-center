@@ -46,18 +46,7 @@ Tap **"Flash Sale"** to start the sale with a discount.
 
 The Flash Sale activates with the discount percentage you configured when listing the product. The product banner turns **green** to signal a Flash Sale to your audience.
 
-```
-┌─────────────────────────────────┐
-│  ┌─────────────────────────┐    │
-│  │ 🟢 Flash Sale  -20%    │    │
-│  │ R$ 80,00 (was R$ 100)  │    │
-│  │ Timer: 0:45             │    │
-│  └─────────────────────────┘    │
-│                                 │
-│  [Product image]                │
-│                                 │
-└─────────────────────────────────┘
-```
+![flash-sale-product-card showing 20% discount badge, price R$ 80 reduced from R$ 100, 45-second countdown timer](./assets/mockups/discounts-during-your-show-flash-sales__flash-sale-product-card__en.png)
 
 ### Step 3: Your audience buys
 

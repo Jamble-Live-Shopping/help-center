@@ -48,30 +48,7 @@ Toque no botão **"+"** enquanto estiver ao vivo. Você verá opções incluindo
 
 Depois de tocar em **"Clone Past Shows Listings"** (ou **"Clone from Shows"**), você vê uma lista dos seus shows — passados e futuros. Cada show mostra seu título, data e quantos produtos contém.
 
-```
-┌─────────────────────────────────┐
-│  Clonar Listagens de Shows      │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  Fashion Finds Friday     │  │
-│  │  15 de março de 2026      │  │
-│  │  12 produtos disponíveis  │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  Weekend Sneaker Drop     │  │
-│  │  10 de março de 2026      │  │
-│  │  8 produtos disponíveis   │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  Import [0] products      │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-
-**Nota:** O botão na parte inferior rastreia o total de
-produtos que você selecionou em todos os shows.
-```
+![Tela Clonar Listagens de Shows com dois cartões de shows e botão de importação mostrando contagem de produtos selecionados](./assets/mockups/cloning-items__clone-shows-list__pt-br.png)
 
 #### Passo 2: Selecione produtos de um show
 
