@@ -20,48 +20,20 @@ Vá ao seu perfil, depois toque em **Settings** → **My Wallet**.
 
 No canto superior direito da tela da carteira, toque no **ícone de relógio** (ao lado do botão de ajuda). Isso abre a tela **Payouts History**.
 
-```
-┌─────────────────────────────────┐
-│  My Wallet              [?] [⏰]│
-│                                 │
-│  [Suas seções de saldo]         │
-│                                 │
-│  Toque no ícone de relógio → [⏰]│
-│                                 │
-└─────────────────────────────────┘
-```
+![Tela My Wallet com os ícones de ajuda e histórico no canto superior direito](./assets/mockups/seller-statements-view-your-payout-history__wallet-header.png)
 
 ### Passo 3: Revise seus saques
 
 A tela Payouts History mostra todos os seus registros de saques, com os mais recentes no topo.
 
-```
-┌─────────────────────────────────┐
-│  Payouts History                │
-│                                 │
-│  #PAY-12345        R$ 350,00   │
-│  Completed         19/03/2026   │
-│  ─────────────────────────────  │
-│  #PAY-12340        R$ 520,00   │
-│  Completed         15/03/2026   │
-│  ─────────────────────────────  │
-│  #PAY-12335        R$ 180,00   │
-│  Completed         10/03/2026   │
-│  ─────────────────────────────  │
-│  #PAY-12330        R$ 95,00    │
-│  Failed            08/03/2026   │
-│                                 │
-└─────────────────────────────────┘
-```
+![Lista Payouts History com quatro entradas: três Completed em verde e uma Failed em vermelho](./assets/mockups/seller-statements-view-your-payout-history__payouts-history.png)
 
 Cada entrada de saque mostra quatro informações:
 
-| Campo | O que mostra |
-|-------|-------------|
-| ID do saque | Um número de referência único para este saque |
-| Valor | O valor em R$ que foi (ou tentou ser) transferido |
-| Status | O estado atual: Created, Processing, Pending, Completed, Failed, Canceled |
-| Data | Quando você solicitou o saque |
+- **ID do saque** — um número de referência único para este saque
+- **Valor** — o valor em R$ que foi (ou tentou ser) transferido
+- **Status** — o estado atual: Created, Processing, Pending, Completed, Failed, Canceled
+- **Data** — quando você solicitou o saque
 
 ### Passo 4: Role para ver registros antigos
 
