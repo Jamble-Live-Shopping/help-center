@@ -1,0 +1,22 @@
+intercom_id: 14288094
+slug: choose-quantities-when-listing-products
+collection_id: 19177935
+
+# Temporary: default_locale is 'en' for this pilot because pt-br.md does not yet exist.
+# Will flip to 'pt-br' after Policy #3 (pt-BR regeneration) lands.
+default_locale: en
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T10:47:45Z
+reviewers:
+  - aymar
+locales:
+  en:
+    title: Choose Quantities When Listing Products
+    description: Set how many units you have per listing, from 1 to 1,000. Learn quantity rules per sell mode and why Pre-Bid needs a single unit.
+  pt-br:
+    title: Definir Quantidades ao Listar Produtos
+    description: ''
+    # pt-br.md intentionally missing. The live pt-BR body on Intercom is untouched by sync
+    # until this file exists. Regenerate under Policy #3 (pt-BR primary, EN mirror) when ready.

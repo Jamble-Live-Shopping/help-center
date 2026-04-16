@@ -1,0 +1,160 @@
+<!--
+  CANONICAL MOCKUP TEMPLATE
+  =========================
+  Starting point for any new Intercom mockup. Copy this file as `prod-boxN.html`,
+  delete the patterns you don't need, fill the content block with code-faithful
+  data from Step 2's code-notes-boxN.md.
+
+  All 4 patterns (Settings / Alert / Radio cell / Photo grid) are included below.
+  Keep only the <body> section you need, delete the others. CSS is one big
+  <style> block at the top — leave classes you don't use in place (they're small)
+  or trim for cleanliness.
+
+  DO NOT add the outer gray frame here. Step 4's Puppeteer script injects it.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* ---------- SHARED RESET + BASE ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif;
+  background: #F9FAFC;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+.phone {
+  width: 320px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 16px 0 12px;
+  box-shadow: 0 2px 20px rgba(126,83,248,0.08);
+  border: 1px solid #E9EAEF;
+  overflow: hidden;
+}
+
+/* ---------- PATTERN A: Settings row (grouped table) ---------- */
+.section-header { font-size: 13px; color: #6D6D80; text-transform: uppercase; padding: 8px 20px 6px; letter-spacing: -0.08px; }
+.group { background: #FFFFFF; margin: 0 12px; border-radius: 12px; overflow: hidden; border: 1px solid #E9EAEF; }
+.row { display: flex; align-items: center; padding: 12px 16px; min-height: 44px; }
+.row-icon { width: 30px; height: 30px; border-radius: 7px; background: #7E53F8; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; margin-right: 12px; flex-shrink: 0; }
+.row-icon.gray { background: #8E8E93; }
+.row-label { font-size: 17px; color: #000; flex: 1; line-height: 22px; }
+
+/* ---------- PATTERN B: UIAlertController ---------- */
+.alert-wrap { background: rgba(0,0,0,0.08); min-height: 380px; display: flex; align-items: center; justify-content: center; border-radius: 24px; }
+.alert { width: 270px; background: rgba(255,255,255,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 14px; overflow: hidden; text-align: center; }
+.alert-body { padding: 20px 16px 0; }
+.alert-title { font-size: 17px; font-weight: 600; color: #000; line-height: 22px; }
+.alert-msg { font-size: 13px; color: #000; line-height: 18px; margin-top: 8px; }
+.alert-btns { margin-top: 20px; border-top: 0.5px solid rgba(60,60,67,0.2); }
+.alert-btn { display: block; width: 100%; padding: 11px 8px; font-size: 17px; border: none; background: transparent; cursor: pointer; font-family: inherit; border-bottom: 0.5px solid rgba(60,60,67,0.2); }
+.alert-btn:last-child { border-bottom: none; }
+.alert-btn.purple { color: #7E53F8; }
+.alert-btn.blue { color: #007AFF; }
+
+/* ---------- PATTERN C: Radio cell with expand ---------- */
+.section-title { font-size: 14px; font-weight: 600; color: #A0A7B7; text-transform: uppercase; letter-spacing: 0.5px; padding: 8px 20px 10px; }
+.cell { display: flex; align-items: center; padding: 12px 20px; }
+.cell-icon { width: 24px; height: 24px; margin-right: 16px; flex-shrink: 0; }
+.cell-icon img { width: 24px; height: 24px; }
+.cell-content { flex: 1; }
+.cell-title { font-size: 17px; font-weight: 600; color: #000; line-height: 22px; }
+.cell-sub { font-size: 13px; color: #A0A7B7; line-height: 18px; margin-top: 1px; }
+.radio { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid #A0A7B7; flex-shrink: 0; margin-left: 16px; display: flex; align-items: center; justify-content: center; }
+.cell.on .radio { border-color: #162233; }
+.radio-dot { width: 10px; height: 10px; border-radius: 50%; background: #162233; display: none; }
+.cell.on .radio-dot { display: block; }
+.expand { padding: 4px 20px 12px; display: flex; gap: 12px; }
+.field { flex: 1; height: 40px; background: #F9FAFC; border: 1px solid #DADDE3; border-radius: 8px; display: flex; align-items: center; padding: 0 12px; font-size: 14px; color: #A0A7B7; }
+.divider { height: 0.5px; background: #E9EAEF; margin: 0 20px; }
+
+/* ---------- PATTERN D: Photo picker grid ---------- */
+.grid-wrap { padding: 0 20px; }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; background: #F9FAFC; border: 1px solid #E9EAEF; border-radius: 12px; padding: 12px; }
+.slot { aspect-ratio: 1; border-radius: 8px; background: #F2F2F7; display: flex; align-items: center; justify-content: center; position: relative; }
+.slot .label { font-size: 12px; color: #8E8E93; font-weight: 500; }
+.slot.add { border: 1.5px dashed #C7C7CC; background: transparent; }
+.slot.add .plus { font-size: 22px; color: #C7C7CC; font-weight: 300; }
+.badge { position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: #7E53F8; color: white; font-size: 9px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.hint { font-size: 13px; color: #8E8E93; padding: 8px 0 0; text-align: center; }
+</style>
+</head>
+<body>
+
+<!--
+  CONTENT BLOCK
+  =============
+  Pick ONE of the four examples below and fill in the code-faithful content.
+  Delete the other three.
+-->
+
+
+<!-- PATTERN A: Settings -->
+<div class="phone">
+  <div class="section-header">Important</div>
+  <div class="group">
+    <div class="row">
+      <div class="row-icon">▶</div>
+      <div class="row-label">Apply to go Live</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- PATTERN B: Alert
+<div class="phone alert-wrap">
+  <div class="alert">
+    <div class="alert-body">
+      <div class="alert-title">Pending Application</div>
+      <div class="alert-msg">It seems that you already submitted an application...</div>
+    </div>
+    <div class="alert-btns">
+      <button class="alert-btn purple">Ok I will wait!</button>
+      <button class="alert-btn blue">Reach out</button>
+    </div>
+  </div>
+</div>
+-->
+
+
+<!-- PATTERN C: Radio cell (replace SVG base64 with real iOS icon)
+<div class="phone">
+  <div class="section-title">Sell mode</div>
+  <div class="cell on">
+    <div class="cell-icon"><img src="data:image/svg+xml;base64,PLACEHOLDER" /></div>
+    <div class="cell-content">
+      <div class="cell-title">Real-time offers</div>
+      <div class="cell-sub">The last bidder wins at the end of the time</div>
+    </div>
+    <div class="radio"><div class="radio-dot"></div></div>
+  </div>
+  <div class="expand">
+    <div class="field">Start at R$5</div>
+    <div class="field">Timer 15s</div>
+  </div>
+  <div class="divider"></div>
+</div>
+-->
+
+
+<!-- PATTERN D: Photo grid
+<div class="phone">
+  <div class="section-title">Photos</div>
+  <div class="grid-wrap">
+    <div class="grid">
+      <div class="slot"><div class="badge">1</div><span class="label">Cover</span></div>
+      <div class="slot"><div class="badge">2</div></div>
+      <div class="slot"><div class="badge">3</div></div>
+      <div class="slot add"><span class="plus">+</span></div>
+    </div>
+    <div class="hint">Up to 10 photos</div>
+  </div>
+</div>
+-->
+
+</body>
+</html>
