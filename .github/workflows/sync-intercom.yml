@@ -1,0 +1,87 @@
+name: Sync articles to Intercom
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'articles/**'
+  workflow_dispatch:
+    inputs:
+      article:
+        description: 'Article slug to force-sync (e.g. articles/choose-quantities-when-listing-products). Leave empty to sync all changed in the last commit.'
+        required: false
+
+concurrency:
+  group: sync-intercom
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Determine articles to sync
+        id: articles
+        run: |
+          set -euo pipefail
+          if [[ -n "${{ github.event.inputs.article }}" ]]; then
+            echo "Manual dispatch for ${{ github.event.inputs.article }}"
+            echo "${{ github.event.inputs.article }}" > /tmp/articles.txt
+          else
+            # Find changed files under articles/ in this push, resolve to article dirs
+            git diff --name-only HEAD~1 HEAD -- 'articles/**' \
+              | awk -F/ '{ if ($1 == "articles" && $2 != "") print $1"/"$2 }' \
+              | sort -u \
+              > /tmp/articles.txt
+          fi
+          echo "Articles to sync:"
+          cat /tmp/articles.txt || true
+          echo "count=$(wc -l < /tmp/articles.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+
+      - name: Sync each changed article
+        if: steps.articles.outputs.count != '0'
+        env:
+          INTERCOM_TOKEN: ${{ secrets.INTERCOM_TOKEN }}
+        run: |
+          set -euo pipefail
+          FAILED=0
+          while IFS= read -r article; do
+            [[ -z "$article" ]] && continue
+            [[ ! -d "$article" ]] && { echo "Skip missing: $article"; continue; }
+            echo "=== $article ==="
+            if bash scripts/sync-one.sh "$article"; then
+              echo "OK $article"
+            else
+              echo "FAIL $article" >&2
+              FAILED=$((FAILED+1))
+            fi
+          done < /tmp/articles.txt
+          if [[ $FAILED -gt 0 ]]; then
+            echo "::error::$FAILED article(s) failed to sync"
+            exit 1
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## Sync summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "Articles queued: ${{ steps.articles.outputs.count }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          if [[ -f /tmp/articles.txt ]]; then
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            cat /tmp/articles.txt >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          fi
