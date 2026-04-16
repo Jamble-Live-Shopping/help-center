@@ -2,9 +2,8 @@ intercom_id: 14288094
 slug: choose-quantities-when-listing-products
 collection_id: 19177935
 
-# Temporary: default_locale is 'en' for this pilot because pt-br.md does not yet exist.
-# Will flip to 'pt-br' after Policy #3 (pt-BR regeneration) lands.
-default_locale: en
+# Primary source = pt-br per Policy #3. EN must be a 1:1 mirror.
+default_locale: pt-br
 
 state: published
 author_id: 7980507
@@ -12,11 +11,14 @@ last_sync: 2026-04-16T10:47:45Z
 reviewers:
   - aymar
 locales:
+  pt-br:
+    title: Definir Quantidades ao Listar Produtos
+    description: Defina quantas unidades voce tem por anuncio, de 1 ate 1.000. Veja as regras de quantidade por modo de venda e por que Pre-Bid precisa de uma unidade so.
+    # Bootstrapped from legacy Intercom body (2026-04-16). Content predates the EN rewrite of
+    # the same day. Pending editorial refresh under the pipeline (terminology: "pre-ofertas"
+    # should become "Pre-Bid" to match the app UI).
   en:
     title: Choose Quantities When Listing Products
     description: Set how many units you have per listing, from 1 to 1,000. Learn quantity rules per sell mode and why Pre-Bid needs a single unit.
-  pt-br:
-    title: Definir Quantidades ao Listar Produtos
-    description: ''
-    # pt-br.md intentionally missing. The live pt-BR body on Intercom is untouched by sync
-    # until this file exists. Regenerate under Policy #3 (pt-BR primary, EN mirror) when ready.
+    # EN was fully rewritten on 2026-04-16 under the old "EN primary" regime. pt-BR will be
+    # refreshed to match, then this en.md will be regenerated as a 1:1 mirror.

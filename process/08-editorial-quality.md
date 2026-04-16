@@ -105,26 +105,27 @@ Use these verbatim or adapt with the same vocabulary:
 
 ### Localization rule
 
-- Write examples in English (primary source), then translate to pt-BR in the same article (locale: `pt-BR`)
-- Product names can stay in English when they're the canonical collector name (e.g. "Charizard VMAX PSA 9" is a product SKU, not a translation)
+- **pt-BR is the primary source language.** Write every article in pt-BR first, with the full 12-step pipeline. Translate to EN last as a 1:1 mirror. Rationale: Jamble is Brazil-only, sellers are native Portuguese speakers, primary-source quality beats translated-from-English quality
+- EN must stay 1:1 with pt-BR. When pt-BR changes, en.md changes in the same PR. Drift is a bug
+- Product names can stay in English or Portuguese when they're the canonical collector name (e.g. "Charizard VMAX PSA 9" is a product SKU, not a translation)
 - Condition grades (PSA 10, Mint, CIB) stay in English, universal collector vocabulary
 
 ---
 
 ## RULE 2b, Currency localization
 
-The EN article and the pt-BR article use different currency formats. Do not mirror them.
+Currency is the one dimension where pt-BR and EN intentionally DIVERGE. Everything else in EN must mirror pt-BR 1:1, but currency gets localized.
 
 | Locale | Currency symbol | Format | Example |
 |--------|-----------------|--------|---------|
-| EN     | `$` (dollar)    | `$5.00`, `$5,000.00` (no space) | "The minimum price is $5.00 and the maximum is $5,000.00" |
-| pt-BR  | `R$` (BRL)      | `R$ 5,00`, `R$ 5.000,00` (space after R$, BR-style decimal) | "O preço mínimo é R$ 5,00 e o máximo é R$ 5.000,00" |
+| pt-BR (source) | `R$` (BRL) | `R$ 5,00`, `R$ 5.000,00` (space after R$, BR-style decimal) | "O preço mínimo é R$ 5,00 e o máximo é R$ 5.000,00" |
+| EN (mirror)    | `$` (dollar) | `$5.00`, `$5,000.00` (no space) | "The minimum price is $5.00 and the maximum is $5,000.00" |
 
-**Why**: English-language readers expect `$`. Brazilian Portuguese readers expect `R$` with BR number formatting (comma as decimal separator, dot as thousands separator).
+**Why**: Brazilian Portuguese readers expect `R$` with BR number formatting (comma as decimal separator, dot as thousands separator). English-language readers expect `$`. The pt-BR source is authoritative for the amount; the EN mirror localizes the format.
 
 **Application**:
-- Replace every `R$` in the EN body with `$`.
-- Keep `R$` in the pt-BR body.
+- Write `R$` amounts in pt-br.md first.
+- When mirroring to en.md, replace `R$` with `$` and swap the separators (`R$ 5,00` → `$5.00`, `R$ 5.000,00` → `$5,000.00`).
 - If a mockup PNG shows `R$` (which reflects the actual Brazilian app UI), that is fine, the PNG stays the same in both locales. The surrounding prose localizes.
 
 **Automated check**:

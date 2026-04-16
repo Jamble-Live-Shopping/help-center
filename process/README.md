@@ -48,7 +48,7 @@ The [design-system.md](design-system.md) doc is the reference for all colors, fo
 
 ---
 
-## Golden rules (the six you cannot break)
+## Golden rules (the seven you cannot break)
 
 1. **iOS code is the source of truth, not Figma, not memory.** Every styling decision (radio color, icon, subtitle wording, border radius) must be traceable to a Swift file. If the code says navy `#162233`, the mockup uses navy, even if the brand color would look nicer.
 2. **Intercom strips inline styles on `<img>`.** Rounded corners, shadows, borders must be baked into the PNG via the HTML template, not added as `style=""` attributes.
@@ -56,6 +56,7 @@ The [design-system.md](design-system.md) doc is the reference for all colors, fo
 4. **One phone frame, one gray outer frame, one style.** All mockups share the same phone card wrapper + outer gray rounded frame. Consistency beats per-article creativity.
 5. **Never invent copy.** Titles, subtitles, button labels come from the Swift source (enum cases, `String(localized:...)`), not from the ASCII, not from the article text, not from intuition.
 6. **Never echo base64 or image bytes to stdout.** Claude Code auto-attaches data-URIs and binary blobs from command output. A bad blob returns `400 Could not process image` and poisons the session history permanently, every turn after fails the same way. Always redirect to a file, inspect via `wc -c` / `ls -la` / `file`, never `echo`, `cat`, or `head` the content. Full rationale and safe patterns in [03-html-template.md](03-html-template.md#binary-data-hygiene-never-echo-base64-to-stdout).
+7. **pt-BR is the primary source language, EN is a 1:1 mirror.** Jamble is Brazil-only, sellers are native Portuguese speakers. Every article is written in pt-BR first with the full pipeline, then translated to EN as a 1:1 mirror. The only allowed divergence is currency localization (`R$` → `$`, BR-style decimals → US-style). Drift between pt-BR and EN is a bug. Detail in [08-editorial-quality.md](08-editorial-quality.md#localization-rule).
 
 ---
 
