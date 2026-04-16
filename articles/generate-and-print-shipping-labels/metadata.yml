@@ -1,0 +1,17 @@
+intercom_id: 14288141
+slug: generate-and-print-shipping-labels
+collection_id: 19177937
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Gere e Imprima Etiquetas de Envio'
+    description: ''
+  en:
+    title: 'Generate and Print Shipping Labels'
+    description: "This guide explains how to generate, download, and print shipping labels for your orders on Jamble. You'll learn about the available label formats, how the generation process works, and how to handle common label situations."

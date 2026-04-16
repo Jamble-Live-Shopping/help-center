@@ -1,0 +1,17 @@
+intercom_id: 14288124
+slug: pack-and-ship-your-order
+collection_id: 19177937
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Embale e Envie Seu Pedido'
+    description: ''
+  en:
+    title: 'Pack and Ship Your Order'
+    description: "This guide walks you through the complete shipping process after a sale — from confirming the order to getting paid. You'll learn how to confirm sales, generate labels, pack items, and drop them off at Correios."

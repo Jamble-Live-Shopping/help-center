@@ -1,0 +1,17 @@
+intercom_id: 14288097
+slug: pause-your-shop-with-vacation-mode
+collection_id: 19177935
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Pause Sua Loja com o Modo Férias'
+    description: ''
+  en:
+    title: 'Pause Your Shop with Vacation Mode'
+    description: 'This guide explains how to use Vacation Mode on Jamble. When you need to take a break — whether for travel, personal time, or just to catch up on shipping — Vacation Mode lets you temporarily make your products unavailable for purchase.'

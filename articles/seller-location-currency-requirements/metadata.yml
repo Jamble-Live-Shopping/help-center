@@ -1,0 +1,17 @@
+intercom_id: 14288079
+slug: seller-location-currency-requirements
+collection_id: 19177934
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Requisitos de Localização e Moeda para Vendedores'
+    description: ''
+  en:
+    title: 'Seller Location & Currency Requirements'
+    description: "This guide explains where you need to be located to sell on Jamble, what currency is used, and what documents you'll need to set up your seller account."

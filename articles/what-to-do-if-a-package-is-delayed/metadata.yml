@@ -1,0 +1,17 @@
+intercom_id: 14288128
+slug: what-to-do-if-a-package-is-delayed
+collection_id: 19177937
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'O Que Fazer Se um Pacote Está Atrasado'
+    description: ''
+  en:
+    title: 'What to Do If a Package Is Delayed'
+    description: "This guide explains what to do when a package you shipped takes longer than expected to arrive. You'll learn how to check tracking, communicate with the buyer, and when to contact support."

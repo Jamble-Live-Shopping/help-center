@@ -1,0 +1,17 @@
+intercom_id: 14288161
+slug: manage-ratings-and-reviews-as-a-seller
+collection_id: 19177939
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Gerenciar Avaliações e Reviews como Vendedor'
+    description: ''
+  en:
+    title: 'Manage Ratings and Reviews as a Seller'
+    description: 'This guide explains how the rating system works on Jamble, how buyers rate their experience with you, and how your ratings affect your seller reputation.'

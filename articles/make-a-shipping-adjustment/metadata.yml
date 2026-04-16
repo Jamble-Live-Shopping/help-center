@@ -1,0 +1,17 @@
+intercom_id: 14288137
+slug: make-a-shipping-adjustment
+collection_id: 19177937
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Faça um Ajuste de Envio'
+    description: ''
+  en:
+    title: 'Make a Shipping Adjustment'
+    description: "This guide explains how to make adjustments to shipping details on an order before or after generating a label. You'll learn how to confirm or change the shipping weight and what to do if something needs to be corrected."

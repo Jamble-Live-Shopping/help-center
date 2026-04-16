@@ -1,0 +1,17 @@
+intercom_id: 14288142
+slug: update-default-shipping-label-settings
+collection_id: 19177937
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Atualize as Configurações Padrão de Etiqueta'
+    description: ''
+  en:
+    title: 'Update Default Shipping Label Settings'
+    description: 'This guide explains how to update your default label settings — the format and insurance preference that apply to every new shipping label you generate. These defaults save you time by automatically applying your preferences to all future orders.'

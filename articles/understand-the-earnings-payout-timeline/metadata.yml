@@ -1,0 +1,17 @@
+intercom_id: 14288147
+slug: understand-the-earnings-payout-timeline
+collection_id: 19177938
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Entenda o Prazo de Pagamento dos Seus Ganhos'
+    description: ''
+  en:
+    title: 'Understand the Earnings Payout Timeline'
+    description: "This guide explains how your earnings move from a completed sale to money in your bank account. You'll understand each stage of the payout timeline, when your funds become available, and how long the whole process takes."

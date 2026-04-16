@@ -1,0 +1,17 @@
+intercom_id: 14288125
+slug: shipping-policy-for-sellers
+collection_id: 19177937
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Política de Envio para Vendedores'
+    description: ''
+  en:
+    title: 'Shipping Policy for Sellers'
+    description: 'This guide covers the shipping rules and expectations for sellers on Jamble. Understanding these policies helps you avoid issues, keep your buyers happy, and maintain a strong seller reputation.'

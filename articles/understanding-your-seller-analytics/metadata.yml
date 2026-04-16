@@ -1,0 +1,17 @@
+intercom_id: 14288160
+slug: understanding-your-seller-analytics
+collection_id: 19177939
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Entendendo Suas Análises de Vendedor'
+    description: ''
+  en:
+    title: 'Understanding Your Seller Analytics'
+    description: "This guide explains where to find your performance data on Jamble — your sales numbers, revenue, viewer stats, and financial information. You'll learn how to read your post-show dashboard, check your earnings, and track your progress over time."

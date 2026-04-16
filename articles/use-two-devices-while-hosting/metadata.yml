@@ -1,0 +1,17 @@
+intercom_id: 14288120
+slug: use-two-devices-while-hosting
+collection_id: 19177936
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Usar Dois Dispositivos Durante o Show'
+    description: ''
+  en:
+    title: 'Use Two Devices While Hosting'
+    description: 'This guide explains how to use two phones while hosting a live show on Jamble. One phone broadcasts your video, while the other becomes a remote control for managing products, chat, and sales — so you can focus on the camera without juggling everythi'

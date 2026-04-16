@@ -1,0 +1,17 @@
+intercom_id: 14288152
+slug: cancel-an-order-as-a-seller
+collection_id: 19177938
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Cancelar um Pedido como Vendedor'
+    description: ''
+  en:
+    title: 'Cancel an Order as a Seller'
+    description: 'This guide explains how to cancel an order as a seller on Jamble, at which stages you can do it, and what happens when you do.'

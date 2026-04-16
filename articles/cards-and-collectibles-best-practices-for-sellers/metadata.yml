@@ -1,0 +1,17 @@
+intercom_id: 14288099
+slug: cards-and-collectibles-best-practices-for-sellers
+collection_id: 19177935
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Cards e Colecionáveis: Melhores Práticas para Vendedores'
+    description: ''
+  en:
+    title: 'Cards and Collectibles: Best Practices for Sellers'
+    description: "This guide covers best practices for selling trading cards, collectible figures, and related items on Jamble in Brazil. You'll learn how to properly describe condition, take the right photos, and set up your listings for success."

@@ -1,0 +1,17 @@
+intercom_id: 14288091
+slug: account-security
+collection_id: 19177934
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-br
+
+state: published
+author_id: 7980507
+last_sync: 2026-04-16T00:00:00Z
+locales:
+  pt-br:
+    title: 'Segurança da Conta'
+    description: ''
+  en:
+    title: 'Account Security'
+    description: 'This guide covers how to protect your Jamble account — from the login methods available to managing your personal information and knowing how to delete your account if needed.'
