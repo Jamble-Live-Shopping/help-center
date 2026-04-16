@@ -3,7 +3,8 @@
 # Usage: scripts/sync-one.sh articles/<slug>
 #
 # Reads articles/<slug>/metadata.yml, converts each locale's Markdown body to HTML
-# (via scripts/md-to-html.js), and PUTs the result to https://api.intercom.io/articles/:id.
+# (via scripts/md-to-html.js), GETs the article to learn Intercom's current default_locale
+# (self-healing if someone flips it manually in Intercom admin), then PUTs the payload.
 #
 # Requires:
 #   - $INTERCOM_TOKEN set (local dev: export INTERCOM_TOKEN=...; CI: secret injected)
@@ -33,80 +34,17 @@ PAYLOAD=$(mktemp)
 INFO=$(mktemp)
 trap 'rm -f "$PAYLOAD" "$INFO"' EXIT
 
-# Build the Intercom PUT payload with a single node invocation.
-# Writes JSON payload to $PAYLOAD and human-readable summary to $INFO.
-node --input-type=module -e "
-  import { readFileSync, writeFileSync, existsSync } from 'node:fs';
-  import { execSync } from 'node:child_process';
-  import yaml from 'js-yaml';
-
-  const articleDir = process.argv[1];
-  const payloadPath = process.argv[2];
-  const infoPath = process.argv[3];
-
-  const meta = yaml.load(readFileSync(articleDir + '/metadata.yml', 'utf8'));
-  if (!meta.intercom_id) {
-    console.error('metadata.yml missing intercom_id');
-    process.exit(1);
-  }
-  const defaultLocale = meta.default_locale || 'en';
-  const toIntercomLocale = (l) => (l === 'pt-br' ? 'pt-BR' : l);
-
-  const translatedContent = {};
-  const synced = [];
-  const skipped = [];
-  for (const [locale, localeMeta] of Object.entries(meta.locales || {})) {
-    const mdFile = \`\${articleDir}/\${locale}.md\`;
-    if (!existsSync(mdFile)) {
-      skipped.push(locale);
-      continue;
-    }
-    const html = execSync(\`node scripts/md-to-html.js '\${mdFile}'\`, { encoding: 'utf8' });
-    translatedContent[toIntercomLocale(locale)] = {
-      title: localeMeta.title || '',
-      description: localeMeta.description || '',
-      body: html,
-      state: meta.state || 'published',
-    };
-    synced.push(locale);
-  }
-
-  if (synced.length === 0) {
-    console.error('No locale .md files found, nothing to sync.');
-    process.exit(1);
-  }
-
-  const body = { translated_content: translatedContent };
-  // Intercom expects top-level body/title/description to match the locale it knows as
-  // 'default_locale' on its side. That is currently 'en' for every Jamble article, regardless
-  // of what metadata.yml says (the repo-side 'default_locale' is a content-policy flag, not an
-  // Intercom API field). Passing 'default_locale' in the PUT body does not flip Intercom's
-  // default, Intercom ignores unknown fields and keeps its own.
-  // See TODO in CHANGELOG: flip Intercom default_locale to pt-BR as a separate manual op.
-  const intercomDefaultLocale = 'en';
-  const defaultEntry = translatedContent[intercomDefaultLocale];
-  if (defaultEntry) {
-    body.body = defaultEntry.body;
-    body.description = defaultEntry.description;
-    body.title = defaultEntry.title;
-  }
-
-  writeFileSync(payloadPath, JSON.stringify(body));
-  writeFileSync(infoPath, JSON.stringify({
-    intercom_id: meta.intercom_id,
-    synced,
-    skipped,
-    default_locale: defaultLocale,
-  }));
-" "$ARTICLE_DIR" "$PAYLOAD" "$INFO"
+node scripts/build-sync-payload.mjs "$ARTICLE_DIR" "$PAYLOAD" "$INFO"
 
 INTERCOM_ID=$(node -e "console.log(JSON.parse(require('fs').readFileSync('$INFO')).intercom_id)")
 SYNCED=$(node -e "console.log(JSON.parse(require('fs').readFileSync('$INFO')).synced.join(','))")
 SKIPPED=$(node -e "console.log(JSON.parse(require('fs').readFileSync('$INFO')).skipped.join(','))")
-DEFAULT=$(node -e "console.log(JSON.parse(require('fs').readFileSync('$INFO')).default_locale)")
+REPO_DEFAULT=$(node -e "console.log(JSON.parse(require('fs').readFileSync('$INFO')).repo_default_locale)")
+INTERCOM_DEFAULT=$(node -e "console.log(JSON.parse(require('fs').readFileSync('$INFO')).intercom_default_locale)")
 
 echo "Article: $INTERCOM_ID"
-echo "Default locale: $DEFAULT"
+echo "Repo default_locale: $REPO_DEFAULT"
+echo "Intercom default_locale (via GET): $INTERCOM_DEFAULT"
 echo "Syncing locales: $SYNCED"
 [[ -n "$SKIPPED" ]] && echo "Skipping (no .md): $SKIPPED"
 
