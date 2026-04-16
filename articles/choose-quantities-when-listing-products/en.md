@@ -59,7 +59,7 @@ The toggle snaps back to off. To use Pre-Bid, set the quantity back to 1 and try
 - **Use quantities for identical items only.** All units share the same title, photos, description, and price. If items differ (sizes, colors, conditions), create separate listings.
 - **Quantities save time.** One listing with quantity 20 replaces 20 individual listings for 20 identical stickers.
 - **Edit before a unit sells.** If you realize you have more or fewer units, update the quantity before the first sale.
-- **Watch the count on camera.** When stock runs low, mention it live to create urgency.
+- **Watch the count on camera.** When stock runs low, announce it on air to create urgency.
 
 # Common questions
 
