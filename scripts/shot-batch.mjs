@@ -15,9 +15,17 @@ if (!manifestPath) {
 
 const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
 
-const browser = await puppeteer.launch({ headless: true });
+let browser = await puppeteer.launch({ headless: true });
 let ok = 0, fail = 0;
+let iterSinceRestart = 0;
 for (const { html, png } of manifest) {
+  // Relaunch browser every 50 screenshots to avoid resource exhaustion
+  if (iterSinceRestart >= 50) {
+    await browser.close();
+    browser = await puppeteer.launch({ headless: true });
+    iterSinceRestart = 0;
+  }
+  iterSinceRestart++;
   try {
     mkdirSync(dirname(png), { recursive: true });
     const page = await browser.newPage();

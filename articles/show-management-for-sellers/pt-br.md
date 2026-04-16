@@ -27,22 +27,7 @@ Depois de agendar seu show, você pode vê-lo no seu perfil. Tocando nele, abre 
 
 ### O que você vê na prévia
 
-```
-┌─────────────────────────────────┐
-│  [Imagem de capa]               │
-│  Título do seu show             │
-│  Data e hora                    │
-│                                 │
-│  ADMIN (privado)                │
-│  Favoritos: 12  |  Views: 45   │
-│                                 │
-│  PRODUTOS (3)                   │
-│  ┌─────┐ ┌─────┐ ┌─────┐      │
-│  │Item1│ │Item2│ │Item3│  [+]  │
-│  └─────┘ └─────┘ └─────┘      │
-│                                 │
-└─────────────────────────────────┘
-```
+![show-management-seller: Card de produto exibindo show do vendedor com imagem de capa, título, data e hora, status admin, contagem de favoritos e visualizações, e grade de produtos com botão de adição](./assets/mockups/show-management-for-sellers__show-management-seller__pt-br.png)
 
 - **Estatísticas admin** (só você pode ver): quantas pessoas favoritaram seu show e quantas viram a página
 - **Lista de produtos**: os itens vinculados ao seu show. Você pode adicionar, remover ou reorganizar produtos

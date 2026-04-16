@@ -20,32 +20,15 @@ When a buyer purchases multiple items from you during the same show, Jamble auto
 
 You'll see bundles in your seller dashboard during and after the show, labeled as **"PACKAGE 1"**, **"PACKAGE 2"**, etc.
 
-```
-┌─────────────────────────────────┐
-│  📦 PACKAGE 1                   │
-│  3 items                        │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ Nike Air Max 90 - Sz 42  │  │
-│  │ Camiseta Vintage - M     │  │
-│  │ Boné New Era - Preto     │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  [Action buttons]               │
-│                                 │
-└─────────────────────────────────┘
-```
+![Bundled shipment card showing Package 1 with 3 items: Nike Air Max 90 Size 42, Camiseta Vintage M, and Boné New Era Preto](./assets/mockups/bundled-shipments__bundled-shipment-card__en.png)
 
 ## How bundles are created
 
 Bundles are created **automatically** by the system. Here's when items get bundled together:
 
-| Condition | Bundled? |
-|-----------|----------|
-| Same buyer, same show | Yes |
-| Same buyer, different shows | No (separate packages) |
-| Different buyers, same show | No (separate packages per buyer) |
-
+- **Same buyer, same show** — Yes
+- **Same buyer, different shows** — No (separate packages)
+- **Different buyers, same show** — No (separate packages per buyer)
 You don't need to manually create bundles. The system groups items automatically when the conditions are met.
 
 ## What happens to shipping

@@ -46,6 +46,8 @@ TemplateId = Literal[
     "form-layout",
     "auth-screen",
     "text-with-actions",
+    "tab-bar",
+    "product-card",
     "unmatched",
 ]
 
@@ -77,6 +79,8 @@ You receive an ASCII-art UI mockup from a help article. Classify it into ONE of 
 11. form-layout: form screen with title + multiple input fields (text / dropdown / upload) + submit button. Required: {title, fields: [{label, type: "text"|"dropdown"|"upload"|"textarea", placeholder?}], submit_label}
 12. auth-screen: welcome/onboarding screen with title + 2-3 stacked action buttons + optional secondary link. Required: {title, buttons: [{label, style: "primary"|"secondary"}], secondary_link?: {label}}
 13. text-with-actions: screen with main title + 1-2 paragraphs of body text + one or more buttons. Required: {title, body: string, buttons: [{label, style: "primary"|"secondary"}]}
+14. tab-bar: horizontal row of 2-5 tabs (e.g. Deals / Explore / Follow, Activity / Messages / Requests) with a content area placeholder below. Required: {tabs: [string], content_placeholder?: string, active_tab_index?: int}
+15. product-card: card with product icon/thumbnail + title + subtitle + price or stock indicator + optional action button. Required: {title, subtitle?, price?, stock?, icon?, cta_label?}
 
 Classification hints:
 - Rows with ▶ or chevrons + label = settings-row-list
@@ -92,6 +96,9 @@ Classification hints:
 - Welcome/login with title and 2-3 stacked buttons = auth-screen
 - Simple screen with title + body text + action button(s) = text-with-actions
 - Mix of text and a final button = text-with-actions (not button-cta)
+- Horizontal row of 2-5 labeled rectangles/pills/boxes (Deals, Explore, Follow) with area below = tab-bar
+- Card with product name + subtitle + price/stock + optional CTA = product-card
+- Promotional banner with icon + label = product-card (use title for the main label)
 
 Rules:
 - Extract content VERBATIM from the ASCII. Do not paraphrase user-visible strings.

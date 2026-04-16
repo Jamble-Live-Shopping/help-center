@@ -13,18 +13,7 @@ Voce precisa de:
 
 Todas as suas conversas estao na aba **Atividade** — uma das abas principais na parte inferior da tela.
 
-```
-┌─────────────────────────────────┐
-│  Atividade                      │
-│                                 │
-│  ┌─────┬────────┬───────┬─────┐ │
-│  │Todos│Nao lido│Compras│Vendas│ │
-│  └─────┴────────┴───────┴─────┘ │
-│                                 │
-│  [Lista de conversas abaixo]    │
-│                                 │
-└─────────────────────────────────┘
-```
+![Tela Atividade com abas Todos, Nao lido, Compras, Vendas e lista de conversas abaixo](./assets/mockups/direct-messages-for-sellers__activity-tabs__pt-br.png)
 
 No topo, voce vera abas de filtro para organizar suas conversas:
 
@@ -47,20 +36,7 @@ Quando alguem toca em **"Mensagem"** no seu perfil, cria uma conversa simples en
 
 Quando um comprador faz uma oferta em um dos seus produtos, uma conversa e criada automaticamente com os **detalhes do produto no topo**. Voce pode discutir o produto, negociar e gerenciar ofertas dentro dessa conversa.
 
-```
-┌─────────────────────────────────┐
-│  ┌─────────────────────────┐    │
-│  │ [Imagem do produto]     │    │
-│  │ Nome do Produto         │    │
-│  │ R$ 45,00                │    │
-│  └─────────────────────────┘    │
-│                                 │
-│  Comprador: Ainda esta          │
-│  disponivel?                    │
-│  Voce: Sim! A condicao e...     │
-│                                 │
-└─────────────────────────────────┘
-```
+![dm-product-card exibindo imagem do produto, nome, preço R$ 45,00 e conversa entre comprador e vendedor](./assets/mockups/direct-messages-for-sellers__dm-product-card__pt-br.png)
 
 ### Conversas de transacao
 

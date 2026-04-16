@@ -24,17 +24,7 @@ Each of these works differently, and understanding them helps you optimize your 
 
 When a buyer opens Jamble, they see three tabs at the top of the screen:
 
-```
-┌─────────────────────────────────┐
-│  ┌───────┐ ┌───────┐ ┌───────┐ │
-│  │ Deals │ │Explore│ │Follow │ │
-│  └───────┘ └───────┘ └───────┘ │
-│                                 │
-│  [Shows and products appear     │
-│   below based on selected tab]  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Discoverability tabs with Deals, Explore, and Follow options showing products below](./assets/mockups/how-discoverability-works-on-jamble__discoverability-tabs__en.png)
 
 ### Deals tab
 
@@ -48,11 +38,7 @@ The Explore tab shows **live and upcoming shows**. This is the main way buyers d
 
 At the top of the Explore tab, there are category filters:
 
-```
-┌─────────────────────────────────────────────┐
-│ For You │ Shoes │ Contemporary │ Beauty │ ...│
-└─────────────────────────────────────────────┘
-```
+![Discovery tabs showing For You, Shoes, Contemporary, Beauty, and more categories](./assets/mockups/how-discoverability-works-on-jamble__discovery-tabs__en.png)
 
 - **For You** — shows Jamble thinks the buyer will like, based on their past activity
 - **Category tags** — only shows up if there are active shows in that category (Shoes, Contemporary, Beauty, Collectibles, Luxury, Kids, Jewelry, Activewear, and more)
@@ -73,24 +59,18 @@ Jamble uses several signals to decide which shows appear first in the feed. Here
 
 When your show is live, these things help you appear higher:
 
-| What matters | Why it helps |
-|-------------|-------------|
-| **Sales during the show** | Selling actively is the strongest signal. Shows with more sales and higher revenue per minute rank higher |
-| **Current viewers** | More people watching = more visible. Shows with 30 or more viewers get a significant visibility boost |
-| **Bookmarks** | People who saved your show before it started count in your favor |
-| **Items sold** | Each item sold during the show improves your position |
-
+- ****Sales during the show**** — Selling actively is the strongest signal. Shows with more sales and higher revenue per minute rank higher
+- ****Current viewers**** — More people watching = more visible. Shows with 30 or more viewers get a significant visibility boost
+- ****Bookmarks**** — People who saved your show before it started count in your favor
+- ****Items sold**** — Each item sold during the show improves your position
 ### For upcoming shows (before you go live)
 
 Before your show starts, the ranking depends on:
 
-| What matters | Why it helps |
-|-------------|-------------|
-| **Bookmarks** | This is by far the most important factor for upcoming shows. The more people save your show, the higher it appears |
-| **Products listed** | Shows with more products listed rank higher than shows with few products |
-| **Your seller reputation** | Your overall track record as a seller contributes to your ranking |
-| **How soon the show starts** | Shows starting sooner appear before shows scheduled far in the future |
-
+- ****Bookmarks**** — This is by far the most important factor for upcoming shows. The more people save your show, the higher it appears
+- ****Products listed**** — Shows with more products listed rank higher than shows with few products
+- ****Your seller reputation**** — Your overall track record as a seller contributes to your ranking
+- ****How soon the show starts**** — Shows starting sooner appear before shows scheduled far in the future
 ## How search works
 
 Buyers can search for products, brands, and sellers using the search screen.

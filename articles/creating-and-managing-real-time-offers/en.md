@@ -47,18 +47,7 @@ Open your product list (tap the **shop bag icon** at the bottom of your screen) 
 
 The product appears on screen for your audience to see. At this point, no sale has started yet — you're just showcasing the product.
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  [Product image + details]      │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  Product Name             │  │
-│  │  R$ 15,00    [Start]      │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![product-offer-card displaying product image, name, price R$ 15,00, and Start action button](./assets/mockups/creating-and-managing-real-time-offers__product-offer-card__en.png)
 
 ### Step 2: Start the sale
 

@@ -42,11 +42,7 @@ Você também pode adicionar um **preço de varejo** (opcional) para mostrar aos
 
 Durante seu show ao vivo, vá à sua lista de produtos e toque no produto para fixá-lo. Quando um produto Buy It Now é fixado, os compradores veem um banner no topo do show:
 
-```
-┌─────────────────────────────────┐
-│  🛒 Buy It Now         3 left  │
-└─────────────────────────────────┘
-```
+![buy-it-now-card: Cartão de produto com ícone de carrinho de compras, rótulo "Buy It Now" e disponibilidade de estoque de 3 unidades restantes](./assets/mockups/buy-it-now-sell-at-a-fixed-price__buy-it-now-card__pt-br.png)
 
 O banner mostra "Buy It Now" em roxo e a quantidade restante.
 
@@ -64,11 +60,7 @@ Você pode combinar a Compra Direta com uma **Venda Relâmpago** para oferecer u
 - Um cronômetro regressivo aparece
 - Os compradores veem o preço com desconto ao lado do original
 
-```
-┌─────────────────────────────────┐
-│  ⚡ Flash Sale • 30% OFF  2 left│
-└─────────────────────────────────┘
-```
+![flash-sale-banner: banner promocional com ícone de raio, oferta de 30% de desconto e contagem de itens](./assets/mockups/buy-it-now-sell-at-a-fixed-price__flash-sale-banner__pt-br.png)
 
 Vendas Relâmpago criam urgência. São ótimas para movimentar estoque ou recompensar espectadores que estão assistindo ao vivo.
 

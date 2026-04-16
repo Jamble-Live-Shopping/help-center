@@ -34,16 +34,7 @@ Vá ao seu perfil e toque na seção de **vendas**. Você verá todos os seus pe
 
 Você pode filtrar seus pedidos usando estas abas:
 
-```
-┌─────────────────────────────────────────────┐
-│  ┌─────┐ ┌─────────┐ ┌──────────┐ ┌──────┐│
-│  │ All │ │ Pending │ │Canceled  │ │ ...  ││
-│  └─────┘ └─────────┘ └──────────┘ └──────┘│
-│                                             │
-│  [Lista dos seus pedidos]                   │
-│                                             │
-└─────────────────────────────────────────────┘
-```
+![Barra de abas de pedidos com opções de filtro: Todos, Pendentes, Cancelados e mais, seguida pela lista de pedidos](./assets/mockups/pack-and-ship-your-order__orders-tab-filter__pt-br.png)
 
 Os filtros disponíveis são:
 - **All** — todos os seus pedidos

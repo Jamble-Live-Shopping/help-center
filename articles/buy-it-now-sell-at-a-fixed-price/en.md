@@ -60,11 +60,7 @@ You can combine Buy It Now with a **Flash Sale** to offer a temporary discount. 
 - A countdown timer appears
 - Buyers see the discounted price alongside the original
 
-```
-┌─────────────────────────────────┐
-│  ⚡ Flash Sale • 30% OFF  2 left│
-└─────────────────────────────────┘
-```
+![Flash Sale banner displaying 30% OFF discount with 2 items left in stock](./assets/mockups/buy-it-now-sell-at-a-fixed-price__flash-sale-banner__en.png)
 
 Flash Sales create urgency. They're great for moving inventory or rewarding viewers who are watching live.
 

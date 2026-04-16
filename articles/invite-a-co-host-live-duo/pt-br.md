@@ -58,15 +58,7 @@ O convite expira após **5 minutos**. Se não responder a tempo, o convite é au
 
 Quando seu convidado aceitar, a câmera dele ativa e ele aparece como uma **pequena janela de vídeo** na sua tela. Sua audiência vê os dois.
 
-```
-┌─────────────────────────────────┐
-│  ┌────────┐                     │
-│  │Convidado│       Seu feed     │
-│  │ vídeo  │       principal     │
-│  └────────┘                     │
-│                                 │
-└─────────────────────────────────┘
-```
+![live-duo-tabs: Navegação com duas abas mostrando Vídeo do convidado e Seu feed principal](./assets/mockups/invite-a-co-host-live-duo__live-duo-tabs__pt-br.png)
 
 O vídeo do convidado aparece no canto superior esquerdo como uma pequena janela picture-in-picture. Sua câmera continua como o feed principal em tela cheia.
 

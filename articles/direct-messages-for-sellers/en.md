@@ -13,18 +13,7 @@ You need:
 
 All your conversations are in the **Activity** tab — one of the main tabs at the bottom of your screen.
 
-```
-┌─────────────────────────────────┐
-│  Activity                       │
-│                                 │
-│  ┌─────┬────────┬───────┬─────┐ │
-│  │ All │ Unread │Purch. │Sales│ │
-│  └─────┴────────┴───────┴─────┘ │
-│                                 │
-│  [Conversation list below]      │
-│                                 │
-└─────────────────────────────────┘
-```
+![Activity screen with tab bar showing All, Unread, Purchases, and Sales tabs with conversation list below](./assets/mockups/direct-messages-for-sellers__activity-tabs__en.png)
 
 At the top, you'll see filter tabs to organize your conversations:
 
@@ -47,19 +36,7 @@ When someone taps **"Message"** on your profile, it creates a simple one-on-one 
 
 When a buyer makes an offer on one of your products, a conversation is automatically created with the **product details at the top**. You can discuss the product, negotiate, and manage offers within this conversation.
 
-```
-┌─────────────────────────────────┐
-│  ┌─────────────────────────┐    │
-│  │ [Product image]         │    │
-│  │ Product Name            │    │
-│  │ R$ 45,00                │    │
-│  └─────────────────────────┘    │
-│                                 │
-│  Buyer: Is this still available?│
-│  You: Yes! The condition is...  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Product message thread showing product card with image, name, price, and conversation between buyer and seller](./assets/mockups/direct-messages-for-sellers__product-message-thread__en.png)
 
 ### Transaction conversations
 

@@ -29,22 +29,7 @@ After scheduling your show, you can view it from your profile. Tapping on it ope
 
 ### What you see on the preview
 
-```
-┌─────────────────────────────────┐
-│  [Cover image]                  │
-│  Your show title                │
-│  Date and time                  │
-│                                 │
-│  ADMIN (private)                │
-│  Bookmarks: 12  |  Views: 45   │
-│                                 │
-│  PRODUCTS (3)                   │
-│  ┌─────┐ ┌─────┐ ┌─────┐      │
-│  │Item1│ │Item2│ │Item3│  [+]  │
-│  └─────┘ └─────┘ └─────┘      │
-│                                 │
-└─────────────────────────────────┘
-```
+![Show management card displaying cover image, show title, date/time, admin status with bookmarks and views count, and products grid with add button](./assets/mockups/show-management-for-sellers__show-management-card__en.png)
 
 - **Admin stats** (only you can see these): how many people bookmarked your show and how many viewed the page
 - **Product list**: the items attached to your show. You can add, remove, or reorder products

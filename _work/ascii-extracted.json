@@ -207,17 +207,17 @@
     "source_end": 2451,
     "ascii_raw": "┌─────────────────────────────────┐\n│                                 │\n│  ┌───────────────────────────┐  │\n│  │ [Your avatar]             │  │\n│  │ Free shipping on 3+ items!│  │\n│  │ Use code: LIVE30          │  │\n│  └───────────────────────────┘  │\n│                                 │\n│  Chat messages below...         │\n│                                 │\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.3,
-      "screen_name": "chat-promo-banner",
-      "alt_text_en": "chat-promo-banner showing user avatar with promotional message about free shipping and discount code",
-      "alt_text_pt": "chat-promo-banner mostrando avatar do usuário com mensagem promocional sobre frete grátis e código de desconto",
+      "template_id": "product-card",
+      "confidence": 0.6,
+      "screen_name": "promo-banner-shipping",
+      "alt_text_en": "Promo banner with avatar and free shipping offer, code LIVE30",
+      "alt_text_pt": "Banner promocional com avatar e oferta de frete grátis, código LIVE30",
       "content": {
-        "avatar_label": "[Your avatar]",
-        "promo_title": "Free shipping on 3+ items!",
-        "promo_code": "LIVE30"
+        "title": "Free shipping on 3+ items!",
+        "subtitle": "Use code: LIVE30",
+        "icon": "Your avatar"
       },
-      "unmatched_reason": "This appears to be a promotional banner within a chat interface. It contains an avatar, promotional text, and a discount code, but doesn't match standard UI patterns like alert-dialog, empty-state-cta, or text-with-actions. The structure is more of a custom chat-embedded promotion card that doesn't fit the provided templates."
+      "unmatched_reason": null
     }
   },
   {
@@ -433,25 +433,25 @@
     "ascii_raw": "┌─────────────────────────────────┐\n│  🔴 Red    ████████░░  🔵 Blue  │\n│    1,250 pts          980 pts   │\n│           Timer: 45:30          │\n└─────────────────────────────────┘",
     "extraction": {
       "template_id": "unmatched",
-      "confidence": 0.65,
+      "confidence": 0.3,
       "screen_name": "team-competition-scoreboard",
-      "alt_text_en": "Team competition scoreboard showing Red team with 1,250 points vs Blue team with 980 points and a 45:30 timer",
-      "alt_text_pt": "Placar de competição em equipe mostrando equipe Vermelha com 1.250 pontos versus equipe Azul com 980 pontos e timer de 45:30",
+      "alt_text_en": "Team competition scoreboard showing Red team 1,250 points vs Blue team 980 points with progress bar and 45:30 timer",
+      "alt_text_pt": "Placar de competição em equipe mostrando Red team 1.250 pontos versus Blue team 980 pontos com barra de progresso e temporizador 45:30",
       "content": {
         "red_team": {
           "label": "Red",
-          "icon": "🔴",
           "points": "1,250 pts",
-          "progress": "████████░░"
+          "icon": "🔴"
         },
         "blue_team": {
           "label": "Blue",
-          "icon": "🔵",
-          "points": "980 pts"
+          "points": "980 pts",
+          "icon": "🔵"
         },
+        "progress_bar": "████████░░",
         "timer": "45:30"
       },
-      "unmatched_reason": "This is a live competition scoreboard UI showing team scores, progress bars, and a countdown timer. It doesn't match any of the 13 templates—it's specialized for real-time competition display with visual progress indicators and live timing."
+      "unmatched_reason": "This is a live competition/battle scoreboard UI showing team scores, progress bar, and countdown timer. It doesn't match any of the 15 templates: not a settings row, dialog, empty state, picker, photo grid, button, stepper, toast, wallet nav, transaction list, form, auth screen, text-with-actions, tab bar, or product card."
     }
   },
   {
@@ -497,23 +497,26 @@
     "ascii_raw": "┌─────────────────────────────────┐\n│  🔴 Vermelho ████████░░ 🔵 Azul │\n│    1.250 pts          980 pts   │\n│           Timer: 45:30          │\n└─────────────────────────────────┘",
     "extraction": {
       "template_id": "unmatched",
-      "confidence": 0.6,
-      "screen_name": "battle-team-score-display",
-      "alt_text_en": "battle-team-score-display showing Red team 1250 points with progress bar and Blue team 980 points, timer at 45:30",
-      "alt_text_pt": "battle-team-score-display mostrando time Vermelho com 1.250 pontos e barra de progresso, time Azul com 980 pontos, temporizador em 45:30",
+      "confidence": 0.3,
+      "screen_name": "team-competition-scoreboard",
+      "alt_text_en": "Team competition scoreboard displaying red team vs blue team points and match timer",
+      "alt_text_pt": "Placar de competição de equipes exibindo pontos do time vermelho versus time azul e cronômetro da partida",
       "content": {
         "red_team": {
           "label": "Vermelho",
+          "icon": "🔴",
           "points": "1.250 pts",
-          "progress_bar": "████████░░"
+          "progress": 8
         },
         "blue_team": {
           "label": "Azul",
-          "points": "980 pts"
+          "icon": "🔵",
+          "points": "980 pts",
+          "progress": 6
         },
         "timer": "45:30"
       },
-      "unmatched_reason": "This is a live battle/competition score display with two teams, progress bars, and a countdown timer. It doesn't match any of the 13 standard templates. It's specialized for real-time team competition tracking in a Jamble show/battle feature.</anmatched_reason>\n</invoke>"
+      "unmatched_reason": "Custom sports/competition scoreboard with real-time team scores, progress bars, and countdown timer. Does not fit standard templates (not a list, dialog, form, tab-bar, or navigation pattern)."
     }
   },
   {
@@ -524,28 +527,22 @@
     "source_end": 1467,
     "ascii_raw": "┌─────────────────────────────────┐\n│  📦 PACKAGE 1                   │\n│  3 items                        │\n│                                 │\n│  ┌───────────────────────────┐  │\n│  │ Nike Air Max 90 - Sz 42  │  │\n│  │ Camiseta Vintage - M     │  │\n│  │ Boné New Era - Preto     │  │\n│  └───────────────────────────┘  │\n│                                 │\n│  [Action buttons]               │\n│                                 │\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.3,
-      "screen_name": "bundled-shipments-package",
-      "alt_text_en": "bundled-shipments-package: Package 1 card showing 3 bundled items with product names and details",
-      "alt_text_pt": "bundled-shipments-package: Cartão do Pacote 1 exibindo 3 itens agrupados com nomes e detalhes dos produtos",
+      "template_id": "product-card",
+      "confidence": 0.75,
+      "screen_name": "bundled-shipment-card",
+      "alt_text_en": "Bundled shipment card showing Package 1 with 3 items: Nike Air Max 90 Size 42, Camiseta Vintage M, and Boné New Era Preto",
+      "alt_text_pt": "Card de envio agrupado mostrando Pacote 1 com 3 itens: Nike Air Max 90 Tam 42, Camiseta Vintage M, e Boné New Era Preto",
       "content": {
-        "package_id": "PACKAGE 1",
-        "item_count": 3,
+        "icon": "📦",
+        "title": "PACKAGE 1",
+        "subtitle": "3 items",
         "items": [
-          {
-            "name": "Nike Air Max 90 - Sz 42"
-          },
-          {
-            "name": "Camiseta Vintage - M"
-          },
-          {
-            "name": "Boné New Era - Preto"
-          }
-        ],
-        "has_action_buttons": true
+          "Nike Air Max 90 - Sz 42",
+          "Camiseta Vintage - M",
+          "Boné New Era - Preto"
+        ]
       },
-      "unmatched_reason": "This is a package/bundle card displaying a group of multiple items within a single shipment. It doesn't match any of the 10 primary templates—it's neither a settings list, alert, empty state, radio picker, photo grid, button, stepper, toast, wallet nav, nor a status list. A new 'bundle-card' or 'grouped-items-card' template would be more appropriate."
+      "unmatched_reason": null
     }
   },
   {
@@ -559,18 +556,19 @@
       "template_id": "unmatched",
       "confidence": 0.3,
       "screen_name": "bundled-shipment-package",
-      "alt_text_en": "Bundled shipment package card showing 3 items: Nike Air Max 90 size 42, vintage t-shirt size M, and black New Era cap",
-      "alt_text_pt": "Cartão de pacote de remessa agrupada exibindo 3 itens: Nike Air Max 90 tamanho 42, camiseta vintage tamanho M, e boné New Era preto",
+      "alt_text_en": "Bundled shipment package card showing 3 items including Nike Air Max 90, Vintage T-shirt, and New Era cap",
+      "alt_text_pt": "Cartão de pacote de envio agrupado exibindo 3 itens incluindo Nike Air Max 90, Camiseta Vintage e boné New Era",
       "content": {
-        "package_number": "PACKAGE 1",
+        "title": "PACKAGE 1",
         "item_count": 3,
         "items": [
           "Nike Air Max 90 - Sz 42",
           "Camiseta Vintage - M",
           "Boné New Era - Preto"
-        ]
+        ],
+        "has_action_buttons": true
       },
-      "unmatched_reason": "This is a product bundle/shipment card showing multiple items grouped together with action buttons. It does not match any standard template - it's a custom bundle display pattern with a count, item list, and action buttons. Closest matches would be list-based templates, but the structure (bundled package card with item list) is specific to shipment grouping and doesn't fit photo-grid, list-with-status, or settings-row-list patterns."
+      "unmatched_reason": "This is a bundled shipment package card that displays a group of items within a single package. While it shares some visual characteristics with product-card (title + content), it's specifically a package container with multiple items and action buttons, which doesn't map cleanly to any of the 10 standard templates. It's more of a custom package summary card for a shipment management context."
     }
   },
   {
@@ -635,17 +633,17 @@
     "source_end": 2848,
     "ascii_raw": "┌─────────────────────────────────┐\n│  ⚡ Flash Sale • 30% OFF  2 left│\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.85,
+      "template_id": "product-card",
+      "confidence": 0.75,
       "screen_name": "flash-sale-banner",
-      "alt_text_en": "Flash Sale banner showing 30% OFF with 2 items left in stock",
-      "alt_text_pt": "Banner Flash Sale com 30% OFF e 2 itens restantes",
+      "alt_text_en": "Flash Sale banner displaying 30% OFF discount with 2 items left in stock",
+      "alt_text_pt": "Banner Flash Sale exibindo desconto de 30% OFF com 2 itens restantes em estoque",
       "content": {
-        "icon": "⚡",
-        "label": "Flash Sale • 30% OFF",
-        "quantity": "2 left"
+        "title": "Flash Sale • 30% OFF",
+        "stock": "2 left",
+        "icon": "⚡"
       },
-      "unmatched_reason": "This is a promotional banner/badge component. It displays an icon + sale text + stock indicator in a simple card, but doesn't match any of the 10 main templates (no full screen form, list, picker, dialog, nav, etc.). It's a lightweight UI element for product listings rather than a complete screen template."
+      "unmatched_reason": null
     }
   },
   {
@@ -689,17 +687,17 @@
     "source_end": 2217,
     "ascii_raw": "┌─────────────────────────────────┐\n│  🛒 Buy It Now         3 left  │\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.3,
-      "screen_name": "buy-it-now-header",
-      "alt_text_en": "buy-it-now-header with shopping bag icon and stock indicator",
-      "alt_text_pt": "cabeçalho comprar agora com ícone de sacola de compras e indicador de estoque",
+      "template_id": "product-card",
+      "confidence": 0.85,
+      "screen_name": "buy-it-now-card",
+      "alt_text_en": "buy-it-now-card: Product card showing shopping cart icon with \"Buy It Now\" label and stock availability of 3 left",
+      "alt_text_pt": "buy-it-now-card: Cartão de produto com ícone de carrinho de compras, rótulo \"Buy It Now\" e disponibilidade de estoque de 3 unidades restantes",
       "content": {
         "title": "Buy It Now",
         "icon": "🛒",
-        "stock_label": "3 left"
+        "stock": "3 left"
       },
-      "unmatched_reason": "This is a simple header card with icon, title, and stock indicator. It doesn't match any of the 10 templates—it's too minimal and focused on displaying a section header with availability info rather than user interaction patterns like settings, forms, lists, or dialogs."
+      "unmatched_reason": null
     }
   },
   {
@@ -710,18 +708,17 @@
     "source_end": 3099,
     "ascii_raw": "┌─────────────────────────────────┐\n│  ⚡ Flash Sale • 30% OFF  2 left│\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.6,
-      "screen_name": "flash-sale-badge",
-      "alt_text_en": "Flash Sale badge showing 30% OFF discount with 2 items left",
-      "alt_text_pt": "Badge de Flash Sale mostrando 30% OFF com 2 itens restantes",
+      "template_id": "product-card",
+      "confidence": 0.75,
+      "screen_name": "flash-sale-banner",
+      "alt_text_en": "flash-sale-banner: promotional banner with lightning icon, 30% discount offer and inventory count",
+      "alt_text_pt": "flash-sale-banner: banner promocional com ícone de raio, oferta de 30% de desconto e contagem de itens",
       "content": {
-        "badge_type": "flash_sale",
+        "title": "Flash Sale • 30% OFF",
         "icon": "⚡",
-        "label": "Flash Sale • 30% OFF",
-        "inventory_text": "2 left"
+        "stock": "2 left"
       },
-      "unmatched_reason": "This is a simple inline badge/banner with an icon, label, and inventory counter. It doesn't match any of the 10 core templates—it's a product listing promotion element rather than a full-screen UI pattern. Best suited as a component rather than a standalone template."
+      "unmatched_reason": null
     }
   },
   {
@@ -768,16 +765,15 @@
     "source_end": 1625,
     "ascii_raw": "┌─────────────────────────────────┐\n│  Order details                  │\n│                                 │\n│  [Product photo] Product name   │\n│  R$ XX,XX                       │\n│                                 │\n│  ┌──────────┐ ┌──────────────┐  │\n│  │  Reject  │ │   Confirm    │  │\n│  └──────────┘ └──────────────┘  │\n│                                 │\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.7,
-      "screen_name": "order-details-actions",
-      "alt_text_en": "order-details-actions: product photo, name, price, and Reject/Confirm action buttons",
-      "alt_text_pt": "order-details-actions: foto do produto, nome, preço e botões de ação Reject/Confirm",
+      "template_id": "product-card",
+      "confidence": 0.75,
+      "screen_name": "order-details-card",
+      "alt_text_en": "Order details card with product photo, name, and price in Brazilian reals, with Reject and Confirm action buttons",
+      "alt_text_pt": "Cartão de detalhes do pedido com foto do produto, nome e preço em reais brasileiros, com botões de ação Rejeitar e Confirmar",
       "content": {
-        "title": "Order details",
-        "product_image_present": true,
-        "product_name": "Product name",
+        "title": "Product name",
         "price": "R$ XX,XX",
+        "icon": "Product photo",
         "buttons": [
           {
             "label": "Reject",
@@ -789,7 +785,7 @@
           }
         ]
       },
-      "unmatched_reason": "Contains product photo grid element combined with dual action buttons, but the photo is a single item (not a numbered grid). The layout is a modal-style card with product info + two-button footer, which doesn't fit alert-dialog (no message), button-cta (two buttons), or other templates cleanly."
+      "unmatched_reason": null
     }
   },
   {
@@ -1235,29 +1231,33 @@
     "source_end": 3459,
     "ascii_raw": "┌─────────────────────────────────┐\n│  Clone Listings from Shows      │\n│                                 │\n│  ┌───────────────────────────┐  │\n│  │  Fashion Finds Friday     │  │\n│  │  March 15, 2026           │  │\n│  │  12 products available    │  │\n│  └───────────────────────────┘  │\n│                                 │\n│  ┌───────────────────────────┐  │\n│  │  Weekend Sneaker Drop     │  │\n│  │  March 10, 2026           │  │\n│  │  8 products available     │  │\n│  └───────────────────────────┘  │\n│                                 │\n│  ┌───────────────────────────┐  │\n│  │  Import [0] products      │  │\n│  └───────────────────────────┘  │\n└─────────────────────────────────┘\n\n**Note:** The button at the bottom tracks the total products you've selected across all shows.",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.3,
-      "screen_name": "clone-listings-shows",
-      "alt_text_en": "Clone Listings from Shows screen with selectable product shows and import button",
-      "alt_text_pt": "Tela Clone Listings from Shows com shows de produtos selecionáveis e botão de importação",
+      "template_id": "list-with-status",
+      "confidence": 0.65,
+      "screen_name": "clone-listings-from-shows",
+      "alt_text_en": "Clone Listings from Shows screen displaying Fashion Finds Friday and Weekend Sneaker Drop events with product counts and Import button",
+      "alt_text_pt": "Tela Clone Listings from Shows exibindo eventos Fashion Finds Friday e Weekend Sneaker Drop com contagem de produtos e botão Import",
       "content": {
-        "title": "Clone Listings from Shows",
-        "shows": [
+        "section_title": "Clone Listings from Shows",
+        "rows": [
           {
-            "name": "Fashion Finds Friday",
-            "date": "March 15, 2026",
-            "products_available": 12
+            "id": "Fashion Finds Friday",
+            "amount": "12",
+            "status": "products available",
+            "status_color": "green",
+            "date": "March 15, 2026"
           },
           {
-            "name": "Weekend Sneaker Drop",
-            "date": "March 10, 2026",
-            "products_available": 8
+            "id": "Weekend Sneaker Drop",
+            "amount": "8",
+            "status": "products available",
+            "status_color": "green",
+            "date": "March 10, 2026"
           }
         ],
-        "import_button_label": "Import [0] products",
-        "note": "The button at the bottom tracks the total products you've selected across all shows."
+        "note": "The button at the bottom tracks the total products you've selected across all shows.",
+        "button_label": "Import [0] products"
       },
-      "unmatched_reason": "This is a custom list of selectable show cards with dynamic counter button. It's a hybrid pattern: list of items (like list-with-status or settings-row-list) but with interactive card selection and a dynamic action button that tracks selections. Doesn't cleanly match any single template."
+      "unmatched_reason": null
     }
   },
   {
@@ -1423,29 +1423,35 @@
     "source_end": 3535,
     "ascii_raw": "┌─────────────────────────────────┐\n│  Clonar Listagens de Shows      │\n│                                 │\n│  ┌───────────────────────────┐  │\n│  │  Fashion Finds Friday     │  │\n│  │  15 de março de 2026      │  │\n│  │  12 produtos disponíveis  │  │\n│  └───────────────────────────┘  │\n│                                 │\n│  ┌───────────────────────────┐  │\n│  │  Weekend Sneaker Drop     │  │\n│  │  10 de março de 2026      │  │\n│  │  8 produtos disponíveis   │  │\n│  └───────────────────────────┘  │\n│                                 │\n│  ┌───────────────────────────┐  │\n│  │  Import [0] products      │  │\n│  └───────────────────────────┘  │\n└─────────────────────────────────┘\n\n**Nota:** O botão na parte inferior rastreia o total de\nprodutos que você selecionou em todos os shows.",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.4,
-      "screen_name": "clone-listings-selector",
-      "alt_text_en": "Clone Listings screen showing two show cards (Fashion Finds Friday, Weekend Sneaker Drop) with dates and product counts, plus an Import button tracking selected products",
-      "alt_text_pt": "Tela Clonar Listagens mostrando dois cards de shows (Fashion Finds Friday, Weekend Sneaker Drop) com datas e quantidades de produtos, além de botão Import rastreando produtos selecionados",
+      "template_id": "list-with-status",
+      "confidence": 0.75,
+      "screen_name": "clone-shows-list",
+      "alt_text_en": "Clone Show Listings screen with two show cards and import button showing selected product count",
+      "alt_text_pt": "Tela Clonar Listagens de Shows com dois cartões de shows e botão de importação mostrando contagem de produtos selecionados",
       "content": {
-        "title": "Clonar Listagens de Shows",
-        "shows": [
+        "section_title": "Clonar Listagens de Shows",
+        "rows": [
           {
-            "name": "Fashion Finds Friday",
-            "date": "15 de março de 2026",
-            "product_count": "12 produtos disponíveis"
+            "id": "fashion-finds-friday",
+            "amount": "12 produtos",
+            "status": "disponíveis",
+            "status_color": "green",
+            "date": "15 de março de 2026"
           },
           {
-            "name": "Weekend Sneaker Drop",
-            "date": "10 de março de 2026",
-            "product_count": "8 produtos disponíveis"
+            "id": "weekend-sneaker-drop",
+            "amount": "8 produtos",
+            "status": "disponíveis",
+            "status_color": "green",
+            "date": "10 de março de 2026"
           }
         ],
-        "import_button_label": "Import [0] products",
-        "note": "O botão na parte inferior rastreia o total de produtos que você selecionou em todos os shows."
+        "cta": {
+          "label": "Import [0] products",
+          "note": "O botão na parte inferior rastreia o total de produtos que você selecionou em todos os shows."
+        }
       },
-      "unmatched_reason": "This is a custom selection/multi-card interface with show listing cards (Fashion Finds Friday, Weekend Sneaker Drop) displaying date and product count, with a dynamic import button that tracks total selected products. It doesn't match any standard template - it's a specialized card-picker for cloning show listings."
+      "unmatched_reason": null
     }
   },
   {
@@ -1457,40 +1463,37 @@
     "ascii_raw": "┌─────────────────────────────────┐\n│  Select Listings                │\n│                                 │\n│  Fashion Finds Friday           │\n│  15 de março · 12 disponíveis  │\n│                                 │\n│  ┌───────────────────────────┐  │\n│  │ ☑ Nike Air Max 90         │  │\n│  │   2 Disponíveis · R$200   │  │\n│  └───────────────────────────┘  │\n│                                 │\n│  ┌───────────────────────────┐  │\n│  │ ☐ Camiseta Vintage        │  │\n│  │   1 Disponível · R$80     │  │\n│  └───────────────────────────┘  │\n│                                 │\n│  ┌───────────────────────────┐  │\n│  │ (Added) Jeans Levis 501   │  │\n│  │   Já neste show           │  │\n│  └───────────────────────────┘  │\n│                                 │\n│  ┌───────────────────────────┐  │\n│  │  Clone [1] listing(s)     │  │\n│  └───────────────────────────┘  │\n└─────────────────────────────────┘",
     "extraction": {
       "template_id": "unmatched",
-      "confidence": 0.45,
+      "confidence": 0.7,
       "screen_name": "select-listings-clone",
-      "alt_text_en": "Select Listings screen for cloning items, showing Fashion Finds Friday collection with checkboxes for Nike Air Max 90, Camiseta Vintage, and Jeans Levis 501",
-      "alt_text_pt": "Tela Selecionar Anúncios para clonar itens, exibindo coleção Fashion Finds Friday com caixas de seleção para Nike Air Max 90, Camiseta Vintage e Jeans Levis 501",
+      "alt_text_en": "Select Listings screen for cloning Fashion Finds Friday event items with checkboxes for Nike Air Max 90, Camiseta Vintage, and Jeans Levis 501",
+      "alt_text_pt": "Tela Selecionar Listagens para clonar itens do evento Fashion Finds Friday com caixas de seleção para Nike Air Max 90, Camiseta Vintage e Jeans Levis 501",
       "content": {
         "title": "Select Listings",
-        "section_subtitle": "Fashion Finds Friday",
+        "section_title": "Fashion Finds Friday",
         "section_meta": "15 de março · 12 disponíveis",
         "items": [
           {
-            "checkbox": true,
+            "checked": true,
             "name": "Nike Air Max 90",
             "availability": "2 Disponíveis",
-            "price": "R$200",
-            "selected": true
+            "price": "R$200"
           },
           {
-            "checkbox": true,
+            "checked": false,
             "name": "Camiseta Vintage",
             "availability": "1 Disponível",
-            "price": "R$80",
-            "selected": false
+            "price": "R$80"
           },
           {
-            "checkbox": true,
+            "checked": false,
             "name": "Jeans Levis 501",
             "status": "Added",
-            "status_label": "Já neste show",
-            "selected": false
+            "status_note": "Já neste show"
           }
         ],
-        "cta_button": "Clone [1] listing(s)"
+        "cta_label": "Clone [1] listing(s)"
       },
-      "unmatched_reason": "This is a multi-select listing picker with checkboxes, availability counts, prices, and status badges (\"Added\") that doesn't align with standard templates. While it has checkbox elements, it's not a radio-picker (allows multiple selection). It contains item cards with metadata (dates, stock, prices) in a custom layout that doesn't match settings-row-list, list-with-status, or other provided templates."
+      "unmatched_reason": "This is a multi-select listing screen with mixed checkbox states (checked, unchecked, and \"already added\" status) combined with a summary action button. It doesn't cleanly fit radio-picker (which uses radio dots, not checkboxes), list-with-status (which shows transaction history with status colors), or any single template. The layout combines item selection with inventory/price display and a final action CTA."
     }
   },
   {
@@ -1576,18 +1579,18 @@
     "source_end": 2299,
     "ascii_raw": "┌─────────────────────────────────┐\n│                                 │\n│  [Product image + details]      │\n│                                 │\n│  ┌───────────────────────────┐  │\n│  │  Product Name             │  │\n│  │  R$ 15,00    [Start]      │  │\n│  └───────────────────────────┘  │\n│                                 │\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.3,
+      "template_id": "product-card",
+      "confidence": 0.95,
       "screen_name": "product-offer-card",
-      "alt_text_en": "Product offer card showing image, name, price in R$, and Start action button",
-      "alt_text_pt": "Card de oferta de produto mostrando imagem, nome, preço em R$ e botão de ação Iniciar",
+      "alt_text_en": "product-offer-card displaying product image, name, price R$ 15,00, and Start action button",
+      "alt_text_pt": "product-offer-card exibindo imagem do produto, nome, preço R$ 15,00 e botão de ação Iniciar",
       "content": {
-        "product_image": true,
-        "product_name": "Product Name",
+        "title": "Product Name",
         "price": "R$ 15,00",
+        "icon": "Product image + details",
         "cta_label": "Start"
       },
-      "unmatched_reason": "This is a product card with image + details layout. It doesn't match standard templates: not a settings row, not a dialog, not a list, not a form. It's a custom product display card with price and action button, commonly used in e-commerce/marketplace contexts."
+      "unmatched_reason": null
     }
   },
   {
@@ -1598,18 +1601,18 @@
     "source_end": 2475,
     "ascii_raw": "┌─────────────────────────────────┐\n│                                 │\n│  [Imagem + detalhes do produto] │\n│                                 │\n│  ┌───────────────────────────┐  │\n│  │  Nome do Produto          │  │\n│  │  R$ 15,00    [Start]      │  │\n│  └───────────────────────────┘  │\n│                                 │\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.3,
+      "template_id": "product-card",
+      "confidence": 0.95,
       "screen_name": "product-offer-card",
-      "alt_text_en": "Product offer card displaying product image, name, price and start button",
-      "alt_text_pt": "Cartão de oferta de produto com imagem, nome do produto, preço e botão iniciar",
+      "alt_text_en": "product-offer-card showing product image, name, price R$ 15,00, and Start button",
+      "alt_text_pt": "product-offer-card exibindo imagem do produto, nome, preço R$ 15,00 e botão Start",
       "content": {
-        "product_image": "image + product details",
-        "product_name": "Nome do Produto",
+        "title": "Nome do Produto",
         "price": "R$ 15,00",
-        "cta_button": "Start"
+        "icon": "Imagem + detalhes do produto",
+        "cta_label": "Start"
       },
-      "unmatched_reason": "This appears to be a product card with image, name, price, and action button. It doesn't match standard templates which focus on navigation, forms, dialogs, or lists. It's a custom product display component."
+      "unmatched_reason": null
     }
   },
   {
@@ -1620,31 +1623,22 @@
     "source_end": 898,
     "ascii_raw": "┌─────────────────────────────────┐\n│  Activity                       │\n│                                 │\n│  ┌─────┬────────┬───────┬─────┐ │\n│  │ All │ Unread │Purch. │Sales│ │\n│  └─────┴────────┴───────┴─────┘ │\n│                                 │\n│  [Conversation list below]      │\n│                                 │\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.6,
-      "screen_name": "activity-messages-tabs",
-      "alt_text_en": "Activity screen with message filter tabs: All, Unread, Purchases, Sales",
-      "alt_text_pt": "Tela de Atividade com abas de filtro de mensagens: Todos, Não lidos, Compras, Vendas",
+      "template_id": "tab-bar",
+      "confidence": 0.95,
+      "screen_name": "activity-tabs",
+      "alt_text_en": "Activity screen with tab bar showing All, Unread, Purchases, and Sales tabs with conversation list below",
+      "alt_text_pt": "Tela de atividade com barra de abas mostrando abas Todos, Não lidos, Compras e Vendas com lista de conversas abaixo",
       "content": {
-        "screen_title": "Activity",
         "tabs": [
-          {
-            "label": "All",
-            "selected": true
-          },
-          {
-            "label": "Unread"
-          },
-          {
-            "label": "Purch."
-          },
-          {
-            "label": "Sales"
-          }
+          "All",
+          "Unread",
+          "Purch.",
+          "Sales"
         ],
-        "has_conversation_list": true
+        "content_placeholder": "Conversation list below",
+        "active_tab_index": 0
       },
-      "unmatched_reason": "This is a tab/filter navigation component for message conversations. While it has a list structure below, the primary UI element is a horizontal tab bar (All, Unread, Purch., Sales) which is not covered by the 10 templates. This appears to be a custom navigation pattern for conversation filtering rather than a standard settings, list, form, or dialog template."
+      "unmatched_reason": null
     }
   },
   {
@@ -1655,15 +1649,15 @@
     "source_end": 2461,
     "ascii_raw": "┌─────────────────────────────────┐\n│  ┌─────────────────────────┐    │\n│  │ [Product image]         │    │\n│  │ Product Name            │    │\n│  │ R$ 45,00                │    │\n│  └─────────────────────────┘    │\n│                                 │\n│  Buyer: Is this still available?│\n│  You: Yes! The condition is...  │\n│                                 │\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.3,
-      "screen_name": "direct-message-conversation",
-      "alt_text_en": "direct-message-conversation: Product card with image, name, and price (R$ 45,00) above buyer-seller message exchange",
-      "alt_text_pt": "direct-message-conversation: Cartão de produto com imagem, nome e preço (R$ 45,00) acima de troca de mensagens entre comprador e vendedor",
+      "template_id": "text-with-actions",
+      "confidence": 0.65,
+      "screen_name": "product-message-thread",
+      "alt_text_en": "Product message thread showing product card with image, name, price, and conversation between buyer and seller",
+      "alt_text_pt": "Thread de mensagem de produto mostrando card do produto com imagem, nome, preço e conversa entre comprador e vendedor",
       "content": {
-        "product": {
+        "title": "Product Name",
+        "product_info": {
           "image": "[Product image]",
-          "name": "Product Name",
           "price": "R$ 45,00"
         },
         "messages": [
@@ -1677,7 +1671,7 @@
           }
         ]
       },
-      "unmatched_reason": "This is a direct message conversation interface with a product header card + message thread. It doesn't fit existing templates: not a settings list, dialog, form, or any single-view pattern. It's a hybrid showing product context within a messaging flow."
+      "unmatched_reason": null
     }
   },
   {
@@ -1718,23 +1712,22 @@
     "source_end": 966,
     "ascii_raw": "┌─────────────────────────────────┐\n│  Atividade                      │\n│                                 │\n│  ┌─────┬────────┬───────┬─────┐ │\n│  │Todos│Nao lido│Compras│Vendas│ │\n│  └─────┴────────┴───────┴─────┘ │\n│                                 │\n│  [Lista de conversas abaixo]    │\n│                                 │\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.3,
-      "screen_name": "activity-messages-tab-filter",
-      "alt_text_en": "Activity screen with tab filters for All, Unread, Purchases, and Sales messages",
-      "alt_text_pt": "Tela de Atividade com abas de filtro para Todos, Não lido, Compras e Vendas",
+      "template_id": "tab-bar",
+      "confidence": 0.85,
+      "screen_name": "activity-tabs",
+      "alt_text_en": "Activity screen with Todos, Nao lido, Compras, Vendas tabs and conversation list below",
+      "alt_text_pt": "Tela Atividade com abas Todos, Nao lido, Compras, Vendas e lista de conversas abaixo",
       "content": {
-        "title": "Atividade",
         "tabs": [
           "Todos",
-          "Não lido",
+          "Nao lido",
           "Compras",
           "Vendas"
         ],
-        "has_list": true,
-        "list_label": "Lista de conversas abaixo"
+        "content_placeholder": "Lista de conversas abaixo",
+        "active_tab_index": 0
       },
-      "unmatched_reason": "Tab-based message activity filter. No single template covers a tabbed interface with category filters and a dynamic list below. This is a hybrid layout combining tabs for filtering with an underlying conversation list."
+      "unmatched_reason": null
     }
   },
   {
@@ -1745,13 +1738,27 @@
     "source_end": 2572,
     "ascii_raw": "┌─────────────────────────────────┐\n│  ┌─────────────────────────┐    │\n│  │ [Imagem do produto]     │    │\n│  │ Nome do Produto         │    │\n│  │ R$ 45,00                │    │\n│  └─────────────────────────┘    │\n│                                 │\n│  Comprador: Ainda esta          │\n│  disponivel?                    │\n│  Voce: Sim! A condicao e...     │\n│                                 │\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.3,
-      "screen_name": "direct-message-thread",
-      "alt_text_en": "Direct message thread showing product card with image, name and price R$ 45.00, followed by buyer and seller messages about product availability",
-      "alt_text_pt": "Thread de mensagem direta mostrando card de produto com imagem, nome e preço R$ 45,00, seguido por mensagens do comprador e vendedor sobre disponibilidade do produto",
-      "content": {},
-      "unmatched_reason": "This is a direct message thread/chat interface with a product card context. It doesn't match any of the 10 templates: it's not a settings list, alert, empty state, radio picker, photo grid, button, stepper, error toast, wallet nav, list with status, form, auth screen, or text with actions. A chat/messaging thread template is not available."
+      "template_id": "product-card",
+      "confidence": 0.75,
+      "screen_name": "dm-product-card",
+      "alt_text_en": "dm-product-card showing product image, name, price R$ 45,00 and conversation between buyer and seller",
+      "alt_text_pt": "dm-product-card exibindo imagem do produto, nome, preço R$ 45,00 e conversa entre comprador e vendedor",
+      "content": {
+        "title": "Nome do Produto",
+        "price": "R$ 45,00",
+        "icon": "[Imagem do produto]",
+        "conversation": [
+          {
+            "sender": "Comprador",
+            "message": "Ainda esta disponivel?"
+          },
+          {
+            "sender": "Voce",
+            "message": "Sim! A condicao e..."
+          }
+        ]
+      },
+      "unmatched_reason": null
     }
   },
   {
@@ -1822,26 +1829,21 @@
     "source_end": 2699,
     "ascii_raw": "┌─────────────────────────────────┐\n│  ┌─────────────────────────┐    │\n│  │ 🟢 Flash Sale  -20%    │    │\n│  │ R$ 80,00 (was R$ 100)  │    │\n│  │ Timer: 0:45             │    │\n│  └─────────────────────────┘    │\n│                                 │\n│  [Product image]                │\n│                                 │\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.6,
+      "template_id": "product-card",
+      "confidence": 0.85,
       "screen_name": "flash-sale-product-card",
-      "alt_text_en": "flash-sale-product-card: Green Flash Sale badge showing -20% discount, price R$ 80.00 reduced from R$ 100, countdown timer 0:45, product image below",
-      "alt_text_pt": "flash-sale-product-card: Crachá Flash Sale verde mostrando desconto de -20%, preço R$ 80,00 reduzido de R$ 100, cronômetro 0:45, imagem do produto abaixo",
+      "alt_text_en": "flash-sale-product-card showing 20% discount badge, price R$ 80 reduced from R$ 100, 45-second countdown timer",
+      "alt_text_pt": "flash-sale-product-card exibindo badge de desconto de 20%, preço R$ 80 reduzido de R$ 100, timer de contagem regressiva de 45 segundos",
       "content": {
-        "badge": {
-          "type": "flash_sale",
-          "icon": "🟢",
-          "label": "Flash Sale",
-          "discount": "-20%"
-        },
-        "pricing": {
-          "current_price": "R$ 80,00",
-          "original_price": "R$ 100"
-        },
+        "title": "Flash Sale",
+        "subtitle": "-20%",
+        "price": "R$ 80,00",
+        "original_price": "R$ 100",
         "timer": "0:45",
-        "has_product_image": true
+        "badge_icon": "🟢",
+        "icon": "[Product image]"
       },
-      "unmatched_reason": "This is a product card for a flash sale display, showing a discount badge with countdown timer and pricing. It doesn't match any of the 10 core templates—it's a specialized e-commerce product tile, not a settings row, dialog, picker, form, or navigation pattern."
+      "unmatched_reason": null
     }
   },
   {
@@ -1882,20 +1884,20 @@
     "source_end": 3000,
     "ascii_raw": "┌─────────────────────────────────┐\n│  ┌─────────────────────────┐    │\n│  │ 🟢 Flash Sale  -20%    │    │\n│  │ R$ 80,00 (era R$ 100)  │    │\n│  │ Timer: 0:45             │    │\n│  └─────────────────────────┘    │\n│                                 │\n│  [Imagem do produto]            │\n│                                 │\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.7,
+      "template_id": "product-card",
+      "confidence": 0.9,
       "screen_name": "flash-sale-product-card",
-      "alt_text_en": "Flash Sale product card showing green badge, -20% discount, price R$ 80.00 (was R$ 100), timer at 0:45, and product image",
-      "alt_text_pt": "Cartão de Flash Sale com badge verde, desconto de -20%, preço R$ 80,00 (era R$ 100), temporizador em 0:45 e imagem do produto",
+      "alt_text_en": "Flash Sale product card showing 20% discount, price R$ 80.00 reduced from R$ 100, with 45 seconds timer",
+      "alt_text_pt": "Cartão de produto Flash Sale com desconto de 20%, preço R$ 80,00 antes era R$ 100, com timer de 45 segundos",
       "content": {
-        "badge": "🟢 Flash Sale",
-        "discount": "-20%",
-        "price_current": "R$ 80,00",
-        "price_original": "R$ 100",
+        "title": "Flash Sale",
+        "subtitle": "-20%",
+        "price": "R$ 80,00",
+        "original_price": "R$ 100",
         "timer": "0:45",
-        "has_product_image": true
+        "icon": "🟢"
       },
-      "unmatched_reason": "Product card displaying a flash sale promotion with discount badge, pricing, countdown timer, and product image slot. Does not fit standard UI templates (not a settings list, dialog, picker, form, etc.). This is a custom product display component specific to e-commerce flash sale presentation."
+      "unmatched_reason": null
     }
   },
   {
@@ -2358,29 +2360,21 @@
     "source_end": 1263,
     "ascii_raw": "┌─────────────────────────────────┐\n│  ┌───────┐ ┌───────┐ ┌───────┐ │\n│  │ Deals │ │Explore│ │Follow │ │\n│  └───────┘ └───────┘ └───────┘ │\n│                                 │\n│  [Shows and products appear     │\n│   below based on selected tab]  │\n│                                 │\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.7,
+      "template_id": "tab-bar",
+      "confidence": 0.95,
       "screen_name": "discoverability-tabs",
-      "alt_text_en": "Discoverability tabs screen with Deals, Explore, and Follow navigation options",
-      "alt_text_pt": "Tela de abas de descoberta com opções de navegação Ofertas, Explorar e Seguir",
+      "alt_text_en": "Discoverability tabs with Deals, Explore, and Follow options showing products below",
+      "alt_text_pt": "Abas de descoberta com opções Deals, Explore e Follow exibindo produtos abaixo",
       "content": {
         "tabs": [
-          {
-            "label": "Deals",
-            "selected": true
-          },
-          {
-            "label": "Explore",
-            "selected": false
-          },
-          {
-            "label": "Follow",
-            "selected": false
-          }
+          "Deals",
+          "Explore",
+          "Follow"
         ],
-        "description": "Shows and products appear below based on selected tab"
+        "content_placeholder": "Shows and products appear below based on selected tab",
+        "active_tab_index": 0
       },
-      "unmatched_reason": "This is a tab navigation interface with three category tabs (Deals, Explore, Follow) that control content display below. While it could be considered a navigation pattern, it doesn't match any of the 10 standard templates. It's neither a settings list, dialog, picker, nor any other predefined template—it's a tab-based content switcher."
+      "unmatched_reason": null
     }
   },
   {
@@ -2391,31 +2385,22 @@
     "source_end": 1873,
     "ascii_raw": "┌─────────────────────────────────────────────┐\n│ For You │ Shoes │ Contemporary │ Beauty │ ...│\n└─────────────────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.7,
-      "screen_name": "discovery-category-tabs",
-      "alt_text_en": "Discovery category tabs showing For You, Shoes, Contemporary, Beauty and more",
-      "alt_text_pt": "Abas de categoria de descoberta mostrando Para Você, Sapatos, Contemporâneo, Beleza e mais",
+      "template_id": "tab-bar",
+      "confidence": 0.95,
+      "screen_name": "discovery-tabs",
+      "alt_text_en": "Discovery tabs showing For You, Shoes, Contemporary, Beauty, and more categories",
+      "alt_text_pt": "Abas de descoberta mostrando Para Você, Sapatos, Contemporâneo, Beleza e mais categorias",
       "content": {
         "tabs": [
-          {
-            "label": "For You"
-          },
-          {
-            "label": "Shoes"
-          },
-          {
-            "label": "Contemporary"
-          },
-          {
-            "label": "Beauty"
-          },
-          {
-            "label": "..."
-          }
-        ]
+          "For You",
+          "Shoes",
+          "Contemporary",
+          "Beauty",
+          "..."
+        ],
+        "active_tab_index": 0
       },
-      "unmatched_reason": "This is a horizontal tab/category navigation bar, not matching any of the 13 templates. It's a navigation element with multiple category tabs rather than a form, list, dialog, or action-based screen."
+      "unmatched_reason": null
     }
   },
   {
@@ -2426,20 +2411,21 @@
     "source_end": 1378,
     "ascii_raw": "┌─────────────────────────────────┐\n│  ┌───────┐ ┌───────┐ ┌───────┐ │\n│  │Ofertas│ │Explorar│ │Seguindo│ │\n│  └───────┘ └───────┘ └───────┘ │\n│                                 │\n│  [Shows e produtos aparecem     │\n│   abaixo conforme a aba]        │\n│                                 │\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.6,
-      "screen_name": "discovery-tabs",
-      "alt_text_en": "Discovery tabs screen showing Ofertas, Explorar, and Seguindo navigation tabs with content area below",
-      "alt_text_pt": "Tela de abas de descoberta mostrando abas de navegação Ofertas, Explorar e Seguindo com área de conteúdo abaixo",
+      "template_id": "tab-bar",
+      "confidence": 0.95,
+      "screen_name": "discoverability-tabs",
+      "alt_text_en": "discoverability-tabs: Tab bar with three navigation options Ofertas, Explorar, Seguindo for browsing shows and products",
+      "alt_text_pt": "discoverability-tabs: Barra de abas com três opções de navegação Ofertas, Explorar, Seguindo para navegar shows e produtos",
       "content": {
         "tabs": [
           "Ofertas",
           "Explorar",
           "Seguindo"
         ],
-        "content_description": "Shows e produtos aparecem abaixo conforme a aba"
+        "content_placeholder": "Shows e produtos aparecem abaixo conforme a aba",
+        "active_tab_index": 0
       },
-      "unmatched_reason": "This is a tabbed navigation interface showing three tabs (Ofertas/Explorar/Seguindo) with dynamic content below. None of the 13 templates match a tab-based discovery interface. It's closest to a container/layout pattern but doesn't fit settings-row-list, radio-picker, or any other specific template."
+      "unmatched_reason": null
     }
   },
   {
@@ -2450,13 +2436,20 @@
     "source_end": 2036,
     "ascii_raw": "┌─────────────────────────────────────────────────┐\n│ Para Voce │ Calcados │ Contemporaneo │ Beleza │..│\n└─────────────────────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.3,
-      "screen_name": "category-scroll-nav",
-      "alt_text_en": "category-scroll-nav showing horizontal scrollable product categories: Para Voce, Calcados, Contemporaneo, Beleza, and more",
-      "alt_text_pt": "category-scroll-nav exibindo categorias de produtos roláveis horizontalmente: Para Voce, Calcados, Contemporaneo, Beleza, e mais",
-      "content": {},
-      "unmatched_reason": "This is a horizontal scrollable category navigation bar, not matching any of the 10 standard templates. It shows a row of category pill buttons (Para Voce, Calcados, Contemporaneo, Beleza, etc.) rather than a settings list, dialog, form, picker, or other recognized pattern."
+      "template_id": "tab-bar",
+      "confidence": 0.95,
+      "screen_name": "category-tabs",
+      "alt_text_en": "Category tabs navigation: Para Voce, Calcados, Contemporaneo, Beleza, and more",
+      "alt_text_pt": "Abas de navegação de categorias: Para Voce, Calcados, Contemporaneo, Beleza, e mais",
+      "content": {
+        "tabs": [
+          "Para Voce",
+          "Calcados",
+          "Contemporaneo",
+          "Beleza"
+        ]
+      },
+      "unmatched_reason": null
     }
   },
   {
@@ -2726,19 +2719,34 @@
     "ascii_raw": "┌─────────────────────────────────┐\n│  [📷+]              [viewers]   │\n│                                 │\n│   Your live camera feed         │\n│                                 │\n│                                 │\n└─────────────────────────────────┘",
     "extraction": {
       "template_id": "unmatched",
-      "confidence": 0.3,
+      "confidence": 0.9,
       "screen_name": "live-duo-camera-feed",
-      "alt_text_en": "Live Duo camera feed display with photo icon and viewer count indicator",
-      "alt_text_pt": "Exibição de feed de câmera do Live Duo com ícone de foto e indicador de contagem de espectadores",
+      "alt_text_en": "Live Duo camera feed screen with add camera button and viewers count",
+      "alt_text_pt": "Tela de câmera ao vivo Duo com botão adicionar câmera e contagem de visualizadores",
       "content": {
-        "description": "Camera feed preview area with viewer count display",
+        "description": "Live streaming camera feed interface showing the user's camera feed with an add camera button (+) and a viewers indicator in the top right",
+        "layout_type": "camera_view",
         "elements": [
-          "camera_button",
-          "viewers_indicator",
-          "feed_preview"
+          {
+            "position": "top_left",
+            "type": "button",
+            "icon": "📷+",
+            "purpose": "add_camera_source"
+          },
+          {
+            "position": "top_right",
+            "type": "indicator",
+            "label": "viewers",
+            "purpose": "show_viewer_count"
+          },
+          {
+            "position": "center",
+            "type": "camera_feed",
+            "label": "Your live camera feed"
+          }
         ]
       },
-      "unmatched_reason": "This appears to be a camera feed display/preview area for a live streaming interface. It doesn't match any of the standard UI templates—it's a custom live video container with a camera button and viewer counter, not a traditional form, list, dialog, or action screen."
+      "unmatched_reason": "This is a live streaming camera feed interface, which is not covered by the available templates. It shows a specialized streaming UI with a camera view area, add camera button, and viewers indicator—none of which fit the predefined patterns (settings, dialogs, pickers, forms, etc.)."
     }
   },
   {
@@ -2795,16 +2803,16 @@
     "ascii_raw": "┌─────────────────────────────────┐\n│  ┌────────┐                     │\n│  │ Guest  │        Your main    │\n│  │ video  │        camera feed  │\n│  └────────┘                     │\n│                                 │\n│                                 │\n└─────────────────────────────────┘",
     "extraction": {
       "template_id": "unmatched",
-      "confidence": 0.85,
+      "confidence": 0.7,
       "screen_name": "live-duo-video-layout",
-      "alt_text_en": "Live Duo video layout showing guest video on left and main camera feed on right",
-      "alt_text_pt": "Layout de vídeo Live Duo com vídeo do convidado à esquerda e feed de câmera principal à direita",
+      "alt_text_en": "Live Duo video layout showing guest video window on left and main camera feed on right",
+      "alt_text_pt": "Layout de vídeo Live Duo mostrando janela de vídeo do convidado à esquerda e feed principal da câmera à direita",
       "content": {
-        "layout_type": "side_by_side_video",
-        "left_video": "Guest video",
-        "right_video": "Your main camera feed"
+        "description": "Two-panel video layout for Live Duo",
+        "left_panel": "Guest video",
+        "right_panel": "Your main camera feed"
       },
-      "unmatched_reason": "This is a video layout/viewport diagram showing two video feeds side-by-side (guest video and main camera feed). It doesn't match any of the 10 templates as it's a pure layout visualization without interactive UI elements like buttons, forms, lists, or dialogs."
+      "unmatched_reason": "This is a video layout composition showing the arrangement of two video feeds (guest and main camera). It doesn't match any of the 15 standard UI templates as it's a layout visualization rather than an interactive UI pattern with buttons, forms, or navigation elements."
     }
   },
   {
@@ -2874,25 +2882,19 @@
     "source_end": 3599,
     "ascii_raw": "┌─────────────────────────────────┐\n│  ┌────────┐                     │\n│  │Convidado│       Seu feed     │\n│  │ vídeo  │       principal     │\n│  └────────┘                     │\n│                                 │\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.4,
-      "screen_name": "live-duo-layout",
-      "alt_text_en": "Live Duo layout showing guest video window and main feed area",
-      "alt_text_pt": "Layout do Live Duo mostrando janela de vídeo do convidado e área do feed principal",
+      "template_id": "tab-bar",
+      "confidence": 0.75,
+      "screen_name": "live-duo-tabs",
+      "alt_text_en": "live-duo-tabs: Two-tab navigation showing Guest video and Your main feed options",
+      "alt_text_pt": "live-duo-tabs: Navegação com duas abas mostrando Vídeo do convidado e Seu feed principal",
       "content": {
-        "layout_type": "split_view",
-        "sections": [
-          {
-            "label": "Convidado vídeo",
-            "position": "left"
-          },
-          {
-            "label": "Seu feed principal",
-            "position": "right"
-          }
-        ]
+        "tabs": [
+          "Convidado vídeo",
+          "Seu feed principal"
+        ],
+        "active_tab_index": 0
       },
-      "unmatched_reason": "This is a screen layout diagram showing a live video interface with two sections (guest video window on the left and main feed on the right). It does not match any of the standard UI templates - it's neither a settings list, dialog, form, navigation bar, nor a data list. This appears to be a visual representation of a live streaming dual-camera layout that doesn't fit the predefined pattern categories."
+      "unmatched_reason": null
     }
   },
   {
@@ -2905,28 +2907,18 @@
     "extraction": {
       "template_id": "unmatched",
       "confidence": 0.85,
-      "screen_name": "sale-price-breakdown",
-      "alt_text_en": "Sale price breakdown showing R$ 100 sale price, R$ 14 Jamble commission (14%), and R$ 86 seller earnings",
-      "alt_text_pt": "Detalhamento do preço de venda mostrando R$ 100 preço de venda, R$ 14 comissão Jamble (14%), e R$ 86 ganhos do vendedor",
+      "screen_name": "seller-earnings-breakdown",
+      "alt_text_en": "Seller earnings breakdown showing sale price, Jamble commission, and net earnings calculation",
+      "alt_text_pt": "Detalhamento dos ganhos do vendedor mostrando preço de venda, comissão Jamble e ganhos líquidos",
       "content": {
-        "type": "breakdown_summary",
-        "rows": [
-          {
-            "label": "Sale price (what the buyer pays)",
-            "amount": "R$ 100,00"
-          },
-          {
-            "label": "Jamble commission (14%)",
-            "amount": "- R$ 14,00"
-          },
-          {
-            "label": "Your earnings (what you receive)",
-            "amount": "R$ 86,00",
-            "is_total": true
-          }
-        ]
+        "sale_price_label": "Sale price (what the buyer pays)",
+        "sale_price": "R$ 100,00",
+        "commission_label": "Jamble commission (14%)",
+        "commission_amount": "- R$ 14,00",
+        "earnings_label": "Your earnings (what you receive)",
+        "earnings_amount": "R$ 86,00"
       },
-      "unmatched_reason": "This is a financial breakdown/summary card showing sale price, commission deduction, and net earnings. While it displays rows with amounts, it doesn't fit the existing templates—it's neither a settings-row-list (no icons/toggles), list-with-status (no transaction IDs/dates/status), nor wallet-nav. It's a static informational breakdown specific to showing fee calculations."
+      "unmatched_reason": "This is a financial breakdown/calculation card showing a step-by-step earnings calculation. It displays multiple labeled values with visual separation (horizontal line dividing the calculation from the final result). Does not match any of the 15 templates—closest would be 'text-with-actions' or 'settings-row-list', but it's primarily a read-only informational breakdown with no interactive elements or action buttons."
     }
   },
   {
@@ -2939,46 +2931,44 @@
     "extraction": {
       "template_id": "unmatched",
       "confidence": 0.75,
-      "screen_name": "seller-fees-breakdown",
-      "alt_text_en": "Seller fees breakdown: buyer pays R$ 118.50 total (R$ 100 product + R$ 18.50 shipping), seller receives R$ 86.00 after 14% commission",
-      "alt_text_pt": "Detalhamento de taxas do vendedor: comprador paga R$ 118,50 total (R$ 100 produto + R$ 18,50 envio), vendedor recebe R$ 86,00 após comissão de 14%",
+      "screen_name": "fees-breakdown-example",
+      "alt_text_en": "fees-breakdown-example: Seller fee calculation showing buyer payment (R$ 100 product + R$ 18.50 shipping = R$ 118.50 total) and seller earnings (R$ 86.00 after 14% commission)",
+      "alt_text_pt": "fees-breakdown-example: Cálculo de taxa do vendedor mostrando pagamento do comprador (R$ 100 produto + R$ 18,50 frete = R$ 118,50 total) e ganho do vendedor (R$ 86,00 após comissão de 14%)",
       "content": {
-        "sections": [
-          {
-            "title": "What the buyer pays:",
-            "rows": [
-              {
-                "label": "Product price:",
-                "amount": "R$ 100,00"
-              },
-              {
-                "label": "Shipping:",
-                "amount": "R$  18,50"
-              },
-              {
-                "label": "Total:",
-                "amount": "R$ 118,50",
-                "bold": true
-              }
-            ]
-          },
-          {
-            "title": "What you receive:",
-            "rows": [
-              {
-                "label": "Your earnings:",
-                "amount": "R$  86,00"
-              },
-              {
-                "label": "Note:",
-                "amount": "(R$ 100 - 14% commission)",
-                "dimmed": true
-              }
-            ]
-          }
-        ]
+        "type": "fee_calculation_example",
+        "buyer_section": {
+          "title": "What the buyer pays:",
+          "rows": [
+            {
+              "label": "Product price:",
+              "amount": "R$ 100,00"
+            },
+            {
+              "label": "Shipping:",
+              "amount": "R$  18,50"
+            },
+            {
+              "label": "Total:",
+              "amount": "R$ 118,50",
+              "highlighted": true
+            }
+          ]
+        },
+        "seller_section": {
+          "title": "What you receive:",
+          "rows": [
+            {
+              "label": "Your earnings:",
+              "amount": "R$  86,00"
+            },
+            {
+              "label": "note",
+              "text": "(R$ 100 - 14% commission)"
+            }
+          ]
+        }
       },
-      "unmatched_reason": "This is an informational breakdown card showing fee calculations with two sections (buyer payment vs. seller earnings). It does not match any of the 13 templates—it's neither a settings list, form, transaction list, nor action-driven screen. It's a static comparison/calculation display specific to seller fee documentation."
+      "unmatched_reason": "This is an informational breakdown card showing a fee calculation example with two sections (buyer payment and seller earnings). It's not a UI control or interactive pattern—it's a static information display used for educational purposes in help documentation. No template fits: not a list, not a form, not a dialog, not a transaction list with status indicators.\""
     }
   },
   {
@@ -3073,50 +3063,34 @@
     "ascii_raw": "┌─────────────────────────────────┐\n│ [Real-Time Sales]    [👥] [...] │  ← Top bar\n│                                 │\n│            [Camera]             │  ← Right side\n│            [Guest]              │\n│                                 │\n│         [Sale Timer]            │  ← Center\n│                                 │\n│  ┌─ Chat messages ───────────┐  │\n│  │                           │  │\n│  │                           │  │\n│  └───────────────────────────┘  │\n│  [Sale bar: product + actions]  │  ← Sale view\n│  [Chat input | 🛍 | ＋]        │  ← Bottom bar\n└─────────────────────────────────┘",
     "extraction": {
       "template_id": "unmatched",
-      "confidence": 0.85,
-      "screen_name": "livestream-tools-dashboard",
-      "alt_text_en": "Livestream tools dashboard showing real-time sales header, camera and guest controls, sale timer, chat messages, sale product bar, and bottom chat input with shopping and plus action icons",
-      "alt_text_pt": "Painel de ferramentas de transmissão ao vivo com cabeçalho de vendas em tempo real, controles de câmera e convidado, cronômetro de venda, mensagens de bate-papo, barra de produto à venda e entrada de bate-papo inferior com ícones de compra e ação plus",
+      "confidence": 0.95,
+      "screen_name": "livestream-host-main",
+      "alt_text_en": "Livestream host main screen showing real-time sales, camera and guest controls, sale timer, chat messages and sale bar",
+      "alt_text_pt": "Tela principal do anfitrião de livestream mostrando vendas em tempo real, controles de câmera e convidado, temporizador de venda, mensagens de chat e barra de vendas",
       "content": {
-        "sections": [
-          {
-            "type": "header",
-            "title": "Real-Time Sales",
-            "controls": [
-              "viewer_count",
-              "more_options"
-            ]
-          },
-          {
-            "type": "controls",
-            "items": [
-              "Camera",
-              "Guest"
-            ]
-          },
-          {
-            "type": "timer",
-            "label": "Sale Timer"
-          },
-          {
-            "type": "chat_panel",
-            "placeholder": "Chat messages"
-          },
-          {
-            "type": "sale_bar",
-            "content": "product + actions"
-          },
-          {
-            "type": "input_bar",
-            "input_placeholder": "Chat input",
-            "actions": [
-              "shopping",
-              "add"
-            ]
-          }
-        ]
+        "top_bar": {
+          "title": "Real-Time Sales",
+          "right_icons": [
+            "users",
+            "menu"
+          ]
+        },
+        "right_controls": [
+          "Camera",
+          "Guest"
+        ],
+        "center_display": "Sale Timer",
+        "chat_section": "Chat messages",
+        "sale_bar": "product + actions",
+        "bottom_input": {
+          "placeholder": "Chat input",
+          "icons": [
+            "shopping_bag",
+            "plus"
+          ]
+        }
       },
-      "unmatched_reason": "This is a complex livestream control dashboard with multiple distinct sections (header with controls, center content area with timer, chat panel, and sale bar, plus bottom input). While it has some list-like elements (chat messages), it combines settings-like controls, message streams, and input fields in a way that doesn't cleanly fit any single template. It's a specialized livestream interface rather than a standard UI pattern."
+      "unmatched_reason": "Complex livestream control panel with multiple distinct sections (top bar with sales/icons, center controls for camera/guest/timer, chat message area, sale bar, and bottom chat input). Does not match any single template - combines navigation, status display, messaging interface, and product/sale controls in a custom layout."
     }
   },
   {
@@ -3175,32 +3149,30 @@
     "ascii_raw": "┌─────────────────────────────────┐\n│ [Vendas em tempo real] [👥][...]│  ← Barra superior\n│                                 │\n│            [Câmera]             │  ← Lado direito\n│            [Convidado]          │\n│                                 │\n│         [Timer da venda]        │  ← Centro\n│                                 │\n│  ┌─ Mensagens do chat ──────┐  │\n│  │                           │  │\n│  └───────────────────────────┘  │\n│  [Barra de venda: produto]      │  ← Barra de venda\n│  [Chat | 🛍 | ＋]              │  ← Barra inferior\n└─────────────────────────────────┘",
     "extraction": {
       "template_id": "unmatched",
-      "confidence": 0.85,
-      "screen_name": "livestream-hosting-interface",
-      "alt_text_en": "Livestream hosting interface showing real-time sales header, camera and guest controls, sales timer, chat messages panel, product sales bar, and navigation tabs",
-      "alt_text_pt": "Interface de transmissão ao vivo mostrando cabeçalho de vendas em tempo real, controles de câmera e convidado, cronômetro de vendas, painel de mensagens de chat, barra de venda de produto e abas de navegação",
+      "confidence": 0.3,
+      "screen_name": "livestream-tools-hosting",
+      "alt_text_en": "Livestream hosting interface with camera, guest controls, sales timer, chat messages, and product sales bar",
+      "alt_text_pt": "Interface de transmissão ao vivo com controles de câmera, convidado, timer de vendas, mensagens de chat e barra de produto",
       "content": {
-        "header": {
-          "title": "Vendas em tempo real",
-          "right_icons": [
-            "👥",
-            "..."
-          ]
-        },
-        "right_panel": [
+        "top_bar": "Vendas em tempo real",
+        "top_icons": [
+          "👥",
+          "..."
+        ],
+        "right_section": [
           "Câmera",
           "Convidado"
         ],
         "center_element": "Timer da venda",
         "chat_section": "Mensagens do chat",
-        "product_bar": "Barra de venda: produto",
+        "sales_bar": "Barra de venda: produto",
         "bottom_tabs": [
           "Chat",
           "🛍",
           "＋"
         ]
       },
-      "unmatched_reason": "This is a complex livestream hosting interface that combines multiple UI zones (header with controls, video controls, timer, chat panel, product sales bar, and bottom navigation). It doesn't match any single template - it's a custom composite layout specific to livestream functionality that includes real-time sales monitoring, video/guest controls, chat interaction, and product promotion features."
+      "unmatched_reason": "This is a complex livestream hosting dashboard combining multiple UI patterns (top nav, sidebar controls, center display, chat window, product sales bar, and tab bar). It doesn't fit neatly into any single template—it's a specialized broadcast studio interface with simultaneous management of camera/guest controls, sales tracking, and chat interaction."
     }
   },
   {
@@ -3323,18 +3295,18 @@
     "ascii_raw": "┌─────────────────────────────────┐\n│  @yourusername                  │\n│  ⭐ 4.8  (127 ratings)          │\n│                                 │\n│  Followers: 350                 │\n│  Shows: 24                      │\n└─────────────────────────────────┘",
     "extraction": {
       "template_id": "unmatched",
-      "confidence": 0.7,
+      "confidence": 0.75,
       "screen_name": "seller-profile-header",
-      "alt_text_en": "Seller profile header showing username, star rating, follower count and number of shows",
-      "alt_text_pt": "Cabeçalho do perfil do vendedor com nome de usuário, classificação em estrelas, número de seguidores e shows",
+      "alt_text_en": "Seller profile header showing username, star rating, follower count and shows total",
+      "alt_text_pt": "Cabeçalho de perfil do vendedor mostrando nome de usuário, avaliação em estrelas, contagem de seguidores e total de shows",
       "content": {
         "username": "@yourusername",
         "rating": 4.8,
-        "rating_count": 127,
+        "ratings_count": 127,
         "followers": 350,
         "shows": 24
       },
-      "unmatched_reason": "This is a seller profile header/stats card. It displays metrics (rating, followers, shows) but doesn't match any of the 10 standard templates. It's not a list, dialog, form, or navigation element—it's an informational card showing seller statistics."
+      "unmatched_reason": "Profile/stats card displaying seller information (username, rating, followers, shows count). Closest match would be settings-row-list or product-card, but neither fits perfectly. This is a profile stats display card unique to seller dashboard context."
     }
   },
   {
@@ -3346,18 +3318,18 @@
     "ascii_raw": "┌─────────────────────────────────┐\n│  @seunomeusuario                │\n│  ⭐ 4.8  (127 avaliações)       │\n│                                 │\n│  Seguidores: 350                │\n│  Shows: 24                      │\n└─────────────────────────────────┘",
     "extraction": {
       "template_id": "unmatched",
-      "confidence": 0.6,
+      "confidence": 0.35,
       "screen_name": "seller-profile-header",
-      "alt_text_en": "Seller profile header showing username, star rating, review count, followers, and shows count",
-      "alt_text_pt": "Cabeçalho de perfil do vendedor mostrando nome de usuário, classificação em estrelas, número de avaliações, seguidores e número de shows",
+      "alt_text_en": "Seller profile header showing username, star rating and follower stats",
+      "alt_text_pt": "Cabeçalho de perfil do vendedor exibindo nome de usuário, classificação com estrelas e estatísticas de seguidores",
       "content": {
         "username": "@seunomeusuario",
-        "rating": 4.8,
-        "review_count": 127,
-        "followers": 350,
-        "shows": 24
+        "rating": "4.8",
+        "review_count": "127 avaliações",
+        "followers": "350",
+        "shows": "24"
       },
-      "unmatched_reason": "This is a seller profile summary card that doesn't fit the 13 templates. It displays profile statistics (username, rating, reviews, followers, shows) in a simple card layout without interactive elements like rows, buttons, or inputs. Most similar to settings-row-list structure but lacks the navigation/settings row pattern."
+      "unmatched_reason": "This is a seller profile stats card. It displays profile information (username, rating, follower/show counts) but doesn't match any of the 15 templates. It's not a settings row (no ▶ chevrons), not a nav bar, not a product card. It's a custom profile header/info card specific to seller management.</anmatched_reason>\n</invoke>"
     }
   },
   {
@@ -3705,13 +3677,22 @@
     "source_end": 1907,
     "ascii_raw": "┌─────────────────────────────────────────────┐\n│  ┌─────┐ ┌─────────┐ ┌──────────┐ ┌──────┐│\n│  │ All │ │ Pending │ │Completed │ │ ...  ││\n│  └─────┘ └─────────┘ └──────────┘ └──────┘│\n│                                             │\n│  [List of your orders]                      │\n│                                             │\n└─────────────────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.6,
+      "template_id": "tab-bar",
+      "confidence": 0.95,
       "screen_name": "orders-filter-tabs",
-      "alt_text_en": "Orders screen with filter tabs (All, Pending, Completed) and list placeholder",
-      "alt_text_pt": "Tela de pedidos com abas de filtro (Todos, Pendentes, Concluídos) e espaço de lista",
-      "content": {},
-      "unmatched_reason": "The ASCII shows a tab/filter navigation bar with multiple filter buttons (All, Pending, Completed, ...) above a list placeholder. This does not match any of the 10 templates. It's closest to a list-with-status, but lacks the required status data structure (id, amount, status, date rows). The predominant UI element is the tab filter bar, not a traditional list with status indicators."
+      "alt_text_en": "Orders filter tabs showing All, Pending, Completed, and more options with list of orders below",
+      "alt_text_pt": "Abas de filtro de pedidos mostrando Todos, Pendentes, Concluídos e mais opções com lista de pedidos abaixo",
+      "content": {
+        "tabs": [
+          "All",
+          "Pending",
+          "Completed",
+          "..."
+        ],
+        "content_placeholder": "[List of your orders]",
+        "active_tab_index": 0
+      },
+      "unmatched_reason": null
     }
   },
   {
@@ -3744,29 +3725,22 @@
     "source_end": 1998,
     "ascii_raw": "┌─────────────────────────────────────────────┐\n│  ┌─────┐ ┌─────────┐ ┌──────────┐ ┌──────┐│\n│  │ All │ │ Pending │ │Canceled  │ │ ...  ││\n│  └─────┘ └─────────┘ └──────────┘ └──────┘│\n│                                             │\n│  [Lista dos seus pedidos]                   │\n│                                             │\n└─────────────────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.4,
-      "screen_name": "order-filter-tabs",
-      "alt_text_en": "Order filter tabs with All, Pending, Canceled, and more options above order list",
-      "alt_text_pt": "Abas de filtro de pedidos com opções Todos, Pendentes, Cancelados e mais acima da lista de pedidos",
+      "template_id": "tab-bar",
+      "confidence": 0.92,
+      "screen_name": "orders-tab-filter",
+      "alt_text_en": "Orders tab-bar with filter options: All, Pending, Canceled, and more menu, followed by orders list",
+      "alt_text_pt": "Barra de abas de pedidos com opções de filtro: Todos, Pendentes, Cancelados e mais, seguida pela lista de pedidos",
       "content": {
         "tabs": [
-          {
-            "label": "All"
-          },
-          {
-            "label": "Pending"
-          },
-          {
-            "label": "Canceled"
-          },
-          {
-            "label": "..."
-          }
+          "All",
+          "Pending",
+          "Canceled",
+          "..."
         ],
-        "list_label": "Lista dos seus pedidos"
+        "content_placeholder": "Lista dos seus pedidos",
+        "active_tab_index": 0
       },
-      "unmatched_reason": "This is a tab-based filter interface above an order list. It doesn't match any of the 10 primary templates—it's neither a settings row, alert dialog, radio picker, nor any other defined pattern. The tab navigation + list combination is specific to order management UI."
+      "unmatched_reason": null
     }
   },
   {
@@ -5666,32 +5640,31 @@
     "source_end": 1299,
     "ascii_raw": "┌─────────────────────────────────┐\n│  [Cover image]                  │\n│  Your show title                │\n│  Date and time                  │\n│                                 │\n│  ADMIN (private)                │\n│  Bookmarks: 12  |  Views: 45   │\n│                                 │\n│  PRODUCTS (3)                   │\n│  ┌─────┐ ┌─────┐ ┌─────┐      │\n│  │Item1│ │Item2│ │Item3│  [+]  │\n│  └─────┘ └─────┘ └─────┘      │\n│                                 │\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.3,
-      "screen_name": "show-details-overview",
-      "alt_text_en": "show-details-overview: Cover image with show title, date/time, admin status, bookmark and view counts, and 3 product grid items with add button",
-      "alt_text_pt": "show-details-overview: Imagem de capa com título do show, data/hora, status de admin, contadores de favoritos e visualizações, e 3 itens em grade de produtos com botão de adição",
+      "template_id": "product-card",
+      "confidence": 0.7,
+      "screen_name": "show-management-card",
+      "alt_text_en": "Show management card displaying cover image, show title, date/time, admin status with bookmarks and views count, and products grid with add button",
+      "alt_text_pt": "Cartão de gerenciamento de show exibindo imagem de capa, título do show, data/hora, status de admin com contagem de bookmarks e visualizações, e grade de produtos com botão adicionar",
       "content": {
-        "cover_image": "[Cover image]",
         "title": "Your show title",
-        "date_time": "Date and time",
-        "admin_badge": "ADMIN (private)",
-        "stats": {
-          "bookmarks": 12,
-          "views": 45
+        "subtitle": "Date and time",
+        "icon": "Cover image",
+        "metadata": {
+          "status": "ADMIN (private)",
+          "bookmarks": "12",
+          "views": "45"
         },
-        "products_section": {
-          "title": "PRODUCTS",
+        "products": {
           "count": 3,
           "items": [
             "Item1",
             "Item2",
             "Item3"
           ],
-          "has_add_button": true
+          "add_button": true
         }
       },
-      "unmatched_reason": "This is a show detail screen combining cover image, metadata (title, date, admin status, bookmarks, views), and a product grid. It doesn't fit standard templates—closest would be photo-grid for the 3-item product section, but the full screen includes header metadata and status badges that exceed any single template scope. A compound template would be needed."
+      "unmatched_reason": null
     }
   },
   {
@@ -5733,42 +5706,38 @@
     "ascii_raw": "┌─────────────────────────────────┐\n│ #3 R$450 (R$150/item)  [👥 12] │\n│                      [⚙] [...] │\n│                                 │\n│                                 │\n│     Your camera feed            │\n│                                 │\n│                    [🔄 camera]  │\n│                                 │\n│ ┌─────────────────────────────┐ │\n│ │  Chat messages              │ │\n│ │  \"Quero esse!\" - buyer1     │ │\n│ │  \"R$50!\" - buyer2           │ │\n│ └─────────────────────────────┘ │\n│ [Product list]  [Start sale]    │\n└─────────────────────────────────┘",
     "extraction": {
       "template_id": "unmatched",
-      "confidence": 0.4,
-      "screen_name": "live-show-management",
-      "alt_text_en": "Live show management screen with price R$450, 12 viewers, camera feed, chat messages, and product list and start sale buttons",
-      "alt_text_pt": "Tela de gerenciamento de show ao vivo com preço R$450, 12 espectadores, feed de câmera, mensagens de chat e botões de lista de produtos e iniciar venda",
+      "confidence": 0.3,
+      "screen_name": "show-management-live",
+      "alt_text_en": "Show management screen with item #3, price R$450, 12 attendees, camera feed, chat messages, and action buttons",
+      "alt_text_pt": "Tela de gerenciamento de show com item #3, preço R$450, 12 participantes, feed de câmera, mensagens de chat e botões de ação",
       "content": {
-        "show_id": "#3",
+        "item_id": "#3",
         "price": "R$450",
         "price_per_item": "R$150/item",
-        "viewer_count": 12,
-        "has_settings": true,
-        "has_more_menu": true,
+        "attendees": 12,
+        "has_settings_menu": true,
+        "has_camera_feed": true,
         "camera_feed_label": "Your camera feed",
-        "has_camera_control": true,
-        "chat_title": "Chat messages",
-        "chat_messages": [
-          {
-            "text": "Quero esse!",
-            "sender": "buyer1"
-          },
-          {
-            "text": "R$50!",
-            "sender": "buyer2"
-          }
-        ],
-        "action_buttons": [
-          {
-            "label": "Product list",
-            "style": "secondary"
-          },
-          {
-            "label": "Start sale",
-            "style": "primary"
-          }
+        "has_camera_refresh": true,
+        "chat_section": {
+          "title": "Chat messages",
+          "messages": [
+            {
+              "text": "Quero esse!",
+              "sender": "buyer1"
+            },
+            {
+              "text": "R$50!",
+              "sender": "buyer2"
+            }
+          ]
+        },
+        "bottom_actions": [
+          "Product list",
+          "Start sale"
         ]
       },
-      "unmatched_reason": "This is a live shopping show management screen combining: show header (price/viewers/controls), embedded camera feed, chat messages panel, and action buttons. No single template covers this composite layout of real-time streaming controls + chat + product management."
+      "unmatched_reason": "Complex live-selling dashboard combining: product details (ID + price breakdown), attendee count, settings menu, live camera feed, chat widget, and multiple action buttons. Does not fit standard template patterns - closest would be a hybrid of product-card + list-with-status + chat, but the layout and purpose (live show management) is distinct from available templates."
     }
   },
   {
@@ -5779,33 +5748,32 @@
     "source_end": 1296,
     "ascii_raw": "┌─────────────────────────────────┐\n│  [Imagem de capa]               │\n│  Título do seu show             │\n│  Data e hora                    │\n│                                 │\n│  ADMIN (privado)                │\n│  Favoritos: 12  |  Views: 45   │\n│                                 │\n│  PRODUTOS (3)                   │\n│  ┌─────┐ ┌─────┐ ┌─────┐      │\n│  │Item1│ │Item2│ │Item3│  [+]  │\n│  └─────┘ └─────┘ └─────┘      │\n│                                 │\n└─────────────────────────────────┘",
     "extraction": {
-      "template_id": "unmatched",
-      "confidence": 0.3,
-      "screen_name": "show-details-admin",
-      "alt_text_en": "show-details-admin: cover image, show title, date/time, admin badge, favorites and views stats, products grid with 3 items and add button",
-      "alt_text_pt": "show-details-admin: imagem de capa, título do show, data e hora, badge admin privado, stats de favoritos e views, grid de produtos com 3 itens e botão adicionar",
+      "template_id": "product-card",
+      "confidence": 0.7,
+      "screen_name": "show-management-seller",
+      "alt_text_en": "show-management-seller: Product card displaying seller's show with cover image, title, date/time, admin status, favorites and views count, and products grid with add button",
+      "alt_text_pt": "show-management-seller: Card de produto exibindo show do vendedor com imagem de capa, título, data e hora, status admin, contagem de favoritos e visualizações, e grade de produtos com botão de adição",
       "content": {
-        "cover_image": "[Imagem de capa]",
         "title": "Título do seu show",
-        "datetime": "Data e hora",
-        "admin_status": "ADMIN (privado)",
-        "favorites": "12",
-        "views": "45",
+        "subtitle": "Data e hora",
+        "icon": "Imagem de capa",
+        "admin_label": "ADMIN (privado)",
+        "stats": {
+          "favorites": 12,
+          "views": 45
+        },
         "section_title": "PRODUTOS (3)",
-        "products": [
-          {
-            "name": "Item1"
-          },
-          {
-            "name": "Item2"
-          },
-          {
-            "name": "Item3"
-          }
-        ],
-        "add_product_button": "+"
+        "products_grid": {
+          "count": 3,
+          "items": [
+            "Item1",
+            "Item2",
+            "Item3"
+          ],
+          "add_button": true
+        }
       },
-      "unmatched_reason": "This is a show detail card combining a cover image, metadata header (title, date, admin status), stats (favorites/views), and a photo grid for products. It mixes elements from photo-grid (product grid with [+] button) but includes additional header sections (title, date, admin badge, stats) that don't fit cleanly into any single template. The overall layout is a custom show management detail view rather than a standard list or picker pattern."
+      "unmatched_reason": null
     }
   },
   {
@@ -5847,38 +5815,34 @@
     "ascii_raw": "┌─────────────────────────────────┐\n│ #3 R$450 (R$150/item)  [👥 12] │\n│                      [⚙] [...] │\n│                                 │\n│     Seu feed de câmera          │\n│                                 │\n│                    [🔄 câmera]  │\n│                                 │\n│ ┌─────────────────────────────┐ │\n│ │  Mensagens do chat          │ │\n│ │  \"Quero esse!\" - buyer1     │ │\n│ │  \"R$50!\" - buyer2           │ │\n│ └─────────────────────────────┘ │\n│ [Lista produtos]  [Iniciar]     │\n└─────────────────────────────────┘",
     "extraction": {
       "template_id": "unmatched",
-      "confidence": 0.35,
+      "confidence": 0.4,
       "screen_name": "show-management-detail",
-      "alt_text_en": "Show management detail with offer #3, R$450 total (R$150/item), 12 interested buyers, camera feed section, chat messages from buyers, and list/start buttons",
-      "alt_text_pt": "Detalhe do gerenciamento de show com oferta #3, R$450 total (R$150/item), 12 compradores interessados, seção de feed da câmera, mensagens de chat de compradores e botões de listar/iniciar",
+      "alt_text_en": "show-management-detail: Show #3 with R$450 price, 12 attendees, settings menu, camera feed placeholder, chat messages from buyers, and action buttons",
+      "alt_text_pt": "show-management-detail: Transmissão #3 com preço R$450, 12 espectadores, menu de configurações, espaço para feed de câmera, mensagens de chat de compradores e botões de ação",
       "content": {
-        "offer_number": "#3",
-        "total_price": "R$450",
-        "unit_price": "R$150/item",
-        "interested_count": 12,
+        "show_id": "#3",
+        "price": "R$450",
+        "price_per_item": "R$150/item",
+        "attendees_count": 12,
         "camera_feed_label": "Seu feed de câmera",
-        "camera_action": "🔄 câmera",
+        "camera_button_label": "🔄 câmera",
         "chat_section_title": "Mensagens do chat",
         "chat_messages": [
           {
             "text": "Quero esse!",
-            "sender": "buyer1"
+            "buyer": "buyer1"
           },
           {
             "text": "R$50!",
-            "sender": "buyer2"
+            "buyer": "buyer2"
           }
         ],
         "action_buttons": [
-          {
-            "label": "Lista produtos"
-          },
-          {
-            "label": "Iniciar"
-          }
+          "Lista produtos",
+          "Iniciar"
         ]
       },
-      "unmatched_reason": "This is a custom show/auction detail screen mixing multiple UI elements: header with offer number + price breakdown + buyer count, action icons (settings, more), live camera feed section, embedded chat message list, and dual action buttons. It doesn't cleanly fit any single template (not a list-with-status since it lacks status colors; not text-with-actions since it has embedded interactive sections; closer to a dashboard view with mixed content types)."
+      "unmatched_reason": "Complex composite screen combining show metadata (ID + price + attendee count), settings menu, live camera feed placeholder, chat message list, and dual action buttons. Does not fit single template - closest would be a product-card for the show header, but the full screen includes live feed management and chat features not covered by standard templates."
     }
   },
   {

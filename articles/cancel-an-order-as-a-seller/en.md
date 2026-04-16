@@ -34,19 +34,7 @@ Tap on the order you want to cancel.
 
 If the order is in "Created" status, you'll see two buttons:
 
-```
-┌─────────────────────────────────┐
-│  Order details                  │
-│                                 │
-│  [Product photo] Product name   │
-│  R$ XX,XX                       │
-│                                 │
-│  ┌──────────┐ ┌──────────────┐  │
-│  │  Reject  │ │   Confirm    │  │
-│  └──────────┘ └──────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Order details card with product photo, name, and price in Brazilian reals, with Reject and Confirm action buttons](./assets/mockups/cancel-an-order-as-a-seller__order-details-card__en.png)
 
 Tap **Reject** to decline the order. The buyer is automatically refunded.
 

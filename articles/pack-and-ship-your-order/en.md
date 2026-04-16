@@ -34,16 +34,7 @@ Go to your profile and tap on your **sales** section. You'll see all your orders
 
 You can filter your orders using these tabs:
 
-```
-┌─────────────────────────────────────────────┐
-│  ┌─────┐ ┌─────────┐ ┌──────────┐ ┌──────┐│
-│  │ All │ │ Pending │ │Completed │ │ ...  ││
-│  └─────┘ └─────────┘ └──────────┘ └──────┘│
-│                                             │
-│  [List of your orders]                      │
-│                                             │
-└─────────────────────────────────────────────┘
-```
+![Orders filter tabs showing All, Pending, Completed, and more options with list of orders below](./assets/mockups/pack-and-ship-your-order__orders-filter-tabs__en.png)
 
 The available filters are:
 - **All** — all your orders
