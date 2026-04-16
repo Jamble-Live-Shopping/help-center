@@ -18,17 +18,7 @@ You need:
 
 Go to your profile, then tap **Settings**. Find and tap **My Wallet**.
 
-```
-┌─────────────────────────────────┐
-│  Settings                       │
-│                                 │
-│  SELL                           │
-│  My Sales                       │
-│  ▶ My Wallet                    │
-│  Shipping Preferences           │
-│                                 │
-└─────────────────────────────────┘
-```
+![Settings menu showing SELL section with My Sales, My Wallet, and Shipping Preferences options](./assets/mockups/set-up-and-start-a-payout__settings-menu__en.png)
 
 You can also access your wallet directly from your profile page.
 
@@ -36,34 +26,11 @@ You can also access your wallet directly from your profile page.
 
 If this is your first time, you'll see a **Register Bank** button at the bottom of the wallet screen. Tap it.
 
-```
-┌─────────────────────────────────┐
-│  My Wallet                      │
-│                                 │
-│  [Wallet sections loading...]   │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │      Register Bank        │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![My Wallet screen with loading state and Register Bank CTA button](./assets/mockups/set-up-and-start-a-payout__wallet-setup-loading__en.png)
 
 An alert appears:
 
-```
-┌─────────────────────────────────┐
-│  Registration                   │
-│                                 │
-│  You must first verify your     │
-│  identity and bank details.     │
-│  Jamble is powered by Pagar.me  │
-│  for more secure transactions   │
-│                                 │
-│  [ Individual ]                 │
-│  [ Company ]                    │
-│  [ Later ]                      │
-└─────────────────────────────────┘
-```
+![Registration screen showing identity and bank verification requirements with Individual, Company, and Later buttons](./assets/mockups/set-up-and-start-a-payout__registration-type-picker__en.png)
 
 Choose the option that matches your situation:
 - **Individual** — if you sell as a person (using your CPF)
@@ -75,23 +42,7 @@ This opens a registration form where you'll provide your identity and bank detai
 
 After registration, your wallet screen shows your bank information in a **Bank Details** section at the bottom.
 
-```
-┌─────────────────────────────────┐
-│  My Wallet                      │
-│                                 │
-│  [Wallet balance sections]      │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ Bank Details              │  │
-│  │ Banco XXX - Ag XXXX      │  │
-│  │ CC XXXXX-X          [Update] │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │       Withdraw            │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![My Wallet screen showing wallet balance sections, bank details (Banco XXX - Ag XXXX, CC XXXXX-X with Update button), and Withdraw button](./assets/mockups/set-up-and-start-a-payout__my-wallet-payout__en.png)
 
 If you need to change your bank details, tap the **Update** button next to your bank info.
 
@@ -107,21 +58,7 @@ That's it — one tap. Jamble sends your available balance to your registered ba
 
 After requesting a withdrawal, you can track its progress. Tap the **clock icon** in the top-right corner of the wallet screen to open **Payouts History**.
 
-```
-┌─────────────────────────────────┐
-│  Payouts History                │
-│                                 │
-│  #PAY-12345        R$ 350,00   │
-│  Completed         19/03/2026   │
-│  ─────────────────────────────  │
-│  #PAY-12340        R$ 520,00   │
-│  Processing        18/03/2026   │
-│  ─────────────────────────────  │
-│  #PAY-12335        R$ 180,00   │
-│  Failed            17/03/2026   │
-│                                 │
-└─────────────────────────────────┘
-```
+![Payouts History list showing three payout transactions with IDs, amounts, status labels, and dates](./assets/mockups/set-up-and-start-a-payout__payouts-history__en.png)
 
 Each payout shows:
 - **Payout ID** — a unique reference number
@@ -131,15 +68,12 @@ Each payout shows:
 
 ### Payout statuses
 
-| Status | What it means |
-|--------|--------------|
-| Created | Your payout request has been received |
-| Processing | Pagar.me is processing the transfer to your bank |
-| Pending | The transfer is waiting to be completed |
-| Completed | The money has arrived in your bank account |
-| Failed | Something went wrong (see troubleshooting article) |
-| Canceled | The payout was canceled |
-
+- **Created** — Your payout request has been received
+- **Processing** — Pagar.me is processing the transfer to your bank
+- **Pending** — The transfer is waiting to be completed
+- **Completed** — The money has arrived in your bank account
+- **Failed** — Something went wrong (see troubleshooting article)
+- **Canceled** — The payout was canceled
 ## Important tips
 
 - **Register your bank BEFORE your first sale.** Don't wait until you have earnings — set up your bank details early so withdrawals are instant when you need them

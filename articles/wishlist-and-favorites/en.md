@@ -29,41 +29,13 @@ While browsing the app or watching a live show, you'll see products displayed wi
 
 Tap the **bookmark icon** (save icon) on the product card. The icon fills in to confirm the product is saved.
 
-```
-┌─────────────────────────────────┐
-│  ┌───────────────────────────┐  │
-│  │  [Product photo]          │  │
-│  │                    🔖     │  │
-│  │  Nike Air Max 90          │  │
-│  │  R$200                    │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Tap the bookmark icon (🔖)    │
-│  to save this product           │
-└─────────────────────────────────┘
-```
+![Product bookmark screen showing Nike Air Max 90 with bookmark icon and save instruction](./assets/mockups/wishlist-and-favorites__product-bookmark-cta__en.png)
 
 ### Step 3: View your saved products
 
 To see all your bookmarked products, go to your **Wishlist**. You'll find it on your profile page. Your wishlist has two tabs:
 
-```
-┌─────────────────────────────────┐
-│  Wishlist                       │
-│                                 │
-│  ┌──────────┐ ┌──────────┐     │
-│  │ Bookmarks│ │   Bids   │     │
-│  └──────────┘ └──────────┘     │
-│                                 │
-│  ┌─────┐  ┌─────┐              │
-│  │ 📦  │  │ 📦  │              │
-│  │ Air │  │ Dunk│              │
-│  │ Max │  │ Low │              │
-│  │R$200│  │R$150│              │
-│  └─────┘  └─────┘              │
-│                                 │
-└─────────────────────────────────┘
-```
+![Wishlist screen with Bookmarks and Bids tabs showing product cards for Air Max and Dunk Low sneakers](./assets/mockups/wishlist-and-favorites__wishlist-tabs__en.png)
 
 - **Bookmarks** — all the products you've saved
 - **Bids** — products where you have active pre-offers placed (this tab tracks your open offers on upcoming products)
@@ -88,11 +60,8 @@ Go to **Settings** → **"Bookmarked shows"** to see all the shows you've saved.
 
 Jamble can send you push notifications for your bookmarked items. Go to **Settings** → **Notifications** → **Live Shows** to configure:
 
-| Notification | What it does |
-|-------------|-------------|
-| **Bookmarked shows** | Notifies you before a bookmarked show starts |
-| **Bookmarked product from show** | Notifies you when a product you've saved appears in a live show |
-
+- ****Bookmarked shows**** — Notifies you before a bookmarked show starts
+- ****Bookmarked product from show**** — Notifies you when a product you've saved appears in a live show
 These notifications help you show up at the right time and not miss the products you care about.
 
 ## Why bookmarks matter for sellers

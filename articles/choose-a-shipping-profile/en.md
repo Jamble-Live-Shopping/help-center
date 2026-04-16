@@ -100,30 +100,7 @@ Follow these steps:
 2. **Consider the weight** — heavier items need a larger profile even if they're small. Heavy boots are "Bulkier Items" even though they might fit in a medium box
 3. **When in doubt, go one size up** — it's better for the shipping cost to be slightly higher than to struggle fitting your item into a too-small package
 
-```
-┌─────────────────────────────────┐
-│  Quick guide                    │
-│                                 │
-│  Fits in an envelope?           │
-│  → Card or Booster              │
-│                                 │
-│  Small & light (jewelry, etc)?  │
-│  → Light Accessories            │
-│                                 │
-│  One clothing item?             │
-│  → Light / Standard / Heavier   │
-│    (based on weight)            │
-│                                 │
-│  Bulky single item?             │
-│  → Bulkier Items                │
-│                                 │
-│  Multiple items?                │
-│  → Small / Medium / Large /     │
-│    Extra-Large Bundles          │
-│    (based on quantity)          │
-│                                 │
-└─────────────────────────────────┘
-```
+![Shipping profile quick guide showing decision tree for selecting appropriate shipping category based on item type and size](./assets/mockups/choose-a-shipping-profile__shipping-profile-guide__en.png)
 
 ## How the profile affects the buyer
 

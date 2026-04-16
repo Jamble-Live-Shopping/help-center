@@ -25,18 +25,7 @@ Both options are available from your profile in the app.
 
 Go to your profile and tap **Invite Friends** (to invite buyers) or **Refer Sellers** (to invite other sellers).
 
-```
-┌─────────────────────────────────┐
-│  Profile                        │
-│                                 │
-│  ▶ Invite Friends               │
-│    Earn R$ 30 per friend        │
-│                                 │
-│  ▶ Refer Sellers                │
-│    Earn R$ 500 per seller       │
-│                                 │
-└─────────────────────────────────┘
-```
+![Profile menu with two referral options: Invite Friends earning R$ 30 per friend, and Refer Sellers earning R$ 500 per seller](./assets/mockups/referral-program__referral-program-menu__en.png)
 
 ### Step 2: Share your referral link (Buyer referral)
 
@@ -44,36 +33,13 @@ When you tap **Invite Friends**, you'll see your personal referral code and a **
 
 Your friend receives a link like: `jamble.com/invite/buyer/yourusername`
 
-```
-┌─────────────────────────────────┐
-│  Earn R$ 30 per friend          │
-│                                 │
-│  Your code: YOURBUY             │
-│                                 │
-│  Your friends have 14 days to:  │
-│                                 │
-│  1. Redeem the code             │
-│     → R$ 30 applied instantly   │
-│                                 │
-│  2. Buy 1 item during a Show    │
-│                                 │
-│  Your reward:                   │
-│  R$ 30 after they buy 1 item    │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │      Share Friends         │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Referral program details screen showing R$ 30 earn per friend, referral code YOURBUY, steps to redeem, and Share Friends button](./assets/mockups/referral-program__referral-program-details__en.png)
 
 **Here's how the buyer referral works:**
 
-| Step | What happens |
-|------|-------------|
-| Your friend clicks your link | They land on a page where they enter their phone number |
-| They download Jamble and redeem your code | R$ 30 is automatically added to their account |
-| They buy 1 item during a Show within 14 days of redeeming the code | The referral is complete — you get your R$ 30 reward |
-
+- **Your friend clicks your link** — They land on a page where they enter their phone number
+- **They download Jamble and redeem your code** — R$ 30 is automatically added to their account
+- **They buy 1 item during a Show within 14 days of redeeming the code** — The referral is complete — you get your R$ 30 reward
 - Your friend gets their R$ 30 when they redeem your code
 - You get your R$ 30 when your friend makes a purchase within **14 days** after redeeming the code
 - Your R$ 30 reward expires **14 days** after it's credited — use it before it disappears
@@ -83,41 +49,14 @@ Your friend receives a link like: `jamble.com/invite/buyer/yourusername`
 
 When you tap **Refer Sellers**, you'll see a different screen with bigger rewards.
 
-```
-┌─────────────────────────────────┐
-│  Earn R$ 500 per friend         │
-│                                 │
-│  Your code: YOURBUY-LIVE        │
-│                                 │
-│  Your friend has 30 days to:    │
-│                                 │
-│  1. Redeem the code             │
-│     → R$ 50 applied instantly   │
-│                                 │
-│  2. Become a Live Seller        │
-│     → Apply and get accepted    │
-│                                 │
-│  3. Complete their first Live   │
-│     → They unlock R$ 150 extra  │
-│                                 │
-│  Your reward:                   │
-│  R$ 500 after first Live        │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │      Share Friends         │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![referral-program-details: Earn R$ 500 per friend referral screen with code YOURBUY-LIVE, 3-step friend requirements, reward breakdown, and Share Friends button](./assets/mockups/referral-program__referral-program-details__en.png)
 
 **Here's how the seller referral works:**
 
-| Step | What happens |
-|------|-------------|
-| Your friend clicks your link | They land on a page where they enter their phone number |
-| They download Jamble and sign up | R$ 50 is automatically added to their account |
-| They apply to sell and get accepted | They become a seller on Jamble |
-| They complete their first Live | They get an extra R$ 150 reward, and you get R$ 500 |
-
+- **Your friend clicks your link** — They land on a page where they enter their phone number
+- **They download Jamble and sign up** — R$ 50 is automatically added to their account
+- **They apply to sell and get accepted** — They become a seller on Jamble
+- **They complete their first Live** — They get an extra R$ 150 reward, and you get R$ 500
 - Your friend has **30 days** to complete all steps
 - Total reward for the new seller: **R$ 200** (R$ 50 + R$ 150)
 - Your reward: **R$ 500**

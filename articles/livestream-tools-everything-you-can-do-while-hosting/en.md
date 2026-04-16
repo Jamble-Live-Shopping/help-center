@@ -49,17 +49,7 @@ There are no zoom, flash, or beauty filter controls built into the app. If you n
 
 Tap the **shop bag icon** (🛍) at the bottom of the screen to open your product manager. You'll see three tabs:
 
-```
-┌─────────────────────────────────┐
-│  Upcoming │ Unsold │ Sold       │
-│─────────────────────────────────│
-│                                 │
-│  [Product 1]     [Pin] [Start]  │
-│  [Product 2]     [Pin] [Start]  │
-│  [Product 3]     [Pin] [Start]  │
-│                                 │
-└─────────────────────────────────┘
-```
+![livestream-product-queue: tabbed list showing upcoming, unsold, and sold products with pin and start action buttons for each item](./assets/mockups/livestream-tools-everything-you-can-do-while-hosting__livestream-product-queue__en.png)
 
 - **Upcoming** — products queued for sale (haven't been sold yet)
 - **Unsold** — products that went through a sale but received no offers
@@ -100,13 +90,10 @@ The sale bar appears at the bottom of your screen showing the active product, th
 
 The main action button on the sale bar changes depending on the sale status:
 
-| Status | Button label |
-|--------|-------------|
-| Ready to start | "Start" (varies by sale type) |
-| Sale running | Shows the number of offers or items sold |
-| Finishing | "Finishing..." |
-| Ended | "Run Again" (if stock remains) or "Next item" |
-
+- **Ready to start** — "Start" (varies by sale type)
+- **Sale running** — Shows the number of offers or items sold
+- **Finishing** — "Finishing..."
+- **Ended** — "Run Again" (if stock remains) or "Next item"
 ### Real-time sales display
 
 At the top-left of your screen, you'll see a **real-time sales summary** showing:

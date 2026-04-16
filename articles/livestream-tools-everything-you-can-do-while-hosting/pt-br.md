@@ -48,17 +48,7 @@ Não há controles de zoom, flash ou filtro de beleza no app. Se precisar de mel
 
 Toque no **ícone da sacola** (🛍) na parte inferior da tela para abrir seu gerenciador de produtos. Você verá três abas:
 
-```
-┌─────────────────────────────────┐
-│  Upcoming │ Unsold │ Sold       │
-│─────────────────────────────────│
-│                                 │
-│  [Produto 1]     [Pin] [Start]  │
-│  [Produto 2]     [Pin] [Start]  │
-│  [Produto 3]     [Pin] [Start]  │
-│                                 │
-└─────────────────────────────────┘
-```
+![livestream-products-tabs: lista de produtos em abas (Próximos, Não Vendidos, Vendidos) com botões de ação Fixar e Iniciar](./assets/mockups/livestream-tools-everything-you-can-do-while-hosting__livestream-products-tabs__pt-br.png)
 
 - **Upcoming** — produtos na fila para venda (ainda não foram vendidos)
 - **Unsold** — produtos que passaram por uma venda mas não receberam ofertas
@@ -99,13 +89,10 @@ A barra de venda aparece na parte inferior mostrando o produto ativo, a oferta m
 
 O botão principal na barra de venda muda dependendo do status da venda:
 
-| Status | Texto do botão |
-|--------|---------------|
-| Pronto para iniciar | "Start" (varia por tipo de venda) |
-| Venda ativa | Mostra o número de ofertas ou itens vendidos |
-| Finalizando | "Finishing..." |
-| Encerrada | "Run Again" (se ainda tem estoque) ou "Next item" |
-
+- **Pronto para iniciar** — "Start" (varia por tipo de venda)
+- **Venda ativa** — Mostra o número de ofertas ou itens vendidos
+- **Finalizando** — "Finishing..."
+- **Encerrada** — "Run Again" (se ainda tem estoque) ou "Next item"
 ### Vendas em tempo real
 
 No canto superior esquerdo da tela, você verá um **resumo de vendas em tempo real** mostrando:

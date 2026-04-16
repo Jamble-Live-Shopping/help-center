@@ -33,23 +33,7 @@ Instead of ending immediately, Jamble shows you the raid screen.
 
 The raid screen appears with the title **"The Jamble Raid"**:
 
-```
-┌─────────────────────────────────┐
-│  The Jamble Raid                │
-│                                 │
-│  Before leaving, support the    │
-│  community by sending your      │
-│  viewers to a seller who's      │
-│  currently live!                │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │    Select Live Show       │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  End without Raid               │
-│                                 │
-└─────────────────────────────────┘
-```
+![The Jamble Raid screen with title, description text, and two action buttons](./assets/mockups/raid-another-seller-s-show__the-jamble-raid__en.png)
 
 You have two options:
 - **"Select Live Show"** — browse live shows and choose one to raid
@@ -59,24 +43,7 @@ You have two options:
 
 If you tap "Select Live Show," a screen titled **"Select a Live"** appears showing all currently live shows (except your own).
 
-```
-┌─────────────────────────────────┐
-│  Select a Live                  │
-│                                 │
-│  ┌──────────┐ ┌──────────┐     │
-│  │ Show A   │ │ Show B   │     │
-│  │ Seller1  │ │ Seller2  │     │
-│  └──────────┘ └──────────┘     │
-│  ┌──────────┐ ┌──────────┐     │
-│  │ Show C   │ │ Show D   │     │
-│  │ Seller3  │ │ Seller4  │     │
-│  └──────────┘ └──────────┘     │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │    Select Live Show       │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Select a Live: grid of 4 live show cards with seller names and a Select Live Show button](./assets/mockups/raid-another-seller-s-show__select-live-show__en.png)
 
 Tap on the show you want to raid, then tap **"Select Live Show"** to confirm.
 
@@ -86,21 +53,7 @@ If no other seller is currently live, you'll see: *"There's no shows to raid yet
 
 After selecting a show, the raid happens instantly. You'll see a success screen:
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│         [Success!]              │
-│                                 │
-│  Thanks for supporting the      │
-│  community! You can now end     │
-│  your Show                      │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │        End Show           │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![raid-success-confirmation: Success message with body text and End Show button](./assets/mockups/raid-another-seller-s-show__raid-success-confirmation__en.png)
 
 Tap **"End Show"** to finish your show.
 
@@ -108,22 +61,7 @@ Tap **"End Show"** to finish your show.
 
 After you raid, your viewers see a screen announcing the raid:
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  [Your photo] → [Their photo]   │
-│                                 │
-│  [Your name] is Raiding         │
-│  [Their name]!                  │
-│                                 │
-│  You and [N] people             │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  Join [Their name] Show   │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![raid-seller-confirmation: Two profile photos with arrow, raiding announcement, participant count, and join show button](./assets/mockups/raid-another-seller-s-show__raid-seller-confirmation__en.png)
 
 Your viewers can tap **"Join [Name] Show"** to go to the raided seller's show. They are not forced to go — it's their choice.
 

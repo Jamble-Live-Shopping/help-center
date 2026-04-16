@@ -32,19 +32,7 @@ Enquanto a venda de Compra Direta está ativa, abra sua lista de produtos e **fi
 
 A nova venda se torna a venda **fixada** (em destaque) que sua audiência vê no centro. A venda de Compra Direta continua rodando em segundo plano — compradores ainda podem comprar.
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  [FIXADO: Produto B]            │
-│  Ofertas em tempo real - ativo  │
-│                                 │
-│  R$ 25,00  ⏱ 0:45  [3 ofertas] │
-│                                 │
-│  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  │
-│  Produto A (Compra Direta)      │
-│  ainda disponível em 2o plano   │
-└─────────────────────────────────┘
-```
+![simultaneous-sales-display: Produto B fixado com ofertas em tempo real ativo, mostrando preço R$ 25,00, 45 segundos restantes e 3 ofertas listadas](./assets/mockups/running-simultaneous-sales-during-your-show__simultaneous-sales-display__pt-br.png)
 
 ### Passo 3: Gerencie vendas sobrepostas
 

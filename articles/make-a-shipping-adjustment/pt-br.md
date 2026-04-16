@@ -28,23 +28,7 @@ Antes de gerar uma etiqueta, pode ser pedido que você confirme o peso do seu pa
 
 Uma tela com o título **"CONFIRM WEIGHT"** aparece mostrando:
 
-```
-┌─────────────────────────────────┐
-│  CONFIRM WEIGHT                 │
-│                                 │
-│  Current weight: 0.99 lbs       │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │    Inserir novo peso      │  │
-│  │    [___] lbs              │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │        Confirm            │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Tela de confirmação de peso mostrando peso atual de 0.99 lbs com campo de entrada para inserir novo peso em lbs e botão Confirmar](./assets/mockups/make-a-shipping-adjustment__confirm-weight__pt-br.png)
 
 - O **peso atual** é baseado no perfil de envio atribuído ao produto
 - Você pode ajustar o peso se o item embalado for diferente da estimativa

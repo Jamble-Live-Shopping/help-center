@@ -23,18 +23,7 @@ Some fields are **required** (title, sell mode, shipping profile, price) and som
 
 Go to the show you've created, then tap the option to add a product.
 
-```
-┌─────────────────────────────────┐
-│  Your Show                      │
-│                                 │
-│  Products (0)                   │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │     + Add Product         │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Seller show empty state with zero products and add product button](./assets/mockups/new-seller-guide-to-listing-products__seller-show-empty__en.png)
 
 ### Step 2: Add a title
 
@@ -56,16 +45,7 @@ Select how you want to sell this item during your show:
 - **Sudden Death** — similar to Real-time offers, but no extra time is added when someone places an offer. The timer counts down without extensions
 - **Buy It Now** — fixed price. Buyers purchase instantly at the price you set. You can also enable a Flash Sale with a percentage discount and a timer
 
-```
-┌─────────────────────────────────┐
-│  Sell Mode                      │
-│                                 │
-│  ○ Real-time offers             │
-│  ○ Sudden Death                 │
-│  ○ Buy It Now                   │
-│                                 │
-└─────────────────────────────────┘
-```
+![Sell Mode Picker: radio options for Real-time offers, Sudden Death, or Buy It Now](./assets/mockups/new-seller-guide-to-listing-products__sell-mode-picker__en.png)
 
 ### Step 4: Set your price
 
@@ -80,37 +60,24 @@ You can also add a **retail price** (optional) — this shows buyers the origina
 
 Select the shipping profile that matches the size and weight of your packaged item.
 
-| Profile | Best for |
-|---------|----------|
-| Card | Trading cards, single flat items |
-| Booster | Card packs, multiple cards |
-| Light Accessories | Jewelry, scarves, small items |
-| Light Apparel | T-shirts, tank tops, blouses |
-| Standard Apparel | Shirts, dresses, sweaters |
-| Heavier Apparel | Jeans, thick dresses, trousers |
-| Bulkier Items | Jackets, winter coats |
-| Small Bundles | Small groups of items |
-| Medium Bundles | Medium groups of items |
-| Large Bundles | Large groups of items |
-| Extra-Large Bundles | Very large orders |
-
+- **Card** — Trading cards, single flat items
+- **Booster** — Card packs, multiple cards
+- **Light Accessories** — Jewelry, scarves, small items
+- **Light Apparel** — T-shirts, tank tops, blouses
+- **Standard Apparel** — Shirts, dresses, sweaters
+- **Heavier Apparel** — Jeans, thick dresses, trousers
+- **Bulkier Items** — Jackets, winter coats
+- **Small Bundles** — Small groups of items
+- **Medium Bundles** — Medium groups of items
+- **Large Bundles** — Large groups of items
+- **Extra-Large Bundles** — Very large orders
 **Choose accurately** — the shipping profile determines the shipping cost the buyer pays. If the profile is too small, you may have trouble shipping. If it's too big, the buyer pays more than necessary.
 
 ### Step 6: Add photos (optional but recommended)
 
 Add up to **10 photos** of your product. Photos are optional when listing for a show, but they make a big difference — buyers are much more likely to place offers on items they can see clearly.
 
-```
-┌─────────────────────────────────┐
-│  Select photos                  │
-│                                 │
-│  ┌───┐ ┌───┐ ┌───┐ ┌───┐      │
-│  │ 1 │ │ 2 │ │ 3 │ │ + │      │
-│  └───┘ └───┘ └───┘ └───┘      │
-│                                 │
-│  Up to 10 photos                │
-└─────────────────────────────────┘
-```
+![Select photos grid with 3 filled slots and add button, up to 10 photos allowed](./assets/mockups/new-seller-guide-to-listing-products__select-photos__en.png)
 
 **Tips for great photos:**
 - Use good lighting (natural light works best)
@@ -128,14 +95,11 @@ You can also fill in these fields to make your listing more complete:
 - **Color** — choose from 28 color options (Black, White, Grey, Blue, Red, etc.)
 - **Condition** — how worn the item is:
 
-| Condition | What it means |
-|-----------|--------------|
-| New with Tags | Brand new, never worn, original tags still attached |
-| New without Tags | Brand new, never worn, but tags removed |
-| Very Good | Like new, barely used, excellent condition |
-| Good | Gently used, some signs of wear |
-| Satisfactory | Well-used, visible wear, may need repair |
-
+- **New with Tags** — Brand new, never worn, original tags still attached
+- **New without Tags** — Brand new, never worn, but tags removed
+- **Very Good** — Like new, barely used, excellent condition
+- **Good** — Gently used, some signs of wear
+- **Satisfactory** — Well-used, visible wear, may need repair
 **Be honest about condition.** Buyers trust sellers who accurately describe their items. Over-rating the condition leads to returns and bad reviews.
 
 **For collectibles:** Jamble also supports categories like Trading Card Games (Pokémon, Magic, Yu-Gi-Oh!, One Piece), Diecast Cars (Hot Wheels, Matchbox), and more.
@@ -144,15 +108,7 @@ You can also fill in these fields to make your listing more complete:
 
 When all required fields are filled, the **Add Listing** button becomes active. Tap it to save your listing.
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │       Add Listing         │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Add Listing button, primary CTA for creating a new product](./assets/mockups/new-seller-guide-to-listing-products__add-listing-button__en.png)
 
 Your product is now added to your show and ready to be sold during your live.
 

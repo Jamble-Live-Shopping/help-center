@@ -62,18 +62,7 @@ After scheduling your show, you can view it from your profile. Tapping on it ope
 
 When it's close to showtime, open your show and enter the host screen. You'll see a **countdown** to your scheduled start time.
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│     Show starts in              │
-│     0d 0h 12m 30s              │
-│                                 │
-│  ┌─────────────┐ ┌───────────┐ │
-│  │Practice mode│ │  Go Live  │ │
-│  └─────────────┘ └───────────┘ │
-│                                 │
-└─────────────────────────────────┘
-```
+![show-countdown: Timer display showing 0d 0h 12m 30s until show starts, with Practice mode and Go Live buttons](./assets/mockups/show-management-for-sellers__show-countdown__en.png)
 
 - **Practice mode** — test your camera, audio, and product pinning privately. No one can see you
 - **Go Live** — start broadcasting. A confirmation appears: "Start your Show — Once started, people will be able to join you"

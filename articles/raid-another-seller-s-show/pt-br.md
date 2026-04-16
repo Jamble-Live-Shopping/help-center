@@ -33,23 +33,7 @@ Em vez de encerrar imediatamente, a Jamble mostra a tela de raid.
 
 A tela de raid aparece com o título **"The Jamble Raid"**:
 
-```
-┌─────────────────────────────────┐
-│  The Jamble Raid                │
-│                                 │
-│  Antes de sair, apoie a         │
-│  comunidade enviando seus       │
-│  espectadores para um vendedor  │
-│  que está ao vivo!              │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │    Select Live Show       │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  End without Raid               │
-│                                 │
-└─────────────────────────────────┘
-```
+![Tela intro do The Jamble Raid com título e instruções para apoiar a comunidade enviando espectadores para um vendedor ao vivo, com dois botões de ação](./assets/mockups/raid-another-seller-s-show__jamble-raid-intro__pt-br.png)
 
 Você tem duas opções:
 - **"Select Live Show"** — navegue pelos shows ao vivo e escolha um para fazer o raid
@@ -67,21 +51,7 @@ Se nenhum outro vendedor estiver ao vivo, você verá: *"There's no shows to rai
 
 Após selecionar um show, o raid acontece instantaneamente. Você verá uma tela de sucesso:
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│         [Success!]              │
-│                                 │
-│  Obrigado por apoiar a          │
-│  comunidade! Agora você pode    │
-│  encerrar seu Show              │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │        End Show           │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![raid-success-end-show: Diálogo de sucesso com mensagem e botão Encerrar Show](./assets/mockups/raid-another-seller-s-show__raid-success-end-show__pt-br.png)
 
 Toque em **"End Show"** para finalizar.
 
@@ -89,22 +59,7 @@ Toque em **"End Show"** para finalizar.
 
 Seus espectadores veem uma tela anunciando o raid:
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  [Sua foto] → [Foto dele]       │
-│                                 │
-│  [Seu nome] is Raiding          │
-│  [Nome dele]!                   │
-│                                 │
-│  Você e [N] pessoas             │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  Join [Nome dele] Show    │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![raid-notification: Foto do usuário para foto de outro vendedor com mensagem "is Raiding" e botão para entrar no show](./assets/mockups/raid-another-seller-s-show__raid-notification__pt-br.png)
 
 Seus espectadores podem tocar em **"Join [Nome] Show"** para ir ao show do outro vendedor. Eles não são forçados — é uma escolha.
 

@@ -27,11 +27,8 @@ Battles are designed to boost engagement and sales. When your audience is compet
 
 Viewers earn points for their team in two ways:
 
-| Action | Points earned |
-|--------|--------------|
-| **Place offers** on products | 15 points for every R$ spent |
-| **Send gems** | 1 point for every gem sent |
-
+- ****Place offers** on products** — 15 points for every R$ spent
+- ****Send gems**** — 1 point for every gem sent
 The more your audience buys and interacts, the more points their team earns.
 
 ## Step by step
@@ -40,20 +37,7 @@ The more your audience buys and interacts, the more points their team earns.
 
 While you're live, open the Battle option from the show controls. You'll be asked to choose the **battle duration**.
 
-```
-┌─────────────────────────────────┐
-│  Select Battle Duration         │
-│                                 │
-│  Don't end it early, or users   │
-│  won't receive their rewards.   │
-│                                 │
-│  ○  30 min                      │
-│  ○  60 min                      │
-│  ○  90 min                      │
-│  ○  120 min                     │
-│                                 │
-└─────────────────────────────────┘
-```
+![battle-duration-picker: Radio selection for battle duration with 4 options (30, 60, 90, 120 minutes) and warning text](./assets/mockups/battles-team-competition-in-your-show__battle-duration-picker__en.png)
 
 Choose a duration that matches how long you plan to keep selling. Available durations depend on the battle tier.
 

@@ -24,20 +24,7 @@ Notas são diferentes da **descrição** do show:
 
 Quando você cria ou edita um show, verá dois campos de texto na seção de detalhes:
 
-```
-┌─────────────────────────────────┐
-│  DESCRIPTION (Optional)         │
-│  ┌───────────────────────────┐  │
-│  │ Describe your live here   │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  NOTES (Optional)               │
-│  ┌───────────────────────────┐  │
-│  │ Additional notes          │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Formulário para adicionar e editar notas do show com campos de descrição e notas](./assets/mockups/add-and-edit-show-notes__add-edit-show-notes__pt-br.png)
 
 Toque no campo **NOTES** e digite sua mensagem. Você tem no máximo **200 caracteres**.
 
@@ -49,19 +36,7 @@ Depois de digitar suas notas, continue com o resto da criação do show (ou salv
 
 Quando seu show está ao vivo e um espectador entra, suas notas aparecem como uma **mensagem fixada** na área do chat:
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ [Seu avatar]              │  │
-│  │ Frete grátis em 3+ itens! │  │
-│  │ Use o código: LIVE30      │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Mensagens do chat abaixo...    │
-│                                 │
-└─────────────────────────────────┘
-```
+![Mensagem de chat promocional com avatar, oferta de frete grátis e código LIVE30](./assets/mockups/add-and-edit-show-notes__promo-chat-message__pt-br.png)
 
 A mensagem fixada mostra sua foto de perfil e o texto da nota. Desaparece automaticamente após alguns segundos (baseado no tempo de leitura), mas espectadores podem trazê-la de volta tocando no **ícone de notas** na área superior do show.
 

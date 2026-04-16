@@ -60,18 +60,7 @@ Depois de agendar seu show, você pode vê-lo no seu perfil. Tocando nele, abre 
 
 Quando estiver perto da hora, abra seu show e entre na tela de apresentador. Você verá uma **contagem regressiva** até o horário agendado.
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│     Show começa em              │
-│     0d 0h 12m 30s              │
-│                                 │
-│  ┌─────────────┐ ┌───────────┐ │
-│  │Practice mode│ │  Go Live  │ │
-│  └─────────────┘ └───────────┘ │
-│                                 │
-└─────────────────────────────────┘
-```
+![show-countdown-launch: timer de contagem regressiva com dois botões de ação para modo prática e ativar transmissão](./assets/mockups/show-management-for-sellers__show-countdown-launch__pt-br.png)
 
 - **Practice mode** — teste sua câmera, áudio e fixação de produtos em modo privado. Ninguém pode te ver
 - **Go Live** — comece a transmitir. Uma confirmação aparece: "Start your Show — Once started, people will be able to join you"

@@ -38,22 +38,7 @@ Durante seu show ao vivo, toque em um produto configurado no modo **Compra Diret
 
 Você verá um prompt perguntando como quer vender este item:
 
-```
-┌─────────────────────────────────┐
-│  Start as a Flash Sale or       │
-│  Buy It Now?                    │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │       Flash Sale          │  │
-│  └───────────────────────────┘  │
-│  ┌───────────────────────────┐  │
-│  │       Buy It Now          │  │
-│  └───────────────────────────┘  │
-│  ┌───────────────────────────┐  │
-│  │       Later               │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![flash-sale-picker: Três opções de botões para iniciar uma Flash Sale, Compre Agora ou Mais Tarde](./assets/mockups/discounts-during-your-show-flash-sales__flash-sale-picker__pt-br.png)
 
 ### Passo 2: Selecione Flash Sale
 

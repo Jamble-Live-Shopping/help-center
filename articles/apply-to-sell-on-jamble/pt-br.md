@@ -25,18 +25,7 @@ Existem várias maneiras de iniciar sua inscrição como vendedor no app:
 
 Todos esses caminhos abrem a mesma inscrição.
 
-```
-┌─────────────────────────────────┐
-│  Configurações                  │
-│                                 │
-│  IMPORTANTE                     │
-│  ▶ Apply to go Live             │
-│                                 │
-│  VENDER                         │
-│  ...                            │
-│                                 │
-└─────────────────────────────────┘
-```
+![Menu de Configurações com seção IMPORTANTE exibindo opção "Apply to go Live"](./assets/mockups/apply-to-sell-on-jamble__configuracoes-menu__pt-br.png)
 
 ### Passo 2: Complete o formulário de inscrição
 
@@ -60,25 +49,7 @@ Depois de enviar, sua inscrição é analisada pela equipe da Jamble. Nossa equi
 
 Enquanto sua inscrição está em análise, nos 15 dias seguintes por favor não se inscreva novamente nem entre em contato com o suporte sobre a análise da sua inscrição.
 
-```
-┌─────────────────────────────────┐
-│  Pending Application            │
-│                                 │
-│  It seems that you already      │
-│  submitted an application to    │
-│  Go Live. We'll be updating     │
-│  you as soon as possible.       │
-│  Any question? Feel free to     │
-│  reach out!                     │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │   Ok I will wait!         │  │
-│  └───────────────────────────┘  │
-│  ┌───────────────────────────┐  │
-│  │   Reach out               │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Diálogo de alerta Aplicação Pendente com mensagem de status e dois botões de ação](./assets/mockups/apply-to-sell-on-jamble__pending-application__pt-br.png)
 
 Se tiver dúvidas enquanto espera, toque em **"Contact Support > Ask a General Question"** para falar com a equipe.
 

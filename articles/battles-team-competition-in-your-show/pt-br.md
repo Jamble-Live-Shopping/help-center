@@ -27,11 +27,8 @@ Batalhas são feitas para aumentar o engajamento e as vendas. Quando sua audiên
 
 Espectadores ganham pontos para seu time de duas formas:
 
-| Ação | Pontos ganhos |
-|------|--------------|
-| **Fazer ofertas** em produtos | 15 pontos para cada R$ gasto |
-| **Enviar gemas** | 1 ponto para cada gema enviada |
-
+- ****Fazer ofertas** em produtos** — 15 pontos para cada R$ gasto
+- ****Enviar gemas**** — 1 ponto para cada gema enviada
 Quanto mais sua audiência compra e interage, mais pontos o time deles ganha.
 
 ## Passo a passo
@@ -40,20 +37,7 @@ Quanto mais sua audiência compra e interage, mais pontos o time deles ganha.
 
 Enquanto estiver ao vivo, abra a opção de Batalha nos controles do show. Você será perguntado sobre a **duração da batalha**.
 
-```
-┌─────────────────────────────────┐
-│  Select Battle Duration         │
-│                                 │
-│  Don't end it early, or users   │
-│  won't receive their rewards.   │
-│                                 │
-│  ○  30 min                      │
-│  ○  60 min                      │
-│  ○  90 min                      │
-│  ○  120 min                     │
-│                                 │
-└─────────────────────────────────┘
-```
+![battle-duration-picker mostrando quatro opções de botão de rádio: 30 min, 60 min, 90 min, 120 min, com texto de aviso sobre recompensas](./assets/mockups/battles-team-competition-in-your-show__battle-duration-picker__pt-br.png)
 
 Escolha uma duração que corresponda ao tempo que você planeja continuar vendendo. As durações disponíveis dependem do nível da batalha.
 

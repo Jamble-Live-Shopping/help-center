@@ -14,25 +14,7 @@ Você precisa de:
 
 Quando você vende um item na Jamble, seus ganhos não chegam na sua conta bancária imediatamente. Eles passam por várias etapas para garantir a proteção de ambos, você e o comprador. Aqui está o cronograma completo:
 
-```
-┌──────────────────────────────────────────────────────────┐
-│                                                          │
-│  1. VENDA        Você vende um item durante seu show     │
-│       ↓                                                  │
-│  2. CONFIRMADO   Você analisa e confirma o pedido        │
-│       ↓                                                  │
-│  3. ENVIADO      Você envia o item pelos Correios        │
-│       ↓                                                  │
-│  4. ENTREGUE     O comprador recebe o pacote             │
-│       ↓                                                  │
-│  5. CONCLUÍDO    O comprador confirma que o item está OK │
-│       ↓                                                  │
-│  6. DISPONÍVEL   Seus ganhos aparecem na sua carteira    │
-│       ↓                                                  │
-│  7. SACADO       Você saca para seu banco via PIX        │
-│                                                          │
-└──────────────────────────────────────────────────────────┘
-```
+![earnings-payout-timeline: fluxo vertical de 7 etapas do processo de venda até saque (Venda, Confirmado, Enviado, Entregue, Concluído, Disponível, Sacado)](./assets/mockups/understand-the-earnings-payout-timeline__earnings-payout-timeline__pt-br.png)
 
 ### Etapa 1: Venda
 

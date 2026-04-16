@@ -32,20 +32,7 @@ Ao criar uma listagem, selecione a categoria antes do tamanho. A categoria usa u
 
 Quando você seleciona os três níveis, o campo **Tamanho** aparece automaticamente com as opções de tamanho corretas para sua seleção.
 
-```
-┌─────────────────────────────────┐
-│  Seleção de Categoria           │
-│                                 │
-│  Gênero:      [Mulheres ▼]     │
-│  Categoria:   [Calçados ▼]     │
-│  Subcategoria:[Tênis ▼]        │
-│                                 │
-│  ↓ Campo tamanho aparece:       │
-│                                 │
-│  Tamanho: [US 7 ▼]             │
-│                                 │
-└─────────────────────────────────┘
-```
+![Formulário de seleção de categoria com campos de Gênero, Categoria, Subcategoria e Tamanho](./assets/mockups/variants-for-sellers-sizes-and-colors__category-selection-form__pt-br.png)
 
 **Se você não selecionar uma categoria, o campo de tamanho não aparece.** É assim por design — a Jamble precisa saber que tipo de item você está vendendo para mostrar as opções de tamanho certas.
 
@@ -101,22 +88,7 @@ As 28 cores disponíveis são:
 
 **"Multi"** é para itens com múltiplas cores — como uma camiseta tie-dye, um vestido estampado, ou um tênis multicolorido.
 
-```
-┌─────────────────────────────────┐
-│  Selecionar Cor                 │
-│                                 │
-│  ● ● ● ● ● ● ●                │
-│  ● ● ● ● ● ● ●                │
-│  ● ● ● ● ● ● ●                │
-│  ● ● ● ● ● ● ●                │
-│                                 │
-│  Toque em uma cor para          │
-│  selecionar                     │
-│                                 │
-│  [LIMPAR]                       │
-│                                 │
-└─────────────────────────────────┘
-```
+![Tela seletor de cores com grade de 28 círculos coloridos e botão limpar](./assets/mockups/variants-for-sellers-sizes-and-colors__color-picker-grid__pt-br.png)
 
 Você pode tocar em **"CLEAR"** para remover sua seleção de cor se quiser deixar vazio.
 

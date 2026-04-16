@@ -28,39 +28,13 @@ Vá ao seu perfil e toque em **Configurações** (ícone de engrenagem).
 
 Role até a seção **SELL**. Você verá **"Vacation mode"** com um toggle.
 
-```
-┌─────────────────────────────────┐
-│  Configurações                  │
-│                                 │
-│  SELL                           │
-│  ▶ My Sales                     │
-│  ▶ My Wallet                    │
-│  ▶ Shipping Preferences         │
-│  ☐ Vacation mode                │
-│                                 │
-└─────────────────────────────────┘
-```
+![Tela Configurações com seção SELL mostrando linhas My Sales, My Wallet, Shipping Preferences e checkbox Vacation mode](./assets/mockups/pause-your-shop-with-vacation-mode__configuracoes-sell__pt-br.png)
 
 ### Passo 3: Ative o Modo Férias
 
 Toque em **"Vacation mode"**. Uma tela de confirmação aparece:
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  Vacation Mode                  │
-│                                 │
-│  When turning on Vacation Mode, │
-│  all your items will become     │
-│  unavailable for others to      │
-│  purchase                       │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │        Turn On            │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![Tela de informações do Modo Férias com descrição e botão Ativar](./assets/mockups/pause-your-shop-with-vacation-mode__vacation-mode-info__pt-br.png)
 
 Toque em **"Turn On"** para ativar o Modo Férias.
 
@@ -68,22 +42,7 @@ Toque em **"Turn On"** para ativar o Modo Férias.
 
 Quando quiser voltar a vender, vá em Configurações > SELL > Vacation mode. A tela agora mostra:
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  Vacation Mode                  │
-│                                 │
-│  You are currently in Vacation  │
-│  Mode. Turning it off will make │
-│  all your items available to    │
-│  purchase                       │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │        Turn Off           │  │
-│  └───────────────────────────┘  │
-│                                 │
-└─────────────────────────────────┘
-```
+![vacation-mode-status: Tela exibindo status atual do Modo de Férias com texto explicativo e botão Desativar](./assets/mockups/pause-your-shop-with-vacation-mode__vacation-mode-status__pt-br.png)
 
 Toque em **"Turn Off"** e sua loja volta ao normal.
 

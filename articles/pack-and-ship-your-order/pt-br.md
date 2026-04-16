@@ -58,19 +58,7 @@ Quando uma nova venda chega, seu status é **Pending**. Toque no pedido para abr
 
 Você verá as informações do comprador, o produto que ele comprou e dois botões:
 
-```
-┌─────────────────────────────────┐
-│  Your sale                      │
-│                                 │
-│  [Informações do comprador]     │
-│  [Detalhes do produto]          │
-│                                 │
-│  ┌──────────┐ ┌──────────────┐  │
-│  │  Reject  │ │   Confirm    │  │
-│  │  (cinza) │ │   (preto)    │  │
-│  └──────────┘ └──────────────┘  │
-└─────────────────────────────────┘
-```
+![Diálogo de confirmação de venda com informações do comprador e detalhes do produto, mostrando botões Reject e Confirm](./assets/mockups/pack-and-ship-your-order__sale-confirmation-dialog__pt-br.png)
 
 - Toque em **Confirm** para aceitar a venda e se comprometer a enviar o item
 - Toque em **Reject** se não puder atender o pedido (o comprador será reembolsado)

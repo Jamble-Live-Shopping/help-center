@@ -12,35 +12,12 @@ This guide covers how to protect your Jamble account — from the login methods 
 
 Jamble supports **3 login methods** on iOS (phone number, Google, Apple) and **phone number only** on Android:
 
-| Method | How it works |
-|--------|-------------|
-| **Phone number** (primary) | Enter your phone number, receive an SMS or WhatsApp code, and verify it |
-| **Continue with Google** | Sign in using your Google account |
-| **Continue with Apple** | Sign in using your Apple ID |
-
+- ****Phone number** (primary)** — Enter your phone number, receive an SMS or WhatsApp code, and verify it
+- ****Continue with Google**** — Sign in using your Google account
+- ****Continue with Apple**** — Sign in using your Apple ID
 When you open Jamble for the first time, you'll see the **Sign up** screen. The primary method is **phone number** — enter your number, tap **"Get verification code"**, and type the code you receive via SMS or WhatsApp.
 
-```
-┌─────────────────────────────────┐
-│  Sign up                        │
-│                                 │
-│  Enter your phone number        │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  🇧🇷 +55  │ (11) 9XXXX-XXXX│  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │   Get verification code   │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Other sign-up methods           │
-│                                 │
-│  By continuing you agree to our │
-│  Terms of Service and           │
-│  Privacy Policy                 │
-└─────────────────────────────────┘
-```
+![Sign up screen, account-security: phone number input field with country code selector (+55 Brazil) and Get verification code button](./assets/mockups/account-security__signup-phone-entry__en.png)
 
 To use Google or Apple instead, tap **"Other sign-up methods"** at the bottom. A modal will appear with both options.
 
@@ -68,33 +45,7 @@ You can view and edit the following fields:
 **Legal Information (Brazil):**
 - **CPF** — your CPF number (required for Brazilian users)
 
-```
-┌─────────────────────────────────┐
-│  Information                    │
-│                                 │
-│  Personal Information           │
-│  ┌───────────────────────────┐  │
-│  │  First Name: Maria        │  │
-│  │  Last Name: Silva         │  │
-│  │  Birth Date: 15/03/1990   │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Contact Information            │
-│  ┌───────────────────────────┐  │
-│  │  Email: maria@email.com   │  │
-│  │  Phone: +55 11 9XXXX-XXXX│  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Legal Information              │
-│  ┌───────────────────────────┐  │
-│  │  CPF: XXX.XXX.XXX-XX     │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │         Save              │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Account Security Information form with personal, contact, and legal details fields and Save button](./assets/mockups/account-security__account-security-info__en.png)
 
 After making changes, tap **"Save"** to update your information.
 

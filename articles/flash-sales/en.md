@@ -27,22 +27,7 @@ When creating or editing a listing, select **Buy It Now** as the sell mode. You'
 
 Turn it on to reveal two new fields:
 
-```
-┌─────────────────────────────────┐
-│  Sell Mode: Buy It Now          │
-│                                 │
-│  Price: R$ [200]                │
-│                                 │
-│  ⚡ Flash sale: [ON]            │
-│                                 │
-│  Discount (%): [30]             │
-│  (10% to 90%)                   │
-│                                 │
-│  Timer (Seconds): [60]          │
-│  (30 to 600 seconds)            │
-│                                 │
-└─────────────────────────────────┘
-```
+![Flash sales configuration form showing price, discount percentage, and timer settings for Buy It Now mode](./assets/mockups/flash-sales__flash-sales-config__en.png)
 
 - **Discount (%)** — The percentage off the original price. You can set any value from **10% to 90%**. If your product costs R$200 and you set 30%, buyers pay R$140
 
@@ -54,24 +39,7 @@ Save your listing. The Flash Sale is now configured and ready to be activated du
 
 When you're live, find the product in your product list and tap **"Start"**. Because this product has Flash Sale enabled, the app shows you a choice:
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  Start as a Flash Sale          │
-│  or Buy It Now?                 │
-│                                 │
-│  ▶ Flash Sale                   │
-│    Sell at discounted price     │
-│    with a countdown timer       │
-│                                 │
-│  ▶ Buy It Now                   │
-│    Sell at full price,          │
-│    no timer                     │
-│                                 │
-│  Later                          │
-│                                 │
-└─────────────────────────────────┘
-```
+![Flash Sales mode picker offering Flash Sale or Buy It Now options with descriptions](./assets/mockups/flash-sales__sale-mode-picker__en.png)
 
 Tap **"Flash Sale"** to start the discounted sale. Tap **"Buy It Now"** if you want to sell at full price instead. Tap **"Later"** to cancel.
 
@@ -83,25 +51,7 @@ When you start the Flash Sale:
 2. A **countdown timer** starts (the duration you set)
 3. Buyers see a green **"Flash Sale — X% OFF"** banner with the timer
 
-```
-┌─────────────────────────────────┐
-│  What buyers see:               │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  ⚡ Flash Sale - 30% OFF   │  │
-│  │                           │  │
-│  │  Nike Air Max 90          │  │
-│  │  R̶$̶2̶0̶0̶  → R$140           │  │
-│  │  3 left                   │  │
-│  │                           │  │
-│  │  ⏱ 0:42 remaining         │  │
-│  │                           │  │
-│  │  ┌─────────────────────┐  │  │
-│  │  │  Slide to buy R$140 │  │  │
-│  │  └─────────────────────┘  │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Flash sale card showing Nike Air Max 90 with 30% discount, price reduction from R$200 to R$140, 3 items left, 42 seconds remaining, and slide-to-buy button](./assets/mockups/flash-sales__flash-sale-card__en.png)
 
 **What buyers see during a Flash Sale:**
 - A bright green banner with "Flash Sale - X% OFF" and the discount percentage

@@ -79,40 +79,17 @@ O item foi **bem usado** e mostra **desgaste visível**. Pode precisar de reparo
 
 Siga esta regra simples: **na dúvida, escolha um nível abaixo.** É sempre melhor o comprador receber um item um pouco melhor do que esperava do que um pouco pior.
 
-```
-┌─────────────────────────────────┐
-│  Guia rápido de decisão         │
-│                                 │
-│  Etiquetas ainda presas?        │
-│  → Novo com etiquetas           │
-│                                 │
-│  Nunca usado, sem etiquetas?    │
-│  → Novo sem etiquetas           │
-│                                 │
-│  Usado 1-2 vezes, perfeito?     │
-│  → Muito bom                    │
-│                                 │
-│  Uso regular, desgaste menor?   │
-│  → Bom                          │
-│                                 │
-│  Uso pesado, defeitos visíveis? │
-│  → Satisfatório                 │
-│                                 │
-└─────────────────────────────────┘
-```
+![Guia rápido de decisão de condições de anúncio com cinco categorias e setas](./assets/mockups/understanding-listing-conditions-and-expectations__listing-conditions-guide__pt-br.png)
 
 ## O que incluir na sua descrição
 
 O nível de condição dá aos compradores uma ideia geral, mas sua **descrição** e **fotos** preenchem os detalhes. Veja o que mencionar para cada nível:
 
-| Condição | O que descrever |
-|----------|----------------|
-| Novo com etiquetas | Detalhes das etiquetas, embalagem original, onde comprou |
-| Novo sem etiquetas | Por que as etiquetas foram removidas, que nunca foi usado |
-| Muito bom | Qualquer detalhe mínimo que impede de ser "Novo" |
-| Bom | Sinais específicos de uso (onde, que tipo) |
-| Satisfatório | Todo defeito em detalhe — manchas, danos, áreas de desgaste |
-
+- **Novo com etiquetas** — Detalhes das etiquetas, embalagem original, onde comprou
+- **Novo sem etiquetas** — Por que as etiquetas foram removidas, que nunca foi usado
+- **Muito bom** — Qualquer detalhe mínimo que impede de ser "Novo"
+- **Bom** — Sinais específicos de uso (onde, que tipo)
+- **Satisfatório** — Todo defeito em detalhe — manchas, danos, áreas de desgaste
 **Quanto mais baixa a condição, mais detalhes você deve fornecer.** Uma listagem "Satisfatório" precisa de descrições completas e fotos de perto de todo defeito. Uma listagem "Novo com etiquetas" fala mais por si mesma.
 
 ## Fotos e condição

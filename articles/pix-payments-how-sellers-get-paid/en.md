@@ -43,17 +43,7 @@ Go to your profile, then tap **Settings**, then tap **My Wallet**.
 
 If your bank account isn't set up yet, you'll see a **"Register Bank"** button at the bottom of the screen.
 
-```
-┌─────────────────────────────────┐
-│  ← My Wallet              🕐 ? │
-│                                 │
-│  [Wallet sections...]           │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │      Register Bank        │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Wallet-nav header showing My Wallet title with clock and help icons, and Register Bank button](./assets/mockups/pix-payments-how-sellers-get-paid__wallet-header__en.png)
 
 Tap **"Register Bank"** and choose:
 - **Individual** — if you're selling as a person (CPF)
@@ -79,27 +69,7 @@ Your bank details are also shown at the bottom of the wallet screen. If you need
 
 When you have available funds, a **"Withdraw"** button appears at the bottom of the wallet screen.
 
-```
-┌─────────────────────────────────┐
-│  ← My Wallet              🕐 ? │
-│                                 │
-│  Available         R$ 250,00    │
-│  Your available balance         │
-│  ─────────────────────────────  │
-│  Waiting funds     R$ 120,00    │
-│  Pending release                │
-│  ─────────────────────────────  │
-│  Transferred       R$ 1.500,00  │
-│  Total withdrawn                │
-│                                 │
-│  Bank Details                   │
-│  Banco 260 0001 12345-6  [Update]│
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │        Withdraw           │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![My Wallet screen showing available balance of R$ 250.00, waiting funds of R$ 120.00, transferred amount of R$ 1,500.00, bank details for Banco 260, and Withdraw button](./assets/mockups/pix-payments-how-sellers-get-paid__my-wallet__en.png)
 
 Tap **"Withdraw"** to request a PIX payout. The full available balance is sent to your registered bank account.
 
@@ -119,13 +89,10 @@ Each payout shows:
 
 Your earnings don't become available instantly after a sale. Here's the timeline:
 
-| Event | What happens |
-|-------|-------------|
-| Buyer purchases your item | Money is held as "waiting funds" |
-| You ship the order | Money remains in "waiting funds" |
-| Buyer receives and confirms | Money moves to "available" |
-| Delivery confirmed automatically | Money moves to "available" (if buyer doesn't confirm manually) |
-
+- **Buyer purchases your item** — Money is held as "waiting funds"
+- **You ship the order** — Money remains in "waiting funds"
+- **Buyer receives and confirms** — Money moves to "available"
+- **Delivery confirmed automatically** — Money moves to "available" (if buyer doesn't confirm manually)
 ## Important tips
 
 - **Set up your bank account before your first show.** This is the most common mistake new sellers make. If you sell without bank details, your earnings are held until you complete the setup

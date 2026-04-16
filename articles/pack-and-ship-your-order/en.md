@@ -58,19 +58,7 @@ When a new sale comes in, its status is **Pending**. Tap on the order to open it
 
 You'll see the buyer's information, the product they purchased, and two buttons:
 
-```
-┌─────────────────────────────────┐
-│  Your sale                      │
-│                                 │
-│  [Buyer info]                   │
-│  [Product details]              │
-│                                 │
-│  ┌──────────┐ ┌──────────────┐  │
-│  │  Reject  │ │   Confirm    │  │
-│  │  (grey)  │ │   (black)    │  │
-│  └──────────┘ └──────────────┘  │
-└─────────────────────────────────┘
-```
+![Sale confirmation dialog with buyer info and product details, offering Reject and Confirm buttons](./assets/mockups/pack-and-ship-your-order__sale-confirmation-dialog__en.png)
 
 - Tap **Confirm** to accept the sale and commit to shipping the item
 - Tap **Reject** if you can't fulfill the order (the buyer will be refunded)

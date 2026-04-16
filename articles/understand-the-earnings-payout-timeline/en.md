@@ -14,25 +14,7 @@ You need:
 
 When you sell an item on Jamble, your earnings don't arrive in your bank account immediately. They go through several stages to ensure both you and the buyer are protected. Here's the full timeline:
 
-```
-┌──────────────────────────────────────────────────────────┐
-│                                                          │
-│  1. SALE         You sell an item during your show       │
-│       ↓                                                  │
-│  2. CONFIRMED    You review and confirm the order        │
-│       ↓                                                  │
-│  3. SHIPPED      You ship the item via Correios          │
-│       ↓                                                  │
-│  4. DELIVERED    The buyer receives the package           │
-│       ↓                                                  │
-│  5. COMPLETED    The buyer confirms the item is correct  │
-│       ↓                                                  │
-│  6. AVAILABLE    Your earnings appear in your wallet     │
-│       ↓                                                  │
-│  7. PAID OUT     You withdraw to your bank via PIX       │
-│                                                          │
-└──────────────────────────────────────────────────────────┘
-```
+![earnings-payout-timeline: 7-step vertical flow chart showing sale to payout process from item sale to PIX withdrawal](./assets/mockups/understand-the-earnings-payout-timeline__earnings-payout-timeline__en.png)
 
 ### Stage 1: Sale
 

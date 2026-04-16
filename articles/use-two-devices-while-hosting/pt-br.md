@@ -29,46 +29,10 @@ Inicie o show normalmente no seu **celular principal** — aquele que voce quer 
 No seu **segundo celular** (logado na mesma conta Jamble), abra o app e acesse o show ao vivo. Como voce ja esta transmitindo do dispositivo principal, um dialogo aparece:
 
 **No iOS:**
-```
-┌─────────────────────────────────┐
-│  Controle Remoto                │
-│                                 │
-│  Selecione a primeira opcao se  │
-│  voce quer usar este            │
-│  dispositivo como controle      │
-│  remoto. Caso queira transmitir │
-│  deste dispositivo, use a       │
-│  segunda opcao                  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  Usar como controle       │  │
-│  │  remoto                   │  │
-│  └───────────────────────────┘  │
-│  ┌───────────────────────────┐  │
-│  │  Transmitir deste         │  │
-│  │  dispositivo              │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Tela Controle Remoto com dois botões de ação empilhados para selecionar modo do dispositivo](./assets/mockups/use-two-devices-while-hosting__remote-control-mode-picker__pt-br.png)
 
 **No Android:**
-```
-┌─────────────────────────────────┐
-│  Outro dispositivo esta         │
-│  transmitindo                   │
-│                                 │
-│  Voce quer assumir a            │
-│  transmissao deste dispositivo? │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  Assumir transmissao      │  │
-│  └───────────────────────────┘  │
-│  ┌───────────────────────────┐  │
-│  │  Ficar como controle      │  │
-│  │  remoto                   │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Diálogo de alerta perguntando se deseja assumir transmissão de outro dispositivo](./assets/mockups/use-two-devices-while-hosting__dual-device-transmission-prompt__pt-br.png)
 
 ### Passo 3: Escolha "Usar como controle remoto"
 
@@ -97,18 +61,7 @@ Isso e util se o celular principal esta com a bateria acabando, ou se voce quer 
 
 Se o celular que esta transmitindo perder a conexao (bateria acabou, app travou, Wi-Fi caiu), seu dispositivo remoto mostrara uma mensagem:
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│  Aguarde                        │
-│                                 │
-│  Seu dispositivo principal      │
-│  parece estar offline           │
-│                                 │
-│  ⏳ (carregando)                │
-│                                 │
-└─────────────────────────────────┘
-```
+![device-offline-loading: Estado de carregamento mostrando mensagem de dispositivo primário offline com ícone de ampulheta](./assets/mockups/use-two-devices-while-hosting__device-offline-loading__pt-br.png)
 
 Voce pode entao **assumir a transmissao** do dispositivo remoto para continuar o show sem interrupcao.
 

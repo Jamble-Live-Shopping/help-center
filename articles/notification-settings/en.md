@@ -15,19 +15,7 @@ This guide explains how to manage your push notification preferences on Jamble. 
 
 From the app, tap your **profile icon** in the bottom right corner, then tap the **gear icon** to open **Settings**. Scroll to the **Account** section and tap **"Notifications"**.
 
-```
-┌─────────────────────────────────┐
-│  Settings                       │
-│                                 │
-│  ACCOUNT                        │
-│  ┌───────────────────────────┐  │
-│  │  Personal Information   → │  │
-│  │  Notifications          → │  │
-│  │  Edit my Profile        → │  │
-│  │  Blocked profiles       → │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Settings screen with Account section listing Personal Information, Notifications, Edit my Profile, and Blocked profiles rows](./assets/mockups/notification-settings__settings-account__en.png)
 
 ### Step 2: Check your device permissions
 
@@ -41,39 +29,27 @@ Your notification settings are organized into **4 categories**. Each category ha
 
 Get early updates on special offers, discounts, and more.
 
-| Setting | What it does |
-|---------|-------------|
-| Promotional alerts | Notifications about promotions and special offers from Jamble |
-
+- **Promotional alerts** — Notifications about promotions and special offers from Jamble
 #### Activity
 
 Updates about your interactions with other users.
 
-| Setting | What it does |
-|---------|-------------|
-| Followers | When someone new follows you |
-| Messages | When you receive a direct message |
-| Likes | When someone likes your content |
-
+- **Followers** — When someone new follows you
+- **Messages** — When you receive a direct message
+- **Likes** — When someone likes your content
 #### Live Shows
 
 Alerts about shows and products you might be interested in.
 
-| Setting | What it does |
-|---------|-------------|
-| Recommended shows | Shows Jamble thinks you'll enjoy based on your interests |
-| Shows from people I follow | When a seller you follow starts or schedules a show |
-| Bookmarked shows | Reminders about shows you've saved |
-| Bookmarked product from show | When a product you've saved appears in a live show |
-
+- **Recommended shows** — Shows Jamble thinks you'll enjoy based on your interests
+- **Shows from people I follow** — When a seller you follow starts or schedules a show
+- **Bookmarked shows** — Reminders about shows you've saved
+- **Bookmarked product from show** — When a product you've saved appears in a live show
 #### Transactions
 
 Track your purchases and sales.
 
-| Setting | What it does |
-|---------|-------------|
-| Updates on transaction status | Status changes on your orders (shipped, delivered, etc.) |
-
+- **Updates on transaction status** — Status changes on your orders (shipped, delivered, etc.)
 ### Step 4: Toggle individual settings
 
 To adjust a specific notification:
@@ -82,19 +58,7 @@ To adjust a specific notification:
 2. If the category is collapsed, tap the **main toggle** to expand it
 3. Toggle individual settings **on** (purple) or **off** (grey)
 
-```
-┌─────────────────────────────────┐
-│  Live Shows                [ON] │
-│  ┌───────────────────────────┐  │
-│  │  Recommended shows  [ON]  │  │
-│  │  Shows from people  [ON]  │  │
-│  │  I follow                 │  │
-│  │  Bookmarked shows   [OFF] │  │
-│  │  Bookmarked product [ON]  │  │
-│  │  from show                │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Live Shows notification settings with toggles for recommended shows, followed creators, bookmarks, and products](./assets/mockups/notification-settings__live-shows-notifications__en.png)
 
 **Turning off the main toggle** disables all notifications in that category at once. Turning it back on restores them all.
 

@@ -20,19 +20,7 @@ Você vê uma única dedução de 14%. Não existe uma taxa de processamento de 
 
 Aqui está um exemplo de uma venda de R$ 100:
 
-```
-┌─────────────────────────────────────────┐
-│  Preço de venda (o que o comprador paga)│
-│  R$ 100,00                              │
-│                                         │
-│  Jamble Fees (14%)                      │
-│  - R$ 14,00                             │
-│                                         │
-│  ═══════════════════════════════════     │
-│  Seus ganhos (o que você recebe)        │
-│  R$ 86,00                               │
-└─────────────────────────────────────────┘
-```
+![seller-fee-breakdown: Preço de venda R$ 100,00, Jamble Fees 14% (- R$ 14,00), ganhos do vendedor R$ 86,00](./assets/mockups/jamble-seller-fees-and-commissions__seller-fee-breakdown__pt-br.png)
 
 **Seus ganhos líquidos = Preço de venda × 86%**
 
@@ -40,20 +28,7 @@ Aqui está um exemplo de uma venda de R$ 100:
 
 Os custos de frete são **separados** dos seus ganhos. O comprador paga o frete no checkout além do preço do produto. As taxas de frete vão diretamente para a transportadora (Correios) — não são deduzidas dos seus ganhos e a Jamble não cobra comissão sobre o frete.
 
-```
-┌─────────────────────────────────────────┐
-│  O que o comprador paga:                │
-│                                         │
-│  Preço do produto:  R$ 100,00           │
-│  Frete:             R$  18,50           │
-│  ──────────────────────────────         │
-│  Total:             R$ 118,50           │
-│                                         │
-│  O que você recebe:                     │
-│  Seus ganhos:       R$  86,00           │
-│  (R$ 100 - 14% Jamble Fees)            │
-└─────────────────────────────────────────┘
-```
+![Tela de cálculo de comissão do vendedor exibindo o que o comprador paga, frete e o ganho líquido após taxa Jamble de 14%](./assets/mockups/jamble-seller-fees-and-commissions__seller-fees-breakdown__pt-br.png)
 
 ## Quando a comissão é cobrada?
 

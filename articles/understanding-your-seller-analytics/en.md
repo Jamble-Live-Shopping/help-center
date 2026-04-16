@@ -22,28 +22,16 @@ Your performance data on Jamble is available in three places:
 
 After you end a show, a summary overlay appears automatically. Tap **"My Dashboard"** to see the full breakdown.
 
-```
-┌─────────────────────────────────┐
-│  @yourusername                  │
-│  Thanks for your show!          │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │      My Dashboard         │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Seller dashboard welcome screen showing username and My Dashboard button](./assets/mockups/understanding-your-seller-analytics__seller-dashboard-welcome__en.png)
 
 ### What the dashboard shows
 
 The dashboard displays key metrics from your show:
 
-| Metric | What it means |
-|--------|--------------|
-| **Total** | Total revenue from all sales during the show (in R$) |
-| **After Fees** | Your actual earnings after Jamble's 14% commission |
-| **Sold** | Number of products sold |
-| **Buyers** | Number of unique buyers who purchased |
-
+- ****Total**** — Total revenue from all sales during the show (in R$)
+- ****After Fees**** — Your actual earnings after Jamble's 14% commission
+- ****Sold**** — Number of products sold
+- ****Buyers**** — Number of unique buyers who purchased
 You'll also see a list of all items sold during the show with individual prices, and items that went unsold.
 
 ### Using the dashboard for improvement
@@ -61,22 +49,7 @@ To check your financial data:
 2. Open **Settings**
 3. Tap **"My Wallet"** in the SELL section
 
-```
-┌─────────────────────────────────┐
-│  My Wallet                      │
-│                                 │
-│  Available Balance              │
-│  R$ 1.250,00                    │
-│                                 │
-│  [Bank details]                 │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │       Withdraw            │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ⏱ Payout History              │
-└─────────────────────────────────┘
-```
+![My Wallet screen shows available balance of R$ 1,250.00 with bank details, withdraw button, and payout history](./assets/mockups/understanding-your-seller-analytics__my-wallet__en.png)
 
 ### What you'll see in your wallet
 

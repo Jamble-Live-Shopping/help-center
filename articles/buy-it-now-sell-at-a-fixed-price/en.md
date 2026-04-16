@@ -27,16 +27,7 @@ There is no timer counting down and no competition between buyers. The price you
 
 When creating or editing a product for your show, choose **Buy It Now** as the sell mode.
 
-```
-┌─────────────────────────────────┐
-│  Sell Mode                      │
-│                                 │
-│  ○ Real-time offers             │
-│  ○ Sudden Death                 │
-│  ● Buy It Now ←                │
-│                                 │
-└─────────────────────────────────┘
-```
+![Sell Mode screen with radio button options: Real-time offers, Sudden Death, and Buy It Now selected](./assets/mockups/buy-it-now-sell-at-a-fixed-price__sell-mode-picker__en.png)
 
 ### Step 2: Set your price
 
@@ -51,11 +42,7 @@ You can also add a **retail price** (optional) to show buyers the original value
 
 During your live show, go to your product list and tap on the product to pin it. When a Buy It Now product is pinned, buyers see a banner at the top of the show:
 
-```
-┌─────────────────────────────────┐
-│  🛒 Buy It Now         3 left  │
-└─────────────────────────────────┘
-```
+![Buy It Now section header with shopping cart icon and 3 left inventory status](./assets/mockups/buy-it-now-sell-at-a-fixed-price__buy-it-now-section__en.png)
 
 The banner shows "Buy It Now" in purple and the remaining quantity.
 

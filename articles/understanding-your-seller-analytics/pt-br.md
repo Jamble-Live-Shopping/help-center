@@ -22,28 +22,16 @@ Seus dados de desempenho na Jamble estão disponíveis em três lugares:
 
 Depois de encerrar um show, um resumo aparece automaticamente. Toque em **"My Dashboard"** para ver o detalhamento completo.
 
-```
-┌─────────────────────────────────┐
-│  @seunomeusuario                │
-│  Thanks for your show!          │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │      My Dashboard         │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Tela de boas-vindas do painel do vendedor com nome de usuário e botão "Meu Painel"](./assets/mockups/understanding-your-seller-analytics__seller-dashboard-welcome__pt-br.png)
 
 ### O que o dashboard mostra
 
 O dashboard exibe métricas principais do seu show:
 
-| Métrica | O que significa |
-|---------|----------------|
-| **TOTAL** | Receita total de todas as vendas durante o show (em R$) |
-| **AFTER FEES** | Seus ganhos reais após a comissão de 14% da Jamble |
-| **SOLD** | Número de produtos vendidos |
-| **BUYERS** | Número de compradores únicos |
-
+- ****TOTAL**** — Receita total de todas as vendas durante o show (em R$)
+- ****AFTER FEES**** — Seus ganhos reais após a comissão de 14% da Jamble
+- ****SOLD**** — Número de produtos vendidos
+- ****BUYERS**** — Número de compradores únicos
 Você também verá uma lista de todos os itens vendidos com preços individuais, e itens que não foram vendidos.
 
 ### Usando o dashboard para melhorar
@@ -61,22 +49,7 @@ Para verificar seus dados financeiros:
 2. Abra **Configurações**
 3. Toque em **"My Wallet"** na seção VENDER
 
-```
-┌─────────────────────────────────┐
-│  My Wallet                      │
-│                                 │
-│  Saldo Disponível               │
-│  R$ 1.250,00                    │
-│                                 │
-│  [Dados bancários]              │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │       Sacar               │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ⏱ Histórico de Saques         │
-└─────────────────────────────────┘
-```
+![Tela de saldo da carteira mostrando saldo disponível de R$ 1.250,00 com dados bancários e botão sacar](./assets/mockups/understanding-your-seller-analytics__wallet-balance__pt-br.png)
 
 ### O que você verá na carteira
 

@@ -25,18 +25,7 @@ There are several ways to start your seller application in the app:
 
 All of these open the same application.
 
-```
-┌─────────────────────────────────┐
-│  Settings                       │
-│                                 │
-│  IMPORTANT                      │
-│  ▶ Apply to go Live             │
-│                                 │
-│  SELL                           │
-│  ...                            │
-│                                 │
-└─────────────────────────────────┘
-```
+![Settings screen showing IMPORTANT section with Apply to go Live option and SELL section](./assets/mockups/apply-to-sell-on-jamble__settings-apply-to-sell__en.png)
 
 ### Step 2: Complete the application form
 
@@ -60,25 +49,7 @@ After submitting, your application is reviewed by the Jamble team. Our team may 
 
 While your application is under review, within 15 days please don't apply again or contact support about reviewing your application.
 
-```
-┌─────────────────────────────────┐
-│  Pending Application            │
-│                                 │
-│  It seems that you already      │
-│  submitted an application to    │
-│  Go Live. We'll be updating     │
-│  you as soon as possible.       │
-│  Any question? Feel free to     │
-│  reach out!                     │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │   Ok I will wait!         │  │
-│  └───────────────────────────┘  │
-│  ┌───────────────────────────┐  │
-│  │   Reach out               │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Pending Application alert dialog with message about submitted application to Go Live and two action buttons](./assets/mockups/apply-to-sell-on-jamble__pending-application__en.png)
 
 If you have questions while waiting, tap **"Contact Support > Ask a General Question"** to reach the team.
 

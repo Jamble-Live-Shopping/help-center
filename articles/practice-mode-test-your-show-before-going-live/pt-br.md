@@ -29,19 +29,7 @@ Abra o app da Jamble e vá ao show que você agendou. Toque nele para entrar na 
 
 Você verá uma contagem regressiva até o horário de início do seu show, junto com dois botões na parte inferior:
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│       Seu show começa em        │
-│           00:45:30              │
-│                                 │
-│  ┌─────────────┐ ┌───────────┐ │
-│  │Practice mode│ │  Go Live  │ │
-│  │   (branco)  │ │ (vermelho)│ │
-│  └─────────────┘ └───────────┘ │
-│                                 │
-└─────────────────────────────────┘
-```
+![Tela de contagem regressiva do show com dois botões de ação: Modo prática e Ir ao Vivo](./assets/mockups/practice-mode-test-your-show-before-going-live__show-countdown__pt-br.png)
 
 ### Passo 2: Toque em "Practice mode"
 
@@ -70,18 +58,7 @@ Quando terminar de praticar, você tem várias opções:
 - Toque no botão **"Stop practice"** que aparece na tela
 - Ou toque no **botão de voltar** para sair
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│   [Preview da sua câmera]       │
-│                                 │
-│                                 │
-│       ┌───────────────┐         │
-│       │ Stop practice │         │
-│       └───────────────┘         │
-│                                 │
-└─────────────────────────────────┘
-```
+![practice-mode-camera-preview mostrando visualização da câmera com botão Parar prática](./assets/mockups/practice-mode-test-your-show-before-going-live__practice-mode-camera-preview__pt-br.png)
 
 Quando você para a prática, tudo é resetado. Todas as vendas de prática são removidas, e seus produtos voltam ao estado original — prontos para seu show real.
 
@@ -91,36 +68,16 @@ Depois de praticar (ou pular a prática), toque em **"Go Live"** para iniciar se
 
 Uma mensagem de confirmação aparece:
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│    Start your Show              │
-│                                 │
-│    Once started, people will    │
-│    be able to join you          │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │       Yes, start          │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Later                          │
-│                                 │
-└─────────────────────────────────┘
-```
+![Diálogo de alerta "Iniciar seu Show" com botão de confirmação e opção Later](./assets/mockups/practice-mode-test-your-show-before-going-live__start-show-confirm__pt-br.png)
 
 Toque em **"Yes, start"** para ir ao vivo. Seus seguidores serão notificados e os compradores podem agora entrar no seu show.
 
 ## O que acontece durante o Modo de prática (e o que não acontece)
 
-| O que acontece | O que NÃO acontece |
-|-------------|---------------------|
-| Sua câmera e microfone ligam | Nenhum espectador pode te ver |
-| Você pode navegar e fixar produtos | Nenhum comprador pode entrar |
-| Você pode iniciar vendas de prática | Nenhuma compra real pode ser feita |
-| Você vê a interface completa de apresentador | Nenhuma notificação é enviada aos seus seguidores |
-| | Nenhum dado de venda é registrado |
-| | Seu show não é marcado como "iniciado" |
-
+- **Sua câmera e microfone ligam** — Nenhum espectador pode te ver
+- **Você pode navegar e fixar produtos** — Nenhum comprador pode entrar
+- **Você pode iniciar vendas de prática** — Nenhuma compra real pode ser feita
+- **Você vê a interface completa de apresentador** — Nenhuma notificação é enviada aos seus seguidores
 Tudo que acontece no Modo de prática fica no Modo de prática. É completamente separado do seu show real.
 
 ## Dicas importantes

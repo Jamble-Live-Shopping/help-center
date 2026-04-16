@@ -48,23 +48,7 @@ Se você ainda não gerou a etiqueta para um pacote:
 
 **Passo 2:** A tela **Shipping Label** abre, mostrando sua etiqueta como PDF. Se o envio inclui uma declaração de conteúdo, você verá duas abas:
 
-```
-┌─────────────────────────────────┐
-│  Shipping Label                 │
-│                                 │
-│  [ Label ] [ Content Declaration]│
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │                           │  │
-│  │    [Visualização do PDF]  │  │
-│  │                           │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │         Print             │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Tela de visualização de etiqueta de envio com navegação de abas, área de visualização PDF e botão imprimir](./assets/mockups/change-or-fix-your-shipping-label__shipping-label-preview__pt-br.png)
 
 **Passo 3:** Toque em **Print** para exportar o PDF. Isso abre o menu de compartilhamento onde você pode imprimir diretamente, salvar em Arquivos, ou enviar para outro dispositivo
 

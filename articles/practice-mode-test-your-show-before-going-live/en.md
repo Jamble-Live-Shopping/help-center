@@ -29,19 +29,7 @@ Open the Jamble app and go to the show you've scheduled. Tap on it to enter the 
 
 You'll see a countdown to your show's start time, along with two buttons at the bottom:
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│       Your show starts in       │
-│           00:45:30              │
-│                                 │
-│  ┌─────────────┐ ┌───────────┐ │
-│  │Practice mode│ │  Go Live  │ │
-│  │   (white)   │ │   (red)   │ │
-│  └─────────────┘ └───────────┘ │
-│                                 │
-└─────────────────────────────────┘
-```
+![Show countdown ready screen with 00:45:30 timer and Practice mode and Go Live buttons](./assets/mockups/practice-mode-test-your-show-before-going-live__show-countdown-ready__en.png)
 
 ### Step 2: Tap "Practice mode"
 
@@ -70,18 +58,7 @@ When you're done practicing, you have several options:
 - Tap the **"Stop practice"** button that appears on the screen
 - Or tap the **back button** to exit
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│     [Your camera preview]       │
-│                                 │
-│                                 │
-│       ┌───────────────┐         │
-│       │ Stop practice │         │
-│       └───────────────┘         │
-│                                 │
-└─────────────────────────────────┘
-```
+![Practice mode camera preview screen with Stop practice button](./assets/mockups/practice-mode-test-your-show-before-going-live__practice-mode-camera__en.png)
 
 When you stop practice, everything resets. All practice sales are removed, and your products go back to their original state — ready for your real show.
 
@@ -91,36 +68,16 @@ After practicing (or skipping practice), tap **"Go Live"** to start your real sh
 
 A confirmation message appears:
 
-```
-┌─────────────────────────────────┐
-│                                 │
-│    Start your Show              │
-│                                 │
-│    Once started, people will    │
-│    be able to join you          │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │       Yes, start          │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Later                          │
-│                                 │
-└─────────────────────────────────┘
-```
+![Start your Show alert dialog with confirmation button and later option](./assets/mockups/practice-mode-test-your-show-before-going-live__start-show-confirmation__en.png)
 
 Tap **"Yes, start"** to go live. Your followers will be notified and buyers can now join your show.
 
 ## What happens during Practice mode (and what doesn't)
 
-| What happens | What does NOT happen |
-|-------------|---------------------|
-| Your camera and microphone turn on | No viewers can see you |
-| You can browse and pin products | No buyers can join |
-| You can start practice sales | No real purchases can be made |
-| You see the full hosting interface | No notifications are sent to your followers |
-| | No sales data is recorded |
-| | Your show is not marked as "started" |
-
+- **Your camera and microphone turn on** — No viewers can see you
+- **You can browse and pin products** — No buyers can join
+- **You can start practice sales** — No real purchases can be made
+- **You see the full hosting interface** — No notifications are sent to your followers
 Everything that happens in Practice mode stays in Practice mode. It's completely separate from your real show.
 
 ## Important tips

@@ -15,19 +15,7 @@ Este guia explica como gerenciar suas preferências de notificações push na Ja
 
 No app, toque no **ícone do seu perfil** no canto inferior direito, depois toque no **ícone de engrenagem** para abrir **Settings**. Role até a seção **Account** e toque em **"Notifications"**.
 
-```
-┌─────────────────────────────────┐
-│  Settings                       │
-│                                 │
-│  ACCOUNT                        │
-│  ┌───────────────────────────┐  │
-│  │  Personal Information   → │  │
-│  │  Notifications          → │  │
-│  │  Edit my Profile        → │  │
-│  │  Blocked profiles       → │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Tela de Configurações mostrando a seção Conta com itens de menu: Informações Pessoais, Notificações, Editar meu Perfil e Perfis Bloqueados](./assets/mockups/notification-settings__settings-account-menu__pt-br.png)
 
 ### Passo 2: Verifique as permissões do dispositivo
 
@@ -41,39 +29,27 @@ Suas configurações de notificação são organizadas em **4 categorias**. Cada
 
 Receba novidades sobre ofertas especiais, descontos e muito mais.
 
-| Configuração | O que faz |
-|-------------|-----------|
-| Promotional alerts | Notificações sobre promoções e ofertas especiais da Jamble |
-
+- **Promotional alerts** — Notificações sobre promoções e ofertas especiais da Jamble
 #### Activity
 
 Atualizações sobre suas interações com outros usuários.
 
-| Configuração | O que faz |
-|-------------|-----------|
-| Followers | Quando alguém novo começa a te seguir |
-| Messages | Quando você recebe uma mensagem direta |
-| Likes | Quando alguém curte seu conteúdo |
-
+- **Followers** — Quando alguém novo começa a te seguir
+- **Messages** — Quando você recebe uma mensagem direta
+- **Likes** — Quando alguém curte seu conteúdo
 #### Live Shows
 
 Alertas sobre shows e produtos que podem te interessar.
 
-| Configuração | O que faz |
-|-------------|-----------|
-| Recommended shows | Shows que a Jamble acha que você vai gostar com base nos seus interesses |
-| Shows from people I follow | Quando um vendedor que você segue inicia ou agenda um show |
-| Bookmarked shows | Lembretes sobre shows que você salvou |
-| Bookmarked product from show | Quando um produto que você salvou aparece em um show ao vivo |
-
+- **Recommended shows** — Shows que a Jamble acha que você vai gostar com base nos seus interesses
+- **Shows from people I follow** — Quando um vendedor que você segue inicia ou agenda um show
+- **Bookmarked shows** — Lembretes sobre shows que você salvou
+- **Bookmarked product from show** — Quando um produto que você salvou aparece em um show ao vivo
 #### Transactions
 
 Acompanhe suas compras e vendas.
 
-| Configuração | O que faz |
-|-------------|-----------|
-| Updates on transaction status | Mudanças de status nos seus pedidos (enviado, entregue, etc.) |
-
+- **Updates on transaction status** — Mudanças de status nos seus pedidos (enviado, entregue, etc.)
 ### Passo 4: Ajuste configurações individuais
 
 Para ajustar uma notificação específica:
@@ -82,19 +58,7 @@ Para ajustar uma notificação específica:
 2. Se a categoria estiver recolhida, toque no **botão principal** para expandir
 3. Ative (roxo) ou desative (cinza) cada configuração individual
 
-```
-┌─────────────────────────────────┐
-│  Live Shows                [ON] │
-│  ┌───────────────────────────┐  │
-│  │  Recommended shows  [ON]  │  │
-│  │  Shows from people  [ON]  │  │
-│  │  I follow                 │  │
-│  │  Bookmarked shows   [OFF] │  │
-│  │  Bookmarked product [ON]  │  │
-│  │  from show                │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Configurações de notificações Live Shows com alternadores para shows recomendados, criadores seguidos, shows marcados e produtos marcados](./assets/mockups/notification-settings__live-shows-notifications__pt-br.png)
 
 **Desligar o botão principal** desativa todas as notificações daquela categoria de uma vez. Ligar novamente restaura todas.
 

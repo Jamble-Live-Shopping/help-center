@@ -16,12 +16,9 @@ Jamble does not use typed commands (like /ban or /mute). All moderation actions 
 
 There are three roles with moderation powers:
 
-| Role | What they can do |
-|------|-----------------|
-| **Seller (host)** | Delete messages, block users from the show |
-| **Moderator** | Delete messages, block users from the show |
-| **Admin (Jamble staff)** | All of the above + mute, ban |
-
+- ****Seller (host)**** — Delete messages, block users from the show
+- ****Moderator**** — Delete messages, block users from the show
+- ****Admin (Jamble staff)**** — All of the above + mute, ban
 As a seller, you have full moderation control over your own show.
 
 ## Managing your chat
@@ -87,19 +84,7 @@ Moderators are trusted users who can help you manage your chat during a show. Th
 3. You'll see a list of profiles you follow
 4. Tap the **Add** button next to the person you want to make a moderator
 
-```
-┌─────────────────────────────────┐
-│  My Moderators                  │
-│                                 │
-│  ┌───┐ username1        [Add]   │
-│  │ 👤│ @user1                   │
-│  └───┘                          │
-│  ┌───┐ username2      [Remove]  │
-│  │ 👤│ @user2 (moderator)       │
-│  └───┘                          │
-│                                 │
-└─────────────────────────────────┘
-```
+![My Moderators screen showing username1 and username2 with Add and Remove buttons](./assets/mockups/chat-and-moderation-tools-during-your-show__my-moderators__en.png)
 
 You can only add people you follow as moderators.
 

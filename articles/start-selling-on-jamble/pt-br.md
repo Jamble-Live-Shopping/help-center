@@ -18,21 +18,7 @@ Você precisa de:
 
 Baixe a Jamble na App Store (iPhone) ou Google Play Store (Android). Abra o app e crie sua conta com seu email ou número de telefone.
 
-```
-┌─────────────────────────────────┐
-│  Bem-vindo à Jamble             │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │  Cadastrar com Email      │  │
-│  └───────────────────────────┘  │
-│  ┌───────────────────────────┐  │
-│  │  Cadastrar com Telefone   │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  Já tem uma conta?              │
-│  Entrar                         │
-└─────────────────────────────────┘
-```
+![Tela de boas-vindas Jamble com opções de cadastro por email e telefone](./assets/mockups/start-selling-on-jamble__welcome-jamble__pt-br.png)
 
 Insira seu número de telefone e confirme via SMS ou WhatsApp. Depois, preencha seu email e adicione seu CPF. Pronto, sua conta está criada e você precisa solicitar acesso como vendedor Live.
 
@@ -113,23 +99,7 @@ Antes de ir ao vivo, adicione os produtos que quer vender. Para cada produto, vo
 
 Toque no botão de criar para agendar um show ao vivo.
 
-```
-┌─────────────────────────────────┐
-│  Criar um Show                  │
-│                                 │
-│  Título: ___________________   │
-│  Data: [Escolha uma data ▼]    │
-│  Hora: [Escolha um horário ▼]  │
-│  Categoria: [Selecione ▼]      │
-│                                 │
-│  Adicione uma capa do show que  │
-│  mostre o que você vai vender   │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │   Schedule a Show         │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Formulário Criar um Show com campos de título, data, hora, categoria e upload de capa do show](./assets/mockups/start-selling-on-jamble__create-show__pt-br.png)
 
 Dicas para configurar seu show:
 - **Título** — diga aos compradores o que esperar (ex: "Camisetas vintage e streetwear")

@@ -17,33 +17,13 @@ Você precisa de:
 
 Toque no **botão de criar** (o ícone +) na parte inferior do app, depois selecione a opção de criar um novo show.
 
-```
-┌─────────────────────────────────┐
-│  Criar                          │
-│                                 │
-│  ▶ Novo Anúncio                 │
-│  ▶ Schedule a Show              │
-│                                 │
-└─────────────────────────────────┘
-```
+![Menu Criar com linhas de configurações: Novo Anúncio e Schedule a Show](./assets/mockups/schedule-a-show__criar-menu__pt-br.png)
 
 ### Passo 2: Digite o título do show
 
 A primeira tela pede para você digitar o título do show. É isso que os compradores vão ver ao navegar nos shows agendados, então seja claro e específico.
 
-```
-┌─────────────────────────────────┐
-│  Create a new live show         │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ Type your show title      │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │          Next             │  │
-│  └───────────────────────────┘  │
-└─────────────────────────────────┘
-```
+![Tela de formulário para criar um novo show ao vivo com campo de título e botão Próximo](./assets/mockups/schedule-a-show__create-live-show__pt-br.png)
 
 **Bons títulos:**
 - "Sneakers Nike e Adidas - Vários tamanhos"
@@ -58,31 +38,7 @@ A primeira tela pede para você digitar o título do show. É isso que os compra
 
 Escolha uma tag que melhor descreva o que você vai vender. Os compradores usam tags para encontrar shows que combinam com seus interesses.
 
-```
-┌─────────────────────────────────┐
-│  Select 1 Tag                   │
-│                                 │
-│  ┌──────────┐ ┌──────────┐     │
-│  │Colecionáv│ │ Pokémon  │     │
-│  └──────────┘ └──────────┘     │
-│  ┌──────────┐ ┌──────────┐     │
-│  │Miniaturas│ │  Magic   │     │
-│  └──────────┘ └──────────┘     │
-│  ┌──────────┐ ┌──────────┐     │
-│  │Out. TCGs │ │Moda Fitn.│     │
-│  └──────────┘ └──────────┘     │
-│  ┌──────────┐ ┌──────────┐     │
-│  │Contemp.  │ │  Beleza  │     │
-│  └──────────┘ └──────────┘     │
-│  ┌──────────┐ ┌──────────┐     │
-│  │ Calçados │ │   Luxo   │     │
-│  └──────────┘ └──────────┘     │
-│  ┌──────────┐ ┌──────────┐     │
-│  │  Joias   │ │ Infantil │     │
-│  └──────────┘ └──────────┘     │
-│                                 │
-└─────────────────────────────────┘
-```
+![Tela Selecionar 1 Tag com grade de botões de categorias: Colecionável, Pokémon, Miniaturas, Magic, Out. TCGs, Moda Fitness, Contemporâneo, Beleza, Calçados, Luxo, Joias e Infantil](./assets/mockups/schedule-a-show__select-tag__pt-br.png)
 
 Você só pode selecionar **uma tag por show**. Escolha a que melhor corresponde à maioria do que vai vender. Se pular essa etapa, seu show vai ser categorizado como "Colecionáveis" por padrão.
 
@@ -147,16 +103,7 @@ Você **não pode** alterar as configurações de repetição depois que um show
 
 Quando atingir o limite, você verá:
 
-```
-┌─────────────────────────────────┐
-│  Postpone Limit                 │
-│                                 │
-│  This Show was already          │
-│  postponed too many times.      │
-│  You cannot postpone it.        │
-│                                 │
-└─────────────────────────────────┘
-```
+![postpone-limit-alert: Diálogo mostrando aviso de limite de adiamento](./assets/mockups/schedule-a-show__postpone-limit-alert__pt-br.png)
 
 ## Cancelando um show
 
