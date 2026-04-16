@@ -20,48 +20,20 @@ Go to your profile, then tap **Settings** → **My Wallet**.
 
 In the top-right corner of the wallet screen, tap the **clock icon** (next to the help button). This opens the **Payouts History** screen.
 
-```
-┌─────────────────────────────────┐
-│  My Wallet              [?] [⏰]│
-│                                 │
-│  [Your balance sections]        │
-│                                 │
-│  Tap the clock icon ──────→ [⏰]│
-│                                 │
-└─────────────────────────────────┘
-```
+![My Wallet screen with the help and history icons in the top-right corner](./assets/mockups/seller-statements-view-your-payout-history__wallet-header.png)
 
 ### Step 3: Review your payouts
 
 The Payouts History screen shows all your withdrawal records, with the most recent at the top.
 
-```
-┌─────────────────────────────────┐
-│  Payouts History                │
-│                                 │
-│  #PAY-12345        R$ 350,00   │
-│  Completed         19/03/2026   │
-│  ─────────────────────────────  │
-│  #PAY-12340        R$ 520,00   │
-│  Completed         15/03/2026   │
-│  ─────────────────────────────  │
-│  #PAY-12335        R$ 180,00   │
-│  Completed         10/03/2026   │
-│  ─────────────────────────────  │
-│  #PAY-12330        R$ 95,00    │
-│  Failed            08/03/2026   │
-│                                 │
-└─────────────────────────────────┘
-```
+![Payouts History list with four entries: three completed in green and one failed in red](./assets/mockups/seller-statements-view-your-payout-history__payouts-history.png)
 
 Each payout entry shows four pieces of information:
 
-| Field | What it shows |
-|-------|--------------|
-| Payout ID | A unique reference number for this withdrawal |
-| Amount | The R$ value that was (or attempted to be) transferred |
-| Status | The current state: Created, Processing, Pending, Completed, Failed, Canceled |
-| Date | When you requested the withdrawal |
+- **Payout ID** — a unique reference number for this withdrawal
+- **Amount** — the R$ value that was (or attempted to be) transferred
+- **Status** — the current state: Created, Processing, Pending, Completed, Failed, Canceled
+- **Date** — when you requested the withdrawal
 
 ### Step 4: Scroll for older records
 
