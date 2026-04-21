@@ -21,7 +21,7 @@ Existem três caminhos no app, todos abrem a mesma inscrição:
 - **Nas configurações:** abra Configurações e toque em **Inscreva-se para entrar no ar** na seção IMPORTANTE
 - **Assistindo um show:** toque no menu e selecione **Inscreva-se para entrar no ar**
 
-![Configurações com seção IMPORTANTE e opção Inscreva-se para entrar no ar](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/apply-to-sell-on-jamble__configuracoes-menu__pt-br.png)
+![Configurações com seção IMPORTANTE e opção Inscreva-se para entrar no ar](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/apply-to-sell-on-jamble__configuracoes-menu__pt-br__v2.png)
 
 ## Preencha o formulário de inscrição
 
@@ -44,7 +44,7 @@ Depois de enviar, sua inscrição é analisada pela equipe da Jamble. Nossa equi
 
 Enquanto sua inscrição está em análise, por favor não se inscreva novamente nem entre em contato com o suporte sobre o status. Se você tentar abrir uma nova inscrição, o app mostra esta mensagem:
 
-![Alerta Aplicativo pendente com botões Entre em contato e Ok, vou aguardar!](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/apply-to-sell-on-jamble__pending-application__pt-br.png)
+![Alerta Aplicativo pendente com botões Entre em contato e Ok, vou aguardar!](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/apply-to-sell-on-jamble__pending-application__pt-br__v2.png)
 
 Para qualquer outra dúvida enquanto espera, toque em **Entre em contato** no alerta ou abra o chat do app.
 

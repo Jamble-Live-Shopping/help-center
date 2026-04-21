@@ -21,7 +21,7 @@ You see a single 14% deduction. There is no processing fee on top, everything is
 
 Example with a $100.00 sale (e.g., a Charizard card):
 
-![Breakdown of a $100.00 sale on Jamble, 14% commission ($14.00) and net earnings of $86.00](./assets/mockups/jamble-seller-fees-and-commissions__seller-fee-breakdown__pt-br.png)
+![Breakdown of a $100.00 sale on Jamble, 14% commission ($14.00) and net earnings of $86.00](./assets/mockups/jamble-seller-fees-and-commissions__seller-fee-breakdown__pt-br__v2.png)
 
 **Your net earnings = Sale price × 86%**
 
@@ -29,7 +29,7 @@ Example with a $100.00 sale (e.g., a Charizard card):
 
 Shipping is **separate** from your earnings. The buyer pays for shipping at checkout, on top of the product price. This amount goes directly to the carrier (Correios). Jamble does not charge commission on shipping.
 
-![Screen showing what the buyer pays, shipping, and the seller's net earnings after the 14% Jamble fee](./assets/mockups/jamble-seller-fees-and-commissions__seller-fees-breakdown__pt-br.png)
+![Screen showing what the buyer pays, shipping, and the seller's net earnings after the 14% Jamble fee](./assets/mockups/jamble-seller-fees-and-commissions__seller-fees-breakdown__pt-br__v2.png)
 
 ## When is the commission charged?
 

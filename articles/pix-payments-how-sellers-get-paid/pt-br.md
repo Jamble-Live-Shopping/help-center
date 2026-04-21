@@ -43,7 +43,7 @@ Vá no seu perfil, toque em **Configurações**, depois em **Minha carteira**.
 
 Se sua conta bancária ainda não estiver cadastrada, você vai ver um botão **Register Bank** na parte de baixo da tela.
 
-![Cabeçalho da tela Minha carteira com seta voltar, ícones de relógio e ajuda, seções de saldo e botão Register Bank](./assets/mockups/pix-payments-how-sellers-get-paid__wallet-header__pt-br.png)
+![Cabeçalho da tela Minha carteira com seta voltar, ícones de relógio e ajuda, seções de saldo e botão Register Bank](./assets/mockups/pix-payments-how-sellers-get-paid__wallet-header__pt-br__v2.png)
 
 Toque em **Register Bank** e escolha:
 - **Individual** se você vende como pessoa física (CPF)
@@ -69,7 +69,7 @@ Se precisar atualizar sua conta bancária, toque em **Atualizar** ao lado dos se
 
 Quando você tem saldo disponível, o botão **Sacar** fica ativo no alto da tela.
 
-![Tela Minha carteira com saldo disponível para saque, valor pendente, dados bancários e botão Sacar](./assets/mockups/pix-payments-how-sellers-get-paid__wallet-balance__pt-br.png)
+![Tela Minha carteira com saldo disponível para saque, valor pendente, dados bancários e botão Sacar](./assets/mockups/pix-payments-how-sellers-get-paid__wallet-balance__pt-br__v2.png)
 
 Toque em **Sacar**. Uma confirmação aparece. Esta ação é irreversível e disponível a cada 24h.
 

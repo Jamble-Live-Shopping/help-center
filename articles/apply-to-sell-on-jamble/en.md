@@ -21,7 +21,7 @@ There are three paths in the app, and they all open the same application:
 - **In settings:** open Settings and tap **Apply to go Live** in the IMPORTANT section
 - **Watching a show:** tap the menu and select **Apply to go Live**
 
-![Settings with IMPORTANT section and Apply to go Live option](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/apply-to-sell-on-jamble__settings-apply-to-sell__en.png)
+![Settings with IMPORTANT section and Apply to go Live option](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/apply-to-sell-on-jamble__settings-apply-to-sell__en__v2.png)
 
 ## Fill out the application form
 
@@ -44,7 +44,7 @@ After you submit, your application is reviewed by the Jamble team. Our team may 
 
 While your application is under review, please don't apply again or contact support about the status. If you try to open a new application, the app shows this message:
 
-![Pending Application alert with Reach out and Ok I will wait! buttons](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/apply-to-sell-on-jamble__pending-application__en.png)
+![Pending Application alert with Reach out and Ok I will wait! buttons](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/apply-to-sell-on-jamble__pending-application__en__v2.png)
 
 For any other questions while you wait, tap **Reach out** on the alert or open the app chat.
 

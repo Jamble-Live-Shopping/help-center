@@ -43,7 +43,7 @@ Jamble has 11 pre-defined profiles. Choose the one that matches the size and wei
 - **Large Bundles**: 7+ items. Large clothing or card lots.
 - **Extra-Large Bundles**: very large orders, large collections. The largest profile available.
 
-![Shipping profile selection guide showing a decision tree for choosing appropriate shipping categories based on package type and characteristics](./assets/mockups/choose-a-shipping-profile__shipping-profile-guide__en.png)
+![Shipping profile selection guide showing a decision tree for choosing appropriate shipping categories based on package type and characteristics](./assets/mockups/choose-a-shipping-profile__shipping-profile-guide__en__v2.png)
 
 ## How to choose the right profile
 
