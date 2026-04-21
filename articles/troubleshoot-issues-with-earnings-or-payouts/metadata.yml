@@ -3,15 +3,21 @@ slug: troubleshoot-issues-with-earnings-or-payouts
 collection_id: 19177938
 
 # Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
-default_locale: pt-br
+default_locale: pt-BR
 
 state: published
-author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+author_id: 7980499
+last_sync: 2026-04-21T00:00:00Z
+titles:
+  pt-BR: Resolver Problemas de Pagamento ou Saque
+  en: Troubleshoot Issues with Earnings or Payouts
+descriptions:
+  pt-BR: Resolva os problemas mais comuns com ganhos e saques na Jamble antes de contactar o suporte.
+  en: Solve the most common issues with earnings and payouts on Jamble before contacting support.
 locales:
   pt-br:
     title: 'Resolver Problemas de Pagamento ou Saque'
-    description: ''
+    description: 'Resolva os problemas mais comuns com ganhos e saques na Jamble antes de contactar o suporte.'
   en:
     title: 'Troubleshoot Issues with Earnings or Payouts'
-    description: "This guide helps you solve the most common problems sellers face with their earnings and payouts on Jamble. If your money isn't showing up, a payout failed, or something doesn't look right, start here."
+    description: 'Solve the most common issues with earnings and payouts on Jamble before contacting support.'

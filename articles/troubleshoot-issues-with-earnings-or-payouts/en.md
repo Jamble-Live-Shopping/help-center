@@ -2,104 +2,104 @@
 
 ## What you'll learn
 
-This guide helps you solve the most common problems sellers face with their earnings and payouts on Jamble. If your money isn't showing up, a payout failed, or something doesn't look right, start here.
+This guide helps you resolve the most common issues with your earnings and payouts on Jamble. If money from a sale hasn't appeared, a payout is stuck, or the amount doesn't match what you expected, start here before contacting support.
 
-## Common issues and solutions
+## Before you start
 
-### Issue 1: "I don't see the Withdraw button"
+You need:
+- An approved seller account on Jamble
+- Access to your **My Wallet** (Profile > Settings > My Wallet)
+- Your bank details registered through Pagar.me (Jamble's payment partner)
 
-**Why this happens:** Several possible reasons: you don't have available earnings, your balance is below the R$ 100 minimum, you already withdrew in the last 24 hours, or your bank details aren't registered.
+## Issue 1: My payout didn't appear in my bank account
 
-**How to fix it:**
-1. Open **My Wallet** from your settings
-2. Look at the button at the bottom:
-   - If it says **Register Bank** → you need to register your bank details first. Tap the button and follow the registration steps (see "Set Up and Start a Payout" article)
-   - If there's no button at all → your available balance may be below R$ 100 (the minimum withdrawal), or you may have withdrawn in the last 24 hours (there's a 24-hour cooldown between withdrawals)
-   - If you see a countdown message → wait until the cooldown period expires
+After you request a payout, it goes through three stages: **Processing** (being processed), **Completed** (finished), and then it can take a few more business days to appear in your bank statement.
 
-### Issue 2: "My payout failed"
+**How to check the status:**
+1. Open **My Wallet** in **Settings**
+2. Tap the clock icon in the top right corner to open **Payouts History**
+3. See the status of your most recent payout
 
-**Why this happens:** Usually because your bank details are incorrect or incomplete.
+![Payouts History showing three payouts with status Completed, Processing and Failed](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/troubleshoot-issues-with-earnings-or-payouts__payouts-status-badges__en.png)
 
-**How to fix it:**
-1. Open **My Wallet**
-2. Look at the **Bank Details** section at the bottom
-3. Tap **Update** to check and correct your bank information
-4. Make sure:
-   - Your bank account is in your name (matching your CPF or CNPJ)
-   - The account number and agency code are correct
-   - The account type (checking or savings) is correct
-5. After updating, tap **Withdraw** again to retry
+**What each status means:**
+- **Processing**: the payout was requested and is on its way to your bank. It normally takes up to 5 business days depending on your bank
+- **Completed**: Jamble sent the money. If it hasn't arrived in your statement yet, wait another 1 to 2 business days and check with your bank
+- **Failed**: something prevented the transfer. See Issue 4 below
 
-**If the problem persists:** Contact support. There may be an issue with your Pagar.me registration that needs manual review.
+**Still not showing up after 5 business days with Completed status?** Contact support and provide the payout ID (visible in **Payouts History**).
 
-### Issue 3: "My earnings are lower than expected"
+## Issue 2: My earnings are stuck on Pending for a long time
 
-**Why this happens:** Jamble deducts a 14% commission on each sale before adding your earnings to your wallet.
-
-**How to check:**
-- If you sold an item for R$ 100, your wallet shows R$ 86 (R$ 100 - 14%)
-- Shipping costs are paid by the buyer and are not part of your earnings
-- Check your order details in **My Sales** to see the exact amounts
-
-**Still doesn't add up?** Check if any orders were canceled, refunded, or are still in progress. Only completed orders (where the buyer confirmed receipt) contribute to your available balance.
-
-### Issue 4: "My payout is stuck on Processing"
-
-**Why this happens:** Bank transfers typically take 2 to 5 business days. "Processing" is the normal state during this time.
-
-**What to do:**
-1. Wait 2-5 business days — this is the normal processing time for bank transfers
-2. Check your **Payouts History** (clock icon in wallet) for status updates
-3. If it's been more than 5 business days, contact support with your payout ID
-
-### Issue 5: "I sold items but my wallet shows R$ 0"
-
-**Why this happens:** Your orders haven't been completed yet. Earnings only become available after:
+Earnings only become **Available to Withdraw** after an order is **completed**. An order is completed when:
 1. You confirm the order
-2. You ship the item
-3. The buyer receives and confirms the item
+2. You ship the product
+3. The buyer receives and confirms receipt (or 3 days pass after delivery without the buyer opening a dispute)
+
+While any of these steps haven't happened, the amount stays on **Pending** in your wallet.
 
 **What to do:**
-1. Go to **My Sales** to check your order statuses
-2. Make sure you've confirmed all pending orders
-3. Ship unshipped orders as soon as possible
+1. Go to **My Sales** and check the status of each order
+2. Confirm pending orders as soon as possible
+3. Ship the products and add the tracking code
 4. Wait for the buyer to confirm receipt
 
-### Issue 6: "I need to change my bank account"
+If an order was already delivered more than 3 days ago and still shows Pending, there may be an issue with the tracking. In that case, contact support.
 
-**How to fix it:**
-1. Open **My Wallet**
-2. In the **Bank Details** section, tap **Update**
-3. Choose **Individual** or **Company** depending on your situation
-4. Fill in the new form with your updated bank details
+## Issue 3: The amount that arrived is less than I expected
 
-**Important:** Make sure to withdraw any available balance before changing banks, or wait until the update is complete before requesting a new withdrawal.
+Jamble retains a service fee on each completed sale, already deducted before the amount is added to your available balance. The amount you see in **Available to Withdraw** is already the net amount.
 
-### Issue 7: "I can't register my bank — the form won't load"
+**How to check the calculation for an order:**
+1. Open **My Sales**
+2. Tap the order in question
+3. See the breakdown: sale amount, service fee, and net amount credited
 
-**What to do:**
-1. Check your internet connection
-2. Try closing and reopening the app
-3. Make sure you have the latest version of Jamble installed
-4. If the form still won't load, try using WiFi instead of mobile data
-5. Contact support if the issue continues
+**Other reasons the amount might be less than expected:**
+- Shipping cost is paid by the buyer and is not part of your earnings
+- Canceled or refunded orders don't go into your available balance
+- Orders still on **Pending** appear separately and can't be withdrawn yet
+
+If the order breakdown doesn't match what you expected anyway, note the order ID and contact support.
+
+## Issue 4: Error when starting a payout
+
+Some errors appear when you tap **Withdraw**. The most common ones are related to your bank details or your registration with Pagar.me.
+
+![Error modal informing that the payout cannot be started and suggesting to check bank details](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/troubleshoot-issues-with-earnings-or-payouts__withdraw-error-modal__en.png)
+
+**Quick checklist:**
+
+**1. Is your Pagar.me registration complete?**
+If you see a message asking to "verify your identity and bank details," your registration hasn't been finished yet. Tap the indicated button and follow the registration flow (Individual or Empresa, depending on your case).
+
+**2. Are your bank details correct?**
+- Open **My Wallet**
+- In the **Bank Details** section (below the balance card), tap **Update**
+- Check:
+    - The account is in your name (or in your company's CNPJ, if registered as Empresa)
+    - Account number and bank code are correct
+    - Account type is correct (checking or savings)
+
+![Bank Details section with Update button to correct bank information](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/troubleshoot-issues-with-earnings-or-payouts__bank-details-update__en.png)
+
+**3. Is the amount above the minimum?**
+The payout only becomes available when your balance exceeds the minimum amount shown on the **Withdraw** button itself.
+
+**4. Did you already payout in the last 24 hours?**
+You can only payout once per day. If you just withdrew, wait for the interval and try again the next day.
 
 ## When to contact support
 
 Contact support if:
-- Your payout has been "Processing" for more than 24 hours
-- Your payout failed multiple times despite correct bank details
-- Your earnings are missing and orders show as "Completed"
-- You're seeing an error message you don't understand
-- You need help with your Pagar.me registration
+- A **Completed** payout didn't appear in your bank after 5 business days
+- A payout shows as **Failed** even with correct bank details
+- An order calculation doesn't match the breakdown in **My Sales**
+- The Pagar.me registration form won't load or freezes
+- A delivered order still shows **Pending** after more than 3 days
 
-When contacting support, include:
-- Your username
-- The payout ID (if applicable, from Payouts History)
-- A description of the issue
-- Screenshots if possible
-
-## Need help?
-
-Contact us through the app chat or email support@jambleapp.com.
+When opening a ticket, send:
+- Your Jamble username
+- Payout ID (from **Payouts History**) or order ID (from **My Sales**), as applicable
+- A description of what you expected to see and what happened
+- A screenshot of the error message, if there is one
