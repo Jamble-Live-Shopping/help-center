@@ -11,7 +11,7 @@ last_sync: 2026-04-21T00:00:00Z
 locales:
   pt-br:
     title: 'Pagamentos via PIX, como vendedores recebem'
-    description: 'Como vendedores recebem na Jamble: cadastrar conta bancária, taxa de R$ 3,67 por saque, prazo de 2 a 5 dias úteis via PIX.'
+    description: 'Como vendedores recebem na Jamble: cadastrar conta bancária, solicitar saque e receber via PIX em 2 a 5 dias úteis.'
   en:
     title: 'PIX Payments, How Sellers Get Paid'
-    description: 'How sellers get paid on Jamble: register bank account, $3.67 fee per withdrawal, 2 to 5 business day payout via PIX.'
+    description: 'How sellers get paid on Jamble: register a bank account, request a withdrawal, receive via PIX in 2 to 5 business days.'
