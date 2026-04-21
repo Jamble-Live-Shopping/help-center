@@ -2,102 +2,113 @@
 
 ## What you'll learn
 
-This guide explains how to cancel an order as a seller on Jamble, at which stages you can do it, and what happens when you do.
+This guide shows how to cancel an order as a seller on Jamble, in which phases it's possible, and what happens to the buyer afterward.
 
 ## Before you start
 
 You need:
 - An approved seller account with active orders
 
-## How order cancellation works
+## The two ways to cancel
 
-There are two ways to cancel an order as a seller, depending on the order status:
+There are two ways to cancel a sale, depending on the order status.
 
-1. **Before confirming** (status: Created) — tap **Reject** to decline the order
-2. **After confirming** (status: Confirmed or later) — tap **Cancel Sale** to cancel the order
+1. **Before confirming** (status Created): tap **Reject** to refuse the order.
+2. **After confirming** (status Confirmed, In Delivery, or Delivered): tap **Cancel Sale**.
 
-In both cases, the buyer is automatically refunded and no commission is charged.
+In both cases, the buyer receives a refund automatically via PIX and the product goes back to your inventory.
 
-## Step by step
+## Step 1: Open your sales
 
-### Step 1: Go to your orders
+In the app, go to **Settings** and tap **My Sales**.
 
-Open the Jamble app and go to **My Sales** from your settings.
+![Settings seller menu section with My Sales highlighted, My Wallet, Shipping Preferences, and Vacation mode](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cancel-an-order-as-a-seller__settings-seller-menu__en.png)
 
-![Settings menu with navigation options including My Sales, My Wallet, and Shipping Preferences](./assets/mockups/cancel-an-order-as-a-seller__settings-menu__en.png)
+You see a list of your recent orders. Tap the order you want to cancel to open the details screen.
 
-### Step 2: Find the order
+## Step 2: Identify the status
 
-Tap on the order you want to cancel.
+On the details screen, look at the status card at the top. The status tells you which path to follow.
 
-### Option A: Cancel before confirming (Reject)
+- Status **Created**: payment is authorized but you haven't confirmed yet. Use **Reject**.
+- Status **Confirmed**, **In Delivery**, or **Delivered**: you've already confirmed the sale. Use **Cancel Sale**.
 
-If the order is in "Created" status, you'll see two buttons:
+## Option A: Reject before confirming
 
-![Order details card with product photo, name, and price in Brazilian reals, with Reject and Confirm action buttons](./assets/mockups/cancel-an-order-as-a-seller__order-details-card__en.png)
+If the order is in **Created**, you see two buttons at the bottom: **Reject** (gray) and **Confirm** (dark). Tap **Reject** to refuse.
 
-Tap **Reject** to decline the order. The buyer is automatically refunded.
+The order closes immediately. The buyer receives the refund and the product goes back to your inventory. This is the cleanest path because it avoids any shipping prep.
 
-### Option B: Cancel after confirming (Cancel Sale)
+## Option B: Cancel after confirming
 
-If you've already confirmed the order, you can still cancel it. Open the order and look for the **Cancel Sale** button (in red).
+If the order is already confirmed, open the details screen. The **Cancel Sale** button appears in red in the top right corner of the status card.
 
-Tap **Cancel Sale**. A screen asks: **"What's making you cancel?"** Select a reason:
+![Confirmed status card with Cancel Sale button in red in the top right corner](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cancel-an-order-as-a-seller__sale-detail-cancel-button__en.png)
 
-- Unable to ship the item
-- Item lost
-- Item damaged
-- Buyer requested cancellation
-- Other reasons
+Tap **Cancel Sale**. The next screen asks **What's making you cancel?** and prompts you to choose a reason from five options.
 
-Tap **Submit**. A final confirmation appears: **"Cancel this sale"** with a reminder that abusive or repeated cancellations may lead to account restrictions.
+![Cancellation reason selection screen with Unable to ship the item option selected and purple Submit button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cancel-an-order-as-a-seller__cancellation-reason-picker__en.png)
 
-Tap **Cancel Sale** to confirm, or **Don't Cancel** to go back.
+The five reasons are:
+- **Unable to ship the item**
+- **Item lost**
+- **Item damaged**
+- **Buyer requested cancellation**
+- **Other reasons**
 
-## What happens after you cancel
+Select the reason that best applies and tap **Submit**.
 
-- **The buyer gets a full refund.** Their payment is returned automatically
-- **No commission is charged.** You don't pay the Jamble Fees on canceled orders
-- **The product goes back to your inventory.** You can sell it again in a future show
+## Step 3: Confirm the cancellation
 
-## When can you cancel an order?
+A final window asks for confirmation. It reminds you that abusive or repeated cancellations can lead to temporary restrictions or account suspension.
 
-| Order status | Can you cancel? | How |
-|-------------|----------------|-----|
-| Created | Yes | Tap **Reject** |
-| Confirmed | Yes | Tap **Cancel Sale** |
-| In Delivery | Yes | Tap **Cancel Sale** |
-| Delivered | Yes | Tap **Cancel Sale** |
-| Completed | No | Transaction is finished |
+![Cancel this sale confirmation window with Don't Cancel button in blue and Cancel Sale button in red](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cancel-an-order-as-a-seller__cancel-sale-confirmation__en.png)
 
-**Once an order is completed** (buyer has confirmed receipt and the transaction is closed), it can no longer be canceled from the app. Contact support if there's an issue with a completed order.
+Tap **Cancel Sale** to confirm, or **Don't Cancel** to go back. The support team reviews the order within 2 hours.
 
-## Important tips
+## What happens next
 
-- **Only cancel orders when truly necessary.** Valid reasons: the item is no longer available, you found damage you didn't notice before, or there was a listing error
-- **Don't cancel orders to avoid shipping.** Frequent cancellations can affect your reputation with buyers
-- **Act quickly.** If you know you can't fulfill an order, cancel it as soon as possible so the buyer gets their refund right away
-- **Rejecting early is better.** If you're going to cancel, it's best to reject the order before confirming — this avoids any unnecessary steps for the buyer
+When the cancellation is processed:
+- **The buyer receives the full refund via PIX.** The return is automatic and goes to the same key used for payment.
+- **You lose the sale.** The money doesn't go into your wallet and the transaction appears as canceled in your history.
+- **The product goes back to your inventory.** You can list it again in an upcoming show or leave it available on your profile.
 
-## Common questions
+## When can I cancel
+
+You can cancel an order while the buyer hasn't confirmed receipt yet. The table below sums up the statuses where the button is visible.
+
+- **Created**: yes, use **Reject**.
+- **Confirmed**: yes, use **Cancel Sale**.
+- **In Delivery**: yes, use **Cancel Sale** (requires 50 completed sales).
+- **Delivered**: yes, use **Cancel Sale** (requires 50 completed sales).
+- **Completed**: no, the transaction is closed.
+
+When the order reaches **Completed**, it's out of your control in the app. If there's a problem after that, open a support ticket.
+
+## Best practices
+
+- **Cancel only when necessary.** Valid reasons: product lost, damage discovered after the sale, error in listing.
+- **Don't cancel to avoid shipping.** Repeated cancellations affect your reputation and can block account features.
+- **Act fast.** The sooner you cancel, the sooner the buyer gets the refund.
+- **Rejecting is better than canceling.** If you already know you won't ship, use **Reject** before confirming. This avoids extra steps for the buyer.
+
+## Frequently asked questions
 
 **Can I cancel an order after I've already confirmed it?**
-Yes. You can cancel a confirmed order by tapping **Cancel Sale** on the order detail screen. The buyer is refunded automatically.
+Yes, just open the order and tap **Cancel Sale**. The refund is automatic.
 
-**Does canceling an order hurt my account?**
-Occasional cancellations for legitimate reasons are fine. However, frequent cancellations may affect your standing as a seller. Only cancel when truly necessary.
+**Does canceling harm my account?**
+Occasional cancellations for legitimate reasons are normal. Frequent cancellations affect your seller status and may trigger restrictions.
 
-**How quickly does the buyer get refunded?**
-The refund is processed automatically when you cancel. The time for the refund to appear depends on the buyer's payment method.
+**How long does it take for the buyer to get the refund?**
+The refund is processed as soon as you confirm the cancellation. Since payment is PIX, the amount usually returns in minutes.
 
-**Can the buyer cancel the order too?**
-Yes. While the order is in "Created" status, the buyer can also cancel it. The buyer sees a **Cancel Order** button with a confirmation:
-- "Cancel this order" → "Yes, I cancel" or "No, back"
-- If they cancel, you are notified and the product returns to your inventory
+**Can the buyer also cancel?**
+Yes, while the order is in **Created**. They see the **Cancel Order** button and a dialog with **Yes, I cancel** or **No, back**. If the buyer cancels, you're notified and the product goes back to your inventory.
 
-**Can I partially cancel an order?**
-No. Orders are canceled entirely. Each item is a separate order on Jamble, so you cancel one item at a time.
+**Can I cancel just part of the order?**
+No. Each item is a separate order on Jamble, so you cancel one item at a time.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Talk to the team via the in-app chat or email support@jambleapp.com.
