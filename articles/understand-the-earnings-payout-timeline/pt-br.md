@@ -2,82 +2,96 @@
 
 ## O que você vai aprender
 
-Este guia explica como seus ganhos vão de uma venda concluída até o dinheiro na sua conta bancária. Você vai entender cada etapa do prazo de pagamento, quando seus fundos ficam disponíveis e quanto tempo o processo todo leva.
+Este guia explica o caminho dos seus ganhos, desde a venda até o dinheiro no seu banco. Você vai saber quando o valor fica disponível, quando você pode sacar e quanto tempo o PIX leva para cair.
 
 ## Antes de começar
 
 Você precisa de:
 - Uma conta de vendedor aprovada na Jamble
-- Dados bancários registrados na Pagar.me (veja o artigo "Configurar e Iniciar um Saque")
+- Dados bancários cadastrados na carteira (via Pagar.me)
 
-## Como funciona o prazo de pagamento
+## Os três estados dos seus ganhos
 
-Quando você vende um item na Jamble, seus ganhos não chegam na sua conta bancária imediatamente. Eles passam por várias etapas para garantir a proteção de ambos, você e o comprador. Aqui está o cronograma completo:
+Seus ganhos passam por três estados na sua carteira. Cada venda avança por esses estados no seu próprio ritmo.
 
-![earnings-payout-timeline: fluxo vertical de 7 etapas do processo de venda até saque (Venda, Confirmado, Enviado, Entregue, Concluído, Disponível, Sacado)](./assets/mockups/understand-the-earnings-payout-timeline__earnings-payout-timeline__pt-br.png)
+![Tela Minha Carteira mostrando Disponível para sacar R$ 248,00 com botão Sacar roxo, Dados Bancários e seção Pendente com R$ 172,00 e link Saiba Mais](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/understand-the-earnings-payout-timeline__wallet-balance__pt-br.png)
+
+**1. Pendente.** Assim que o comprador paga, o valor do pedido aparece como **Pendente** na sua carteira. Você ainda não pode sacar. O dinheiro fica retido enquanto o pedido está em trânsito e aguardando a confirmação do comprador. Você vê esse saldo no bloco "Pendente" com o link Saiba Mais.
+
+**2. Disponível para sacar.** Quando o pedido é concluído (o comprador confirma o recebimento ou o prazo de confirmação expira), o valor sai de Pendente e entra em **Disponível para sacar**. É esse o saldo que aparece em destaque no topo da carteira, com o botão **Sacar** roxo ao lado.
+
+**3. Sacado.** Quando você toca em **Sacar**, o dinheiro sai da carteira e vai para o seu banco por PIX. A transferência leva de **2 a 5 dias úteis**. Você pode acompanhar cada saque no Histórico de pagamentos.
+
+## O caminho completo, da venda ao banco
+
+![Diagrama vertical mostrando cinco etapas numeradas, Venda, Enviado, Entregue, Disponível na carteira com selo verde Pronto para sacar, e Sacado com nota de PIX 2 a 5 dias úteis](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/understand-the-earnings-payout-timeline__earnings-timeline__pt-br.png)
 
 ### Etapa 1: Venda
 
-Um comprador adquire seu item durante um show ao vivo. O pagamento do comprador é coletado imediatamente. A comissão da Jamble (14%) e as taxas de processamento são deduzidas do preço de venda. O valor restante são seus ganhos líquidos.
+O comprador paga o item durante o show ao vivo. O pagamento é coletado na hora. O valor do seu ganho aparece imediatamente no bloco **Pendente** da sua carteira.
 
-### Etapa 2: Pedido confirmado
+### Etapa 2: Enviado
 
-Você recebe uma notificação sobre o novo pedido. Vá em **My Sales** para vê-lo. O pedido aparece com status "Created." Você tem duas opções:
+Você confirma o pedido em **My Sales**, gera a etiqueta e posta pelos Correios. Quando o rastreamento registra o envio, o status do pedido vira "In Delivery". Seu ganho continua em Pendente.
 
-- **Confirm** — aceitar o pedido e preparar o envio
-- **Reject** — recusar o pedido (o comprador é automaticamente reembolsado)
+### Etapa 3: Entregue
 
-Confirme os pedidos o mais rápido possível. Se você não confirmar dentro do prazo, o pedido pode ser cancelado automaticamente.
+Os Correios entregam o pacote ao comprador. O rastreamento é atualizado. Nesse momento começa a janela de confirmação do comprador.
 
-### Etapa 3: Enviado
+### Etapa 4: Disponível na carteira
 
-Após confirmar, gere uma etiqueta de envio e envie o item pelos Correios. Quando o rastreamento mostrar que o pacote está a caminho, o status do pedido muda para "In Delivery."
+Quando o comprador confirma o recebimento do pedido, o valor sai de **Pendente** e entra em **Disponível para sacar**.
 
-### Etapa 4: Entregue
+**E se o comprador não confirmar?** Se o comprador não confirmar manualmente o recebimento dentro do prazo, o sistema confirma a entrega automaticamente e libera seus ganhos.
 
-O entregador entrega o pacote ao comprador. O rastreamento atualiza para mostrar a entrega.
+### Etapa 5: Sacado
 
-### Etapa 5: Concluído
+Toque em **Sacar** na sua carteira. A Jamble envia o dinheiro por PIX para a conta cadastrada. O PIX cai em **2 a 5 dias úteis** e o saque aparece no Histórico de pagamentos.
 
-O comprador recebe o item e confirma que está tudo correto. Assim que o comprador confirma, seus ganhos daquele pedido ficam disponíveis na sua carteira.
+## Status dos saques
 
-**E se o comprador não confirmar?** Se o comprador não confirmar manualmente o recebimento dentro do prazo, o sistema confirma automaticamente a entrega e libera seus ganhos.
+Cada pedido de saque passa por vários status no Histórico de pagamentos. A cor do status te diz onde ele está.
 
-### Etapa 6: Disponível na carteira
+![Lista Histórico de pagamentos com quatro entradas, cada uma com ID, valor em R$, data, e status colorido, Completed em verde, Processing e Pending em roxo, Failed em vermelho](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/understand-the-earnings-payout-timeline__payout-statuses__pt-br.png)
 
-Seus ganhos líquidos (preço de venda menos comissão e taxas) aparecem no saldo da sua **My Wallet**. Você pode ver o detalhamento de cada transação na sua carteira.
+| Status | Cor | O que significa |
+|--------|-----|-----------------|
+| Created | Roxo | Seu saque acabou de ser solicitado |
+| Processing | Roxo | A transferência está sendo enviada |
+| Pending | Roxo | O saque está na fila, aguardando processamento |
+| Completed | Verde | O PIX caiu na sua conta bancária |
+| Failed | Vermelho | Algo deu errado, verifique os Dados Bancários |
+| Canceled | Vermelho | O saque foi cancelado antes de concluir |
 
-### Etapa 7: Saque
-
-Quando estiver pronto para receber seu dinheiro, toque em **Withdraw** na sua carteira. O saque é processado como uma transferência bancária para sua conta registrada. Transferências geralmente levam de **2 a 5 dias úteis** para chegar.
+Se o status ficar **Processing** ou **Pending** por alguns dias, é normal. Se passar de 5 dias úteis, fale com o suporte.
 
 ## Dicas importantes
 
-- **Confirme os pedidos rapidamente.** Quanto mais rápido você confirmar e enviar, mais rápido receberá. Atrasos em qualquer etapa atrasam seu pagamento
-- **Envie no mesmo dia ou no dia seguinte.** Envio rápido significa confirmação de entrega mais rápida, que significa acesso mais rápido aos seus ganhos
-- **Configure seus dados bancários antes da primeira venda.** Se seus dados bancários não estiverem registrados quando quiser sacar, precisará completar o processo de registro primeiro, o que adiciona atraso
-- **A comissão é deduzida automaticamente.** Você não precisa calcular ou pagar nada manualmente — a Jamble deduz a comissão antes de adicionar os ganhos à sua carteira
-- **Cada pedido tem seu próprio cronograma.** Se você vendeu 5 itens em um show, cada pedido avança nas etapas independentemente. Um item pode estar concluído enquanto outro ainda está sendo enviado
+- **Confirme o pedido rápido.** Quanto antes você confirmar e postar, antes o ganho sai de Pendente
+- **Poste no mesmo dia ou no seguinte.** Entrega rápida = confirmação rápida = valor disponível antes
+- **Cadastre os dados bancários antes da primeira venda.** Sem dados bancários, o botão Sacar fica indisponível
+- **Cada pedido tem seu próprio ritmo.** Numa venda de 5 itens, cada pedido avança pelos estados de forma independente
+- **O saldo disponível é cumulativo.** Você pode sacar tudo de uma vez ou esperar acumular mais
 
 ## Perguntas frequentes
 
 **Quanto tempo o processo todo leva?**
-Depende de quão rápido você confirma e envia, quão rápido o comprador confirma o recebimento e os tempos de liquidação do pagamento. Pagamentos PIX liquidam em até 1 dia; pagamentos com cartão podem levar até 30 dias para liquidar. Após sacar, a transferência bancária leva de 2 a 5 dias úteis. O caminho mais rápido: confirmar no mesmo dia, enviar no dia seguinte, comprador confirmar na entrega, pagamento PIX liquida no dia seguinte, depois 2-5 dias para a transferência bancária.
+Depende de três coisas, a velocidade da sua confirmação e postagem, o tempo de entrega dos Correios e a confirmação do comprador. Caminho mais rápido: confirmar no mesmo dia, postar no dia seguinte, entrega em 2 ou 3 dias, comprador confirma na entrega, PIX cai em 2 a 5 dias úteis.
 
-**Quando exatamente a comissão é deduzida?**
-A comissão é deduzida quando a venda é concluída e seus ganhos são adicionados à sua carteira. Você sempre vê o valor líquido (após a comissão) no saldo da sua carteira.
+**Por que o valor em Pendente está diferente do preço de venda?**
+O valor na sua carteira é o ganho líquido. As taxas já foram descontadas antes do valor entrar em Pendente.
 
-**Posso acelerar o processo?**
-Sim — confirme os pedidos imediatamente, envie no mesmo dia e use a opção de envio mais rápida disponível. A principal variável é o tempo de entrega (que depende da distância entre você e o comprador) e quão rápido o comprador confirma o recebimento.
-
-**O que acontece se o comprador disser que o item está errado ou danificado?**
-O comprador pode reportar um problema. Se reportar, o pedido entra em status de investigação e a equipe de suporte da Jamble analisa o caso. Seus ganhos daquele pedido ficam retidos até a investigação ser resolvida.
+**Posso sacar o valor Pendente?**
+Não. Apenas o saldo em **Disponível para sacar** pode ser retirado. O saldo Pendente só entra em Disponível quando o pedido é concluído.
 
 **Recebo meu pagamento se o comprador nunca confirmar o recebimento?**
-Sim. Se o comprador não confirmar dentro do prazo, o sistema confirma automaticamente a entrega e libera seus ganhos.
+Sim. Se o comprador não confirmar dentro do prazo, o sistema confirma a entrega automaticamente e libera seus ganhos.
 
-**E se eu rejeitar um pedido?**
-O comprador é automaticamente reembolsado. Nenhuma comissão é cobrada em pedidos rejeitados. É como se a venda nunca tivesse acontecido.
+**E se o comprador reportar um problema com o item?**
+O pedido entra em análise e a equipe de suporte da Jamble avalia o caso. O valor daquele pedido fica retido até o caso ser resolvido.
+
+**E se eu cancelar um pedido?**
+O comprador é reembolsado automaticamente. O valor daquela venda não entra na sua carteira.
 
 ## Precisa de ajuda?
 

@@ -2,83 +2,97 @@
 
 ## What you'll learn
 
-This guide explains how your earnings move from a completed sale to money in your bank account. You'll understand each stage of the payout timeline, when your funds become available, and how long the whole process takes.
+This guide explains the path of your earnings, from the sale to the money in your bank. You will know when the value becomes available, when you can withdraw it, and how long PIX takes to arrive.
 
 ## Before you start
 
 You need:
 - An approved seller account on Jamble
-- Bank details registered with Pagar.me (see "Set Up and Start a Payout" article)
+- Bank details registered in your wallet (via Pagar.me)
 
-## How the earnings timeline works
+## The three states of your earnings
 
-When you sell an item on Jamble, your earnings don't arrive in your bank account immediately. They go through several stages to ensure both you and the buyer are protected. Here's the full timeline:
+Your earnings go through three states in your wallet. Each sale advances through these states at its own pace.
 
-![earnings-payout-timeline: 7-step vertical flow chart showing sale to payout process from item sale to PIX withdrawal](./assets/mockups/understand-the-earnings-payout-timeline__earnings-payout-timeline__en.png)
+![Wallet screen showing **Available to Withdraw** R$ 248.00 with purple **Withdraw** button, **Bank Details** and **Pending** section with R$ 172.00 and **Learn More** link](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/understand-the-earnings-payout-timeline__wallet-balance__en.png)
 
-### Stage 1: Sale
+**1. Pending.** As soon as the buyer pays, the order value appears as **Pending** in your wallet. You cannot withdraw yet. The money is held while the order is in transit and awaiting buyer confirmation. You see this balance in the "Pending" block with the **Learn More** link.
 
-A buyer purchases your item during a live show. The buyer's payment is collected immediately. Jamble's commission (14%) and processing fees are deducted from the sale price. The remaining amount is your net earnings.
+**2. Available to Withdraw.** When the order is completed (the buyer confirms receipt or the confirmation deadline expires), the value moves from Pending to **Available to Withdraw**. This is the balance that appears highlighted at the top of your wallet, with the purple **Withdraw** button next to it.
 
-### Stage 2: Order confirmed
+**3. Withdrawn.** When you tap **Withdraw**, the money leaves your wallet and goes to your bank via PIX. The transfer takes **2 to 5 business days**. You can track each withdrawal in the **Payouts History**.
 
-You receive a notification about the new order. Go to **My Sales** to see it. The order shows up with status "Created." You have two options:
+## The complete path, from sale to bank
 
-- **Confirm** — accept the order and prepare to ship
-- **Reject** — decline the order (the buyer is automatically refunded)
+![Vertical diagram showing five numbered steps, Sale, Shipped, Delivered, Available in Wallet with green Ready to Withdraw badge, and Withdrawn with PIX 2 to 5 business days note](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/understand-the-earnings-payout-timeline__earnings-timeline__en.png)
 
-You should confirm orders as quickly as possible. If you don't confirm within the time limit, the order may be automatically canceled.
+### Step 1: Sale
 
-### Stage 3: Shipped
+The buyer pays for the item during the live show. The payment is collected immediately. Your earnings value appears immediately in the **Pending** block of your wallet.
 
-After confirming, generate a shipping label and ship the item via Correios. Once the tracking shows the package is on its way, the order status updates to "In Delivery."
+### Step 2: Shipped
 
-### Stage 4: Delivered
+You confirm the order in **My Sales**, generate the label and post via Correios. When tracking registers the shipment, the order status becomes "In Delivery". Your earnings remain Pending.
 
-The carrier delivers the package to the buyer. The tracking updates to show delivery.
+### Step 3: Delivered
 
-### Stage 5: Completed
+Correios delivers the package to the buyer. The tracking is updated. At this moment the buyer confirmation window begins.
 
-The buyer receives the item and confirms that everything is correct. Once the buyer confirms, your earnings for that order become available in your wallet.
+### Step 4: Available in Wallet
 
-**What if the buyer doesn't confirm?** If the buyer doesn't manually confirm receipt within the time limit, the system automatically confirms the delivery and releases your earnings.
+When the buyer confirms receipt of the order, the value moves from **Pending** to **Available to Withdraw**.
 
-### Stage 6: Available in your wallet
+**What if the buyer does not confirm?** If the buyer does not manually confirm receipt within the deadline, the system automatically confirms delivery and releases your earnings.
 
-Your net earnings (sale price minus commission and fees) appear in your **My Wallet** balance. You can see the breakdown of each transaction in your wallet.
+### Step 5: Withdrawn
 
-### Stage 7: Payout
+Tap **Withdraw** in your wallet. Jamble sends the money via PIX to the registered account. The PIX arrives in **2 to 5 business days** and the withdrawal appears in **Payouts History**.
 
-When you're ready to receive your money, tap **Withdraw** in your wallet. The payout is processed as a bank transfer to your registered account. Transfers typically take **2 to 5 business days** to arrive.
+## Withdrawal statuses
+
+Each withdrawal request goes through several statuses in **Payouts History**. The status color tells you where it is.
+
+![Payouts History list with four entries, each with ID, value in R$, date, and colored status, Completed in green, Processing and Pending in purple, Failed in red](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/understand-the-earnings-payout-timeline__payout-statuses__en.png)
+
+| Status | Color | What it means |
+|--------|-------|---------------|
+| Created | Purple | Your withdrawal was just requested |
+| Processing | Purple | The transfer is being sent |
+| Pending | Purple | The withdrawal is in the queue, awaiting processing |
+| Completed | Green | The PIX arrived in your bank account |
+| Failed | Red | Something went wrong, check your **Bank Details** |
+| Canceled | Red | The withdrawal was canceled before completion |
+
+If the status stays **Processing** or **Pending** for a few days, that is normal. If it goes over 5 business days, contact support.
 
 ## Important tips
 
-- **Confirm orders quickly.** The sooner you confirm and ship, the sooner you get paid. Delays at any stage push back your payout
-- **Ship the same day or next day.** Fast shipping means faster delivery confirmation, which means faster access to your earnings
-- **Set up your bank details before your first sale.** If your bank info isn't registered when you want to withdraw, you'll need to complete the registration process first, which adds delay
-- **Commission is deducted automatically.** You don't need to calculate or pay anything manually — Jamble deducts the commission before adding earnings to your wallet
-- **Each order has its own timeline.** If you sold 5 items in one show, each order moves through the stages independently. One item might be completed while another is still being shipped
+- **Confirm the order quickly.** The sooner you confirm and post, the sooner your earnings leave Pending
+- **Post the same day or the next day.** Fast delivery = quick confirmation = value available sooner
+- **Register your bank details before your first sale.** Without bank details, the **Withdraw** button is unavailable
+- **Each order has its own pace.** In a sale of 5 items, each order advances through states independently
+- **Available balance is cumulative.** You can withdraw everything at once or wait to accumulate more
 
-## Common questions
+## Frequently asked questions
 
 **How long does the whole process take?**
-It depends on how quickly you confirm and ship, how quickly the buyer confirms receipt, and payment settlement times. PIX payments settle within 1 day; card payments can take up to 30 days to settle. After withdrawing, the bank transfer takes 2-5 business days. The fastest path: confirm same day, ship next day, buyer confirms on delivery, PIX payment settles next day, then 2-5 days for the bank transfer.
+It depends on three things, the speed of your confirmation and posting, the Correios delivery time, and the buyer's confirmation. Fastest path: confirm the same day, post the next day, delivery in 2 or 3 days, buyer confirms on delivery, PIX arrives in 2 to 5 business days.
 
-**When exactly is the commission deducted?**
-The commission is deducted when the sale is completed and your earnings are added to your wallet. You always see the net amount (after commission) in your wallet balance.
+**Why is the Pending amount different from the sale price?**
+The value in your wallet is net earnings. Fees have already been deducted before the value enters Pending.
 
-**Can I speed up the process?**
-Yes — confirm orders immediately, ship the same day, and use the fastest shipping option available. The main variable is delivery time (which depends on the distance between you and the buyer) and how quickly the buyer confirms receipt.
+**Can I withdraw the Pending amount?**
+No. Only the balance in **Available to Withdraw** can be withdrawn. The Pending balance only enters Available when the order is completed.
 
-**What happens if the buyer says the item is wrong or damaged?**
-The buyer can report an issue. If they do, the order goes into investigation status and Jamble's support team reviews the case. Your earnings for that order are held until the investigation is resolved.
+**Do I receive my payment if the buyer never confirms receipt?**
+Yes. If the buyer does not confirm within the deadline, the system automatically confirms delivery and releases your earnings.
 
-**Do I get paid if the buyer never confirms receipt?**
-Yes. If the buyer doesn't confirm within the time limit, the system automatically confirms the delivery and releases your earnings.
+**What if the buyer reports a problem with the item?**
+The order enters review and the Jamble support team evaluates the case. The value of that order is held until the case is resolved.
 
-**What if I reject an order?**
-The buyer is automatically refunded. No commission is charged on rejected orders. It's as if the sale never happened.
+**What if I cancel an order?**
+The buyer is automatically refunded. The value of that sale does not enter your wallet.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Contact us via the app chat or send an email to support@jambleapp.com.
