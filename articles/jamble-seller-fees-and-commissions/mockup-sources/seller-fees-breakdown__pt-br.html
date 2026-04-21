@@ -1,12 +1,38 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
-.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
-
-.phone { padding: 28px 24px 24px; }
-.twa-title { font-size: 20px; font-weight: 700; color: #162233; margin-bottom: 12px; line-height: 26px; }
-.twa-body { font-size: 15px; color: #162233; line-height: 22px; margin-bottom: 22px; }
-.twa-btn { height: 44px; border-radius: 22px; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; margin-bottom: 10px; }
-.twa-btn.primary { background: #7E53F8; color: white; }
-.twa-btn.secondary { background: #F3F4F8; color: #162233; }
-</style></head><body><div class="phone"><div class="twa-title">O que o comprador paga e o que você recebe</div><div class="twa-body"></div></div></body></html>
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; padding: 20px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.block { margin-bottom: 18px; }
+.block:last-child { margin-bottom: 0; }
+.label { font-size: 12px; font-weight: 600; color: #6D6D80; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 10px; }
+.line { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 0; font-size: 14px; color: #162233; }
+.line .amount { font-variant-numeric: tabular-nums; }
+.line.total { font-size: 15px; font-weight: 700; padding-top: 8px; border-top: 1px solid #E9EAEF; margin-top: 4px; }
+.divider { height: 8px; }
+.arrow { text-align: center; color: #7E53F8; font-size: 18px; margin: 8px 0; }
+.net { background: #F3EFFF; border-radius: 12px; padding: 14px 16px; }
+.net .label { color: #7E53F8; margin-bottom: 6px; }
+.net .amount { font-size: 22px; font-weight: 700; color: #7E53F8; font-variant-numeric: tabular-nums; }
+.note { font-size: 12px; color: #6D6D80; margin-top: 6px; }
+</style></head><body>
+<div class="phone">
+  <div class="block">
+    <div class="label">Comprador paga</div>
+    <div class="line"><span>Produto</span><span class="amount">R$ 100,00</span></div>
+    <div class="line"><span>Frete</span><span class="amount">R$ 25,00</span></div>
+    <div class="line total"><span>Total</span><span class="amount">R$ 125,00</span></div>
+  </div>
+  <div class="arrow">↓</div>
+  <div class="block">
+    <div class="label">Distribuição</div>
+    <div class="line"><span>Correios (frete)</span><span class="amount">R$ 25,00</span></div>
+    <div class="line"><span>Jamble (14%)</span><span class="amount">R$ 14,00</span></div>
+  </div>
+  <div class="block net">
+    <div class="label">Você recebe</div>
+    <div class="amount">R$ 86,00</div>
+    <div class="note">Comissão calculada só sobre o preço do produto</div>
+  </div>
+</div>
+</body></html>
