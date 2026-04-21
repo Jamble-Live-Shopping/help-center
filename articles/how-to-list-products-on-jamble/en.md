@@ -1,30 +1,6 @@
 # What you'll learn
 
-Create a listing in 11 steps. Covers titles, sell modes, prices, photos, and every required field.
-
-## Jump to a step
-
-- <a href="#h_a890eb0701" class="intercom-content-link" target="_blank">Step 1: Open your show and add a product</a>
-
-- <a href="#h_cedd8ae10c" class="intercom-content-link" target="_blank">Step 2: Write a title that gets clicks (required)</a>
-
-- <a href="#h_7954396c29" class="intercom-content-link" target="_blank">Step 3: Pick how buyers will compete for your item (required)</a>
-
-- <a href="#h_bd85099d00" class="intercom-content-link" target="_blank">Step 4: Set your price (required)</a>
-
-- <a href="#h_557d18d1bc" class="intercom-content-link" target="_blank">Step 5: Match a shipping profile to your item (required)</a>
-
-- <a href="#h_f18005c064" class="intercom-content-link" target="_blank">Step 6: Set the quantity</a>
-
-- <a href="#h_3e1d06e7db" class="intercom-content-link" target="_blank">Step 7: Add photos that sell (optional but strongly recommended)</a>
-
-- <a href="#h_7ec35892be" class="intercom-content-link" target="_blank">Step 8: Describe details buyers care about (optional but recommended)</a>
-
-- <a href="#h_2a211f3410" class="intercom-content-link" target="_blank">Step 9: Help buyers find your item with a category</a>
-
-- <a href="#h_52e33ac086" class="intercom-content-link" target="_blank">Step 10: Add extras that build trust (optional)</a>
-
-- <a href="#h_968746ed44" class="intercom-content-link" target="_blank">Step 11: Save and get ready to sell</a>
+This guide is your complete reference for creating product listings on Jamble. You'll learn all the listing form fields, how each selling mode works, how to set prices, add photos, and get your products ready to sell during your live shows.
 
 # Before you start
 
@@ -32,125 +8,171 @@ You need:
 
 - An approved seller account on Jamble
 
-- A show created or scheduled (products are always listed inside a show)
+- A show created or scheduled (products are always listed within a show)
 
 - Photos of your products ready on your phone (optional but strongly recommended)
 
 # How listing works on Jamble
 
-On Jamble, you don't list products in a store or catalog. You list products **inside a show**. Each show has its own product list. Add products before going live.
+On Jamble, you don't list products in a store or catalog. You list products **within a show**. Each show has its own product list, and you add products to that list before going live.
 
 When you open a show and tap to add a product, the app opens a quick listing form. You fill in the details, save, and the product is ready to sell during your live.
 
-You can also bring products from other shows or from your shop profile using the **Clone** and **Import** features (covered in the <a href="7-cloning-items.md" class="intercom-content-link" target="_blank">Cloning Items</a> article).
+You can also bring products from other shows or from your shop profile using the **Clone** and **Import** features (detailed in the article <a href="7-duplicar-produtos.md" class="intercom-content-link" target="_blank">Clone Products</a>).
 
-# Create a product listing that sells
+# Step by step
 
 ## Step 1: Open your show and add a product
 
 Go to the show you want to prepare. You'll see a product list (it may be empty if you haven't added anything yet). Tap **"+ Add Product"** or the **"+"** button.
 
-![Your Show empty product list](https://jamble-bdca2cf2859f.intercom-attachments-1.com/i/o/oenjhaid/2280973401/3837c797ffc7746e7b8a76bb5db1/prod-box3.png?expires=1776427200&signature=b424c124c8807538017b71b4003a8b517c6338e7813e6703254acc0b146c3136&req=diIvFsB5noVfWPMW3nq%2BgaCsX61EwGF%2FW9Ovqr5l8h9TbuL00y2SY20oxMtD%0ATVLJNlEJFBjXRr%2Bdcq9PaRzIhIg%3D%0A)
+![Show screen with empty product list and Add Listing button](./assets/mockups/new-seller-guide-to-listing-products__seller-products-empty__pt-br.png)
 
 This opens the product creation form.
 
-## Step 2: Write a title that gets clicks (required)
+## Step 2: Add a title (required)
 
-Enter a specific title for your product. You have a maximum of **60 characters**.
+Type a clear and specific title for your product. You have a maximum of **60 characters**.
 
-Buyers see the title first, so make it count. Include the most important details: brand, item type, size, and color.
+The title is the first thing buyers see, so make it count. Include the most important details: brand, item type, size, and color.
 
 **Good examples:**
 
-- "Charizard VMAX PSA 9 - Scarlet & Violet"
+- "Pokemon Booster Box 151, Sealed"
 
-- "Hot Wheels 2024 Super Treasure Hunt - C-10"
+- "Hot Wheels Treasure Hunt, Mustang 2024"
 
-- "Pokémon Booster Pack - Scarlet & Violet"
+- "Pokémon Booster Pack, Scarlet & Violet"
 
 **Bad examples:**
 
-- "Cards" (too vague, which cards, which set, which condition?)
+- "Card" (too vague, which card, which edition, what condition?)
 
 - "Amazing deal don't miss!!!" (no details, no product)
 
 - "Item 1" (tells the buyer nothing)
 
-## Step 3: Pick how buyers will compete for your item (required)
+## Step 3: Choose a selling mode (required)
 
-Select how you want to sell this item during your show. There are three sell modes:
+Select how you want to sell this item during your show. There are three selling modes:
 
-**Real-time offers**
+**Real-Time Offers**
 
-Buyers compete by placing offers against each other. You set a starting price, and buyers place offers above that amount. Each new offer must be higher than the previous one. When a new offer comes in near the end of the timer, extra time is added so other buyers can respond. The highest offer when the timer runs out wins.
+Buyers compete by making offers against each other. You set a starting price, and buyers make offers above that price. Each new offer must be higher than the previous one. When a new offer comes close to the timer's end, extra time is added so other buyers can respond. The highest offer when the timer runs out wins.
 
 **Sudden Death**
 
-Similar to Real-time offers, buyers compete by placing offers. The difference is that **no extra time is added**. The timer counts down steadily, and when it reaches zero, the highest offer wins. This creates more urgency because there's no chance to respond at the last second.
+Similar to Real-Time Offers, buyers compete by making offers. The difference is that **no extra time is added**. The timer counts steadily, and when it hits zero, the highest offer wins. This creates more urgency because there's no chance to respond at the last second.
 
 **Buy It Now**
 
-A fixed price. Buyers purchase instantly at the price you set, no competition, no waiting. You can also enable a **Flash Sale** on Buy It Now products, which adds a percentage discount and a countdown timer (see the <a href="6-flash-sales.md" class="intercom-content-link" target="_blank">Flash Sales</a> article for details).
+Fixed price. Buyers buy instantly at the price you set, with no competition, no waiting. You can also enable a **Flash Sale** on Buy It Now products. It adds a percentage discount and a timer. See the <a href="6-vendas-relampago.md" class="intercom-content-link" target="_blank">Flash Sales</a> article for details.
 
-![Sell Mode](https://jamble-bdca2cf2859f.intercom-attachments-1.com/i/o/oenjhaid/2280909937/25773cef451f637e2c73affe54a6/prod-box4.png?expires=1776427200&signature=d05a4697b3368fc087ee71bc82cc97911a7d64e9ac8ec4e4994a522e9dcc1b18&req=diIvFsB%2BlIhcXvMW3nq%2BgSK0yjaU6xX0MomKCmvH7U2cVsU6ACYe5ommonXO%0Aeiytg1yEgg19yd8YABjfKhZt8IA%3D%0A)
+![Selling mode selector with three options: Real-Time Offers, Sudden Death, Buy It Now](./assets/mockups/new-seller-guide-to-listing-products__sell-mode-picker__pt-br.png)
 
 ## Step 4: Set your price (required)
 
 Enter the price in $. The minimum price is **$5.00** and the maximum is **$5,000.00**.
 
-What the price means depends on the sell mode:
+What the price means depends on the selling mode:
 
-- **Real-time offers**, The **starting price**. Buyers will place offers above this amount
+<table role="presentation">
+<tbody>
+<tr>
+<td><p>Selling Mode</p></td>
+<td><p>What the price means</p></td>
+</tr>
+<tr>
+<td><p>Real-Time Offers</p></td>
+<td><p>The <strong>starting price</strong>. Buyers will make offers above this price</p></td>
+</tr>
+<tr>
+<td><p>Sudden Death</p></td>
+<td><p>The <strong>starting price</strong>. Same as Real-Time Offers</p></td>
+</tr>
+<tr>
+<td><p>Buy It Now</p></td>
+<td><p>The <strong>fixed price</strong> the buyer pays to buy immediately</p></td>
+</tr>
+</tbody>
+</table>
 
-- **Sudden Death**, The **starting price**. Same as Real-time offers
+**Retail price (optional):** You can add a retail price to show buyers the item's original value. This appears as a reference so they can see how much they're saving.
 
-- **Buy It Now**, The **fixed price** the buyer pays to purchase immediately
+## Step 5: Choose a shipping profile (required)
 
-**Retail price (optional):** You can add a retail price to show buyers the original value of the item. This appears as a reference so buyers can see how much they're saving.
+Select the shipping profile that best matches your item's size and weight when packaged.
 
-## Step 5: Match a shipping profile to your item (required)
+<table role="presentation">
+<tbody>
+<tr>
+<td><p>Profile</p></td>
+<td><p>Best for</p></td>
+</tr>
+<tr>
+<td><p>Letter</p></td>
+<td><p>Trading cards, flat items</p></td>
+</tr>
+<tr>
+<td><p>Booster</p></td>
+<td><p>Card packs, multiple cards</p></td>
+</tr>
+<tr>
+<td><p>Light Accessories</p></td>
+<td><p>Jewelry, scarves, small items</p></td>
+</tr>
+<tr>
+<td><p>Light Clothing</p></td>
+<td><p>T-shirts, tanks, blouses</p></td>
+</tr>
+<tr>
+<td><p>Standard Clothing</p></td>
+<td><p>Shirts, dresses, sweaters</p></td>
+</tr>
+<tr>
+<td><p>Heavy Clothing</p></td>
+<td><p>Jeans, thick dresses, pants</p></td>
+</tr>
+<tr>
+<td><p>Bulky Items</p></td>
+<td><p>Jackets, winter coats</p></td>
+</tr>
+<tr>
+<td><p>Small Packages</p></td>
+<td><p>Small groups of items</p></td>
+</tr>
+<tr>
+<td><p>Medium Packages</p></td>
+<td><p>Medium groups of items</p></td>
+</tr>
+<tr>
+<td><p>Large Packages</p></td>
+<td><p>Large groups of items</p></td>
+</tr>
+<tr>
+<td><p>Extra-Large Packages</p></td>
+<td><p>Very large orders</p></td>
+</tr>
+</tbody>
+</table>
 
-Select the shipping profile that best matches the size and weight of your item when packaged.
+**Choose carefully.** The shipping profile determines the shipping cost the buyer pays at checkout. If you choose a profile that's too small, you may have trouble packing. If it's too large, the buyer pays more shipping than necessary, which can discourage the purchase.
 
-- **Card**, Trading cards, single flat items
-
-- **Booster**, Card packs, multiple cards
-
-- **Light Accessories**, Jewelry, scarves, small items
-
-- **Light Apparel**, T-shirts, tank tops, blouses
-
-- **Standard Apparel**, Shirts, dresses, sweaters
-
-- **Heavier Apparel**, Jeans, thick dresses, trousers
-
-- **Bulkier Items**, Jackets, winter coats
-
-- **Small Bundles**, Small groups of items
-
-- **Medium Bundles**, Medium groups of items
-
-- **Large Bundles**, Large groups of items
-
-- **Extra-Large Bundles**, Very large orders
-
-**Choose carefully.** The shipping profile determines the shipping cost the buyer pays at checkout. If you pick a profile that's too small, you may have trouble fitting your item into the package. If it's too big, the buyer pays more shipping than necessary, which can discourage purchases.
-
-For more details on shipping profiles, see <a href="3-shipping-profiles.md" class="intercom-content-link" target="_blank">Choose a Shipping Profile</a>.
+For more details on shipping profiles, see <a href="3-perfis-de-envio.md" class="intercom-content-link" target="_blank">Choose a Shipping Profile</a>.
 
 ## Step 6: Set the quantity
 
-By default, the quantity is **1**. If you have multiple identical items, you can set the quantity to match, up to **1,000 units**.
+By default, the quantity is **1**. If you have multiple identical items, you can set the corresponding quantity, up to **1,000 units**.
 
-When you set a quantity higher than 1, multiple buyers can each purchase one unit during your show. The listing shows "X left" so buyers can see how many are available.
+When you set a quantity greater than 1, multiple buyers can purchase one unit each during your show. The listing shows "X remaining" so buyers can see how many are available.
 
-**Important:** Pre-offers (where buyers place offers before your show starts) are only available when the quantity is exactly **1**.
+**Important:** Pre-offers (where buyers make offers before your show starts) are only available when the quantity is exactly **1**.
 
-## Step 7: Add photos that sell (optional but strongly recommended)
+## Step 7: Add photos (optional but strongly recommended)
 
-Add up to **10 photos** of your product. Photos are optional, but they make a huge difference, buyers are much more likely to buy items they can see clearly.
+Add up to **10 photos** of your product. Photos are optional, but they make a big difference. Buyers are much more likely to buy items they can see clearly.
 
-![Select photos screen with 3 photos added and an empty slot for more](https://jamble-bdca2cf2859f.intercom-attachments-1.com/i/o/oenjhaid/2281071565/8ca5bd4a8b3f27ed2fddab0e8a7b/prod-box5.png?expires=1776427200&signature=9553b9ff278bf0313f67649f40955c959b6d4d8a11fa485161feb5c14abd1f9c&req=diIvF8l5nIRZXPMW3nq%2BgSOLW%2F7SJWdNIab8VaENcllfl1QTBmpVtM8MniZ6%0ApDrAExRcDBTK9qb7fDorjZX0rm4%3D%0A)
+![Photo selection screen with three photos added and empty slot for more](./assets/mockups/new-seller-guide-to-listing-products__product-photo-grid__pt-br.png)
 
 **Tips for great photos:**
 
@@ -162,69 +184,86 @@ Add up to **10 photos** of your product. Photos are optional, but they make a hu
 
 - Place the item on a clean, simple background
 
-- For clothing, lay it flat or hang it on a hanger
+- For clothing, lay flat on a surface or hang on a hanger
 
-## Step 8: Describe details buyers care about (optional but recommended)
+## Step 8: Add a description (optional but recommended)
 
-Write a short description of your product, maximum **120 characters**. Use this to mention things the photos don't show: material, fit, flaws, or any important detail.
+Write a short description of your product, maximum **120 characters**. Use it to mention things the photos don't show: material, fit, flaws, or any important details.
 
-Example: "100% cotton, fits true to size, small stain on left sleeve (see photo 4)"
+Example: "100% cotton, fits size M, small stain on left sleeve (see photo 4)"
 
-## Step 9: Help buyers find your item with a category
+## Step 9: Select a category (optional but recommended)
 
 Categories are organized in three levels:
 
 1.  **Gender**, Men or Women
 
-2.  **Category**, Clothes, Shoes, Accessories, or Beauty
+2.  **Category**, Clothing, Footwear, Accessories, or Beauty
 
-3.  **Subcategory**, the specific item type (e.g., Sneakers, T-Shirts/Tops, Bags, Dresses)
+3.  **Subcategory**, the specific type of item (e.g., Sneakers, T-Shirts/Tops, Bags, Dresses)
 
-After you select all three levels, a **Size** field appears automatically with size options specific to your selection. For example, selecting Women → Shoes → Sneakers will show shoe sizes, while selecting Men → Clothes → T-Shirts will show clothing sizes (S, M, L, XL, etc.).
+After selecting all three levels, a **Size** field appears automatically with size options specific to your selection. For example, selecting Women → Footwear → Sneakers will show shoe sizes, while Men → Clothing → T-Shirts will show clothing sizes (XS, S, M, L, XL, etc.).
 
 **For collectibles:** Jamble also supports categories like Trading Card Games (Pokémon, Magic: The Gathering, Yu-Gi-Oh!, One Piece), Diecast Cars (Hot Wheels, Matchbox), and more.
 
-## Step 10: Add extras that build trust (optional)
+## Step 10: Add more details (optional)
 
-Fill in any of these fields to make your listing more complete:
+Fill in any of these fields to complete your listing:
 
-- **Brand**, type or search for the brand name
+- **Brand**, type or search the brand name
 
-- **Color**, choose from 28 color options (Black, White, Grey, Blue, Red, Green, Yellow, Orange, Pink, Purple, Brown, Beige, Navy, and more)
+- **Color**, choose from 28 color options (Black, White, Gray, Blue, Red, Green, Yellow, Orange, Pink, Purple, Brown, Beige, Navy, and more)
 
-- **Condition**, how worn the item is:
+- **Condition**, the level of use for the item:
 
-<!-- -->
+<table role="presentation">
+<tbody>
+<tr>
+<td><p>Condition</p></td>
+<td><p>What it means</p></td>
+</tr>
+<tr>
+<td><p>New with Tags</p></td>
+<td><p>New, never used, original tags still attached</p></td>
+</tr>
+<tr>
+<td><p>New without Tags</p></td>
+<td><p>New, never used, but tags removed</p></td>
+</tr>
+<tr>
+<td><p>Very Good</p></td>
+<td><p>Like new, lightly used, excellent condition</p></td>
+</tr>
+<tr>
+<td><p>Good</p></td>
+<td><p>Carefully used, some signs of wear</p></td>
+</tr>
+<tr>
+<td><p>Fair</p></td>
+<td><p>Well used, visible wear, may need repair</p></td>
+</tr>
+</tbody>
+</table>
 
-- **New with Tags**, Brand new, never worn, original tags still attached
+**Be honest about condition.** Buyers trust sellers who describe items accurately. Overstating condition leads to returns, disputes, and bad reviews.
 
-- **New without Tags**, Brand new, never worn, but tags have been removed
+## Step 11: Save your listing
 
-- **Very Good**, Like new, barely used, excellent condition
+When all required fields are filled (title, selling mode, price, shipping profile), the **"Add Listing"** button becomes active. Tap it to save.
 
-- **Good**, Gently used, some signs of wear
+![Listing form summary with active Add Listing button at the bottom](./assets/mockups/new-seller-guide-to-listing-products__add-listing__pt-br.png)
 
-- **Satisfactory**, Well-used, visible wear, may need repair
-
-**Be honest about condition.** Buyers trust sellers who describe items accurately. Exaggerating the condition leads to returns, disputes, and bad reviews.
-
-## Step 11: Save and get ready to sell
-
-When all required fields are filled (title, sell mode, price, shipping profile), the **"Add Listing"** button becomes active. Tap it to save.
-
-![Listing form summary with Add Listing button at the bottom](https://jamble-bdca2cf2859f.intercom-attachments-1.com/i/o/oenjhaid/2281071587/792cb42d62ee654429ea0b597b59/prod-box6.png?expires=1776427200&signature=d908e7024a8c6155ff1e8333be60c32e4bf336beb612798908ab70b921d63664&req=diIvF8l5nIRXXvMW3nq%2Bga3lzH36W8s2stJKmOPl1JgT6Y5h3pTOYQPShbQ4%0AmJTB0dSnlaSXU1b9nLOF%2BO3mzmI%3D%0A)
-
-Your product is now added to your show and ready to sell during your live.
+Your product is now added to the show and ready to be sold during your live.
 
 # Pre-offers
 
-For products using **Real-time offers** or **Sudden Death** with a quantity of exactly **1**, you can enable **pre-offers**. This lets buyers place offers on your product before your show even starts.
+For products using **Real-Time Offers** or **Sudden Death** with a quantity of exactly **1**, you can enable **pre-offers**. This allows buyers to make offers on your product before your show starts.
 
-Pre-offers are a great way to generate early interest and set a starting price before you go live. Buyers who place pre-offers get notified when your show starts.
+Pre-offers are a great way to generate interest and set an initial price before going live. Buyers who make pre-offers are notified when your show starts.
 
 # What the app remembers
 
-When you create a new product, Jamble automatically fills some fields based on your last listing:
+When you create a new product, Jamble automatically fills in some fields based on your last listing:
 
 - Category
 
@@ -232,27 +271,27 @@ When you create a new product, Jamble automatically fills some fields based on y
 
 - Shipping profile
 
-This saves time when listing multiple similar items. You can always change these values for each product.
+This saves time when listing similar items. You can always change these values for each product.
 
 # Important tips
 
-- **Required fields first.** Title, sell mode, price, and shipping profile are all you need. Everything else is optional but helps your products sell better
+- **Required fields first.** Title, selling mode, price, and shipping profile are all you need. Everything else is optional but helps your products sell better
 
-- **Photos are the biggest factor.** Even though they're optional, well-photographed products sell significantly better. Take 2-3 minutes per product, it's worth it
+- **Photos are the biggest factor.** Even though they're optional, well-photographed products sell significantly better. Spend 2-3 minutes per product, it's worth it
 
-- **Use specific titles.** "Charizard VMAX PSA 9 Scarlet & Violet" always performs better than "Cool card for sale"
+- **Use clear, specific titles.** "Charizard VMAX Rainbow, NM" always performs better than "Cool sneaker for sale"
 
-- **Be honest about condition.** It builds trust and prevents returns. If there's a flaw, mention it in the description and show it in a photo
+- **Be honest about condition.** This builds trust and prevents returns. If there's a flaw, mention it in the description and show it in a photo
 
 - **You can edit listings after saving.** Made a mistake? Tap any listing to edit the title, price, photos, or any other field. Changes are saved when you tap **"Save Changes"**
 
-- **You can clone listings.** Instead of creating similar products from scratch, clone an existing listing and just change what's different. See <a href="7-cloning-items.md" class="intercom-content-link" target="_blank">Cloning Items</a> for details
+- **You can clone listings.** Instead of creating similar products from scratch, clone an existing listing and change only what's different. See <a href="7-duplicar-produtos.md" class="intercom-content-link" target="_blank">Clone Products</a> for details
 
-# Common questions
+# Frequently asked questions
 
 **What's the minimum and maximum price?**
 
-Minimum is $5.00 and maximum is $5,000.00 for all sell modes.
+Minimum $5.00 and maximum $5,000.00 for all selling modes.
 
 **How many photos can I add?**
 
@@ -260,11 +299,11 @@ Up to 10 photos per listing. Photos are optional but strongly recommended.
 
 **Can I edit a listing after creating it?**
 
-Yes. Tap the listing, make your changes, and tap **"Save Changes"**. You can update any field at any time before the product is sold.
+Yes. Tap the listing, make your changes, and tap **"Save Changes"**. You can update any field anytime before the product is sold.
 
-**What's the difference between Real-time offers, Sudden Death, and Buy It Now?**
+**What's the difference between Real-Time Offers, Sudden Death, and Buy It Now?**
 
-Real-time offers: buyers compete with offers, timer extends when new offers come in. Sudden Death: same competition, but the timer never extends, more urgency. Buy It Now: fixed price, instant purchase, no competition.
+Real-Time Offers: buyers compete with offers, the timer extends when new offers come in. Sudden Death: same competition, but the timer never extends, more urgency. Buy It Now: fixed price, instant purchase, no competition.
 
 **Can I list multiple quantities of the same item?**
 
@@ -272,15 +311,15 @@ Yes. Set the quantity when creating the listing, up to 1,000 units. Note that pr
 
 **What is Pack Opening?**
 
-Pack Opening is a special mode for collectible items (like trading card booster packs) where you open the pack live during your show. Buyers get the excitement of seeing what's inside in real time.
+Pack Opening is a special mode for collectible items (like trading card boosters) where you open the pack live during your show. Buyers get the thrill of seeing what's inside in real time.
 
-**What happens if I pick the wrong shipping profile?**
+**What if I choose the wrong shipping profile?**
 
-You can change the shipping profile on any listing before it sells. If you realize after a sale that the profile was wrong, contact support for help.
+You can change the shipping profile of any listing before it's sold. If you realize it after a sale, contact support for help.
 
 **Can I list products outside of a show?**
 
-Products on Jamble are always listed inside a show. You prepare your products before going live, and then sell them during your live show.
+Products on Jamble are always listed within a show. You prepare your products before going live, then sell them during your live stream.
 
 ------------------------------------------------------------------------
 
