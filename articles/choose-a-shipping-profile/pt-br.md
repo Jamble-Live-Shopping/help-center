@@ -2,7 +2,7 @@
 
 ## O que você vai aprender
 
-Este guia explica como os perfis de envio funcionam na Jamble. Você vai aprender para que cada perfil foi projetado, como escolher o certo para seus produtos, e como os perfis de envio afetam o custo que seus compradores pagam.
+Este guia explica como os perfis de envio funcionam na Jamble. Você vai aprender para que cada perfil serve, como escolher o certo, e como ele afeta o frete que o comprador paga.
 
 ## Antes de começar
 
@@ -20,133 +20,84 @@ Você não define os preços de frete. Quando um comprador adquire seu produto, 
 2. **Seu endereço** (de onde o pacote sai)
 3. **O endereço do comprador** (para onde o pacote vai)
 
-O comprador vê e paga o custo de frete no checkout. É adicionado ao preço do produto.
+O comprador vê e paga o custo de frete no checkout. Ele é adicionado ao preço do produto.
 
-## Os 11 perfis de envio
+## Guia rápido: qual perfil usar?
 
-A Jamble tem 11 perfis de envio pré-definidos. Você escolhe um toda vez que lista um produto.
+A Jamble tem 11 perfis pré-definidos. Escolha o que corresponde ao tamanho e peso do pacote real, não apenas do item.
 
-### Carta
+**Itens únicos**
 
-**Melhor para:** Cartas colecionáveis unitárias, itens planos, adesivos
+- **Carta**: cartas colecionáveis unitárias, itens planos, adesivos. Cabe em envelope padrão.
+- **Booster**: pacotes de cartas, múltiplas cartas, pequenos produtos selados. Um pouco maior que Carta.
+- **Acessórios leves**: joias, brincos, pulseiras, lenços finos, capinhas de celular.
+- **Roupas leves**: camisetas, regatas, blusas, tops finos. Qualquer coisa que dobre plana.
+- **Roupas padrão**: camisas de botão, vestidos de verão, suéteres, roupas normais. O perfil mais comum para roupas.
+- **Roupas mais pesadas**: jeans, vestidos grossos, calças de lã, peças com várias camadas.
+- **Itens volumosos**: jaquetas, casacos de inverno, botas pesadas. O maior perfil para item único.
 
-O menor e mais leve perfil. Use para itens que cabem em um envelope padrão — uma carta Pokémon, um adesivo plano, ou qualquer item fino e leve.
+**Pacotes de múltiplos itens**
 
-### Booster
+- **Pacotes pequenos**: 2-3 itens enviados juntos. Por exemplo, um conjunto de camisetas.
+- **Pacotes médios**: 4-6 itens. Enche uma caixa média.
+- **Pacotes grandes**: 7+ itens. Grandes lotes de roupas ou cartas.
+- **Pacotes extra-grandes**: pedidos muito grandes, grandes coleções. O maior perfil disponível.
 
-**Melhor para:** Pacotes de cartas, múltiplas cartas, pacotes selados pequenos
-
-Um pouco maior que Carta. Use para boosters, pequenos grupos de cartas, ou qualquer produto selado pequeno que seja um pouco mais volumoso que uma carta única.
-
-### Acessórios leves
-
-**Melhor para:** Joias, lenços, pequenos acessórios
-
-Para acessórios leves que não ocupam muito espaço. Brincos, pulseiras, lenços finos, capinhas de celular ou outros acessórios pequenos.
-
-### Roupas leves
-
-**Melhor para:** Camisetas, regatas, blusas, tops finos
-
-Para roupas leves. Uma camiseta, uma regata, uma blusa — qualquer coisa que dobre plana e não pese muito.
-
-### Roupas padrão
-
-**Melhor para:** Camisas, vestidos, suéteres, roupas normais
-
-O perfil mais comum para roupas. Use para itens um pouco mais pesados ou volumosos que uma simples camiseta — camisas de botão, vestidos de verão, suéteres ou itens similares.
-
-### Roupas mais pesadas
-
-**Melhor para:** Jeans, vestidos grossos, calças, roupas mais pesadas
-
-Para roupas notavelmente mais pesadas. Jeans, vestidos grossos, calças de lã ou peças com múltiplas camadas.
-
-### Itens volumosos
-
-**Melhor para:** Jaquetas, casacos de inverno, itens grandes ou pesados
-
-O maior perfil para item único. Use para itens volumosos como casacos de inverno, jaquetas acolchoadas, botas pesadas ou qualquer coisa que ocupe espaço significativo em um pacote.
-
-### Pacotes pequenos
-
-**Melhor para:** 2-3 itens enviados juntos
-
-Quando você vende um grupo pequeno de itens que vão no mesmo pacote. Por exemplo, um conjunto de 2-3 camisetas ou uma pequena coleção de acessórios.
-
-### Pacotes médios
-
-**Melhor para:** 4-6 itens enviados juntos
-
-Para grupos de tamanho médio. Um pacote de 4-6 peças de roupa, ou uma coleção que enche uma caixa média.
-
-### Pacotes grandes
-
-**Melhor para:** 7+ itens enviados juntos
-
-Para grandes grupos de itens. Um grande lote de roupas, uma grande coleção de cartas, ou qualquer pedido que precise de uma caixa grande.
-
-### Pacotes extra-grandes
-
-**Melhor para:** Pedidos muito grandes, grandes coleções
-
-O maior perfil disponível. Use para pedidos muito grandes — grandes coleções de roupas, grandes lotes de colecionáveis, ou qualquer coisa que precise da maior opção de embalagem.
+![Guia de seleção de perfil de envio mostrando árvore de decisão para escolher categorias de envio apropriadas conforme tipo e características do pacote](./assets/mockups/choose-a-shipping-profile__shipping-guide-quick-reference__pt-br.png)
 
 ## Como escolher o perfil certo
 
-Siga estes passos:
+Três regras simples:
 
-1. **Pense no pacote real** — não apenas no item. Um lenço fino é "Acessórios leves" mas um lenço em caixa de presente pode ser "Roupas leves"
-2. **Considere o peso** — itens mais pesados precisam de um perfil maior mesmo sendo pequenos. Botas pesadas são "Itens volumosos" mesmo que caibam em uma caixa média
-3. **Na dúvida, vá um tamanho acima** — é melhor o custo de frete ser levemente maior do que ter dificuldade para embalar o item
-
-![Guia de seleção de perfil de envio mostrando árvore de decisão para escolher categorias de envio apropriadas conforme tipo e características do pacote](./assets/mockups/choose-a-shipping-profile__shipping-guide-quick-reference__pt-br.png)
+1. **Pense no pacote real**, não apenas no item. Um lenço fino é "Acessórios leves", mas um lenço em caixa de presente pode ser "Roupas leves".
+2. **Considere o peso**. Itens mais pesados precisam de um perfil maior mesmo sendo pequenos. Botas pesadas são "Itens volumosos" mesmo cabendo em uma caixa média.
+3. **Na dúvida, vá um tamanho acima**. É melhor o frete ser levemente maior do que ter dificuldade para embalar o item.
 
 ## Como o perfil afeta o comprador
 
 O perfil de envio impacta diretamente:
 
-- **Custo de frete no checkout** — um perfil maior significa frete mais caro. Compradores veem o custo exato antes de pagar
-- **Decisão de compra** — alguns compradores não compram se o frete parecer alto demais comparado ao preço do produto. Escolher um perfil desnecessariamente grande custa mais ao comprador e pode prejudicar suas vendas
-- **Experiência de envio** — se o perfil for pequeno demais para o item, você pode ter dificuldade para embalar e enviar corretamente, levando a atrasos ou itens danificados
+- **Custo de frete no checkout**: um perfil maior significa frete mais caro. Compradores veem o valor exato antes de pagar.
+- **Decisão de compra**: alguns compradores não finalizam se o frete parecer alto demais comparado ao preço do produto. Escolher um perfil grande demais custa mais ao comprador e pode prejudicar suas vendas.
+- **Experiência de envio**: se o perfil for pequeno demais para o item, você pode ter dificuldade para embalar e enviar corretamente, causando atrasos ou itens danificados.
 
-## Posso criar perfis de envio personalizados?
+## Posso criar perfis personalizados?
 
 Não. A Jamble usa um conjunto fixo de 11 perfis. Você escolhe o que melhor corresponde a cada produto. Esses perfis são calibrados para os custos de frete dos Correios.
 
-## Mudando um perfil de envio
+## Mudar um perfil de envio
 
-Você pode mudar o perfil de envio de qualquer listagem **antes de ser vendida**. Basta tocar na listagem, atualizar o perfil e salvar.
+Você pode mudar o perfil de qualquer listagem **antes de ser vendida**. Basta tocar na listagem, atualizar o perfil e salvar.
 
-Se perceber depois de uma venda que escolheu o perfil errado, entre em contato com o suporte — eles podem ajudar a ajustar a etiqueta de envio.
+Se perceber depois de uma venda que escolheu o perfil errado, entre em contato com o suporte. A equipe pode ajudar a ajustar a etiqueta de envio.
 
 ## Dicas importantes
 
-- **Escolha o perfil ANTES do seu show, não durante.** Dedique tempo para escolher o perfil certo ao listar produtos, não quando estiver ao vivo e com pressa
-- **O app lembra seu último perfil.** Quando você cria um novo produto, a Jamble preenche o perfil de envio da sua listagem anterior. Isso economiza tempo ao listar itens similares — mas confira se está correto se seu próximo item for de tamanho diferente
-- **Perfis de pacote são para múltiplos itens em um envio.** Se um comprador comprar 5 itens seus, eles podem ser enviados como um pacote. Escolha o perfil de Pacote que corresponda ao tamanho total
-- **Vendedores de roupas:** a maioria dos seus itens usará Roupas leves, Roupas padrão ou Roupas mais pesadas. Familiarize-se com esses três e quase sempre escolherá certo
-- **Vendedores de cartas/colecionáveis:** a maioria dos seus itens usará Carta ou Booster. Use Carta para unitárias e Booster para pacotes ou pequenos lotes
+- **Escolha o perfil ANTES do seu show**, não durante. Dedique tempo para selecionar o perfil certo ao listar produtos, não quando estiver ao vivo e com pressa.
+- **O app lembra seu último perfil.** Quando você cria um novo produto, a Jamble preenche o perfil da listagem anterior. Isso economiza tempo ao listar itens similares, mas confira se está correto caso o próximo item tenha tamanho diferente.
+- **Perfis de pacote são para múltiplos itens** em um mesmo envio. Se um comprador levar 5 itens seus, podem ser enviados como um pacote. Escolha o perfil de Pacote que corresponda ao tamanho total.
+- **Vendedores de roupas**: a maioria dos seus itens usará Roupas leves, Roupas padrão ou Roupas mais pesadas. Familiarize-se com esses três e quase sempre escolherá certo.
+- **Vendedores de cartas e colecionáveis**: a maioria dos seus itens usará Carta ou Booster. Carta para unitárias, Booster para pacotes ou pequenos lotes.
 
 ## Perguntas frequentes
 
 **O perfil de envio afeta meus ganhos?**
-Não. O comprador paga o custo de frete — é adicionado ao preço do produto no checkout. Seus ganhos vêm do preço do produto menos a comissão da Jamble. O custo de frete nunca reduz seus ganhos.
+Não. O comprador paga o frete, que é adicionado ao preço do produto no checkout. Seus ganhos vêm do preço do produto menos a comissão da Jamble. O custo de frete nunca reduz seus ganhos.
 
-**Posso mudar o perfil de envio depois de vender?**
+**Posso mudar o perfil depois de vender?**
 Não diretamente. Entre em contato com o suporte se precisar ajustar a etiqueta de envio depois de uma venda.
 
 **E se meu pacote for mais pesado que o perfil que escolhi?**
-Se o pacote for significativamente mais pesado, o custo real de envio pode ultrapassar o que o comprador pagou. Para evitar isso, sempre escolha um perfil que corresponda precisamente ao seu item embalado.
+Se o pacote for significativamente mais pesado, o custo real de envio pode ultrapassar o que o comprador pagou. Para evitar isso, sempre escolha um perfil que corresponda ao seu item embalado.
 
 **Posso ver qual custo de frete o comprador vai pagar?**
-Você não consegue ver o custo exato já que depende da localização do comprador. Mas o perfil que você escolhe é o fator principal — um item "Roupas leves" enviado pelo Brasil custa menos que um pacote "Itens volumosos".
+Você não consegue ver o valor exato, já que depende da localização do comprador. Mas o perfil que você escolhe é o fator principal. Um item "Roupas leves" enviado pelo Brasil custa menos que um pacote "Itens volumosos".
 
 **Todos os envios vão pelos Correios?**
 Sim. Todos os envios da Jamble no Brasil são feitos pelos Correios. O sistema seleciona automaticamente a opção de frete mais econômica para cada pedido.
 
 **Compradores podem usar créditos para reduzir o custo?**
-Sim. Se um comprador tem créditos (de indicações ou promoções), são aplicados automaticamente no checkout para reduzir ou cobrir o custo de envio.
+Sim. Se um comprador tem créditos (de indicações ou promoções), eles são aplicados automaticamente no checkout para reduzir ou cobrir o custo de envio.
 
 ## Precisa de ajuda?
 
