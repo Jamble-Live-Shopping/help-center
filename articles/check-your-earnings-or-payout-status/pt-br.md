@@ -2,82 +2,90 @@
 
 ## O que você vai aprender
 
-Este guia mostra como verificar seus ganhos atuais, ver o status dos seus saques e entender o que cada saldo e status significa na sua carteira.
+Como abrir sua carteira, conferir seu saldo disponível e seus ganhos pendentes, ver o histórico de saques com o status de cada um, e o que fazer quando um saque aparece com erro.
 
 ## Antes de começar
 
-Você precisa de:
-- Uma conta de vendedor aprovada na Jamble
-- Pelo menos uma venda concluída (para ter ganhos a verificar)
+- Conta de vendedor aprovada na Jamble
+- Dados bancários cadastrados na seção Bank Details
+- Pelo menos uma venda concluída
 
-## Passo a passo
+## Abra sua carteira
 
-### Passo 1: Abra sua carteira
+Vá ao seu perfil, toque em **Settings** e depois em **My Wallet**.
 
-Vá ao seu perfil, depois toque em **Settings** → **My Wallet**.
+![Tela My Wallet com cartão Available to Withdraw, botão Withdraw, Bank Details e cartão Pending](./assets/mockups/check-your-earnings-or-payout-status__wallet-overview__pt-br.png)
 
-![Tela Minha Carteira com cartões de saldo, detalhes bancários e botão Sacar](./assets/mockups/check-your-earnings-or-payout-status__my-wallet__pt-br.png)
+A tela mostra:
 
-Sua carteira mostra várias seções, cada uma com um título, descrição e valor. Essas seções dão um detalhamento dos seus ganhos:
-- Seu saldo disponível (o que pode sacar agora)
-- Ganhos pendentes (pedidos ainda em andamento)
-- Outros valores relevantes
+- **Available to Withdraw**: o saldo que você pode sacar agora. Toque em **Withdraw** para iniciar uma transferência via PIX
+- **Bank Details**: sua conta cadastrada. Toque em **Update** para corrigir os dados
+- **Pending**: pedidos em andamento, ainda não liberados para saque. Toque em **Learn More** para entender o prazo
+- **Payouts History**: lista com seus saques passados e em andamento
 
-### Passo 2: Verificar histórico de saques
+## Abra o histórico de saques
 
-Para ver todos os seus saques passados e atuais, toque no **ícone de relógio** (⏰) no canto superior direito da tela da carteira. Isso abre a tela **Payouts History**.
+Na tela **My Wallet**, toque no **ícone de relógio** no canto superior direito. A seção **Payouts History** também fica no final da tela.
 
-![Histórico de Payouts exibindo três transações de pagamento com IDs, valores em reais, status e datas](./assets/mockups/check-your-earnings-or-payout-status__payouts-history__pt-br.png)
+![Tela Payouts History listando cinco saques com ID, valor, status (Completed, Processing, Pending, Failed) e data](./assets/mockups/check-your-earnings-or-payout-status__payouts-history__pt-br.png)
 
-Cada entrada mostra:
-- **ID do saque** — identificador único do saque
-- **Valor** — o valor em R$ sacado
-- **Status** — onde o saque está no processo (veja abaixo)
-- **Data** — quando o saque foi solicitado
+Cada linha mostra:
 
-Você pode rolar para baixo para ver saques mais antigos. Puxe para baixo para atualizar a lista.
+- **ID do saque** (ex.: #PAY-2812)
+- **Valor em R$**
+- **Status** com cor (veja a seção abaixo)
+- **Data** em que o saque foi solicitado
 
-### Passo 3: Entender os status dos saques
+Puxe a lista para baixo para atualizar.
 
-| Status | Cor | O que significa |
-|--------|-----|----------------|
-| Created | Roxo | Sua solicitação de saque acabou de ser enviada |
-| Processing | Roxo | A Pagar.me está transferindo o dinheiro para seu banco |
-| Pending | Roxo | A transferência está na fila, aguardando processamento |
-| Completed | Verde | Pronto — o dinheiro está na sua conta bancária |
-| Failed | Vermelho | Algo deu errado (verifique seus dados bancários) |
-| Canceled | Vermelho | O saque foi cancelado antes da conclusão |
+## Entenda os status
 
-**Se você vir "Completed"** — o dinheiro está no seu banco. Confira sua conta bancária ou extrato PIX.
+Os status vêm direto do processamento da Pagar.me. As cores no app são:
 
-**Se você vir "Failed"** — seus dados bancários podem estar incorretos. Volte à sua carteira, toque em **Update** na seção Bank Details e corrija qualquer problema. Depois tente sacar novamente.
+- **Created** (roxo): sua solicitação foi registrada
+- **Pending** (roxo): na fila, aguardando para ser processada
+- **Processing** (roxo): a Pagar.me está transferindo para o seu banco
+- **Completed** (verde): o dinheiro chegou na sua conta
+- **Failed** (vermelho): a transferência falhou. Quase sempre é um problema nos dados bancários
+- **Canceled** (vermelho): o saque foi cancelado antes de concluir
 
-**Se você vir "Processing" ou "Pending"** — seu saque está a caminho. Transferências bancárias geralmente levam de 2 a 5 dias úteis.
+## Veja os pedidos dentro de um saque
 
-## Dicas importantes
+Toque em um saque na lista para abrir a tela **Payout Details**. Ela mostra todos os pedidos incluídos naquele saque, com o produto, o comprador, o número do pedido, o valor e a data.
 
-- **Verifique sua carteira regularmente.** Após cada show, confira sua carteira para ver quais pedidos foram concluídos e adicionados ao seu saldo disponível
-- **"Processing" não significa travado.** É normal que saques mostrem "Processing" por alguns dias. Transferências bancárias levam de 2 a 5 dias úteis
-- **Saques falhados geralmente são problema de dados bancários.** Se um saque falhar, atualize suas informações bancárias e tente novamente
-- **Cada venda é rastreada separadamente.** Sua carteira mostra um saldo combinado, mas cada venda individual passa pelo seu próprio cronograma antes de ser adicionada ao valor disponível
+![Tela Payout Details com três pedidos, cada um com comprador, produto, número do pedido, valor e status Order Completed](./assets/mockups/check-your-earnings-or-payout-status__payout-details__pt-br.png)
+
+Use essa tela para conferir exatamente quais vendas compuseram um saque.
+
+## O que fazer conforme o status
+
+- **Completed**: confira sua conta bancária ou o extrato PIX. O valor já está lá
+- **Processing** ou **Pending**: seu saque está a caminho. Transferências bancárias levam de 2 a 5 dias úteis. Não precisa fazer nada
+- **Failed**: volte em **My Wallet**, toque em **Update** na seção Bank Details, corrija a conta e peça o saque de novo
+
+## Dicas
+
+- Depois de cada show, confira **My Wallet** para ver quais pedidos foram para **Available to Withdraw**
+- **Processing** por alguns dias é normal. Só peça ajuda se passar de 5 dias úteis
+- Cada venda segue seu próprio prazo antes de virar saldo disponível
 
 ## Perguntas frequentes
 
 **Onde vejo quanto ganhei?**
-Abra **My Wallet** nas suas configurações. Seu saldo disponível é mostrado em destaque, junto com valores pendentes.
+Abra **My Wallet** nas configurações. Seu saldo disponível aparece em destaque e os pedidos em andamento ficam no cartão **Pending**.
 
-**Como sei se meu saque foi processado?**
-Vá em **Payouts History** (ícone de relógio na sua carteira). Procure seu saque mais recente — se disser "Completed" em verde, o dinheiro está no seu banco.
+**Como sei se meu saque caiu?**
+Vá em **Payouts History**. Se o saque mais recente estiver em verde com o status **Completed**, o dinheiro está na sua conta.
 
-**Por que minha carteira mostra um valor menor do que eu esperava?**
-Sua carteira mostra os ganhos após a comissão de 14% da Jamble ter sido deduzida. Se você vendeu um item por R$ 100, sua carteira mostra R$ 86. Além disso, apenas pedidos concluídos (onde o comprador confirmou o recebimento) aparecem no seu saldo disponível.
+**Meu saque está travado em Processing. É normal?**
+Sim, até 5 dias úteis. Se passar disso, fale com o suporte.
+
+**Posso ver quais vendas entraram em um saque?**
+Sim. Toque no saque em **Payouts History** para abrir **Payout Details** com a lista de pedidos.
 
 **Posso ver ganhos por show?**
-Sua carteira mostra seu saldo total disponível. Para detalhes de pedidos individuais, confira seus pedidos em **My Sales**.
-
-**Por que meu saque está travado em "Processing"?**
-Transferências bancárias geralmente levam de 2 a 5 dias úteis. "Processing" é normal durante esse período. Se seu saque está "Processing" há mais de 5 dias úteis, entre em contato com o suporte.
+O saldo total fica em **My Wallet**. Para conferir pedidos individuais, use **My Sales**.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app ou envie um email para support@jambleapp.com.

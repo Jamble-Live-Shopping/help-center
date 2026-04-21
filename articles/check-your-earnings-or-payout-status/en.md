@@ -2,82 +2,90 @@
 
 ## What you'll learn
 
-This guide shows you how to check your current earnings, see the status of your payouts, and understand what each balance and status means in your wallet.
+How to open your wallet, check your available balance and pending earnings, view your payout history with the status of each one, and what to do when a payout shows an error.
 
 ## Before you start
 
-You need:
-- An approved seller account on Jamble
-- At least one completed sale (to have earnings to check)
+- Approved seller account on Jamble
+- Bank details registered in the Bank Details section
+- At least one completed sale
 
-## Step by step
+## Open your wallet
 
-### Step 1: Open your wallet
+Go to your profile, tap **Settings** and then **My Wallet**.
 
-Go to your profile, then tap **Settings** → **My Wallet**.
+![My Wallet screen with Available to Withdraw card, Withdraw button, Bank Details and Pending card](./assets/mockups/check-your-earnings-or-payout-status__wallet-overview__en.png)
 
-![My Wallet screen showing balance cards, bank details and withdraw button with help and history icons](./assets/mockups/check-your-earnings-or-payout-status__wallet-overview__en.png)
+The screen shows:
 
-Your wallet shows multiple sections, each with a title, description, and value. These sections give you a breakdown of your earnings:
-- Your available balance (what you can withdraw now)
-- Pending earnings (orders still in progress)
-- Other relevant amounts
+- **Available to Withdraw**: the balance you can withdraw now. Tap **Withdraw** to start a transfer via PIX
+- **Bank Details**: your registered account. Tap **Update** to correct your details
+- **Pending**: orders in progress, not yet released for withdrawal. Tap **Learn More** to understand the timeline
+- **Payouts History**: list of your past and ongoing payouts
 
-### Step 2: Check payout history
+## Open your payout history
 
-To see all your past and current payouts, tap the **clock icon** (⏰) in the top-right corner of the wallet screen. This opens the **Payouts History** screen.
+On the **My Wallet** screen, tap the **clock icon** in the upper right corner. The **Payouts History** section also appears at the bottom of the screen.
 
-![Payouts History screen showing list of completed, processing, and failed payout transactions with ID, amount, status, and date](./assets/mockups/check-your-earnings-or-payout-status__payouts-history__en.png)
+![Payouts History screen listing five payouts with ID, amount, status (Completed, Processing, Pending, Failed) and date](./assets/mockups/check-your-earnings-or-payout-status__payouts-history__en.png)
 
-Each entry shows:
-- **Payout ID** — unique identifier for the payout
-- **Amount** — the R$ value withdrawn
-- **Status** — where the payout is in the process (see below)
-- **Date** — when the withdrawal was requested
+Each line shows:
 
-You can scroll down to see older payouts. Pull down to refresh the list.
+- **Payout ID** (e.g. #PAY-2812)
+- **Amount in R$**
+- **Status** with color (see section below)
+- **Date** when the payout was requested
 
-### Step 3: Understand payout statuses
+Pull the list down to refresh.
 
-| Status | Color | What it means |
-|--------|-------|--------------|
-| Created | Purple | Your withdrawal request was just submitted |
-| Processing | Purple | Pagar.me is transferring the money to your bank |
-| Pending | Purple | The transfer is in queue, waiting to be processed |
-| Completed | Green | Done — the money is in your bank account |
-| Failed | Red | Something went wrong (check your bank details) |
-| Canceled | Red | The payout was canceled before completion |
+## Understand the statuses
 
-**If you see "Completed"** — the money is in your bank. Check your bank account or PIX statement.
+Statuses come directly from Pagar.me processing. The colors in the app are:
 
-**If you see "Failed"** — your bank details may be incorrect. Go back to your wallet, tap **Update** in the Bank Details section, and fix any issues. Then try withdrawing again.
+- **Created** (purple): your request was registered
+- **Pending** (purple): in queue, waiting to be processed
+- **Processing** (purple): Pagar.me is transferring to your bank
+- **Completed** (green): the money arrived in your account
+- **Failed** (red): the transfer failed. Almost always a problem with your bank details
+- **Canceled** (red): the payout was canceled before completion
 
-**If you see "Processing" or "Pending"** — your payout is on its way. Bank transfers typically take 2 to 5 business days.
+## See the orders within a payout
 
-## Important tips
+Tap a payout in the list to open the **Payout Details** screen. It shows all orders included in that payout, with the product, buyer, order number, amount and date.
 
-- **Check your wallet regularly.** After each show, check your wallet to see which orders have been completed and added to your available balance
-- **"Processing" doesn't mean stuck.** It's normal for payouts to show "Processing" for a few days. Bank transfers take 2-5 business days
-- **Failed payouts are usually a bank details issue.** If a payout fails, update your bank information and try again
-- **Each sale is tracked separately.** Your wallet shows a combined balance, but each individual sale goes through its own timeline before being added to your available amount
+![Payout Details screen with three orders, each with buyer, product, order number, amount and Order Completed status](./assets/mockups/check-your-earnings-or-payout-status__payout-details__en.png)
+
+Use this screen to check exactly which sales made up a payout.
+
+## What to do based on status
+
+- **Completed**: check your bank account or PIX statement. The amount is already there
+- **Processing** or **Pending**: your payout is on its way. Bank transfers take 2 to 5 business days. You don't need to do anything
+- **Failed**: go back to **My Wallet**, tap **Update** in the Bank Details section, correct your account and request the payout again
+
+## Tips
+
+- After each show, check **My Wallet** to see which orders moved to **Available to Withdraw**
+- **Processing** for a few days is normal. Only ask for help if it goes over 5 business days
+- Each sale follows its own timeline before becoming available balance
 
 ## Common questions
 
-**Where do I see how much I've earned?**
-Open **My Wallet** from your settings. Your available balance is shown prominently, along with any pending amounts.
+**Where do I see how much I earned?**
+Open **My Wallet** in settings. Your available balance appears highlighted and orders in progress appear on the **Pending** card.
 
-**How do I know if my withdrawal went through?**
-Go to **Payouts History** (clock icon in your wallet). Look for your latest payout — if it says "Completed" in green, the money is in your bank.
+**How do I know if my payout went through?**
+Go to **Payouts History**. If your most recent payout is green with **Completed** status, the money is in your account.
 
-**Why does my wallet show a lower amount than I expected?**
-Your wallet shows earnings after Jamble's 14% commission has been deducted. If you sold an item for R$ 100, your wallet shows R$ 86. Also, only completed orders (where the buyer confirmed receipt) appear in your available balance.
+**My payout is stuck on Processing. Is that normal?**
+Yes, up to 5 business days. If it goes beyond that, contact support.
 
-**Can I see earnings per show?**
-Your wallet shows your total available balance. For individual order details, check your orders in **My Sales**.
+**Can I see which sales were included in a payout?**
+Yes. Tap the payout in **Payouts History** to open **Payout Details** with the list of orders.
 
-**Why is my payout stuck on "Processing"?**
-Bank transfers typically take 2 to 5 business days. "Processing" is normal during this period. If your payout has been "Processing" for more than 5 business days, contact support.
+**Can I see earnings by show?**
+Your total balance is in **My Wallet**. To check individual orders, use **My Sales**.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Talk to us via the in-app chat or send an email to support@jambleapp.com.
