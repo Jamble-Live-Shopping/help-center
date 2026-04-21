@@ -1,17 +1,13 @@
 intercom_id: 14288152
 slug: cancel-an-order-as-a-seller
 collection_id: 19177938
-
-# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
-default_locale: pt-br
-
+default_locale: pt-BR
+titles:
+  pt-BR: Cancelar um Pedido como Vendedor
+  en: Cancel an Order as a Seller
+descriptions:
+  pt-BR: Como cancelar uma venda antes ou depois de confirmar, com reembolso PIX automatico para o comprador.
+  en: How to cancel a sale before or after confirming, with automatic PIX refund for the buyer.
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
-locales:
-  pt-br:
-    title: 'Cancelar um Pedido como Vendedor'
-    description: ''
-  en:
-    title: 'Cancel an Order as a Seller'
-    description: 'This guide explains how to cancel an order as a seller on Jamble, at which stages you can do it, and what happens when you do.'
+last_sync: 2026-04-21T00:00:00Z
