@@ -2,113 +2,105 @@
 
 ## O que você vai aprender
 
-Este guia explica como registrar seus dados bancários e sacar seus ganhos da Jamble para sua conta bancária via PIX.
+Como registrar seus dados bancários na Jamble e sacar seus ganhos para sua conta bancária.
 
 ## Antes de começar
 
 Você precisa de:
 - Uma conta de vendedor aprovada na Jamble
 - Uma conta bancária brasileira no seu nome
-- Seu CPF (ou CNPJ se você vende como empresa)
-- Ganhos disponíveis na sua carteira (pelo menos uma venda concluída)
+- Seu CPF (ou CNPJ, se vender como empresa)
+- Ganhos disponíveis na sua carteira (ao menos uma venda concluída)
 
-## Passo a passo
+## Passo 1: Abrir sua carteira
 
-### Passo 1: Abra sua carteira
+No seu perfil, toque em **Ajustes**. Na seção **VENDER**, toque em **Minha Carteira**.
 
-Vá ao seu perfil, depois toque em **Settings**. Encontre e toque em **My Wallet**.
+![Tela Ajustes com a seção VENDER mostrando Minhas Vendas, Minha Carteira e Preferências de Envio](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/set-up-and-start-a-payout__settings-menu__pt-br.png)
 
-![Menu de configurações com seção Vender mostrando opções Minhas Vendas, Minha Carteira e Preferências de Envio](./assets/mockups/set-up-and-start-a-payout__settings-menu__pt-br.png)
+## Passo 2: Registrar seu banco (apenas na primeira vez)
 
-Você também pode acessar sua carteira diretamente da sua página de perfil.
+Na primeira visita, a carteira mostra **R$ 0,00** em **Disponível para Saque** e o botão **Register Bank** no lugar do botão de saque. Toque nele para começar.
 
-### Passo 2: Registre seu banco (somente na primeira vez)
+![Tela Minha Carteira na primeira vez, com Disponível para Saque R$ 0,00 e botão Register Bank](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/set-up-and-start-a-payout__wallet-register-bank__pt-br.png)
 
-Se é sua primeira vez, você verá um botão **Register Bank** na parte inferior da tela da carteira. Toque nele.
+Aparece um alerta **Cadastro** com três opções:
 
-![Tela Minha Carteira com botão para Registrar Banco](./assets/mockups/set-up-and-start-a-payout__wallet-register-bank__pt-br.png)
+![Alerta Cadastro explicando a verificação de identidade via Pagar.me, com três botões: Individual, Empresa, Mais tarde](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/set-up-and-start-a-payout__registration-type-picker__pt-br.png)
 
-Um alerta aparece:
+Escolha o que corresponde à sua situação:
+- **Individual** se você vende como pessoa física (usa seu CPF)
+- **Empresa** se você vende como empresa registrada (usa seu CNPJ)
+- **Mais tarde** para pular o cadastro agora
 
-![Tela de registro com requisito de verificação de identidade e três botões de tipo de conta](./assets/mockups/set-up-and-start-a-payout__registration-type-picker__pt-br.png)
+O cadastro abre um formulário externo fornecido pela **Pagar.me**, nossa parceira de pagamentos, para verificar sua identidade e seus dados bancários. Siga os passos do formulário até o fim.
 
-Escolha a opção que corresponde à sua situação:
-- **Individual** — se você vende como pessoa física (usando seu CPF)
-- **Company** — se você vende como empresa registrada (usando seu CNPJ)
+## Passo 3: Conferir seus dados bancários
 
-Isso abre um formulário de registro onde você informará seus dados de identidade e bancários. O formulário é fornecido pela **Pagar.me**, parceira de pagamentos da Jamble. Siga os passos do formulário para completar seu registro.
+Depois do cadastro, volte para a **Minha Carteira**. A seção **Dados Bancários** mostra a conta registrada. O botão **Atualizar** permite trocar a conta a qualquer momento.
 
-### Passo 3: Verifique seus dados bancários
+![Tela Minha Carteira após o cadastro: Disponível para Saque R$ 350,00 com botão Sacar, card Dados Bancários (Banco do Brasil, agência, conta) com botão Atualizar, e linha Pendente R$ 120,00](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/set-up-and-start-a-payout__wallet-with-bank__pt-br.png)
 
-Após o registro, sua tela da carteira mostra suas informações bancárias em uma seção **Bank Details** na parte inferior.
+Confira que o nome, banco, agência e conta estão corretos. Dados errados fazem o saque falhar.
 
-![wallet-header: seção Minha Carteira com card de detalhes bancários mostrando nome do banco, agência e número da conta com botão de atualizar, e botão de sacar abaixo](./assets/mockups/set-up-and-start-a-payout__wallet-header__pt-br.png)
+## Passo 4: Sacar seus ganhos
 
-Se precisar mudar seus dados bancários, toque no botão **Update** ao lado das informações do banco.
+Com ganhos em **Disponível para Saque**, o botão **Sacar** fica ativo. Toque nele para enviar todo o saldo disponível via PIX para sua conta registrada.
 
-### Passo 4: Saque seus ganhos
+É um toque só. Aparece uma confirmação, você confirma, e pronto. A transferência costuma chegar no seu banco em 1 a 2 dias úteis via PIX.
 
-Quando tiver ganhos disponíveis na sua carteira, o botão **Withdraw** aparece na parte inferior da tela. Toque nele para solicitar um saque.
+**Atenção:** você pode sacar uma vez a cada 24 horas. Depois de um saque, o botão mostra uma contagem até o próximo saque ficar disponível.
 
-Pronto — um toque só. A Jamble envia seu saldo disponível para sua conta bancária registrada via transferência bancária. O valor mínimo de saque é **R$ 100**. Transferências geralmente levam de **2 a 5 dias úteis** para chegar.
+## Passo 5: Acompanhar seu saque
 
-**Atenção:** Você só pode sacar uma vez a cada 24 horas. Após um saque, o botão mostrará uma contagem regressiva até o próximo saque estar disponível.
+No topo direito da tela **Minha Carteira**, toque no **ícone de relógio** para abrir o **Histórico de Pagamentos**. Lá você vê cada saque, o valor, a data e o status atual.
 
-### Passo 5: Acompanhe seu saque
+![Tela Histórico de Pagamentos listando três saques com ID, valor em Real, status (Completed, Processing, Failed) e data](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/set-up-and-start-a-payout__payouts-history__pt-br.png)
 
-Após solicitar um saque, você pode acompanhar o progresso. Toque no **ícone de relógio** no canto superior direito da tela da carteira para abrir o **Payouts History**.
+## Status dos saques
 
-![Lista do Histórico de Pagamentos com IDs de pagamento, valores em Real brasileiro e badges de status mostrando transações concluídas, em processamento e falhas com datas.](./assets/mockups/set-up-and-start-a-payout__payouts-history__pt-br.png)
+- **Created** a solicitação foi recebida
+- **Processing** a Pagar.me está enviando a transferência para seu banco
+- **Pending** a transferência está aguardando
+- **Completed** o dinheiro chegou na conta
+- **Failed** algo deu errado (veja o artigo de resolução)
+- **Canceled** o saque foi cancelado
 
-Cada saque mostra:
-- **ID do saque** — um número de referência único
-- **Valor** — quanto foi sacado
-- **Status** — onde o saque está no processo
-- **Data** — quando o saque foi solicitado
-
-### Status dos saques
-
-- **Created** — Sua solicitação de saque foi recebida
-- **Processing** — A Pagar.me está processando a transferência para seu banco
-- **Pending** — A transferência está aguardando para ser concluída
-- **Completed** — O dinheiro chegou na sua conta bancária
-- **Failed** — Algo deu errado (veja o artigo de resolução de problemas)
-- **Canceled** — O saque foi cancelado
 ## Dicas importantes
 
-- **Registre seu banco ANTES da primeira venda.** Não espere até ter ganhos — configure seus dados bancários cedo para que os saques sejam instantâneos quando precisar
-- **Saque é um toque só.** Toque em "Withdraw" e todo seu saldo disponível é enviado para seu banco. Valor mínimo de saque é R$ 100
-- **Transferências levam 2-5 dias úteis.** Após solicitar um saque, a transferência bancária geralmente chega dentro de 2 a 5 dias úteis. Confira o "Payouts History" para acompanhar
-- **Um saque por dia.** Você pode sacar uma vez a cada 24 horas. Planeje seus saques
-- **Mantenha seus dados bancários atualizados.** Se mudar de banco, atualize seus dados na carteira antes de solicitar um saque. Saques para dados bancários incorretos vão falhar
-- **Individual vs Company importa.** Escolha o tipo correto durante o registro. Se você é uma empresa registrada (MEI, LTDA, etc.), selecione "Company" para usar seu CNPJ. Caso contrário, selecione "Individual" para seu CPF
+- **Cadastre seu banco ANTES da primeira venda.** Não espere ter ganhos. Com o banco cadastrado desde o início, os saques ficam disponíveis na hora que você precisar
+- **Sacar é um toque só.** Toque em **Sacar** e todo o seu saldo disponível vai para o seu banco
+- **Transferências chegam rápido.** Em geral, 1 a 2 dias úteis. Acompanhe no **Histórico de Pagamentos**
+- **Um saque por dia.** Você pode sacar uma vez a cada 24 horas, então planeje
+- **Mantenha os dados bancários atualizados.** Se mudar de banco, atualize antes de sacar. Dados errados fazem o saque falhar
+- **Individual ou Empresa.** Escolha o tipo correto no cadastro. MEI, LTDA e outras empresas registradas: **Empresa** com CNPJ. Caso contrário, **Individual** com CPF
 
 ## Perguntas frequentes
 
 **Como recebo meu dinheiro?**
-Via PIX. Quando você toca em "Withdraw", a Jamble transfere seu saldo disponível para sua conta bancária registrada usando PIX.
+Via PIX. Ao tocar em **Sacar**, a Jamble envia o saldo disponível para a sua conta registrada.
 
-**Quanto tempo um saque demora?**
-Transferências bancárias geralmente levam de 2 a 5 dias úteis para chegar na sua conta.
+**Quanto tempo o saque demora?**
+Em geral, de 1 a 2 dias úteis para chegar ao seu banco.
 
-**Tem um valor mínimo de saque?**
-Sim. O valor mínimo de saque é R$ 100. Seu saldo disponível precisa ser de pelo menos R$ 100 para ver o botão Withdraw.
+**Tem valor mínimo?**
+Não há valor mínimo fixo exposto no botão. Se o saldo em **Disponível para Saque** for muito baixo, o botão pode ficar inativo. Junte mais vendas e tente de novo.
 
 **Com que frequência posso sacar?**
-Uma vez a cada 24 horas. Após um saque, você precisará esperar 24 horas antes de poder sacar novamente.
+Uma vez a cada 24 horas.
 
 **Posso sacar para qualquer banco?**
-Você pode sacar para qualquer conta bancária brasileira que aceite PIX e esteja registrada no seu nome (correspondendo ao seu CPF ou CNPJ).
+Para qualquer conta bancária brasileira que aceite PIX e esteja no seu nome (conforme o CPF ou CNPJ cadastrado).
 
-**Não vejo o botão Withdraw. Por quê?**
-Ou você ainda não tem ganhos disponíveis (seus pedidos podem ainda estar em andamento), ou não registrou seus dados bancários. Veja se o botão diz "Register Bank" — se sim, complete o registro bancário primeiro.
+**Não vejo o botão Sacar. Por quê?**
+Ou você ainda não tem ganhos disponíveis, ou seu banco não está cadastrado. Se o botão diz **Register Bank**, complete o cadastro primeiro.
 
 **Posso mudar minha conta bancária?**
-Sim. Toque no botão **Update** na seção Bank Details da sua carteira para atualizar suas informações bancárias.
+Sim. Na seção **Dados Bancários** da carteira, toque em **Atualizar** para trocar a conta.
 
 **E se meu saque falhar?**
-Confira se seus dados bancários estão corretos. A causa mais comum de saques falhados é informação bancária incorreta. Atualize seus dados e tente novamente. Se o problema persistir, entre em contato com o suporte.
+Confira se os dados bancários estão corretos. Dados errados são a causa mais comum. Corrija em **Atualizar** e tente de novo. Se o problema continuar, fale com o suporte.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app ou no email support@jambleapp.com.
