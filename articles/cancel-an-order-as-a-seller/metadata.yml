@@ -11,3 +11,11 @@ descriptions:
 state: published
 author_id: 7980507
 last_sync: 2026-04-21T00:00:00Z
+
+locales:
+  pt-BR:
+    title: 'Cancelar um Pedido como Vendedor'
+    description: 'Como cancelar uma venda antes ou depois de confirmar, com reembolso PIX automatico para o comprador.'
+  en:
+    title: 'Cancel an Order as a Seller'
+    description: 'How to cancel a sale before or after confirming, with automatic PIX refund for the buyer.'
