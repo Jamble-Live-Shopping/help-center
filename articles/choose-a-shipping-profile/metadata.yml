@@ -6,12 +6,12 @@ collection_id: 19177935
 default_locale: pt-br
 
 state: published
-author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+author_id: 7980499
+last_sync: 2026-04-21T00:00:00Z
 locales:
   pt-br:
     title: 'Escolher um Perfil de Envio'
-    description: ''
+    description: 'Como os 11 perfis de envio da Jamble funcionam, qual escolher para cada produto e como o perfil afeta o frete que o comprador paga.'
   en:
     title: 'Choose a Shipping Profile'
-    description: "This guide explains how shipping profiles work on Jamble. You'll learn what each profile is designed for, how to choose the right one for your products, and how shipping profiles affect the cost your buyers pay."
+    description: "How Jamble's 11 shipping profiles work, which one to pick per product, and how the profile affects the shipping your buyer pays."
