@@ -2,94 +2,89 @@
 
 ## What you'll learn
 
-This guide explains how to apply to become a seller on Jamble, what information you'll need, and what to expect after you submit your application.
+This guide explains how to sign up to become a seller on Jamble, what information you need, and what to expect after submitting your application.
 
 ## Before you start
 
 You need:
 - The Jamble app installed on your phone
-- A Jamble account (buyer account is fine)
-- To be located in Brazil with a Brazilian phone number (+55)
+- A Jamble account (a buyer account works fine)
+- To be in Brazil with a Brazilian phone number (+55)
 - To be 18 years old or older
-- Photos of the products you want to sell
+- Photos of the products you want to sell (Pokémon cards, Hot Wheels, collectibles)
 
-## Step by step
+## Find the application in the app
 
-### Step 1: Find the application
+There are three paths in the app, and they all open the same application:
 
-There are several ways to start your seller application in the app:
+- **On your profile:** tap the **Apply to Sell Live** button next to your information
+- **In settings:** open Settings and tap **Apply to go Live** in the IMPORTANT section
+- **Watching a show:** tap the menu and select **Apply to go Live**
 
-- **From your profile:** Tap the **"Apply to Sell Live"** button next to your profile info
-- **From settings:** Go to Settings and tap **"Apply to go Live"** in the Important section
-- **While watching a show:** Tap the menu and select **"Apply to Go Live"**
+![Settings with IMPORTANT section and Apply to go Live option](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/apply-to-sell-on-jamble__settings-apply-to-sell__en.png)
 
-All of these open the same application.
+## Fill out the application form
 
-![Settings screen showing IMPORTANT section with Apply to go Live option and SELL section](./assets/mockups/apply-to-sell-on-jamble__settings-apply-to-sell__en.png)
-
-### Step 2: Complete the application form
-
-The application form opens inside the app. You'll go through a few pages:
+The form opens inside the app and takes about **5 minutes** to complete. You go through a few pages:
 
 **Page 1: Guidelines and age verification**
-- Read and confirm you understand Jamble's Community Guidelines
-- Confirm you are 18 years old or older
+- Read and confirm that you understand Jamble's Community Guidelines
+- Confirm that you're 18 years old or older
 
-**Remaining pages:**
-- **Your name and contact info**
-- **What you sell** — describe the types of products you want to sell (clothes, sneakers, collectibles, etc.)
-- **Your social media** — Instagram or other profiles where you sell or showcase products
-The form takes about **5 minutes** to complete. Be as specific as possible — the team reviews each application personally.
+**Following pages:**
+- **Your name and contact information**
+- **What you sell:** describe the products (ex: "graded PSA Pokémon TCG cards" or "Hot Wheels Treasure Hunt and RLC")
+- **Your social media:** Instagram or other profiles where you already sell or show products
 
-**Verify your information.** Submitting wrong personal information or random photos leads to application rejection.
+Be as specific as possible. The team reviews each application personally, and clear information speeds up approval. Sending wrong personal information or random photos leads to rejection.
 
-### Step 3: Wait for review
+## Wait for review
 
-After submitting, your application is reviewed by the Jamble team. Our team may take up to **14 days** to provide a final decision.
+After you submit, your application is reviewed by the Jamble team. Our team may take up to **14 days** to give you a final decision.
 
-While your application is under review, within 15 days please don't apply again or contact support about reviewing your application.
+While your application is under review, please don't apply again or contact support about the status. If you try to open a new application, the app shows this message:
 
-![Pending Application alert dialog with message about submitted application to Go Live and two action buttons](./assets/mockups/apply-to-sell-on-jamble__pending-application__en.png)
+![Pending Application alert with Reach out and Ok I will wait! buttons](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/apply-to-sell-on-jamble__pending-application__en.png)
 
-If you have questions while waiting, tap **"Contact Support > Ask a General Question"** to reach the team.
+For any other questions while you wait, tap **Reach out** on the alert or open the app chat.
 
-### Step 4: Get approved and start selling
+## Get approved and start selling
 
-When your application is approved, you'll receive a notification, an email, and a SMS. Your account is now a seller account and you'll have access to all seller tools.
+When your application is approved, you get a notification in the app, an email, and an SMS. Your account becomes a seller account and you get access to all seller tools.
 
-**What to do next after approval:**
-1. Add your Bank Details to receive payouts
-2. Add your shipping address to go Live
+**What to do right after approval:**
+1. Add your bank details to receive payments via PIX
+2. Add your shipping address so you can go live
 3. Schedule your first Live
-4. List products to your Live
+4. List products in your Live
 
-## Important tips
+## Tips to increase your chances of approval
 
-- **You have a maximum of 2 applications.** If your first application is declined, you can apply one more time. Make sure to improve your application based on any feedback before resubmitting
-- **Be specific about what you sell.** Saying "clothes" is less convincing than "vintage streetwear and sneakers from curated thrift shops." Show the team you know your niche
-- **Include good product photos.** Clear, well-lit photos of real products you own make your application much stronger
-- **Set up payment and shipping right after approval.** The most common mistake new sellers make is going live before their payment info is ready. This delays your earnings
+- **You have a maximum of 2 applications.** If the first one is rejected, you can apply one more time. Improve your application based on feedback before resubmitting
+- **Be specific about what you sell.** "Collectibles" is vague. "Sealed and graded Pokémon TCG cards PSA 9-10" shows you know your niche
+- **Include good photos of your products.** Clear, well-lit photos of real products you have in stock make your application much stronger
+- **Set up payment and shipping right after approval.** The most common mistake new sellers make is going live without bank details and address ready. This delays your earnings
 
-## Common questions
+## Frequently asked questions
 
 **How long does the review take?**
-Our team may take up to 14 days to provide a final decision. You will be notified via in-app notification, email, and SMS once your application is approved.
+Up to 14 days. You'll be notified via app, email, and SMS when your application is approved.
 
-**What if my application is declined?**
-You can apply one more time (maximum 2 applications total). Take the time to improve your application — better product photos, a clearer description of what you sell, and an active social media presence all help.
+**What if my application is rejected?**
+You can apply one more time (maximum of 2 applications total). Take the opportunity to improve: better photos, clearer description of your niche, active presence on social media.
 
 **Can I apply from outside Brazil?**
-No. Jamble currently operates exclusively in Brazil. You need to be located in Brazil with a Brazilian phone number.
+No. Jamble operates exclusively in Brazil. You need to be in Brazil with a Brazilian phone number.
 
-**Do I need to have products listed before applying?**
-No, but you do need photos of products you plan to sell. The team wants to see what kind of items you'll be offering.
+**Do I need to have products listed before I apply?**
+No, but you need photos of the products you plan to sell. The team wants to see what kind of items you'll be offering.
 
-**Is there a minimum age to sell on Jamble?**
-Yes, you must be 18 years old or older.
+**Is there a minimum age to sell?**
+Yes, 18 years old or older.
 
 **Can I speed up my application?**
-No, contacting Support won't speed up the decision. Complete your application with detailed information and clear photos to help the review go smoothly.
+No. Contacting support doesn't speed up the decision. Complete your application with detailed information and clear photos so the review is faster.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Reach out through the app chat or email support@jambleapp.com.

@@ -6,12 +6,12 @@ collection_id: 19177934
 default_locale: pt-br
 
 state: published
-author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+author_id: 7980499
+last_sync: 2026-04-21T00:00:00Z
 locales:
   pt-br:
     title: 'Solicitar para Vender na Jamble'
-    description: ''
+    description: 'Como se inscrever para vender na Jamble, o que preencher no formulário e o que esperar durante a análise.'
   en:
     title: 'Apply to Sell on Jamble'
-    description: "This guide explains how to apply to become a seller on Jamble, what information you'll need, and what to expect after you submit your application."
+    description: "How to apply to sell on Jamble, what to fill in the form, and what to expect during review."
