@@ -24,9 +24,9 @@ Você também pode trazer produtos de outros shows ou do seu perfil de loja usan
 
 ## Passo 1: Abra seu show e adicione um produto
 
-Vá ao show que você quer preparar. Você verá uma lista de produtos (pode estar vazia se ainda não adicionou nada). Toque em **"+ Add Product"** ou no botão **"+"**.
+Vá ao show que você quer preparar. Você verá uma lista de produtos (pode estar vazia se ainda não adicionou nada). Toque em **"+ Adicionar Produto"** ou no botão **"+"**.
 
-    ┌─────────────────────────────────┐│  Seu Show                       ││                                 ││  Produtos (0)                   ││                                 ││  ┌───────────────────────────┐  ││  │   + Adicionar Produto     │  ││  └───────────────────────────┘  ││                                 │└─────────────────────────────────┘
+![Tela do show vazio com lista de produtos vazia e botão Adicionar Produto](./assets/mockups/new-seller-guide-to-listing-products__seller-products-empty__pt-br.png)
 
 Isso abre o formulário de criação de produto.
 
@@ -46,9 +46,9 @@ O título é a primeira coisa que os compradores veem, então capriche. Inclua o
 
 **Exemplos ruins:**
 
-- "Card" (muito vago, qual tênis?)
+- "Card" (muito vago, qual carta, qual edição, qual estado?)
 
-- "Sapatos lindos oferta incrível!!!" (não é descritivo)
+- "Oferta incrível não perca!!!" (sem detalhes, sem produto)
 
 - "Item 1" (não diz nada ao comprador)
 
@@ -66,9 +66,9 @@ Similar às Ofertas em tempo real, os compradores competem fazendo ofertas. A di
 
 **Compra Direta (Buy It Now)**
 
-Preço fixo. Os compradores compram instantaneamente pelo preço que você definiu, sem competição, sem espera. Você também pode ativar uma **Venda Relâmpago** em produtos de Compra Direta, que adiciona um desconto percentual e um cronômetro (veja o artigo <a href="6-vendas-relampago.md" class="intercom-content-link" target="_blank">Vendas Relâmpago</a> para detalhes).
+Preço fixo. Os compradores compram instantaneamente pelo preço que você definiu, sem competição, sem espera. Você também pode ativar uma **Venda Relâmpago** em produtos de Compra Direta. Ela adiciona um desconto percentual e um cronômetro. Veja o artigo <a href="6-vendas-relampago.md" class="intercom-content-link" target="_blank">Vendas Relâmpago</a> para detalhes.
 
-    ┌─────────────────────────────────┐│  Modo de Venda                  ││                                 ││  ○ Ofertas em tempo real        ││  ○ Sudden Death                 ││  ○ Compra Direta                ││                                 │└─────────────────────────────────┘
+![Seletor de modo de venda com três opções: Ofertas em tempo real, Sudden Death, Compra Direta](./assets/mockups/new-seller-guide-to-listing-products__sell-mode-picker__pt-br.png)
 
 ## Passo 4: Defina seu preço (obrigatório)
 
@@ -170,9 +170,9 @@ Quando você define uma quantidade maior que 1, vários compradores podem compra
 
 ## Passo 7: Adicione fotos (opcional mas fortemente recomendado)
 
-Adicione até **10 fotos** do seu produto. Fotos são opcionais, mas fazem uma grande diferença, os compradores têm muito mais chance de comprar itens que conseguem ver claramente.
+Adicione até **10 fotos** do seu produto. Fotos são opcionais, mas fazem uma grande diferença. Os compradores têm muito mais chance de comprar itens que conseguem ver claramente.
 
-    ┌─────────────────────────────────┐│  Selecionar fotos               ││                                 ││  ┌───┐ ┌───┐ ┌───┐ ┌───┐      ││  │ 1 │ │ 2 │ │ 3 │ │ + │      ││  └───┘ └───┘ └───┘ └───┘      ││                                 ││  Até 10 fotos                   │└─────────────────────────────────┘
+![Tela de seleção de fotos com três fotos adicionadas e slot vazio para mais](./assets/mockups/new-seller-guide-to-listing-products__product-photo-grid__pt-br.png)
 
 **Dicas para ótimas fotos:**
 
@@ -249,9 +249,9 @@ Preencha qualquer um destes campos para completar sua listagem:
 
 ## Passo 11: Salve sua listagem
 
-Quando todos os campos obrigatórios estiverem preenchidos (título, modo de venda, preço, perfil de envio), o botão **"Add Listing"** fica ativo. Toque nele para salvar.
+Quando todos os campos obrigatórios estiverem preenchidos (título, modo de venda, preço, perfil de envio), o botão **"Adicionar produto"** fica ativo. Toque nele para salvar.
 
-    ┌─────────────────────────────────┐│                                 ││  ┌───────────────────────────┐  ││  │       Add Listing         │  ││  └───────────────────────────┘  ││                                 │└─────────────────────────────────┘
+![Resumo do formulário de listagem com botão Adicionar produto ativo na parte inferior](./assets/mockups/new-seller-guide-to-listing-products__add-listing__pt-br.png)
 
 Seu produto agora está adicionado ao show e pronto para ser vendido durante sua live.
 
@@ -283,7 +283,7 @@ Isso economiza tempo ao listar vários itens similares. Você sempre pode altera
 
 - **Seja honesto sobre o estado.** Isso gera confiança e previne devoluções. Se tem um defeito, mencione na descrição e mostre em uma foto
 
-- **Você pode editar listagens depois de salvar.** Errou? Toque em qualquer listagem para editar título, preço, fotos ou qualquer outro campo. As alterações são salvas quando você toca em **"Save Changes"**
+- **Você pode editar listagens depois de salvar.** Errou? Toque em qualquer listagem para editar título, preço, fotos ou qualquer outro campo. As alterações são salvas quando você toca em **"Salvar alterações"**
 
 - **Você pode clonar listagens.** Em vez de criar produtos similares do zero, clone uma listagem existente e mude apenas o que for diferente. Veja <a href="7-duplicar-produtos.md" class="intercom-content-link" target="_blank">Duplicar (Clonar) Produtos</a> para detalhes
 
@@ -299,7 +299,7 @@ Até 10 fotos por listagem. Fotos são opcionais mas fortemente recomendadas.
 
 **Posso editar uma listagem depois de criar?**
 
-Sim. Toque na listagem, faça as alterações e toque em **"Save Changes"**. Você pode atualizar qualquer campo a qualquer momento antes do produto ser vendido.
+Sim. Toque na listagem, faça as alterações e toque em **"Salvar alterações"**. Você pode atualizar qualquer campo a qualquer momento antes do produto ser vendido.
 
 **Qual a diferença entre Ofertas em tempo real, Sudden Death e Compra Direta?**
 
