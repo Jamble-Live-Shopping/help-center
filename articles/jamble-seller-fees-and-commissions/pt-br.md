@@ -21,7 +21,7 @@ Você vê uma única dedução de 14%. Não existe taxa de processamento por cim
 
 Exemplo com uma venda de R$ 100,00 (ex.: uma carta Charizard):
 
-![Detalhamento de uma venda de R$ 100,00 na Jamble, comissão de 14% (R$ 14,00) e ganho líquido de R$ 86,00](./assets/mockups/jamble-seller-fees-and-commissions__seller-fee-breakdown__pt-br.png)
+![Detalhamento de uma venda de R$ 100,00 na Jamble, comissão de 14% (R$ 14,00) e ganho líquido de R$ 86,00](./assets/mockups/jamble-seller-fees-and-commissions__seller-fee-breakdown__pt-br__v2.png)
 
 **Seus ganhos líquidos = Preço de venda × 86%**
 
@@ -29,7 +29,7 @@ Exemplo com uma venda de R$ 100,00 (ex.: uma carta Charizard):
 
 O frete é **separado** dos seus ganhos. O comprador paga o frete no checkout, por cima do preço do produto. Esse valor vai direto para a transportadora (Correios). A Jamble não cobra comissão sobre o frete.
 
-![Tela mostrando o que o comprador paga, o frete e o ganho líquido do vendedor após a taxa Jamble de 14%](./assets/mockups/jamble-seller-fees-and-commissions__seller-fees-breakdown__pt-br.png)
+![Tela mostrando o que o comprador paga, o frete e o ganho líquido do vendedor após a taxa Jamble de 14%](./assets/mockups/jamble-seller-fees-and-commissions__seller-fees-breakdown__pt-br__v2.png)
 
 ## Quando a comissão é cobrada?
 

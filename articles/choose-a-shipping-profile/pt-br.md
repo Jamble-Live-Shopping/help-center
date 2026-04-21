@@ -43,7 +43,7 @@ A Jamble tem 11 perfis pré-definidos. Escolha o que corresponde ao tamanho e pe
 - **Pacotes grandes**: 7+ itens. Grandes lotes de roupas ou cartas.
 - **Pacotes extra-grandes**: pedidos muito grandes, grandes coleções. O maior perfil disponível.
 
-![Guia de seleção de perfil de envio mostrando árvore de decisão para escolher categorias de envio apropriadas conforme tipo e características do pacote](./assets/mockups/choose-a-shipping-profile__shipping-guide-quick-reference__pt-br.png)
+![Guia de seleção de perfil de envio mostrando árvore de decisão para escolher categorias de envio apropriadas conforme tipo e características do pacote](./assets/mockups/choose-a-shipping-profile__shipping-guide-quick-reference__pt-br__v2.png)
 
 ## Como escolher o perfil certo
 

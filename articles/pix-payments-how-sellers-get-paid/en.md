@@ -43,7 +43,7 @@ Go to your profile, tap **Settings**, then **My wallet**.
 
 If your bank account hasn't been registered yet, you'll see a **Register Bank** button at the bottom of the screen.
 
-![My wallet screen header with back arrow, clock and help icons, balance sections and Register Bank button](./assets/mockups/pix-payments-how-sellers-get-paid__wallet-header__en.png)
+![My wallet screen header with back arrow, clock and help icons, balance sections and Register Bank button](./assets/mockups/pix-payments-how-sellers-get-paid__wallet-header__en__v2.png)
 
 Tap **Register Bank** and choose:
 - **Individual** if you sell as an individual (CPF)
@@ -69,7 +69,7 @@ If you need to update your bank account, tap **Update** next to your details.
 
 When you have available balance, the **Withdraw** button becomes active at the top of the screen.
 
-![My wallet screen with available balance for withdrawal, pending amount, bank details and Withdraw button](./assets/mockups/pix-payments-how-sellers-get-paid__my-wallet__en.png)
+![My wallet screen with available balance for withdrawal, pending amount, bank details and Withdraw button](./assets/mockups/pix-payments-how-sellers-get-paid__my-wallet__en__v2.png)
 
 Tap **Withdraw**. A confirmation appears. This action is irreversible and available every 24h.
 
