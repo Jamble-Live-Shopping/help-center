@@ -1,17 +1,26 @@
 intercom_id: 14288150
-slug: check-your-earnings-or-payout-status
 collection_id: 19177938
+slug: check-your-earnings-or-payout-status
 
-# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
-default_locale: pt-br
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency stays R$).
+default_locale: pt-BR
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-04-21T00:00:00Z
+
+titles:
+  pt-BR: Verificar Seus Ganhos ou Status do Saque
+  en: Check Your Earnings or Payout Status
+
+descriptions:
+  pt-BR: Como abrir a carteira, ver saldo disponível, acompanhar o histórico de saques e entender cada status.
+  en: How to open your wallet, check your available balance, follow payout history, and understand each status.
+
 locales:
-  pt-br:
+  pt-BR:
     title: 'Verificar Seus Ganhos ou Status do Saque'
-    description: ''
+    description: 'Como abrir a carteira, ver saldo disponível, acompanhar o histórico de saques e entender cada status.'
   en:
     title: 'Check Your Earnings or Payout Status'
-    description: 'This guide shows you how to check your current earnings, see the status of your payouts, and understand what each balance and status means in your wallet.'
+    description: 'How to open your wallet, check your available balance, follow payout history, and understand each status.'
