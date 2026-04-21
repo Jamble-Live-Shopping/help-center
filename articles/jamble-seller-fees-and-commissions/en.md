@@ -2,95 +2,71 @@
 
 ## What you'll learn
 
-This guide explains what fees Jamble charges on your sales, how they're calculated, and what you actually receive after a sale. No surprises — everything is laid out clearly.
+This guide shows exactly how much Jamble charges per sale, how the fee is calculated, and how much lands in your wallet at the end. No fine print.
 
-## The fee structure
+## Fee structure
 
-Jamble charges a **14% commission** on each sale. This is deducted automatically before your earnings are added to your wallet. You never need to pay anything manually.
+Jamble charges **14% commission** on each sale. This amount is deducted automatically before your earnings enter your wallet. You never pay anything manually.
 
 ### What's included in the 14%
 
-The 14% commission covers:
-- **Platform fee** — for using Jamble's live shopping platform, tools, and buyer access
-- **Payment processing fees** — the cost of securely processing the buyer's payment via Pagar.me (PIX, credit card, etc.)
+The 14% commission covers two costs:
 
-You see a single deduction of 14%. There is no separate payment processing fee charged on top — it's all included.
+- **Platform fee**, for using Jamble's live shopping platform, sales tools, and access to buyers
+- **Payment processing**, the cost of securely processing the buyer's payment via Pagar.me (PIX, credit card, boleto)
+
+You see a single 14% deduction. There is no processing fee on top, everything is included.
 
 ### How it works in practice
 
-Here's an example of a R$ 100 sale:
+Example with a $100.00 sale (e.g., a Charizard card):
 
-```
-┌─────────────────────────────────────────┐
-│  Sale price (what the buyer pays)       │
-│  R$ 100,00                              │
-│                                         │
-│  Jamble commission (14%)                │
-│  - R$ 14,00                             │
-│                                         │
-│  ═══════════════════════════════════     │
-│  Your earnings (what you receive)       │
-│  R$ 86,00                               │
-└─────────────────────────────────────────┘
-```
+![Breakdown of a $100.00 sale on Jamble, 14% commission ($14.00) and net earnings of $86.00](./assets/mockups/jamble-seller-fees-and-commissions__seller-fee-breakdown__pt-br.png)
 
 **Your net earnings = Sale price × 86%**
 
 ### What about shipping?
 
-Shipping costs are **separate** from your earnings. The buyer pays shipping at checkout on top of the product price. Shipping fees go directly to the carrier (Correios) — they are not deducted from your earnings and Jamble does not take a commission on shipping.
+Shipping is **separate** from your earnings. The buyer pays for shipping at checkout, on top of the product price. This amount goes directly to the carrier (Correios). Jamble does not charge commission on shipping.
 
-```
-┌─────────────────────────────────────────┐
-│  What the buyer pays:                   │
-│                                         │
-│  Product price:     R$ 100,00           │
-│  Shipping:          R$  18,50           │
-│  ──────────────────────────────         │
-│  Total:             R$ 118,50           │
-│                                         │
-│  What you receive:                      │
-│  Your earnings:     R$  86,00           │
-│  (R$ 100 - 14% commission)              │
-└─────────────────────────────────────────┘
-```
+![Screen showing what the buyer pays, shipping, and the seller's net earnings after the 14% Jamble fee](./assets/mockups/jamble-seller-fees-and-commissions__seller-fees-breakdown__pt-br.png)
 
 ## When is the commission charged?
 
-The commission is deducted **when the sale is completed** — meaning after the buyer has received and confirmed the item. You only see your net earnings in your wallet, never the gross amount.
+The commission is deducted **when the sale is completed**, that is, after the buyer receives and confirms the item. Your wallet always shows only the net amount, never the gross.
 
 If an order is **canceled or refunded**, no commission is charged. It's as if the sale never happened.
 
 ## Important tips
 
-- **Price your items with the 14% in mind.** If you want to earn R$ 86, price the item at R$ 100. A quick formula: desired earnings ÷ 0.86 = price to set
-- **There are no hidden fees.** The 14% is the only fee. No monthly subscription, no listing fees, no account maintenance fees
-- **Shipping doesn't affect your earnings.** The buyer pays shipping separately. Your earnings are calculated only from the product price
-- **Volume doesn't change the rate.** Whether you sell 1 item or 100, the commission is the same 14%
+- **Set your prices considering the 14%.** If you want to earn $86.00, sell for $100.00. Quick formula: desired earnings ÷ 0.86 = price to set
+- **There are no hidden fees.** The 14% is the only fee. No monthly fee, no listing fee, no account maintenance fee
+- **Shipping does not affect your earnings.** The buyer pays for shipping separately. Your commission is calculated only on the product price
+- **Volume does not change the fee.** Whether selling 1 item or 100, the commission stays 14%
 
-## Common questions
+## Frequently asked questions
 
-**What percentage does Jamble take?**
+**What percentage does Jamble charge?**
 14% of the sale price. This covers the platform fee and payment processing.
 
-**Are there any other fees?**
-No. The 14% commission is the only fee. There are no listing fees, subscription fees, or hidden charges.
+**Are there other fees?**
+No. The 14% commission is the only fee. There is no listing fee, monthly fee, or hidden charges.
 
 **Do I pay commission on shipping?**
-No. Shipping is paid by the buyer and goes to the carrier. Commission is only calculated on the product price.
+No. Shipping is paid by the buyer and goes directly to the carrier. Commission is calculated only on the product price.
 
 **What if the order is canceled?**
 No commission is charged on canceled or refunded orders.
 
-**Is the 14% taken before or after I see my earnings?**
-Before. Your wallet always shows your net earnings (after the 14% has been deducted). You never need to calculate or pay the commission yourself.
+**Is the 14% deducted before or after I see my earnings?**
+Before. Your wallet always shows the net amount (after the 14% is deducted). You don't need to calculate or pay the commission.
 
 **Can I see the fee breakdown for each sale?**
-Yes. Open the order in **My Sales** and you'll see the breakdown: product price, Jamble Fees (the commission amount in R$), and the net amount you receive.
+Yes. Open the order in **My Sales** and you'll see the breakdown: product price, Jamble Fees (the commission amount), and the net amount you receive.
 
-**Does the commission rate ever change?**
-The current rate is 14%. Jamble will notify you in advance if this changes.
+**Can the commission rate change?**
+The current rate is 14%. Jamble will notify you in advance if that changes.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Talk to us via the app chat or send an email to support@jambleapp.com.
