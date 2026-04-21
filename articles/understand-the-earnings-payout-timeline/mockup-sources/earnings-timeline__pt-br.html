@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; padding: 18px 16px 20px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.header { font-size: 15px; font-weight: 600; color: #162233; text-align: center; padding: 4px 0 14px; }
+.timeline { position: relative; padding-left: 44px; }
+.timeline::before { content: ""; position: absolute; left: 15px; top: 12px; bottom: 12px; width: 2px; background: #E9EAEF; }
+.step { position: relative; padding: 10px 0; display: flex; flex-direction: column; gap: 2px; }
+.dot { position: absolute; left: -36px; top: 12px; width: 30px; height: 30px; border-radius: 50%; background: #FFFFFF; border: 2px solid #E9EAEF; color: #6B7A92; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.step.done .dot { background: #7E53F8; border-color: #7E53F8; color: #FFFFFF; }
+.step.active .dot { background: #FFFFFF; border-color: #7E53F8; color: #7E53F8; }
+.step-title { font-size: 14px; font-weight: 600; color: #162233; }
+.step.done .step-title { color: #162233; }
+.step-desc { font-size: 12px; color: #6B7A92; line-height: 16px; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; margin-top: 4px; align-self: flex-start; }
+.badge.green { background: #E7F7EF; color: #17B169; }
+.badge.purple { background: #F0E9FE; color: #7E53F8; }
+</style>
+</head>
+<body>
+<div class="phone">
+  <div class="header">Caminho dos seus ganhos</div>
+  <div class="timeline">
+    <div class="step done">
+      <div class="dot">1</div>
+      <div class="step-title">Venda</div>
+      <div class="step-desc">Comprador paga durante o show.</div>
+    </div>
+    <div class="step done">
+      <div class="dot">2</div>
+      <div class="step-title">Enviado</div>
+      <div class="step-desc">Você gera a etiqueta e posta nos Correios.</div>
+    </div>
+    <div class="step done">
+      <div class="dot">3</div>
+      <div class="step-title">Entregue</div>
+      <div class="step-desc">Pacote chega ao comprador.</div>
+    </div>
+    <div class="step active">
+      <div class="dot">4</div>
+      <div class="step-title">Disponível na carteira</div>
+      <div class="step-desc">Comprador confirma (ou prazo expira).</div>
+      <div class="badge green">Pronto para sacar</div>
+    </div>
+    <div class="step">
+      <div class="dot">5</div>
+      <div class="step-title">Sacado</div>
+      <div class="step-desc">Transferência PIX de 2 a 5 dias úteis.</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

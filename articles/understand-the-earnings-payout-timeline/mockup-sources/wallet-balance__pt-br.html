@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; padding-bottom: 16px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px 10px; border-bottom: 1px solid #F0F1F5; }
+.nav-back { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; color: #162233; font-size: 22px; }
+.nav-title { font-size: 17px; font-weight: 600; color: #162233; }
+.nav-right { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; color: #162233; }
+.card { margin: 14px 12px 10px; padding: 16px; border: 1px solid #E9EAEF; border-radius: 12px; }
+.card-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.card-left { flex: 1; }
+.card-label { font-size: 15px; font-weight: 600; color: #162233; display: flex; align-items: center; gap: 6px; }
+.info-dot { width: 14px; height: 14px; border-radius: 50%; border: 1px solid #6B7A92; color: #6B7A92; font-size: 10px; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; }
+.card-amount { font-family: -apple-system-round, "SF Pro Rounded", system-ui, sans-serif; font-size: 28px; font-weight: 500; color: #162233; letter-spacing: -0.02em; margin-top: 6px; }
+.withdraw-btn { height: 44px; padding: 0 20px; border-radius: 22px; background: #7E53F8; color: #FFFFFF; font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+.divider { height: 1px; background: #E9EAEF; margin: 14px 0 12px; }
+.bank { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.bank-left .bank-label { font-size: 13px; font-weight: 600; color: #162233; }
+.bank-left .bank-info { font-size: 13px; color: #6B7A92; margin-top: 2px; }
+.bank-btn { height: 32px; padding: 0 16px; border-radius: 16px; background: #0C131D; color: #FFFFFF; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center; }
+.pending { margin: 0 12px; padding: 14px 16px; border: 1px solid #E9EAEF; border-radius: 12px; }
+.pending-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.pending-left .pending-title { font-size: 15px; font-weight: 600; color: #162233; }
+.pending-left .pending-desc { font-size: 12px; color: #6B7A92; margin-top: 2px; line-height: 16px; }
+.pending-right { text-align: right; }
+.pending-amount { font-size: 15px; font-weight: 700; color: #162233; }
+.learn-more { font-size: 12px; font-weight: 600; color: #7E53F8; margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="phone">
+  <div class="nav">
+    <div class="nav-back">&lsaquo;</div>
+    <div class="nav-title">Minha Carteira</div>
+    <div class="nav-right">?</div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <div class="card-left">
+        <div class="card-label">Disponível para sacar <span class="info-dot">i</span></div>
+        <div class="card-amount">R$ 248,00</div>
+      </div>
+      <div class="withdraw-btn">Sacar</div>
+    </div>
+    <div class="divider"></div>
+    <div class="bank">
+      <div class="bank-left">
+        <div class="bank-label">Dados Bancários</div>
+        <div class="bank-info">Banco 001, Ag 1234, CC ****56</div>
+      </div>
+      <div class="bank-btn">Atualizar</div>
+    </div>
+  </div>
+
+  <div class="pending">
+    <div class="pending-row">
+      <div class="pending-left">
+        <div class="pending-title">Pendente</div>
+        <div class="pending-desc">Ganhos de pedidos ainda em andamento.</div>
+      </div>
+      <div class="pending-right">
+        <div class="pending-amount">R$ 172,00</div>
+        <div class="learn-more">Saiba Mais</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

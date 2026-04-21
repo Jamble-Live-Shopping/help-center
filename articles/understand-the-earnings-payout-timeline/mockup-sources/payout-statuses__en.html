@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; padding: 0 0 10px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.section-header { padding: 14px 16px 6px; font-size: 15px; font-weight: 600; color: #162233; border: 1px solid #E9EAEF; border-bottom: none; border-radius: 12px 12px 0 0; margin: 14px 12px 0; }
+.list { margin: 0 12px; border: 1px solid #E9EAEF; border-top: none; border-radius: 0 0 12px 12px; overflow: hidden; }
+.row { padding: 12px 16px; display: flex; flex-direction: column; gap: 4px; border-bottom: 1px solid #F0F1F5; }
+.row:last-child { border-bottom: none; }
+.row-top, .row-bottom { display: flex; justify-content: space-between; align-items: center; }
+.row-id { font-size: 14px; font-weight: 600; color: #162233; }
+.row-amount { font-family: -apple-system-round, "SF Pro Rounded", system-ui, sans-serif; font-size: 14px; font-weight: 600; color: #162233; }
+.status { font-size: 13px; font-weight: 600; }
+.status.brand { color: #7E53F8; }
+.status.green { color: #17B169; }
+.status.red { color: #D92C20; }
+.row-date { font-size: 12px; color: #6B7A92; }
+</style>
+</head>
+<body>
+<div class="phone">
+  <div class="section-header">Payouts History</div>
+  <div class="list">
+    <div class="row">
+      <div class="row-top">
+        <div class="row-id">#PAY-12345</div>
+        <div class="row-amount">R$ 350.00</div>
+      </div>
+      <div class="row-bottom">
+        <div class="status green">Completed</div>
+        <div class="row-date">03/19/2026</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-top">
+        <div class="row-id">#PAY-12340</div>
+        <div class="row-amount">R$ 520.00</div>
+      </div>
+      <div class="row-bottom">
+        <div class="status brand">Processing</div>
+        <div class="row-date">03/18/2026</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-top">
+        <div class="row-id">#PAY-12338</div>
+        <div class="row-amount">R$ 180.00</div>
+      </div>
+      <div class="row-bottom">
+        <div class="status brand">Pending</div>
+        <div class="row-date">03/17/2026</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-top">
+        <div class="row-id">#PAY-12335</div>
+        <div class="row-amount">R$ 210.00</div>
+      </div>
+      <div class="row-bottom">
+        <div class="status red">Failed</div>
+        <div class="row-date">03/16/2026</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
