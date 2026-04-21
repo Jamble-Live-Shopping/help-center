@@ -1,134 +1,144 @@
-# Pagamentos via PIX — Como Vendedores Recebem
+# Pagamentos via PIX, como vendedores recebem
 
 ## O que você vai aprender
 
-Este guia explica como os pagamentos funcionam para vendedores na Jamble. Você vai aprender como seus ganhos são calculados, como configurar sua conta bancária, como solicitar um saque via PIX e como resolver problemas de pagamento.
+Este guia explica como os pagamentos funcionam para vendedores na Jamble. Você vai aprender como seus ganhos são calculados, como cadastrar sua conta bancária, como sacar para sua conta via PIX e como resolver problemas de pagamento.
 
 ## Antes de começar
 
 Você precisa de:
 - Uma conta de vendedor aprovada na Jamble
-- Uma conta bancária brasileira (conta corrente ou conta poupança)
-- Seu CPF (ou CNPJ se vende como empresa)
+- Uma conta bancária brasileira (corrente ou poupança)
+- Seu CPF (ou CNPJ se você vende como empresa)
 
 ## Como vendedores recebem na Jamble
 
-Quando um comprador adquire um dos seus produtos durante um show, o dinheiro não vai direto para sua conta bancária. Veja o fluxo:
+Quando um comprador adquire um produto seu durante um show, o dinheiro não vai direto para sua conta bancária. Veja o fluxo:
 
-1. **Comprador paga** — o comprador paga o valor total (produto + frete) no checkout
-2. **Jamble retém os fundos** — o dinheiro fica guardado com segurança enquanto você envia o pedido
-3. **Você envia o pedido** — você gera uma etiqueta, embala o item e leva a uma agência dos Correios
-4. **Comprador recebe o item** — o comprador confirma que recebeu (ou a entrega é confirmada automaticamente)
-5. **Ganhos ficam disponíveis** — o dinheiro passa para seu saldo "disponível" na carteira
-6. **Você solicita um saque** — toque em "Withdraw" e o dinheiro é enviado para seu banco via PIX
+1. **O comprador paga.** O valor total (produto + frete) é pago no checkout.
+2. **A Jamble retém os fundos.** O dinheiro fica guardado com segurança enquanto você envia o pedido.
+3. **Você envia o pedido.** Você gera a etiqueta, embala o item e leva a uma agência dos Correios.
+4. **O comprador recebe.** Ele confirma o recebimento, ou a entrega é confirmada automaticamente pelo rastreio.
+5. **Seus ganhos ficam disponíveis.** O valor sai de "Pendente" e entra em "Disponível para saque" na sua carteira.
+6. **Você solicita o saque.** Toque em **Sacar** e o dinheiro é enviado para seu banco via PIX.
 
 ## Seus ganhos detalhados
 
-A Jamble cobra uma **comissão de 14%** sobre cada venda. Isso é deduzido automaticamente antes do dinheiro chegar à sua carteira.
+A Jamble cobra **14% de comissão** sobre cada venda. Essa taxa é descontada automaticamente antes do dinheiro entrar na sua carteira.
 
 **Exemplo:**
 - Você vende um item por R$ 100
 - Comissão da Jamble: R$ 14
 - Seus ganhos: R$ 86
 
-O comprador também paga o frete separadamente — os custos de frete não são deduzidos dos seus ganhos.
+O comprador paga o frete separadamente. Os custos de frete não são descontados dos seus ganhos.
 
 ## Passo a passo
 
-### Passo 1: Configure sua conta bancária
+### Passo 1: Cadastre sua conta bancária
 
-Antes de poder receber qualquer saque, você precisa registrar seus dados bancários no Pagar.me (processador de pagamentos da Jamble).
+Antes de receber qualquer saque, você precisa cadastrar seus dados bancários no Pagar.me, o processador de pagamentos da Jamble.
 
-Vá ao seu perfil, toque em **Configurações**, depois toque em **My Wallet**.
+Vá no seu perfil, toque em **Configurações**, depois em **Minha carteira**.
 
-Se sua conta bancária não estiver configurada, você verá um botão **"Register Bank"** na parte inferior da tela.
+Se sua conta bancária ainda não estiver cadastrada, você vai ver um botão **Register Bank** na parte de baixo da tela.
 
-![wallet-header: Minha Carteira com seta para voltar, ícones de hora e ajuda, seções da carteira e botão Registrar Banco](./assets/mockups/pix-payments-how-sellers-get-paid__wallet-header__pt-br.png)
+![Cabeçalho da tela Minha carteira com seta voltar, ícones de relógio e ajuda, seções de saldo e botão Register Bank](./assets/mockups/pix-payments-how-sellers-get-paid__wallet-header__pt-br.png)
 
-Toque em **"Register Bank"** e escolha:
-- **Individual** — se você vende como pessoa física (CPF)
-- **Company** — se você vende como empresa (CNPJ)
+Toque em **Register Bank** e escolha:
+- **Individual** se você vende como pessoa física (CPF)
+- **Company** se você vende como empresa (CNPJ)
 
-Isso abre um formulário de registro onde você vai informar:
+Um formulário abre para você preencher:
 - Seus dados de identidade (nome, CPF ou CNPJ)
-- Seus dados bancários (nome do banco, agência, número da conta, tipo de conta)
+- Seus dados bancários (banco, agência, número da conta, tipo de conta)
 
-Complete o formulário e envie. Depois de verificado, sua conta bancária está vinculada e pronta para receber saques.
+Complete e envie. Depois de verificado, sua conta bancária está vinculada e pronta para receber saques.
 
-### Passo 2: Verifique sua carteira
+### Passo 2: Confira sua carteira
 
-Depois de fazer vendas, vá em **My Wallet** para ver seus ganhos. A carteira mostra diferentes seções:
+Depois de concluir vendas, abra **Minha carteira** para ver seus ganhos. A tela mostra três seções:
 
-- **Disponível** — dinheiro que você pode sacar agora
-- **Aguardando liberação** — dinheiro de vendas recentes que ainda não foi liberado (aguardando confirmação do comprador)
-- **Transferido** — valor total já enviado para seu banco
+- **Disponível para saque**, o valor que você pode sacar agora
+- **Pendente**, o valor de vendas recentes ainda aguardando confirmação de entrega
+- **Dados Bancários**, a conta cadastrada que vai receber o saque
 
-Seus dados bancários também aparecem na parte inferior da tela da carteira. Se precisar atualizá-los, toque no botão **"Update"** ao lado das suas informações bancárias.
+Se precisar atualizar sua conta bancária, toque em **Atualizar** ao lado dos seus dados.
 
 ### Passo 3: Solicite um saque
 
-Quando você tiver fundos disponíveis, um botão **"Withdraw"** aparece na parte inferior da tela da carteira.
+Quando você tem saldo disponível, o botão **Sacar** fica ativo no alto da tela.
 
-![Tela de saldo da carteira exibindo saldo disponível de R$ 250,00, aguardando R$ 120,00 e total sacado de R$ 1.500,00 com botão Withdraw](./assets/mockups/pix-payments-how-sellers-get-paid__wallet-balance__pt-br.png)
+![Tela Minha carteira com saldo disponível para saque, valor pendente, dados bancários e botão Sacar](./assets/mockups/pix-payments-how-sellers-get-paid__wallet-balance__pt-br.png)
 
-Toque em **"Withdraw"** para solicitar um saque via PIX. Todo o saldo disponível é enviado para sua conta bancária registrada.
+Toque em **Sacar**. Uma confirmação aparece com o texto: "Uma taxa de R$ 3,67 será cobrada. Esta ação é irreversível e disponível a cada 24h."
 
-Saques via PIX são processados instantaneamente na maioria dos casos. O dinheiro geralmente cai na sua conta em minutos.
+Confirme para solicitar o saque via PIX. O valor total disponível é enviado para sua conta bancária cadastrada.
 
-### Passo 4: Verifique seu histórico de saques
+**Importante sobre o prazo.** O saque cai na sua conta em **2 a 5 dias úteis**. A Jamble processa o pedido na hora e envia para o Pagar.me, que repassa ao seu banco via PIX. O prazo exato depende do seu banco.
 
-Para ver todos os seus saques anteriores, toque no **ícone de relógio** (🕐) no canto superior direito da tela da carteira. Isso abre a tela **"Payouts History"**.
+### Passo 4: Acompanhe seu histórico de saques
+
+Para ver todos os saques anteriores, role a tela da carteira até a seção **Histórico de pagamentos**.
 
 Cada saque mostra:
 - **ID do saque**
-- **Valor** (em R$)
-- **Status** (processando, concluído ou falhou)
+- **Valor** em R$
+- **Status**, entre Criado, Processando, Pendente, Concluído, Falhou ou Cancelado
 - **Data**
+
+Toque em um saque para ver detalhes, incluindo o motivo em caso de falha.
 
 ## Quando seus ganhos ficam disponíveis
 
-Seus ganhos não ficam disponíveis instantaneamente após uma venda. Veja o cronograma:
+Seus ganhos não ficam disponíveis na hora. Veja a linha do tempo:
 
-- **Comprador adquire seu item** — Dinheiro é retido como "aguardando liberação"
-- **Você envia o pedido** — Dinheiro permanece em "aguardando"
-- **Comprador recebe e confirma** — Dinheiro passa para "disponível"
-- **Entrega confirmada automaticamente** — Dinheiro passa para "disponível" (se comprador não confirmar manualmente)
+- **Comprador adquire seu item.** O valor entra em **Pendente**.
+- **Você envia o pedido.** O valor continua em **Pendente**.
+- **Comprador recebe e confirma.** O valor passa para **Disponível para saque**.
+- **Entrega confirmada automaticamente.** Se o comprador não confirmar manualmente, o sistema confirma depois que o rastreio mostra a entrega, e o valor passa para **Disponível para saque**.
+
 ## Dicas importantes
 
-- **Configure sua conta bancária antes do primeiro show.** Este é o erro mais comum de vendedores novos. Se você vender sem dados bancários, seus ganhos ficam retidos até completar a configuração
-- **Saques via PIX são instantâneos.** Diferente de transferências bancárias que levam dias, o PIX envia o dinheiro em minutos
-- **Valor mínimo de saque é R$ 100.** Você precisa de pelo menos R$ 100 em saldo disponível para solicitar um saque
-- **Um saque por dia.** Depois de solicitar um saque, você precisa esperar **24 horas** antes de solicitar outro
-- **Você pode sacar a qualquer momento.** Não há valor mínimo de saque nem período de espera uma vez que seus fundos estejam disponíveis
-- **Mantenha seus dados bancários atualizados.** Se trocar de banco, atualize seus dados na carteira imediatamente. Saques que falham por dados incorretos serão devolvidos à sua carteira
-- **Verifique sua carteira regularmente.** Depois de enviar pedidos, monitore sua carteira para ver quando os fundos passam de "aguardando" para "disponível"
+- **Cadastre sua conta bancária antes do primeiro show.** Este é o erro mais comum de vendedores novos. Se você vender sem dados bancários, seus ganhos ficam retidos até completar o cadastro.
+- **Taxa de R$ 3,67 por saque.** Cada saque tem uma taxa fixa cobrada pelo Pagar.me. Vale a pena acumular saldo antes de sacar.
+- **Um saque por 24h.** Depois de solicitar um saque, você precisa esperar 24h para solicitar outro.
+- **Prazo de 2 a 5 dias úteis.** O PIX é iniciado na hora, mas o crédito na sua conta depende do seu banco. Planeje com esse prazo em mente.
+- **Mantenha seus dados bancários atualizados.** Se trocar de banco, atualize os dados na carteira antes de pedir um saque. Saques com dados incorretos falham e o valor volta para sua carteira.
+- **Confira a carteira depois de cada entrega.** Depois de enviar pedidos, acompanhe para ver quando o valor passa de "Pendente" para "Disponível para saque".
 
 ## Perguntas frequentes
 
-**Quanto tempo leva um saque via PIX?**
-Saques via PIX são geralmente instantâneos — o dinheiro cai na sua conta em minutos. Em casos raros, pode levar até algumas horas se houver atraso com o banco.
+**Quanto tempo demora um saque via PIX?**
+O saque cai na sua conta em 2 a 5 dias úteis. A Jamble inicia o processamento imediatamente, mas o crédito depende do Pagar.me e do seu banco.
 
-**Existe um valor mínimo para sacar?**
-Sim. O valor mínimo de saque é **R$ 100**. Você precisa de pelo menos R$ 100 em saldo disponível para solicitar um saque.
+**Tem taxa de saque?**
+Sim. Cada saque tem uma taxa fixa de R$ 3,67, cobrada pelo Pagar.me. O valor é descontado do seu saldo no momento da transferência.
+
+**Tem valor mínimo para sacar?**
+O botão **Sacar** só fica ativo quando há saldo disponível suficiente para cobrir a taxa de R$ 3,67. O valor mínimo exato pode variar e é definido no seu perfil pelo sistema.
 
 **E se meu saque falhar?**
-Se um saque falhar, o dinheiro volta para sua carteira. Verifique o histórico de saques para ver o motivo. Causas comuns: dados bancários incorretos, conta encerrada ou CPF/CNPJ inválido. Corrija o problema e tente novamente.
+Se um saque falhar, o dinheiro volta para sua carteira. Toque no saque no histórico para ver o motivo. Causas comuns: dados bancários incorretos, conta encerrada ou CPF/CNPJ inválido. Corrija e tente de novo.
 
-**Por que alguns fundos estão em "aguardando"?**
-Os fundos ficam em "aguardando" até o comprador confirmar a entrega do item. Isso protege tanto você quanto o comprador. Uma vez confirmada a entrega (manualmente pelo comprador ou automaticamente), os fundos passam para "disponível."
+**Por que tem fundos em "Pendente"?**
+Os fundos ficam em Pendente até o comprador confirmar a entrega. Isso protege tanto você quanto o comprador. Depois da confirmação (manual pelo comprador ou automática pelo rastreio), o valor passa para Disponível para saque.
 
 **Como a comissão de 14% é calculada?**
-A comissão é 14% do preço de venda do produto. Os custos de frete são pagos pelo comprador e não são incluídos no cálculo da comissão.
+A comissão é 14% sobre o preço de venda do produto. O frete é pago pelo comprador e não entra no cálculo da comissão.
 
-**Posso mudar minha conta bancária?**
-Sim. Vá em My Wallet e toque no botão **"Update"** ao lado dos seus dados bancários. Isso abre o formulário de registro onde você pode inserir novos dados.
+**Posso trocar minha conta bancária?**
+Sim. Vá em **Minha carteira** e toque em **Atualizar** ao lado dos seus dados. Isso abre o formulário de cadastro para você inserir a nova conta.
 
-**Por que minha carteira mostra "Register Bank" ao invés de "Withdraw"?**
-Seus dados bancários ainda não foram configurados. Toque em "Register Bank" para completar o registro no Pagar.me e vincular sua conta bancária.
+**Por que minha carteira mostra "Register Bank" em vez de "Sacar"?**
+Seus dados bancários ainda não foram cadastrados. Toque em **Register Bank** para completar o cadastro no Pagar.me e vincular sua conta.
 
 **O que acontece se o comprador não confirmar a entrega?**
-Se o comprador não confirmar manualmente, o sistema confirma automaticamente após um período definido quando o rastreio mostrar que o pacote foi entregue. Seus fundos então passam para "disponível."
+Se o comprador não confirmar manualmente, o sistema confirma automaticamente depois que o rastreio mostra a entrega. Seus fundos passam para Disponível para saque.
+
+**Posso sacar para um PIX com chave (CPF, email, celular)?**
+O saque vai para a conta bancária que você cadastrou no formulário do Pagar.me (banco + agência + número da conta). Não é possível sacar diretamente para uma chave PIX.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app ou envie um email para support@jambleapp.com.
