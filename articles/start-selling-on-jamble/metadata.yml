@@ -6,12 +6,12 @@ collection_id: 19177934
 default_locale: pt-br
 
 state: published
-author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+author_id: 7980499
+last_sync: 2026-04-21T00:00:00Z
 locales:
   pt-br:
     title: 'Comece a Vender na Jamble'
-    description: ''
+    description: 'Aprenda a vender ao vivo na Jamble, do cadastro ao primeiro saque. Inscrição, dados bancários, frete e shows.'
   en:
     title: 'Start Selling on Jamble'
-    description: "This guide walks you through every step of becoming a seller on Jamble, from downloading the app to getting paid after your first show. Follow each step in order and you'll be ready to sell live."
+    description: 'Learn how to sell live on Jamble, from sign up to first payout. Application, bank details, shipping, and shows.'
