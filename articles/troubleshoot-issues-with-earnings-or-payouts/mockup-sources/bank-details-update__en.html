@@ -1,0 +1,35 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px 12px; border-bottom: 1px solid #F0F1F5; }
+.nav-back { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; color: #162233; font-size: 22px; font-weight: 400; }
+.nav-title { font-size: 17px; font-weight: 600; color: #162233; }
+.nav-spacer { width: 28px; }
+.card { margin: 16px 12px 12px; padding: 16px; border: 1px solid #E9EAEF; border-radius: 12px; }
+.card-label { font-size: 15px; font-weight: 600; color: #162233; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+.info-icon { width: 16px; height: 16px; border-radius: 50%; background: #DADDE3; color: #6B7A92; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.card-amount { font-family: -apple-system-round, "SF Pro Rounded", system-ui, sans-serif; font-size: 28px; font-weight: 500; color: #162233; letter-spacing: -0.02em; margin-bottom: 14px; }
+.withdraw { height: 40px; border-radius: 20px; background: #7E53F8; color: #FFFFFF; font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+.divider { height: 1px; background: #F0F1F5; margin: 0 0 14px; }
+.bank-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.bank-left { flex: 1; min-width: 0; }
+.bank-title { font-size: 14px; font-weight: 600; color: #162233; margin-bottom: 3px; }
+.bank-sub { font-size: 13px; color: #6B7A92; line-height: 18px; }
+.update-btn { height: 36px; padding: 0 18px; border-radius: 18px; background: #0C131D; color: #FFFFFF; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+</style></head><body><div class="phone">
+<div class="nav"><div class="nav-back">&lsaquo;</div><div class="nav-title">My Wallet</div><div class="nav-spacer"></div></div>
+<div class="card">
+<div class="card-label">Available to Withdraw <div class="info-icon">i</div></div>
+<div class="card-amount">R$ 420.00</div>
+<div class="withdraw">Withdraw</div>
+<div class="divider"></div>
+<div class="bank-row">
+<div class="bank-left">
+<div class="bank-title">Bank Details</div>
+<div class="bank-sub">Banco do Brasil<br>Ag. 1234-5 / CC 67890-1</div>
+</div>
+<div class="update-btn">Update</div>
+</div>
+</div>
+</div></body></html>
