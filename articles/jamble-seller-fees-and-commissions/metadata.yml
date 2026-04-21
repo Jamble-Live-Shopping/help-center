@@ -6,12 +6,12 @@ collection_id: 19177938
 default_locale: pt-br
 
 state: published
-author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+author_id: 7980499
+last_sync: 2026-04-21T00:00:00Z
 locales:
   pt-br:
     title: 'Taxas e Comissões da Jamble'
-    description: ''
+    description: 'Veja quanto a Jamble cobra por venda, como os 14% são calculados e quanto entra na sua carteira. Sem letras miúdas.'
   en:
     title: 'Jamble Seller Fees and Commissions'
-    description: "This guide explains what fees Jamble charges on your sales, how they're calculated, and what you actually receive after a sale. No surprises — everything is laid out clearly."
+    description: "See how much Jamble charges per sale, how the 14% is calculated, and what lands in your wallet. No fine print."
