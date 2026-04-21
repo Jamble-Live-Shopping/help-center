@@ -7,11 +7,17 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-04-21T00:00:00Z
+titles:
+  pt-BR: Extratos do Seller - Veja Seu Histórico de Saques
+  en: Seller Statements - View Your Payout History
+descriptions:
+  pt-BR: Veja seu histórico completo de saques, acompanhe status (Completed, Failed, Pending) e abra cada pagamento para detalhes por pedido.
+  en: See your complete payout history, track statuses (Completed, Failed, Pending) and open each payout for per-order details.
 locales:
   pt-br:
-    title: 'Extratos do Seller — Veja Seu Histórico de Saques'
-    description: ''
+    title: 'Extratos do Seller - Veja Seu Histórico de Saques'
+    description: 'Veja seu histórico completo de saques, acompanhe status (Completed, Failed, Pending) e abra cada pagamento para detalhes por pedido.'
   en:
-    title: 'Seller Statements — View Your Payout History'
-    description: "This guide explains how to access and understand your financial history on Jamble. You'll learn how to view your payout records and keep track of all your withdrawals."
+    title: 'Seller Statements - View Your Payout History'
+    description: 'See your complete payout history, track statuses (Completed, Failed, Pending) and open each payout for per-order details.'
