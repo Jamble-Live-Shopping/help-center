@@ -71,7 +71,7 @@ Quando você tem saldo disponível, o botão **Sacar** fica ativo no alto da tel
 
 ![Tela Minha carteira com saldo disponível para saque, valor pendente, dados bancários e botão Sacar](./assets/mockups/pix-payments-how-sellers-get-paid__wallet-balance__pt-br.png)
 
-Toque em **Sacar**. Uma confirmação aparece com o texto: "Uma taxa de R$ 3,67 será cobrada. Esta ação é irreversível e disponível a cada 24h."
+Toque em **Sacar**. Uma confirmação aparece. Esta ação é irreversível e disponível a cada 24h.
 
 Confirme para solicitar o saque via PIX. O valor total disponível é enviado para sua conta bancária cadastrada.
 
@@ -101,7 +101,6 @@ Seus ganhos não ficam disponíveis na hora. Veja a linha do tempo:
 ## Dicas importantes
 
 - **Cadastre sua conta bancária antes do primeiro show.** Este é o erro mais comum de vendedores novos. Se você vender sem dados bancários, seus ganhos ficam retidos até completar o cadastro.
-- **Taxa de R$ 3,67 por saque.** Cada saque tem uma taxa fixa cobrada pelo Pagar.me. Vale a pena acumular saldo antes de sacar.
 - **Um saque por 24h.** Depois de solicitar um saque, você precisa esperar 24h para solicitar outro.
 - **Prazo de 2 a 5 dias úteis.** O PIX é iniciado na hora, mas o crédito na sua conta depende do seu banco. Planeje com esse prazo em mente.
 - **Mantenha seus dados bancários atualizados.** Se trocar de banco, atualize os dados na carteira antes de pedir um saque. Saques com dados incorretos falham e o valor volta para sua carteira.
@@ -112,11 +111,8 @@ Seus ganhos não ficam disponíveis na hora. Veja a linha do tempo:
 **Quanto tempo demora um saque via PIX?**
 O saque cai na sua conta em 2 a 5 dias úteis. A Jamble inicia o processamento imediatamente, mas o crédito depende do Pagar.me e do seu banco.
 
-**Tem taxa de saque?**
-Sim. Cada saque tem uma taxa fixa de R$ 3,67, cobrada pelo Pagar.me. O valor é descontado do seu saldo no momento da transferência.
-
 **Tem valor mínimo para sacar?**
-O botão **Sacar** só fica ativo quando há saldo disponível suficiente para cobrir a taxa de R$ 3,67. O valor mínimo exato pode variar e é definido no seu perfil pelo sistema.
+O botão **Sacar** só fica ativo quando há saldo disponível. O valor mínimo é definido no seu perfil pelo sistema.
 
 **E se meu saque falhar?**
 Se um saque falhar, o dinheiro volta para sua carteira. Toque no saque no histórico para ver o motivo. Causas comuns: dados bancários incorretos, conta encerrada ou CPF/CNPJ inválido. Corrija e tente de novo.

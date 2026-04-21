@@ -71,7 +71,7 @@ When you have available balance, the **Withdraw** button becomes active at the t
 
 ![My wallet screen with available balance for withdrawal, pending amount, bank details and Withdraw button](./assets/mockups/pix-payments-how-sellers-get-paid__my-wallet__en.png)
 
-Tap **Withdraw**. A confirmation appears with the text: "A fee of $3.67 will be charged. This action is irreversible and available every 24h."
+Tap **Withdraw**. A confirmation appears. This action is irreversible and available every 24h.
 
 Confirm to request the withdrawal via PIX. The full available amount is sent to your registered bank account.
 
@@ -101,7 +101,6 @@ Your earnings don't become available immediately. Here's the timeline:
 ## Important tips
 
 - **Register your bank account before your first show.** This is the most common mistake by new sellers. If you sell without bank details, your earnings are held until you complete registration.
-- **Fee of $3.67 per withdrawal.** Each withdrawal has a fixed fee charged by Pagar.me. It's worth accumulating balance before withdrawing.
 - **One withdrawal per 24h.** After requesting a withdrawal, you need to wait 24h to request another.
 - **Timeframe of 2 to 5 business days.** PIX is initiated immediately, but the credit to your account depends on your bank. Plan with this timeframe in mind.
 - **Keep your bank details updated.** If you change banks, update your details in the wallet before requesting a withdrawal. Withdrawals with incorrect details fail and the amount returns to your wallet.
@@ -112,11 +111,8 @@ Your earnings don't become available immediately. Here's the timeline:
 **How long does a PIX withdrawal take?**
 The withdrawal arrives in your account in 2 to 5 business days. Jamble initiates processing immediately, but the credit depends on Pagar.me and your bank.
 
-**Is there a withdrawal fee?**
-Yes. Each withdrawal has a fixed fee of $3.67, charged by Pagar.me. The amount is deducted from your balance at the time of transfer.
-
 **Is there a minimum amount to withdraw?**
-The **Withdraw** button only becomes active when there's enough available balance to cover the $3.67 fee. The exact minimum amount may vary and is set in your profile by the system.
+The **Withdraw** button only becomes active when there's available balance. The minimum amount is set in your profile by the system.
 
 **What if my withdrawal fails?**
 If a withdrawal fails, the money returns to your wallet. Tap the withdrawal in the history to see the reason. Common causes: incorrect bank details, closed account, or invalid CPF/CNPJ. Correct and try again.
