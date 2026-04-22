@@ -20,13 +20,13 @@ Go to your profile, then tap **Settings** and then **My Wallet**.
 
 In the top-right corner of the wallet screen, tap the **clock icon** (next to the help button). This opens the **Payouts History** screen.
 
-![My Wallet screen with the help and history icons in the top-right corner](./assets/mockups/seller-statements-view-your-payout-history__wallet-header.png)
+![My Wallet screen with the help and history icons in the top-right corner](./assets/mockups/seller-statements-view-your-payout-history__wallet-header__en__v2.png)
 
 ### Step 3: Review your payouts
 
 The Payouts History screen shows all your withdrawal records, with the most recent at the top.
 
-![Payouts History list with four entries: three Completed in green and one Failed in red](./assets/mockups/seller-statements-view-your-payout-history__payouts-history.png)
+![Payouts History list with four entries: three Completed in green and one Failed in red](./assets/mockups/seller-statements-view-your-payout-history__payouts-history__en__v2.png)
 
 Each payout entry shows four pieces of information:
 
@@ -39,7 +39,7 @@ Each payout entry shows four pieces of information:
 
 Tap any entry in the list to open the **Payout Details** screen. It shows the payout ID at the top and the list of orders that make up that payment, with buyer, product, order number, and amount.
 
-![Payout Details screen with two orders: one Pokemon TCG product and one Diecast, both with status and R$ amount](./assets/mockups/seller-statements-view-your-payout-history__payout-details.png)
+![Payout Details screen with two orders: one Pokemon TCG product and one Diecast, both with status and R$ amount](./assets/mockups/seller-statements-view-your-payout-history__payout-details__en__v2.png)
 
 ### Step 5: Scroll for older records
 

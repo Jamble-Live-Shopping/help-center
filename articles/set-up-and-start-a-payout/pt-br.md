@@ -22,7 +22,7 @@ No seu perfil, toque em **Ajustes**. Na seção **VENDER**, toque em **Minha Car
 
 Na primeira visita, a carteira mostra **R$ 0,00** em **Disponível para Saque** e o botão **Register Bank** no lugar do botão de saque. Toque nele para começar.
 
-![Tela Minha Carteira na primeira vez, com Disponível para Saque R$ 0,00 e botão Register Bank](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/set-up-and-start-a-payout__wallet-register-bank__pt-br.png)
+![Tela Minha Carteira na primeira vez, com Disponível para Saque R$ 0,00 e botão Register Bank](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/set-up-and-start-a-payout__wallet-register-bank__pt-br__v2.png)
 
 Aparece um alerta **Cadastro** com três opções:
 
@@ -55,7 +55,7 @@ Com ganhos em **Disponível para Saque**, o botão **Sacar** fica ativo. Toque n
 
 No topo direito da tela **Minha Carteira**, toque no **ícone de relógio** para abrir o **Histórico de Pagamentos**. Lá você vê cada saque, o valor, a data e o status atual.
 
-![Tela Histórico de Pagamentos listando três saques com ID, valor em Real, status (Completed, Processing, Failed) e data](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/set-up-and-start-a-payout__payouts-history__pt-br.png)
+![Tela Histórico de Pagamentos listando três saques com ID, valor em Real, status (Completed, Processing, Failed) e data](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/set-up-and-start-a-payout__payouts-history__pt-br__v2.png)
 
 ## Status dos saques
 

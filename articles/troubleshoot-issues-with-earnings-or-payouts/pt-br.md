@@ -20,7 +20,7 @@ Depois de solicitar um saque, ele passa por três etapas: **Processing** (em pro
 2. Toque no ícone de relógio no canto superior direito para abrir **Payouts History**
 3. Veja o status do saque mais recente
 
-![Payouts History mostrando tres saques com status Completed, Processing e Failed](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/troubleshoot-issues-with-earnings-or-payouts__payouts-status-badges__pt-br.png)
+![Payouts History mostrando tres saques com status Completed, Processing e Failed](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/troubleshoot-issues-with-earnings-or-payouts__payouts-status-badges__pt-br__v2.png)
 
 **O que cada status significa:**
 - **Processing**: o saque foi solicitado e está a caminho do seu banco. Normalmente leva até 5 dias úteis dependendo do banco
@@ -66,7 +66,7 @@ Se o detalhamento do pedido não bate com o esperado mesmo assim, registre o ID 
 
 Alguns erros aparecem no momento em que você toca em **Withdraw**. Os mais comuns são relacionados aos dados bancários ou ao seu cadastro na Pagar.me.
 
-![Modal de erro informando que o saque nao pode ser iniciado e sugerindo verificar os dados bancarios](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/troubleshoot-issues-with-earnings-or-payouts__withdraw-error-modal__pt-br.png)
+![Modal de erro informando que o saque nao pode ser iniciado e sugerindo verificar os dados bancarios](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/troubleshoot-issues-with-earnings-or-payouts__withdraw-error-modal__pt-br__v2.png)
 
 **Checklist rápido:**
 
@@ -81,7 +81,7 @@ Se você vê uma mensagem pedindo para "verificar sua identidade e seus dados ba
     - Número da conta e código da agência corretos
     - Tipo de conta correto (corrente ou poupança)
 
-![Secao Bank Details com botao Update para corrigir os dados bancarios](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/troubleshoot-issues-with-earnings-or-payouts__bank-details-update__pt-br.png)
+![Secao Bank Details com botao Update para corrigir os dados bancarios](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/troubleshoot-issues-with-earnings-or-payouts__bank-details-update__pt-br__v2.png)
 
 **3. O valor está acima do mínimo?**
 O saque só fica disponível quando seu saldo passa do valor mínimo informado no próprio botão **Withdraw**.

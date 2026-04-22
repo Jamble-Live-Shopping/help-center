@@ -14,7 +14,7 @@ Como abrir sua carteira, conferir seu saldo disponível e seus ganhos pendentes,
 
 Vá ao seu perfil, toque em **Settings** e depois em **My Wallet**.
 
-![Tela My Wallet com cartão Available to Withdraw, botão Withdraw, Bank Details e cartão Pending](./assets/mockups/check-your-earnings-or-payout-status__wallet-overview__pt-br.png)
+![Tela My Wallet com cartão Available to Withdraw, botão Withdraw, Bank Details e cartão Pending](./assets/mockups/check-your-earnings-or-payout-status__wallet-overview__pt-br__v2.png)
 
 A tela mostra:
 
@@ -27,7 +27,7 @@ A tela mostra:
 
 Na tela **My Wallet**, toque no **ícone de relógio** no canto superior direito. A seção **Payouts History** também fica no final da tela.
 
-![Tela Payouts History listando cinco saques com ID, valor, status (Completed, Processing, Pending, Failed) e data](./assets/mockups/check-your-earnings-or-payout-status__payouts-history__pt-br.png)
+![Tela Payouts History listando cinco saques com ID, valor, status (Completed, Processing, Pending, Failed) e data](./assets/mockups/check-your-earnings-or-payout-status__payouts-history__pt-br__v2.png)
 
 Cada linha mostra:
 
@@ -53,7 +53,7 @@ Os status vêm direto do processamento da Pagar.me. As cores no app são:
 
 Toque em um saque na lista para abrir a tela **Payout Details**. Ela mostra todos os pedidos incluídos naquele saque, com o produto, o comprador, o número do pedido, o valor e a data.
 
-![Tela Payout Details com três pedidos, cada um com comprador, produto, número do pedido, valor e status Order Completed](./assets/mockups/check-your-earnings-or-payout-status__payout-details__pt-br.png)
+![Tela Payout Details com três pedidos, cada um com comprador, produto, número do pedido, valor e status Order Completed](./assets/mockups/check-your-earnings-or-payout-status__payout-details__pt-br__v2.png)
 
 Use essa tela para conferir exatamente quais vendas compuseram um saque.
 
