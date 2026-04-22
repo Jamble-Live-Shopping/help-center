@@ -1,17 +1,20 @@
 intercom_id: 14288086
 slug: practice-mode-test-your-show-before-going-live
 collection_id: 19177934
-
-# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
-default_locale: pt-br
-
+default_locale: pt-BR
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-04-21T00:00:00Z
+titles:
+  pt-BR: 'Modo de Prática - Teste Seu Show Antes de Ir ao Vivo'
+  en: 'Practice Mode - Test Your Show Before Going Live'
+descriptions:
+  pt-BR: 'Teste câmera, microfone e fluxo do show sem audiência. Modo de prática é privado e reseta tudo antes do show real.'
+  en: 'Test your camera, microphone, and show flow without an audience. Practice mode is private and resets before your real show.'
 locales:
-  pt-br:
-    title: 'Modo de Prática — Teste Seu Show Antes de Ir ao Vivo'
-    description: ''
+  pt-BR:
+    title: 'Modo de Prática - Teste Seu Show Antes de Ir ao Vivo'
+    description: 'Teste câmera, microfone e fluxo do show sem audiência. Modo de prática é privado e reseta tudo antes do show real.'
   en:
-    title: 'Practice Mode — Test Your Show Before Going Live'
-    description: "This guide explains how to use Practice mode on Jamble. Practice mode lets you test your camera, microphone, and the hosting interface before your real show starts — without any audience watching. It's the best way to get comfortable before going liv"
+    title: 'Practice Mode - Test Your Show Before Going Live'
+    description: 'Test your camera, microphone, and show flow without an audience. Practice mode is private and resets before your real show.'
