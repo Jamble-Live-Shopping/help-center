@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; padding: 24px 24px 28px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
+.back { width: 32px; height: 32px; border-radius: 16px; background: #F3F4F8; display: flex; align-items: center; justify-content: center; color: #162233; font-size: 18px; font-weight: 600; }
+.help { font-size: 16px; font-weight: 600; color: #7E53F8; }
+.title { font-size: 26px; font-weight: 600; color: #162233; line-height: 32px; letter-spacing: -0.4px; }
+.subtitle { font-size: 15px; color: #6D6D80; line-height: 22px; margin-top: 10px; }
+.otp { display: flex; gap: 8px; margin-top: 36px; }
+.otp .cell { flex: 1; height: 56px; border-radius: 8px; background: #F6F7F9; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 600; color: #162233; }
+.otp .cell.caret { border: 1.5px solid #7E53F8; background: #FFFFFF; color: #7E53F8; position: relative; }
+.otp .cell.caret::after { content: ""; position: absolute; width: 2px; height: 28px; background: #7E53F8; animation: none; }
+.resend { font-size: 14px; font-weight: 600; color: #6D6D80; text-align: center; margin-top: 28px; }
+</style></head><body>
+<div class="phone">
+  <div class="topbar">
+    <div class="back">‹</div>
+    <div class="help">Ajuda</div>
+  </div>
+  <div class="title">Por favor, digite o código</div>
+  <div class="subtitle">Enviamos o código para +55 11 9****-2847<br>Verifique o WhatsApp/SMS</div>
+  <div class="otp">
+    <div class="cell">4</div>
+    <div class="cell">2</div>
+    <div class="cell">9</div>
+    <div class="cell caret"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+  </div>
+  <div class="resend">Você pode pedir um novo código em 42 segundos</div>
+</div>
+</body></html>

@@ -2,116 +2,105 @@
 
 ## O que você vai aprender
 
-Este guia cobre como proteger sua conta na Jamble — desde os métodos de login disponíveis até o gerenciamento das suas informações pessoais e como excluir sua conta se necessário.
+Este guia explica como sua conta Jamble é protegida, como criar e acessar sua conta com segurança pelo número de telefone, como gerenciar suas informações pessoais e o que fazer para sair ou apagar a conta.
 
 ## Antes de começar
 
-- Você precisa de uma conta na Jamble (ou estar pronto para criar uma)
+- Você precisa de um número de celular ativo no Brasil (DDD + número)
+- Tenha acesso ao WhatsApp ou SMS no mesmo número, pois o código de verificação chega por lá
 
 ## Como o login funciona na Jamble
 
-A Jamble suporta **3 métodos de login** no iOS (número de telefone, Google, Apple) e **apenas número de telefone** no Android:
+A Jamble usa o seu **número de telefone** como identificador principal da conta. Não existe senha: toda vez que você cria ou acessa a conta, a Jamble envia um código de 6 dígitos por SMS ou WhatsApp e você digita esse código para entrar.
 
-- ****Número de telefone** (principal)** — Digite seu número, receba um código SMS ou WhatsApp e confirme
-- ****Continue with Google**** — Entre usando sua conta Google
-- ****Continue with Apple**** — Entre usando seu Apple ID
-Quando você abre a Jamble pela primeira vez, verá a tela de **Sign up**. O método principal é o **número de telefone** — digite seu número, toque em **"Get verification code"** e insira o código que você recebeu por SMS ou WhatsApp.
+No iOS, também é possível criar a conta com **Google** ou **Apple ID**. No Android, somente telefone.
 
-![Tela de cadastro com campo de entrada de número de telefone e botão para obter código de verificação](./assets/mockups/account-security__signup-phone-entry__pt-br.png)
+![Tela Registrar-se com seletor de país BR +55, campo de número de telefone e botão Continuar](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/account-security__signup-phone-entry__pt-br__v2.png)
 
-Para usar Google ou Apple, toque em **"Other sign-up methods"** na parte inferior. Um modal vai aparecer com as duas opções.
+A mesma tela serve para criar conta nova e entrar em conta existente. Se o número já tem uma conta Jamble, você entra direto nela. Para usar Google ou Apple (iOS), toque em **Outros métodos de login** na parte de baixo da tela.
 
-**Importante:** A mesma tela funciona tanto para criar conta (nova) quanto para fazer login (conta existente). Se seu número de telefone ou conta Google/Apple já tiver uma conta Jamble, você será conectado diretamente.
+## Verificação por código
+
+Depois de tocar em **Continuar**, você vê a tela de código. A Jamble envia 6 dígitos para o seu número, primeiro pelo WhatsApp (se instalado) e em seguida por SMS.
+
+![Tela Por favor digite o código com 6 campos de entrada, mensagem Enviamos o código para o número e botão de reenvio](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/account-security__phone-verification__pt-br__v2.png)
+
+- O código tem **6 dígitos** e expira em poucos minutos
+- Se não chegar, aguarde o contador e toque em **Reenviar** quando ficar disponível
+- Se digitar um código errado, aparece um alerta **Código de verificação incorreto**. Toque em **Tente novamente** e insira de novo
 
 ## Gerenciando suas informações pessoais
 
-### Passo 1: Abra Personal Information
+Todas as suas informações ficam em **Ajustes** (ícone de engrenagem no seu perfil) → seção **Conta** → **Informações Pessoais**.
 
-Vá para **Settings** (ícone de engrenagem no seu perfil) → seção **Account** → **"Personal Information"**.
+![Tela Ajustes com a seção Conta mostrando Informações Pessoais, Notificações, Editar meu perfil e Perfis bloqueados](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/account-security__account-settings__pt-br__v2.png)
 
-### Passo 2: Revise e atualize seus dados
+Na tela **Informações Pessoais**, você pode visualizar e editar:
 
-Você pode visualizar e editar os seguintes campos:
+- **Informações Pessoais**: Nome, Sobrenome, Data de nascimento
+- **Informações de Contato**: E-mail, Número de Telefone
+- **Informações Legais (Brasil)**: CPF
 
-**Personal Information:**
-- **First Name** — seu primeiro nome
-- **Last Name** — seu sobrenome
-- **Birth Date** — sua data de nascimento
+![Tela Informações Pessoais com os campos Nome, Sobrenome, Data de nascimento, E-mail, Número de Telefone e CPF](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/account-security__personal-information__pt-br__v2.png)
 
-**Contact Information:**
-- **Email** — seu endereço de email
-- **Phone Number** — seu número de telefone
+**Para trocar o número de telefone ou o e-mail**: toque no campo, digite o novo valor e confirme com o código de verificação enviado para o novo número ou e-mail. Enquanto você não confirmar, a mudança não é aplicada.
 
-**Legal Information (Brasil):**
-- **CPF** — seu número de CPF (obrigatório para usuários brasileiros)
+## Outras opções da seção Conta
 
-![Formulário de informações da conta com seções de dados pessoais, contato e informações legais para editar perfil do usuário](./assets/mockups/account-security__account-information__pt-br.png)
+A partir de **Ajustes** → **Conta**, você também tem acesso a:
 
-Depois de fazer alterações, toque em **"Save"** para atualizar suas informações.
+- **Notificações**: controle das notificações push que você recebe
+- **Editar meu perfil**: foto de perfil, nome de usuário e bio
+- **Perfis bloqueados**: lista de usuários bloqueados, com a opção de desbloquear
 
-## Outras configurações da conta
+## Apagando sua conta
 
-Na tela de **Settings**, você também tem acesso a:
+Se você precisa apagar sua conta:
 
-| Configuração | Seção | O que faz |
-|-------------|-------|-----------|
-| **Edit my Profile** | Account | Alterar foto de perfil, nome de usuário e bio |
-| **Blocked profiles** | Account | Ver e gerenciar usuários bloqueados |
-| **Notifications** | Account | Controlar preferências de notificações push |
-| **Payment methods** | Buy | Gerenciar métodos de pagamento salvos |
-| **Shipping addresses** | Buy | Adicionar ou editar endereços de envio |
-| **My Purchases** | Buy | Ver histórico de compras |
-| **My Sales** | Sell | Ver suas vendas (apenas vendedores) |
-| **My Wallet** | Sell | Acessar ganhos e saques (apenas vendedores) |
-| **Vacation mode** | Sell | Pausar pedidos temporariamente (apenas vendedores) |
-| **Privacy Policy** | Help & Legal | Ler a política de privacidade da Jamble |
-| **Help Center** | Help & Legal | Acessar artigos de ajuda |
-
-## Excluindo sua conta
-
-Se você precisar excluir sua conta:
-
-1. Vá para **Settings**
+1. Vá em **Ajustes**
 2. Role até o final da tela
-3. Toque em **"Delete account"**
+3. Toque em **Apagar Conta** (em vermelho)
 4. Siga as etapas de confirmação
 
-**Esta ação é permanente.** Excluir sua conta remove todos os seus dados, incluindo perfil, histórico de compras e informações de vendedor. Pedidos ativos devem ser concluídos antes da exclusão.
+**Esta ação é permanente.** Apagar a conta remove todos os seus dados: perfil, histórico de compras e informações de vendedor. Pedidos em andamento precisam estar concluídos antes da exclusão. Se você é vendedor com saldo na carteira, faça o saque antes de apagar a conta.
 
-## Fazendo logout
+## Saindo da conta
 
-Para sair da conta:
+Para encerrar a sessão no aparelho:
 
-1. Vá para **Settings**
+1. Vá em **Ajustes**
 2. Role até o final da tela
-3. Toque em **"Log Out"**
+3. Toque em **Sair**
 
-Você pode entrar novamente a qualquer momento usando o mesmo método de login que usou para criar sua conta (telefone, Google ou Apple).
+Você pode entrar de novo a qualquer momento com o mesmo método que usou para criar a conta (telefone, Google ou Apple).
 
-## Dicas importantes
+## Dicas de segurança
 
-- **Seu número de telefone é seu identificador principal.** Se você trocar de número, atualize nas configurações da conta antes de perder acesso ao número antigo
-- **Mantenha seu CPF atualizado.** Para vendedores brasileiros, um CPF válido é obrigatório para receber pagamentos. Sem ele, você não vai conseguir receber seus ganhos
-- **Use o mesmo método de login sempre.** Se você se cadastrou com Google, sempre use Google para entrar. Usar um método diferente pode criar uma conta nova ao invés de acessar a sua conta existente
-- **Informe um email acessível.** Seu email é usado para comunicações importantes da conta, como confirmações de pedido e comprovantes de pagamento
+- **Seu número de telefone é o identificador da conta.** Se você for trocar de número, atualize em Informações Pessoais antes de perder acesso ao número antigo
+- **Use sempre o mesmo método de login.** Se você se cadastrou com Google, entre sempre com Google. Tentar entrar por telefone pode abrir o fluxo de criação de conta nova em vez da sua conta atual
+- **Mantenha seu CPF atualizado.** Vendedores brasileiros precisam de CPF válido para receber os ganhos. Seu CPF é armazenado com segurança e usado apenas para cumprir obrigações legais
+- **Use um e-mail que você abre.** O e-mail é o canal para comunicações importantes de conta e comprovantes
 
 ## Perguntas frequentes
 
-**Esqueci qual método de login usei. Como descubro?**
-Tente fazer login com seu número de telefone primeiro — é o método mais comum. Se você ver uma tela de cadastro novo ao invés da sua conta existente, tente Google ou Apple.
+**O código não chegou. O que faço?**
+Aguarde o contador terminar e toque em **Reenviar**. Verifique o WhatsApp e o SMS (incluindo spam). Confira também se digitou o número com DDD correto. Se não chegar após duas tentativas, fale com o suporte pelo chat do app.
 
-**Posso trocar meu método de login?**
-Sua conta é vinculada ao método que você usou para se cadastrar. Não é possível trocar de telefone para Google, por exemplo. Porém, você pode adicionar ou atualizar seu email e número de telefone em Personal Information.
+**Esqueci qual método usei para criar a conta.**
+Comece pelo número de telefone, que é o método principal. Se aparecer uma tela de cadastro novo em vez de entrar na sua conta, tente Google ou Apple (iOS).
 
-**O que acontece com meus dados se eu excluir a conta?**
-Todos os seus dados são removidos permanentemente, incluindo perfil, histórico de pedidos e ganhos. Se você é vendedor com saques pendentes, certifique-se de retirar seu saldo antes de excluir.
+**Posso mudar de telefone para Google, ou o contrário?**
+Não. A conta fica vinculada ao método usado no cadastro. Você pode atualizar o número de telefone e o e-mail em **Informações Pessoais**, mas não trocar o método de login.
 
-**Meu CPF é armazenado com segurança?**
-Sim. Seu CPF é criptografado e armazenado com segurança. Ele é usado apenas para conformidade legal com as regulamentações de pagamento e requisitos fiscais brasileiros.
+**Meu CPF está seguro?**
+Sim. O CPF é armazenado com segurança e usado apenas para cumprir as regras brasileiras de pagamento e emissão fiscal.
 
 **Posso ter mais de uma conta?**
-Não. Cada número de telefone, conta Google ou Apple ID pode ser vinculado a apenas uma conta Jamble.
+Não. Cada número de telefone, conta Google ou Apple ID pode estar vinculado a apenas uma conta Jamble.
+
+**O que acontece com meus dados se eu apagar a conta?**
+Todos os dados são removidos de forma definitiva: perfil, histórico de pedidos e ganhos. Se você tem saldo como vendedor, faça o saque antes de apagar.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com o suporte pelo chat do app ou envie um e-mail para support@jambleapp.com.
