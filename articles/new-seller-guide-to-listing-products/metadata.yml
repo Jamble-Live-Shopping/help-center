@@ -1,17 +1,20 @@
 intercom_id: 14288085
 slug: new-seller-guide-to-listing-products
 collection_id: 19177934
-
-# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
-default_locale: pt-br
-
+default_locale: pt-BR
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-04-21T00:00:00Z
+titles:
+  pt-BR: 'Guia do Novo Vendedor para Listar Produtos'
+  en: 'New Seller Guide to Listing Products'
+descriptions:
+  pt-BR: 'Como listar produtos na Jamble: fotos, título, preço, condição, categoria e modo de venda para colecionáveis.'
+  en: 'How to list products on Jamble: photos, title, price, condition, category, and sell mode for collectibles.'
 locales:
-  pt-br:
+  pt-BR:
     title: 'Guia do Novo Vendedor para Listar Produtos'
-    description: ''
+    description: 'Como listar produtos na Jamble: fotos, título, preço, condição, categoria e modo de venda para colecionáveis.'
   en:
     title: 'New Seller Guide to Listing Products'
-    description: "This guide walks you through how to create product listings on Jamble. You'll learn what information is needed for each product, how to choose the right sell mode, and tips to make your products stand out to buyers."
+    description: 'How to list products on Jamble: photos, title, price, condition, category, and sell mode for collectibles.'
