@@ -42,7 +42,8 @@ payload = {
 - Intercom **strips inline `style=""` on `<img>`**, border radius, width, etc. must be baked into the PNG
 - Intercom **refuses `data:image/...;base64,...` URIs**, images must live at an external URL
 - Intercom **auto-copies external images to its own CDN** (`intercom-attachments-1.com`) on first fetch. After copy, the `src` in the stored body points to the Intercom CDN, not GitHub.
-- To **force a re-fetch** (e.g. after updating the PNG on GitHub), resubmit the article with the original GitHub URL. Intercom re-copies.
+- Intercom **keys its CDN cache by the filename in the raw.github URL**. Re-submitting the same URL after updating the PNG on GitHub does NOT force a re-fetch; Intercom keeps serving the old attachment. **Rename with a `__v2.png` (then `__v3.png`, …) suffix and update md refs** to bust the cache. Do this whenever you re-render an existing mockup.
+- After a push to `main` that changes PNG bytes but not the filename, `scripts/sync-one.sh` will succeed but the user will still see the old image. If you see pixelation or an outdated mockup, check the filename suffix first.
 
 ## The replacement script
 

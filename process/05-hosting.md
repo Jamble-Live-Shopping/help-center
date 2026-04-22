@@ -11,26 +11,45 @@
 
 Trade-off accepted: the repo is public, so anyone can see the mockups. This is fine because the mockups are already public (they're in published help articles).
 
-## Repo layout
+## Repo layout (current)
 
 ```
 Jamble-Live-Shopping/help-center/
-├── README.md                           # what this repo is for
+├── README.md
 ├── assets/
-│   ├── mockups/                        # the PNGs we screenshot
-│   │   ├── prod-box1.png
-│   │   ├── prod-box2.png
-│   │   └── ...
-│   └── icons/                          # (future) shared icon pool
-├── articles/                           # (future) article-by-article HTML source
-│   └── <article-slug>/
-│       ├── body.html
-│       ├── mockup-sources/
-│       └── metadata.json
-└── scripts/                            # (future) batch tools
+│   └── mockups/                        # ALL PNGs live HERE, flat, at ROOT
+│       ├── <slug>__<mockup>__pt-br.png
+│       ├── <slug>__<mockup>__en.png
+│       └── ...
+├── articles/
+│   └── <slug>/
+│       ├── pt-br.md
+│       ├── en.md
+│       ├── metadata.yml
+│       ├── mockup-sources/             # HTML sources only (no PNGs here)
+│       │   ├── <mockup>__pt-br.html
+│       │   └── <mockup>__en.html
+│       └── audit/
+├── process/                            # this folder
+├── scripts/
+│   ├── shot-retina.mjs                 # canonical render (see Step 4)
+│   ├── md-to-html.js                   # md -> Intercom HTML
+│   ├── build-sync-payload.mjs
+│   └── sync-one.sh
+└── .github/workflows/sync-intercom.yml
 ```
 
-For the current phase, only `assets/mockups/` is populated.
+**Critical**: PNGs go at `assets/mockups/` (repo root), never under `articles/<slug>/assets/mockups/`. `scripts/md-to-html.js` rewrites `./assets/mockups/foo.png` in the md → `https://raw.githubusercontent.com/.../main/assets/mockups/foo.png`. A PNG nested under an article folder will 404 on sync.
+
+## PNG filename convention
+
+```
+<slug>__<mockup-name>__<locale>[__v<N>].png
+```
+
+- `<slug>` matches the article folder name exactly
+- `<locale>` is `pt-br` or `en`
+- `__v2` / `__v3` suffix is the cache-bust convention (see Step 6)
 
 ## Upload command
 
@@ -114,3 +133,43 @@ gh auth refresh -h github.com -s delete_repo,write:org,repo
 ```
 
 And confirm the org admin has granted your PAT repo access on the org settings page.
+
+## `metadata.yml` schema (mandatory)
+
+Each article folder has a `metadata.yml`. `scripts/build-sync-payload.mjs` iterates over **`meta.locales`** to decide which `.md` files to sync. An article with only the flat `titles:` / `descriptions:` keys and no `locales:` block fails sync with "No locale .md files found". This hit us on PR #21 and PR #24.
+
+Full required shape:
+
+```yaml
+intercom_id: 14288124
+slug: pack-and-ship-your-order
+collection_id: 19177937
+default_locale: pt-BR
+state: published
+author_id: 7980507
+
+# Top-level (used for the article's primary language body)
+titles:
+  pt-BR: Embale e Envie Seu Pedido
+  en: Pack and Ship Your Order
+descriptions:
+  pt-BR: <= 140 chars
+  en: <= 140 chars
+
+# Per-locale (used by build-sync-payload.mjs to find .md files, REQUIRED)
+locales:
+  pt-BR:
+    title: 'Embale e Envie Seu Pedido'
+    description: '<same <=140>'
+  en:
+    title: 'Pack and Ship Your Order'
+    description: '<same <=140>'
+```
+
+Both `titles:`/`descriptions:` AND `locales:` must be present. `yaml.safe_load` on the file should succeed, and the result must contain the key `locales` with entries for every `.md` in the folder.
+
+## Branch hygiene (when working in parallel worktrees)
+
+- Work inside your worktree (`.claude/worktrees/agent-<id>/`), never in the main repo directory
+- Confirm `git branch --show-current` returns your `rewrite-<slug>-<id>` branch before every commit
+- Never commit to `main` directly. PRs are the only route in.

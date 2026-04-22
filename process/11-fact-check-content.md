@@ -13,12 +13,14 @@
 | User PII | Real emails, phone numbers, full names of real users, profile photos of real sellers |
 | User financials | Specific user GMV, specific user earnings, bank / Pix keys, buyer order IDs |
 | Internal IDs | Firestore user IDs, backend user_id, show_id, order_id as literal values (even from test accounts) |
-| Company financials | Take rate (except the public 14%), margins, cash position, runway, investor names |
+| **Fee decomposition** | **The 4% transaction fee, the 10% product-price fee, or any breakdown of the 14% take rate. The 14% is the only number users see; the split is internal. Withdrawal (saque) fees: there are none to expose (e.g. never write "R$ 3,67 saque" or any withdrawal fee).** |
+| Company financials | Margins, cash position, runway, investor names |
 | Unreleased features | Beta flags, feature names not yet launched to all users |
 | Security details | Rate limits (exact), fraud rules, detection thresholds, PSP secrets, webhook URLs, tokens |
 | Internal URLs | Admin panels (`admin.jamble.com`), staging (`*.staging.*`), Firestore emulator, Mixpanel project IDs |
 | Backend internals | Service names, Kubernetes pod names, Python function names, SQL table names |
 | Internal team members (non-public) | Any teammate whose role is internal (engineers, data, ops) by name |
+| **Referral reward misstatement** | **The R$30 referral credit covers shipping cost only (not product price). Backend: `REFERREE` coupon, scope = shipping. Any copy like "use the R$30 for your first purchase" without specifying "shipping" is a BLOCKER (it misleads the user into expecting product discount).** |
 
 ### SOFT WARN, think before leaving in
 
@@ -67,6 +69,8 @@ PATTERNS = {
     'GitHub org ref': r'Jamble-Live-Shopping\b',
     'Internal codename': r'Mission Control|Morning Brief|Cowork|Cash Leak',
     'Competitor': r'\bWhatnot\b|\bTikTok Shop\b|\bKwai\b|\bShopee\b',
+    'Fee decomposition': r'\b(4\s?%|10\s?%)\b|commission|comissão|R\$\s*3,67|taxa de saque',
+    'Auction word': r'\bauction\b|leilão|leilao',
 }
 
 for label, pattern in PATTERNS.items():

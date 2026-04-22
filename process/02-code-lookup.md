@@ -45,6 +45,21 @@ From each Swift file you open, pull:
 - Placeholder text
 - Alert titles and messages
 
+**For every EN string, also extract its pt-BR value from `Jamble/RESOURCES/Localizable.xcstrings`.** Workers have repeatedly shipped pt-BR mockups with EN literals ("My Wallet" in pt-BR mockup instead of "Minha carteira"). This is auto-reject at Step 10 visual fidelity.
+
+```bash
+python3 -c "
+import json
+d=json.load(open('/Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Localizable.xcstrings'))
+for k in ['My Wallet','Withdraw','Bank Details','Payouts History','Update','Pending','Completed','Processing','Failed']:
+    loc=d['strings'].get(k,{}).get('localizations',{})
+    pt=loc.get('pt-BR',{}).get('stringUnit',{}).get('value')
+    print(f'{k!r:25} -> pt-BR={pt!r}')
+"
+```
+
+Record both locales in `code-notes-boxN.md` (see example below).
+
 ### Styling
 - Font sizes and weights (look for `.systemFont(ofSize: X, weight: .semibold)`)
 - Colors (look for `UIColor.customPurple`, `UIColor.customBlue900`, etc., cross-reference with [design-system.md](design-system.md))
@@ -72,10 +87,10 @@ In the working folder, create `code-notes-boxN.md` with the extraction:
 **Component type**: UICollectionViewCell (custom)
 **Triggered in**: CreateProductViewController.swift, section `.SELL_MODE`
 
-## Text (from ShowSaleType.swift)
-- Title "Real-time offers" (case `.AUCTION`), subtitle "The last bidder wins at the end of the time."
-- Title "Sudden Death", subtitle "No added time, even if someone bids."
-- Title "Buy It Now", subtitle "Offer a discount on an item during a limited time."
+## Text (from ShowSaleType.swift, pt-BR from xcstrings)
+- Title "Real-time offers" / "Ofertas em tempo real" (case `.AUCTION`), subtitle "The last bidder wins at the end of the time." / "O último a ofertar ganha no fim do tempo."
+- Title "Sudden Death" / "Morte súbita", subtitle "No added time, even if someone bids." / "Sem tempo adicional, mesmo se alguém ofertar."
+- Title "Buy It Now" / "Compre agora", subtitle "Offer a discount on an item during a limited time." / "Ofereça um desconto em um item por tempo limitado."
 
 ## Layout
 - Icon 24x24, tinted `customBlue500` (#828CA2), leading 16
