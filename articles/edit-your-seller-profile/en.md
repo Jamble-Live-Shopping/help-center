@@ -2,128 +2,102 @@
 
 ## What you'll learn
 
-This guide explains how to edit your seller profile on Jamble. Your profile is the first thing buyers see when they visit your shop or join your show — keeping it updated helps build trust and attract more viewers.
+How to keep your seller profile updated on Jamble. Your profile is the first thing buyers see in your store and in your shows. A clear photo, a memorable username, and a specific bio help build trust and attract more viewers.
 
 ## Before you start
 
 You need:
-- An approved seller account on Jamble
+- An active Jamble account
 - The Jamble app installed on your phone
 
-## What you can edit
+## What is your public profile
 
-Your profile has two main editing screens:
+Your public profile has four elements, all editable on the **My Profile** screen:
 
-1. **Settings > Edit my profile** — for profile picture, username and bio
-2. **Settings > Personal Info** — display name, birth date, email, CPF
+- **Profile photo** - the circular image displayed in your show, in search results, and on your profile
+- **Username** - your unique identifier on Jamble, in the format @yourusername
+- **Name** - the name displayed on your profile and during shows (can be different from your username)
+- **Bio** - a short description that tells buyers what you sell
 
-## Step by step — Edit your public profile
+![Seller profile with photo, name, username, and bio, with edit icon over the photo](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/edit-your-seller-profile__profile-view__en.png)
 
-### Step 1: Open the profile editor
+## Step 1: Open the profile editor
 
-Go to your profile and tap the **edit button**. This opens the **"My Profile"** screen.
+Go to your profile and tap the **pencil icon** over your photo. This opens the **My Profile** screen, where you can edit everything at once.
 
-![Edit seller profile form with photo upload, username, name, and bio text fields](./assets/mockups/edit-your-seller-profile__edit-seller-profile__en.png)
+## Step 2: Change your photo
 
-### Step 2: Change your profile photo
+Tap the photo (or **Change photo**) to swap the image. You can:
+- Choose a photo from your phone's gallery
+- Crop the image in circular format
 
-Tap your profile photo to change it. You can:
-- Choose a photo from your gallery
-- Crop the image to fit the circular frame
+Use a photo of yourself or your brand logo. Avoid the default gray image: shows with a recognizable photo attract more viewers.
 
-Your profile photo should be clear and recognizable — either a photo of you or your brand logo. This is what buyers see in your show, in search results, and on your profile page.
+## Step 3: Update your username
 
-### Step 3: Update your username
+Your **Username** (@yourusername) is unique on Jamble and appears on your profile, in shows, and on your referral links.
 
-Your **username** is your unique identifier on Jamble (e.g., @yourusername). It appears on your profile and in your referral links.
-
-When changing your username:
-- **3 to 15 characters**, only letters (a-z), numbers (0-9), and underscores (_)
-- It must be unique — if someone else is already using it, you'll see **"Invalid username! Please try other..."**
-- No special characters (?,;/+&!) and no "jamble" in your username
-- Keep it short, memorable, and easy to type
+Rules:
+- **3 to 15 characters**
+- Letters only (a-z), numbers (0-9), and underscores (_)
+- No special characters and no word **jamble**
+- Must be available. If someone is already using it, you'll see **"Invalid username! Please try other..."**
 - **You can only change your username once every 14 days**
 
-### Step 4: Update your name
+Tip: keep your username stable. Changing it often confuses your returning buyers.
 
-Your **Name** is the name shown on your profile and during your shows (max **20 characters**). This can be different from your username. For example, your username might be @sneakerking but your name could be "João | Sneakers SP".
+## Step 4: Update your name
 
-You can change your name once every **7 days**.
+Your **Name** is the name displayed on your profile and during shows. It can be different from your username. For example: username **@sneakerking**, name **Joao | Sneakers SP**.
 
-### Step 5: Write your bio
+- Maximum **20 characters**
+- Can be changed once every **7 days**
 
-Your bio is a short description that tells buyers what you sell and what makes your shop special. Keep it concise and specific.
+## Step 5: Write your bio
 
-**Good examples:**
-- "Streetwear vintage e importados | SP"
-- "Tênis originais com preço justo"
-- "Colecionáveis TCG | Pokémon, Magic, Yu-Gi-Oh!"
+Your bio is a short description that tells the buyer what you sell and what makes your store special.
 
-### Step 6: Save your changes
+- Maximum **200 characters**
+- One or two sentences is ideal
+- Be concrete and specific
 
-Once you've made your changes, the **"Save"** button at the bottom of the screen becomes active. Tap it to save.
+Good examples:
+- "Vintage and imported streetwear | SP"
+- "Original sneakers at fair prices"
+- "TCG collectibles | Pokemon, Magic, Yu-Gi-Oh!"
 
-The button stays disabled (greyed out) until you make at least one change — this prevents accidental saves.
+![My Profile form with Username, Name, and Bio fields, Save button at the bottom](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/edit-your-seller-profile__profile-edit-form__en.png)
 
-## Step by step — Edit your personal information
+## Step 6: Save
 
-### Step 1: Open personal information
+Tap **Save** at the bottom of the screen. The button only becomes active after you make at least one change. This prevents accidental saves.
 
-Go to your profile, tap **Settings**, then tap **Personal Information**. This opens the **"Personal Information"** screen.
+Done. Your changes now appear on your public profile and in your next shows.
 
-![Edit seller profile form with personal, contact, and legal information fields](./assets/mockups/edit-your-seller-profile__edit-seller-profile__en.png)
+## Quick tips
 
-### Step 2: Review and update your details
+- **Photo matters.** Shows with a recognizable seller attract more viewers. Don't stick with the default photo
+- **Stable username.** Change it sparingly so you don't lose those already following your store
+- **Bio sells you.** Think of it like a one-line pitch: what you sell and what makes you different
+- **Review before saving.** Username locks for 14 days, name for 7 days
 
-The personal information screen has three sections:
+## Frequently asked questions
 
-**Personal Information:**
-- **First Name** — your legal first name
-- **Last Name** — your legal last name
-- **Birth Date** — your date of birth
+**Can I change my username anytime?**
+You can change it once every 14 days. If you try before that, the app blocks the change.
 
-**Contact Information:**
-- **Email** — your email address (used for communications and receipts)
-- **Phone Number** — your phone number with Brazilian country code (+55)
+**Why did I get "Invalid username! Please try other..."?**
+It means someone is already using that name. Try a variation: add a number, an underscore, or a regional detail.
 
-**Legal Information (Brazil only):**
-- **CPF** — your Brazilian tax ID number
+**Is there a character limit on the bio?**
+Yes, **200 characters**. Keep it short: one or two sentences is ideal.
 
-### Step 3: Save your changes
+**Can I have no profile photo?**
+Technically yes, but we don't recommend it. A profile without a photo builds less trust and generates fewer views in your shows.
 
-Tap **"Save"** at the bottom to confirm your updates.
-
-## Important tips
-
-- **Your profile photo matters.** Shows with a recognizable seller profile photo attract more viewers. Don't leave the default photo
-- **Keep your username stable.** Changing your username frequently can confuse your repeat buyers. Pick one you're happy with and stick to it
-- **Your bio should sell you.** Think of it as a one-line pitch. What do you sell? What's special about your shop? Keep it simple and specific
-- **Update your contact info promptly.** If you change your email or phone number, update it in the app immediately. This ensures you receive important notifications about orders and payouts
-- **Your CPF is linked to your account permanently.** You can view it in the information screen but keep in mind that each CPF is unique to one Jamble account
-
-## Common questions
-
-**Can I change my username?**
-Yes. Go to My Profile and edit the username field. The new username must be unique — if it's already taken, you'll need to choose another one.
-
-**Is there a character limit for the bio?**
-Yes, the bio has a maximum of **200 characters**. Keep it concise — a sentence or two is ideal.
-
-**Can I remove my profile photo?**
-You can replace it with a different photo, but having no profile photo at all makes your account look incomplete and less trustworthy to buyers.
-
-**Can I change my CPF?**
-Your CPF is permanently linked to your account. If you need to change it, contact support.
-
-**Can I change my email address?**
-Yes. Go to Information and update your email. You may need to verify the new email address.
-
-**What if my username is marked as invalid?**
-The username must be unique across Jamble. If you see "Invalid username! Please try other...", it means someone else is already using that username. Try a variation.
-
-**Is my personal information visible to buyers?**
-No. Only your public profile (photo, username, display name, and bio) is visible to buyers. Your personal information (real name, email, phone, CPF) is private and only used for account management and payments.
+**Where do I edit my email, phone, or CPF?**
+Those details are on another screen, in **Settings > Personal Information**. Your public profile (photo, username, name, bio) and personal information (email, phone, CPF) are separate. Buyers only see your public profile.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Contact us through the in-app chat or email support@jambleapp.com.

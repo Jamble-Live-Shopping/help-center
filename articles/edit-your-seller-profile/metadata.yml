@@ -2,16 +2,25 @@ intercom_id: 14288090
 slug: edit-your-seller-profile
 collection_id: 19177934
 
-# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
-default_locale: pt-br
+# Primary source = pt-BR per Language Priority Policy. EN is a 1:1 mirror.
+default_locale: pt-BR
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-04-21T00:00:00Z
+
+titles:
+  pt-BR: Editar Seu Perfil de Vendedor
+  en: Edit Your Seller Profile
+
+descriptions:
+  pt-BR: Como editar foto, nome de usuario, nome e bio do seu perfil de vendedor na Jamble, com regras e limites.
+  en: How to edit the photo, username, name and bio of your seller profile on Jamble, with rules and limits.
+
 locales:
-  pt-br:
+  pt-BR:
     title: 'Editar Seu Perfil de Vendedor'
-    description: ''
+    description: 'Como editar foto, nome de usuario, nome e bio do seu perfil de vendedor na Jamble, com regras e limites.'
   en:
     title: 'Edit Your Seller Profile'
-    description: 'This guide explains how to edit your seller profile on Jamble. Your profile is the first thing buyers see when they visit your shop or join your show — keeping it updated helps build trust and attract more viewers.'
+    description: 'How to edit the photo, username, name and bio of your seller profile on Jamble, with rules and limits.'
