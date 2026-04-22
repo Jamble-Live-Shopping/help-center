@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; padding: 22px 22px 20px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.title { font-size: 20px; font-weight: 700; color: #162233; margin-bottom: 4px; letter-spacing: -0.2px; }
+.subtitle { font-size: 13px; color: #6D6D80; margin-bottom: 14px; line-height: 18px; }
+.row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #F3F4F8; }
+.row:last-child { border-bottom: none; }
+.size-badge { width: 42px; height: 42px; border-radius: 10px; background: #7E53F8; color: #FFFFFF; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.row-body { flex: 1; min-width: 0; }
+.row-top { display: flex; align-items: baseline; gap: 6px; margin-bottom: 2px; }
+.row-name { font-size: 14px; font-weight: 700; color: #162233; }
+.row-dim { font-size: 12px; color: #6D6D80; }
+.row-use { font-size: 12px; color: #6D6D80; line-height: 16px; }
+.foot { margin-top: 14px; padding: 10px 12px; background: #F3F4F8; border-radius: 10px; font-size: 12px; color: #162233; line-height: 16px; }
+.foot b { color: #7E53F8; }
+</style></head><body>
+<div class="phone">
+  <div class="title">Box sizes</div>
+  <div class="subtitle">Quick guide by product type</div>
+
+  <div class="row">
+    <div class="size-badge">S</div>
+    <div class="row-body">
+      <div class="row-top"><span class="row-name">Small</span><span class="row-dim">up to 20 &times; 15 &times; 5 cm</span></div>
+      <div class="row-use">1 to 4 cards, booster, light item</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="size-badge">M</div>
+    <div class="row-body">
+      <div class="row-top"><span class="row-name">Medium</span><span class="row-dim">up to 30 &times; 20 &times; 10 cm</span></div>
+      <div class="row-use">Graded slab, Hot Wheels, small batch</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="size-badge">L</div>
+    <div class="row-body">
+      <div class="row-top"><span class="row-name">Large</span><span class="row-dim">up to 40 &times; 30 &times; 20 cm</span></div>
+      <div class="row-use">Card lot, display, several diecast</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="size-badge">XL</div>
+    <div class="row-body">
+      <div class="row-top"><span class="row-name">Extra large</span><span class="row-dim">up to 60 &times; 40 &times; 30 cm</span></div>
+      <div class="row-use">ETB, large bundle, sealed box</div>
+    </div>
+  </div>
+
+  <div class="foot"><b>Correios minimum:</b> 16 &times; 11 &times; 2 cm. Below that, the package is refused.</div>
+</div>
+</body></html>

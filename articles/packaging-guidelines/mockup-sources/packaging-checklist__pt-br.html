@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; padding: 22px 22px 20px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.title { font-size: 20px; font-weight: 700; color: #162233; margin-bottom: 4px; letter-spacing: -0.2px; }
+.subtitle { font-size: 13px; color: #6D6D80; margin-bottom: 16px; line-height: 18px; }
+.group { margin-bottom: 14px; }
+.group:last-child { margin-bottom: 0; }
+.group-label { font-size: 12px; font-weight: 700; color: #7E53F8; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 8px; }
+.item { display: flex; align-items: flex-start; padding: 8px 0; gap: 10px; border-bottom: 1px solid #F3F4F8; }
+.item:last-child { border-bottom: none; }
+.check { width: 18px; height: 18px; border-radius: 50%; background: #17B169; color: #FFFFFF; font-size: 11px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; font-weight: 700; }
+.item-text { font-size: 14px; color: #162233; line-height: 20px; }
+.item-text b { font-weight: 600; }
+</style></head><body>
+<div class="phone">
+  <div class="title">Checklist de embalagem</div>
+  <div class="subtitle">O que usar para cada tipo de item</div>
+
+  <div class="group">
+    <div class="group-label">Cartas (Pokémon, TCG)</div>
+    <div class="item"><div class="check">&#10003;</div><div class="item-text"><b>Penny sleeve</b> em cada carta</div></div>
+    <div class="item"><div class="check">&#10003;</div><div class="item-text"><b>Toploader</b> rígido por cima do sleeve</div></div>
+    <div class="item"><div class="check">&#10003;</div><div class="item-text"><b>Team bag</b> ou fita para selar o toploader</div></div>
+    <div class="item"><div class="check">&#10003;</div><div class="item-text"><b>Envelope rígido</b> ou caixinha + plástico bolha</div></div>
+  </div>
+
+  <div class="group">
+    <div class="group-label">Cartas graduadas (PSA, CGC, BGS)</div>
+    <div class="item"><div class="check">&#10003;</div><div class="item-text"><b>Plástico bolha</b> em toda a slab (2 camadas)</div></div>
+    <div class="item"><div class="check">&#10003;</div><div class="item-text"><b>Caixa rígida</b> no tamanho da slab + enchimento</div></div>
+    <div class="item"><div class="check">&#10003;</div><div class="item-text">Evite envelope acolchoado (dobra e arranha)</div></div>
+  </div>
+
+  <div class="group">
+    <div class="group-label">Hot Wheels e Diecast</div>
+    <div class="item"><div class="check">&#10003;</div><div class="item-text"><b>Plástico bolha</b> em toda a blister (2 camadas)</div></div>
+    <div class="item"><div class="check">&#10003;</div><div class="item-text"><b>Caixa de papelão</b> no tamanho da peça</div></div>
+    <div class="item"><div class="check">&#10003;</div><div class="item-text">Preencha vazios com papel amassado</div></div>
+  </div>
+</div>
+</body></html>

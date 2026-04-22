@@ -2,123 +2,112 @@
 
 ## O que você vai aprender
 
-Este guia cobre como embalar seus itens adequadamente para envio pelos Correios. Uma boa embalagem protege seus produtos, reduz devoluções e mantém seus compradores satisfeitos. Você encontrará regras gerais e dicas específicas para as categorias mais comuns da Jamble.
+Como embalar seus itens para envio pelos Correios sem que eles cheguem danificados. Este guia é focado nas categorias mais vendidas da Jamble: cartas (Pokémon, TCG), slabs graduadas (PSA, CGC, BGS) e diecast (Hot Wheels, miniaturas).
+
+Uma boa embalagem reduz devoluções, reclamações de comprador e disputas de seguro. Leva 2 minutos a mais por pedido.
 
 ## Antes de começar
 
-Você precisa de:
-- O(s) item(ns) para enviar
-- Materiais de embalagem adequados (caixas, envelopes, fita, plástico bolha)
-- O perfil de envio correto atribuído ao seu produto
+Você precisa ter em casa:
 
-## Regras gerais de embalagem
+- **Cartas / boosters:** penny sleeves, toploaders, team bags, envelopes rígidos ou caixinhas
+- **Slabs graduadas:** plástico bolha, caixas rígidas no tamanho da slab
+- **Diecast:** plástico bolha em rolo, caixas de papelão variadas, papel amassado para preenchimento
+- **Sempre:** fita adesiva larga, saco plástico, etiqueta de envio impressa
 
-### Use o tamanho certo de embalagem
+## Checklist por categoria
 
-Escolha uma caixa ou envelope que se ajuste ao seu item confortavelmente. A embalagem não deve ser tão grande que o item se mova dentro, e não deve ser tão apertada que o item seja comprimido ou danificado.
+![Checklist de embalagem](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/packaging-guidelines__packaging-checklist__pt-br.png)
 
-Os Correios têm requisitos de dimensão:
-- **Mínimo:** 16 × 11 × 2 cm
-- **Máximo:** 100 × 100 × 100 cm (para PAC/SEDEX padrão)
-- **Peso máximo:** varia por serviço, até 30 kg
+### Cartas soltas (Pokémon, TCG)
 
-### Feche os pacotes com segurança
+1. **Penny sleeve** em cada carta
+2. **Toploader** rígido por cima do sleeve
+3. **Team bag** ou uma tira de fita para selar o toploader (evita que a carta escorregue)
+4. **Envelope rígido** (cartonado) ou caixinha pequena com uma camada de plástico bolha
+5. Escreva **NÃO DOBRAR** na parte externa se usar envelope
 
-- Use **fita de embalagem** forte (não fita adesiva comum)
-- Cole fita em todas as costuras e aberturas da caixa
-- Para envelopes, feche com fita em todas as bordas
-- Não use barbante, corda ou elásticos — os Correios não aceitam
+Nunca coloque cartas soltas em envelope comum. O Correios dobra.
 
-### Proteja o conteúdo
+### Cartas graduadas (PSA, CGC, BGS)
 
-- Envolva itens em **plástico bolha** ou **papel de embalagem**
-- Preencha espaços vazios com **papel amassado**, **isopor** ou **almofadas de ar**
-- Para vários itens em um pacote, envolva cada item separadamente para que não se arranhem ou danifiquem
-- Coloque a etiqueta de envio do lado de fora — nunca dentro do pacote
+As slabs são caras e frágeis. A embalagem tem que refletir isso.
 
-### Mantenha à prova de umidade
+1. **Plástico bolha em 2 camadas** ao redor da slab inteira
+2. **Caixa rígida de papelão** no tamanho da slab (não envelope)
+3. **Preencha os vazios** com papel amassado ou mais bolha, até a slab não se mexer
+4. **Fita larga** em todas as emendas da caixa
 
-- Envolva itens em um **saco plástico** antes de colocar na caixa. Isso protege contra umidade durante o transporte
-- Isso é especialmente importante para roupas e itens de papel (cartas, documentos)
+Envelope acolchoado não protege slab graduada. A casca plástica arranha com o atrito e o slab dobra nos cantos.
 
-## Dicas por categoria
+### Hot Wheels e diecast
 
-### Roupas e vestuário
+1. **Plástico bolha em 2 camadas** ao redor da blister inteira (card + bolha)
+2. **Caixa de papelão** no tamanho da peça, com 1-2 cm de folga para enchimento
+3. **Preencha todo espaço vazio** com papel amassado, se chacoalhar, rasga a blister
+4. Para bundles de várias peças, **embale cada uma separadamente** antes de colocar na caixa
 
-- Dobre os itens com cuidado e coloque em um saco plástico primeiro
-- Use um **envelope acolchoado** para itens leves avulsos (camisetas, regatas)
-- Use uma **caixa** para itens mais pesados (jeans, jaquetas) ou vários itens
-- Inclua etiquetas ou instruções de cuidado que o comprador esperaria
-- Para itens de alto valor, envolva em papel de seda para uma apresentação profissional
+Para diecast fora da blister (loose), use papel de seda ao redor da peça antes do plástico bolha.
 
-### Tênis e calçados
+## Faça e não faça
 
-- Mantenha os sapatos na caixa original se possível — compradores valorizam isso
-- Envolva cada sapato em papel de seda ou papel de embalagem
-- Coloque a caixa de sapato dentro de uma caixa de envio um pouco maior
-- Preencha os espaços com papel para evitar que a caixa de sapato deslize
-- **Nunca envie sapatos apenas na caixa de sapato** — sempre use uma caixa de envio externa para proteger a caixa de sapato
+![Faça e evite](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/packaging-guidelines__packaging-dos-donts__pt-br.png)
 
-### Cartas e colecionáveis
+### Faça
 
-- Use um **sleeve** (capa plástica) para cada carta
-- Coloque as cartas com sleeve em um **toploader** (protetor rígido de plástico)
-- Fixe o toploader em um **envelope acolchoado** ou entre papelões de apoio
-- Para boosters, envolva em plástico bolha
-- Para cartas de alto valor, use uma caixinha ao invés de envelope
-- **Nunca dobre ou entorte cartas.** Escreva "NÃO DOBRAR" no envelope se usar um
+- **Fita adesiva larga** (fita de embalagem) em todas as bordas e costuras
+- **Plástico bolha em 2 camadas** nos itens frágeis
+- **Caixa no tamanho** do item, sem sobra
+- **Saco plástico** dentro da caixa, antes de embalar, para proteger de umidade
+- **Etiqueta de envio** na maior face plana da caixa, visível e bem colada
 
-### Joias e acessórios
+### Evite
 
-- Envolva cada peça individualmente em papel de seda
-- Coloque em uma caixinha ou envelope acolchoado
-- Para colares e correntes, prenda para evitar embaraçamento (use um saquinho zip ou dobre em papel de seda)
-- Adicione um pouco de enchimento para evitar que os itens se movam
+- **Durex comum ou fita crepe**, descola no transporte
+- **Adesivos ou fita colorida na emenda** da caixa, os scanners dos Correios rejeitam
+- **Barbante, corda ou elástico** por fora, os Correios não aceitam
+- **Caixas reusadas com códigos de barra ou etiquetas antigas**, confundem o scanner
+- **Jornal direto** no item, a tinta mancha o produto
 
-### Bundles e vários itens
+## Tamanhos de caixa
 
-- Envolva cada item separadamente
-- Coloque itens mais pesados no fundo da caixa
-- Preencha todos os espaços vazios — os itens não devem se mover quando você sacode o pacote
-- Para mistura de frágeis + não-frágeis, mantenha itens frágeis longe das paredes da caixa
+![Tamanhos de caixa](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/packaging-guidelines__shipping-box-sizes__pt-br.png)
 
-## Referência de dimensões por perfil
+Use a caixa **no tamanho do item**. Caixa grande demais = frete mais caro + item se mexe = dano. Caixa pequena demais = estoura.
 
-Seu perfil de envio corresponde a um tamanho aproximado de embalagem:
+| Tamanho | Dimensões (aprox.) | Uso típico |
+|---------|-------------------|------------|
+| Pequena | até 20 × 15 × 5 cm | 1 a 4 cartas, booster, item leve |
+| Média | até 30 × 20 × 10 cm | Slab graduada, Hot Wheels avulso, lote pequeno |
+| Grande | até 40 × 30 × 20 cm | Lote de cartas, display, vários diecast |
+| Extra grande | até 60 × 40 × 30 cm | ETB, bundle grande, caixa fechada |
 
-| Perfil de envio | Dimensões máx. (aprox.) |
-|----------------|------------------------|
-| Carta / Booster | Envelope acolchoado ou mailer rígido pequeno |
-| Acessórios leves | Envelope acolchoado pequeno (20 × 20 cm) |
-| Roupas leves / padrão | Caixa média (30 × 30 × 30 cm) |
-| Roupas mais pesadas / Itens volumosos | Caixa grande (35 × 35 × 35 cm) |
-| Pacotes pequenos a extra-grandes | Caixa grande (40 × 40 × 40 cm) |
+**Mínimo Correios:** 16 × 11 × 2 cm. Abaixo disso, o pacote é recusado.
+
+## Teste do chacoalho
+
+Antes de fechar a caixa, segure e balance suavemente. Se ouvir ou sentir o item se movendo, **adicione mais enchimento**. Este é o teste mais simples para evitar danos em trânsito.
 
 ## Dicas importantes
 
-- **Não exagere na embalagem.** Uma caixa grande demais desperdiça dinheiro (custo de frete mais alto) e oferece menos proteção (itens chacoalham)
-- **Não economize na embalagem.** Um pacote pequeno demais pode estourar ou amassar o item
-- **Etiquete com clareza.** Certifique-se de que a etiqueta de envio esteja na maior superfície plana do pacote e totalmente visível
-- **Reutilize com cuidado.** Reutilizar caixas é ok desde que sejam resistentes e você tenha removido todas as etiquetas e códigos de barra antigos. Códigos antigos podem confundir os scanners dos Correios
-- **Teste o chacoalho.** Antes de fechar, segure o pacote e balance suavemente. Se ouvir ou sentir itens se movendo, adicione mais enchimento
-- **Embale pensando no comprador.** A experiência de desembalagem importa. Um item bem embalado com proteção básica mostra que você se preocupa com seus compradores
+- **Não exagere.** Uma caixa grande demais paga frete mais caro e protege menos, porque o item chacoalha
+- **Reutilize com cuidado.** Caixa reusada só se for firme e você remover todas as etiquetas e códigos antigos
+- **Etiquete uma vez.** Etiqueta de envio sempre na maior face plana, totalmente visível, sem fita por cima do código de barras
+- **Pense no comprador.** Uma embalagem bem feita é a primeira impressão do seu produto
 
 ## Perguntas frequentes
 
-**Posso usar qualquer caixa ou preciso de caixas dos Correios?**
-Você pode usar qualquer caixa desde que atenda aos requisitos de tamanho dos Correios (mínimo 16 × 11 × 2 cm). Não precisa comprar embalagens dos Correios.
+**Posso usar qualquer caixa?**
+Sim, desde que esteja inteira e atenda ao mínimo dos Correios (16 × 11 × 2 cm). Não precisa ser caixa dos Correios.
 
-**Que materiais devo evitar?**
-Não use barbante, corda, elásticos ou grampos do lado de fora. Não use jornal diretamente nos itens (a tinta pode transferir). Não envie em caixas danificadas ou fracas.
+**E se o item chegar danificado mesmo assim?**
+Com embalagem feita direito e fotos da embalagem antes de enviar, você fica em posição forte em qualquer disputa. Se o seguro estava ativo, ele cobre danos em trânsito.
 
-**O que acontece se meu pacote for grande demais para o perfil de envio?**
-Os Correios podem rejeitar o pacote ou cobrar extra. Sempre verifique se seu pacote cabe dentro do perfil de envio que você atribuiu. Se seu item for maior que o esperado, ajuste o perfil de envio antes da venda.
+**Preciso colocar um bilhete ou nota fiscal dentro?**
+Não é obrigatório. Um bilhete de agradecimento é um toque profissional que melhora suas avaliações. Nota fiscal só se for vendedor com CNPJ e o comprador pedir.
 
-**Devo incluir um recibo ou lista de itens?**
-Não é obrigatório, mas incluir um bilhete de agradecimento simples e uma lista dos itens (nome do item, número do pedido) adiciona um toque profissional e pode gerar melhores avaliações.
-
-**E se um item chegar danificado?**
-Se você embalou adequadamente e tem provas (fotos da embalagem), você está em uma posição mais forte para qualquer disputa. O seguro do pacote (se ativado) também cobre danos durante o transporte.
+**O que faço se o item for maior do que o perfil de envio?**
+Ajuste o perfil de envio antes da venda. Se o pacote exceder o perfil, os Correios podem recusar ou cobrar extra.
 
 ## Precisa de ajuda?
 

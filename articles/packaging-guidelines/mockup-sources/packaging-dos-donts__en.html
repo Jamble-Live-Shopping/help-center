@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; padding: 22px 22px 20px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.title { font-size: 20px; font-weight: 700; color: #162233; margin-bottom: 4px; letter-spacing: -0.2px; }
+.subtitle { font-size: 13px; color: #6D6D80; margin-bottom: 16px; line-height: 18px; }
+.cols { display: flex; gap: 10px; }
+.col { flex: 1; border: 1px solid #E9EAEF; border-radius: 12px; padding: 12px; background: #F9FAFC; }
+.col-head { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
+.pill { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #FFFFFF; }
+.pill.ok { background: #17B169; }
+.pill.no { background: #D92C20; }
+.col-title { font-size: 13px; font-weight: 700; color: #162233; letter-spacing: 0.2px; }
+.item { display: flex; align-items: flex-start; gap: 6px; padding: 6px 0; border-bottom: 1px solid #F3F4F8; }
+.item:last-child { border-bottom: none; }
+.dot { color: #7E53F8; font-size: 14px; line-height: 18px; flex-shrink: 0; }
+.col.bad .dot { color: #D92C20; }
+.item-text { font-size: 12px; color: #162233; line-height: 16px; }
+</style></head><body>
+<div class="phone">
+  <div class="title">Pack it right</div>
+  <div class="subtitle">What to do, what to skip</div>
+
+  <div class="cols">
+    <div class="col good">
+      <div class="col-head"><div class="pill ok">&#10003;</div><div class="col-title">Do</div></div>
+      <div class="item"><div class="dot">&bull;</div><div class="item-text">Wide packing tape on every edge and seam</div></div>
+      <div class="item"><div class="dot">&bull;</div><div class="item-text">Bubble wrap in 2 layers on fragile items</div></div>
+      <div class="item"><div class="dot">&bull;</div><div class="item-text">Box sized to the item, no empty space</div></div>
+      <div class="item"><div class="dot">&bull;</div><div class="item-text">Plastic bag before the box (moisture)</div></div>
+      <div class="item"><div class="dot">&bull;</div><div class="item-text">Label on the biggest flat face, visible</div></div>
+    </div>
+    <div class="col bad">
+      <div class="col-head"><div class="pill no">&#10007;</div><div class="col-title">Skip</div></div>
+      <div class="item"><div class="dot">&bull;</div><div class="item-text">Scotch or masking tape</div></div>
+      <div class="item"><div class="dot">&bull;</div><div class="item-text">Stickers on the box seam (Correios)</div></div>
+      <div class="item"><div class="dot">&bull;</div><div class="item-text">String, rope or rubber bands outside</div></div>
+      <div class="item"><div class="dot">&bull;</div><div class="item-text">Reused boxes with old barcodes</div></div>
+      <div class="item"><div class="dot">&bull;</div><div class="item-text">Newspaper touching the item (ink stain)</div></div>
+    </div>
+  </div>
+</div>
+</body></html>

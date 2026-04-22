@@ -2,123 +2,112 @@
 
 ## What you'll learn
 
-This guide covers how to properly package your items for shipping through Correios. Good packaging protects your products, reduces returns, and keeps your buyers happy. You'll find general rules plus specific tips for the most common Jamble categories.
+How to package your items for Correios shipping so they don't arrive damaged. This guide focuses on Jamble's top categories: cards (Pokémon, TCG), graded slabs (PSA, CGC, BGS), and diecast (Hot Wheels, miniatures).
+
+Good packaging reduces returns, buyer complaints, and insurance disputes. It takes 2 extra minutes per order.
 
 ## Before you start
 
-You need:
-- The item(s) to ship
-- Appropriate packaging materials (boxes, envelopes, tape, bubble wrap)
-- The correct shipping profile assigned to your product
+Keep these on hand:
 
-## General packaging rules
+- **Cards / boosters:** penny sleeves, toploaders, team bags, rigid mailers or small boxes
+- **Graded slabs:** bubble wrap, rigid boxes sized to the slab
+- **Diecast:** bubble wrap roll, assorted cardboard boxes, crumpled paper for filler
+- **Always:** wide packing tape, plastic bag, printed shipping label
 
-### Use the right size package
+## Checklist by category
 
-Choose a box or envelope that fits your item snugly. The package shouldn't be so large that the item moves around inside, and shouldn't be so tight that the item is compressed or damaged.
+![Packaging checklist](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/packaging-guidelines__packaging-checklist__en.png)
 
-Correios has dimension requirements:
-- **Minimum:** 16 × 11 × 2 cm
-- **Maximum:** 100 × 100 × 100 cm (for PAC/SEDEX standard)
-- **Maximum weight:** varies by service, up to 30 kg
+### Raw cards (Pokémon, TCG)
 
-### Seal packages securely
+1. **Penny sleeve** on every card
+2. **Toploader** (rigid) over the sleeve
+3. **Team bag** or a strip of tape to seal the toploader (so the card doesn't slip out)
+4. **Rigid mailer** or a small box with one layer of bubble wrap
+5. Write **DO NOT BEND** on the outside if you use a mailer
 
-- Use strong **packing tape** (not regular scotch tape)
-- Tape all seams and openings of the box
-- For envelopes, seal with tape along all edges
-- Don't use string, rope, or rubber bands — Correios doesn't accept them
+Never put raw cards in a plain envelope. Correios folds.
 
-### Protect the contents
+### Graded slabs (PSA, CGC, BGS)
 
-- Wrap items in **bubble wrap** or **packing paper**
-- Fill empty space with **crumpled paper**, **foam peanuts**, or **air pillows**
-- For multiple items in one package, wrap each item separately so they don't scratch or damage each other
-- Place the shipping label on the outside — never inside the package
+Slabs are expensive and fragile. Packaging has to reflect that.
 
-### Keep it weatherproof
+1. **Bubble wrap in 2 layers** around the full slab
+2. **Rigid cardboard box** sized to the slab (not an envelope)
+3. **Fill all empty space** with crumpled paper or more bubble, until the slab cannot move
+4. **Wide tape** on every seam of the box
 
-- Wrap items in a **plastic bag** before placing in the box. This protects against moisture during transit
-- This is especially important for clothing and paper-based items (trading cards, documents)
+Padded envelopes do not protect graded slabs. The plastic shell scuffs from friction and corners bend.
 
-## Category-specific tips
+### Hot Wheels and diecast
 
-### Clothing and apparel
+1. **Bubble wrap in 2 layers** around the full blister (card + bubble)
+2. **Cardboard box** sized to the item, with 1-2 cm of clearance for filler
+3. **Fill every empty space** with crumpled paper. If it rattles, it tears the blister
+4. For multi-item bundles, **wrap each one separately** before placing in the box
 
-- Fold items neatly and place in a plastic bag first
-- Use a **padded envelope** for single light items (t-shirts, tank tops)
-- Use a **box** for heavier items (jeans, jackets) or multiple items
-- Include any tags or care instructions the buyer would expect
-- For high-value items, wrap in tissue paper for a professional presentation
+For loose diecast (out of blister), wrap the piece in tissue paper before the bubble wrap.
 
-### Sneakers and shoes
+## Do and skip
 
-- Keep shoes in their original box if possible — buyers value this
-- Wrap each shoe in tissue paper or packing paper
-- Place the shoe box inside a slightly larger shipping box
-- Fill gaps with paper to prevent the shoe box from sliding
-- **Never ship shoes in just the shoe box** — always use an outer shipping box to protect the shoe box itself
+![Do and skip](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/packaging-guidelines__packaging-dos-donts__en.png)
 
-### Trading cards and collectibles
+### Do
 
-- Use a **card sleeve** (penny sleeve) for each card
-- Place sleeved cards in a **toploader** (rigid plastic holder)
-- Secure the toploader in a **padded envelope** or between cardboard backing
-- For booster packs, wrap in bubble wrap
-- For high-value cards, use a small box instead of an envelope
-- **Never bend or fold cards.** Write "DO NOT BEND" on the envelope if using one
+- **Wide packing tape** on every edge and seam
+- **Bubble wrap in 2 layers** on fragile items
+- **Box sized to the item**, no empty space
+- **Plastic bag** inside the box, before wrapping, to block moisture
+- **Shipping label** on the biggest flat face, visible and fully stuck down
 
-### Jewelry and accessories
+### Skip
 
-- Wrap each piece individually in soft tissue paper
-- Place in a small box or padded envelope
-- For necklaces and chains, secure to prevent tangling (use a small zip bag or fold in tissue)
-- Add a small amount of padding to prevent items from moving
+- **Scotch or masking tape**, lifts in transit
+- **Stickers or colored tape on the box seam**, Correios scanners reject
+- **String, rope, or rubber bands** outside the box, Correios doesn't accept
+- **Reused boxes with old barcodes or labels**, confuses the scanner
+- **Newspaper directly on the item**, ink stains the product
 
-### Bundles and multiple items
+## Box sizes
 
-- Wrap each item separately
-- Place heavier items at the bottom of the box
-- Fill all empty space — items should not shift when you shake the package
-- For fragile + non-fragile mix, keep fragile items away from the box walls
+![Box sizes](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/packaging-guidelines__shipping-box-sizes__en.png)
 
-## Package dimension reference
+Use a box **sized to the item**. Too big = higher shipping + the item moves = damage. Too small = bursts open.
 
-Your shipping profile corresponds to an approximate package size:
+| Size | Dimensions (approx.) | Typical use |
+|------|---------------------|-------------|
+| Small | up to 20 × 15 × 5 cm | 1 to 4 cards, booster, light item |
+| Medium | up to 30 × 20 × 10 cm | Graded slab, loose Hot Wheels, small batch |
+| Large | up to 40 × 30 × 20 cm | Card lot, display, several diecast |
+| Extra large | up to 60 × 40 × 30 cm | ETB, large bundle, sealed box |
 
-| Shipping Profile | Max dimensions (approx.) |
-|-----------------|-------------------------|
-| Card / Booster | Padded envelope or small rigid mailer |
-| Light Accessories | Small padded envelope (20 × 20 cm) |
-| Light / Standard Apparel | Medium box (30 × 30 × 30 cm) |
-| Heavier Apparel / Bulkier Items | Large box (35 × 35 × 35 cm) |
-| Small to Extra-Large Bundles | Large box (40 × 40 × 40 cm) |
+**Correios minimum:** 16 × 11 × 2 cm. Below that, the package is refused.
+
+## Shake test
+
+Before sealing the box, hold it and shake gently. If you hear or feel the item move, **add more filler**. It's the simplest way to avoid transit damage.
 
 ## Important tips
 
-- **Don't overpack.** An oversized box wastes money (higher shipping cost) and provides less protection (items rattle around)
-- **Don't underpack.** A package that's too small may burst open or crush the item
-- **Label clearly.** Make sure the shipping label is on the largest flat surface of the package and fully visible
-- **Reuse with caution.** Reusing boxes is fine as long as they're sturdy and you've removed all old labels and barcodes. Old barcodes can confuse Correios scanners
-- **Test the shake.** Before sealing, hold the package and shake it gently. If you hear or feel items moving, add more padding
-- **Pack with the buyer in mind.** The unboxing experience matters. A neatly packed item with basic protection shows you care about your buyers
+- **Don't overpack.** An oversized box pays higher shipping and protects less, because the item rattles
+- **Reuse carefully.** Only reuse boxes that are sturdy and have all old labels and barcodes removed
+- **Label once.** Shipping label always on the biggest flat face, fully visible, no tape over the barcode
+- **Think buyer side.** Good packaging is the first impression of your product
 
 ## Common questions
 
-**Can I use any box or do I need Correios boxes?**
-You can use any box as long as it meets Correios size requirements (minimum 16 × 11 × 2 cm). You don't need to buy Correios-branded packaging.
+**Can I use any box?**
+Yes, as long as it's intact and meets the Correios minimum (16 × 11 × 2 cm). It doesn't need to be a Correios-branded box.
 
-**What materials should I avoid?**
-Don't use string, rope, rubber bands, or staples on the outside. Don't use newspaper directly on items (the ink can transfer). Don't ship in damaged or weak boxes.
+**What if the item arrives damaged anyway?**
+With proper packing and photos of the package before sending, you're in a strong position for any dispute. If insurance was active, it covers transit damage.
 
-**What happens if my package is too large for the shipping profile?**
-Correios may reject the package or charge extra. Always check that your package fits within the shipping profile you assigned. If your item is bigger than expected, adjust the shipping profile before the sale.
+**Do I need to include a note or receipt inside?**
+Not required. A thank-you note is a professional touch that improves reviews. Include a receipt only if you're a CNPJ seller and the buyer asks.
 
-**Should I include a receipt or packing slip?**
-It's not required, but including a simple thank-you note and a packing list (item name, order number) adds a professional touch and can lead to better reviews.
-
-**What if an item arrives damaged?**
-If you packed properly and have proof (photos of packing), you're in a stronger position for any dispute. Package insurance (if enabled) also covers damage during transit.
+**What if the item is bigger than the shipping profile?**
+Adjust the shipping profile before the sale. If the package exceeds the profile, Correios may refuse or charge extra.
 
 ## Need help?
 
