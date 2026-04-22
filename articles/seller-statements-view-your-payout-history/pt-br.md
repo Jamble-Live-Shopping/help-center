@@ -20,13 +20,13 @@ Vá ao seu perfil, depois toque em **Settings** e depois em **My Wallet**.
 
 No canto superior direito da tela da carteira, toque no **ícone de relógio** (ao lado do botão de ajuda). Isso abre a tela **Payouts History**.
 
-![Tela My Wallet com os ícones de ajuda e histórico no canto superior direito](./assets/mockups/seller-statements-view-your-payout-history__wallet-header.png)
+![Tela My Wallet com os ícones de ajuda e histórico no canto superior direito](./assets/mockups/seller-statements-view-your-payout-history__wallet-header__pt-br__v2.png)
 
 ### Passo 3: Revise seus saques
 
 A tela Payouts History mostra todos os seus registros de saques, com os mais recentes no topo.
 
-![Lista Payouts History com quatro entradas: três Completed em verde e uma Failed em vermelho](./assets/mockups/seller-statements-view-your-payout-history__payouts-history.png)
+![Lista Payouts History com quatro entradas: três Completed em verde e uma Failed em vermelho](./assets/mockups/seller-statements-view-your-payout-history__payouts-history__pt-br__v2.png)
 
 Cada entrada de saque mostra quatro informações:
 
@@ -39,7 +39,7 @@ Cada entrada de saque mostra quatro informações:
 
 Toque em qualquer entrada da lista para abrir a tela **Payout Details**. Ela mostra o ID do saque no topo e a lista de pedidos que compõem aquele pagamento, com comprador, produto, número do pedido e valor.
 
-![Tela Payout Details com dois pedidos: um produto Pokemon TCG e um Diecast, ambos com status e valor em R$](./assets/mockups/seller-statements-view-your-payout-history__payout-details.png)
+![Tela Payout Details com dois pedidos: um produto Pokemon TCG e um Diecast, ambos com status e valor em R$](./assets/mockups/seller-statements-view-your-payout-history__payout-details__pt-br__v2.png)
 
 ### Passo 5: Role para ver registros antigos
 

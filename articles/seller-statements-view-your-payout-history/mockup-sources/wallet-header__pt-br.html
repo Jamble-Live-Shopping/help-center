@@ -1,0 +1,104 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif;
+  background: #F9FAFC;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+.phone {
+  width: 340px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 2px 20px rgba(126,83,248,0.08);
+  border: 1px solid #E9EAEF;
+  overflow: hidden;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 12px;
+  border-bottom: 1px solid #F0F1F5;
+}
+.nav-back { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; color: #162233; font-size: 22px; font-weight: 400; }
+.nav-title { font-size: 17px; font-weight: 600; color: #162233; }
+.nav-right { display: flex; gap: 6px; }
+.nav-icon {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: #F3F4F8; color: #162233;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px; font-weight: 600;
+}
+.highlight { outline: 2px solid #7E53F8; outline-offset: 2px; }
+.card {
+  margin: 18px 14px 14px;
+  padding: 18px 16px 16px;
+  border: 1px solid #E9EAEF;
+  border-radius: 14px;
+}
+.card-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #162233;
+}
+.card-amount {
+  font-family: -apple-system-round, "SF Pro Rounded", system-ui, sans-serif;
+  font-size: 34px;
+  font-weight: 500;
+  color: #162233;
+  letter-spacing: -0.02em;
+  margin: 10px 0 14px;
+}
+.withdraw {
+  height: 42px;
+  border-radius: 21px;
+  background: #7E53F8;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pending {
+  margin: 0 14px 16px;
+  padding: 14px 16px;
+  border: 1px solid #E9EAEF;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pending-label { font-size: 14px; color: #6D6D80; }
+.pending-amount { font-size: 16px; font-weight: 600; color: #162233; }
+.spacer { height: 14px; }
+</style></head><body>
+<div class="phone">
+  <div class="nav">
+    <div class="nav-back">&lsaquo;</div>
+    <div class="nav-title">Minha carteira</div>
+    <div class="nav-right">
+      <div class="nav-icon" title="Help">?</div>
+      <div class="nav-icon highlight" title="History">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#162233" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"></circle>
+          <polyline points="12 7 12 12 15 14"></polyline>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-label">Disponível para sacar</div>
+    <div class="card-amount">R$ 350,00</div>
+    <div class="withdraw">Sacar</div>
+  </div>
+  <div class="pending">
+    <div class="pending-label">Pendente</div>
+    <div class="pending-amount">R$ 120,00</div>
+  </div>
+  <div class="spacer"></div>
+</div>
+</body></html>

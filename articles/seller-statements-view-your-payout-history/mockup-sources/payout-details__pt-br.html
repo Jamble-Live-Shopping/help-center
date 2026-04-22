@@ -1,0 +1,165 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif;
+  background: #F9FAFC;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+.phone {
+  width: 340px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 2px 20px rgba(126,83,248,0.08);
+  border: 1px solid #E9EAEF;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px 12px;
+  gap: 10px;
+  border-bottom: 1px solid #F0F1F5;
+}
+.nav-back { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; color: #162233; font-size: 22px; }
+.nav-title-wrap { display: flex; flex-direction: column; }
+.nav-title { font-size: 17px; font-weight: 600; color: #162233; line-height: 22px; }
+.nav-sub { font-size: 13px; color: #6D6D80; line-height: 16px; margin-top: 1px; }
+.summary {
+  margin: 14px 14px 10px;
+  padding: 14px 16px;
+  border: 1px solid #E9EAEF;
+  border-radius: 14px;
+  background: #F9FAFC;
+}
+.summary-row { display: flex; justify-content: space-between; align-items: center; }
+.summary-row + .summary-row { margin-top: 8px; }
+.summary-label { font-size: 13px; color: #6D6D80; font-weight: 500; }
+.summary-value { font-size: 14px; font-weight: 600; color: #162233; }
+.summary-value.positive { color: #17B169; }
+.divider { height: 1px; background: #E9EAEF; margin: 12px 14px; }
+.section-title {
+  padding: 0 16px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6D6D80;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.orders { padding: 0 14px; }
+.order {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #F0F1F5;
+}
+.order:last-child { border-bottom: none; }
+.thumb {
+  width: 56px; height: 56px; border-radius: 8px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #FDE68A, #F59E0B);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+}
+.thumb.diecast { background: linear-gradient(135deg, #DBEAFE, #3B82F6); }
+.order-body { flex: 1; min-width: 0; }
+.order-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.order-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #162233;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.order-amount {
+  font-size: 13px;
+  font-weight: 600;
+  color: #162233;
+  flex-shrink: 0;
+  font-family: -apple-system-round, "SF Pro Rounded", system-ui, sans-serif;
+}
+.order-ref {
+  font-size: 12px;
+  color: #6D6D80;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.order-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+.status-chip {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #17B169;
+}
+.status-chip .dot { width: 8px; height: 8px; border-radius: 50%; background: #17B169; }
+.order-date { font-size: 12px; color: #6D6D80; }
+</style></head><body>
+<div class="phone">
+  <div class="nav">
+    <div class="nav-back">&lsaquo;</div>
+    <div class="nav-title-wrap">
+      <div class="nav-title">Detalhes do pagamento</div>
+      <div class="nav-sub">#PAY-12345</div>
+    </div>
+  </div>
+  <div class="summary">
+    <div class="summary-row">
+      <div class="summary-label">Total pago</div>
+      <div class="summary-value positive">R$ 350,00</div>
+    </div>
+    <div class="summary-row">
+      <div class="summary-label">Data</div>
+      <div class="summary-value">19/03/2026</div>
+    </div>
+    <div class="summary-row">
+      <div class="summary-label">Status</div>
+      <div class="summary-value positive">Concluído</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="section-title">Pedidos neste pagamento</div>
+  <div class="orders">
+    <div class="order">
+      <div class="thumb">&#x1F3B4;</div>
+      <div class="order-body">
+        <div class="order-top">
+          <div class="order-title">@maria_p - Charizard Holo 1st</div>
+          <div class="order-amount">R$ 210,00</div>
+        </div>
+        <div class="order-ref">Número do pedido: ORD-98721</div>
+        <div class="order-status">
+          <div class="status-chip"><span class="dot"></span>Pedido Concluído</div>
+          <div class="order-date">17/03</div>
+        </div>
+      </div>
+    </div>
+    <div class="order">
+      <div class="thumb diecast">&#x1F697;</div>
+      <div class="order-body">
+        <div class="order-top">
+          <div class="order-title">@lucas_br - Hot Wheels RLC</div>
+          <div class="order-amount">R$ 140,00</div>
+        </div>
+        <div class="order-ref">Número do pedido: ORD-98703</div>
+        <div class="order-status">
+          <div class="status-chip"><span class="dot"></span>Pedido Concluído</div>
+          <div class="order-date">16/03</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

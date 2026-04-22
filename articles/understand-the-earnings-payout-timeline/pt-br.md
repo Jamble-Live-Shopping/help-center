@@ -52,7 +52,7 @@ Toque em **Sacar** na sua carteira. A Jamble envia o dinheiro por PIX para a con
 
 Cada pedido de saque passa por vários status no Histórico de pagamentos. A cor do status te diz onde ele está.
 
-![Lista Histórico de pagamentos com quatro entradas, cada uma com ID, valor em R$, data, e status colorido, Completed em verde, Processing e Pending em roxo, Failed em vermelho](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/understand-the-earnings-payout-timeline__payout-statuses__pt-br.png)
+![Lista Histórico de pagamentos com quatro entradas, cada uma com ID, valor em R$, data, e status colorido, Completed em verde, Processing e Pending em roxo, Failed em vermelho](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/understand-the-earnings-payout-timeline__payout-statuses__pt-br__v2.png)
 
 | Status | Cor | O que significa |
 |--------|-----|-----------------|
