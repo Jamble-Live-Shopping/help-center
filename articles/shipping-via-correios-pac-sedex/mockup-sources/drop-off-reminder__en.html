@@ -1,0 +1,44 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding: 18px 0 20px; }
+.screen-title { font-size: 17px; font-weight: 600; color: #162233; padding: 4px 20px 14px; }
+.banner { background: #FFF8E5; border: 1px solid #FCE4A5; border-radius: 12px; margin: 0 12px 14px; padding: 12px 14px; display: flex; gap: 12px; align-items: flex-start; }
+.banner-icon { width: 28px; height: 28px; border-radius: 50%; background: #FCB022; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; font-weight: 700; color: #FFFFFF; }
+.banner-content { flex: 1; }
+.banner-title { font-size: 14px; font-weight: 600; color: #162233; line-height: 20px; }
+.banner-sub { font-size: 12px; color: #6B7A92; line-height: 16px; margin-top: 2px; }
+.section-header { font-size: 13px; font-weight: 400; color: #6D6D80; text-transform: uppercase; padding: 6px 20px 8px; letter-spacing: -0.08px; }
+.order-card { background: #FFFFFF; margin: 0 12px 10px; border-radius: 12px; border: 1px solid #E9EAEF; padding: 14px 14px; display: flex; gap: 12px; }
+.thumb { width: 56px; height: 56px; border-radius: 10px; background: linear-gradient(135deg, #E9EAEF 0%, #DADDE3 100%); flex-shrink: 0; }
+.order-body { flex: 1; min-width: 0; }
+.order-title { font-size: 14px; font-weight: 600; color: #162233; line-height: 18px; }
+.order-sub { font-size: 12px; color: #6B7A92; line-height: 16px; margin-top: 2px; }
+.badge-row { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+.chip { font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 10px; }
+.chip.purple { background: #F1EBFE; color: #7E53F8; }
+.chip.green { background: #EAF7F0; color: #17B169; }
+.cta { margin: 6px 12px 0; background: #7E53F8; color: #FFFFFF; border-radius: 22px; height: 44px; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; }
+</style></head><body><div class="phone">
+<div class="screen-title">Sale details</div>
+<div class="banner">
+  <div class="banner-icon">!</div>
+  <div class="banner-content">
+    <div class="banner-title">Ship the parcel quickly</div>
+    <div class="banner-sub">Drop off at Correios within 3 days to avoid cancellation.</div>
+  </div>
+</div>
+<div class="section-header">Order</div>
+<div class="order-card">
+  <div class="thumb"></div>
+  <div class="order-body">
+    <div class="order-title">Charizard Holo, PSA 9</div>
+    <div class="order-sub">1 item, R$ 180.00</div>
+    <div class="badge-row">
+      <div class="chip purple">Label ready</div>
+      <div class="chip green">Paid</div>
+    </div>
+  </div>
+</div>
+<div class="cta">Download shipping label</div>
+</div></body></html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding: 18px 0 20px; }
+.screen-title { font-size: 17px; font-weight: 600; color: #162233; padding: 4px 20px 14px; }
+.section-header { font-size: 13px; font-weight: 400; color: #6D6D80; text-transform: uppercase; padding: 6px 20px 8px; letter-spacing: -0.08px; }
+.group { background: #FFFFFF; margin: 0 12px 10px; border-radius: 12px; overflow: hidden; border: 1px solid #E9EAEF; }
+.cell { display: flex; align-items: center; padding: 14px 16px; }
+.cell + .cell { border-top: 0.5px solid #E9EAEF; }
+.cell-content { flex: 1; }
+.cell-title { font-size: 16px; font-weight: 600; color: #162233; line-height: 22px; }
+.cell-sub { font-size: 13px; color: #6B7A92; line-height: 18px; margin-top: 2px; }
+.cell-price { font-size: 15px; font-weight: 600; color: #162233; margin-right: 12px; }
+.radio { width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid #BDC2CD; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.cell.on .radio { border-color: #7E53F8; border-width: 2px; }
+.radio-dot { width: 10px; height: 10px; border-radius: 50%; background: #7E53F8; display: none; }
+.cell.on .radio-dot { display: block; }
+.hint { font-size: 12px; color: #A0A7B7; padding: 0 20px; line-height: 16px; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; margin-left: 6px; vertical-align: middle; }
+.badge.cheap { background: #EAF7F0; color: #17B169; }
+.badge.fast { background: #F1EBFE; color: #7E53F8; }
+</style></head><body><div class="phone">
+<div class="screen-title">Shipping method</div>
+<div class="section-header">Choose delivery option</div>
+<div class="group">
+  <div class="cell on">
+    <div class="cell-content">
+      <div class="cell-title">PAC <span class="badge cheap">Cheapest</span></div>
+      <div class="cell-sub">Correios, standard<br>Estimated for 5 to 8 days</div>
+    </div>
+    <div class="cell-price">R$ 15.00</div>
+    <div class="radio"><div class="radio-dot"></div></div>
+  </div>
+  <div class="cell">
+    <div class="cell-content">
+      <div class="cell-title">SEDEX <span class="badge fast">Priority</span></div>
+      <div class="cell-sub">Correios, express<br>Estimated for 2 to 3 days</div>
+    </div>
+    <div class="cell-price">R$ 25.00</div>
+    <div class="radio"><div class="radio-dot"></div></div>
+  </div>
+</div>
+<div class="hint">Prices shown are CEP to CEP quotes from Melhor Envio.</div>
+</div></body></html>

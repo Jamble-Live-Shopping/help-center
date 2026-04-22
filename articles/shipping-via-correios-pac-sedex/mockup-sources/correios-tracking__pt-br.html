@@ -1,0 +1,53 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding: 18px 0 20px; }
+.screen-title { font-size: 17px; font-weight: 600; color: #162233; padding: 4px 20px 10px; }
+.section-header { font-size: 13px; font-weight: 400; color: #6D6D80; text-transform: uppercase; padding: 10px 20px 6px; letter-spacing: -0.08px; }
+.card { background: #FFFFFF; margin: 0 12px 10px; border-radius: 12px; border: 1px solid #E9EAEF; padding: 14px 16px; }
+.card-row { display: flex; align-items: center; justify-content: space-between; }
+.card-label { font-size: 13px; color: #6B7A92; }
+.card-value { font-size: 14px; font-weight: 600; color: #162233; font-family: "SF Mono", Menlo, monospace; }
+.carrier { font-size: 15px; font-weight: 600; color: #162233; margin-bottom: 4px; }
+.carrier-sub { font-size: 12px; color: #6B7A92; }
+.timeline { padding: 4px 16px 4px 22px; }
+.step { position: relative; padding: 0 0 18px 22px; }
+.step:last-child { padding-bottom: 0; }
+.step::before { content: ""; position: absolute; left: 6px; top: 6px; width: 2px; height: calc(100% - 6px); background: #E9EAEF; }
+.step:last-child::before { display: none; }
+.step::after { content: ""; position: absolute; left: 0; top: 2px; width: 14px; height: 14px; border-radius: 50%; background: #FFFFFF; border: 2px solid #BDC2CD; }
+.step.done::after { background: #17B169; border-color: #17B169; }
+.step.now::after { background: #7E53F8; border-color: #7E53F8; box-shadow: 0 0 0 4px rgba(126,83,248,0.15); }
+.step-title { font-size: 14px; font-weight: 600; color: #162233; line-height: 20px; }
+.step.pending .step-title { color: #A0A7B7; font-weight: 500; }
+.step-sub { font-size: 12px; color: #6B7A92; line-height: 16px; margin-top: 2px; }
+.step.pending .step-sub { color: #BDC2CD; }
+.timeline-wrap { background: #FFFFFF; margin: 0 12px 10px; border-radius: 12px; border: 1px solid #E9EAEF; padding: 14px 6px 14px 6px; }
+</style></head><body><div class="phone">
+<div class="screen-title">Rastrear sua entrega</div>
+<div class="card">
+  <div class="carrier">Correios, SEDEX</div>
+  <div class="carrier-sub">Estimado em 2 a 3 dias</div>
+  <div style="height:10px"></div>
+  <div class="card-row"><div class="card-label">Número de rastreamento</div><div class="card-value">BR123456789BR</div></div>
+</div>
+<div class="section-header">Status</div>
+<div class="timeline-wrap"><div class="timeline">
+  <div class="step done">
+    <div class="step-title">Etiqueta criada</div>
+    <div class="step-sub">Pré-postagem</div>
+  </div>
+  <div class="step done">
+    <div class="step-title">Postado nos Correios</div>
+    <div class="step-sub">Escaneado pela transportadora</div>
+  </div>
+  <div class="step now">
+    <div class="step-title">Em trânsito</div>
+    <div class="step-sub">Pacote a caminho</div>
+  </div>
+  <div class="step pending">
+    <div class="step-title">Entregue</div>
+    <div class="step-sub">Aguardando entrega</div>
+  </div>
+</div></div>
+</div></body></html>
