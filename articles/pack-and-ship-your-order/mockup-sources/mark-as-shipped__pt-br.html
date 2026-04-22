@@ -22,7 +22,10 @@ body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-
 .progress-labels { display: flex; justify-content: space-between; font-size: 11px; color: #6D6D80; }
 
 .tracking-card { background: #FFFFFF; border: 1px solid #E9EAEF; border-radius: 12px; padding: 12px 14px; display: flex; align-items: center; gap: 10px; }
-.tracking-icon { width: 32px; height: 32px; border-radius: 8px; background: #EEE6FF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; }
+.tracking-icon { width: 32px; height: 32px; border-radius: 8px; background: #EEE6FF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.tracking-icon svg { width: 18px; height: 18px; stroke: #7E53F8; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.copy-icon { display: inline-flex; vertical-align: middle; margin-left: 4px; }
+.copy-icon svg { width: 12px; height: 12px; stroke: #7E53F8; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .tracking-info { flex: 1; min-width: 0; }
 .tracking-label { font-size: 11px; color: #6D6D80; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 2px; }
 .tracking-code { font-size: 14px; font-weight: 600; color: #162233; font-family: 'SF Mono', Menlo, monospace; }
@@ -30,7 +33,7 @@ body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-
 <div class="phone">
   <div class="order-header">
     <div class="order-num-label">Número do pedido</div>
-    <div class="order-num-value">JMB-2A4F91 &nbsp;&#x29C9;</div>
+    <div class="order-num-value">JMB-2A4F91<span class="copy-icon"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></span></div>
   </div>
   <div class="product-row">
     <div class="product-img">&#x1F0CF;</div>
@@ -56,7 +59,7 @@ body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-
     </div>
   </div>
   <div class="tracking-card">
-    <div class="tracking-icon">&#x1F69A;</div>
+    <div class="tracking-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
     <div class="tracking-info">
       <div class="tracking-label">Código de rastreio</div>
       <div class="tracking-code">OQ451782034BR</div>
