@@ -34,7 +34,7 @@ After confirming a sale, you have **10 days** to drop the package off at Correio
 
 While the order is open, it appears as **Awaiting Shipment** on your dashboard, with a days-left countdown:
 
-![Awaiting Shipment order card with Generate Label button and 3 days Left countdown](./assets/mockups/shipping-policy-for-sellers__shipping-deadline-card__en.png)
+![Awaiting Shipment order card with Generate Label button and 3 days Left countdown](./assets/mockups/shipping-policy-for-sellers__shipping-deadline-card__en__v2.png)
 
 If you don't ship within 10 days, the order moves to **Ship Timeout** status and may be automatically cancelled, with a full refund to the buyer.
 
@@ -88,7 +88,7 @@ If you use your own external label (outside Jamble), add the tracking number to 
 
 If the 10-day deadline passes without shipment, the system shows a warning and the order enters **Ship Timeout**:
 
-![Shipping deadline missed alert with notice about automatic cancellation and buyer refund](./assets/mockups/shipping-policy-for-sellers__late-shipment-warning__en.png)
+![Shipping deadline missed alert with notice about automatic cancellation and buyer refund](./assets/mockups/shipping-policy-for-sellers__late-shipment-warning__en__v2.png)
 
 Possible consequences:
 - The buyer may request a cancellation

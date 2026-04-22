@@ -16,7 +16,7 @@ You need:
 
 Go to your profile, tap **Settings**. In the **Sell** section, tap **Shipping Preferences**.
 
-![Shipping Preferences screen with the Shipping Address row showing Av. Paulista 1578 and the Label section listing Label Format and Package Insurance](./assets/mockups/edit-your-shipping-settings__shipping-preferences__en.png)
+![Shipping Preferences screen with the Shipping Address row showing Av. Paulista 1578 and the Label section listing Label Format and Package Insurance](./assets/mockups/edit-your-shipping-settings__shipping-preferences__en__v2.png)
 
 This screen brings together everything you can edit: address, label format, and package insurance.
 
@@ -30,7 +30,7 @@ Your shipping address defines where packages are sent from and affects the shipp
 4. Update **number** and **apartment** if needed
 5. Tap **Save**
 
-![Shipping Address form with the CEP field in focus showing 04538-132 and street, number, neighborhood, city, and state filled in](./assets/mockups/edit-your-shipping-settings__shipping-address-edit__en.png)
+![Shipping Address form with the CEP field in focus showing 04538-132 and street, number, neighborhood, city, and state filled in](./assets/mockups/edit-your-shipping-settings__shipping-address-edit__en__v2.png)
 
 **When to change your address:** you've moved, or started shipping from another location (like a business address instead of home).
 
@@ -48,7 +48,7 @@ To change:
 2. Select the new format
 3. Tap **Save**
 
-![Label Format selector with three options: Half-page PDF, Full-page PDF, and 4x6 thermal label selected in purple highlight](./assets/mockups/edit-your-shipping-settings__label-format-picker__en.png)
+![Label Format selector with three options: Half-page PDF, Full-page PDF, and 4x6 thermal label selected in purple highlight](./assets/mockups/edit-your-shipping-settings__label-format-picker__en__v2.png)
 
 The new format applies to all labels generated from now on. Labels already generated keep their original format.
 

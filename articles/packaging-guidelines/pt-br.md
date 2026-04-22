@@ -17,7 +17,7 @@ Você precisa ter em casa:
 
 ## Checklist por categoria
 
-![Checklist de embalagem](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/packaging-guidelines__packaging-checklist__pt-br.png)
+![Checklist de embalagem](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/packaging-guidelines__packaging-checklist__pt-br__v2.png)
 
 ### Cartas soltas (Pokémon, TCG)
 
@@ -51,7 +51,7 @@ Para diecast fora da blister (loose), use papel de seda ao redor da peça antes 
 
 ## Faça e não faça
 
-![Faça e evite](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/packaging-guidelines__packaging-dos-donts__pt-br.png)
+![Faça e evite](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/packaging-guidelines__packaging-dos-donts__pt-br__v2.png)
 
 ### Faça
 
@@ -71,7 +71,7 @@ Para diecast fora da blister (loose), use papel de seda ao redor da peça antes 
 
 ## Tamanhos de caixa
 
-![Tamanhos de caixa](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/packaging-guidelines__shipping-box-sizes__pt-br.png)
+![Tamanhos de caixa](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/packaging-guidelines__shipping-box-sizes__pt-br__v2.png)
 
 Use a caixa **no tamanho do item**. Caixa grande demais = frete mais caro + item se mexe = dano. Caixa pequena demais = estoura.
 

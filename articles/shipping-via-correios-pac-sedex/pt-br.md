@@ -39,7 +39,7 @@ Quando uma etiqueta é gerada, a Jamble seleciona automaticamente entre **dois n
 
 O comprador vê as duas opções com prazos estimados e preços antes de finalizar a compra.
 
-![Tela de escolha de forma de envio com PAC (Mais barato, R$ 15,00) selecionado e SEDEX (Prioritário, R$ 25,00) disponível](./assets/mockups/shipping-via-correios-pac-sedex__correios-method-picker__pt-br.png)
+![Tela de escolha de forma de envio com PAC (Mais barato, R$ 15,00) selecionado e SEDEX (Prioritário, R$ 25,00) disponível](./assets/mockups/shipping-via-correios-pac-sedex__correios-method-picker__pt-br__v2.png)
 
 ## Como os custos de frete são calculados
 
@@ -96,7 +96,7 @@ Depois que uma venda é concluída:
 
 A Jamble gera a etiqueta automaticamente com todas as informações da transportadora, número de rastreamento e endereços preenchidos.
 
-![Tela de detalhes da venda com aviso "Envie o pacote rapidamente", cartão do pedido e botão Baixar etiqueta de envio](./assets/mockups/shipping-via-correios-pac-sedex__drop-off-reminder__pt-br.png)
+![Tela de detalhes da venda com aviso "Envie o pacote rapidamente", cartão do pedido e botão Baixar etiqueta de envio](./assets/mockups/shipping-via-correios-pac-sedex__drop-off-reminder__pt-br__v2.png)
 
 ### Embalando e despachando
 
@@ -121,7 +121,7 @@ Uma vez que o pacote é escaneado pela transportadora, as atualizações de rast
 
 Tanto você quanto o comprador recebem notificações push sobre atualizações de rastreamento (se a notificação **"Updates on transaction status"** estiver habilitada).
 
-![Tela de rastreamento com Correios SEDEX, número de rastreamento BR123456789BR e linha do tempo mostrando Etiqueta criada, Postado nos Correios, Em trânsito e Entregue](./assets/mockups/shipping-via-correios-pac-sedex__correios-tracking__pt-br.png)
+![Tela de rastreamento com Correios SEDEX, número de rastreamento BR123456789BR e linha do tempo mostrando Etiqueta criada, Postado nos Correios, Em trânsito e Entregue](./assets/mockups/shipping-via-correios-pac-sedex__correios-tracking__pt-br__v2.png)
 
 ## Dicas importantes
 

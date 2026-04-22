@@ -39,7 +39,7 @@ When a label is generated, Jamble automatically selects between **two tiers**:
 
 The buyer sees both options with estimated delivery dates and prices before completing their purchase.
 
-![Shipping method screen with PAC (Cheapest, R$ 15.00) selected and SEDEX (Priority, R$ 25.00) available](./assets/mockups/shipping-via-correios-pac-sedex__correios-method-picker__en.png)
+![Shipping method screen with PAC (Cheapest, R$ 15.00) selected and SEDEX (Priority, R$ 25.00) available](./assets/mockups/shipping-via-correios-pac-sedex__correios-method-picker__en__v2.png)
 
 ## How shipping costs are calculated
 
@@ -96,7 +96,7 @@ After a sale is completed:
 
 Jamble generates the label automatically with all the carrier information, tracking number, and addresses pre-filled.
 
-![Sale details screen with "Ship the parcel quickly" reminder, order card, and Download shipping label button](./assets/mockups/shipping-via-correios-pac-sedex__drop-off-reminder__en.png)
+![Sale details screen with "Ship the parcel quickly" reminder, order card, and Download shipping label button](./assets/mockups/shipping-via-correios-pac-sedex__drop-off-reminder__en__v2.png)
 
 ### Packing and dropping off
 
@@ -121,7 +121,7 @@ Once the package is scanned by the carrier, tracking updates are available for b
 
 Both you and the buyer receive push notifications for tracking updates (if the **"Updates on transaction status"** notification is enabled).
 
-![Tracking screen with Correios SEDEX, tracking number BR123456789BR and a timeline showing Label created, Dropped off at Correios, In transit, and Delivered](./assets/mockups/shipping-via-correios-pac-sedex__correios-tracking__en.png)
+![Tracking screen with Correios SEDEX, tracking number BR123456789BR and a timeline showing Label created, Dropped off at Correios, In transit, and Delivered](./assets/mockups/shipping-via-correios-pac-sedex__correios-tracking__en__v2.png)
 
 ## Important tips
 

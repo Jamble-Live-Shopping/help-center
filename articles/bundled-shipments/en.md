@@ -20,7 +20,7 @@ When the same buyer purchases multiple items from you within the same show, Jamb
 
 In your show's orders screen you'll see the buyer at the top with the total items and amount, and below it the **PACKAGE 1** with everything they purchased.
 
-![Seller's orders screen showing buyer @marina_cards with 3 items for $147.00 and PACKAGE 1 containing three cards with Purchase label and Add invoice buttons](./assets/mockups/bundled-shipments__bundle-orders-view__en.png)
+![Seller's orders screen showing buyer @marina_cards with 3 items for $147.00 and PACKAGE 1 containing three cards with Purchase label and Add invoice buttons](./assets/mockups/bundled-shipments__bundle-orders-view__en__v2.png)
 
 ## How grouping works
 
@@ -38,7 +38,7 @@ When items become a package, the shipping cost is calculated based on the **ship
 
 This almost always costs less for the buyer than paying shipping on each item separately. That's why the app shows the buyer, during the show, a banner saying **Buy more, save on shipping fees**.
 
-![Buyer's show screen with banner Buy more, save on shipping fees and products listed](./assets/mockups/bundled-shipments__buy-more-save__en.png)
+![Buyer's show screen with banner Buy more, save on shipping fees and products listed](./assets/mockups/bundled-shipments__buy-more-save__en__v2.png)
 
 You don't see the final shipping value before the buyer confirms. During the show, an estimate appears next to the package (Est. Ship. $8.50 in the example). After the label is generated, the actual value appears.
 
@@ -48,7 +48,7 @@ When it's time to ship, you generate **one label per package**, not one per item
 
 The label that comes out has the buyer's address and lists all orders going in that package. You print it once, stick it on the box, and you're done.
 
-![Label for PACKAGE 1 with the buyer's address and the three orders listed below, with Open label PDF button](./assets/mockups/bundled-shipments__bundle-label__en.png)
+![Label for PACKAGE 1 with the buyer's address and the three orders listed below, with Open label PDF button](./assets/mockups/bundled-shipments__bundle-label__en__v2.png)
 
 **Golden rule:** all items in the package go together in one box. If you send them in separate boxes, the single label doesn't work for both and the buyer can't track properly.
 

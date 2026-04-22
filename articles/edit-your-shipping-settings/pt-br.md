@@ -16,7 +16,7 @@ Você precisa de:
 
 Vá ao seu perfil, toque em **Ajustes**. Na seção **Vender**, toque em **Preferências de envio**.
 
-![Tela Preferências de envio com a linha Endereço de envio mostrando Av. Paulista 1578 e a seção Etiqueta listando Formato da etiqueta e Seguro do pacote](./assets/mockups/edit-your-shipping-settings__shipping-preferences__pt-br.png)
+![Tela Preferências de envio com a linha Endereço de envio mostrando Av. Paulista 1578 e a seção Etiqueta listando Formato da etiqueta e Seguro do pacote](./assets/mockups/edit-your-shipping-settings__shipping-preferences__pt-br__v2.png)
 
 Esta tela reúne tudo o que você pode editar: endereço, formato da etiqueta e seguro do pacote.
 
@@ -30,7 +30,7 @@ Seu endereço de envio define de onde os pacotes saem e afeta o custo de frete q
 4. Atualize **número** e **complemento** se precisar
 5. Toque em **Salvar**
 
-![Formulário Endereço de envio com o campo CEP em foco mostrando 04538-132 e rua, número, bairro, cidade e estado preenchidos](./assets/mockups/edit-your-shipping-settings__shipping-address-edit__pt-br.png)
+![Formulário Endereço de envio com o campo CEP em foco mostrando 04538-132 e rua, número, bairro, cidade e estado preenchidos](./assets/mockups/edit-your-shipping-settings__shipping-address-edit__pt-br__v2.png)
 
 **Quando mudar seu endereço:** você se mudou, ou começou a enviar de outro lugar (como um endereço comercial ao invés de casa).
 
@@ -48,7 +48,7 @@ Para mudar:
 2. Selecione o novo formato
 3. Toque em **Salvar**
 
-![Seletor Formato da etiqueta com três opções: PDF meia página, PDF página inteira e Etiqueta térmica 4x6 selecionada em destaque roxo](./assets/mockups/edit-your-shipping-settings__label-format-picker__pt-br.png)
+![Seletor Formato da etiqueta com três opções: PDF meia página, PDF página inteira e Etiqueta térmica 4x6 selecionada em destaque roxo](./assets/mockups/edit-your-shipping-settings__label-format-picker__pt-br__v2.png)
 
 O novo formato se aplica a todas as etiquetas geradas a partir de agora. Etiquetas já geradas mantêm o formato original.
 

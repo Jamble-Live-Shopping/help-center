@@ -29,7 +29,7 @@ You don't need to access any external website. Everything happens within the app
 
 Go to the sales tab in the dashboard and tap on the order you want to ship. The order must have the status **Confirmed**.
 
-![Order card in the dashboard with the Generate Shipping Labels button](./assets/mockups/generate-and-print-shipping-labels__order-to-ship-card__en.png)
+![Order card in the dashboard with the Generate Shipping Labels button](./assets/mockups/generate-and-print-shipping-labels__order-to-ship-card__en__v2.png)
 
 ### Step 2: Tap "Generate Shipping Labels"
 
@@ -41,7 +41,7 @@ The label is issued in a few seconds.
 
 If you haven't chosen a default format yet, the app asks you to select one before issuing. Open **Settings > Shipping Preferences > Label Format** and choose one of three options:
 
-![Format selector with Half Page, Full Page and Thermal](./assets/mockups/generate-and-print-shipping-labels__label-format-picker__en.png)
+![Format selector with Half Page, Full Page and Thermal](./assets/mockups/generate-and-print-shipping-labels__label-format-picker__en__v2.png)
 
 The choice becomes the default for all future labels. You can change it whenever you want.
 
@@ -49,7 +49,7 @@ The choice becomes the default for all future labels. You can change it whenever
 
 The label appears as a PDF within the app. You can view it, share it to another app (email, printer app) or print it directly.
 
-![Shipping label preview with Print button](./assets/mockups/generate-and-print-shipping-labels__shipping-label-ready__en.png)
+![Shipping label preview with Print button](./assets/mockups/generate-and-print-shipping-labels__shipping-label-ready__en__v2.png)
 
 The label also arrives in your registered email as a backup.
 

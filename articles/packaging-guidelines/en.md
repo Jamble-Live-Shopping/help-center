@@ -17,7 +17,7 @@ Keep these on hand:
 
 ## Checklist by category
 
-![Packaging checklist](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/packaging-guidelines__packaging-checklist__en.png)
+![Packaging checklist](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/packaging-guidelines__packaging-checklist__en__v2.png)
 
 ### Raw cards (Pokémon, TCG)
 
@@ -51,7 +51,7 @@ For loose diecast (out of blister), wrap the piece in tissue paper before the bu
 
 ## Do and skip
 
-![Do and skip](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/packaging-guidelines__packaging-dos-donts__en.png)
+![Do and skip](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/packaging-guidelines__packaging-dos-donts__en__v2.png)
 
 ### Do
 
@@ -71,7 +71,7 @@ For loose diecast (out of blister), wrap the piece in tissue paper before the bu
 
 ## Box sizes
 
-![Box sizes](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/packaging-guidelines__shipping-box-sizes__en.png)
+![Box sizes](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/packaging-guidelines__shipping-box-sizes__en__v2.png)
 
 Use a box **sized to the item**. Too big = higher shipping + the item moves = damage. Too small = bursts open.
 
