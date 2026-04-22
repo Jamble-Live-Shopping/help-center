@@ -25,7 +25,7 @@ Invite a friend, they get R$ 30 for their first purchase and you get R$ 30 when 
 
 Go to your profile in the app and tap **Invite Friends**. You'll see the program steps, your R$ 30 reward, and the **Share Friends** button.
 
-![Invite Friends screen showing referral program steps, R$ 30 reward, and Share Friends button](./assets/mockups/invite-friends__en.png)
+![Invite Friends screen showing referral program steps, R$ 30 reward, and Share Friends button](./assets/mockups/referral-program__invite-friends__en.png)
 
 ### Step 2: Share your link
 
@@ -49,7 +49,7 @@ Both your friend's credit and your reward expire 14 days after they're credited.
 
 On the referral screen you can open **Ongoing Referrals** (friends who redeemed the code but haven't purchased yet) or **Past Referrals** (completed referrals).
 
-![Ongoing Referrals screen showing R$ 60 total pending and list of 3 friends with status and days left](./assets/mockups/referral-rewards__en.png)
+![Ongoing Referrals screen showing R$ 60 total pending and list of 3 friends with status and days left](./assets/mockups/referral-program__referral-rewards__en.png)
 
 Each friend on the list shows their name and status:
 

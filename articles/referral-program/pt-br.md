@@ -25,7 +25,7 @@ Convide um amigo, ele ganha R$ 30 para a primeira compra e você ganha R$ 30 qua
 
 Vá ao seu perfil no app e toque em **Convidar amigos**. Você vai ver os passos do programa, sua recompensa de R$ 30 e o botão **Compartilhar amigos**.
 
-![Tela Convidar amigos com passos do programa de indicação, recompensa de R$ 30 e botão Compartilhar amigos](./assets/mockups/invite-friends__pt-br.png)
+![Tela Convidar amigos com passos do programa de indicação, recompensa de R$ 30 e botão Compartilhar amigos](./assets/mockups/referral-program__invite-friends__pt-br.png)
 
 ### Passo 2: Compartilhe seu link
 
@@ -49,7 +49,7 @@ Tanto o crédito do seu amigo quanto a sua recompensa expiram 14 dias depois de 
 
 Na tela de indicação você pode abrir **Referências contínuas** (amigos que resgataram o código mas ainda não compraram) ou **Referências anteriores** (indicações já concluídas).
 
-![Tela Referências contínuas mostrando total pendente de R$ 60 e lista de 3 amigos com status e dias restantes](./assets/mockups/referral-rewards__pt-br.png)
+![Tela Referências contínuas mostrando total pendente de R$ 60 e lista de 3 amigos com status e dias restantes](./assets/mockups/referral-program__referral-rewards__pt-br.png)
 
 Cada amigo na lista mostra o nome dele e o status:
 
