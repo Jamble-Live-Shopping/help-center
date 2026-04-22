@@ -11,9 +11,13 @@ Você precisa de:
 - Um número de telefone brasileiro (+55)
 - Um CPF válido
 
-## Requisitos de localização
+## Requisitos de localização e moeda
 
-A Jamble atualmente opera **exclusivamente no Brasil**. Para vender na Jamble, você precisa:
+A Jamble atualmente opera **exclusivamente no Brasil**. País, moeda e documento são detectados automaticamente a partir do seu número de telefone.
+
+![Card de requisitos de venda mostrando País Brasil, Moeda Real Brasileiro, Telefone +55 e CPF obrigatório](./assets/mockups/seller-location-currency-requirements__location-requirements-info__pt-br.png)
+
+Para vender na Jamble, você precisa:
 
 - Estar localizado no Brasil
 - Ter um número de telefone brasileiro (código de país +55)
@@ -21,9 +25,9 @@ A Jamble atualmente opera **exclusivamente no Brasil**. Para vender na Jamble, v
 
 Quando você se cadastra, o app verifica sua localização e número de telefone. Se você estiver fora do Brasil, não conseguirá criar uma conta de vendedor.
 
-**Os compradores também precisam estar no Brasil** para comprar nos seus shows. Isso significa que todos os seus clientes são brasileiros — lembre-se disso ao descrever seus produtos e se comunicar com sua audiência.
+**Os compradores também precisam estar no Brasil** para comprar nos seus shows. Todos os seus clientes são brasileiros, lembre-se disso ao descrever seus produtos e se comunicar com sua audiência.
 
-## Moeda
+## Moeda: R$ (Real Brasileiro)
 
 Todos os preços, ganhos e saques na Jamble são em **R$ (Real Brasileiro)**.
 
@@ -32,7 +36,7 @@ Todos os preços, ganhos e saques na Jamble são em **R$ (Real Brasileiro)**.
 - Seus ganhos e saques são em R$
 - Custos de frete são calculados em R$
 
-Você não precisa selecionar uma moeda — ela é automaticamente definida como R$ com base na sua localização.
+Você não precisa selecionar uma moeda, ela é automaticamente definida como R$ com base na sua localização.
 
 **Formato de preço:** A Jamble usa o formato brasileiro. Por exemplo, mil reais e cinquenta centavos é exibido como **R$ 1.000,50** (ponto para milhares, vírgula para decimais).
 
@@ -41,6 +45,10 @@ Você não precisa selecionar uma moeda — ela é automaticamente definida como
 ### CPF (obrigatório para todos)
 
 Seu **CPF** (Cadastro de Pessoas Físicas) é seu documento de identificação fiscal no Brasil. É um número de 11 dígitos, formatado como XXX.XXX.XXX-XX.
+
+Durante a configuração da sua conta de vendedor, você escolhe entre **Individual** ou **Empresa** e informa seu CPF.
+
+![Tela de entrada de CPF com alternador Individual/Empresa e campo para digitar o número do documento fiscal](./assets/mockups/seller-location-currency-requirements__cpf-entry__pt-br.png)
 
 Você vai precisar do CPF para:
 - Criar sua conta
@@ -52,7 +60,7 @@ Você vai precisar do CPF para:
 
 ### CNPJ (opcional, para empresas)
 
-Se você vende como empresa, pode opcionalmente informar seu **CNPJ** (Cadastro Nacional da Pessoa Jurídica). É um número de 14 dígitos, formatado como XX.XXX.XXX/XXXX-XX.
+Se você vende como **Empresa**, pode opcionalmente informar seu **CNPJ** (Cadastro Nacional da Pessoa Jurídica). É um número de 14 dígitos, formatado como XX.XXX.XXX/XXXX-XX.
 
 Ter um CNPJ não é obrigatório para vender na Jamble, mas pode ser necessário para certas configurações empresariais.
 
@@ -65,21 +73,21 @@ Para receber seus ganhos, você precisa de uma **conta bancária brasileira**. A
 - **Nome do banco** e código do banco
 - **Agência** (código da agência)
 - **Número da conta**
-- **Tipo de conta** — conta corrente ou conta poupança
-- **Tipo de titular** — pessoa física (CPF) ou pessoa jurídica (CNPJ)
+- **Tipo de conta**, conta corrente ou conta poupança
+- **Tipo de titular**, pessoa física (CPF) ou pessoa jurídica (CNPJ)
 
-Sua conta bancária precisa estar no seu nome (correspondendo ao seu CPF ou CNPJ). Os saques são processados via **PIX** e geralmente caem em minutos.
+Sua conta bancária precisa estar no seu nome (correspondendo ao seu CPF ou CNPJ). Os saques são processados via **PIX** (operado pela Pagar.me) e geralmente caem em minutos.
 
 ## Endereço de envio
 
 Você precisa de um endereço brasileiro para vender na Jamble. Ao configurar seu endereço, você vai informar:
 
-- **CEP** (código postal) — 8 dígitos (ex: 01310-100)
-- **Rua** — preenchida automaticamente a partir do CEP
+- **CEP** (código postal), 8 dígitos (ex: 01310-100)
+- **Rua**, preenchida automaticamente a partir do CEP
 - **Número**
-- **Complemento** (apartamento, sala) — opcional
-- **Bairro** — preenchido automaticamente a partir do CEP
-- **Cidade e estado** — preenchidos automaticamente a partir do CEP
+- **Complemento** (apartamento, sala), opcional
+- **Bairro**, preenchido automaticamente a partir do CEP
+- **Cidade e estado**, preenchidos automaticamente a partir do CEP
 
 A Jamble atende todos os 27 estados brasileiros, do Acre (AC) ao Tocantins (TO).
 
