@@ -2,7 +2,7 @@
 
 ## What you'll learn
 
-This guide explains how Jamble's Referral Program works. You'll learn how to invite friends to Jamble, how you both earn R$ 30, and how to track your referrals in the app.
+This guide explains how Jamble's Referral Program works. You'll learn how to invite friends to Jamble, how you both earn R$ 30 in shipping credit, and how to track your referrals in the app.
 
 ## Before you start
 
@@ -13,11 +13,11 @@ You need:
 
 ## How the program works
 
-Invite a friend, they get R$ 30 for their first purchase and you get R$ 30 when they buy. The program is simple and works for any new account.
+Invite a friend, they get R$ 30 in shipping credit for their first purchase and you get R$ 30 in shipping credit when they buy. The program is simple and works for any new account.
 
-- **You earn R$ 30** when your friend makes their first purchase at a Show
-- **Your friend earns R$ 30** as soon as they redeem your invite code
-- **Rewards are credits** applied automatically at checkout
+- **You earn R$ 30 in shipping credit** when your friend makes their first purchase at a Show
+- **Your friend earns R$ 30 in shipping credit** as soon as they redeem your invite code
+- **Rewards are shipping credits** applied automatically at checkout, covering only the shipping cost (not the product price)
 
 ## Step by step
 
@@ -25,7 +25,7 @@ Invite a friend, they get R$ 30 for their first purchase and you get R$ 30 when 
 
 Go to your profile in the app and tap **Invite Friends**. You'll see the program steps, your R$ 30 reward, and the **Share Friends** button.
 
-![Invite Friends screen showing referral program steps, R$ 30 reward, and Share Friends button](./assets/mockups/referral-program__invite-friends__en.png)
+![Invite Friends screen showing referral program steps, R$ 30 reward, and Share Friends button](./assets/mockups/referral-program__invite-friends__en__v2.png)
 
 ### Step 2: Share your link
 
@@ -59,7 +59,7 @@ Each friend on the list shows their name and status:
 
 ## How credits work
 
-All referral rewards are **credits** in your Jamble account. They're applied automatically at your next checkout to cover part (or all) of your purchase.
+All referral rewards are **shipping credits** in your Jamble account. They cover only the shipping cost (not the product price) and are applied automatically at your next Show checkout.
 
 **Credits expire in 14 days**, so use them fast. This applies to both your credit and your friend's credit.
 
@@ -83,7 +83,7 @@ The reward is only credited after your friend purchases 1 item at a Show. If the
 They have 14 days after redeeming the code to make their first purchase at a Show. After that deadline, the referral expires and neither you nor they receive anything.
 
 **Do credits work on any purchase?**
-Credits are applied automatically at checkout for purchases made at Shows. They cover part or all of the amount, depending on the item price.
+Credits cover only the shipping cost, not the product price. They're applied automatically at checkout for purchases made at Shows. If the shipping cost is less than R$ 30, the credit covers the full shipping amount.
 
 **Can I refer someone who already has a Jamble account?**
 No. Codes only work for brand new accounts. If the person already has Jamble, the code won't be accepted.

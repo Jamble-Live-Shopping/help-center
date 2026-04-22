@@ -13,11 +13,11 @@ Você precisa de:
 
 ## Como funciona o programa
 
-Convide um amigo, ele ganha R$ 30 para a primeira compra e você ganha R$ 30 quando ele comprar. O programa é simples e vale para qualquer conta nova.
+Convide um amigo, ele ganha R$ 30 de crédito de frete para a primeira compra e você ganha R$ 30 de crédito de frete quando ele comprar. O programa é simples e vale para qualquer conta nova.
 
-- **Você ganha R$ 30** quando seu amigo faz a primeira compra em um Show
-- **Seu amigo ganha R$ 30** assim que resgata o seu código de convite
-- **As recompensas são créditos** aplicados automaticamente no checkout
+- **Você ganha R$ 30 de crédito de frete** quando seu amigo faz a primeira compra em um Show
+- **Seu amigo ganha R$ 30 de crédito de frete** assim que resgata o seu código de convite
+- **As recompensas são créditos de frete** aplicados automaticamente no checkout, apenas no valor do envio (não cobrem o preço do produto)
 
 ## Passo a passo
 
@@ -25,7 +25,7 @@ Convide um amigo, ele ganha R$ 30 para a primeira compra e você ganha R$ 30 qua
 
 Vá ao seu perfil no app e toque em **Convidar amigos**. Você vai ver os passos do programa, sua recompensa de R$ 30 e o botão **Compartilhar amigos**.
 
-![Tela Convidar amigos com passos do programa de indicação, recompensa de R$ 30 e botão Compartilhar amigos](./assets/mockups/referral-program__invite-friends__pt-br.png)
+![Tela Convidar amigos com passos do programa de indicação, recompensa de R$ 30 e botão Compartilhar amigos](./assets/mockups/referral-program__invite-friends__pt-br__v2.png)
 
 ### Passo 2: Compartilhe seu link
 
@@ -59,7 +59,7 @@ Cada amigo na lista mostra o nome dele e o status:
 
 ## Como os créditos funcionam
 
-Todas as recompensas de indicação são **créditos** na sua conta Jamble. Eles são usados automaticamente no seu próximo checkout para cobrir parte (ou todo) o valor da compra.
+Todas as recompensas de indicação são **créditos de frete** na sua conta Jamble. Eles cobrem apenas o valor do envio (não o preço do produto) e são aplicados automaticamente no próximo checkout em um Show.
 
 **Os créditos expiram em 14 dias**, então use rápido. Vale tanto para o seu crédito quanto para o do seu amigo.
 
@@ -83,7 +83,7 @@ A recompensa só é creditada depois que seu amigo comprar 1 item em um Show. Se
 Ele tem 14 dias depois de resgatar o código para fazer a primeira compra em um Show. Depois desse prazo, a indicação expira e nem ele nem você recebem nada.
 
 **Os créditos funcionam em qualquer compra?**
-Os créditos são aplicados automaticamente no checkout de compras feitas em Shows. Eles cobrem parte ou todo o valor, dependendo do preço do item.
+Os créditos cobrem apenas o valor do frete (envio), não o preço do produto. Eles são aplicados automaticamente no checkout de compras feitas em Shows. Se o frete for menor que R$ 30, o crédito cobre o envio inteiro.
 
 **Posso indicar alguém que já tem uma conta Jamble?**
 Não. Os códigos só funcionam para contas totalmente novas. Se a pessoa já tem Jamble, o código não é aceito.
