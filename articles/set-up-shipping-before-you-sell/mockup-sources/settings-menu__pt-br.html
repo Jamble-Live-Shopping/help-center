@@ -1,15 +1,35 @@
 <!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
-.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
-
-.section-header { font-size: 13px; font-weight: 400; color: #6D6D80; text-transform: uppercase; padding: 14px 20px 6px; letter-spacing: -0.08px; }
-.group { background: #FFFFFF; margin: 0 12px 10px; border-radius: 12px; overflow: hidden; border: 1px solid #E9EAEF; }
-.row { display: flex; align-items: center; padding: 12px 16px; min-height: 44px; }
-.row-icon { width: 30px; height: 30px; border-radius: 7px; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; margin-right: 12px; flex-shrink: 0; padding: 6px; }
-.row-icon svg { width: 100%; height: 100%; }
-.row-icon.brand { background: #7E53F8; }
-.row-icon.gray { background: #8E8E93; }
-.row-label { font-size: 17px; color: #162233; flex: 1; line-height: 22px; }
-.row.dimmed .row-label { color: #C7C7CC; }
-</style></head><body><div class="phone"><div class="section-header">Configurações</div><div class="group"><div class="row"><div class="row-icon brand"></div><div class="row-label">Configurações do Perfil</div></div><div class="row"><div class="row-icon brand"></div><div class="row-label">Configurações de Pagamento</div></div><div class="row"><div class="row-icon brand"></div><div class="row-label">Shipping Preferences</div></div><div class="row"><div class="row-icon brand"></div><div class="row-label">Configurações de Notificação</div></div></div><div style="height:16px"></div></div></body></html>
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding-bottom: 16px; }
+.nav { display: flex; align-items: center; padding: 14px 16px 10px; }
+.nav-back { width: 24px; height: 24px; color: #7E53F8; font-size: 22px; line-height: 20px; }
+.nav-title { flex: 1; text-align: center; font-size: 17px; font-weight: 600; color: #162233; margin-right: 24px; }
+.section-header { font-size: 13px; font-weight: 400; color: #6D6D80; text-transform: uppercase; padding: 16px 20px 6px; letter-spacing: 0.3px; }
+.group { background: #FFFFFF; margin: 0 12px 6px; border-radius: 12px; overflow: hidden; border: 1px solid #E9EAEF; }
+.row { display: flex; align-items: center; padding: 12px 14px; min-height: 48px; border-bottom: 1px solid #F0F1F5; }
+.row:last-child { border-bottom: none; }
+.row.highlight { background: #F7F3FF; }
+.row-icon { width: 30px; height: 30px; border-radius: 7px; display: flex; align-items: center; justify-content: center; color: white; margin-right: 12px; flex-shrink: 0; }
+.row-icon svg { width: 18px; height: 18px; }
+.row-icon.purple { background: #7E53F8; }
+.row-icon.blue { background: #3C8FF0; }
+.row-icon.teal { background: #30BFB1; }
+.row-icon.orange { background: #F08C3C; }
+.row-icon.pink { background: #E55A8C; }
+.row-label { font-size: 16px; color: #162233; flex: 1; line-height: 22px; font-weight: 500; }
+.row-chev { color: #C7C7CC; font-size: 18px; }
+</style></head><body><div class="phone">
+<div class="nav"><div class="nav-back">&lsaquo;</div><div class="nav-title">Ajustes</div></div>
+<div class="section-header">Vender</div>
+<div class="group">
+  <div class="row"><div class="row-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-3V6a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v1H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/></svg></div><div class="row-label">Dados Bancários</div><div class="row-chev">&rsaquo;</div></div>
+  <div class="row highlight"><div class="row-icon purple"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="15" height="13" rx="2"/><path d="M16 10h3l3 3v6h-6"/><circle cx="7" cy="19" r="2"/><circle cx="17" cy="19" r="2"/></svg></div><div class="row-label">Preferências de envio</div><div class="row-chev">&rsaquo;</div></div>
+  <div class="row"><div class="row-icon teal"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M5 9l7-7 7 7M5 15l7 7 7-7"/></svg></div><div class="row-label">Histórico de pagamentos</div><div class="row-chev">&rsaquo;</div></div>
+</div>
+<div class="section-header">Conta</div>
+<div class="group">
+  <div class="row"><div class="row-icon pink"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg></div><div class="row-label">Perfil</div><div class="row-chev">&rsaquo;</div></div>
+  <div class="row"><div class="row-icon orange"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div><div class="row-label">Notificações</div><div class="row-chev">&rsaquo;</div></div>
+</div>
+</div></body></html>

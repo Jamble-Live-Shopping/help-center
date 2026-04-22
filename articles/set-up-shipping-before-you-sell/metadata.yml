@@ -1,17 +1,19 @@
 intercom_id: 14288082
 slug: set-up-shipping-before-you-sell
 collection_id: 19177934
-
-# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
-default_locale: pt-br
-
+default_locale: pt-BR
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+titles:
+  pt-BR: Configure o Envio Antes de Vender
+  en: Set Up Shipping Before You Sell
+descriptions:
+  pt-BR: Configure endereço, formato de etiqueta e perfis de envio antes do seu primeiro show na Jamble.
+  en: Set up your address, label format, and shipping profiles before your first Jamble show.
 locales:
-  pt-br:
+  pt-BR:
     title: 'Configure o Envio Antes de Vender'
-    description: ''
+    description: 'Configure endereço, formato de etiqueta e perfis de envio antes do seu primeiro show na Jamble.'
   en:
     title: 'Set Up Shipping Before You Sell'
-    description: "This guide explains how to set up your shipping preferences in Jamble so you can start selling. You'll learn how to configure your shipping address, choose your label format, and understand how shipping costs work for your buyers."
+    description: 'Set up your address, label format, and shipping profiles before your first Jamble show.'

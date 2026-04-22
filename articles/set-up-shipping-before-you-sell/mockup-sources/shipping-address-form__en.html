@@ -1,16 +1,33 @@
 <!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
-.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
-
-.form-title { font-size: 20px; font-weight: 700; color: #162233; padding: 20px 20px 12px; }
-.form-body { padding: 0 20px 20px; }
-.field { margin-bottom: 14px; }
-.fl { font-size: 13px; font-weight: 600; color: #6B7A92; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.4px; }
-.fi { font-size: 15px; color: #A0A7B7; background: #F9FAFC; border: 1px solid #E9EAEF; border-radius: 8px; padding: 10px 12px; }
-.fd { font-size: 15px; color: #162233; background: #F9FAFC; border: 1px solid #E9EAEF; border-radius: 8px; padding: 10px 12px; display: flex; justify-content: space-between; align-items: center; }
-.fu { font-size: 14px; color: #6B7A92; border: 1.5px dashed #C7C7CC; border-radius: 8px; padding: 22px 12px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
-.fu span:first-child { font-size: 24px; font-weight: 300; color: #C7C7CC; }
-.ft { font-size: 15px; color: #A0A7B7; background: #F9FAFC; border: 1px solid #E9EAEF; border-radius: 8px; padding: 10px 12px; min-height: 60px; }
-.form-submit { background: #7E53F8; color: white; height: 48px; border-radius: 24px; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 600; margin: 4px 20px 20px; }
-</style></head><body><div class="phone"><div class="form-title">Shipping Address</div><div class="form-body"><div class="field"><div class="fl">CEP</div><div class="fi">_____-___</div></div><div class="field"><div class="fl">Street</div><div class="fi">[auto-filled]</div></div><div class="field"><div class="fl">Number</div><div class="fi">____</div></div><div class="field"><div class="fl">Apt/Suite</div><div class="fi">____ (optional)</div></div><div class="field"><div class="fl">Neighborhood</div><div class="fi">[auto-filled]</div></div><div class="field"><div class="fl">City</div><div class="fi">[auto-filled]</div></div><div class="field"><div class="fl">State</div><div class="fi">[auto-filled]</div></div></div><div class="form-submit">Save Address</div></div></body></html>
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding-bottom: 16px; }
+.nav { display: flex; align-items: center; padding: 14px 16px 10px; }
+.nav-back { width: 24px; height: 24px; color: #7E53F8; font-size: 22px; line-height: 20px; }
+.nav-title { flex: 1; text-align: center; font-size: 17px; font-weight: 600; color: #162233; margin-right: 24px; }
+.form-body { padding: 4px 18px 8px; }
+.field { margin-bottom: 12px; }
+.fl { font-size: 12px; font-weight: 600; color: #6D6D80; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.4px; }
+.fi { font-size: 15px; color: #162233; background: #F9FAFC; border: 1px solid #E9EAEF; border-radius: 10px; padding: 11px 12px; }
+.fi.placeholder { color: #A0A7B7; }
+.row2 { display: flex; gap: 10px; }
+.row2 .field { flex: 1; }
+.hint { font-size: 12px; color: #6D6D80; margin-top: 4px; }
+.form-submit { background: #7E53F8; color: white; height: 48px; border-radius: 24px; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 600; margin: 10px 18px 6px; }
+</style></head><body><div class="phone">
+<div class="nav"><div class="nav-back">&lsaquo;</div><div class="nav-title">Shipping Address</div></div>
+<div class="form-body">
+  <div class="field"><div class="fl">CEP (Postal Code)</div><div class="fi">01310-100</div><div class="hint">Type your CEP to auto-fill the address</div></div>
+  <div class="field"><div class="fl">Street</div><div class="fi">Av. Paulista</div></div>
+  <div class="row2">
+    <div class="field"><div class="fl">Number</div><div class="fi">1578</div></div>
+    <div class="field"><div class="fl">Apartment</div><div class="fi placeholder">Suite 42</div></div>
+  </div>
+  <div class="field"><div class="fl">Neighborhood</div><div class="fi">Bela Vista</div></div>
+  <div class="row2">
+    <div class="field"><div class="fl">City</div><div class="fi">São Paulo</div></div>
+    <div class="field"><div class="fl">State</div><div class="fi">SP</div></div>
+  </div>
+</div>
+<div class="form-submit">Save</div>
+</div></body></html>
