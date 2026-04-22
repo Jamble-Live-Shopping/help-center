@@ -16,7 +16,7 @@ You need:
 
 After confirming the sale, you have **3 business days** to drop the package at Correios. This deadline is fixed and appears at the top of the order screen.
 
-![Deadline banner with warning Ship the parcel quickly, shipping deadline in 2 days and deadline date Apr 24, 2026](./assets/mockups/pack-and-ship-your-order__shipping-deadline__en.png)
+![Deadline banner with warning Ship the parcel quickly, shipping deadline in 2 days and deadline date Apr 24, 2026](./assets/mockups/pack-and-ship-your-order__shipping-deadline__en__v2.png)
 
 If the package isn't posted within the window, the sale can be canceled automatically and the buyer is refunded. The sooner you ship, the better your seller reputation.
 
@@ -26,7 +26,7 @@ In the app, go to **Settings** and tap **My Sales**. Open the order that is **Co
 
 On the order screen you see the buyer, the product, the amount, and a status card with the **Generate shipping label** button. Tap the button to create the label.
 
-![Order details screen with Confirmed status, progress bar, and purple Generate shipping label button](./assets/mockups/pack-and-ship-your-order__order-detail-ready-to-ship__en.png)
+![Order details screen with Confirmed status, progress bar, and purple Generate shipping label button](./assets/mockups/pack-and-ship-your-order__order-detail-ready-to-ship__en__v2.png)
 
 The label is calculated by Jamble's system based on the product's shipping profile and the buyer's address. You don't need to visit the Correios website or create anything manually. Details in **Generate and print shipping labels**.
 
@@ -61,7 +61,7 @@ Any Correios branch accepts it. Hand it over at the counter, the attendant scans
 
 As soon as Correios scans the label, the order status changes to **Shipped** and Jamble pulls the tracking automatically. You and the buyer see the code on the order screen.
 
-![Order screen with Shipped status, In delivery on the purple bar and tracking code OQ451782034BR](./assets/mockups/pack-and-ship-your-order__mark-as-shipped__en.png)
+![Order screen with Shipped status, In delivery on the purple bar and tracking code OQ451782034BR](./assets/mockups/pack-and-ship-your-order__mark-as-shipped__en__v2.png)
 
 Statuses you'll see during delivery:
 

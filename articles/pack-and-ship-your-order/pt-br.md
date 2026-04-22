@@ -16,7 +16,7 @@ Você precisa de:
 
 Depois de confirmar a venda, você tem **3 dias úteis** para deixar o pacote no Correios. Esse prazo é fixo e aparece no topo da tela do pedido.
 
-![Banner de prazo com o aviso Envie o pacote rapidamente, prazo de envio em 2 dias e data limite 24/04/2026](./assets/mockups/pack-and-ship-your-order__shipping-deadline__pt-br.png)
+![Banner de prazo com o aviso Envie o pacote rapidamente, prazo de envio em 2 dias e data limite 24/04/2026](./assets/mockups/pack-and-ship-your-order__shipping-deadline__pt-br__v2.png)
 
 Se o pacote não for postado dentro da janela, a venda pode ser cancelada automaticamente e o comprador é reembolsado. Quanto antes você envia, melhor sua reputação de vendedor.
 
@@ -26,7 +26,7 @@ No app, vá em **Configurações** e toque em **My Sales**. Abra o pedido que es
 
 Na tela do pedido você vê o comprador, o produto, o valor e um cartão de status com o botão **Gerar etiqueta de envio**. Toque no botão para criar a etiqueta.
 
-![Tela de detalhes do pedido com status Confirmado, barra de progresso e botão roxo Gerar etiqueta de envio](./assets/mockups/pack-and-ship-your-order__order-detail-ready-to-ship__pt-br.png)
+![Tela de detalhes do pedido com status Confirmado, barra de progresso e botão roxo Gerar etiqueta de envio](./assets/mockups/pack-and-ship-your-order__order-detail-ready-to-ship__pt-br__v2.png)
 
 A etiqueta é calculada pelo sistema da Jamble com base no perfil de envio do produto e no endereço do comprador. Você não precisa ir ao site dos Correios nem criar nada manualmente. Detalhes em **Gere e imprima etiquetas de envio**.
 
@@ -61,7 +61,7 @@ Qualquer agência dos Correios aceita. Entregue no balcão, o atendente escaneia
 
 Assim que os Correios escaneiam a etiqueta, o status do pedido muda para **Enviado** e a Jamble puxa o rastreamento automaticamente. Você e o comprador veem o código na tela do pedido.
 
-![Tela do pedido com status Enviado, Em entrega na barra roxa e código de rastreio OQ451782034BR](./assets/mockups/pack-and-ship-your-order__mark-as-shipped__pt-br.png)
+![Tela do pedido com status Enviado, Em entrega na barra roxa e código de rastreio OQ451782034BR](./assets/mockups/pack-and-ship-your-order__mark-as-shipped__pt-br__v2.png)
 
 Status que você vai ver ao longo da entrega:
 

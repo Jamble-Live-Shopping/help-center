@@ -29,7 +29,7 @@ Você não precisa acessar nenhum site externo. Tudo acontece dentro do app.
 
 Vá até a aba de vendas no dashboard e toque no pedido que quer enviar. O pedido precisa estar no status **Confirmado**.
 
-![Card do pedido no dashboard com o botão Gerar etiquetas de remessa](./assets/mockups/generate-and-print-shipping-labels__order-to-ship-card__pt-br.png)
+![Card do pedido no dashboard com o botão Gerar etiquetas de remessa](./assets/mockups/generate-and-print-shipping-labels__order-to-ship-card__pt-br__v2.png)
 
 ### Passo 2: Toque em "Gerar etiquetas de remessa"
 
@@ -41,7 +41,7 @@ A etiqueta é emitida em alguns segundos.
 
 Se você ainda não escolheu um formato padrão, o app pede para selecionar antes de emitir. Abra **Configurações > Preferências de envio > Formato da etiqueta** e escolha uma das três opções:
 
-![Seletor de formato com Meia página, Página inteira e Térmica](./assets/mockups/generate-and-print-shipping-labels__label-format-picker__pt-br.png)
+![Seletor de formato com Meia página, Página inteira e Térmica](./assets/mockups/generate-and-print-shipping-labels__label-format-picker__pt-br__v2.png)
 
 A escolha vira padrão para todas as próximas etiquetas. Você pode trocar quando quiser.
 
@@ -49,7 +49,7 @@ A escolha vira padrão para todas as próximas etiquetas. Você pode trocar quan
 
 A etiqueta aparece em PDF dentro do app. Você pode visualizar, compartilhar em outro app (email, app da impressora) ou imprimir direto.
 
-![Visualização da etiqueta de remessa com botão Imprimir](./assets/mockups/generate-and-print-shipping-labels__shipping-label-ready__pt-br.png)
+![Visualização da etiqueta de remessa com botão Imprimir](./assets/mockups/generate-and-print-shipping-labels__shipping-label-ready__pt-br__v2.png)
 
 A etiqueta também chega no seu email cadastrado como backup.
 

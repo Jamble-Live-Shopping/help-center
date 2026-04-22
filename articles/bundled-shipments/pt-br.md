@@ -20,7 +20,7 @@ Quando o mesmo comprador compra vários itens seus dentro do mesmo show, a Jambl
 
 Na tela de pedidos do seu show você verá o comprador no topo, com o total de itens e o valor, e logo abaixo o **PACOTE 1** com tudo que ele levou.
 
-![Tela de pedidos do vendedor mostrando comprador @marina_cards com 3 itens por R$147,00 e o PACOTE 1 contendo três cartas com botões de Gerar etiqueta e Nota fiscal](./assets/mockups/bundled-shipments__bundle-orders-view__pt-br.png)
+![Tela de pedidos do vendedor mostrando comprador @marina_cards com 3 itens por R$147,00 e o PACOTE 1 contendo três cartas com botões de Gerar etiqueta e Nota fiscal](./assets/mockups/bundled-shipments__bundle-orders-view__pt-br__v2.png)
 
 ## Como o agrupamento funciona
 
@@ -38,7 +38,7 @@ Quando os itens viram um pacote, o custo do frete é calculado com base no **per
 
 Isso quase sempre sai mais barato para o comprador do que pagar frete em cada item separadamente. É por isso que o app mostra para o comprador, durante o show, uma faixa dizendo **Compre mais, economize nas taxas de envio**.
 
-![Tela de show do comprador com banner Compre mais, economize nas taxas de envio e produtos listados](./assets/mockups/bundled-shipments__buy-more-save__pt-br.png)
+![Tela de show do comprador com banner Compre mais, economize nas taxas de envio e produtos listados](./assets/mockups/bundled-shipments__buy-more-save__pt-br__v2.png)
 
 Você não vê o valor final do frete antes do comprador confirmar. Durante o show, aparece uma estimativa ao lado do pacote (Frete est. R$8,50 no exemplo). Depois que a etiqueta é gerada, o valor real aparece.
 
@@ -48,7 +48,7 @@ Quando chega a hora de enviar, você gera **uma etiqueta por pacote**, não uma 
 
 A etiqueta que sai tem o endereço do comprador e lista todos os pedidos que vão naquele pacote. Você imprime uma vez, cola na caixa, e pronto.
 
-![Etiqueta do PACOTE 1 com endereço da compradora e os três pedidos listados abaixo, com botão Abrir etiqueta PDF](./assets/mockups/bundled-shipments__bundle-label__pt-br.png)
+![Etiqueta do PACOTE 1 com endereço da compradora e os três pedidos listados abaixo, com botão Abrir etiqueta PDF](./assets/mockups/bundled-shipments__bundle-label__pt-br__v2.png)
 
 **Regra de ouro:** todos os itens do pacote vão juntos em uma caixa. Se você mandar em caixas separadas, a etiqueta única não serve para as duas e o comprador não consegue rastrear direito.
 

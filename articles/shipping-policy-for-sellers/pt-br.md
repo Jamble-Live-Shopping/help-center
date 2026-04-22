@@ -34,7 +34,7 @@ Após confirmar uma venda, você tem **10 dias** para postar o pacote nos Correi
 
 Enquanto o pedido está aberto, ele aparece como **Aguardando envio** no seu painel, com uma contagem de dias restantes:
 
-![Card de pedido Aguardando envio com botão Gerar etiqueta e contagem de 3 dias restantes](./assets/mockups/shipping-policy-for-sellers__shipping-deadline-card__pt-br.png)
+![Card de pedido Aguardando envio com botão Gerar etiqueta e contagem de 3 dias restantes](./assets/mockups/shipping-policy-for-sellers__shipping-deadline-card__pt-br__v2.png)
 
 Se você não enviar dentro dos 10 dias, o pedido muda para status **Ship Timeout** e pode ser cancelado automaticamente, com reembolso integral ao comprador.
 
@@ -88,7 +88,7 @@ Se você usar uma etiqueta externa (fora da Jamble), adicione manualmente o núm
 
 Se o prazo de 10 dias passar sem envio, o sistema mostra um aviso e o pedido entra em **Ship Timeout**:
 
-![Alerta de prazo de envio perdido com aviso sobre cancelamento automático e reembolso ao comprador](./assets/mockups/shipping-policy-for-sellers__late-shipment-warning__pt-br.png)
+![Alerta de prazo de envio perdido com aviso sobre cancelamento automático e reembolso ao comprador](./assets/mockups/shipping-policy-for-sellers__late-shipment-warning__pt-br__v2.png)
 
 Consequências possíveis:
 - O comprador pode solicitar o cancelamento
