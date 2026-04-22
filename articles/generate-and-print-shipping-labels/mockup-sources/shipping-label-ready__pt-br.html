@@ -1,0 +1,51 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding: 16px 0 14px; }
+
+.screen-title { font-size: 20px; font-weight: 700; color: #162233; padding: 4px 20px 10px; }
+.tabs { display: flex; gap: 20px; padding: 0 20px; border-bottom: 1px solid #E9EAEF; }
+.tab { font-size: 14px; font-weight: 400; color: #6D6D80; padding: 8px 0; }
+.tab.active { font-weight: 600; color: #162233; border-bottom: 2px solid #162233; }
+
+.label-wrap { padding: 16px 20px; display: flex; justify-content: center; }
+.label-sheet { width: 240px; background: #FFFFFF; border: 1px solid #DADDE3; border-radius: 8px; padding: 12px; box-shadow: 0 2px 8px rgba(22,34,51,0.06); }
+.lbl-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; border-bottom: 1px solid #E9EAEF; padding-bottom: 8px; }
+.lbl-brand { font-size: 10px; font-weight: 700; color: #162233; letter-spacing: 0.5px; }
+.lbl-service { font-size: 9px; color: #6D6D80; }
+.lbl-addr { font-size: 9px; color: #162233; line-height: 12px; margin-bottom: 8px; }
+.lbl-addr-label { font-size: 8px; color: #6D6D80; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 2px; }
+.lbl-to { border-top: 1px solid #E9EAEF; padding-top: 8px; margin-bottom: 8px; }
+.barcode { height: 36px; background: repeating-linear-gradient(90deg, #162233 0 1px, transparent 1px 3px, #162233 3px 5px, transparent 5px 7px, #162233 7px 10px, transparent 10px 12px); margin-bottom: 4px; border-radius: 2px; }
+.barcode-num { font-size: 10px; font-weight: 700; color: #162233; text-align: center; letter-spacing: 1px; }
+
+.cta { margin: 8px 20px 4px; width: calc(100% - 40px); background: #000000; color: #FFFFFF; border: none; height: 50px; border-radius: 25px; font-size: 16px; font-weight: 600; font-family: inherit; display: flex; align-items: center; justify-content: center; }
+</style></head><body>
+<div class="phone">
+  <div class="screen-title">Etiqueta de remessa</div>
+  <div class="tabs">
+    <div class="tab active">Etiqueta</div>
+    <div class="tab">Resumo</div>
+  </div>
+  <div class="label-wrap">
+    <div class="label-sheet">
+      <div class="lbl-head">
+        <div>
+          <div class="lbl-brand">CORREIOS</div>
+          <div class="lbl-service">PAC</div>
+        </div>
+        <div class="lbl-service">0.4 kg</div>
+      </div>
+      <div class="lbl-addr-label">Remetente</div>
+      <div class="lbl-addr">Maria S.<br>Rua das Flores, 120<br>São Paulo, SP 01310-100</div>
+      <div class="lbl-to">
+        <div class="lbl-addr-label">Destinatário</div>
+        <div class="lbl-addr">João P.<br>Av. Paulista, 1578<br>São Paulo, SP 01310-200</div>
+      </div>
+      <div class="barcode"></div>
+      <div class="barcode-num">BR 123 456 789 BR</div>
+    </div>
+  </div>
+  <button class="cta">Imprimir</button>
+</div>
+</body></html>
