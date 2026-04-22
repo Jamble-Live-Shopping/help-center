@@ -2,16 +2,25 @@ intercom_id: 14288135
 slug: edit-your-shipping-settings
 collection_id: 19177937
 
-# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
-default_locale: pt-br
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+default_locale: pt-BR
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-04-22T00:00:00Z
+
+titles:
+  pt-BR: Edite Suas Configurações de Envio
+  en: Edit Your Shipping Settings
+
+descriptions:
+  pt-BR: Atualize seu endereço de envio, troque o formato da etiqueta e ajuste o seguro do pacote nas suas Preferências de envio.
+  en: Update your shipping address, change your label format, and adjust package insurance in your Shipping Preferences.
+
 locales:
-  pt-br:
+  pt-BR:
     title: 'Edite Suas Configurações de Envio'
-    description: ''
+    description: 'Atualize seu endereço de envio, troque o formato da etiqueta e ajuste o seguro do pacote nas suas Preferências de envio.'
   en:
     title: 'Edit Your Shipping Settings'
-    description: "This guide explains how to edit your shipping settings after the initial setup. You'll learn how to change your shipping address, switch label formats, adjust your insurance preference, and choose between shipping speed options."
+    description: 'Update your shipping address, change your label format, and adjust package insurance in your Shipping Preferences.'
