@@ -2,16 +2,25 @@ intercom_id: 14288091
 slug: account-security
 collection_id: 19177934
 
-# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
-default_locale: pt-br
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+default_locale: pt-BR
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-04-21T00:00:00Z
+
+titles:
+  pt-BR: Segurança da Conta
+  en: Account Security
+
+descriptions:
+  pt-BR: 'Como sua conta Jamble é protegida pelo número de telefone, como gerenciar seus dados e como sair ou apagar a conta.'
+  en: 'How your Jamble account is protected by phone number, how to manage your data, and how to log out or delete your account.'
+
 locales:
-  pt-br:
+  pt-BR:
     title: 'Segurança da Conta'
-    description: ''
+    description: 'Como sua conta Jamble é protegida pelo número de telefone, como gerenciar seus dados e como sair ou apagar a conta.'
   en:
     title: 'Account Security'
-    description: 'This guide covers how to protect your Jamble account — from the login methods available to managing your personal information and knowing how to delete your account if needed.'
+    description: 'How your Jamble account is protected by phone number, how to manage your data, and how to log out or delete your account.'

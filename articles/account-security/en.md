@@ -1,117 +1,106 @@
 # Account Security
 
-## What you'll learn
+## What you will learn
 
-This guide covers how to protect your Jamble account — from the login methods available to managing your personal information and knowing how to delete your account if needed.
+This guide explains how your Jamble account is protected, how to safely create and access your account using your phone number, how to manage your personal information, and what to do to log out or delete your account.
 
 ## Before you start
 
-- You need a Jamble account (or be ready to create one)
+- You need an active mobile number in Brazil (area code + number)
+- Have access to WhatsApp or SMS on the same number, as the verification code arrives there
 
 ## How login works on Jamble
 
-Jamble supports **3 login methods** on iOS (phone number, Google, Apple) and **phone number only** on Android:
+Jamble uses your **phone number** as the main account identifier. There is no password: every time you create or access your account, Jamble sends a 6-digit code via SMS or WhatsApp and you enter that code to log in.
 
-- ****Phone number** (primary)** — Enter your phone number, receive an SMS or WhatsApp code, and verify it
-- ****Continue with Google**** — Sign in using your Google account
-- ****Continue with Apple**** — Sign in using your Apple ID
-When you open Jamble for the first time, you'll see the **Sign up** screen. The primary method is **phone number** — enter your number, tap **"Get verification code"**, and type the code you receive via SMS or WhatsApp.
+On iOS, you can also create your account with **Google** or **Apple ID**. On Android, phone number only.
 
-![Sign up screen, account-security: phone number input field with country code selector (+55 Brazil) and Get verification code button](./assets/mockups/account-security__signup-phone-entry__en.png)
+![Sign up screen with country selector BR +55, phone number field and Continue button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/account-security__signup-phone-entry__en__v2.png)
 
-To use Google or Apple instead, tap **"Other sign-up methods"** at the bottom. A modal will appear with both options.
+The same screen is used to create a new account and log into an existing one. If the number already has a Jamble account, you log in directly to it. To use Google or Apple (iOS), tap **Other login methods** at the bottom of the screen.
 
-**Important:** The same screen works for both signing up (new account) and logging in (existing account). If your phone number or Google/Apple account already has a Jamble account, you'll be logged in directly.
+## Code verification
+
+After tapping **Continue**, you see the code screen. Jamble sends 6 digits to your number, first via WhatsApp (if installed) and then via SMS.
+
+![Please enter the code screen with 6 input fields, message We sent the code to the number and resend button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/account-security__phone-verification__en__v2.png)
+
+- The code has **6 digits** and expires in a few minutes
+- If it doesn't arrive, wait for the counter and tap **Resend** when it becomes available
+- If you enter a wrong code, an alert appears: **Wrong verification code**. Tap **Try again** and enter it again
 
 ## Managing your personal information
 
-### Step 1: Open Personal Information
+All your information is in **Settings** (gear icon on your profile) - **Account** section - **Personal Information**.
 
-Go to **Settings** (gear icon on your profile) → **Account** section → **"Personal Information"**.
+![Settings screen with Account section showing Personal Information, Notifications, Edit my Profile and Blocked profiles](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/account-security__account-settings__en__v2.png)
 
-### Step 2: Review and update your details
+On the **Personal Information** screen, you can view and edit:
 
-You can view and edit the following fields:
+- **Personal Information**: First Name, Last Name, Birth Date
+- **Contact Information**: Email, Phone Number
+- **Legal Information (Brazil)**: CPF
 
-**Personal Information:**
-- **First Name** — your first name
-- **Last Name** — your last name
-- **Birth Date** — your date of birth
+![Personal Information screen with fields for First Name, Last Name, Birth Date, Email, Phone Number and CPF](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/account-security__personal-information__en__v2.png)
 
-**Contact Information:**
-- **Email** — your email address
-- **Phone Number** — your phone number
+**To change your phone number or email**: tap the field, enter the new value and confirm with the verification code sent to the new number or email. Until you confirm, the change is not applied.
 
-**Legal Information (Brazil):**
-- **CPF** — your CPF number (required for Brazilian users)
+## Other options in the Account section
 
-![Account Security Information form with personal, contact, and legal details fields and Save button](./assets/mockups/account-security__account-security-info__en.png)
+From **Settings** - **Account**, you also have access to:
 
-After making changes, tap **"Save"** to update your information.
-
-## Other account settings
-
-From the **Settings** screen, you also have access to:
-
-| Setting | Section | What it does |
-|---------|---------|-------------|
-| **Edit my Profile** | Account | Change your profile picture, username, and bio |
-| **Blocked profiles** | Account | View and manage users you've blocked |
-| **Notifications** | Account | Control push notification preferences |
-| **Payment methods** | Buy | Manage your saved payment methods |
-| **Shipping addresses** | Buy | Add or edit your shipping addresses |
-| **My Purchases** | Buy | View your purchase history |
-| **My Sales** | Sell | View your sales (sellers only) |
-| **My Wallet** | Sell | Access your earnings and payouts (sellers only) |
-| **Vacation mode** | Sell | Pause orders temporarily (sellers only) |
-| **Privacy Policy** | Help & Legal | Read Jamble's privacy policy |
-| **Help Center** | Help & Legal | Access help articles |
+- **Notifications**: control of push notifications you receive
+- **Edit my Profile**: profile picture, username and bio
+- **Blocked profiles**: list of blocked users, with the option to unblock
 
 ## Deleting your account
 
 If you need to delete your account:
 
 1. Go to **Settings**
-2. Scroll to the bottom
-3. Tap **"Delete account"**
+2. Scroll to the bottom of the screen
+3. Tap **Delete Account** (in red)
 4. Follow the confirmation steps
 
-**This action is permanent.** Deleting your account removes all your data, including your profile, purchase history, and seller information. Active orders must be completed before deletion.
+**This action is permanent.** Deleting your account removes all your data: profile, purchase history and seller information. Ongoing orders must be completed before deletion. If you are a seller with a wallet balance, withdraw it before deleting your account.
 
 ## Logging out
 
-To log out:
+To end your session on the device:
 
 1. Go to **Settings**
-2. Scroll to the very bottom
-3. Tap **"Log Out"**
+2. Scroll to the bottom of the screen
+3. Tap **Log Out**
 
-You can log back in anytime using the same login method you used to create your account (phone, Google, or Apple).
+You can log in again at any time using the same method you used to create your account (phone number, Google or Apple).
 
-## Important tips
+## Security tips
 
-- **Your phone number is your main identifier.** If you change your phone number, make sure to update it in your account settings before losing access to the old one
-- **Keep your CPF up to date.** For Brazilian sellers, a valid CPF is required for payouts. Without it, you won't be able to receive your earnings
-- **Use the same login method every time.** If you signed up with Google, always use Google to log in. Using a different method may create a new account instead of accessing your existing one
-- **Enter a reachable email.** Your email is used for important account communications like order confirmations and payout receipts
+- **Your phone number is your account identifier.** If you are going to change your number, update it in Personal Information before losing access to your old number
+- **Always use the same login method.** If you signed up with Google, always log in with Google. Trying to log in by phone number may open a new account creation flow instead of your current account
+- **Keep your CPF up to date.** Brazilian sellers need a valid CPF to receive their earnings. Your CPF is stored securely and used only to comply with legal obligations
+- **Use an email you check.** Email is the channel for important account communications and receipts
 
-## Common questions
+## Frequently asked questions
 
-**I forgot which login method I used. How do I find out?**
-Try logging in with your phone number first — it's the most common method. If you see a new signup flow instead of your existing account, try Google or Apple.
+**The code didn't arrive. What do I do?**
+Wait for the counter to finish and tap **Resend**. Check WhatsApp and SMS (including spam). Also verify that you entered the number with the correct area code. If it doesn't arrive after two attempts, contact support via the app chat.
 
-**Can I change my login method?**
-Your account is linked to the method you used to sign up. You cannot switch from phone to Google, for example. However, you can always add or update your email and phone number in Personal Information.
+**I forgot which method I used to create my account.**
+Start with your phone number, which is the primary method. If a new registration screen appears instead of logging into your account, try Google or Apple (iOS).
+
+**Can I switch from phone to Google, or vice versa?**
+No. The account is linked to the method used during registration. You can update your phone number and email in **Personal Information**, but you cannot change the login method.
+
+**Is my CPF secure?**
+Yes. The CPF is stored securely and used only to comply with Brazilian payment and tax rules.
+
+**Can I have more than one account?**
+No. Each phone number, Google account or Apple ID can be linked to only one Jamble account.
 
 **What happens to my data if I delete my account?**
-All your data is permanently removed, including your profile, order history, and earnings. If you're a seller with pending payouts, make sure to withdraw your balance before deleting.
-
-**Is my CPF stored securely?**
-Yes. Your CPF is encrypted and stored securely. It is only used for legal compliance with Brazilian payment regulations and tax requirements.
-
-**Can I have multiple accounts?**
-No. Each phone number, Google account, or Apple ID can only be linked to one Jamble account.
+All data is permanently removed: profile, order history and earnings. If you have a balance as a seller, withdraw it before deleting.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Contact support via the app chat or email support@jambleapp.com.

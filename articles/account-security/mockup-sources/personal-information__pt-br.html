@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; padding: 16px 0 16px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.topbar { display: flex; align-items: center; padding: 4px 16px 12px; }
+.back { width: 32px; height: 32px; border-radius: 16px; background: #F3F4F8; display: flex; align-items: center; justify-content: center; color: #162233; font-size: 18px; font-weight: 600; }
+.navtitle { flex: 1; text-align: center; font-size: 17px; font-weight: 600; color: #162233; margin-right: 32px; }
+.section-header { font-size: 12px; font-weight: 600; color: #6D6D80; text-transform: uppercase; letter-spacing: 0.6px; padding: 12px 20px 8px; }
+.group { background: #FFFFFF; margin: 0 12px; border-radius: 12px; border: 1px solid #E9EAEF; overflow: hidden; }
+.field { padding: 12px 16px; }
+.field + .field { border-top: 1px solid #E9EAEF; }
+.field-label { font-size: 13px; color: #6D6D80; margin-bottom: 4px; }
+.field-value { font-size: 16px; color: #162233; font-weight: 500; display: flex; justify-content: space-between; align-items: center; }
+.field-value .chev { color: #C7C7CC; font-size: 18px; }
+.field-value .muted { color: #A0A7B7; font-weight: 400; }
+</style></head><body>
+<div class="phone">
+  <div class="topbar">
+    <div class="back">‹</div>
+    <div class="navtitle">Informações Pessoais</div>
+  </div>
+
+  <div class="section-header">Informações Pessoais</div>
+  <div class="group">
+    <div class="field">
+      <div class="field-label">Nome</div>
+      <div class="field-value">Maria</div>
+    </div>
+    <div class="field">
+      <div class="field-label">Sobrenome</div>
+      <div class="field-value">Silva</div>
+    </div>
+    <div class="field">
+      <div class="field-label">Data de nascimento</div>
+      <div class="field-value">15/03/1992</div>
+    </div>
+  </div>
+
+  <div class="section-header">Informações de Contato</div>
+  <div class="group">
+    <div class="field">
+      <div class="field-label">E-mail</div>
+      <div class="field-value">maria@exemplo.com<span class="chev">›</span></div>
+    </div>
+    <div class="field">
+      <div class="field-label">Número de Telefone</div>
+      <div class="field-value">+55 11 98765-4321<span class="chev">›</span></div>
+    </div>
+  </div>
+
+  <div class="section-header">Informações Legais</div>
+  <div class="group">
+    <div class="field">
+      <div class="field-label">CPF</div>
+      <div class="field-value">123.456.789-00</div>
+    </div>
+  </div>
+</div>
+</body></html>
