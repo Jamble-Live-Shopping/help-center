@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.hdr { padding: 20px 20px 8px; }
+.hdr-title { font-size: 20px; font-weight: 700; color: #162233; line-height: 26px; }
+.hdr-sub { font-size: 13px; color: #6B7A92; margin-top: 6px; line-height: 18px; }
+.body { padding: 16px 20px 20px; }
+.seg { display: flex; background: #F9FAFC; border: 1px solid #E9EAEF; border-radius: 10px; padding: 4px; margin-bottom: 18px; }
+.seg-item { flex: 1; text-align: center; padding: 9px 0; font-size: 14px; font-weight: 600; color: #6B7A92; border-radius: 8px; }
+.seg-item.active { background: #FFFFFF; color: #162233; box-shadow: 0 1px 3px rgba(22,34,51,0.08); }
+.field { margin-bottom: 14px; }
+.fl { font-size: 13px; font-weight: 600; color: #6B7A92; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.3px; }
+.fi { font-size: 16px; color: #162233; background: #FFFFFF; border: 1.5px solid #7E53F8; border-radius: 10px; padding: 12px 14px; font-weight: 500; letter-spacing: 0.4px; }
+.hint { font-size: 12px; color: #6B7A92; margin-top: 6px; line-height: 16px; }
+.submit { background: #7E53F8; color: white; height: 48px; border-radius: 24px; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 600; margin-top: 20px; }
+</style></head><body><div class="phone"><div class="hdr"><div class="hdr-title">Tax document</div><div class="hdr-sub">Enter your CPF to continue</div></div><div class="body"><div class="seg"><div class="seg-item active">Individual</div><div class="seg-item">Company</div></div><div class="field"><div class="fl">CPF</div><div class="fi">123.456.789-00</div><div class="hint">11 digits · used for tax identification and PIX payouts</div></div><div class="submit">Continue</div></div></div></body></html>

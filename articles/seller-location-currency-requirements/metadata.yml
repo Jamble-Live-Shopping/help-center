@@ -7,11 +7,20 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-04-21T00:00:00Z
+
+titles:
+  pt-BR: 'Requisitos de Localização e Moeda para Vendedores'
+  en: 'Seller Location and Currency Requirements'
+
+descriptions:
+  pt-BR: 'Onde você precisa estar, qual moeda é usada (R$) e quais documentos (CPF) são necessários para vender na Jamble.'
+  en: 'Where you need to be located, which currency is used (R$), and which documents (CPF) you need to sell on Jamble.'
+
 locales:
   pt-br:
     title: 'Requisitos de Localização e Moeda para Vendedores'
-    description: ''
+    description: 'Onde você precisa estar, qual moeda é usada (R$) e quais documentos (CPF) são necessários para vender na Jamble.'
   en:
-    title: 'Seller Location & Currency Requirements'
-    description: "This guide explains where you need to be located to sell on Jamble, what currency is used, and what documents you'll need to set up your seller account."
+    title: 'Seller Location and Currency Requirements'
+    description: 'Where you need to be located, which currency is used (R$), and which documents (CPF) you need to sell on Jamble.'
