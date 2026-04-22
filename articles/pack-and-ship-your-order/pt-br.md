@@ -2,143 +2,106 @@
 
 ## O que você vai aprender
 
-Este guia te acompanha no processo completo de envio após uma venda — desde confirmar o pedido até receber o pagamento. Você vai aprender como confirmar vendas, gerar etiquetas, embalar itens e entregá-los nos Correios.
+Como preparar e enviar um pedido depois que um comprador compra o seu produto: embalar o item, imprimir a etiqueta, deixar no Correios e acompanhar a entrega. O objetivo é sair da venda até o "Enviado" com segurança e no prazo.
 
 ## Antes de começar
 
 Você precisa de:
-- Uma venda realizada (um comprador comprou um dos seus produtos durante um show)
-- Suas configurações de envio prontas (endereço, formato de etiqueta)
-- Uma impressora para imprimir sua etiqueta de envio (comum ou térmica)
-- Materiais de embalagem (caixa ou envelope, fita, plástico bolha se necessário)
+- Uma venda confirmada (status **Confirmed** na tela do pedido)
+- Suas preferências de envio configuradas (veja **Edite suas preferências de envio**)
+- Uma impressora (térmica ou comum) para a etiqueta
+- Material de embalagem apropriado ao produto (caixa ou envelope, fita, proteção interna)
 
-## Como funciona o fluxo do pedido
+## Seu prazo
 
-Depois que um comprador compra seu produto durante um show, o pedido passa por estas etapas:
+Depois de confirmar a venda, você tem **3 dias úteis** para deixar o pacote no Correios. Esse prazo é fixo e aparece no topo da tela do pedido.
 
-| Etapa | O que acontece | Seu prazo |
-|-------|---------------|-----------|
-| **Pendente** | A venda acabou de acontecer. Você precisa confirmar | 3 dias |
-| **Confirmado** | Você confirmou a venda. Agora precisa enviar | 10 dias |
-| **Enviado** | Você entregou o pacote nos Correios. O rastreamento começa | — |
-| **Entregue** | O pacote chegou. O comprador tem 3 dias para confirmar o conteúdo | — |
-| **Concluído** | O comprador confirmou (ou 3 dias se passaram). Seu pagamento é liberado | Até 5 dias úteis |
+![Banner de prazo com o aviso Envie o pacote rapidamente, prazo de envio em 2 dias e data limite 24/04/2026](./assets/mockups/pack-and-ship-your-order__shipping-deadline__pt-br.png)
 
-**Importante:** Se você não confirmar em 3 dias ou não enviar em 10 dias, a venda é automaticamente cancelada e o comprador é reembolsado.
+Se o pacote não for postado dentro da janela, a venda pode ser cancelada automaticamente e o comprador é reembolsado. Quanto antes você envia, melhor sua reputação de vendedor.
 
-## Passo a passo
+## Passo 1: Abra o pedido e gere a etiqueta
 
-### Passo 1: Abra suas vendas
+No app, vá em **Configurações** e toque em **My Sales**. Abra o pedido que está em **Confirmed**.
 
-Vá ao seu perfil e toque na seção de **vendas**. Você verá todos os seus pedidos organizados por status.
+Na tela do pedido você vê o comprador, o produto, o valor e um cartão de status com o botão **Gerar etiqueta de envio**. Toque no botão para criar a etiqueta.
 
-Você pode filtrar seus pedidos usando estas abas:
+![Tela de detalhes do pedido com status Confirmado, barra de progresso e botão roxo Gerar etiqueta de envio](./assets/mockups/pack-and-ship-your-order__order-detail-ready-to-ship__pt-br.png)
 
-![Barra de abas de pedidos com opções de filtro: Todos, Pendentes, Cancelados e mais, seguida pela lista de pedidos](./assets/mockups/pack-and-ship-your-order__orders-tab-filter__pt-br.png)
+A etiqueta é calculada pelo sistema da Jamble com base no perfil de envio do produto e no endereço do comprador. Você não precisa ir ao site dos Correios nem criar nada manualmente. Detalhes em **Gere e imprima etiquetas de envio**.
 
-Os filtros disponíveis são:
-- **All** — todos os seus pedidos
-- **Pending** — pedidos esperando sua ação (confirmar ou enviar)
-- **Canceled** — pedidos que foram cancelados ou expiraram
-- **Completed** — pedidos concluídos
-- **Under Investigation** — pedidos com uma disputa aberta
+## Passo 2: Embale o item com cuidado
 
-### Passo 2: Confirme a venda
+Antes de colar a etiqueta, embale o item de verdade. Cinco minutos aqui evitam horas de disputa depois.
 
-Quando uma nova venda chega, seu status é **Pending**. Toque no pedido para abri-lo.
+- Caixa ou envelope acolchoado do tamanho certo. Pacote largo demais o item se mexe; apertado demais quebra nas dobras
+- Proteção interna para itens frágeis: plástico bolha, papel kraft amassado, flocos de enchimento
+- Cartas e colecionáveis em toploader + sleeve antes de entrar na caixa
+- Fita de embalagem forte, fechando todas as aberturas
 
-Você verá as informações do comprador, o produto que ele comprou e dois botões:
+Para dicas por categoria, veja **Diretrizes de embalagem**.
 
-![Diálogo de confirmação de venda com informações do comprador e detalhes do produto, mostrando botões Reject e Confirm](./assets/mockups/pack-and-ship-your-order__sale-confirmation-dialog__pt-br.png)
+## Passo 3: Imprima e cole a etiqueta
 
-- Toque em **Confirm** para aceitar a venda e se comprometer a enviar o item
-- Toque em **Reject** se não puder atender o pedido (o comprador será reembolsado)
+Imprima a etiqueta no formato que você configurou nas preferências:
 
-**Você tem 3 dias para confirmar.** Se não confirmar a tempo, a venda é automaticamente cancelada.
+- **Meia página (PDF)**: imprime em folha A4, você corta e cola com fita
+- **Página inteira (PDF)**: imprime em folha A4, dobra e cola com fita
+- **Térmica 4×6**: sai pronta da impressora térmica, é só descolar e aplicar
 
-### Passo 3: Gere a etiqueta de envio
+Cole a etiqueta numa superfície plana do pacote, sem dobras e sem fita por cima do código de barras. O leitor dos Correios precisa enxergar o código.
 
-Após confirmar, você precisa gerar uma etiqueta de envio. A etiqueta é criada pelo sistema de envio da Jamble — você não precisa ir a um site dos Correios ou criá-la manualmente.
+## Passo 4: Leve aos Correios
 
-Na tela de detalhes do pedido, toque na opção de gerar a etiqueta. O sistema vai:
+Qualquer agência dos Correios aceita. Entregue no balcão, o atendente escaneia a etiqueta e te dá um comprovante de postagem.
 
-1. Calcular o custo do frete com base no perfil de envio do produto e na localização do comprador
-2. Gerar uma etiqueta dos Correios no seu formato preferido (PDF ou térmica)
-3. Fornecer um número de rastreamento
+**Guarde o comprovante até o pedido ser concluído.** Se o comprador alegar que não recebeu, esse papel é sua prova de envio.
 
-A etiqueta é enviada para você e também fica disponível para download diretamente no app.
+## Passo 5: Acompanhe o rastreio
 
-### Passo 4: Imprima e cole a etiqueta
+Assim que os Correios escaneiam a etiqueta, o status do pedido muda para **Enviado** e a Jamble puxa o rastreamento automaticamente. Você e o comprador veem o código na tela do pedido.
 
-Imprima a etiqueta de envio usando sua impressora:
+![Tela do pedido com status Enviado, Em entrega na barra roxa e código de rastreio OQ451782034BR](./assets/mockups/pack-and-ship-your-order__mark-as-shipped__pt-br.png)
 
-- **PDF meia página** — imprime em meia folha padrão. Recorte e cole no pacote com fita
-- **PDF página inteira** — imprime em uma folha inteira. Dobre e cole no pacote com fita
-- **Etiqueta térmica 4×6** — destaque e cole diretamente no pacote
+Status que você vai ver ao longo da entrega:
 
-Certifique-se de que a etiqueta esteja claramente visível e não coberta por fita que possa tornar o código de barras ilegível.
+- **Pre-transit**: etiqueta criada, pacote ainda não escaneado
+- **In transit**: pacote a caminho
+- **Delivered**: chegou no endereço
+- **Returned**: Correios estão devolvendo para você
 
-### Passo 5: Embale o item com cuidado
+Se o rastreio não atualizar depois de 5 dias úteis, veja **O que fazer se o pacote estiver atrasado**.
 
-Antes de colar a etiqueta, embale seu item adequadamente:
+## Passo 6: Aguarde a confirmação do comprador
 
-- Use uma caixa ou envelope acolchoado apropriado para o tamanho do item
-- Envolva itens frágeis em plástico bolha ou papel de embalagem
-- Preencha espaços vazios com papel ou material de enchimento para que o item não se mova
-- Feche o pacote com segurança usando fita de embalagem
+Depois da entrega, o comprador tem **3 dias** para confirmar o conteúdo. Se ele não fizer nada, o pedido é concluído automaticamente e o pagamento cai na sua carteira.
 
-Veja o artigo **Diretrizes de Embalagem** para dicas detalhadas por categoria de produto.
+O valor fica disponível para saque depois da conclusão. O prazo de retirada para sua conta bancária depende do seu ciclo de payout, veja **Entenda o ciclo de pagamento**.
 
-### Passo 6: Entregue nos Correios
+## Boas práticas
 
-Leve seu pacote etiquetado a qualquer agência dos Correios. Entregue ao atendente — eles vão escanear a etiqueta e te dar um comprovante.
-
-**Guarde o comprovante** até o pedido ser concluído. É sua prova de envio caso haja qualquer disputa.
-
-### Passo 7: Acompanhe a entrega
-
-Após a entrega nos Correios, o rastreamento é atualizado automaticamente. Tanto você quanto o comprador podem acompanhar o progresso da entrega. Você verá o status de rastreamento na tela de detalhes do pedido.
-
-Status de rastreamento comuns:
-- **Pre-transit** — etiqueta criada, pacote ainda não escaneado pelos Correios
-- **In transit** — pacote a caminho
-- **Delivered** — pacote chegou no endereço do comprador
-- **Returned** — pacote está sendo devolvido para você
-
-### Passo 8: Aguarde a confirmação do comprador e receba o pagamento
-
-Após a entrega, o comprador tem **3 dias** para confirmar o conteúdo do pacote. Se ele não tomar nenhuma ação em 3 dias, o pedido é automaticamente concluído.
-
-Após a conclusão, seu pagamento é liberado. Dependendo do seu banco, pode levar até **5 dias úteis** para aparecer na sua conta.
-
-## Dicas importantes
-
-- **Confirme as vendas rapidamente.** Quanto mais rápido você confirma, mais tempo tem para enviar. Os compradores também apreciam respostas rápidas
-- **Envie dentro da janela de 10 dias.** Se não enviar a tempo, a venda é cancelada e sua reputação como vendedor é afetada
-- **Guarde o comprovante dos Correios.** É sua prova de envio. Se um comprador alegar que não recebeu o pacote, este comprovante te protege
-- **Use o perfil de envio correto.** O custo do frete é baseado no perfil que você atribuiu ao produto. Se o pacote real for mais pesado ou maior, pode ser necessário ajustar o peso antes de gerar a etiqueta
-- **Embale os itens com segurança.** Itens danificados levam a disputas e devoluções. Alguns minutos de embalagem cuidadosa economizam horas de problemas com suporte
+- **Embala antes de gerar a etiqueta.** Se o pacote ficou maior ou mais pesado do que o perfil previa, você ajusta o peso antes de pagar a etiqueta e evita ajuste de frete depois
+- **Foto do pacote pronto.** Alguns vendedores tiram foto do pacote fechado com a etiqueta visível. Vira prova extra em caso de disputa
+- **Evite fim de semana.** Agências dos Correios perto do feriado ficam cheias. Leva o pacote na segunda ou terça para o rastreio começar cedo
+- **Não escreva à mão em cima da etiqueta.** Qualquer marcação pode bloquear a leitura automática do código
 
 ## Perguntas frequentes
 
-**Quanto tempo tenho para enviar após confirmar?**
-Você tem 10 dias para enviar após confirmar a venda. Se não enviar dentro dessa janela, a venda é automaticamente cancelada e o comprador é reembolsado.
+**E se o peso real for diferente do perfil de envio?**
+Ajuste o peso na tela do pedido antes de gerar a etiqueta. O sistema recalcula o frete com o valor correto. Se você já gerou a etiqueta errada, veja **Altere ou corrija sua etiqueta de envio**.
 
-**O que acontece se eu rejeitar uma venda?**
-O comprador é reembolsado imediatamente. Rejeitar vendas ocasionalmente é normal, mas fazer isso frequentemente pode afetar sua reputação como vendedor.
+**Posso usar um outro transportador que não seja os Correios?**
+Na Jamble Brasil a integração oficial é com os Correios (PAC e SEDEX). Se você precisar usar outro transportador, entre em contato com o suporte antes de postar.
 
-**Posso ver o endereço do comprador antes de confirmar?**
-O endereço de envio do comprador é visível nos detalhes do pedido após a venda ser criada.
+**O comprador vê o meu endereço?**
+Não. O comprador vê o endereço de origem só como cidade e estado, nunca o endereço completo.
 
-**E se eu precisar de mais tempo para enviar?**
-A janela de 10 dias é fixa. Se souber que não vai conseguir enviar a tempo, é melhor entrar em contato com o comprador pelo app para comunicar o atraso. Para futuros shows, liste apenas produtos que você possa enviar rapidamente.
-
-**Como sei quando fui pago?**
-O status do pedido muda para "Completed" quando o pagamento é liberado. Você também verá os ganhos na sua carteira.
+**Posso editar a etiqueta depois de imprimir?**
+Se o pacote ainda não foi postado, sim. Abra o pedido, cancele a etiqueta atual e gere uma nova. Detalhes em **Altere ou corrija sua etiqueta de envio**.
 
 **E se o pacote for devolvido para mim?**
-Se os Correios devolverem o pacote (endereço errado, não retirado, etc.), o status do pedido muda para refletir isso. Você precisará entrar em contato com o suporte para resolver a situação — reenviar ou reembolsar.
+Quando os Correios devolvem o pacote (endereço incompleto, não retirado, etc.), o status do pedido muda e você vê o motivo na tela. Veja **O que fazer se um pacote é devolvido**.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com o time pelo chat do app ou envie um email para support@jambleapp.com.
