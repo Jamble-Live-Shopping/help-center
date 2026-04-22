@@ -2,109 +2,108 @@
 
 ## What you'll learn
 
-This guide explains how to set up your shipping preferences in Jamble so you can start selling. You'll learn how to configure your shipping address, choose your label format, and understand how shipping costs work for your buyers.
+This guide walks you through setting up your shipping preferences on Jamble before you start selling. You'll learn how to register your shipping address, pick your label format, and understand how shipping costs are calculated for your buyers.
 
 ## Before you start
 
 You need:
 - An approved seller account on Jamble
-- Your shipping address (with CEP — Brazilian postal code)
-- To know which label format you want (regular printer or thermal printer)
+- Your full address with CEP (Brazilian postal code)
+- To know which printer you'll use (regular or thermal)
 
 ## Step by step
 
-### Step 1: Open your shipping settings
+### Step 1: Open your Shipping Preferences
 
-Go to your profile, then tap **Settings**. Scroll down and tap **Shipping Preferences**.
+Go to your profile, tap **Settings**. Under the **Sell** section, tap **Shipping Preferences**.
 
-![Settings menu with navigation rows including Profile, Payment, Shipping Preferences, and Notification Settings](./assets/mockups/set-up-shipping-before-you-sell__settings-menu__en.png)
+![Settings screen with the Sell section showing the Shipping Preferences row highlighted](./assets/mockups/set-up-shipping-before-you-sell__settings-menu__en.png)
 
-This opens the screen where you configure everything related to shipping.
+This opens the screen where you configure everything shipping-related.
 
-### Step 2: Set your shipping address
+### Step 2: Register your shipping address
 
-Your shipping address is where packages are picked up or where you drop them off. This address is also used to calculate shipping costs for buyers.
+This address is where your packages ship from. It's also used to calculate the shipping cost buyers see at checkout.
 
 Fill in:
-- **CEP** (postal code) — when you type your CEP, the app automatically fills in your street name, neighborhood, city, and state
-- **Street number** — your house or building number
-- **Apartment/suite** (optional) — if you live in an apartment building
+- **CEP**: when you type the CEP, the app auto-fills street, neighborhood, city, and state
+- **Number**: your house or building number
+- **Apartment** (optional): apartment, suite, or reference
 
-![Shipping Address form with CEP, street, number, apartment, neighborhood, city, and state fields, plus Save Address button](./assets/mockups/set-up-shipping-before-you-sell__shipping-address-form__en.png)
+![Shipping Address form with CEP 01310-100 filled in and street, number, neighborhood, city, and state fields completed](./assets/mockups/set-up-shipping-before-you-sell__shipping-address-form__en.png)
 
-**Why this matters:** Your address determines which Correios agency is closest to you for drop-offs, and it affects the shipping cost that buyers see at checkout.
+**Why this matters:** your address determines which Correios agency is closest for drop-offs and affects the shipping cost buyers see.
 
-### Step 3: Choose your shipping label format
+### Step 3: Pick your label format
 
-Jamble generates shipping labels for every order. You need to choose what format works with your printer.
+Jamble generates a shipping label for every order. You choose the format that works with your printer.
 
 You have three options:
+- **Half-page PDF**: the default. Works with any regular printer. Prints on half an A4 sheet.
+- **Full-page PDF**: uses a full A4 sheet. Good if you prefer larger, easier-to-read labels.
+- **4x6 thermal label**: for sellers with a thermal label printer (Zebra or similar). Peel-and-stick, no cutting needed.
 
-- **Half-page PDF** — the default option. Works with any regular home or office printer. Prints on half a standard sheet of paper
-- **Full-page PDF** — uses a full sheet of paper. Good if you prefer larger, easier-to-read labels
-- **4×6 thermal label** — for sellers who have a thermal label printer (like a Zebra or similar). These are peel-and-stick labels, no cutting needed
+![Label Format picker with three options: Half-page PDF selected, Full-page PDF, and 4x6 Thermal Label](./assets/mockups/set-up-shipping-before-you-sell__label-format-picker__en.png)
 
-![Label Format picker screen with three radio button options: Half-page PDF (default), Full-page PDF, and 4×6 Thermal Label](./assets/mockups/set-up-shipping-before-you-sell__label-format-picker__en.png)
-
-**If you're not sure which one to pick:** Start with Half-page PDF. It works with any printer and is the most common choice.
+**If you're not sure:** start with Half-page PDF. It works with any printer and is the most common choice.
 
 ### Step 4: Understand how shipping costs work
 
-Here's something important that many new sellers ask about: **you don't set shipping prices yourself.** Here's how it works:
+Something many new sellers ask: **you don't set shipping prices yourself.** Here's how it works:
 
-1. When you list a product, you assign it a **shipping profile** — this is a size/weight category (for example, "Light Apparel" or "Shoes")
-2. When a buyer purchases your product, Jamble automatically calculates the shipping cost based on:
-   - The shipping profile (size and weight of the package)
+1. When you list a product, you assign a **shipping profile** (a size/weight category, for example "Light Apparel" or "Regular Apparel")
+2. When a buyer checks out, Jamble calculates the shipping cost automatically based on:
+   - The shipping profile (package size and weight)
    - Your address (where the package ships from)
    - The buyer's address (where the package ships to)
-3. **The buyer pays the shipping cost** at checkout — it's added on top of the product price
+3. **The buyer pays the shipping cost** at checkout, on top of the product price
 
-You never pay for shipping out of your earnings. The buyer always covers the shipping cost.
+You never pay for shipping out of your earnings. The buyer always covers it.
 
 ### Step 5: Understand shipping profiles
 
-When listing products, you'll choose a shipping profile that matches the size and weight of your package. Here are the available profiles:
+When listing products, you'll pick the profile that matches your package size and weight. Available profiles:
 
 | Profile | Best for | Example items |
 |---------|----------|---------------|
-| XS | Trading cards, single flat items | Pokémon cards, stickers |
-| S | Card packs, small accessories, jewelry | Booster packs, earrings, bracelets |
-| M | T-shirts, light clothing | T-shirts, tank tops, blouses |
+| XS | Trading cards, flat items | Pokémon cards, stickers |
+| S | Card packs, small accessories | Booster packs, earrings, bracelets |
+| M | T-shirts, light clothing | Tees, tank tops, light blouses |
 | L | Regular clothing, shoes | Shirts, dresses, sneakers |
-| XL | Jackets, winter coats, bundles | Heavy coats, large collections |
+| XL | Jackets, coats, large bundles | Heavy coats, large lots |
 
-**Pick the profile that matches your item's actual size and weight.** If you pick a profile that's too small, the package might cost more to ship than expected and cause issues. If you pick one that's too big, the buyer pays more than necessary, which can discourage purchases.
+**Pick the profile that matches your item's actual size and weight.** If the profile is too small, the package can cost more than expected and trigger adjustments. If it's too big, the buyer overpays, which can discourage purchases.
 
 ## Important tips
 
-- **Set up shipping BEFORE your first show.** If you sell something without shipping configured, you won't be able to generate shipping labels and your orders will be delayed.
-- **Your CEP auto-fills your address.** You only need to type your postal code — the app fills in the rest. Just add your street number.
-- **Start with Half-page PDF labels** if you're unsure. You can always change to thermal labels later as your business grows.
-- **All shipments go through Correios** (Brazil's postal service). After generating a label, you take your package to the nearest Correios agency.
+- **Set up shipping BEFORE your first show.** If you sell without shipping configured, you won't be able to generate labels and your orders will be delayed.
+- **Your CEP auto-fills your address.** Just type the CEP. You only need to add the number and, optionally, the complement.
+- **Start with Half-page PDF** if you're unsure. You can switch to thermal labels later as your volume grows.
+- **All shipments go through Correios.** After generating a label, drop the package at the nearest Correios agency.
 
 ## Common questions
 
 **Do I set the shipping price for my products?**
-No. Jamble calculates shipping automatically based on the package size (shipping profile), your location, and the buyer's location. The buyer sees the exact shipping cost at checkout.
+No. Jamble calculates shipping automatically based on the shipping profile, your address, and the buyer's address. The buyer sees the exact cost at checkout.
 
 **Who pays for shipping?**
-The buyer always pays for shipping. The cost is added at checkout on top of the product price. Your earnings are never reduced by shipping costs.
+The buyer always pays. The cost is added to the product price at checkout. Your earnings are never reduced by shipping.
 
 **Can I use a carrier other than Correios?**
-Currently, all Jamble shipments are handled through Correios. The system automatically selects the most affordable shipping option for each order.
+Currently, all Jamble shipments go through Correios. The system picks the most affordable option for each order.
 
 **What if I pick the wrong shipping profile for a product?**
-You can change the shipping profile on any product before it sells. If you realize after a sale that the profile was wrong, contact support — they can help adjust the shipping label.
+You can change the profile on any product before it sells. If you realize after a sale that the profile was wrong, contact support: they can help adjust the label.
 
 **Do I need a thermal printer?**
-No. A regular home printer works fine with the Half-page or Full-page PDF options. Thermal printers are faster and more convenient for high-volume sellers, but they're not required.
+No. A regular printer works fine with Half-page or Full-page PDF. Thermal printers are faster and more convenient for high-volume sellers, but they're not required.
 
 **How do I generate a shipping label after a sale?**
-After a buyer purchases your item, go to your orders. Each order will have an option to generate a shipping label. The label is created automatically — you just need to print it and attach it to your package.
+After the purchase, go to your orders. Each order has an option to generate a shipping label. It's created automatically: you just print it and attach it to the package.
 
 **Where do I drop off my packages?**
-Take your labeled packages to any Correios agency. You can find the nearest one on the Correios website or app.
+Take your labeled packages to any Correios agency. You can find the closest one on the Correios website or app.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Reach out through the app chat or email support@jambleapp.com.

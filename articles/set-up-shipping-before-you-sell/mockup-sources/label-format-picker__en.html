@@ -1,18 +1,55 @@
 <!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
-.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
-
-.picker-title { font-size: 15px; font-weight: 600; color: #A0A7B7; text-transform: uppercase; padding: 14px 20px 8px; letter-spacing: 0.5px; }
-.group { margin: 0 12px 14px; border: 1px solid #E9EAEF; border-radius: 12px; overflow: hidden; }
-.opt { display: flex; align-items: center; padding: 14px 16px; border-bottom: 1px solid #F0F1F5; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding-bottom: 16px; }
+.nav { display: flex; align-items: center; padding: 14px 16px 10px; }
+.nav-back { width: 24px; height: 24px; color: #7E53F8; font-size: 22px; line-height: 20px; }
+.nav-title { flex: 1; text-align: center; font-size: 17px; font-weight: 600; color: #162233; margin-right: 24px; }
+.picker-title { font-size: 12px; font-weight: 600; color: #6D6D80; text-transform: uppercase; padding: 12px 20px 8px; letter-spacing: 0.4px; }
+.group { margin: 0 14px 10px; border: 1px solid #E9EAEF; border-radius: 12px; overflow: hidden; }
+.opt { display: flex; align-items: center; padding: 14px 14px; border-bottom: 1px solid #F0F1F5; }
 .opt:last-child { border-bottom: none; }
-.opt.selected { background: #F9F8FF; }
-.opt-icon { width: 24px; height: 24px; background: #E9EAEF; border-radius: 6px; margin-right: 12px; flex-shrink: 0; }
+.opt.selected { background: #F7F3FF; }
+.opt-icon { width: 36px; height: 44px; background: #FFFFFF; border: 1.5px solid #C7C7CC; border-radius: 4px; margin-right: 12px; flex-shrink: 0; display: flex; flex-direction: column; gap: 3px; padding: 5px 4px; }
+.opt-icon .line { height: 2px; background: #C7C7CC; border-radius: 1px; }
+.opt-icon .line.short { width: 60%; }
+.opt-icon.half { height: 30px; padding-top: 4px; }
+.opt-icon.full { height: 44px; }
+.opt-icon.thermal { background: #162233; border-color: #162233; width: 44px; }
+.opt-icon.thermal .line { background: #FFFFFF; }
 .opt-text { flex: 1; }
-.opt-name { font-size: 17px; font-weight: 600; color: #162233; line-height: 22px; }
-.opt-sub { font-size: 13px; color: #A0A7B7; line-height: 18px; margin-top: 2px; }
-.radio { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid #A0A7B7; flex-shrink: 0; margin-left: 12px; }
-.radio.selected { border-color: #162233; position: relative; }
-.radio.selected::after { content: ""; position: absolute; top: 3px; left: 3px; width: 10px; height: 10px; border-radius: 50%; background: #162233; }
-</style></head><body><div class="phone"><div class="picker-title">Label Format</div><div class="group"><div class="opt selected"><div class="opt-icon"></div><div class="opt-text"><div class="opt-name">Half-page PDF (default)</div></div><div class="radio selected"></div></div><div class="opt "><div class="opt-icon"></div><div class="opt-text"><div class="opt-name">Full-page PDF</div></div><div class="radio "></div></div><div class="opt "><div class="opt-icon"></div><div class="opt-text"><div class="opt-name">4×6 Thermal Label</div></div><div class="radio "></div></div></div></div></body></html>
+.opt-name { font-size: 15px; font-weight: 600; color: #162233; line-height: 20px; }
+.opt-sub { font-size: 12px; color: #6D6D80; line-height: 16px; margin-top: 2px; }
+.radio { width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid #C7C7CC; flex-shrink: 0; margin-left: 10px; }
+.radio.selected { border-color: #7E53F8; position: relative; background: #7E53F8; }
+.radio.selected::after { content: ""; position: absolute; top: 5px; left: 5px; width: 8px; height: 8px; border-radius: 50%; background: #FFFFFF; }
+</style></head><body><div class="phone">
+<div class="nav"><div class="nav-back">&lsaquo;</div><div class="nav-title">Label Format</div></div>
+<div class="picker-title">Pick a format</div>
+<div class="group">
+  <div class="opt selected">
+    <div class="opt-icon half"><div class="line"></div><div class="line short"></div><div class="line"></div></div>
+    <div class="opt-text">
+      <div class="opt-name">Half-page PDF</div>
+      <div class="opt-sub">Default. Any regular printer.</div>
+    </div>
+    <div class="radio selected"></div>
+  </div>
+  <div class="opt">
+    <div class="opt-icon full"><div class="line"></div><div class="line short"></div><div class="line"></div><div class="line"></div><div class="line short"></div></div>
+    <div class="opt-text">
+      <div class="opt-name">Full-page PDF</div>
+      <div class="opt-sub">Full A4 sheet, bigger labels.</div>
+    </div>
+    <div class="radio"></div>
+  </div>
+  <div class="opt">
+    <div class="opt-icon thermal"><div class="line"></div><div class="line short"></div><div class="line"></div></div>
+    <div class="opt-text">
+      <div class="opt-name">4x6 Thermal Label</div>
+      <div class="opt-sub">For thermal printers (Zebra).</div>
+    </div>
+    <div class="radio"></div>
+  </div>
+</div>
+</div></body></html>
