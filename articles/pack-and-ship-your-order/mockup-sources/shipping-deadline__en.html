@@ -1,0 +1,41 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding: 14px; }
+
+.banner { background: #FFF4E5; border: 1px solid #FFD8A8; border-radius: 14px; padding: 14px; display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; }
+.banner-icon { width: 32px; height: 32px; border-radius: 8px; background: #FFB347; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; }
+.banner-text { flex: 1; }
+.banner-title { font-size: 14px; font-weight: 700; color: #162233; margin-bottom: 4px; }
+.banner-msg { font-size: 13px; color: #6D6D80; line-height: 18px; }
+
+.deadline-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 4px; border-top: 1px solid #F0F1F5; }
+.deadline-label { font-size: 13px; font-weight: 500; color: #162233; }
+.deadline-value { font-size: 13px; font-weight: 700; color: #F04437; }
+
+.hint-row { display: flex; align-items: center; gap: 8px; padding: 10px 4px 2px; }
+.hint-dot { width: 6px; height: 6px; border-radius: 50%; background: #17B169; flex-shrink: 0; }
+.hint-text { font-size: 12px; color: #6D6D80; line-height: 16px; }
+</style></head><body>
+<div class="phone">
+  <div class="banner">
+    <div class="banner-icon">&#9201;</div>
+    <div class="banner-text">
+      <div class="banner-title">Ship the parcel quickly</div>
+      <div class="banner-msg">Drop off your parcel at a Correios agency within 3 business days after confirming the sale.</div>
+    </div>
+  </div>
+  <div class="deadline-row">
+    <div class="deadline-label">Time left to ship</div>
+    <div class="deadline-value">2 days left</div>
+  </div>
+  <div class="deadline-row">
+    <div class="deadline-label">Deadline</div>
+    <div class="deadline-value">Apr 24, 2026</div>
+  </div>
+  <div class="hint-row">
+    <div class="hint-dot"></div>
+    <div class="hint-text">Once shipped, tracking updates automatically for the buyer.</div>
+  </div>
+</div>
+</body></html>
