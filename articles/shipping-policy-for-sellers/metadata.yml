@@ -2,16 +2,25 @@ intercom_id: 14288125
 slug: shipping-policy-for-sellers
 collection_id: 19177937
 
-# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
-default_locale: pt-br
+# Primary source = pt-BR per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+default_locale: pt-BR
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-04-22T00:00:00Z
+
+titles:
+  pt-BR: Política de Envio para Vendedores
+  en: Shipping Policy for Sellers
+
+descriptions:
+  pt-BR: 'Regras de envio para vendedores Jamble: prazo de 10 dias, Correios, etiqueta gerada no app, rastreio e o que acontece se atrasar.'
+  en: 'Shipping rules for Jamble sellers: 10-day deadline, Correios, label generated in the app, tracking, and what happens if you ship late.'
+
 locales:
-  pt-br:
+  pt-BR:
     title: 'Política de Envio para Vendedores'
-    description: ''
+    description: 'Regras de envio para vendedores Jamble: prazo de 10 dias, Correios, etiqueta gerada no app, rastreio e o que acontece se atrasar.'
   en:
     title: 'Shipping Policy for Sellers'
-    description: 'This guide covers the shipping rules and expectations for sellers on Jamble. Understanding these policies helps you avoid issues, keep your buyers happy, and maintain a strong seller reputation.'
+    description: 'Shipping rules for Jamble sellers: 10-day deadline, Correios, label generated in the app, tracking, and what happens if you ship late.'
