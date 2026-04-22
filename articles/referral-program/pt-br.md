@@ -2,104 +2,94 @@
 
 ## O que você vai aprender
 
-Este guia explica como o Programa de Indicação da Jamble funciona para vendedores. Você vai aprender como convidar novos compradores e novos vendedores, quais recompensas todos recebem e como compartilhar seus links de indicação.
+Este guia explica como o Programa de Indicação da Jamble funciona. Você vai aprender como convidar amigos para a Jamble, como vocês dois ganham R$ 30, e como acompanhar suas indicações no app.
 
 ## Antes de começar
 
 Você precisa de:
-- Uma conta de vendedor aprovada na Jamble
+
+- Uma conta ativa na Jamble
 - O app da Jamble instalado no seu celular
 
-## Como o programa de indicação funciona
+## Como funciona o programa
 
-Como vendedor na Jamble, você tem **duas opções de indicação**:
+Convide um amigo, ele ganha R$ 30 para a primeira compra e você ganha R$ 30 quando ele comprar. O programa é simples e vale para qualquer conta nova.
 
-1. **Convidar compradores** — convide amigos para comprar na Jamble. Vocês dois ganham R$ 30
-2. **Convidar vendedores** — convide outros vendedores para entrar na Jamble. Eles ganham até R$ 200, e você ganha R$ 500
-
-As duas opções estão disponíveis no seu perfil no app.
+- **Você ganha R$ 30** quando seu amigo faz a primeira compra em um Show
+- **Seu amigo ganha R$ 30** assim que resgata o seu código de convite
+- **As recompensas são créditos** aplicados automaticamente no checkout
 
 ## Passo a passo
 
-### Passo 1: Abra a tela de indicação
+### Passo 1: Abra a tela Convidar amigos
 
-Vá ao seu perfil e toque em **Invite Friends** (para convidar compradores) ou **Refer Sellers** (para convidar outros vendedores).
+Vá ao seu perfil no app e toque em **Convidar amigos**. Você vai ver os passos do programa, sua recompensa de R$ 30 e o botão **Compartilhar amigos**.
 
-![Menu de configurações de programa de referência mostrando opções de convidar amigos e indicar vendedores com valores de ganho](./assets/mockups/referral-program__referral-program__pt-br.png)
+![Tela Convidar amigos com passos do programa de indicação, recompensa de R$ 30 e botão Compartilhar amigos](./assets/mockups/invite-friends__pt-br.png)
 
-### Passo 2: Compartilhe seu link de indicação (Indicação de compradores)
+### Passo 2: Compartilhe seu link
 
-Quando você toca em **Invite Friends**, você vê seu código de indicação pessoal e um botão **Share Friends**. Ao tocar, abre o menu de compartilhamento do seu celular para que você envie o link via WhatsApp, Instagram ou qualquer outro app.
+Toque em **Compartilhar amigos** para abrir o menu de compartilhamento do seu celular. Você pode enviar o link pelo WhatsApp, Instagram, SMS ou qualquer outro app.
 
-Seu amigo recebe um link como: `jamble.com/invite/buyer/seunomeusuario`
+O link já contém seu código, então seu amigo não precisa digitar nada. Ele só precisa tocar no link e baixar o app.
 
-![Tela de detalhes do programa de indicação mostrando recompensa de R$ 30 por amigo, código SEUBUY, e termos do programa com botão Compartilhar Amigos](./assets/mockups/referral-program__referral-program-details__pt-br.png)
+**Dica**: o WhatsApp é o canal mais eficaz no Brasil. Seu amigo toca no link e já entra na Jamble em segundos.
 
-**Veja como a indicação de compradores funciona:**
+### Passo 3: Seu amigo resgata e compra
 
-- **Seu amigo clica no seu link** — Ele chega a uma página onde digita o número de telefone
-- **Ele baixa a Jamble e resgata seu código** — R$ 30 são automaticamente adicionados à conta dele
-- **Ele compra 1 item durante um Show em até 14 dias após resgatar o código** — A indicação está completa — você ganha seus R$ 30
-- Seu amigo ganha os R$ 30 quando resgata seu código
-- Você ganha seus R$ 30 quando seu amigo faz uma compra em até **14 dias** após resgatar o código
-- Sua recompensa de R$ 30 expira **14 dias** depois de ser creditada — use antes que desapareça
-- Os R$ 30 do seu amigo também expiram depois de **14 dias**
+Quando seu amigo abre o app pela primeira vez com o seu link:
 
-### Passo 3: Compartilhe seu link de indicação (Indicação de vendedores)
+1. **Ele resgata o código** e R$ 30 aparecem na conta dele na hora
+2. **Ele tem 14 dias para comprar 1 item em um Show** usando o crédito
+3. **Você recebe R$ 30** assim que a compra dele é confirmada
 
-Quando você toca em **Refer Sellers**, você vê uma tela diferente com recompensas maiores.
+Tanto o crédito do seu amigo quanto a sua recompensa expiram 14 dias depois de serem creditados. Use antes que o tempo acabe.
 
-![referral-program-rewards: Ganhe R$ 500 por amigo com passos e botão de compartilhamento](./assets/mockups/referral-program__referral-program-rewards__pt-br.png)
+## Como acompanhar suas indicações
 
-**Veja como a indicação de vendedores funciona:**
+Na tela de indicação você pode abrir **Referências contínuas** (amigos que resgataram o código mas ainda não compraram) ou **Referências anteriores** (indicações já concluídas).
 
-- **Seu amigo clica no seu link** — Ele chega a uma página onde digita o número de telefone
-- **Ele baixa a Jamble e se cadastra** — R$ 50 são automaticamente adicionados à conta dele
-- **Ele se inscreve para vender e é aceito** — Ele se torna um vendedor na Jamble
-- **Ele completa sua primeira Live** — Ele ganha R$ 150 extras, e você ganha R$ 500
-- Seu amigo tem **30 dias** para completar todas as etapas
-- Recompensa total para o novo vendedor: **R$ 200** (R$ 50 + R$ 150)
-- Sua recompensa: **R$ 500**
-- Você pode indicar até **200 vendedores**
+![Tela Referências contínuas mostrando total pendente de R$ 60 e lista de 3 amigos com status e dias restantes](./assets/mockups/referral-rewards__pt-br.png)
+
+Cada amigo na lista mostra o nome dele e o status:
+
+- **Dias restantes** para os amigos que ainda estão dentro dos 14 dias
+- **Concluído** quando a indicação deu certo e você já recebeu os R$ 30
+- **Prazo perdido** se seu amigo não comprou dentro dos 14 dias
 
 ## Como os créditos funcionam
 
-Todas as recompensas de indicação são **créditos** aplicados à sua conta Jamble. São usados automaticamente no checkout para cobrir custos nas suas compras.
+Todas as recompensas de indicação são **créditos** na sua conta Jamble. Eles são usados automaticamente no seu próximo checkout para cobrir parte (ou todo) o valor da compra.
 
-**Os créditos têm prazo de validade**, então certifique-se de usá-los antes que expirem:
-- Recompensas de indicação de compradores: 14 dias para todos
-- Recompensas de indicação de vendedores: 14 dias depois de creditadas
+**Os créditos expiram em 14 dias**, então use rápido. Vale tanto para o seu crédito quanto para o do seu amigo.
 
 ## Dicas importantes
 
-- **Compartilhe via WhatsApp** — é o canal mais eficaz no Brasil. Seus amigos podem tocar no link e se cadastrar em segundos
-- **Quanto mais você indicar, mais você ganha.** Cada indicação de comprador te dá R$ 30, e cada indicação de vendedor te dá R$ 500. Não há limite para indicações de compradores
-- **Seu código de indicação é único.** É baseado no seu nome de usuário e é permanente — você não precisa gerar um novo a cada vez
-- **Os créditos expiram** — lembre seus amigos de usar os créditos rapidamente, e não esqueça de usar os seus também
-- **A indicação só conta se seu amigo for novo na Jamble.** Ele precisa criar uma conta totalmente nova. Usuários existentes não podem usar códigos de indicação
+- **Compartilhe pelo WhatsApp** para o amigo entrar na Jamble em poucos toques
+- **Seu código é único e permanente**, baseado no seu nome de usuário. Você não precisa gerar um novo a cada convite
+- **A indicação só vale para contas novas**. Quem já tem Jamble não pode resgatar um código
+- **Seu amigo precisa comprar em um Show**, não em qualquer lugar do app
+- **Lembre seu amigo** de usar o crédito dele antes dos 14 dias, senão ele perde
 
 ## Perguntas frequentes
 
 **Onde encontro meu código de indicação?**
-Vá ao seu perfil no app. Toque em **Invite Friends** para seu código de indicação de compradores, ou **Refer Sellers** para seu código de indicação de vendedores. Você também pode compartilhar seu link diretamente — seu amigo não precisa digitar o código manualmente.
+Vá ao seu perfil e toque em **Convidar amigos**. Seu código aparece lá. Você também pode compartilhar direto pelo botão **Compartilhar amigos**, assim seu amigo recebe o link com o código já incluído.
 
 **Meu amigo se cadastrou mas eu não recebi minha recompensa. Por quê?**
-A recompensa só é creditada depois que seu amigo completar a ação necessária. Para indicação de compradores, ele precisa comprar 1 item durante um Show. Para indicação de vendedores, ele precisa completar sua primeira Live. Verifique se ele completou esta etapa.
+A recompensa só é creditada depois que seu amigo comprar 1 item em um Show. Se ele resgatou o código mas ainda não comprou, a indicação fica em **Referências contínuas**.
+
+**Quanto tempo meu amigo tem para completar a indicação?**
+Ele tem 14 dias depois de resgatar o código para fazer a primeira compra em um Show. Depois desse prazo, a indicação expira e nem ele nem você recebem nada.
 
 **Os créditos funcionam em qualquer compra?**
-Sim. Os créditos são aplicados automaticamente no checkout quando seu amigo (ou você) faz uma compra.
+Os créditos são aplicados automaticamente no checkout de compras feitas em Shows. Eles cobrem parte ou todo o valor, dependendo do preço do item.
 
 **Posso indicar alguém que já tem uma conta Jamble?**
-Não. Os códigos de indicação só funcionam para contas totalmente novas. Se alguém já tem uma conta, não pode usar um código de indicação.
+Não. Os códigos só funcionam para contas totalmente novas. Se a pessoa já tem Jamble, o código não é aceito.
 
-**Existe um limite de quantas pessoas posso indicar?**
-Para indicações de compradores, não há limite fixo. Para indicações de vendedores, você pode indicar até 200 vendedores.
-
-**O que acontece se meu amigo não completar a indicação no prazo?**
-Se seu amigo não comprar um item (indicação de comprador) em 14 dias, ou não completar sua primeira Live (indicação de vendedor) em 30 dias, a indicação expira. Você não recebe a recompensa, e o crédito inicial dele também expira.
-
-**Compradores também podem indicar pessoas, ou é só para vendedores?**
-Todos os usuários podem usar o **Invite Friends** para indicar compradores. A opção **Refer Sellers** está disponível apenas para vendedores aprovados.
+**Existe um limite de quantos amigos posso indicar?**
+Não há limite. Você pode convidar quantos amigos quiser e ganhar R$ 30 por cada um que fizer a primeira compra.
 
 ## Precisa de ajuda?
 

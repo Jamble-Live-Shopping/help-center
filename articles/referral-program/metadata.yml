@@ -1,17 +1,19 @@
 intercom_id: 14288089
 slug: referral-program
 collection_id: 19177934
-
-# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
-default_locale: pt-br
-
+default_locale: pt-BR
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+titles:
+  pt-BR: Programa de Indicação
+  en: Referral Program
+descriptions:
+  pt-BR: Convide amigos, vocês dois ganham R$ 30. Aprenda como compartilhar seu código e acompanhar suas indicações no app.
+  en: Invite friends, you both get R$ 30. Learn how to share your code and track your referrals in the app.
 locales:
-  pt-br:
+  pt-BR:
     title: 'Programa de Indicação'
-    description: ''
+    description: 'Convide amigos, vocês dois ganham R$ 30. Aprenda como compartilhar seu código e acompanhar suas indicações no app.'
   en:
     title: 'Referral Program'
-    description: "This guide explains how the Jamble Referral Program works for sellers. You'll learn how to invite new buyers and new sellers, what rewards everyone gets, and how to share your referral links."
+    description: 'Invite friends, you both get R$ 30. Learn how to share your code and track your referrals in the app.'
