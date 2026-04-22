@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; padding: 14px 12px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.buyer-header { display: flex; align-items: center; padding: 8px 6px; gap: 8px; }
+.avatar { width: 32px; height: 32px; border-radius: 16px; background: #7E53F8; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0; }
+.buyer-name { font-size: 16px; font-weight: 600; color: #162233; flex: 1; }
+.buyer-summary { font-size: 15px; color: #6D6D80; font-weight: 500; }
+.buyer-summary .sep { margin: 0 6px; }
+.buyer-summary .total { color: #162233; font-weight: 600; }
+.bundle { background: #F9FAFC; border-radius: 10px; padding: 10px; margin-top: 4px; }
+.bundle-head { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 10px; }
+.bundle-title-row { display: flex; align-items: center; gap: 6px; color: #2E3C52; }
+.bundle-title { font-size: 14px; font-weight: 600; letter-spacing: 0.2px; }
+.bundle-count { font-size: 13px; color: #A0A7B7; font-weight: 600; margin-top: 2px; }
+.bundle-ship { font-size: 12px; color: #A0A7B7; text-align: right; }
+.actions { display: flex; gap: 8px; margin-bottom: 10px; }
+.btn { flex: 1; height: 32px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; }
+.btn.primary { background: #162233; color: #FFFFFF; }
+.btn.secondary { background: #F3F4F8; color: #162233; }
+.items { display: flex; flex-direction: column; gap: 6px; }
+.item { display: flex; align-items: center; background: #FFFFFF; border-radius: 8px; padding: 8px 10px; gap: 10px; }
+.thumb { width: 34px; height: 34px; border-radius: 6px; background: #E9EAEF; flex-shrink: 0; }
+.item-name { flex: 1; font-size: 13px; color: #162233; font-weight: 500; line-height: 18px; }
+.item-price { font-size: 13px; color: #162233; font-weight: 600; }
+</style></head><body>
+<div class="phone">
+  <div class="buyer-header">
+    <div class="avatar">M</div>
+    <div class="buyer-name">@marina_cards</div>
+    <div class="buyer-summary">3 items<span class="sep">·</span><span class="total">$147.00</span></div>
+  </div>
+  <div class="bundle">
+    <div class="bundle-head">
+      <div>
+        <div class="bundle-title-row">
+          <span class="bundle-title">PACKAGE 1</span>
+        </div>
+        <div class="bundle-count">3 items</div>
+      </div>
+      <div class="bundle-ship">Est. Ship. $8.50</div>
+    </div>
+    <div class="actions">
+      <div class="btn primary">Purchase label</div>
+      <div class="btn secondary">Add invoice</div>
+    </div>
+    <div class="items">
+      <div class="item"><div class="thumb"></div><div class="item-name">Pikachu Holo 58/102</div><div class="item-price">$62.00</div></div>
+      <div class="item"><div class="thumb"></div><div class="item-name">Charizard Base Set</div><div class="item-price">$55.00</div></div>
+      <div class="item"><div class="thumb"></div><div class="item-name">Blastoise 1st Edition</div><div class="item-price">$30.00</div></div>
+    </div>
+  </div>
+</div>
+</body></html>

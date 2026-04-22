@@ -3,15 +3,24 @@ slug: bundled-shipments
 collection_id: 19177937
 
 # Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
-default_locale: pt-br
+default_locale: pt-BR
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-04-22T00:00:00Z
+
+titles:
+  pt-BR: Envios Agrupados
+  en: Bundled Shipments
+
+descriptions:
+  pt-BR: Como a Jamble junta vários itens do mesmo comprador em um único pacote e como gerar uma etiqueta para todos.
+  en: How Jamble groups multiple items from the same buyer into one package and how to generate a single label for all of them.
+
 locales:
-  pt-br:
+  pt-BR:
     title: 'Envios Agrupados'
-    description: ''
+    description: 'Como a Jamble junta vários itens do mesmo comprador em um único pacote e como gerar uma etiqueta para todos.'
   en:
     title: 'Bundled Shipments'
-    description: "This guide explains how bundling works on Jamble. When a buyer purchases multiple items from you in the same show, those items are grouped into a single package (a bundle) so you can ship them together. You'll learn how bundles are created, how to ma"
+    description: 'How Jamble groups multiple items from the same buyer into one package and how to generate a single label for all of them.'

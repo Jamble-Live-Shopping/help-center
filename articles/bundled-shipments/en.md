@@ -2,94 +2,90 @@
 
 ## What you'll learn
 
-This guide explains how bundling works on Jamble. When a buyer purchases multiple items from you in the same show, those items are grouped into a single package (a bundle) so you can ship them together. You'll learn how bundles are created, how to manage them, and what happens to shipping costs.
+This guide explains what bundled shipments are in Jamble, how the system automatically groups orders from the same buyer, and how you generate a single label to send everything together.
 
 ## Before you start
 
 You need:
-- A completed show where a buyer purchased more than one item from you
-- Your shipping settings configured
+- A completed show where the same buyer purchased more than one of your items
+- Your shipping settings ready
 
-## How bundling works
+## What is a bundled shipment
 
-When a buyer purchases multiple items from you during the same show, Jamble automatically groups those items into a **bundle** — a single package for shipping.
+When the same buyer purchases multiple items from you within the same show, Jamble groups those items into a **single package**, called a bundle. You send all items in one box, with one label.
 
-**Why bundles exist:**
-- **For you:** One package to prepare instead of many. One label to print, one trip to Correios
-- **For the buyer:** One shipping cost instead of paying shipping on each item separately
+**Why this exists:**
+- For you, it's one package to prepare instead of many, one trip to Correios
+- For the buyer, it's one shipping fee instead of one per item
 
-You'll see bundles in your seller dashboard during and after the show, labeled as **"PACKAGE 1"**, **"PACKAGE 2"**, etc.
+In your show's orders screen you'll see the buyer at the top with the total items and amount, and below it the **PACKAGE 1** with everything they purchased.
 
-![Bundled shipment card showing Package 1 with 3 items: Nike Air Max 90 Size 42, Camiseta Vintage M, and Boné New Era Preto](./assets/mockups/bundled-shipments__bundled-shipment-card__en.png)
+![Seller's orders screen showing buyer @marina_cards with 3 items for $147.00 and PACKAGE 1 containing three cards with Purchase label and Add invoice buttons](./assets/mockups/bundled-shipments__bundle-orders-view__en.png)
 
-## How bundles are created
+## How grouping works
 
-Bundles are created **automatically** by the system. Here's when items get bundled together:
+Grouping is **automatic**. You don't need to create anything. The system applies a simple rule:
 
-- **Same buyer, same show** — Yes
-- **Same buyer, different shows** — No (separate packages)
-- **Different buyers, same show** — No (separate packages per buyer)
-You don't need to manually create bundles. The system groups items automatically when the conditions are met.
+- Same buyer, same show, all items go to the same package
+- Same buyer, different shows, separate packages
+- Different buyers in the same show, one package per buyer
 
-## What happens to shipping
+If an item in the package is canceled later, it's removed from the package and the others stay together. Shipping is recalculated automatically.
 
-When items are bundled:
+## How shipping is calculated
 
-- **One shipping label** is generated for the entire bundle
-- **One shipping cost** is calculated based on the combined weight and dimensions of all items
-- The buyer pays **one shipping fee** instead of one per item
-- The bundle is assigned a **parcel dimension** (XS, S, M, or L) based on the total weight
+When items become a package, the shipping cost is calculated based on the **shipping profile** of each item. Jamble combines weight and dimensions to arrive at a single shipping value, which is what the buyer pays at checkout.
 
-This means bundled orders are usually cheaper to ship than individual orders — which is better for your buyers and encourages them to buy more items from you.
+This almost always costs less for the buyer than paying shipping on each item separately. That's why the app shows the buyer, during the show, a banner saying **Buy more, save on shipping fees**.
 
-## Managing bundles
+![Buyer's show screen with banner Buy more, save on shipping fees and products listed](./assets/mockups/bundled-shipments__buy-more-save__en.png)
 
-### Viewing your bundles
+You don't see the final shipping value before the buyer confirms. During the show, an estimate appears next to the package (Est. Ship. $8.50 in the example). After the label is generated, the actual value appears.
 
-During and after a show, bundles appear in your seller dashboard. Each bundle shows:
-- The package number (Package 1, Package 2, etc.)
-- How many items are in the bundle
-- The items included
-- Estimated or actual shipping cost
-- Available actions (generate label, track, etc.)
+## Generating the label
 
-### Nota fiscal (tax invoice)
+When it's time to ship, you generate **one label per package**, not one per item. The **Purchase label** button is on each package in your orders screen.
 
-For Brazilian commerce, each shipment may require a **nota fiscal** (electronic tax invoice). The bundle management screen includes options for handling this:
+The label that comes out has the buyer's address and lists all orders going in that package. You print it once, stick it on the box, and you're done.
 
-- If a nota fiscal is required, you'll see the option to manage it for each bundle
-- If you're exempt, there's an option to generate a self-declaration instead
+![Label for PACKAGE 1 with the buyer's address and the three orders listed below, with Open label PDF button](./assets/mockups/bundled-shipments__bundle-label__en.png)
 
-**Note:** If you continue without a nota fiscal, you'll handle the shipping labels yourself. This action is irreversible.
+**Golden rule:** all items in the package go together in one box. If you send them in separate boxes, the single label doesn't work for both and the buyer can't track properly.
+
+## Add invoice
+
+Each package can request an **invoice**. If you need one, the **Add invoice** button appears on the package and you manage it from there. If you're exempt, you have the option to generate a self-declaration.
+
+If you continue without an invoice, you handle the labels on your own. This action is irreversible.
 
 ## Important tips
 
-- **Bundles are automatic.** You don't need to do anything to create them — the system handles it whenever a buyer gets multiple items from you in the same show
-- **One label per bundle.** You print one shipping label for all items in a bundle, not one label per item
-- **Pack all bundled items together.** Since there's one label, all items in the bundle must go in the same package
-- **Bundle dimension matters.** The system assigns a parcel size based on the combined items. Make sure your package fits within the assigned dimensions
-- **More items per buyer = better for everyone.** Bundled shipping is cheaper than individual shipping. Encouraging buyers to purchase multiple items saves them money on shipping
+- **You don't create the packages.** The system groups items automatically whenever the same buyer purchases more than one item in the same show
+- **One label per package.** Print once, stick on the box, send everything together
+- **Pack everything in the same box.** Since the label is unique, items need to ship in the same physical package
+- **Check the size.** The system calculates a package size based on the combined items. If your box doesn't fit within the assigned dimensions, switch to a larger one
+- **More items per buyer is better for both sides.** Bundled shipping is cheaper than individual shipping, so encouraging the buyer to purchase more items saves them money
 
-## Common questions
+## Frequently asked questions
 
-**Can I manually split or rearrange bundles?**
-No. Bundles are managed automatically by the system based on the same-buyer, same-show rule. You cannot split a bundle into multiple packages or move items between bundles.
+**Can I split or reorganize a package manually?**
+No. Packages are created and managed by the system based on the same buyer and same show rule. You can't split a package into two or move items between packages.
 
-**What if one item in a bundle is canceled?**
-If a buyer cancels one item from a bundle, it's removed from the bundle. The remaining items stay bundled. The shipping cost is recalculated for the smaller package.
+**What if the buyer cancels an item in the package?**
+The canceled item is removed from the package. The others stay together and shipping is recalculated for the new weight.
 
-**Do I generate one label or multiple for a bundle?**
-One label for the entire bundle. All items in the bundle ship together in one package.
+**Do I generate one label or several for the package?**
+Just one. All items in the package are sent together in one box, with a single label.
 
-**What if the bundle is too large for one box?**
-Contact support if the combined items don't physically fit in one package. They can help reorganize the shipment.
+**What if the items don't fit in one box?**
+Contact support. The team can help you reorganize the shipment into two physical packages.
 
-**Does bundling affect when I get paid?**
-No. Payment for each item follows the same timeline — once the buyer confirms receipt (or 3 days pass), your payment is released for all items in the bundle.
+**Does grouping change when I receive payment?**
+No. Each item's payment follows the normal flow. When the buyer confirms receipt (or 3 days pass), the amount for all items in the package is released.
 
-**Can items from different shows be bundled?**
-No. Bundles only group items from the same show. If a buyer purchases from you in two different shows, those are separate shipments.
+**Can items from different shows be grouped?**
+No. Packages only combine items from the same show. If the buyer purchases items in two different shows, those are two shipments.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Contact us via the app chat or email support@jambleapp.com.
