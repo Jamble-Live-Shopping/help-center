@@ -1,127 +1,115 @@
 # Generate and Print Shipping Labels
 
-## What you'll learn
+## What you will learn
 
-This guide explains how to generate, download, and print shipping labels for your orders on Jamble. You'll learn about the available label formats, how the generation process works, and how to handle common label situations.
+How to generate, download and print the shipping label for an order in Jamble. The available formats, how generation works and what to do in the most common cases.
 
 ## Before you start
 
 You need:
-- A confirmed sale (you've tapped "Confirm" on the order)
-- A printer (regular home/office printer or thermal label printer)
-- Your shipping settings configured (label format, address)
+
+- A confirmed sale (order with status **Confirmed**)
+- A printer (standard or thermal)
+- Address and label format configured in your shipping preferences
 
 ## How label generation works
 
-When you confirm a sale, Jamble creates a shipping label through its integrated shipping system. The label includes:
+When you confirm the sale, Jamble generates the Correios label through the integrated system. The label includes:
 
 - Your address (sender)
-- The buyer's address (recipient)
-- A Correios barcode and tracking number
-- The package weight and service type
-- A tracking QR code
+- Buyer's address (recipient)
+- Barcode and Correios tracking number
+- Package weight and service type
 
-You don't need to visit any external website or create the label manually. Everything is handled within the Jamble app.
+You don't need to access any external website. Everything happens within the app.
 
 ## Step by step
 
 ### Step 1: Open the confirmed order
 
-Go to your sales and find the order you want to ship. The order should be in **Confirmed** status (you've already confirmed the sale).
+Go to the sales tab in the dashboard and tap on the order you want to ship. The order must have the status **Confirmed**.
 
-### Step 2: Confirm the weight (if prompted)
+![Order card in the dashboard with the Generate Shipping Labels button](./assets/mockups/generate-and-print-shipping-labels__order-to-ship-card__en.png)
 
-Before the label is generated, you may be asked to confirm the package weight. The system pre-fills the weight based on the product's shipping profile.
+### Step 2: Tap "Generate Shipping Labels"
 
-- If the pre-filled weight is accurate, confirm it
-- If the actual package weight is different, enter the correct weight
-- Tap **Submit**
+The purple button at the bottom of the order triggers generation. The system calculates shipping (weight, dimensions, addresses) and issues the label in the format you chose in preferences.
 
-### Step 3: Generate the label
+The label is issued in a few seconds.
 
-Tap the option to generate the shipping label. The system will:
+### Step 3: Check the label format
 
-1. Calculate the shipping cost based on weight, dimensions, your address, and the buyer's address
-2. Select the Correios service based on your shipping speed setting (Cheapest or Priority)
-3. Generate the label in your preferred format
+If you haven't chosen a default format yet, the app asks you to select one before issuing. Open **Settings > Shipping Preferences > Label Format** and choose one of three options:
 
-The label is generated in seconds. Once ready, you can download and print it.
+![Format selector with Half Page, Full Page and Thermal](./assets/mockups/generate-and-print-shipping-labels__label-format-picker__en.png)
 
-### Step 4: Download or view the label
+The choice becomes the default for all future labels. You can change it whenever you want.
 
-The label appears as a PDF that you can:
+### Step 4: View and print the label
 
-- **View** directly in the app
-- **Download** to your phone
-- **Share** to another app (like a printer app or email)
-- **Print** from your phone or computer
+The label appears as a PDF within the app. You can view it, share it to another app (email, printer app) or print it directly.
 
-The label is also sent to you by email as a backup.
+![Shipping label preview with Print button](./assets/mockups/generate-and-print-shipping-labels__shipping-label-ready__en.png)
 
-### Step 5: Print the label
+The label also arrives in your registered email as a backup.
 
-Print using the format that matches your printer:
+### Step 5: Stick the label on the package and take it to Correios
 
-| Format | How to print |
-|--------|-------------|
-| **Half-page PDF** | Print on regular paper. Cut out the label and tape it to your package |
-| **Full-page PDF** | Print on regular paper. Fold if needed and tape to package |
-| **4×6 Thermal Label** | Load thermal paper in your printer. The label prints ready to stick |
+Print according to the format you chose, stick it well on the largest face of the package and take it to a Correios agency. The barcode must be visible, clean and wrinkle-free.
 
-**Printing tips:**
-- Make sure the barcode is sharp and not blurry
-- Don't cover the barcode with tape — use clear tape only if necessary, and ensure no bubbles or wrinkles
-- Print at 100% scale — don't resize or fit-to-page
+## Label formats
 
-## Label formats explained
+Jamble supports three formats. You set the default in **Shipping Preferences** and all following labels will use that format.
 
-Jamble supports three label formats. You choose your default in **Shipping Preferences**, and all new labels use that format.
+**Half Page (8.5 x 11)**
+- Standard. Works on any regular printer
+- Prints on half of an A4 or Letter sheet
+- Cut and stick with tape
+- Ideal for: sellers with home printers
 
-### Half-page PDF (default)
-- Standard format that works with any printer
-- Prints on half a regular sheet of paper (A4 or Letter)
-- You need to cut it out and attach it with tape
-- Best for: sellers with a regular home or office printer
+**Full Page (8.5 x 11)**
+- Same content as half page, but uses the entire sheet
+- No cutting, just fold and stick
+- Ideal for: those who prefer large labels or don't want to cut
 
-### Full-page PDF
-- Same content as half-page, but uses a full sheet
-- Easier to read, no cutting needed — just fold and tape
-- Best for: sellers who prefer larger labels or don't want to cut
-
-### 4×6 Thermal Label
-- Designed for thermal label printers (Zebra, DYMO, etc.)
-- Peel-and-stick — no cutting, no tape needed
+**Thermal (4 x 6)**
+- For thermal label printers (Zebra, DYMO, etc.)
+- Self-adhesive, no tape, no cutting
 - Fastest and most professional option
-- Best for: high-volume sellers who invest in a thermal printer
+- Ideal for: high volume
 
-## Important tips
+## Printing tips
 
-- **Generate labels promptly after confirming.** Don't wait until the last day of your 10-day shipping window
-- **One label per order (or per bundle).** If a buyer purchased multiple items bundled together, you get one label for the whole bundle, not one per item
-- **Labels expire if not used.** If you generate a label but don't ship for an extended period, the label may need to be regenerated. Ship as soon as possible after printing
-- **Keep a backup.** The label is also sent by email. If you have printer issues, you can print from the email attachment
-- **Check the buyer's address on the label.** Before sticking the label on your package, quickly verify the address looks correct. Catching an error now is much easier than after shipping
+- Print at 100% scale. Do not resize or use "fit to page"
+- Make sure the barcode is sharp and not blurry
+- Avoid covering the barcode with tape. If you must, use transparent tape without bubbles or wrinkles
+- Check the buyer's address before sticking it on the package
+- If the printer fails, you can also print from the backup email attachment
 
-## Common questions
+## Best practices
 
-**How long does label generation take?**
-Labels are generated in seconds. If there's a delay, it's usually due to the shipping system processing the request — wait a moment and try again.
+- **Generate right after confirming.** Don't wait until the last day of the shipping deadline
+- **One label per order or bundle.** If the buyer purchased multiple items in the same show, one label is issued for the entire package
+- **Expired label needs to be regenerated.** If you wait too long between generating and shipping, the label may no longer be valid. Ship quickly after printing
+- **Keep the backup email.** It's useful if the app's PDF fails when printing
 
-**Can I generate the label from my phone?**
-Yes. You can generate, view, and share the label directly from the Jamble app on your phone. To print, you can share the PDF to a printer app or email it to yourself and print from a computer.
+## Frequently asked questions
 
-**What if the label won't generate?**
-Check that your shipping settings are complete (address, label format). If everything looks correct and the label still won't generate, contact support. Common causes include address validation issues or temporary system delays.
+**How long does it take to generate?**
+A few seconds. If it takes longer, it's the shipping system processing the request. Wait a moment and try again.
+
+**Can I generate from my phone?**
+Yes. The app generates, views and shares the PDF directly from your phone. To print, you can send the PDF to a printer app or email it to your computer.
+
+**What if the label doesn't generate?**
+Check if your shipping preferences are complete (address, format). If everything is correct and the button doesn't work, contact support. The most common causes are address validation or temporary system instability.
 
 **Can I regenerate a label?**
-If you need a new label (for example, if the first one printed badly), you may be able to regenerate it. Contact support if you need a replacement label.
+If the first one came out poorly printed or expired, it may be possible to regenerate it. Contact support to request a replacement label.
 
-**Is the tracking number included on the label?**
-Yes. Every label includes a tracking number and barcode. Both you and the buyer can use this to track the delivery.
-
-**What does "Generate Shipping Labels" mean in the app?**
-This is the button that creates your Correios shipping labels. After tapping it, the system generates the label based on your settings and the order details.
+**Does the tracking number come on the label?**
+Yes. Every label includes the Correios number and barcode. You and the buyer use the same number to track the delivery.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Talk to us through the app's chat or by email at support@jambleapp.com.
