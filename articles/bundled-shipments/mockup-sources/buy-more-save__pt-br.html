@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; padding: 20px 14px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.header-row { display: flex; justify-content: space-between; align-items: center; padding: 0 4px 14px; }
+.header-title { font-size: 17px; font-weight: 700; color: #162233; }
+.header-caret { color: #A0A7B7; font-size: 22px; font-weight: 300; }
+.banner { background: #162233; border-radius: 12px; padding: 14px; display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.banner-icon { width: 28px; height: 28px; border-radius: 14px; background: #7E53F8; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 700; font-size: 14px; color: #FFFFFF; }
+.banner-text { flex: 1; font-size: 14px; font-weight: 600; color: #FFFFFF; line-height: 19px; }
+.banner-close { color: #FFFFFF; opacity: 0.7; font-size: 18px; font-weight: 400; }
+.product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.product { border-radius: 10px; overflow: hidden; background: #FFFFFF; border: 1px solid #E9EAEF; }
+.product-image { aspect-ratio: 1; background: #F3F4F8; display: flex; align-items: center; justify-content: center; }
+.product-image svg { width: 44px; height: 44px; opacity: 0.6; }
+.product-body { padding: 8px 10px 10px; }
+.product-name { font-size: 12px; font-weight: 600; color: #162233; line-height: 16px; }
+.product-price { font-size: 13px; font-weight: 700; color: #162233; margin-top: 2px; font-family: -apple-system-round, "SF Pro Rounded", system-ui, sans-serif; }
+</style></head><body>
+<div class="phone">
+  <div class="header-row">
+    <div class="header-title">Show de Cartas Pokemon</div>
+    <div class="header-caret">›</div>
+  </div>
+  <div class="banner">
+    <div class="banner-icon">%</div>
+    <div class="banner-text">Compre mais, economize nas taxas de envio</div>
+    <div class="banner-close">×</div>
+  </div>
+  <div class="product-grid">
+    <div class="product">
+      <div class="product-image"><svg viewBox="0 0 24 24" fill="none" stroke="#6D6D80" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
+      <div class="product-body"><div class="product-name">Pikachu Holo 58/102</div><div class="product-price">R$62,00</div></div>
+    </div>
+    <div class="product">
+      <div class="product-image"><svg viewBox="0 0 24 24" fill="none" stroke="#6D6D80" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
+      <div class="product-body"><div class="product-name">Charizard Base Set</div><div class="product-price">R$55,00</div></div>
+    </div>
+  </div>
+</div>
+</body></html>

@@ -2,110 +2,89 @@
 
 ## O que você vai aprender
 
-Este guia explica como o agrupamento funciona na Jamble. Quando um comprador compra vários itens seus no mesmo show, esses itens são agrupados em um único pacote (um bundle) para que você possa enviá-los juntos. Você vai aprender como os bundles são criados, como gerenciá-los e o que acontece com os custos de frete.
+Este guia explica o que são envios agrupados na Jamble, como o sistema agrupa automaticamente os pedidos de um mesmo comprador e como você gera uma única etiqueta para enviar tudo junto.
 
 ## Antes de começar
 
 Você precisa de:
-- Um show concluído onde um comprador comprou mais de um item seu
+- Um show finalizado onde um mesmo comprador levou mais de um item seu
 - Suas configurações de envio prontas
+
+## O que é um envio agrupado
+
+Quando o mesmo comprador compra vários itens seus dentro do mesmo show, a Jamble junta esses itens em um **pacote único**, chamado de bundle. Você manda todos os itens em uma caixa só, com uma etiqueta só.
+
+**Por que isso existe:**
+- Para você, é um pacote para preparar no lugar de vários, uma ida aos Correios
+- Para o comprador, é uma taxa de envio só no lugar de uma por item
+
+Na tela de pedidos do seu show você verá o comprador no topo, com o total de itens e o valor, e logo abaixo o **PACOTE 1** com tudo que ele levou.
+
+![Tela de pedidos do vendedor mostrando comprador @marina_cards com 3 itens por R$147,00 e o PACOTE 1 contendo três cartas com botões de Gerar etiqueta e Nota fiscal](./assets/mockups/bundled-shipments__bundle-orders-view__pt-br.png)
 
 ## Como o agrupamento funciona
 
-Quando um comprador compra vários itens seus durante o mesmo show, a Jamble automaticamente agrupa esses itens em um **bundle** — um único pacote para envio.
+O agrupamento é **automático**. Você não precisa criar nada. O sistema aplica uma regra simples:
 
-**Por que os bundles existem:**
-- **Para você:** Um pacote para preparar ao invés de vários. Uma etiqueta para imprimir, uma ida aos Correios
-- **Para o comprador:** Um custo de frete ao invés de pagar frete em cada item separadamente
+- Mesmo comprador, mesmo show, todos os itens vão para o mesmo pacote
+- Mesmo comprador, shows diferentes, pacotes separados
+- Compradores diferentes no mesmo show, um pacote por comprador
 
-Você verá os bundles no seu painel de vendedor durante e após o show, identificados como **"PACKAGE 1"**, **"PACKAGE 2"**, etc.
+Se um item do pacote for cancelado depois, ele sai do pacote e os outros continuam juntos. O frete é recalculado automaticamente.
 
-```
-┌─────────────────────────────────┐
-│  PACKAGE 1                      │
-│  3 items                        │
-│                                 │
-│  ┌───────────────────────────┐  │
-│  │ Nike Air Max 90 - Sz 42  │  │
-│  │ Camiseta Vintage - M     │  │
-│  │ Boné New Era - Preto     │  │
-│  └───────────────────────────┘  │
-│                                 │
-│  [Botões de ação]               │
-│                                 │
-└─────────────────────────────────┘
-```
+## Como o frete é calculado
 
-## Como os bundles são criados
+Quando os itens viram um pacote, o custo do frete é calculado com base no **perfil de envio** de cada item. A Jamble combina peso e dimensões para chegar em um único valor de frete, que é o que o comprador paga no checkout.
 
-Os bundles são criados **automaticamente** pelo sistema. Veja quando os itens são agrupados:
+Isso quase sempre sai mais barato para o comprador do que pagar frete em cada item separadamente. É por isso que o app mostra para o comprador, durante o show, uma faixa dizendo **Compre mais, economize nas taxas de envio**.
 
-| Condição | Agrupado? |
-|----------|-----------|
-| Mesmo comprador, mesmo show | Sim |
-| Mesmo comprador, shows diferentes | Não (pacotes separados) |
-| Compradores diferentes, mesmo show | Não (pacotes separados por comprador) |
+![Tela de show do comprador com banner Compre mais, economize nas taxas de envio e produtos listados](./assets/mockups/bundled-shipments__buy-more-save__pt-br.png)
 
-Você não precisa criar bundles manualmente. O sistema agrupa os itens automaticamente quando as condições são atendidas.
+Você não vê o valor final do frete antes do comprador confirmar. Durante o show, aparece uma estimativa ao lado do pacote (Frete est. R$8,50 no exemplo). Depois que a etiqueta é gerada, o valor real aparece.
 
-## O que acontece com o frete
+## Gerando a etiqueta
 
-Quando os itens são agrupados:
+Quando chega a hora de enviar, você gera **uma etiqueta por pacote**, não uma por item. O botão **Gerar etiqueta** fica em cada pacote na sua tela de pedidos.
 
-- **Uma etiqueta de envio** é gerada para o bundle inteiro
-- **Um custo de frete** é calculado com base no peso e dimensões combinados de todos os itens
-- O comprador paga **uma taxa de frete** ao invés de uma por item
-- O bundle recebe uma **dimensão de pacote** (XS, S, M ou L) com base no peso total
+A etiqueta que sai tem o endereço do comprador e lista todos os pedidos que vão naquele pacote. Você imprime uma vez, cola na caixa, e pronto.
 
-Isso significa que pedidos agrupados são geralmente mais baratos para enviar do que pedidos individuais — o que é melhor para seus compradores e os incentiva a comprar mais itens seus.
+![Etiqueta do PACOTE 1 com endereço da compradora e os três pedidos listados abaixo, com botão Abrir etiqueta PDF](./assets/mockups/bundled-shipments__bundle-label__pt-br.png)
 
-## Gerenciando bundles
+**Regra de ouro:** todos os itens do pacote vão juntos em uma caixa. Se você mandar em caixas separadas, a etiqueta única não serve para as duas e o comprador não consegue rastrear direito.
 
-### Visualizando seus bundles
+## Nota fiscal
 
-Durante e após um show, os bundles aparecem no seu painel de vendedor. Cada bundle mostra:
-- O número do pacote (Package 1, Package 2, etc.)
-- Quantos itens estão no bundle
-- Os itens incluídos
-- Custo de frete estimado ou real
-- Ações disponíveis (gerar etiqueta, rastrear, etc.)
+Cada pacote pode pedir uma **nota fiscal**. Se precisar, o botão **Nota fiscal** aparece no pacote e você gerencia direto por ali. Se você é isento, tem a opção de gerar uma autodeclaração.
 
-### Nota fiscal
-
-Para o comércio brasileiro, cada envio pode requerer uma **nota fiscal** (documento fiscal eletrônico). A tela de gerenciamento de bundles inclui opções para isso:
-
-- Se uma nota fiscal for necessária, você verá a opção de gerenciá-la para cada bundle
-- Se você for isento, há uma opção para gerar uma autodeclaração
-
-**Nota:** Se continuar sem nota fiscal, você cuidará das etiquetas de envio por conta própria. Esta ação é irreversível.
+Se continuar sem nota fiscal, você cuida das etiquetas por conta própria. Essa ação é irreversível.
 
 ## Dicas importantes
 
-- **Bundles são automáticos.** Você não precisa fazer nada para criá-los — o sistema cuida disso sempre que um comprador adquire vários itens seus no mesmo show
-- **Uma etiqueta por bundle.** Você imprime uma etiqueta de envio para todos os itens do bundle, não uma etiqueta por item
-- **Embale todos os itens do bundle juntos.** Como há uma etiqueta só, todos os itens do bundle devem ir no mesmo pacote
-- **A dimensão do bundle importa.** O sistema atribui um tamanho de pacote com base nos itens combinados. Certifique-se de que seu pacote caiba dentro das dimensões atribuídas
-- **Mais itens por comprador = melhor para todos.** Frete agrupado é mais barato que frete individual. Incentivar compradores a adquirir vários itens economiza dinheiro deles no frete
+- **Você não cria os pacotes.** O sistema agrupa os itens sozinho sempre que um mesmo comprador leva mais de um item no mesmo show
+- **Uma etiqueta por pacote.** Imprime uma vez, cola na caixa, envia tudo junto
+- **Embale tudo na mesma caixa.** Como a etiqueta é única, os itens precisam sair no mesmo pacote físico
+- **Confira o tamanho.** O sistema calcula um tamanho de pacote com base nos itens combinados. Se a sua caixa não couber dentro das dimensões atribuídas, troque por uma maior
+- **Mais itens por comprador é melhor para os dois lados.** O frete agrupado é mais barato que o frete individual, então incentivar o comprador a levar mais itens economiza dinheiro dele
 
 ## Perguntas frequentes
 
-**Posso separar ou reorganizar bundles manualmente?**
-Não. Os bundles são gerenciados automaticamente pelo sistema com base na regra de mesmo comprador e mesmo show. Você não pode dividir um bundle em vários pacotes ou mover itens entre bundles.
+**Posso separar ou reorganizar um pacote manualmente?**
+Não. Os pacotes são criados e gerenciados pelo sistema com base na regra de mesmo comprador e mesmo show. Não dá para dividir um pacote em dois ou mover itens entre pacotes.
 
-**E se um item do bundle for cancelado?**
-Se um comprador cancelar um item de um bundle, ele é removido do bundle. Os itens restantes permanecem agrupados. O custo do frete é recalculado para o pacote menor.
+**E se o comprador cancelar um item do pacote?**
+O item cancelado sai do pacote. Os outros continuam juntos e o frete é recalculado para o novo peso.
 
-**Gero uma etiqueta ou várias para um bundle?**
-Uma etiqueta para o bundle inteiro. Todos os itens do bundle são enviados juntos em um pacote.
+**Gero uma etiqueta ou várias para o pacote?**
+Uma só. Todos os itens do pacote são enviados juntos em uma caixa, com uma etiqueta única.
 
-**E se o bundle for grande demais para uma caixa?**
-Entre em contato com o suporte se os itens combinados não couberem fisicamente em um pacote. Eles podem ajudar a reorganizar o envio.
+**E se os itens não couberem em uma caixa?**
+Entre em contato com o suporte. A equipe pode te ajudar a reorganizar o envio em dois pacotes físicos.
 
-**O agrupamento afeta quando recebo o pagamento?**
-Não. O pagamento de cada item segue a mesma linha do tempo — quando o comprador confirmar o recebimento (ou 3 dias se passarem), seu pagamento é liberado para todos os itens do bundle.
+**O agrupamento muda quando eu recebo o pagamento?**
+Não. O pagamento de cada item segue o fluxo normal. Quando o comprador confirma o recebimento (ou passam 3 dias), o valor de todos os itens do pacote é liberado.
 
 **Itens de shows diferentes podem ser agrupados?**
-Não. Os bundles só agrupam itens do mesmo show. Se um comprador comprar de você em dois shows diferentes, são envios separados.
+Não. Os pacotes só juntam itens do mesmo show. Se o comprador levar itens em dois shows diferentes, são dois envios.
 
 ## Precisa de ajuda?
 

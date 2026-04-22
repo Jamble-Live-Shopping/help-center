@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; padding: 16px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.label-head { display: flex; align-items: center; gap: 10px; padding-bottom: 12px; border-bottom: 1px solid #E9EAEF; }
+.icon-box { width: 40px; height: 40px; border-radius: 8px; background: #F3F4F8; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.icon-box svg { width: 22px; height: 22px; }
+.label-title { font-size: 16px; font-weight: 700; color: #162233; }
+.label-sub { font-size: 13px; color: #6D6D80; margin-top: 2px; }
+.sheet { margin-top: 12px; background: #F9FAFC; border-radius: 10px; padding: 14px; }
+.sheet-label { font-size: 11px; font-weight: 600; color: #6D6D80; text-transform: uppercase; letter-spacing: 0.6px; }
+.sheet-value { font-size: 15px; font-weight: 600; color: #162233; margin-top: 4px; line-height: 20px; }
+.sheet-divider { height: 1px; background: #E9EAEF; margin: 12px 0; }
+.orders-label { font-size: 11px; font-weight: 600; color: #6D6D80; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 8px; }
+.order-row { display: flex; justify-content: space-between; font-size: 13px; padding: 6px 0; border-bottom: 1px solid #E9EAEF; }
+.order-row:last-child { border-bottom: none; }
+.order-id { color: #162233; font-weight: 600; font-family: -apple-system-round, "SF Pro Rounded", system-ui, sans-serif; }
+.order-item { color: #6D6D80; text-align: right; flex: 1; margin-left: 10px; }
+.cta { margin-top: 14px; background: #7E53F8; color: #FFFFFF; height: 44px; border-radius: 22px; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; }
+</style></head><body>
+<div class="phone">
+  <div class="label-head">
+    <div class="icon-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#162233" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+    </div>
+    <div>
+      <div class="label-title">Shipping label</div>
+      <div class="label-sub">PACKAGE 1 · 3 orders in 1 parcel</div>
+    </div>
+  </div>
+  <div class="sheet">
+    <div class="sheet-label">Ship to</div>
+    <div class="sheet-value">Marina Silva<br>Rua das Flores 142, Apto 52<br>Vila Madalena, São Paulo SP</div>
+    <div class="sheet-divider"></div>
+    <div class="orders-label">Orders in this label</div>
+    <div class="order-row"><span class="order-id">#A7F2 D1</span><span class="order-item">Pikachu Holo 58/102</span></div>
+    <div class="order-row"><span class="order-id">#A7F2 D2</span><span class="order-item">Charizard Base Set</span></div>
+    <div class="order-row"><span class="order-id">#A7F2 D3</span><span class="order-item">Blastoise 1st Edition</span></div>
+  </div>
+  <div class="cta">Open label PDF</div>
+</div>
+</body></html>
