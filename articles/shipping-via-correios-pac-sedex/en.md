@@ -20,7 +20,7 @@ When a buyer purchases a product during your live show, Jamble handles the shipp
 4. **You pack and ship** the item using the label provided
 5. **Tracking updates** are sent to both you and the buyer
 
-You don't need to go to a Correios counter to negotiate prices or buy labels — Jamble does this through **Melhor Envio**, a shipping platform that connects directly with carriers to get the best rates.
+You don't need to go to a Correios counter to negotiate prices or buy labels. Jamble does this through **Melhor Envio**, a shipping platform that connects directly with carriers to get the best rates.
 
 ## Carriers available
 
@@ -34,20 +34,22 @@ Jamble currently uses two carriers in Brazil:
 
 When a label is generated, Jamble automatically selects between **two tiers**:
 
-- **Cheapest** — typically PAC (standard Correios), lower cost, longer delivery time
-- **Priority** — typically SEDEX (express Correios), faster delivery, higher cost
+- **Cheapest**: typically PAC (standard Correios), lower cost, longer delivery time
+- **Priority**: typically SEDEX (express Correios), faster delivery, higher cost
 
 The buyer sees both options with estimated delivery dates and prices before completing their purchase.
 
+![Shipping method screen with PAC (Cheapest, R$ 15.00) selected and SEDEX (Priority, R$ 25.00) available](./assets/mockups/shipping-via-correios-pac-sedex__correios-method-picker__en.png)
+
 ## How shipping costs are calculated
 
-Shipping costs are calculated using **real CEP-to-CEP quotes** — meaning the exact distance between your postal code and the buyer's postal code. This is done through Melhor Envio's API.
+Shipping costs are calculated using **real CEP-to-CEP quotes**, meaning the exact distance between your postal code and the buyer's postal code. This is done through Melhor Envio's API.
 
 The cost depends on:
 
-- **Weight of the item** — determined by the shipping profile you chose when listing the product
-- **Package dimensions** — standard sizes based on the shipping profile
-- **Distance** — from your shipping address to the buyer's address
+- **Weight of the item**, determined by the shipping profile you chose when listing the product
+- **Package dimensions**, standard sizes based on the shipping profile
+- **Distance**, from your shipping address to the buyer's address
 
 The buyer pays the shipping cost at checkout. You are not charged for shipping unless you opt to cover it.
 
@@ -58,16 +60,16 @@ When you list a product, you choose a **shipping profile** that represents its a
 | Profile | Weight range |
 |---------|-------------|
 | Card | Up to ~23g |
-| Booster | ~23g – 45g |
-| Light Accessories | ~45g – 180g |
-| Light Apparel | ~180g – 320g |
-| Standard Apparel | ~320g – 680g |
-| Heavier Apparel | ~680g – 1.36kg |
-| Bulkier Items | ~1.36kg – 2.27kg |
-| Small Bundles | ~2.27kg – 3.18kg |
-| Medium Bundles | ~3.18kg – 4.54kg |
-| Large Bundles | ~4.54kg – 6.80kg |
-| Extra-Large Bundles | ~6.80kg – 9.07kg |
+| Booster | ~23g to 45g |
+| Light Accessories | ~45g to 180g |
+| Light Apparel | ~180g to 320g |
+| Standard Apparel | ~320g to 680g |
+| Heavier Apparel | ~680g to 1.36kg |
+| Bulkier Items | ~1.36kg to 2.27kg |
+| Small Bundles | ~2.27kg to 3.18kg |
+| Medium Bundles | ~3.18kg to 4.54kg |
+| Large Bundles | ~4.54kg to 6.80kg |
+| Extra-Large Bundles | ~6.80kg to 9.07kg |
 
 **Choose accurately.** If you pick a profile that's too light, the package may be rejected or charged extra at the post office. If it's too heavy, the buyer pays more than necessary.
 
@@ -94,12 +96,14 @@ After a sale is completed:
 
 Jamble generates the label automatically with all the carrier information, tracking number, and addresses pre-filled.
 
+![Sale details screen with "Ship the parcel quickly" reminder, order card, and Download shipping label button](./assets/mockups/shipping-via-correios-pac-sedex__drop-off-reminder__en.png)
+
 ### Packing and dropping off
 
 Once you have your label:
 
-1. **Pack the item securely** — use appropriate packaging for the item type
-2. **Attach the label** — print it and tape it firmly to the outside of the package
+1. **Pack the item securely**, use appropriate packaging for the item type
+2. **Attach the label**, print it and tape it firmly to the outside of the package
 3. **Drop it off** at a Correios agency or authorized drop-off point
 
 You can find the nearest Correios agency using the Correios website or app.
@@ -117,9 +121,11 @@ Once the package is scanned by the carrier, tracking updates are available for b
 
 Both you and the buyer receive push notifications for tracking updates (if the **"Updates on transaction status"** notification is enabled).
 
+![Tracking screen with Correios SEDEX, tracking number BR123456789BR and a timeline showing Label created, Dropped off at Correios, In transit, and Delivered](./assets/mockups/shipping-via-correios-pac-sedex__correios-tracking__en.png)
+
 ## Important tips
 
-- **Ship promptly.** Buyers expect fast shipping. Try to drop off your packages within 1-2 business days after the sale
+- **Ship promptly.** Buyers expect fast shipping. Try to drop off your packages within 1 to 2 business days after the sale
 - **Check the weight before listing.** If you're unsure about a product's weight, use a kitchen scale. Picking the wrong shipping profile causes problems for you and the buyer
 - **Keep your shipping address updated.** Your label is generated from the address in your settings. If you move, update it immediately in **Settings** → **Shipping Preferences**
 - **Save your tracking number.** If a buyer contacts you about shipping, you'll need the tracking number. It's available in your sales history
@@ -137,7 +143,7 @@ This depends on show-level settings. Some promotions or features may allow free 
 This usually happens when the package exceeds the weight or dimensions of the shipping profile. Repack the item or contact support to adjust the label.
 
 **How long does PAC take vs SEDEX?**
-PAC (standard) typically takes 5-15 business days depending on distance. SEDEX (priority) takes 1-5 business days. Delivery times vary by region.
+PAC (standard) typically takes 5 to 15 business days depending on distance. SEDEX (priority) takes 1 to 5 business days. Delivery times vary by region.
 
 **What if the buyer gives the wrong address?**
 If the package is returned to you because of a wrong address, contact support. They'll help coordinate with the buyer to get the correct address.
