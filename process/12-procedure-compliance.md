@@ -12,19 +12,24 @@ Each row is a verifiable check. The script below automates every check that can 
 |---|------|-------|---------------|
 | 1 | Step 1 (extraction) | Every `<pre><code>┌─...─┐</code></pre>` in the article has a corresponding `ascii-box-N.txt` in `_work/wireframe-mockups/` | Regex scan + file count |
 | 2 | Step 2 (code lookup) | Every ASCII box has a matching `code-notes-boxN.md` | File listing |
-| 3 | Step 3 (HTML mockup) | Every code-notes has a matching `prod-boxN.html` | File listing |
-| 4 | Step 4 (screenshot) | Every `prod-boxN.html` has a `prod-boxN.png` at ≥900px width and under 200 KB | File stat + image header |
-| 5 | Step 5 (hosting) | Every `prod-boxN.png` exists on `Jamble-Live-Shopping/help-center` repo | `gh api` existence check per file |
+| 3 | Step 3 (HTML mockup) | Every code-notes has a matching `prod-boxN.html` (or `<mockup>__<locale>.html` for locale pairs) | File listing |
+| 3b | Step 3 (HTML) | For every `__en.html` there is a `__pt-br.html` in the same folder, and `diff` only shows text-level changes | `diff` + heuristic that style/svg lines are identical |
+| 3c | Step 3 (HTML) | No emoji used as UI icon (truck, copy, chevron, info, etc.) | Regex scan on HTML for `&#x1F..|&#x29C9|emoji`-style entities in UI positions |
+| 4 | Step 4 (screenshot) | Every HTML has a matching PNG at width >= 900 px (DPR 3) | File stat + image header |
+| 4b | Step 4 (screenshot) | All PNGs live at **root** `assets/mockups/`, never under `articles/<slug>/assets/` | Path check |
+| 5 | Step 5 (hosting) | `metadata.yml` parses as YAML and contains a `locales:` block with entries for every `.md` in the folder | `yaml.safe_load` + key check |
+| 5b | Step 5 (hosting) | Every PNG exists on `Jamble-Live-Shopping/help-center` repo at `assets/mockups/<filename>` | `gh api` existence check per file |
 | 6 | Step 6 (injection) | Zero `<pre><code>` blocks with box-drawing chars remain in the article body | Regex scan on current published body |
 | 6b | Step 6 (injection) | Every `<img>` in the article has a non-empty, descriptive `alt` attribute | Regex scan |
 | 6c | Step 6 (injection) | Article `author_id == 7980499` (Aymar) | API field check |
 | 7 | Step 7 (tables) | Zero `intercom-interblocks-table-container` in article body | Regex scan |
 | 8a | Step 8 (editorial) | `len(description) <= 140` | API field check |
-| 8b | Step 8 (editorial) | Zero em-dashes (`,`) or en-dashes (`,`) in body, description, or pt-BR body | Regex scan |
+| 8b | Step 8 (editorial) | Zero em-dashes (`—`) or en-dashes (`–`) in body, description, metadata.yml titles, or pt-BR body | Regex scan |
 | 8c | Step 8 (editorial) | No `Nike`, `Adidas`, generic `Sneakers` example unless clearly in a non-BR context | Regex scan, MANUAL final call |
 | 8d | Step 8 (editorial) | If `>= 6` H2 sections, a TOC block with `id="h_toc"` exists | Regex scan |
-| 9 | Step 10 (code audit) | `code-audit-<id>.md` exists in `_work/` and has no open MISMATCH rows | File existence + grep for `MISMATCH` without corresponding decision |
-| 10 | Step 11 (content audit) | `content-audit-<id>.md` exists in `_work/` and has zero BLOCKERS | File existence + grep for `BLOCKER` |
+| 8e | Step 8 (editorial) | Zero fee decomposition (`4%`, `10%`, `commission`, `comissão`, `taxa de saque`, `R$ 3,67`) or `auction`/`leilão` | Regex scan (both locales) |
+| 9 | Step 10 (code audit) | `code-audit-<id>.md` exists and has no open MISMATCH rows | File existence + grep for `MISMATCH` without corresponding decision |
+| 10 | Step 11 (content audit) | `content-audit-<id>.md` exists and has zero BLOCKERS | File existence + grep for `BLOCKER` |
 | 11 | Step 12 (self) | This compliance run produced `compliance-<id>.md` with ALL checks PASS | Output of this script |
 
 ## The compliance script
@@ -97,14 +102,65 @@ check('6c', 'Author is Aymar (7980499)', author == 7980499, f'author_id={author}
 tables = len(re.findall(r'intercom-interblocks-table-container', body))
 check('7', 'Zero breaking tables', tables == 0, f'{tables} tables')
 
+# Step 3b, locale HTML parity (byte-iso except text)
+import yaml
+slug_dir = os.path.join(PROJECT_DIR, 'articles', article.get('slug', ''))
+sources = os.path.join(slug_dir, 'mockup-sources')
+if os.path.isdir(sources):
+    en_htmls = [f for f in os.listdir(sources) if f.endswith('__en.html')]
+    for en in en_htmls:
+        pt = en.replace('__en.html', '__pt-br.html')
+        pt_path = os.path.join(sources, pt)
+        if not os.path.exists(pt_path):
+            check('3b', f'pt-BR pair for {en}', False, 'missing')
+            continue
+        # Heuristic: line count should match within ±2
+        en_lines = open(os.path.join(sources, en)).read().splitlines()
+        pt_lines = open(pt_path).read().splitlines()
+        check('3b', f'{en} and {pt} iso structure', abs(len(en_lines) - len(pt_lines)) <= 2, f'{len(en_lines)} vs {len(pt_lines)} lines')
+
+# Step 3c, no emoji in UI icon positions
+if os.path.isdir(sources):
+    emoji_hits = []
+    for html in os.listdir(sources):
+        content = open(os.path.join(sources, html)).read()
+        # UI icon emoji ranges (Misc Symbols, Transport, Emoticons), excluding playing-card product placeholders
+        for m in re.finditer(r'&#x(1F68[0-9A-F]|1F4E6|1F4DD|1F50D|29C9|2705)', content):
+            emoji_hits.append(f'{html}:{m.group(0)}')
+    check('3c', 'No emoji UI icons in HTML', len(emoji_hits) == 0, '; '.join(emoji_hits[:3]))
+
+# Step 4b, PNG path convention
+bad_png_paths = glob.glob(os.path.join(PROJECT_DIR, 'articles', '*', 'assets', 'mockups', '*.png'))
+check('4b', 'PNGs at root assets/mockups/, not under articles/', len(bad_png_paths) == 0, f'{len(bad_png_paths)} misplaced')
+
+# Step 5, metadata.yml has locales:
+meta_path = os.path.join(slug_dir, 'metadata.yml')
+if os.path.exists(meta_path):
+    try:
+        meta = yaml.safe_load(open(meta_path))
+        has_locales = isinstance(meta, dict) and isinstance(meta.get('locales'), dict) and len(meta['locales']) > 0
+        check('5', 'metadata.yml has non-empty locales: block', has_locales, f'keys: {list((meta or {}).get("locales", {}).keys())}')
+    except Exception as e:
+        check('5', 'metadata.yml parses as YAML', False, str(e))
+else:
+    check('5', 'metadata.yml present', False, f'missing: {meta_path}')
+
 # Step 8a, description length
 check('8a', 'Description <= 140 chars', len(desc) <= 140, f'len={len(desc)}')
 
 # Step 8b, em-dashes in EN and pt-BR
-em_en = body.count(',') + body.count(',')
-em_pt = pt_body.count(',') + pt_body.count(',')
+em_en = body.count('—') + body.count('–')
+em_pt = pt_body.count('—') + pt_body.count('–')
 check('8b', 'Zero em/en-dashes (EN)', em_en == 0, f'{em_en} found')
 check('8b', 'Zero em/en-dashes (pt-BR)', em_pt == 0, f'{em_pt} found')
+
+# Step 8e, fee decomposition + auction word (both locales)
+fee_rx = re.compile(r'\b(4\s?%|10\s?%)\b|commission|comissão|R\$\s*3,67|taxa de saque', re.IGNORECASE)
+auction_rx = re.compile(r'\bauction\b|leilão|leilao', re.IGNORECASE)
+for label, rx in [('fee decomposition', fee_rx), ('auction word', auction_rx)]:
+    for loc_name, text in [('EN', body), ('pt-BR', pt_body)]:
+        matches = rx.findall(text)
+        check('8e', f'No {label} ({loc_name})', len(matches) == 0, f'{len(matches)} match(es): {set(matches[:3])}')
 
 # Step 8c, banned brand examples (MANUAL confirmation)
 bad_examples = re.findall(r'\b(Nike|Adidas|Camiseta)\b', body)

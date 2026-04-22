@@ -1,79 +1,42 @@
 # Step 4, Render HTML to PNG
 
-**Goal**: convert `prod-boxN.html` into `prod-boxN.png` at retina resolution, with the outer gray rounded frame injected automatically.
+**Goal**: convert each `<mockup>__<locale>.html` into `<slug>__<mockup>__<locale>.png` at retina resolution (DPR 3), with the outer gray rounded frame injected automatically.
 
 ## Prerequisites
 
 - Node.js 18+
-- Puppeteer (auto-installed by `npx`): `npx puppeteer browsers install chrome`
-  - Chrome binary cached at `~/.cache/puppeteer/chrome/`
+- Puppeteer (already a repo dep): `npm ci` at the repo root installs it via `package.json`
+- Chrome binary auto-installed under `~/.cache/puppeteer/chrome/`
 
-## The script
+## The canonical script: `scripts/shot-retina.mjs`
 
-Save as `/tmp/screenshot-mockups.mjs`:
-
-```javascript
-import puppeteer from 'puppeteer';
-import { resolve } from 'path';
-
-const dir = process.argv[2];
-const files = process.argv.slice(3); // ['prod-box1', 'prod-box2', ...]
-
-const browser = await puppeteer.launch({ headless: true });
-
-for (const f of files) {
-  const page = await browser.newPage();
-  await page.setViewport({ width: 400, height: 800, deviceScaleFactor: 3 });
-  await page.goto(`file://${resolve(dir, f + '.html')}`, { waitUntil: 'networkidle0' });
-
-  // Inject the outer gray rounded frame around the phone card
-  await page.evaluate(() => {
-    const phone = document.querySelector('.phone') || document.querySelector('.alert');
-    if (!phone) return;
-    const wrapper = document.createElement('div');
-    wrapper.style.cssText = 'background: #F0F1F5; border-radius: 20px; padding: 24px; display: inline-block;';
-    const parent = phone.parentElement;
-    parent.insertBefore(wrapper, phone);
-    wrapper.appendChild(phone);
-  });
-
-  // Get wrapper bounding box for tight crop
-  const wrapperBox = await page.evaluate(() => {
-    const phone = document.querySelector('.phone') || document.querySelector('.alert');
-    const wrapper = phone?.parentElement;
-    if (!wrapper) return null;
-    const r = wrapper.getBoundingClientRect();
-    return { x: r.x, y: r.y, width: r.width, height: r.height };
-  });
-
-  if (wrapperBox) {
-    await page.screenshot({
-      path: resolve(dir, f + '.png'),
-      clip: {
-        x: Math.max(0, wrapperBox.x),
-        y: Math.max(0, wrapperBox.y),
-        width: wrapperBox.width,
-        height: wrapperBox.height
-      },
-      omitBackground: true
-    });
-  } else {
-    await page.screenshot({ path: resolve(dir, f + '.png'), omitBackground: true });
-  }
-
-  console.log(`${f}.png saved`);
-  await page.close();
-}
-
-await browser.close();
-```
-
-## Run it
+Use **only** this script, sequentially, one PNG per invocation:
 
 ```bash
-MOCKUP_DIR="<path to folder with prod-*.html>"
-node /tmp/screenshot-mockups.mjs "$MOCKUP_DIR" prod-box1 prod-box2 prod-box4 prod-box5
+node scripts/shot-retina.mjs \
+  "/absolute/path/to/articles/<slug>/mockup-sources/<mockup>__<locale>.html" \
+  "/absolute/path/to/assets/mockups/<slug>__<mockup>__<locale>.png"
 ```
+
+It launches Puppeteer with `deviceScaleFactor: 3`, renders the HTML, crops to `.phone`, injects the outer gray frame, writes the PNG, and closes the browser. One process per PNG avoids the Chrome zombie leaks we hit earlier.
+
+## What NOT to use
+
+- **Never `j-playwright.py shot`**: defaults to `device_scale_factor: 1`. PNGs look pixelated when scaled up on the help center page. We re-rendered 40+ PNGs (PR #42, #44) because of this.
+- **Never the old `scripts/shot-batch.mjs`**: leaves dozens of orphan Chrome processes on fail, saturates the machine, future renders time out.
+
+## Batch for many mockups
+
+Run the canonical script in a shell loop, sequential (not parallel, not via shot-batch):
+
+```bash
+for html in articles/<slug>/mockup-sources/*.html; do
+  base=$(basename "$html" .html)
+  node scripts/shot-retina.mjs "$(pwd)/$html" "$(pwd)/assets/mockups/<slug>__${base}.png"
+done
+```
+
+One PNG per second is plenty fast for a 6-mockup article.
 
 ## Design rationale for the outer frame
 
@@ -83,23 +46,21 @@ The frame is injected at screenshot time (not in the HTML) because:
 - The phone card HTML stays reusable for other contexts (internal docs, design reviews) where no frame is needed
 - The frame styling is centralized in one place (the script), so a change propagates to all future mockups
 
-## Quality checklist (inspect the PNG before Step 5)
+## Quality checklist (mandatory visual QA on EACH PNG before Step 5)
 
-- [ ] Retina quality (no blurry text), `deviceScaleFactor: 3` gives ~900px for a 320px phone frame
+Open each PNG (or use the Read tool) and verify:
+
+- [ ] Retina (width >= 900 px for a 320-340 px phone frame = DPR 3 confirmed)
 - [ ] Outer gray frame present, rounded corners visible
 - [ ] Phone card has its purple-tinted shadow
 - [ ] No scrollbar visible (page content fits in viewport)
 - [ ] No overflow / cut-off text
-- [ ] Icons render as actual SVGs (not broken image placeholders)
+- [ ] Cards have **substantive content** (labels, amounts, rows, buttons), not empty bodies with just a title
+- [ ] Q/A and list items use structured divs (row, separator), NOT a single fluid paragraph
+- [ ] Icons render as SVGs, no broken-image placeholders, no emoji for UI chrome
+- [ ] For `__pt-br.png`: all visible UI text is in Portuguese (no "My Wallet", "Withdraw", "Completed" leaking through)
+- [ ] `__pt-br.png` and `__en.png` are visually iso (same layout, same spacing, same components)
+
+A failure on any line here means rebuild the HTML + re-render. Shipping a PNG that fails a check is the single largest source of rework in this pipeline.
 
 If an icon is broken, the base64 SVG embed in the HTML is corrupted or the MIME type is wrong. Re-encode and retry.
-
-## Batch runs
-
-For 228 boxes across 100 articles, this script is trivial to parallelize, just pass all file basenames:
-
-```bash
-ls "$MOCKUP_DIR"/prod-box*.html | sed 's/.*prod-/prod-/;s/.html//' | xargs node /tmp/screenshot-mockups.mjs "$MOCKUP_DIR"
-```
-
-On a 2023 MacBook, single-threaded Puppeteer does ~1 screenshot/second. 228 boxes ≈ 4 minutes.

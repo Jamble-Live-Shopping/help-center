@@ -181,17 +181,31 @@ Rule: any blob >500 chars that could be image data goes to a FILE, never to stdo
 
 If a session does get poisoned: it is lost. Start a new session, the file artifacts on disk survive.
 
+## Multilingual mockups: write EN first, then copy to pt-BR
+
+For articles with both locales, produce `<mockup>__en.html` and `<mockup>__pt-br.html`. They MUST be byte-identical except for user-visible text (between tags, in `alt`, in `aria-label`). Same CSS, same DOM, same SVGs, same spacing.
+
+**Workflow**:
+1. Write `<mockup>__en.html` fully, render and QA it
+2. `cp <mockup>__en.html <mockup>__pt-br.html`
+3. Translate ONLY the text content. Do not touch class names, styles, SVG paths, structure, class modifiers
+4. Verify via `diff` that only text-bearing lines changed
+
+**Why**: previous batches shipped structurally-different HTMLs (different paddings, missing sections, icons renamed per locale) which look inconsistent side-by-side on the help center.
+
 ## Naming and placement
 
-- HTML files: `prod-boxN.html` (N matches the ASCII box number)
+- HTML files: `<mockup>__<locale>.html` in `articles/<slug>/mockup-sources/` (locales `pt-br` and `en`)
+- PNG files: `<slug>__<mockup>__<locale>.png` in ROOT `assets/mockups/` — **never** under `articles/<slug>/assets/` (md-to-html resolves `./assets/` against repo root; nested PNGs won't reach raw.githubusercontent)
 - One mockup per HTML file
-- Store in the same folder as the `ascii-box-N.txt` files
 - Always open locally in a browser once before moving to Step 4, the final PNG is deterministic but a bad HTML won't error, it'll just render wrong
 
 ## Anti-patterns to avoid
 
-- Do NOT use emoji as icons (🔨, ⚡, 💀). Always use real SVG from the repo.
+- Do NOT use emoji as UI icons (🚚 truck, ⧉ copy, 🔨, ⚡, 💀, ℹ, 🔍, ←). Always use inline SVG stroke icons, Feather-style, colored with design-system tokens. Emoji are OK **only** for product-image placeholders inside a gradient container (they simulate an uploaded product photo), never for UI chrome.
 - Do NOT add `box-shadow`, rounded corners via JS/dynamic CSS. Bake them into the static HTML.
 - Do NOT reference external fonts or stylesheets (`@import`, `<link rel=stylesheet>`). Everything inline.
 - Do NOT invent subtitles like "Buyers bid against each other" if the code says "The last bidder wins at the end of the time.", copy the code verbatim.
 - Do NOT add the outer gray frame in the HTML. The screenshot step injects it.
+- Do NOT put EN literals in a `__pt-br.html` file (see "Multilingual mockups" above).
+- Do NOT let the pt-BR HTML diverge structurally from the EN HTML (only text should differ).
