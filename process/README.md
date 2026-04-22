@@ -6,6 +6,8 @@
 
 **Status**: validated on 1 article (Sell Mode, article 14288093). Ready to scale to 67 articles / 228 ASCII boxes.
 
+**IMPORTANT**: **Read [00-HARD-RULES.md](00-HARD-RULES.md) before starting.** It encodes 18 real regressions from 31+ previous worker PRs. Violating any of these rules = PR rejected.
+
 ---
 
 ## The problem we solved
