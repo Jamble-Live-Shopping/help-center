@@ -1,0 +1,33 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; min-height: 220px; background: linear-gradient(135deg, #2a2540 0%, #0C131D 100%); border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.18); border: 1px solid #E9EAEF; overflow: hidden; padding: 24px 18px; display: flex; flex-direction: column; justify-content: center; gap: 14px; }
+.widget { background: rgba(255,255,255,0.10); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 10px 12px; display: flex; flex-direction: column; gap: 8px; }
+.top-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: #FFFFFF; font-size: 11px; font-weight: 600; }
+.rank-pill { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.14); border-radius: 10px; padding: 4px 8px; }
+.rank-dot { width: 10px; height: 10px; border-radius: 50%; background: #FF2867; }
+.rank-text { font-size: 11px; font-weight: 600; color: #FFFFFF; letter-spacing: 0.2px; }
+.timer { display: flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 600; color: #FFFFFF; }
+.timer-icon { width: 12px; height: 12px; }
+.see-ranking { display: flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 600; color: #FFFFFF; opacity: 0.95; }
+.bar { position: relative; display: flex; align-items: stretch; height: 22px; border-radius: 10px; overflow: hidden; }
+.bar-red { background: #FF2867; flex: 0 0 56%; display: flex; align-items: center; padding-left: 8px; color: #FFFFFF; font-weight: 600; font-size: 13px; }
+.bar-blue { background: #368AFF; flex: 1; display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; color: #FFFFFF; font-weight: 600; font-size: 13px; }
+.caption { color: rgba(255,255,255,0.55); font-size: 11px; text-align: center; letter-spacing: 0.3px; text-transform: uppercase; }
+</style></head><body><div class="phone">
+  <div class="caption">Sobreposição no show ao vivo</div>
+  <div class="widget">
+    <div class="top-row">
+      <div class="rank-pill"><div class="rank-dot"></div><div class="rank-text">Vermelho, rank #4</div></div>
+      <div class="timer">
+        <svg class="timer-icon" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6.5" r="4.5" stroke="#fff" stroke-width="1.2"/><path d="M6 4v2.5l1.6 1" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/><path d="M5 1.2h2" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/></svg>
+        <span>45:30</span>
+      </div>
+      <div class="see-ranking"><span>Ver classificação</span><span style="font-size: 12px;">›</span></div>
+    </div>
+    <div class="bar">
+      <div class="bar-red">1.250</div>
+      <div class="bar-blue">980</div>
+    </div>
+  </div>
+</div></body></html>
