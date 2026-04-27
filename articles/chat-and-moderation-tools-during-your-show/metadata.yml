@@ -7,11 +7,11 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-04-27T00:00:00Z
 locales:
   pt-br:
     title: 'Ferramentas de Chat e Moderação Durante Seu Show'
-    description: ''
+    description: 'Como gerenciar o chat, excluir mensagens, bloquear usuários do show e configurar moderadores de confiança na sua live Jamble.'
   en:
     title: 'Chat and Moderation Tools During Your Show'
-    description: "This guide explains how to manage your show's chat, deal with problematic users, and use moderators to help keep your live running smoothly. You'll learn every moderation action available to you as a seller."
+    description: 'How to manage chat, delete messages, block users from your show, and set up trusted moderators on your Jamble live.'
