@@ -1,0 +1,60 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 360px; background: #FFFFFF; border-radius: 20px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding: 16px; }
+
+.head-row { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 0; padding: 0 8px 12px; border-bottom: 1px solid #E9EAEF; }
+.head-row .col { font-size: 11px; font-weight: 700; color: #A0A7B7; text-transform: uppercase; letter-spacing: 0.5px; line-height: 16px; }
+.head-row .col.label { color: transparent; }
+.head-row .col.rt { color: #7E53F8; }
+.head-row .col.sd { color: #F04437; }
+
+.row { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 0; padding: 12px 8px; border-bottom: 1px solid #F0F1F5; align-items: center; }
+.row:last-child { border-bottom: none; }
+.row .label { font-size: 13px; font-weight: 600; color: #162233; line-height: 18px; padding-right: 6px; }
+.row .cell { font-size: 13px; color: #162233; line-height: 18px; }
+.row .cell.muted { color: #6B7A92; }
+
+.dot-yes, .dot-no { width: 22px; height: 22px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; color: #FFFFFF; }
+.dot-yes { background: #17B169; }
+.dot-no { background: #E9EAEF; color: #A0A7B7; }
+
+.title-block { padding: 4px 8px 16px; }
+.h-title { font-size: 16px; font-weight: 700; color: #162233; line-height: 22px; }
+.h-sub { font-size: 12px; color: #6B7A92; margin-top: 4px; line-height: 16px; }
+</style></head><body><div class="phone">
+<div class="title-block">
+  <div class="h-title">Real-time offers vs Sudden Death</div>
+  <div class="h-sub">The two competitive modes, side by side</div>
+</div>
+<div class="head-row">
+  <div class="col label">.</div>
+  <div class="col rt">Real-time offers</div>
+  <div class="col sd">Sudden Death</div>
+</div>
+<div class="row">
+  <div class="label">Timer extends</div>
+  <div class="cell"><span class="dot-yes">✓</span></div>
+  <div class="cell"><span class="dot-no">×</span></div>
+</div>
+<div class="row">
+  <div class="label">Typical final price</div>
+  <div class="cell">Higher</div>
+  <div class="cell muted">Lower</div>
+</div>
+<div class="row">
+  <div class="label">Sale duration</div>
+  <div class="cell">Can extend</div>
+  <div class="cell muted">Fixed</div>
+</div>
+<div class="row">
+  <div class="label">Best for</div>
+  <div class="cell">Rare items</div>
+  <div class="cell muted">Quick sales</div>
+</div>
+<div class="row">
+  <div class="label">Pre-offers (qty = 1)</div>
+  <div class="cell"><span class="dot-yes">✓</span></div>
+  <div class="cell"><span class="dot-yes">✓</span></div>
+</div>
+</div></body></html>

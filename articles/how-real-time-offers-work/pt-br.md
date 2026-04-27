@@ -2,117 +2,117 @@
 
 ## O que você vai aprender
 
-As ofertas em tempo real são o coração das vendas ao vivo na Jamble. Quando você inicia a venda de um produto durante seu show, compradores competem fazendo ofertas em tempo real. Este guia explica exatamente como o sistema funciona — desde a configuração da venda até o que acontece quando o timer termina.
+As Ofertas em tempo real são o coração das vendas ao vivo na Jamble. Quando você inicia uma venda durante o show, os compradores competem fazendo ofertas em tempo real, e a oferta mais alta vence. Este guia mostra exatamente como o sistema funciona, da configuração da venda ao que acontece quando o cronômetro termina.
 
 ## Antes de começar
 
 - Você precisa de uma conta de vendedor aprovada na Jamble
-- Você precisa de um show ao vivo em andamento (ou agendado)
+- Você precisa de um show ao vivo em andamento ou agendado
 - Você precisa de pelo menos um produto listado no seu show
 
 ## Os três modos de venda
 
-Quando você lista um produto na Jamble, escolhe um dos três modos de venda:
+Quando você lista um produto na Jamble, escolhe um dos três modos de venda. Cada um cria uma experiência de compra diferente:
 
-- ****Ofertas em tempo real**** — Compradores competem fazendo ofertas. O timer se estende quando novas ofertas chegam. A oferta mais alta vence
-- ****Sudden Death**** — Igual às ofertas em tempo real, mas o timer NÃO se estende. Quando o tempo acaba, acabou — sem segunda chance
-- ****Buy It Now**** — Preço fixo. Compradores compram instantaneamente pelo preço que você definiu. Sem competição
-Este artigo foca em **Ofertas em tempo real** e **Sudden Death** — os dois modos de venda competitivos.
+- **Oferta em tempo real**, compradores competem fazendo ofertas, o cronômetro estende quando novas ofertas chegam, e a oferta mais alta vence
+- **Sudden Death**, igual ao modo Oferta em tempo real, mas o cronômetro NÃO estende, quando o tempo acaba a venda termina sem segunda chance
+- **Comprar agora**, preço fixo, compradores compram instantaneamente pelo valor que você definiu, sem competição
 
-## Como funciona uma venda com ofertas em tempo real
+Este artigo foca nos dois modos competitivos, **Oferta em tempo real** e **Sudden Death**.
 
-### Passo 1: Configure o produto
+## Passo 1: configure o produto
 
-Ao criar ou editar um produto para seu show, selecione **"Real-time offers"** (ou **"Sudden Death"**) como modo de venda.
+Ao criar ou editar um produto para o seu show, selecione **Oferta em tempo real** (ou **Sudden Death**) como modo de venda. Você verá dois campos para preencher.
 
-Configure duas opções principais:
+![Tela Modo de venda com Oferta em tempo real selecionada, campos Preço inicial e Duração visíveis](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-real-time-offers-work__sell-mode-picker__pt-br__v2.png)
 
-- **Preço inicial** — o valor mínimo para a primeira oferta (mínimo R$ 5,00)
-- **Duração** — quanto tempo a venda dura (5 a 90 segundos)
+O campo **Preço inicial** define o valor mínimo da primeira oferta (mínimo R$ 5). O campo **Duração (segundos)** define quanto tempo a venda dura, entre 5 e 90 segundos. O padrão é 15 segundos.
 
-![Seletor de modo de venda com ofertas em tempo real selecionadas, opções Morte Súbita e Compre Agora](./assets/mockups/how-real-time-offers-work__sell-mode-picker__pt-br.png)
+Quando os campos estiverem preenchidos, salve o produto e ele fica disponível para iniciar durante o show.
 
-### Passo 2: Inicie a venda durante seu show
+## Passo 2: inicie a venda durante o show
 
-Quando você estiver ao vivo, encontre o produto na sua lista de produtos e toque em **"Start"**. Veja o que acontece:
+Quando você está ao vivo, encontre o produto na sua lista e toque em **Iniciar**. O produto aparece na tela para todos os espectadores, o cronômetro começa a contagem regressiva, e os compradores podem fazer ofertas.
 
-1. O produto aparece na tela para todos os espectadores
-2. O timer começa a contagem regressiva
-3. Os compradores podem começar a fazer ofertas
+![Card de venda ao vivo com produto Charizard Holo PSA 9, oferta atual R$ 145, cronômetro em 0:18 e botão Oferta R$ 150](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-real-time-offers-work__real-time-offer-card__pt-br__v2.png)
 
-![real-time-offer-card exibindo Nike Air Max 90 com oferta atual de R$45, cronômetro em 0:18, e botão Fazer oferta por R$50](./assets/mockups/how-real-time-offers-work__real-time-offer-card__pt-br.png)
+A oferta atual aparece em verde no centro do card. O botão roxo **Oferta R$ 150** convida o comprador a superar a oferta atual com um toque. O contador de ofertas no rodapé mostra quantos compradores já participaram.
 
-### Passo 3: Compradores fazem ofertas
+Continue narrando o produto enquanto os compradores ofertam. Quanto mais energia, mais competição.
 
-Compradores fazem ofertas acima do preço atual. Cada nova oferta se torna a oferta líder. Vários compradores podem competir, elevando o preço.
+## Passo 3: o cronômetro estende quando novas ofertas chegam
 
-### Passo 4: Comportamento do timer (a diferença principal)
+Esta é a regra que define o modo Oferta em tempo real. Sempre que um comprador faz uma oferta perto do fim do cronômetro, o cronômetro **estende** por alguns segundos. Isso dá aos outros compradores a chance de responder.
 
-**Ofertas em tempo real:** Toda vez que uma nova oferta é feita perto do fim do timer, o timer **se estende** por alguns segundos. Isso dá aos outros compradores a chance de responder. A venda não termina até que o timer expire sem novas ofertas.
+A venda só termina quando o cronômetro chega a zero **sem nenhuma nova oferta**. É essa mecânica que empurra o preço para cima.
 
-**Sudden Death:** O timer faz a contagem regressiva sem nenhuma extensão. Quando chega a zero, acabou. Se um comprador fizer uma oferta no último segundo, nenhum tempo extra é adicionado. Isso cria urgência e vendas mais rápidas.
+## Sudden Death: a variante sem extensão
 
-### Passo 5: A venda termina
+Sudden Death é o mesmo formato competitivo, mas o cronômetro **não estende**. Quando chega a zero, a venda acaba, mesmo que alguém tenha ofertado no último segundo.
 
-Quando o timer chega a zero:
+![Card Sudden Death com produto Hot Wheels Redline 1968, badge sem extensão, cronômetro em 0:02 e oferta atual R$ 85](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-real-time-offers-work__sudden-death-card__pt-br__v2.png)
 
-- **A oferta mais alta vence** — o comprador que fez a maior oferta fica com o produto
-- **O pagamento é processado** — o comprador vencedor é cobrado automaticamente
-- **A venda aparece** na sua lista de pedidos como qualquer outra venda
-- **Se ninguém fez oferta** — o produto fica sem vender e pode ser reiniciado depois
+O card mostra o badge **SUDDEN DEATH, SEM EXTENSÃO** no topo, o cronômetro em vermelho na contagem final, e a frase **Quando o cronômetro zera, acaba** logo abaixo do botão. A urgência cria uma corrida pelo último segundo, ótima para vendas rápidas e variar a energia do show.
+
+## Oferta em tempo real vs Sudden Death
+
+Os dois modos competitivos parecem iguais, mas a regra do cronômetro muda totalmente o resultado. Veja a comparação lado a lado:
+
+![Quadro comparativo Oferta em tempo real vs Sudden Death cobrindo extensão de cronômetro, preço final, duração, melhor uso e pré-ofertas](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-real-time-offers-work__comparison-chart__pt-br__v2.png)
+
+Use **Oferta em tempo real** para itens raros, peças de alto valor ou produtos onde você quer maximizar o preço. Use **Sudden Death** para itens com preço já estabelecido, lotes grandes ou momentos do show em que precisa acelerar.
+
+Muitos vendedores misturam os dois modos no mesmo show para variar o ritmo.
+
+## Passo 4: a venda termina
+
+Quando o cronômetro chega a zero (sem nova oferta no caso do modo Oferta em tempo real, ou direto no caso do Sudden Death), três coisas acontecem:
+
+- A oferta mais alta vence, o comprador líder fica com o produto
+- O pagamento é processado automaticamente no cartão do comprador
+- A venda aparece na sua lista de pedidos como qualquer outra venda
+
+Se ninguém fez oferta, o produto fica sem vender e pode ser reiniciado depois durante o show.
 
 ## Pré-ofertas
 
-Para produtos com Ofertas em tempo real e Sudden Death, você pode habilitar **pré-ofertas**. Isso permite que compradores façam ofertas no seu produto **antes** do seu show começar.
+Tanto **Oferta em tempo real** quanto **Sudden Death** aceitam **pré-ofertas**, que permitem ao comprador ofertar no produto **antes** do show começar.
 
-**Como funciona:**
-- Quando você lista um produto com pré-ofertas habilitadas, compradores podem ver o produto no seu show agendado e fazer uma oferta antecipada
-- Quando você inicia a venda durante o show, as pré-ofertas se tornam as ofertas iniciais
-- O público ao vivo pode então competir contra as pré-ofertas fazendo ofertas mais altas
+Quando você lista um produto com pré-ofertas habilitadas, os compradores podem ver o produto no seu show agendado e deixar uma oferta antecipada. Quando você inicia a venda durante o show, as pré-ofertas viram as ofertas iniciais, e o público ao vivo compete contra elas.
 
-**Importante:** Pré-ofertas só estão disponíveis quando a **quantidade do produto é 1**.
-
-## Ofertas em tempo real vs Sudden Death: qual escolher?
-
-| Característica | Ofertas em tempo real | Sudden Death |
-|----------------|----------------------|--------------|
-| Timer se estende com novas ofertas | Sim | Não |
-| Gera preços mais altos | Geralmente, porque compradores têm mais tempo para reagir | Às vezes mais baixo, porque o timer não se estende |
-| Duração da venda | Pode se estender além do timer inicial | Fixa — sempre termina no tempo definido |
-| Melhor para | Itens de alto valor onde você quer o preço máximo | Vendas rápidas, limpar estoque rapidamente |
-| Pré-ofertas | Sim (qtd = 1) | Sim (qtd = 1) |
+**Importante:** pré-ofertas só estão disponíveis quando a quantidade do produto é **1**.
 
 ## Dicas importantes
 
-- **Comece com um preço inicial baixo.** Um preço inicial baixo (como R$ 5,00) atrai mais ofertas. Compradores sentem que estão fazendo um bom negócio, e a competição eleva o preço final
-- **Fale enquanto o timer roda.** Não inicie a venda e fique em silêncio. Descreva o produto, construa empolgação, incentive os espectadores a fazerem ofertas. "Dou-lhe uma... quem mais quer?"
-- **Use Sudden Death para variar.** Se você tem feito ofertas em tempo real o show inteiro, mude para Sudden Death em alguns produtos. Isso muda a energia e mantém os compradores engajados
-- **Cuidado com o tempo do timer.** 30 segundos é um bom ponto de partida. Muito curto (5 segundos) e compradores não têm tempo para reagir. Muito longo (90 segundos) e os espectadores perdem o interesse
-- **Pré-ofertas geram expectativa.** Habilite pré-ofertas para seus melhores produtos. Compradores que fazem pré-ofertas têm mais chance de aparecer no seu show e competir
-- **Atenção ao preço inicial.** Embora preços iniciais baixos atraiam mais ofertas, certifique-se de que você está confortável vendendo por aquele preço caso apenas uma pessoa faça oferta
+- **Comece com preço inicial baixo**, R$ 5 atrai mais ofertas. Compradores sentem que estão fazendo um bom negócio, e a competição empurra o preço final para cima
+- **Fale enquanto o cronômetro roda**, descreva o produto, construa empolgação, incentive os espectadores. "Dou-lhe uma, quem mais quer?" funciona
+- **Misture os dois modos no mesmo show**, alterne entre Oferta em tempo real e Sudden Death para mudar o ritmo e manter o público engajado
+- **15 a 30 segundos é o ponto certo de duração**, muito curto e os compradores não reagem, muito longo e os espectadores perdem interesse
+- **Habilite pré-ofertas nos seus melhores produtos**, compradores que pré-ofertam têm mais chance de aparecer no show e competir
+- **Atenção ao preço inicial baixo**, certifique-se de estar confortável vendendo por aquele valor caso só uma pessoa ofertar
 
 ## Perguntas frequentes
 
 **Qual é o preço inicial mínimo?**
-R$ 5,00 para Ofertas em tempo real e Sudden Death.
+R$ 5 para Oferta em tempo real e Sudden Death no Brasil.
 
-**Qual é a faixa do timer?**
-Mínimo 5 segundos, máximo 90 segundos. Recomendamos 30 segundos como ponto de partida.
+**Qual é a faixa de duração do cronômetro?**
+Mínimo 5 segundos, máximo 90 segundos. O padrão é 15 segundos.
 
 **Posso cancelar uma venda depois que ela começou?**
-Sim. Você pode cancelar uma venda ativa durante seu show. O produto volta para sua lista de produtos e pode ser reiniciado.
+Sim. Você pode cancelar uma venda ativa durante o show. O produto volta para a lista e pode ser reiniciado.
 
 **O que acontece se o pagamento do comprador falhar?**
-Se o pagamento do comprador vencedor não for processado, a venda pode ser cancelada. O produto pode então ser reiniciado.
+Se o pagamento do comprador vencedor não for processado, a venda pode ser cancelada e o produto pode ser reiniciado.
 
 **Posso ter várias vendas ao mesmo tempo?**
-Sim. Você pode ter vários produtos rodando simultaneamente durante seu show — por exemplo, um produto com Ofertas em tempo real e outro com Buy It Now.
+Sim. Você pode ter vários produtos rodando simultaneamente durante o show, por exemplo, um com Oferta em tempo real e outro com Comprar agora.
 
-**Tem comissão nas vendas com ofertas em tempo real?**
-Sim. A Jamble cobra uma comissão de 14% em todas as vendas, independente do modo de venda. Isso é calculado sobre o preço final de venda.
+**Tem comissão nas vendas?**
+Sim. A Jamble cobra 14% sobre o preço final de qualquer venda, independente do modo. A comissão é descontada antes do repasse via PIX.
 
-**Posso restringir quem pode fazer ofertas?**
-Sim. Ao configurar uma venda, você pode escolher o público-alvo: todos os compradores, apenas seus seguidores, ou apenas compradores anteriores.
+**Posso restringir quem pode ofertar?**
+Sim. Ao configurar a venda, você pode escolher o público-alvo: todos os compradores, apenas seus seguidores, ou apenas compradores anteriores.
 
 ## Precisa de ajuda?
 

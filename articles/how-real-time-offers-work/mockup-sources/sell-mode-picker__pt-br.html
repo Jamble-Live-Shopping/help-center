@@ -3,16 +3,45 @@
 body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
 .phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
 
-.picker-title { font-size: 15px; font-weight: 600; color: #A0A7B7; text-transform: uppercase; padding: 14px 20px 8px; letter-spacing: 0.5px; }
+.picker-title { font-size: 13px; font-weight: 600; color: #A0A7B7; text-transform: uppercase; padding: 16px 20px 8px; letter-spacing: 0.5px; }
 .group { margin: 0 12px 14px; border: 1px solid #E9EAEF; border-radius: 12px; overflow: hidden; }
-.opt { display: flex; align-items: center; padding: 14px 16px; border-bottom: 1px solid #F0F1F5; }
+.opt { display: flex; align-items: flex-start; padding: 14px 16px; border-bottom: 1px solid #F0F1F5; }
 .opt:last-child { border-bottom: none; }
 .opt.selected { background: #F9F8FF; }
-.opt-icon { width: 24px; height: 24px; background: #E9EAEF; border-radius: 6px; margin-right: 12px; flex-shrink: 0; }
+.opt-icon { width: 24px; height: 24px; margin-right: 12px; flex-shrink: 0; }
+.opt-icon svg { width: 100%; height: 100%; display: block; }
 .opt-text { flex: 1; }
 .opt-name { font-size: 17px; font-weight: 600; color: #162233; line-height: 22px; }
 .opt-sub { font-size: 13px; color: #A0A7B7; line-height: 18px; margin-top: 2px; }
-.radio { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid #A0A7B7; flex-shrink: 0; margin-left: 12px; }
+.radio { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid #A0A7B7; flex-shrink: 0; margin-left: 12px; margin-top: 2px; }
 .radio.selected { border-color: #162233; position: relative; }
 .radio.selected::after { content: ""; position: absolute; top: 3px; left: 3px; width: 10px; height: 10px; border-radius: 50%; background: #162233; }
-</style></head><body><div class="phone"><div class="picker-title">Sell Mode</div><div class="group"><div class="opt selected"><div class="opt-icon"></div><div class="opt-text"><div class="opt-name">Real-time offers</div></div><div class="radio selected"></div></div><div class="opt "><div class="opt-icon"></div><div class="opt-text"><div class="opt-name">Sudden Death</div></div><div class="radio "></div></div><div class="opt "><div class="opt-icon"></div><div class="opt-text"><div class="opt-name">Buy It Now</div></div><div class="radio "></div></div></div></div></body></html>
+
+.expanded { background: #F9F8FF; padding: 0 16px 14px; display: flex; gap: 12px; }
+.field { flex: 1; }
+.field-label { font-size: 11px; font-weight: 600; color: #6B7A92; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 6px; }
+.field-input { background: #FFFFFF; border: 1px solid #E9EAEF; border-radius: 8px; padding: 10px 12px; font-size: 15px; font-weight: 600; color: #162233; }
+</style></head><body><div class="phone">
+<div class="picker-title">Modo de venda</div>
+<div class="group">
+  <div class="opt selected">
+    <div class="opt-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.0265 2.96815C9.99881 3.12501 9.97963 3.3002 9.97963 3.48498C9.97963 3.66976 9.99881 3.84495 10.0265 4.00181C10.105 4.4464 10.4374 4.74364 10.8301 4.86173C9.88485 5.12412 9.0043 5.54213 8.21785 6.08645C8.00728 5.87929 7.82616 5.70472 7.67104 5.55796C7.11748 5.03425 6.29325 4.89386 5.66962 5.41485C5.53611 5.52638 5.39259 5.65642 5.24141 5.8076C5.09024 5.95878 4.9602 6.10228 4.84866 6.2358C4.32768 6.85945 4.46807 7.68365 4.99178 8.23721C5.16337 8.41859 5.37297 8.63552 5.62822 8.89344C4.88778 10.173 4.46398 11.6587 4.46398 13.2434C4.46398 13.3689 4.46664 13.4938 4.4719 13.618H7.12932C8.30097 13.618 9.25072 14.5678 9.25072 15.7394C9.25072 15.9432 9.22199 16.1402 9.16837 16.3267C10.2936 16.3789 11.1898 17.3077 11.1898 18.4458C11.1898 18.6551 11.1595 18.8573 11.1031 19.0483C12.1426 19.1851 12.945 20.0746 12.945 21.1514C12.945 21.4277 12.8921 21.6916 12.7961 21.9336C12.9173 21.9386 13.0392 21.9412 13.1617 21.9412C17.9653 21.9412 21.8595 18.047 21.8595 13.2434C21.8595 11.6587 21.4357 10.173 20.6952 8.89344C20.9535 8.63251 21.165 8.4135 21.3376 8.23085C21.8576 7.68098 21.9984 6.86301 21.4809 6.24271C21.3681 6.1075 21.2361 5.96168 21.082 5.8076C20.9279 5.65352 20.7821 5.52151 20.6469 5.4087C20.0266 4.89125 19.2087 5.03202 18.6587 5.55195C18.5022 5.69995 18.319 5.87645 18.1056 6.08645C17.3191 5.54213 16.4386 5.12412 15.4933 4.86173C15.886 4.74364 16.2184 4.4464 16.2969 4.00181C16.3246 3.84495 16.3438 3.66976 16.3438 3.48498C16.3438 3.3002 16.3246 3.12501 16.2969 2.96815C16.1981 2.40871 15.6974 2.08259 15.1802 2.05312C14.7125 2.02648 14.0295 2 13.1617 2C12.294 2 11.6109 2.02648 11.1432 2.05312C10.6261 2.08259 10.1253 2.40871 10.0265 2.96815ZM16.7313 16.8134C17.0626 16.482 17.0626 15.9447 16.7313 15.6134L14.0099 12.8919V9.00062C14.0099 8.53196 13.63 8.15206 13.1613 8.15206C12.6926 8.15206 12.3127 8.53196 12.3127 9.00062V13.2434C12.3127 13.4685 12.4021 13.6843 12.5613 13.8434L15.5312 16.8134C15.8626 17.1448 16.3999 17.1448 16.7313 16.8134Z" fill="#7E53F8"/></svg></div>
+    <div class="opt-text"><div class="opt-name">Oferta em tempo real</div><div class="opt-sub">A última oferta vence ao final do tempo</div></div>
+    <div class="radio selected"></div>
+  </div>
+  <div class="expanded">
+    <div class="field"><div class="field-label">Preço inicial</div><div class="field-input">R$ 5</div></div>
+    <div class="field"><div class="field-label">Duração (segundos)</div><div class="field-input">15</div></div>
+  </div>
+  <div class="opt">
+    <div class="opt-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.54791 2 2 5.81596 2 10.6666C2 14.7568 5.24326 18.1185 9.52093 19.0647C9.53395 19.2789 9.54698 19.4709 9.56046 19.6416C9.64233 20.6714 10.3619 21.5491 11.4981 21.7331C11.7521 21.774 12.047 21.814 12.3888 21.85C12.4863 21.8603 12.5849 21.8508 12.6783 21.8221C12.7717 21.7935 12.8577 21.7464 12.9307 21.6839C13.0037 21.6213 13.0621 21.5448 13.1021 21.4593C13.1421 21.3737 13.1628 21.2811 13.1628 21.1874V19.9998C13.1628 19.823 13.2363 19.6534 13.3671 19.5284C13.498 19.4034 13.6754 19.3332 13.8605 19.3332C14.0455 19.3332 14.223 19.4034 14.3538 19.5284C14.4846 19.6534 14.5581 19.823 14.5581 19.9998V21.3309C14.5581 21.5065 14.6306 21.675 14.7598 21.7998C14.8891 21.9246 15.0646 21.9957 15.2484 21.9976C15.7213 22.0025 16.1942 22 16.667 21.99C16.8493 21.9861 17.0227 21.9141 17.1501 21.7895C17.2776 21.6649 17.3489 21.4976 17.3488 21.3234V19.9998C17.3488 19.823 17.4223 19.6534 17.5532 19.5284C17.684 19.4034 17.8615 19.3332 18.0465 19.3332C18.2315 19.3332 18.409 19.4034 18.5398 19.5284C18.6707 19.6534 18.7442 19.823 18.7442 19.9998V21.1323C18.7442 21.2276 18.7657 21.3217 18.807 21.4084C18.8484 21.4952 18.9087 21.5724 18.9839 21.6349C19.0592 21.6975 19.1476 21.7439 19.2432 21.771C19.3388 21.7982 19.4394 21.8054 19.5381 21.7922C19.6837 21.7731 19.8186 21.7531 19.9437 21.7331C21.08 21.5491 21.7995 20.6714 21.8814 19.6416C21.9437 18.8567 22 17.6341 22 15.7776V10.2221C22 10.1599 21.9907 10.0999 21.9744 10.043C21.6019 5.49063 17.2177 2 12 2ZM20.6047 11.5555C20.6047 10.3319 19.7619 9.55548 18.9767 9.55548C18.1916 9.55548 17.3488 10.3319 17.3488 11.5555C17.3488 12.779 18.1916 13.5554 18.9767 13.5554C19.7619 13.5554 20.6047 12.779 20.6047 11.5555ZM10.8372 11.5555C10.8372 10.3955 11.726 9.55548 12.6977 9.55548C13.6693 9.55548 14.5581 10.3955 14.5581 11.5555C14.5581 12.7155 13.6693 13.5554 12.6977 13.5554C11.726 13.5554 10.8372 12.7155 10.8372 11.5555Z" fill="#828DA2"/></svg></div>
+    <div class="opt-text"><div class="opt-name">Sudden Death</div><div class="opt-sub">Sem tempo adicional, mesmo que alguém dê uma oferta</div></div>
+    <div class="radio"></div>
+  </div>
+  <div class="opt">
+    <div class="opt-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.81246 14.8636H13.7754C15.7034 14.8636 16.9844 14.7599 17.7853 14.6555C18.5714 14.553 19.1806 14.0054 19.4702 13.2861C20.0375 11.8768 20.5471 10.4661 20.8942 8.89106C21.137 7.78966 20.2627 6.81816 19.1705 6.81816H9.03031L8.31111 4.56214C8.0144 3.6313 7.15485 2.99997 6.18428 2.99997H4.27496C3.58737 2.99997 2.96712 3.50461 2.93988 4.22906C2.93682 4.31061 2.93506 4.39379 2.93506 4.47723C2.93506 4.56072 2.93682 4.64389 2.93988 4.72545C2.96712 5.44989 3.58737 5.95453 4.27496 5.95453H5.53905C6.41835 8.97123 6.99004 10.9178 7.94969 13.7904C7.78439 13.8575 7.64376 13.9868 7.5657 14.1638L7.1087 15.1994C6.79163 15.918 6.94393 16.6875 7.38402 17.2261C7.01747 17.6269 6.79366 18.1621 6.79366 18.75C6.79366 19.9926 7.7938 21 9.02747 21C10.2612 21 11.2613 19.9926 11.2613 18.75C11.2613 18.4613 11.2073 18.1854 11.109 17.9318H15.0689C14.9706 18.1854 14.9166 18.4613 14.9166 18.75C14.9166 19.9926 15.9168 21 17.1504 21C18.3842 21 19.3843 19.9926 19.3843 18.75C19.3843 17.5073 18.3842 16.5 17.1504 16.5H8.87162C8.50423 16.5 8.25853 16.1191 8.40769 15.7809L8.81246 14.8636Z" fill="#828DA2"/></svg></div>
+    <div class="opt-text"><div class="opt-name">Comprar agora</div><div class="opt-sub">Ofereça um desconto em um item durante um período limitado</div></div>
+    <div class="radio"></div>
+  </div>
+</div>
+</div></body></html>
