@@ -8,12 +8,11 @@ body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-
 .nav-spacer { width: 18px; }
 
 .photos { display: flex; gap: 8px; padding: 8px 16px 16px; overflow: hidden; }
-.photo-cover { width: 96px; height: 96px; border-radius: 8px; background: linear-gradient(135deg, #FFE082 0%, #FF6F00 60%, #BF360C 100%); position: relative; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
-.photo-cover::after { content: "CHARIZARD"; position: absolute; bottom: 6px; left: 0; right: 0; text-align: center; font-size: 8px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.5px; }
-.photo-cover svg { width: 60px; height: 60px; }
-.photo-thumb { width: 64px; height: 64px; border-radius: 8px; flex-shrink: 0; }
-.photo-thumb-1 { background: linear-gradient(135deg, #FFB74D 0%, #FF6F00 100%); }
-.photo-thumb-2 { background: linear-gradient(135deg, #C5CAE9 0%, #5C6BC0 100%); }
+.photo-cover { width: 96px; height: 96px; border-radius: 8px; flex-shrink: 0; position: relative; background: linear-gradient(135deg, #C7B6FF 0%, #7E53F8 60%, #5A38C8 100%); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18); overflow: hidden; }
+.photo-cover .badge-cover { position: absolute; top: 6px; left: 6px; padding: 2px 7px; background: rgba(22,34,51,0.62); color: #FFFFFF; font-size: 9px; font-weight: 600; border-radius: 6px; letter-spacing: 0.3px; }
+.photo-thumb { width: 64px; height: 64px; border-radius: 8px; flex-shrink: 0; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18); }
+.photo-thumb-1 { background: linear-gradient(135deg, #FFB347 0%, #FF7AA4 100%); }
+.photo-thumb-2 { background: linear-gradient(135deg, #A8D8F0 0%, #5C7CCB 100%); }
 .photo-add { width: 64px; height: 64px; border-radius: 8px; border: 1.5px dashed #C9D0DC; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #A0A7B7; font-size: 24px; font-weight: 300; }
 
 .section { padding: 14px 16px; border-top: 1px solid #F0F1F5; }
@@ -34,7 +33,7 @@ body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-
 <div class="nav"><div class="nav-back">&#8249;</div><div class="nav-title">Novo produto</div><div class="nav-spacer"></div></div>
 
 <div class="photos">
-<div class="photo-cover"><svg viewBox="0 0 24 24"><path d="M12 2 L20 8 L20 18 L12 22 L4 18 L4 8 Z" fill="#FFFFFF" opacity="0.92"/><circle cx="12" cy="12" r="3.5" fill="#BF360C"/></svg></div>
+<div class="photo-cover"><div class="badge-cover">Capa</div></div>
 <div class="photo-thumb photo-thumb-1"></div>
 <div class="photo-thumb photo-thumb-2"></div>
 <div class="photo-add">+</div>
