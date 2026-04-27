@@ -1,0 +1,41 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 16px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th { text-align: left; padding: 10px 8px; background: #F2F2F7; color: #6B7A92; font-weight: 600; border-bottom: 1px solid #E9EAEF; font-size: 11px; text-transform: uppercase; letter-spacing: 0.3px; vertical-align: top; }
+td { padding: 10px 8px; border-bottom: 1px solid #E9EAEF; color: #162233; vertical-align: top; line-height: 16px; }
+tr:last-child td { border-bottom: none; }
+.method { font-weight: 600; color: #162233; }
+th.col-method, td.col-method { width: 32%; }
+th.col-source, td.col-source { width: 32%; }
+th.col-when, td.col-when { width: 36%; }
+.icon { display: inline-block; width: 14px; height: 14px; border-radius: 3px; vertical-align: middle; margin-right: 5px; }
+.icon.purple { background: #7E53F8; }
+.icon.blue { background: #3B82F6; }
+</style></head><body>
+<div class="phone">
+  <table>
+    <thead>
+      <tr>
+        <th class="col-method">Método</th>
+        <th class="col-source">Origem</th>
+        <th class="col-when">Quando usar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-method"><span class="icon purple"></span><span class="method">Clonar de Shows</span></td>
+        <td class="col-source">Seus outros shows (passados ou futuros)</td>
+        <td class="col-when">Reaproveitar listagens entre shows</td>
+      </tr>
+      <tr>
+        <td class="col-method"><span class="icon blue"></span><span class="method">Importar da Loja</span></td>
+        <td class="col-source">Seu perfil da loja</td>
+        <td class="col-when">Apenas durante um show ao vivo</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body></html>
