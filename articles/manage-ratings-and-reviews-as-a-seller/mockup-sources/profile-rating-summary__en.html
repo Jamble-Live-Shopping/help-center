@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; padding-bottom: 16px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.section-title { font-size: 20px; font-weight: 500; color: #162131; padding: 18px 16px 8px; }
+.summary { display: flex; align-items: center; justify-content: space-around; padding: 10px 16px 18px; background: #FFFFFF; }
+.summary-block { display: flex; flex-direction: column; align-items: center; gap: 0; }
+.summary-num { font-family: -apple-system-round, "SF Pro Rounded", system-ui, sans-serif; font-size: 40px; font-weight: 600; color: #56636F; line-height: 1; letter-spacing: -0.02em; }
+.summary-label { font-size: 16px; font-weight: 500; color: #78828C; margin-top: 4px; }
+.review-card { background: #FAFAFC; border-radius: 16px; margin: 8px 8px 8px; padding: 12px; }
+.review-head { display: flex; align-items: center; justify-content: space-between; }
+.review-user { display: flex; align-items: center; gap: 8px; }
+.avatar { width: 16px; height: 16px; border-radius: 8px; background: #E9EAEF; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; color: #7E53F8; }
+.review-name { font-size: 14px; font-weight: 500; color: #162131; }
+.review-time { font-size: 12px; font-weight: 500; color: #78828C; }
+.stars { display: flex; gap: 2px; margin-top: 8px; }
+.star { width: 14px; height: 14px; }
+.review-text { font-size: 14px; font-weight: 400; color: #56636F; line-height: 18px; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="phone">
+  <div class="section-title">Ratings &amp; Reviews</div>
+  <div class="summary">
+    <div class="summary-block">
+      <div class="summary-num">4.9</div>
+      <div class="summary-label">out of 5</div>
+    </div>
+    <div class="summary-block">
+      <div class="summary-num">127</div>
+      <div class="summary-label">Reviews</div>
+    </div>
+  </div>
+
+  <div class="review-card">
+    <div class="review-head">
+      <div class="review-user">
+        <div class="avatar">A</div>
+        <div class="review-name">@ana.collector</div>
+      </div>
+      <div class="review-time">2 days ago</div>
+    </div>
+    <div class="stars">
+      <svg class="star" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      <svg class="star" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      <svg class="star" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      <svg class="star" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      <svg class="star" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+    </div>
+    <div class="review-text">Card arrived in perfect condition, careful packaging and super fast shipping. Highly recommend!</div>
+  </div>
+
+  <div class="review-card">
+    <div class="review-head">
+      <div class="review-user">
+        <div class="avatar">L</div>
+        <div class="review-name">@lucas.tcg</div>
+      </div>
+      <div class="review-time">5 days ago</div>
+    </div>
+    <div class="stars">
+      <svg class="star" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      <svg class="star" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      <svg class="star" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      <svg class="star" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      <svg class="star" viewBox="0 0 24 24" fill="#56636F"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+    </div>
+    <div class="review-text">Good experience overall, item matched the description.</div>
+  </div>
+</div>
+</body>
+</html>
