@@ -1,0 +1,55 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding-bottom: 16px; }
+.header { display: flex; align-items: center; gap: 8px; padding: 14px 16px 4px; }
+.badge-bad { background: #FCE7E5; color: #B91C1C; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 10px; letter-spacing: 0.3px; }
+.section-title { font-size: 13px; font-weight: 600; color: #A0A7B7; text-transform: uppercase; padding: 12px 20px 8px; letter-spacing: 0.5px; }
+.field { margin: 0 16px 10px; padding: 12px 14px; background: #F9FAFC; border: 1px solid #E9EAEF; border-radius: 12px; position: relative; }
+.field.flag { border-color: #F4B5B0; background: #FEF5F4; }
+.field-label { font-size: 12px; font-weight: 500; color: #6B7A92; margin-bottom: 4px; }
+.field-value { font-size: 16px; color: #162233; font-weight: 500; line-height: 22px; }
+.field-value.placeholder { color: #A0A7B7; font-weight: 400; font-style: italic; }
+.row { display: flex; gap: 8px; margin: 0 16px 10px; }
+.row .field { flex: 1; margin: 0; }
+.counter { font-size: 11px; color: #A0A7B7; margin-left: auto; }
+.label-row { display: flex; align-items: center; }
+.chevron { color: #A0A7B7; font-size: 18px; }
+.value-row { display: flex; align-items: center; justify-content: space-between; }
+.flag-icon { position: absolute; right: -8px; top: -8px; width: 22px; height: 22px; background: #D92C20; color: white; border-radius: 50%; font-size: 13px; font-weight: 800; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.2); z-index: 5; }
+.note { margin: 0 16px 4px; font-size: 11px; color: #B91C1C; font-weight: 500; }
+</style></head><body><div class="phone">
+<div class="header"><div class="badge-bad">AVOID THIS LISTING</div></div>
+<div class="section-title">Product details</div>
+<div class="field flag">
+  <div class="flag-icon">!</div>
+  <div class="label-row"><div class="field-label">Title</div><div class="counter">29 / 60</div></div>
+  <div class="field-value">RARE CARD MUST BUY!!!</div>
+</div>
+<div class="note">All caps, no actual card name</div>
+<div class="row">
+  <div class="field flag">
+    <div class="flag-icon">!</div>
+    <div class="field-label">Price</div>
+    <div class="value-row"><div class="field-value">$1,850.00</div></div>
+  </div>
+  <div class="field flag">
+    <div class="flag-icon">!</div>
+    <div class="field-label">Condition</div>
+    <div class="value-row"><div class="field-value">New with Tags</div><div class="chevron">›</div></div>
+  </div>
+</div>
+<div class="note">Price above platform max and an inaccurate condition</div>
+<div class="field flag">
+  <div class="flag-icon">!</div>
+  <div class="label-row"><div class="field-label">Description</div><div class="counter">19 / 120</div></div>
+  <div class="field-value">Best card ever!!!</div>
+</div>
+<div class="note">Promotional language, zero condition details</div>
+<div class="field flag">
+  <div class="flag-icon">!</div>
+  <div class="field-label">Category</div>
+  <div class="value-row"><div class="field-value placeholder">Select</div><div class="chevron">›</div></div>
+</div>
+<div class="note">Empty category, buyers cannot find this listing</div>
+</div></body></html>
