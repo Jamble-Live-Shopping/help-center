@@ -1,0 +1,30 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; min-height: 460px; background: #0C131D; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.18); border: 1px solid #E9EAEF; overflow: hidden; display: flex; flex-direction: column; align-items: center; padding: 26px 24px 24px; position: relative; }
+.close { position: absolute; top: 16px; right: 16px; color: #FFFFFF; font-size: 20px; opacity: 0.85; }
+.banner { color: rgba(255,255,255,0.65); font-size: 12px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; gap: 6px; }
+.banner-dot { width: 8px; height: 8px; border-radius: 50%; background: #FF2867; }
+.podium { display: flex; align-items: flex-end; gap: 14px; justify-content: center; margin: 8px 0 18px; }
+.winner { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.winner-rank { font-size: 11px; color: rgba(255,255,255,0.65); font-weight: 600; }
+.winner-avatar { border-radius: 50%; border: 2px solid #FFD15A; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; }
+.w1 .winner-avatar { width: 64px; height: 64px; background: linear-gradient(135deg, #FF7AA4, #FF2867); font-size: 22px; }
+.w2 .winner-avatar, .w3 .winner-avatar { width: 48px; height: 48px; background: linear-gradient(135deg, #FFC9DA, #FF7AA4); border-color: rgba(255,255,255,0.3); font-size: 16px; }
+.winner-name { color: #FFFFFF; font-size: 12px; font-weight: 600; max-width: 84px; text-align: center; line-height: 1.2; }
+.rank-pill { font-size: 11px; color: rgba(255,255,255,0.85); font-weight: 600; margin-top: 4px; }
+.title { font-size: 26px; font-weight: 700; color: #FFFFFF; text-align: center; margin: 12px 0 18px; line-height: 1.15; }
+.claim { width: 100%; height: 56px; background: #7E53F8; color: #FFFFFF; font-size: 17px; font-weight: 600; border-radius: 28px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.claim .star { width: 14px; height: 14px; border-radius: 3px; background: #FFD15A; }
+</style></head><body><div class="phone">
+  <div class="close">×</div>
+  <div class="banner"><div class="banner-dot"></div><span>Equipe vermelha venceu</span></div>
+  <div class="podium">
+    <div class="winner w2"><div class="winner-rank">#2</div><div class="winner-avatar">M</div><div class="winner-name">marina_pkmn</div></div>
+    <div class="winner w1"><div class="winner-rank">#1</div><div class="winner-avatar">L</div><div class="winner-name">lucas_tcg</div></div>
+    <div class="winner w3"><div class="winner-rank">#3</div><div class="winner-avatar">R</div><div class="winner-name">rafa.diecast</div></div>
+  </div>
+  <div class="rank-pill">Você ficou em #4 na equipe vencedora</div>
+  <div class="title">Solicite suas recompensas!</div>
+  <div class="claim"><span>Reivindicar</span><div class="star"></div><span>R$ 25</span></div>
+</div></body></html>
