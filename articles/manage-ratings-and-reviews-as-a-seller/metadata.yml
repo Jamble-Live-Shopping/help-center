@@ -7,11 +7,11 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-04-27T00:00:00Z
 locales:
   pt-br:
-    title: 'Gerenciar Avaliações e Reviews como Vendedor'
-    description: ''
+    title: 'Gerenciar Classificações e Avaliações como Vendedor'
+    description: 'Como funcionam suas avaliações na Jamble, onde aparecem no perfil, como manter uma nota alta e como reportar avaliações injustas.'
   en:
     title: 'Manage Ratings and Reviews as a Seller'
-    description: 'This guide explains how the rating system works on Jamble, how buyers rate their experience with you, and how your ratings affect your seller reputation.'
+    description: 'How your ratings work on Jamble, where they appear on your profile, how to keep a high rating, and how to report unfair reviews.'
