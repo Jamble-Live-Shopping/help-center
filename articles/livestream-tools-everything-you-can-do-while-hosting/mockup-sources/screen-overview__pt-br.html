@@ -7,12 +7,16 @@ body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-
 .rt-sales { background: rgba(255,255,255,0.18); backdrop-filter: blur(10px); border-radius: 14px; padding: 6px 10px; font-size: 11px; color: #FFFFFF; font-weight: 600; }
 .rt-sales .rt-amount { font-size: 13px; }
 .top-icons { display: flex; gap: 8px; }
-.icon-pill { width: 32px; height: 32px; border-radius: 16px; background: rgba(255,255,255,0.18); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 14px; font-weight: 700; }
+.icon-pill { height: 32px; padding: 0 10px; border-radius: 16px; background: rgba(255,255,255,0.18); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; gap: 5px; color: #FFFFFF; font-size: 12px; font-weight: 700; }
+.icon-pill svg { width: 14px; height: 14px; }
+.icon-pill.dots { width: 32px; padding: 0; }
+.icon-pill.dots svg { width: 16px; height: 16px; }
 
 .live-badge { position: absolute; top: 56px; left: 12px; background: #F04437; border-radius: 4px; padding: 3px 7px; font-size: 10px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.4px; }
 
 .right-col { position: absolute; top: 100px; right: 12px; display: flex; flex-direction: column; gap: 12px; }
-.right-icon { width: 40px; height: 40px; border-radius: 20px; background: rgba(255,255,255,0.22); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 16px; }
+.right-icon { width: 40px; height: 40px; border-radius: 20px; background: rgba(255,255,255,0.22); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; color: #FFFFFF; }
+.right-icon svg { width: 22px; height: 22px; }
 
 .sale-timer { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.55); border-radius: 12px; padding: 8px 14px; color: #FFFFFF; text-align: center; }
 .sale-timer .timer-value { font-size: 20px; font-weight: 700; font-feature-settings: "tnum"; }
@@ -31,7 +35,8 @@ body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-
 
 .bottom-bar { position: absolute; left: 12px; right: 12px; bottom: 14px; display: flex; align-items: center; gap: 8px; }
 .chat-input { flex: 1; background: rgba(255,255,255,0.18); backdrop-filter: blur(10px); border-radius: 18px; padding: 8px 12px; font-size: 11px; color: rgba(255,255,255,0.7); }
-.bottom-icon { width: 32px; height: 32px; border-radius: 16px; background: rgba(255,255,255,0.22); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 14px; font-weight: 700; }
+.bottom-icon { width: 32px; height: 32px; border-radius: 16px; background: rgba(255,255,255,0.22); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; color: #FFFFFF; }
+.bottom-icon svg { width: 18px; height: 18px; }
 
 .label { position: absolute; width: 22px; height: 22px; border-radius: 11px; background: #7E53F8; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; box-shadow: 0 2px 6px rgba(0,0,0,0.4); border: 2px solid #FFFFFF; }
 .label-1 { top: 8px; left: 4px; }
@@ -45,15 +50,15 @@ body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-
   <div class="top-bar">
     <div class="rt-sales">Vendas em tempo real<br><span class="rt-amount">R$ 0</span></div>
     <div class="top-icons">
-      <div class="icon-pill">128</div>
-      <div class="icon-pill">...</div>
+      <div class="icon-pill"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 11C11.21 11 13 9.21 13 7C13 4.79 11.21 3 9 3C6.79 3 5 4.79 5 7C5 9.21 6.79 11 9 11ZM16.5 11C18.16 11 19.5 9.66 19.5 8C19.5 6.34 18.16 5 16.5 5C14.84 5 13.5 6.34 13.5 8C13.5 9.66 14.84 11 16.5 11ZM9 13C6.33 13 1 14.34 1 17V19C1 19.55 1.45 20 2 20H16C16.55 20 17 19.55 17 19V17C17 14.34 11.67 13 9 13ZM16.5 13C16.16 13 15.78 13.02 15.38 13.06C15.39 13.07 15.39 13.08 15.4 13.09C16.7 13.99 17.5 15.16 17.5 17V20H22C22.55 20 23 19.55 23 19V17C23 14.34 18.84 13 16.5 13Z" fill="white"/></svg>128</div>
+      <div class="icon-pill dots"><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.75 9C0.75 8.40326 0.978273 7.83097 1.3846 7.40901C1.79093 6.98705 2.34203 6.75 2.91667 6.75C3.4913 6.75 4.0424 6.98705 4.44873 7.40901C4.85506 7.83097 5.08333 8.40326 5.08333 9C5.08333 9.59674 4.85506 10.169 4.44873 10.591C4.0424 11.0129 3.4913 11.25 2.91667 11.25C2.34203 11.25 1.79093 11.0129 1.3846 10.591C0.978273 10.169 0.75 9.59674 0.75 9ZM9 6.75C8.42536 6.75 7.87426 6.98705 7.46794 7.40901C7.06161 7.83097 6.83333 8.40326 6.83333 9C6.83333 9.59674 7.06161 10.169 7.46794 10.591C7.87426 11.0129 8.42536 11.25 9 11.25C9.57464 11.25 10.1257 11.0129 10.5321 10.591C10.9384 10.169 11.1667 9.59674 11.1667 9C11.1667 8.40326 10.9384 7.83097 10.5321 7.40901C10.1257 6.98705 9.57464 6.75 9 6.75ZM15.0833 6.75C14.5087 6.75 13.9576 6.98705 13.5513 7.40901C13.1449 7.83097 12.9167 8.40326 12.9167 9C12.9167 9.59674 13.1449 10.169 13.5513 10.591C13.9576 11.0129 14.5087 11.25 15.0833 11.25C15.658 11.25 16.2091 11.0129 16.6154 10.591C17.0217 10.169 17.25 9.59674 17.25 9C17.25 8.40326 17.0217 7.83097 16.6154 7.40901C16.2091 6.98705 15.658 6.75 15.0833 6.75Z" fill="white"/></svg></div>
     </div>
   </div>
   <div class="live-badge">AO VIVO</div>
 
   <div class="right-col">
-    <div class="right-icon">+&#128247;</div>
-    <div class="right-icon">&#8635;</div>
+    <div class="right-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.83327 8.18353C6.47792 8.1676 7.41877 8.16878 8.93938 8.18353C9.10658 8.18353 9.26456 8.09123 9.34813 7.94354C9.51988 7.26826 11.7946 4.53416 13.3335 4.22285C15.3564 3.90758 16.5295 3.94442 18.6287 4.22285C20.1092 4.57507 22.3438 7.28533 22.6141 7.94354C22.6977 8.09123 22.8556 8.18353 23.0229 8.18353C24.956 8.13345 25.4976 8.16482 27.129 8.18353C28.9219 8.18353 29.7538 9.50962 30.3804 11.4149C31.007 13.3201 31.3847 19.2226 30.3804 24.3125C30.0222 26.1279 28.9219 27.5439 27.129 27.5439C18.4875 28.1445 13.49 28.1595 4.83327 27.5439C3.04034 27.5439 2.04627 26.159 1.58182 24.3125C0.545778 19.5924 1.11737 13.289 1.58182 11.4149C2.04627 9.54073 3.04034 8.18353 4.83327 8.18353ZM15.9811 23.8602C19.3069 23.8602 22.0195 21.1735 22.0195 17.8591C22.0195 14.5539 19.3069 11.8581 15.9811 11.8581C12.6553 11.8581 9.9427 14.5539 9.9427 17.8591C9.9427 21.1735 12.6553 23.8602 15.9811 23.8602Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M19.237 18.7619C18.8679 20.3579 17.5575 21.5385 16 21.5385C15.539 21.5385 15.1649 21.1249 15.1649 20.6154C15.1649 20.1058 15.539 19.6923 16 19.6923C16.6289 19.6923 17.1767 19.3074 17.4615 18.7397C17.322 18.7 17.1892 18.6197 17.0798 18.4988C16.7541 18.1388 16.7541 17.5535 17.0798 17.1935L17.915 16.2705C18.2407 15.9095 18.7701 15.9095 19.0958 16.2705L19.931 17.1935C20.2567 17.5535 20.2567 18.1388 19.931 18.4988C19.7414 18.7083 19.4833 18.796 19.237 18.7619ZM14.5385 16.9526C14.678 16.9923 14.8108 17.0726 14.9202 17.1935C15.2459 17.5535 15.2459 18.1388 14.9202 18.4988L14.085 19.4218C13.7593 19.7828 13.2299 19.7828 12.9042 19.4218L12.069 18.4988C11.7433 18.1388 11.7433 17.5535 12.069 17.1935C12.2586 16.984 12.5167 16.8963 12.763 16.9305C13.1321 15.3345 14.4425 14.1538 16 14.1538C16.461 14.1538 16.8351 14.5674 16.8351 15.0769C16.8351 15.5865 16.461 16 16 16C15.3711 16 14.8233 16.3849 14.5385 16.9526Z" fill="white"/></svg></div>
+    <div class="right-icon"><svg viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.35417 5.64648C4.35417 3.67897 5.94915 2.08398 7.91667 2.08398C9.88418 2.08398 11.4792 3.67897 11.4792 5.64648C11.4792 7.614 9.88418 9.20898 7.91667 9.20898C5.94915 9.20898 4.35417 7.614 4.35417 5.64648Z" fill="white"/><path d="M1.19098 16.2599C1.51735 12.7882 4.15009 10.0007 7.91667 10.0007C11.6832 10.0007 14.316 12.7882 14.6424 16.2599C14.6632 16.4818 14.5896 16.7021 14.4396 16.8669C14.2896 17.0317 14.077 17.1257 13.8542 17.1257H1.97917C1.75632 17.1257 1.54379 17.0317 1.39377 16.8669C1.24374 16.7021 1.17012 16.4818 1.19098 16.2599Z" fill="white"/><path d="M15.8333 6.83398C15.8333 6.39676 15.4789 6.04232 15.0417 6.04232C14.6044 6.04232 14.25 6.39676 14.25 6.83398V8.41732H12.6667C12.2294 8.41732 11.875 8.77176 11.875 9.20898C11.875 9.64621 12.2294 10.0007 12.6667 10.0007H14.25V11.584C14.25 12.0212 14.6044 12.3757 15.0417 12.3757C15.4789 12.3757 15.8333 12.0212 15.8333 11.584V10.0007H17.4167C17.8539 10.0007 18.2083 9.64621 18.2083 9.20898C18.2083 8.77176 17.8539 8.41732 17.4167 8.41732H15.8333V6.83398Z" fill="white"/></svg></div>
   </div>
 
   <div class="sale-timer">
@@ -77,8 +82,8 @@ body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-
 
   <div class="bottom-bar">
     <div class="chat-input">Mensagem para sua audiência</div>
-    <div class="bottom-icon">&#128717;</div>
-    <div class="bottom-icon">+</div>
+    <div class="bottom-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.37533 16.6795C4.37533 16.2117 4.76154 15.8406 5.22629 15.7561C5.47389 15.7111 5.71459 15.6469 5.94705 15.5654C6.64491 15.3206 7.58366 15.7637 7.58366 16.4967C7.6999 18.4124 7.69407 19.4803 7.58366 21.3381C7.58366 21.8059 7.96671 22.1851 8.43922 22.1851C12.7791 21.8883 15.2144 21.8897 19.5614 22.1851C20.0339 22.1851 20.417 21.8059 20.417 21.3381C20.2978 19.4502 20.2726 18.3849 20.417 16.4991C20.417 15.7657 21.3575 15.3217 22.0558 15.5661C22.2877 15.6473 22.5277 15.7112 22.7744 15.756C23.2391 15.8405 23.6253 16.2117 23.6253 16.6795C23.7636 19.7517 23.7552 21.4319 23.6253 24.5144C23.6253 24.9822 23.2423 25.3614 22.7698 25.3614C15.2454 25.7765 11.4539 25.7604 5.23088 25.3614C4.75837 25.3614 4.37533 24.9822 4.37533 24.5144C4.22974 21.4694 4.21921 19.7246 4.37533 16.6795ZM22.5559 3.12734C24.6948 4.186 26.8337 9.31478 26.8337 11.0681C26.8337 12.8214 25.3963 14.2444 23.6253 14.2444C21.8543 14.2444 20.417 12.8214 20.417 11.0681C20.417 12.8214 18.9797 14.2444 17.2087 14.2444C15.4377 14.2444 14.0003 12.8214 14.0003 11.0681C14.0003 12.8214 12.563 14.2444 10.792 14.2444C9.02099 14.2444 7.58366 12.8214 7.58366 11.0681C7.58366 12.8214 6.14633 14.2444 4.37533 14.2444C2.60433 14.2444 1.16699 12.8214 1.16699 11.0681C1.16699 9.31478 3.30588 4.18591 5.44477 3.12734C7.58366 2.06877 20.417 2.06867 22.5559 3.12734Z" fill="white"/></svg></div>
+    <div class="bottom-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.6554 27.0946C21.6554 28.0405 20.9459 28.75 20 28.75C19.0541 28.75 18.3446 28.0405 18.3446 27.0946V21.6554H12.9054C11.9595 21.6554 11.25 20.9459 11.25 20C11.25 19.0541 11.9595 18.3446 12.9054 18.3446H18.3446V12.9054C18.3446 11.9595 19.0541 11.25 20 11.25C20.9459 11.25 21.6554 11.9595 21.6554 12.9054V18.3446H27.0946C28.0405 18.3446 28.75 19.0541 28.75 20C28.75 20.9459 28.0405 21.6554 27.0946 21.6554H21.6554V27.0946Z" fill="white"/></svg></div>
   </div>
 
   <div class="label label-1">1</div>

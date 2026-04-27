@@ -4,15 +4,16 @@ body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-
 .phone { width: 320px; min-height: 420px; background: rgba(0,0,0,0.18); border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding: 12px 8px; display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; position: relative; }
 
 .sheet { background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 14px; overflow: hidden; }
-.sheet-btn { display: block; width: 100%; padding: 16px 12px; font-size: 17px; color: #007AFF; border: none; background: transparent; font-family: inherit; border-bottom: 0.5px solid rgba(60,60,67,0.2); text-align: center; }
+.sheet-btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 16px 12px; font-size: 17px; color: #007AFF; border: none; background: transparent; font-family: inherit; border-bottom: 0.5px solid rgba(60,60,67,0.2); text-align: center; }
 .sheet-btn:last-child { border-bottom: none; }
+.sheet-btn svg { width: 18px; height: 18px; color: #007AFF; flex-shrink: 0; }
 .cancel { background: rgba(255,255,255,0.95); border-radius: 14px; }
 .cancel .sheet-btn { font-weight: 600; color: #007AFF; }
 </style></head><body>
 <div class="phone">
   <div class="sheet">
-    <button class="sheet-btn">New Quickie Listing</button>
-    <button class="sheet-btn">Clone Past Shows Listings</button>
+    <button class="sheet-btn"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 21L12.5 13H8L13 3H17L14 9.5L19 9L11 21Z" fill="currentColor"/></svg>New Quickie Listing</button>
+    <button class="sheet-btn"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" fill="currentColor"/></svg>Clone Past Shows Listings</button>
   </div>
   <div class="cancel">
     <button class="sheet-btn">Cancel</button>
