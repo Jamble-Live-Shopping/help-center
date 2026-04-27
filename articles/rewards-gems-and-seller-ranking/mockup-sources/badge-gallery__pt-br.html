@@ -1,0 +1,57 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; min-height: 460px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.10); border: 1px solid #E9EAEF; overflow: hidden; padding: 18px 18px 22px; display: flex; flex-direction: column; gap: 14px; }
+.title { font-size: 17px; font-weight: 700; color: #162233; }
+.subtitle { font-size: 13px; color: #6B7A92; line-height: 1.4; margin-top: -8px; }
+.tier { display: flex; align-items: center; gap: 14px; padding: 12px; border-radius: 14px; border: 1px solid #E9EAEF; background: #FAFBFC; }
+.medal { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; box-shadow: 0 2px 6px rgba(0,0,0,0.10); }
+.medal-inner { width: 40px; height: 40px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; }
+.medal-icon { font-size: 18px; font-weight: 800; }
+.medal.rising { background: linear-gradient(135deg, #E0AF7E 0%, #C48C54 100%); }
+.medal.rising .medal-icon { color: #C48C54; }
+.medal.elite { background: linear-gradient(135deg, #C9CCD2 0%, #A6A9B0 100%); }
+.medal.elite .medal-icon { color: #A6A9B0; }
+.medal.ultra { background: linear-gradient(135deg, #E5CC85 0%, #CDB35E 100%); }
+.medal.ultra .medal-icon { color: #CDB35E; }
+.medal.partner { background: linear-gradient(135deg, #9265FF 0%, #7E53F8 100%); }
+.medal.partner .medal-icon { color: #7E53F8; }
+.tier-body { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+.tier-name { font-size: 14px; font-weight: 700; color: #162233; }
+.tier-desc { font-size: 12px; color: #6B7A92; line-height: 1.35; }
+</style></head><body><div class="phone">
+  <div class="title">Níveis de badges verificados</div>
+  <div class="subtitle">Atribuídos pela Jamble com base no seu desempenho geral.</div>
+
+  <div class="tier">
+    <div class="medal rising"><div class="medal-inner"><span class="medal-icon">↑</span></div></div>
+    <div class="tier-body">
+      <div class="tier-name">Rising Live Seller</div>
+      <div class="tier-desc">Vendedor novo com forte crescimento e atividade consistente.</div>
+    </div>
+  </div>
+
+  <div class="tier">
+    <div class="medal elite"><div class="medal-inner"><span class="medal-icon">★</span></div></div>
+    <div class="tier-body">
+      <div class="tier-name">Elite Live Seller</div>
+      <div class="tier-desc">Vendedor de alto desempenho com excelente histórico.</div>
+    </div>
+  </div>
+
+  <div class="tier">
+    <div class="medal ultra"><div class="medal-inner"><span class="medal-icon">♛</span></div></div>
+    <div class="tier-body">
+      <div class="tier-name">Ultra Live Seller</div>
+      <div class="tier-desc">Um dos melhores vendedores da plataforma.</div>
+    </div>
+  </div>
+
+  <div class="tier">
+    <div class="medal partner"><div class="medal-inner"><span class="medal-icon">J</span></div></div>
+    <div class="tier-body">
+      <div class="tier-name">Parceiro da Jamble</div>
+      <div class="tier-desc">Parceiro oficial Jamble, reconhecido como vendedor líder.</div>
+    </div>
+  </div>
+</div></body></html>

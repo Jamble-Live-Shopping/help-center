@@ -2,7 +2,7 @@
 
 ## What you'll learn
 
-This guide explains how the Jamble rewards system works, how buyers earn and spend gems during your shows, and how the seller ranking and badge system recognizes top sellers.
+This guide explains how the Jamble rewards system works, how buyers earn and spend **Gems** during your shows, and how the **Seller Ranking** and verified badges recognize top sellers.
 
 ## Before you start
 
@@ -12,123 +12,117 @@ You need:
 
 ## How the rewards system works
 
-Jamble has a rewards system that benefits both buyers and sellers:
+Jamble has a rewards system that benefits both buyers and sellers at the same time:
 
-1. **Buyers earn gems** by watching shows and completing challenges
-2. **Buyers spend gems** by sending emojis during your live show
-3. **Sellers earn ranking points** when buyers spend gems on their show
-4. **Top sellers earn badges** and recognition based on their ranking
+1. **Buyers earn Gems** by watching shows and completing challenges
+2. **Buyers spend Gems** to send emojis during your live shows
+3. **Sellers earn ranking points** when buyers send Gems on their show
+4. **Top sellers earn badges** and recognition based on performance
 
-As a seller, you don't need to do anything special to participate — it happens automatically during your shows. Understanding the system helps you encourage your audience to engage.
+As a seller, you don't need to do anything special to participate. It happens automatically during your shows. Understanding the system helps you encourage your audience to engage.
 
-## How buyers earn gems
+## How buyers earn Gems
 
-Buyers earn gems for free through the **Watch & Earn** system:
+The Gems flow starts on the **Rewards** screen, inside the app. Buyers accumulate Gems for free by watching shows and completing challenges.
 
-- **Watching shows** — buyers earn gems based on their watch time. The longer they watch live shows, the more gems they accumulate. Milestone rewards are given at certain watch time thresholds
-- **Completing challenges** — periodic tasks like "Watch 3 shows this week" or "Make your first purchase" that reward gems
-- **Referrals** — inviting new users to Jamble can earn gem rewards
+![Rewards screen with Watch and Earn and Get Free Gems button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/rewards-gems-and-seller-ranking__gems-watch-earn__en__v2.png)
 
-Gems are earned for free through these activities. Buyers accumulate them over time by being active on the platform.
+The **Watch & Earn** progress bar shows how much time was watched today. Tapping **Get Free Gems** converts that time into Gems before midnight. **Challenges** are short tasks, like watching 3 shows this week or inviting a friend, that reward extra Gems.
 
-## How buyers spend gems on your show
+Buyers can also purchase Gems, but the system is designed to give Gems to the people active on the platform. The more they engage, the more Gems they accumulate.
 
-During your live show, buyers can **send emojis** from the emoji drawer. Each emoji costs a certain number of gems.
+## How buyers spend Gems on your show
+
+During your live show, buyers tap the emoji drawer and pick an emoji to send. Each emoji costs the buyer a certain amount of Gems.
 
 When a buyer sends an emoji:
+
 - An animated emoji appears on screen for everyone to see
-- It shows support for you as the seller
-- It costs the buyer gems, which are converted into **ranking points for you**
+- The buyer shows support for you as the seller
+- The Gems spent are converted into **ranking points for you**
 
-The more emojis your audience sends, the more ranking points you accumulate. This is one of the inputs to the seller ranking system.
+The more emojis your audience sends, the more points you accumulate over the month.
 
-## Seller ranking
+## Seller Ranking
 
-### How it works
+Jamble maintains a **monthly Seller Ranking** accessible from your profile. It compares you to other active sellers of the month.
 
-Jamble maintains a **monthly seller ranking** — a leaderboard that scores sellers based on:
+![Seller Ranking with point rules and a leaderboard list](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/rewards-gems-and-seller-ranking__seller-ranking__en__v2.png)
 
-- **Gem support received** — emojis sent by buyers during your shows (gems spent on you)
-- **Sales activity** — your selling performance during the month
+At the top, the purple card lists **the two rules** that earn points: **gem support received** (emojis sent by your audience) and **sales completed** during the month. Below that, the leaderboard ranks sellers by **Score**, with your **You** row highlighted at the bottom.
 
-The ranking resets monthly, giving every seller a fresh chance to climb the leaderboard.
+The ranking resets at the beginning of each month, so every seller starts fresh.
 
-### Where to see your ranking
+### Where top-ranked sellers show up
 
-You can view the seller ranking from your profile. The leaderboard shows:
+Climbing the ranking increases your visibility on the platform. Top sellers:
 
-- Your current position
-- Your score breakdown (gem support + sales)
-- Other sellers' positions
-
-### How ranking benefits you
-
-A high ranking increases your visibility on the platform. Top-ranked sellers:
-
-- Appear more prominently in recommendations and search
-- Build reputation with buyers who check rankings
-- May qualify for verified badge tiers (see below)
+- Show up more often in recommendations and search
+- Build reputation with buyers who check the leaderboard
+- May qualify for a **verified badge** tier (see below)
 
 ## Verified badges
 
-Top sellers on Jamble can earn **verified badges** that appear on their profile. These badges signal trust and quality to buyers.
+Top sellers can earn a **verified badge** that appears on their profile. It signals trust and quality to buyers.
 
-### Badge tiers
+![Gallery of the 4 verified badge tiers Rising Elite Ultra and Jamble Partner](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/rewards-gems-and-seller-ranking__badge-gallery__en__v2.png)
 
-| Badge | What it means |
-|-------|--------------|
-| **Rising Live Seller** | A new seller showing strong growth and consistent activity |
-| **Elite Live Seller** | A high-performing seller with excellent track record |
-| **Ultra Live Seller** | One of the top sellers on the platform |
-| **Jamble Partner** | Official Jamble partner — recognized as a leading seller |
+The 4 tiers appear in order of progression. Each badge has its own color, from the newest (Rising) up to official partner recognition (Jamble Partner).
+
+### The 4 badge tiers
+
+- **Rising Live Seller**, a new seller showing strong growth and consistent activity
+- **Elite Live Seller**, a high-performing seller with an excellent track record
+- **Ultra Live Seller**, one of the top sellers on the platform
+- **Jamble Partner**, official Jamble partner, recognized as a leading seller
 
 ### How badges are assigned
 
-Badges are **assigned by Jamble** based on your overall performance — not self-selected. The criteria include seller ranking, sales volume, consistency, buyer satisfaction, and platform engagement.
+Badges are **assigned by Jamble** based on your overall performance. You don't apply for one. The criteria include seller ranking, sales volume, consistency, buyer satisfaction, and platform engagement.
 
-You don't need to apply for a badge. If you meet the criteria, the badge appears on your profile automatically.
+If you meet the criteria, the badge appears on your profile automatically.
 
-### Where badges appear
+### Where your badge shows up
 
-Your badge is visible on:
-- Your **profile page** — next to your username
-- **During your live shows** — buyers see your badge, which builds trust
-- **In search results** — badged sellers stand out in listings
+Your badge is visible in several places:
+- On your **profile page**, next to your username
+- **During your live shows**, where buyers see the badge
+- **In search results**, making your profile stand out in listings
 
-## How to improve your ranking and earn a badge
+## How to climb the ranking and earn a badge
 
 1. **Host shows regularly.** Consistency matters more than one big show. Regular shows keep you in the ranking
-2. **Engage your audience.** Buyers who enjoy your show are more likely to send emojis (gems) to support you
-3. **Sell quality products.** Sales volume is part of the ranking formula. More sales = more points
-4. **Build a loyal following.** Repeat viewers who know and like your shows send more emoji support
-5. **Deliver great experiences.** The verified badge criteria include buyer satisfaction — ship fast, be honest about condition, and communicate well
+2. **Engage your audience.** Buyers who enjoy your show send more emojis (Gems) to support you
+3. **Sell quality products.** Sales volume is part of the ranking formula. More sales means more points
+4. **Build a loyal following.** Repeat viewers who know your show send more emoji support
+5. **Deliver great experiences.** Badge criteria include buyer satisfaction. Ship fast, be honest about condition, and communicate well
 
 ## Important tips
 
-- **You don't need to spend money.** The ranking system runs on buyer activity and your selling performance. There's nothing you need to purchase
-- **Emojis are a sign of audience engagement.** If your audience sends lots of emojis, it means they're enjoying the show. Thank them and keep the energy up
-- **Badges take time.** Don't expect a badge after one show. It's based on sustained performance over time
-- **Monthly reset means fresh opportunities.** Even if you had a slow month, next month's ranking starts fresh. Stay consistent
+- **You don't need to spend money.** The ranking runs on buyer activity and your sales performance. There's nothing you need to purchase
+- **Emojis are an engagement signal.** If your audience sends a lot of emojis, it means they're enjoying the show. Thank them and keep the energy up
+- **Badges take time.** Don't expect a badge after a single show. It's based on sustained performance
+- **Monthly reset means fresh opportunities.** Even if you had a slow month, next month starts fresh. Stay consistent
 
 ## Common questions
 
-**Do I earn money from gems or emojis?**
-The gems/emoji system contributes to your ranking and visibility, not directly to your revenue. Your income comes from product sales. However, higher ranking = more visibility = potentially more buyers in your shows.
+**Do I earn money from Gems or emojis?**
+The Gems and emoji system contributes to your ranking and visibility, not directly to your revenue. Your income comes from product sales. But a higher ranking means more visibility, which tends to bring more buyers to your shows.
 
-**Can I buy gems as a seller?**
-The gem system is designed for buyers. As a seller, your focus is on hosting great shows and selling products. The ranking points come from buyer engagement with your content.
+**Can I buy Gems as a seller?**
+The Gems system is designed for buyers. As a seller, your focus is on hosting great shows and selling products. The ranking points come from buyer engagement with your content.
 
 **How often does the ranking update?**
-The ranking is calculated monthly. Your position updates as the month progresses based on accumulated points.
+The ranking is monthly. Your position updates throughout the month based on accumulated points, and resets on the first day of the following month.
 
-**What's the difference between ranking and badges?**
-The **ranking** is a monthly leaderboard that resets each month. **Badges** (Rising, Elite, Ultra, Jamble Partner) are longer-term recognitions assigned based on overall performance and don't reset monthly.
+**What's the difference between the ranking and badges?**
+The **ranking** is monthly and resets every month. **Badges** (Rising Live Seller, Elite Live Seller, Ultra Live Seller, Jamble Partner) are longer-term recognitions based on overall performance and don't reset monthly.
 
 **Can I lose my badge?**
-Badges are based on sustained performance. If your activity and performance change significantly over time, your badge tier may be adjusted.
+Badges are based on sustained performance. If your activity or performance change significantly over time, your badge tier may be adjusted.
 
 **I've been selling for a while but don't have a badge. Why?**
-Badge criteria are managed by Jamble and consider multiple factors beyond just sales — including consistency, buyer satisfaction, and community engagement. Keep delivering great experiences and the recognition will follow.
+Badge criteria are managed by Jamble and consider many factors beyond sales, including consistency, buyer satisfaction, and community engagement. Keep delivering great experiences and the recognition will follow.
 
 ## Need help?
 
