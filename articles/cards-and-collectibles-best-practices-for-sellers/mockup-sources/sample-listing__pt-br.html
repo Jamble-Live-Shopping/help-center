@@ -1,0 +1,69 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px 10px; }
+.nav-back { font-size: 22px; color: #162233; font-weight: 400; }
+.nav-title { font-size: 16px; font-weight: 600; color: #162233; }
+.nav-spacer { width: 18px; }
+
+.photos { display: flex; gap: 8px; padding: 8px 16px 16px; overflow: hidden; }
+.photo-cover { width: 96px; height: 96px; border-radius: 8px; background: linear-gradient(135deg, #FFE082 0%, #FF6F00 60%, #BF360C 100%); position: relative; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.photo-cover::after { content: "CHARIZARD"; position: absolute; bottom: 6px; left: 0; right: 0; text-align: center; font-size: 8px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.5px; }
+.photo-cover svg { width: 60px; height: 60px; }
+.photo-thumb { width: 64px; height: 64px; border-radius: 8px; flex-shrink: 0; }
+.photo-thumb-1 { background: linear-gradient(135deg, #FFB74D 0%, #FF6F00 100%); }
+.photo-thumb-2 { background: linear-gradient(135deg, #C5CAE9 0%, #5C6BC0 100%); }
+.photo-add { width: 64px; height: 64px; border-radius: 8px; border: 1.5px dashed #C9D0DC; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #A0A7B7; font-size: 24px; font-weight: 300; }
+
+.section { padding: 14px 16px; border-top: 1px solid #F0F1F5; }
+.label { font-size: 12px; font-weight: 600; color: #6B7A92; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 6px; }
+.value { font-size: 16px; color: #162233; line-height: 22px; }
+.value-strong { font-weight: 600; }
+.value-sub { font-size: 13px; color: #A0A7B7; margin-top: 2px; }
+.row { display: flex; align-items: center; justify-content: space-between; }
+.chev { color: #C9D0DC; font-size: 16px; }
+
+.condition-pill { display: inline-flex; align-items: center; padding: 6px 10px; background: #F4F0FF; color: #7E53F8; font-size: 13px; font-weight: 600; border-radius: 14px; }
+
+.price-row { display: flex; align-items: baseline; gap: 4px; }
+.price-currency { font-size: 14px; color: #6B7A92; font-weight: 500; }
+.price-amount { font-family: -apple-system-round, "SF Pro Rounded", system-ui, sans-serif; font-size: 22px; font-weight: 700; color: #162233; }
+</style></head><body><div class="phone">
+
+<div class="nav"><div class="nav-back">&#8249;</div><div class="nav-title">Novo produto</div><div class="nav-spacer"></div></div>
+
+<div class="photos">
+<div class="photo-cover"><svg viewBox="0 0 24 24"><path d="M12 2 L20 8 L20 18 L12 22 L4 18 L4 8 Z" fill="#FFFFFF" opacity="0.92"/><circle cx="12" cy="12" r="3.5" fill="#BF360C"/></svg></div>
+<div class="photo-thumb photo-thumb-1"></div>
+<div class="photo-thumb photo-thumb-2"></div>
+<div class="photo-add">+</div>
+</div>
+
+<div class="section">
+<div class="label">Título</div>
+<div class="value value-strong">Charizard VMAX, Shining Fates, NM</div>
+</div>
+
+<div class="section">
+<div class="label">Categoria</div>
+<div class="row"><div class="value">Trading Cards &gt; Pokémon TCG</div><div class="chev">&#8250;</div></div>
+</div>
+
+<div class="section">
+<div class="label">Condição</div>
+<div class="condition-pill">Novo sem etiquetas</div>
+<div class="value-sub">Near Mint, leve desgaste na borda superior direita</div>
+</div>
+
+<div class="section">
+<div class="label">Perfil de remessa</div>
+<div class="row"><div class="value">Carta</div><div class="chev">&#8250;</div></div>
+</div>
+
+<div class="section">
+<div class="label">Preço inicial</div>
+<div class="price-row"><div class="price-currency">R$</div><div class="price-amount">450,00</div></div>
+</div>
+
+</div></body></html>

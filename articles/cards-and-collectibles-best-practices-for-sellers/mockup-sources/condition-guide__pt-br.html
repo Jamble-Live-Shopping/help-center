@@ -1,0 +1,78 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.nav { padding: 14px 16px 6px; }
+.nav-title { font-size: 16px; font-weight: 600; color: #162233; text-align: center; }
+.section-title { font-size: 12px; font-weight: 600; color: #6B7A92; text-transform: uppercase; letter-spacing: 0.4px; padding: 12px 16px 6px; }
+
+.row { display: flex; align-items: flex-start; padding: 12px 16px; border-top: 1px solid #F0F1F5; gap: 12px; }
+.swatch { width: 56px; height: 56px; border-radius: 8px; flex-shrink: 0; background: linear-gradient(135deg, #FFE082 0%, #FF6F00 60%, #BF360C 100%); display: flex; align-items: center; justify-content: center; }
+.swatch svg { width: 36px; height: 36px; }
+.swatch.s1 { filter: none; }
+.swatch.s2 { filter: brightness(0.96) contrast(0.98); }
+.swatch.s3 { filter: brightness(0.92) contrast(0.95) saturate(0.9); }
+.swatch.s4 { filter: brightness(0.86) contrast(0.92) saturate(0.78); }
+.swatch.s5 { filter: brightness(0.78) contrast(0.88) saturate(0.6) sepia(0.15); }
+
+.row-info { flex: 1; min-width: 0; }
+.row-head { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; flex-wrap: wrap; }
+.pill { display: inline-flex; padding: 3px 8px; font-size: 11px; font-weight: 600; border-radius: 10px; letter-spacing: 0.2px; }
+.pill-1 { background: #E8F8F0; color: #1B8A4F; }
+.pill-2 { background: #F0F4FF; color: #2D5BD7; }
+.pill-3 { background: #FFF4E0; color: #B7791F; }
+.pill-4 { background: #FFE6D6; color: #C0531C; }
+.pill-5 { background: #FBE3E3; color: #B12B2B; }
+.row-name { font-size: 14px; font-weight: 600; color: #162233; }
+.row-desc { font-size: 12px; color: #6B7A92; line-height: 16px; }
+</style></head><body><div class="phone">
+
+<div class="nav"><div class="nav-title">Guia de condição</div></div>
+<div class="section-title">Cards de TCG</div>
+
+<div class="row">
+<div class="swatch s1"><svg viewBox="0 0 24 24"><path d="M12 2 L20 8 L20 18 L12 22 L4 18 L4 8 Z" fill="#FFFFFF" opacity="0.95"/><circle cx="12" cy="12" r="3.5" fill="#BF360C"/></svg></div>
+<div class="row-info">
+<div class="row-head"><span class="pill pill-1">PSA 10 / Mint</span></div>
+<div class="row-name">Novo com etiquetas</div>
+<div class="row-desc">Sem marcas. Cantos perfeitos. Como saiu do pacote.</div>
+</div>
+</div>
+
+<div class="row">
+<div class="swatch s2"><svg viewBox="0 0 24 24"><path d="M12 2 L20 8 L20 18 L12 22 L4 18 L4 8 Z" fill="#FFFFFF" opacity="0.95"/><circle cx="12" cy="12" r="3.5" fill="#BF360C"/></svg></div>
+<div class="row-info">
+<div class="row-head"><span class="pill pill-2">NM, Near Mint</span></div>
+<div class="row-name">Novo sem etiquetas</div>
+<div class="row-desc">2 a 3 imperfeições mínimas. Difícil ver à primeira vista.</div>
+</div>
+</div>
+
+<div class="row">
+<div class="swatch s3"><svg viewBox="0 0 24 24"><path d="M12 2 L20 8 L20 18 L12 22 L4 18 L4 8 Z" fill="#FFFFFF" opacity="0.95"/><circle cx="12" cy="12" r="3.5" fill="#BF360C"/></svg></div>
+<div class="row-info">
+<div class="row-head"><span class="pill pill-3">LP, Light Play</span></div>
+<div class="row-name">Muito bom</div>
+<div class="row-desc">Leve desgaste de jogo. Card jogável e intacta.</div>
+</div>
+</div>
+
+<div class="row">
+<div class="swatch s4"><svg viewBox="0 0 24 24"><path d="M12 2 L20 8 L20 18 L12 22 L4 18 L4 8 Z" fill="#FFFFFF" opacity="0.95"/><circle cx="12" cy="12" r="3.5" fill="#BF360C"/></svg></div>
+<div class="row-info">
+<div class="row-head"><span class="pill pill-4">MP, Moderately Played</span></div>
+<div class="row-name">Bom</div>
+<div class="row-desc">Sujeira ou pequenas dobras. Visível à primeira vista.</div>
+</div>
+</div>
+
+<div class="row">
+<div class="swatch s5"><svg viewBox="0 0 24 24"><path d="M12 2 L20 8 L20 18 L12 22 L4 18 L4 8 Z" fill="#FFFFFF" opacity="0.95"/><circle cx="12" cy="12" r="3.5" fill="#BF360C"/></svg></div>
+<div class="row-info">
+<div class="row-head"><span class="pill pill-5">HP, Heavily Played</span></div>
+<div class="row-name">Satisfatório</div>
+<div class="row-desc">Desgaste pesado. Vincos, rasgos ou danos por líquidos.</div>
+</div>
+</div>
+
+</div></body></html>

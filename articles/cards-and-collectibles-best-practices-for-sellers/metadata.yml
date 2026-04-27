@@ -7,11 +7,11 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-04-27T00:00:00Z
 locales:
   pt-br:
-    title: 'Cards e Colecionáveis: Melhores Práticas para Vendedores'
-    description: ''
+    title: 'Cards e Colecionáveis, Melhores Práticas para Vendedores'
+    description: 'Como descrever a condição, tirar fotos que vendem, escolher perfis de envio e usar Pack Opening para boosters lacrados.'
   en:
-    title: 'Cards and Collectibles: Best Practices for Sellers'
-    description: "This guide covers best practices for selling trading cards, collectible figures, and related items on Jamble in Brazil. You'll learn how to properly describe condition, take the right photos, and set up your listings for success."
+    title: 'Cards and Collectibles, Best Practices for Sellers'
+    description: 'How to describe condition, take photos that sell, choose shipping profiles, and use Pack Opening for sealed boosters.'
