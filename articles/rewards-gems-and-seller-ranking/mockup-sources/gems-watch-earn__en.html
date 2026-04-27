@@ -1,0 +1,65 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; min-height: 480px; background: #F4F4F8; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.10); border: 1px solid #E9EAEF; overflow: hidden; padding: 16px 16px 24px; display: flex; flex-direction: column; gap: 10px; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 4px 0 8px; }
+.nav-back { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; color: #162233; font-size: 18px; }
+.nav-title { font-size: 17px; font-weight: 600; color: #162233; }
+.nav-spacer { width: 28px; }
+.card { background: #FFFFFF; border-radius: 16px; padding: 16px; box-shadow: 0 1px 2px rgba(22,34,51,0.04); }
+.card-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.balance-icon { width: 44px; height: 44px; border-radius: 22px; background: linear-gradient(135deg, #6FB6FF 0%, #2B7FFF 100%); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 1px 4px rgba(43,127,255,0.25); }
+.gem { width: 22px; height: 22px; background: linear-gradient(180deg, #87CFFF 0%, #1E6FE0 100%); transform: rotate(45deg); border: 1.5px solid #FFFFFF; border-radius: 3px; }
+.balance-text { display: flex; flex-direction: column; }
+.balance-label { font-size: 12px; color: #6B7A92; font-weight: 500; }
+.balance-amount { font-size: 22px; font-weight: 700; color: #162233; line-height: 1.1; }
+.section-title { font-size: 17px; font-weight: 700; color: #162233; margin-top: 4px; }
+.section-subtitle { font-size: 13px; color: #6B7A92; line-height: 1.35; margin-top: 4px; }
+.progress-track { width: 100%; height: 8px; background: #E9EAEF; border-radius: 4px; overflow: hidden; margin: 14px 0 6px; }
+.progress-fill { width: 62%; height: 100%; background: linear-gradient(90deg, #7340EE 0%, #9265FF 100%); border-radius: 4px; }
+.progress-info { display: flex; justify-content: space-between; font-size: 12px; color: #6B7A92; font-weight: 500; }
+.cta { width: 100%; height: 52px; margin-top: 14px; background: linear-gradient(135deg, #7340EE 0%, #9265FF 100%); color: #FFFFFF; font-size: 16px; font-weight: 600; border-radius: 26px; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 2px 8px rgba(115,64,238,0.25); }
+.cta-gem { width: 16px; height: 16px; background: linear-gradient(180deg, #FFFFFF 0%, #DCE6FF 100%); transform: rotate(45deg); border-radius: 2px; }
+.challenges-card { background: #FFFFFF; border-radius: 16px; padding: 14px 16px; box-shadow: 0 1px 2px rgba(22,34,51,0.04); }
+.challenges-title { font-size: 15px; font-weight: 700; color: #162233; margin-bottom: 10px; }
+.chal-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; }
+.chal-row + .chal-row { border-top: 1px solid #F0F1F4; }
+.chal-icon { width: 28px; height: 28px; border-radius: 14px; background: #F0EAFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.chal-dot { width: 12px; height: 12px; background: linear-gradient(180deg, #87CFFF 0%, #1E6FE0 100%); transform: rotate(45deg); border-radius: 2px; }
+.chal-body { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.chal-title { font-size: 13px; font-weight: 600; color: #162233; }
+.chal-sub { font-size: 11px; color: #6B7A92; }
+.chal-reward { font-size: 13px; font-weight: 700; color: #2B7FFF; flex-shrink: 0; }
+</style></head><body><div class="phone">
+  <div class="nav">
+    <div class="nav-back">‹</div>
+    <div class="nav-title">Rewards</div>
+    <div class="nav-spacer"></div>
+  </div>
+  <div class="card">
+    <div class="section-title">Watch &amp; Earn</div>
+    <div class="section-subtitle">Watch Shows and convert time daily before midnight</div>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+    <div class="progress-info"><span>18 min watched</span><span>30 min</span></div>
+    <div class="cta"><div class="cta-gem"></div><span>Get Free Gems</span></div>
+  </div>
+  <div class="challenges-card">
+    <div class="challenges-title">Challenges</div>
+    <div class="chal-row">
+      <div class="chal-icon"><div class="chal-dot"></div></div>
+      <div class="chal-body">
+        <div class="chal-title">Watch 3 shows this week</div>
+        <div class="chal-sub">2 of 3 completed</div>
+      </div>
+      <div class="chal-reward">+50</div>
+    </div>
+    <div class="chal-row">
+      <div class="chal-icon"><div class="chal-dot"></div></div>
+      <div class="chal-body">
+        <div class="chal-title">Invite a friend</div>
+        <div class="chal-sub">Earn free gems</div>
+      </div>
+      <div class="chal-reward">+100</div>
+    </div>
+  </div>
+</div></body></html>

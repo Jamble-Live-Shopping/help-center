@@ -1,134 +1,128 @@
-# Recompensas, Gems e Ranking de Vendedores
+# Recompensas, gemas e classificação de vendedores
 
 ## O que você vai aprender
 
-Este guia explica como o sistema de recompensas da Jamble funciona, como compradores ganham e gastam gems durante seus shows, e como o ranking e sistema de badges reconhece os melhores vendedores.
+Este guia explica como o sistema de recompensas da Jamble funciona, como compradores ganham e usam **gemas** durante seus shows, e como a **Classificação de Vendedores** e os badges reconhecem os melhores vendedores.
 
 ## Antes de começar
 
 Você precisa de:
 - Uma conta de vendedor aprovada na Jamble
-- Entendimento de como shows ao vivo funcionam
+- Entender como funcionam os shows ao vivo
 
 ## Como o sistema de recompensas funciona
 
-A Jamble tem um sistema de recompensas que beneficia compradores e vendedores:
+A Jamble tem um sistema de recompensas que beneficia compradores e vendedores ao mesmo tempo:
 
-1. **Compradores ganham gems** assistindo shows e completando desafios
-2. **Compradores gastam gems** enviando emojis durante seu show ao vivo
-3. **Vendedores ganham pontos de ranking** quando compradores gastam gems no seu show
-4. **Os melhores vendedores ganham badges** e reconhecimento baseado no ranking
+1. **Compradores ganham gemas** assistindo shows e completando desafios
+2. **Compradores usam gemas** para enviar emojis durante seus shows ao vivo
+3. **Vendedores ganham pontos de classificação** quando compradores enviam gemas no seu show
+4. **Os melhores vendedores ganham badges** e reconhecimento com base no desempenho
 
-Como vendedor, você não precisa fazer nada especial para participar — acontece automaticamente durante seus shows. Entender o sistema ajuda a incentivar sua audiência a engajar.
+Como vendedor, você não precisa fazer nada especial para participar. Acontece automaticamente durante seus shows. Entender o sistema te ajuda a engajar sua audiência.
 
-## Como compradores ganham gems
+## Como compradores ganham gemas
 
-Compradores ganham gems gratuitamente pelo sistema **Watch & Earn**:
+A pedagogia das gemas começa na tela de **Recompensas**, dentro do app. Compradores acumulam gemas gratuitamente assistindo shows e completando desafios.
 
-- **Assistindo shows** — compradores ganham gems baseado no tempo de visualização. Quanto mais assistem shows ao vivo, mais gems acumulam. Recompensas de marco são dadas em certos limites de tempo assistido
-- **Completando desafios** — tarefas periódicas como "Assista 3 shows esta semana" ou "Faça sua primeira compra" que recompensam gems
-- **Indicações** — convidar novos usuários para a Jamble pode render gems
+![Tela de Recompensas com Assista e ganhe e botão Obter gemas grátis](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/rewards-gems-and-seller-ranking__gems-watch-earn__pt-br__v2.png)
 
-Gems são ganhas gratuitamente por essas atividades. Compradores acumulam ao longo do tempo sendo ativos na plataforma.
+A barra de progresso de **Assista e ganhe** mostra o tempo assistido no dia. Ao tocar em **Obter gemas grátis**, o tempo é convertido em gemas antes da meia noite. Os **Desafios** são tarefas curtas, como assistir 3 shows na semana ou convidar um amigo, que recompensam mais gemas.
 
-## Como compradores gastam gems no seu show
+Compradores também podem comprar gemas, mas o foco do sistema é dar para quem participa da plataforma. Quanto mais ativos, mais gemas acumulam.
 
-Durante seu show ao vivo, compradores podem **enviar emojis** do menu de emojis. Cada emoji custa uma certa quantidade de gems.
+## Como compradores usam gemas no seu show
+
+Durante seu show ao vivo, compradores tocam no menu de emojis e escolhem um emoji para enviar. Cada emoji custa uma certa quantidade de gemas do comprador.
 
 Quando um comprador envia um emoji:
+
 - Um emoji animado aparece na tela para todos verem
-- Mostra apoio a você como vendedor
-- Custa gems do comprador, que são convertidas em **pontos de ranking para você**
+- O comprador demonstra apoio a você como vendedor
+- As gemas usadas se transformam em **pontos de classificação para você**
 
-Quanto mais emojis sua audiência enviar, mais pontos de ranking você acumula. Esta é uma das entradas para o sistema de ranking de vendedores.
+Quanto mais emojis sua audiência mandar, mais pontos você acumula no mês.
 
-## Ranking de vendedores
+## Classificação de Vendedores
 
-### Como funciona
+A Jamble mantém uma **Classificação de Vendedores mensal** acessível a partir do seu perfil. Ela compara você com outros vendedores ativos do mês.
 
-A Jamble mantém um **ranking mensal de vendedores** — uma classificação que pontua vendedores baseada em:
+![Classificação de Vendedores com regras de pontos e leaderboard](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/rewards-gems-and-seller-ranking__seller-ranking__pt-br__v2.png)
 
-- **Apoio em gems recebido** — emojis enviados por compradores durante seus shows (gems gastas em você)
-- **Atividade de vendas** — seu desempenho de vendas durante o mês
+No topo, o card roxo mostra **as duas regras** que geram pontos: **apoio em gemas recebido** (emojis enviados pela sua audiência) e **vendas concluídas** durante o mês. Em seguida, a leaderboard lista os vendedores em ordem de **Pontuação**, com sua linha **Você** destacada na parte de baixo.
 
-O ranking reseta mensalmente, dando a cada vendedor uma chance nova de subir na classificação.
+A classificação reseta no início de cada mês, então cada vendedor começa o mês do zero.
 
-### Onde ver seu ranking
+### Onde vendedores bem classificados aparecem
 
-Você pode ver o ranking de vendedores a partir do seu perfil. A classificação mostra:
+Subir na classificação aumenta sua visibilidade na plataforma. Vendedores no topo:
 
-- Sua posição atual
-- Seu detalhamento de pontos (apoio em gems + vendas)
-- Posições de outros vendedores
-
-### Como o ranking te beneficia
-
-Um ranking alto aumenta sua visibilidade na plataforma. Vendedores bem classificados:
-
-- Aparecem mais em recomendações e buscas
-- Constroem reputação com compradores que conferem rankings
-- Podem se qualificar para níveis de badges verificados (veja abaixo)
+- Aparecem mais nas recomendações e na busca
+- Constroem reputação com compradores que conferem o ranking
+- Podem se qualificar para um nível de **badge verificado** (veja abaixo)
 
 ## Badges verificados
 
-Vendedores de destaque na Jamble podem ganhar **badges verificados** que aparecem no perfil. Esses badges sinalizam confiança e qualidade para compradores.
+Vendedores em destaque podem ganhar um **badge verificado** que aparece no perfil. Ele sinaliza confiança e qualidade para os compradores.
 
-### Níveis de badges
+![Galeria com os 4 niveis de badges verificados Rising Elite Ultra e Parceiro da Jamble](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/rewards-gems-and-seller-ranking__badge-gallery__pt-br__v2.png)
 
-| Badge | O que significa |
-|-------|----------------|
-| **Rising Live Seller** | Vendedor novo mostrando forte crescimento e atividade consistente |
-| **Elite Live Seller** | Vendedor de alto desempenho com excelente histórico |
-| **Ultra Live Seller** | Um dos melhores vendedores da plataforma |
-| **Jamble Partner** | Parceiro oficial Jamble — reconhecido como vendedor líder |
+Os 4 níveis aparecem em ordem de progressão. Cada badge tem sua cor própria, da mais nova (Rising) até o reconhecimento de parceiro oficial (Parceiro da Jamble).
+
+### Os 4 níveis de badge
+
+- **Rising Live Seller**, vendedor novo mostrando crescimento forte e atividade consistente
+- **Elite Live Seller**, vendedor de alto desempenho com excelente histórico
+- **Ultra Live Seller**, um dos melhores vendedores da plataforma
+- **Parceiro da Jamble**, parceiro oficial Jamble, reconhecido como vendedor líder
 
 ### Como badges são atribuídos
 
-Badges são **atribuídos pela Jamble** baseado no seu desempenho geral — não são auto-selecionados. Os critérios incluem ranking de vendedor, volume de vendas, consistência, satisfação do comprador e engajamento na plataforma.
+Os badges são **atribuídos pela Jamble** com base no seu desempenho geral. Você não pede ou se candidata. Os critérios incluem classificação, volume de vendas, consistência, satisfação do comprador e engajamento na plataforma.
 
-Você não precisa se candidatar para um badge. Se atender os critérios, o badge aparece no seu perfil automaticamente.
+Se você atende aos critérios, o badge aparece no seu perfil automaticamente.
 
-### Onde badges aparecem
+### Onde o seu badge aparece
 
-Seu badge é visível em:
-- Sua **página de perfil** — ao lado do seu nome de usuário
-- **Durante seus shows ao vivo** — compradores veem seu badge, o que gera confiança
-- **Nos resultados de busca** — vendedores com badge se destacam nas listagens
+Seu badge fica visível em vários lugares:
+- Na sua **página de perfil**, ao lado do seu nome de usuário
+- **Durante seus shows ao vivo**, onde compradores veem o badge
+- **Nos resultados de busca**, fazendo seu perfil se destacar nas listagens
 
-## Como melhorar seu ranking e ganhar um badge
+## Como subir na classificação e ganhar um badge
 
-1. **Faça shows regularmente.** Consistência importa mais que um show grande. Shows regulares mantêm você no ranking
-2. **Engaje sua audiência.** Compradores que gostam do seu show são mais propensos a enviar emojis (gems) para te apoiar
-3. **Venda produtos de qualidade.** Volume de vendas faz parte da fórmula de ranking. Mais vendas = mais pontos
-4. **Construa seguidores fiéis.** Espectadores recorrentes que conhecem e gostam dos seus shows enviam mais apoio em emojis
-5. **Entregue ótimas experiências.** Os critérios de badges incluem satisfação do comprador — envie rápido, seja honesto sobre estado e comunique bem
+1. **Faça shows com regularidade.** Consistência importa mais do que um show grande isolado. Shows regulares te mantêm na classificação
+2. **Engaje sua audiência.** Compradores que curtem seu show enviam mais emojis (gemas) para te apoiar
+3. **Venda produtos com qualidade.** Volume de vendas faz parte da fórmula da classificação. Mais vendas, mais pontos
+4. **Construa uma audiência fiel.** Espectadores recorrentes que conhecem seu show enviam mais apoio em emojis
+5. **Entregue uma boa experiência.** Os critérios de badge incluem satisfação do comprador. Envie rápido, seja honesto sobre o estado do produto e comunique bem
 
 ## Dicas importantes
 
-- **Você não precisa gastar dinheiro.** O sistema de ranking funciona com atividade dos compradores e seu desempenho de vendas. Não há nada que você precise comprar
-- **Emojis são sinal de engajamento.** Se sua audiência envia muitos emojis, significa que estão curtindo o show. Agradeça e mantenha a energia
-- **Badges levam tempo.** Não espere um badge após um show. É baseado em desempenho sustentado ao longo do tempo
-- **Reset mensal significa novas oportunidades.** Mesmo se teve um mês fraco, o ranking do próximo mês começa do zero. Mantenha a consistência
+- **Você não precisa gastar dinheiro.** A classificação roda com a atividade dos compradores e seu desempenho de vendas. Não há nada que você precise comprar
+- **Emojis são sinal de engajamento.** Se sua audiência envia muitos emojis, é sinal de que estão curtindo. Agradeça e mantenha a energia
+- **Badges levam tempo.** Não espere um badge depois de um único show. É baseado em desempenho sustentado
+- **Reset mensal significa novas oportunidades.** Mesmo que tenha tido um mês fraco, o próximo começa do zero. Mantenha a consistência
 
 ## Perguntas frequentes
 
-**Eu ganho dinheiro com gems ou emojis?**
-O sistema de gems/emojis contribui para seu ranking e visibilidade, não diretamente para sua receita. Sua renda vem das vendas de produtos. Porém, ranking mais alto = mais visibilidade = potencialmente mais compradores nos seus shows.
+**Eu ganho dinheiro com as gemas ou com os emojis?**
+O sistema de gemas e emojis contribui para sua classificação e visibilidade, não diretamente para sua receita. Sua renda vem das vendas de produtos. Mas classificação mais alta significa mais visibilidade, o que tende a trazer mais compradores aos seus shows.
 
-**Posso comprar gems como vendedor?**
-O sistema de gems é feito para compradores. Como vendedor, seu foco é fazer shows incríveis e vender produtos. Os pontos de ranking vêm do engajamento dos compradores com seu conteúdo.
+**Posso comprar gemas como vendedor?**
+O sistema de gemas é pensado para os compradores. Como vendedor, seu foco é fazer ótimos shows e vender produtos. Os pontos de classificação vêm do engajamento dos compradores com o seu conteúdo.
 
-**Com que frequência o ranking atualiza?**
-O ranking é calculado mensalmente. Sua posição atualiza conforme o mês progride baseado nos pontos acumulados.
+**Com que frequência a classificação atualiza?**
+A classificação é mensal. Sua posição atualiza ao longo do mês com base nos pontos acumulados, e reseta no primeiro dia do mês seguinte.
 
-**Qual a diferença entre ranking e badges?**
-O **ranking** é uma classificação mensal que reseta todo mês. **Badges** (Rising Live Seller, Elite Live Seller, Ultra Live Seller, Jamble Partner) são reconhecimentos de longo prazo baseados em desempenho geral e não resetam mensalmente.
+**Qual a diferença entre classificação e badges?**
+A **classificação** é mensal e reseta todo mês. Os **badges** (Rising Live Seller, Elite Live Seller, Ultra Live Seller, Parceiro da Jamble) são reconhecimentos de longo prazo, baseados em desempenho geral, e não resetam mensalmente.
 
 **Posso perder meu badge?**
-Badges são baseados em desempenho sustentado. Se sua atividade e desempenho mudarem significativamente, seu nível de badge pode ser ajustado.
+Os badges são baseados em desempenho sustentado. Se sua atividade ou desempenho mudarem bastante ao longo do tempo, seu nível de badge pode ser ajustado.
 
-**Vendo há um tempo mas não tenho badge. Por quê?**
-Os critérios de badges são gerenciados pela Jamble e consideram múltiplos fatores além de vendas — incluindo consistência, satisfação do comprador e engajamento na comunidade. Continue entregando ótimas experiências e o reconhecimento virá.
+**Vendo há um tempo mas ainda não tenho badge. Por quê?**
+Os critérios de badge são gerenciados pela Jamble e consideram vários fatores além das vendas, incluindo consistência, satisfação do comprador e engajamento na comunidade. Continue entregando ótimas experiências e o reconhecimento vem.
 
 ## Precisa de ajuda?
 
