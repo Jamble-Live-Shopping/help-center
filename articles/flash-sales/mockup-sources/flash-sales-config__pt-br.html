@@ -1,16 +1,67 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
-.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
-
-.form-title { font-size: 20px; font-weight: 700; color: #162233; padding: 20px 20px 12px; }
-.form-body { padding: 0 20px 20px; }
-.field { margin-bottom: 14px; }
-.fl { font-size: 13px; font-weight: 600; color: #6B7A92; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.4px; }
-.fi { font-size: 15px; color: #A0A7B7; background: #F9FAFC; border: 1px solid #E9EAEF; border-radius: 8px; padding: 10px 12px; }
-.fd { font-size: 15px; color: #162233; background: #F9FAFC; border: 1px solid #E9EAEF; border-radius: 8px; padding: 10px 12px; display: flex; justify-content: space-between; align-items: center; }
-.fu { font-size: 14px; color: #6B7A92; border: 1.5px dashed #C7C7CC; border-radius: 8px; padding: 22px 12px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
-.fu span:first-child { font-size: 24px; font-weight: 300; color: #C7C7CC; }
-.ft { font-size: 15px; color: #A0A7B7; background: #F9FAFC; border: 1px solid #E9EAEF; border-radius: 8px; padding: 10px 12px; min-height: 60px; }
-.form-submit { background: #7E53F8; color: white; height: 48px; border-radius: 24px; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 600; margin: 4px 20px 20px; }
-</style></head><body><div class="phone"><div class="form-title">Modo de Venda: Compra Direta</div><div class="form-body"><div class="field"><div class="fl">Preço</div><div class="fi">R$ 200</div></div><div class="field"><div class="fl">⚡ Flash sale</div><div class="fd">Select &#9662;</div></div><div class="field"><div class="fl">Desconto (%)</div><div class="fi">30</div></div><div class="field"><div class="fl">Cronômetro (Segundos)</div><div class="fi">60</div></div></div><div class="form-submit">&lt;UNKNOWN&gt;</div></div></body></html>
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding: 18px 16px 18px; }
+.section-title { font-size: 17px; font-weight: 600; color: #162233; margin-bottom: 14px; }
+.sm-row { display: flex; align-items: center; padding: 12px 0 14px; }
+.sm-icon { width: 24px; height: 24px; flex-shrink: 0; margin-right: 12px; display: flex; align-items: center; justify-content: center; }
+.sm-icon svg { width: 22px; height: 22px; }
+.sm-text { flex: 1; }
+.sm-title { font-size: 17px; font-weight: 600; color: #162233; line-height: 22px; }
+.sm-sub { font-size: 13px; color: #A0A7B7; line-height: 17px; margin-top: 2px; }
+.sm-radio { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid #162233; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.sm-radio-dot { width: 10px; height: 10px; border-radius: 50%; background: #162233; }
+.divider { height: 1px; background: #F0F1F4; margin: 0 0 8px; }
+.fields { padding-top: 8px; }
+.field-row { display: flex; gap: 12px; margin-bottom: 10px; }
+.tf { flex: 1; height: 56px; border: 1px solid #E9EAEF; border-radius: 12px; background: #FFFFFF; padding: 8px 12px; display: flex; flex-direction: column; justify-content: center; }
+.tf-label { font-size: 11px; color: #A0A7B7; line-height: 13px; letter-spacing: 0.2px; }
+.tf-value { font-size: 16px; color: #162233; font-weight: 500; line-height: 20px; margin-top: 4px; }
+.toggle-row { display: flex; align-items: center; height: 44px; padding: 0 2px; margin-top: 4px; margin-bottom: 8px; }
+.toggle-icon { width: 22px; height: 22px; margin-right: 10px; display: flex; align-items: center; justify-content: center; }
+.toggle-label { flex: 1; font-size: 15px; color: #162233; font-weight: 500; }
+.switch { width: 51px; height: 31px; border-radius: 16px; background: #7E53F8; position: relative; flex-shrink: 0; }
+.switch-knob { position: absolute; right: 2px; top: 2px; width: 27px; height: 27px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 2px 4px rgba(0,0,0,0.15); }
+.flash-fields { display: flex; gap: 12px; margin-top: 4px; }
+</style></head><body>
+<div class="phone">
+  <div class="section-title">Modo de venda</div>
+  <div class="sm-row">
+    <div class="sm-icon">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M3 7.5h18v9H3z" fill="#FFD93D" stroke="#162233" stroke-width="1.5" stroke-linejoin="round"/><path d="M3 11h18" stroke="#162233" stroke-width="1.5"/></svg>
+    </div>
+    <div class="sm-text">
+      <div class="sm-title">Compre agora</div>
+      <div class="sm-sub">Ofereça um desconto em um item durante um período limitado.</div>
+    </div>
+    <div class="sm-radio"><div class="sm-radio-dot"></div></div>
+  </div>
+  <div class="divider"></div>
+  <div class="fields">
+    <div class="field-row">
+      <div class="tf">
+        <div class="tf-label">Preço</div>
+        <div class="tf-value">R$ 200,00</div>
+      </div>
+    </div>
+    <div class="toggle-row">
+      <div class="toggle-icon">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" fill="#7E53F8"/></svg>
+      </div>
+      <div class="toggle-label">Venda relâmpago</div>
+      <div class="switch"><div class="switch-knob"></div></div>
+    </div>
+    <div class="flash-fields">
+      <div class="tf">
+        <div class="tf-label">Desconto (%)</div>
+        <div class="tf-value">30</div>
+      </div>
+      <div class="tf">
+        <div class="tf-label">Duração (segundos)</div>
+        <div class="tf-value">60</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

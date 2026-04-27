@@ -7,11 +7,11 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-04-27T00:00:00Z
 locales:
   pt-br:
-    title: 'Vendas Relâmpago'
-    description: ''
+    title: 'Vendas relâmpago'
+    description: 'Como configurar e rodar vendas relâmpago: ative o toggle no produto Compre agora, defina desconto e duração, inicie durante o show.'
   en:
     title: 'Flash Sales'
-    description: 'A Flash Sale lets you sell a Buy It Now product at a discounted price for a limited time during your live show. You set a discount percentage and a countdown timer — buyers have to act fast before time runs out. This guide shows you how to set up and'
+    description: 'How to set up and run Flash Sales: turn on the toggle on a Buy It Now product, set discount and duration, start during your show.'
