@@ -1,0 +1,60 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding: 14px; }
+.title { font-size: 15px; font-weight: 700; color: #162233; padding: 4px 4px 12px; line-height: 20px; }
+.action-card { background: #F9FAFC; border: 1px solid #E9EAEF; border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
+.action-name { font-size: 13px; font-weight: 700; color: #7E53F8; line-height: 17px; }
+.action-desc { font-size: 12px; color: #162233; line-height: 16px; margin-top: 4px; }
+.action-roles { display: flex; gap: 4px; margin-top: 6px; flex-wrap: wrap; }
+.role-tag { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 8px; color: #FFFFFF; letter-spacing: 0.2px; }
+.role-tag.seller { background: #7E53F8; }
+.role-tag.mod { background: #50C878; }
+.role-tag.anyone { background: #6B7A92; }
+</style></head><body>
+<div class="phone">
+  <div class="title">Who can do each action</div>
+
+  <div class="action-card">
+    <div class="action-name">Delete this message</div>
+    <div class="action-desc">Removes the chat message for everyone</div>
+    <div class="action-roles">
+      <span class="role-tag seller">Seller</span>
+      <span class="role-tag mod">Moderator</span>
+    </div>
+  </div>
+
+  <div class="action-card">
+    <div class="action-name">Block from show</div>
+    <div class="action-desc">Removes the user from this show, no rejoin</div>
+    <div class="action-roles">
+      <span class="role-tag seller">Seller</span>
+      <span class="role-tag mod">Moderator</span>
+    </div>
+  </div>
+
+  <div class="action-card">
+    <div class="action-name">Block (account)</div>
+    <div class="action-desc">Permanent block across all shows</div>
+    <div class="action-roles">
+      <span class="role-tag anyone">Anyone</span>
+    </div>
+  </div>
+
+  <div class="action-card">
+    <div class="action-name">Report</div>
+    <div class="action-desc">Sends an anonymous report to Jamble</div>
+    <div class="action-roles">
+      <span class="role-tag anyone">Anyone</span>
+    </div>
+  </div>
+
+  <div class="action-card">
+    <div class="action-name">See profile</div>
+    <div class="action-desc">Opens the user's profile</div>
+    <div class="action-roles">
+      <span class="role-tag anyone">Anyone</span>
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,16 +1,49 @@
 <!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
-.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
-
-.phone { padding-bottom: 8px; }
-.section-header { padding: 16px 20px 8px; font-size: 17px; font-weight: 600; color: #162233; }
-.list { margin: 0 12px; border: 1px solid #E9EAEF; border-radius: 12px; overflow: hidden; }
-.row { padding: 12px 16px; display: flex; flex-direction: column; gap: 4px; border-bottom: 1px solid #F0F1F5; }
-.row:last-child { border-bottom: none; }
-.row-top, .row-bottom { display: flex; justify-content: space-between; align-items: center; }
-.row-id { font-size: 15px; font-weight: 600; color: #162233; }
-.row-amount { font-family: -apple-system-round, "SF Pro Rounded", system-ui, sans-serif; font-size: 15px; font-weight: 600; color: #162233; }
-.status { font-size: 13px; font-weight: 600; }
-.row-date { font-size: 13px; color: #6B7A92; }
-</style></head><body><div class="phone"><div class="section-header">My Moderators</div><div class="list"><div class="row"><div class="row-top"><div class="row-id"></div><div class="row-amount"></div></div><div class="row-bottom"><div class="status" style="color:#6B7A92"></div><div class="row-date"></div></div></div><div class="row"><div class="row-top"><div class="row-id"></div><div class="row-amount"></div></div><div class="row-bottom"><div class="status" style="color:#6B7A92"></div><div class="row-date"></div></div></div></div></div></body></html>
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding-bottom: 12px; }
+.header { display: flex; align-items: center; padding: 14px 16px 12px; }
+.back-arrow { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-size: 22px; color: #162233; font-weight: 300; }
+.header-title { flex: 1; text-align: center; font-size: 17px; font-weight: 500; color: #162233; padding-right: 28px; }
+.row { display: flex; align-items: center; padding: 12px 16px; border-top: 0.5px solid #F0F1F5; min-height: 60px; }
+.avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #7E53F8 0%, #B298FB 100%); flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 16px; }
+.avatar.alt { background: linear-gradient(135deg, #FF9D6F 0%, #FFC58A 100%); }
+.avatar.alt2 { background: linear-gradient(135deg, #50C878 0%, #8FE0A8 100%); }
+.name-block { flex: 1; padding: 0 12px; min-width: 0; }
+.display-name { font-size: 16px; font-weight: 600; color: #162233; line-height: 20px; }
+.username { font-size: 14px; color: #8E8E93; line-height: 18px; margin-top: 2px; }
+.action-btn { padding: 6px 14px; height: 32px; border-radius: 16px; color: #FFFFFF; font-size: 16px; font-weight: 600; display: flex; align-items: center; flex-shrink: 0; }
+.action-btn.add { background: #7E53F8; }
+.action-btn.remove { background: #8E8E93; }
+</style></head><body>
+<div class="phone">
+  <div class="header">
+    <div class="back-arrow">&#8249;</div>
+    <div class="header-title">Moderadores</div>
+  </div>
+  <div class="row">
+    <div class="avatar">M</div>
+    <div class="name-block">
+      <div class="display-name">Marina Silva</div>
+      <div class="username">@marina.collects</div>
+    </div>
+    <div class="action-btn remove">Remover</div>
+  </div>
+  <div class="row">
+    <div class="avatar alt">B</div>
+    <div class="name-block">
+      <div class="display-name">Bruno Souza</div>
+      <div class="username">@bruno.cards</div>
+    </div>
+    <div class="action-btn remove">Remover</div>
+  </div>
+  <div class="row">
+    <div class="avatar alt2">L</div>
+    <div class="name-block">
+      <div class="display-name">Larissa Mendes</div>
+      <div class="username">@larissa.tcg</div>
+    </div>
+    <div class="action-btn add">Adicionar</div>
+  </div>
+</div>
+</body></html>

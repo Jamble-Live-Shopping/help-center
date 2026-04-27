@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: rgba(0,0,0,0.18); border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; min-height: 420px; display: flex; flex-direction: column; justify-content: flex-end; padding: 8px; }
+.sheet { background: rgba(247,247,247,0.94); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 14px; overflow: hidden; }
+.sheet-action { padding: 14px 8px; font-size: 17px; text-align: center; border-bottom: 0.5px solid rgba(60,60,67,0.18); color: #007AFF; line-height: 22px; }
+.sheet-action.purple { color: #7E53F8; }
+.sheet-action.destructive { color: #FF3B30; font-weight: 400; }
+.sheet-action:last-child { border-bottom: none; }
+.cancel-sheet { margin-top: 8px; background: rgba(255,255,255,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 14px; }
+.cancel-sheet .sheet-action { font-weight: 600; color: #7E53F8; }
+</style></head><body>
+<div class="phone">
+  <div class="sheet">
+    <div class="sheet-action purple">Reply</div>
+    <div class="sheet-action purple">See profile</div>
+    <div class="sheet-action">Report</div>
+    <div class="sheet-action destructive">Block from show</div>
+    <div class="sheet-action destructive">Delete this message</div>
+  </div>
+  <div class="cancel-sheet">
+    <div class="sheet-action">Cancel</div>
+  </div>
+</div>
+</body></html>
