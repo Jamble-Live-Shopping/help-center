@@ -1,0 +1,41 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding: 16px; }
+
+.title-row { display: flex; align-items: center; gap: 4px; margin-bottom: 8px; }
+.title { font-size: 17px; font-weight: 600; color: #162233; }
+.info { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid #A0A7B7; display: flex; align-items: center; justify-content: center; color: #A0A7B7; font-size: 11px; font-weight: 600; font-style: italic; }
+
+.toggle-card { border: 1px solid #E9EAEF; border-radius: 8px; padding: 14px 16px; display: flex; align-items: center; gap: 16px; }
+.toggle-text { flex: 1; }
+.toggle-sub { font-size: 15px; color: #162233; line-height: 20px; margin-bottom: 6px; }
+.toggle-desc { font-size: 13px; color: #6B7A92; line-height: 17px; }
+
+.switch { width: 51px; height: 31px; background: #7E53F8; border-radius: 16px; position: relative; flex-shrink: 0; }
+.switch::after { content: ""; position: absolute; top: 2px; left: 22px; width: 27px; height: 27px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 2px 4px rgba(0,0,0,0.18), 0 0 1px rgba(0,0,0,0.08); }
+
+.tip { margin-top: 14px; padding: 12px 14px; background: #F4F0FF; border-radius: 10px; display: flex; gap: 10px; align-items: flex-start; }
+.tip-icon { font-size: 16px; flex-shrink: 0; }
+.tip-text { font-size: 12px; color: #4A3A8A; line-height: 16px; }
+</style></head><body><div class="phone">
+
+<div class="title-row">
+<div class="title">Pack Opening</div>
+<div class="info">i</div>
+</div>
+
+<div class="toggle-card">
+<div class="toggle-text">
+<div class="toggle-sub">Open packs during the Live</div>
+<div class="toggle-desc">If you plan to open Pokémon booster packs once they’re purchased</div>
+</div>
+<div class="switch"></div>
+</div>
+
+<div class="tip">
+<div class="tip-icon">&#9889;</div>
+<div class="tip-text">Turn this on to sell sealed booster packs that you open live during the show. Buyers see the cards being pulled in real time.</div>
+</div>
+
+</div></body></html>
