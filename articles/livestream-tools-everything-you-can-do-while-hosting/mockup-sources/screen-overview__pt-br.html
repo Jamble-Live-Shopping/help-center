@@ -1,0 +1,91 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; height: 580px; background: #0C131D; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); overflow: hidden; position: relative; }
+
+.top-bar { position: absolute; top: 0; left: 0; right: 0; padding: 14px 12px 10px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.rt-sales { background: rgba(255,255,255,0.18); backdrop-filter: blur(10px); border-radius: 14px; padding: 6px 10px; font-size: 11px; color: #FFFFFF; font-weight: 600; }
+.rt-sales .rt-amount { font-size: 13px; }
+.top-icons { display: flex; gap: 8px; }
+.icon-pill { width: 32px; height: 32px; border-radius: 16px; background: rgba(255,255,255,0.18); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 14px; font-weight: 700; }
+
+.live-badge { position: absolute; top: 56px; left: 12px; background: #F04437; border-radius: 4px; padding: 3px 7px; font-size: 10px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.4px; }
+
+.right-col { position: absolute; top: 100px; right: 12px; display: flex; flex-direction: column; gap: 12px; }
+.right-icon { width: 40px; height: 40px; border-radius: 20px; background: rgba(255,255,255,0.22); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 16px; }
+
+.sale-timer { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.55); border-radius: 12px; padding: 8px 14px; color: #FFFFFF; text-align: center; }
+.sale-timer .timer-value { font-size: 20px; font-weight: 700; font-feature-settings: "tnum"; }
+.sale-timer .timer-label { font-size: 10px; opacity: 0.8; margin-top: 2px; }
+
+.chat { position: absolute; left: 12px; right: 60px; bottom: 110px; height: 80px; }
+.chat-msg { background: rgba(0,0,0,0.4); backdrop-filter: blur(10px); border-radius: 12px; padding: 6px 10px; margin-top: 6px; font-size: 11px; color: #FFFFFF; }
+.chat-msg b { color: #FFD66B; font-weight: 600; }
+
+.sale-bar { position: absolute; left: 12px; right: 12px; bottom: 56px; background: rgba(0,0,0,0.6); backdrop-filter: blur(10px); border-radius: 14px; padding: 8px 10px; display: flex; align-items: center; gap: 8px; }
+.sale-thumb { width: 32px; height: 32px; border-radius: 8px; background: linear-gradient(135deg,#F4B53F,#D88527); }
+.sale-info { flex: 1; min-width: 0; color: #FFFFFF; }
+.sale-info .sale-title { font-size: 11px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sale-info .sale-sub { font-size: 10px; opacity: 0.75; margin-top: 1px; }
+.sale-cta { background: #7E53F8; color: #FFFFFF; border-radius: 14px; padding: 6px 12px; font-size: 11px; font-weight: 700; }
+
+.bottom-bar { position: absolute; left: 12px; right: 12px; bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.chat-input { flex: 1; background: rgba(255,255,255,0.18); backdrop-filter: blur(10px); border-radius: 18px; padding: 8px 12px; font-size: 11px; color: rgba(255,255,255,0.7); }
+.bottom-icon { width: 32px; height: 32px; border-radius: 16px; background: rgba(255,255,255,0.22); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 14px; font-weight: 700; }
+
+.label { position: absolute; width: 22px; height: 22px; border-radius: 11px; background: #7E53F8; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; box-shadow: 0 2px 6px rgba(0,0,0,0.4); border: 2px solid #FFFFFF; }
+.label-1 { top: 8px; left: 4px; }
+.label-2 { top: 110px; right: 56px; }
+.label-3 { top: 280px; left: 50%; transform: translateX(-50%) translateX(50px); }
+.label-4 { bottom: 196px; right: 14px; }
+.label-5 { bottom: 90px; left: 4px; }
+.label-6 { bottom: 24px; right: 4px; }
+</style></head><body>
+<div class="phone">
+  <div class="top-bar">
+    <div class="rt-sales">Vendas em tempo real<br><span class="rt-amount">R$ 0</span></div>
+    <div class="top-icons">
+      <div class="icon-pill">128</div>
+      <div class="icon-pill">...</div>
+    </div>
+  </div>
+  <div class="live-badge">AO VIVO</div>
+
+  <div class="right-col">
+    <div class="right-icon">+&#128247;</div>
+    <div class="right-icon">&#8635;</div>
+  </div>
+
+  <div class="sale-timer">
+    <div class="timer-value">00:42</div>
+    <div class="timer-label">Tempo restante</div>
+  </div>
+
+  <div class="chat">
+    <div class="chat-msg"><b>maria_collects</b> oi gente!</div>
+    <div class="chat-msg"><b>tcg_fan</b> quanto fica essa carta?</div>
+  </div>
+
+  <div class="sale-bar">
+    <div class="sale-thumb"></div>
+    <div class="sale-info">
+      <div class="sale-title">Charizard Holo PSA 9</div>
+      <div class="sale-sub">Começa em R$ 250</div>
+    </div>
+    <div class="sale-cta">Iniciar</div>
+  </div>
+
+  <div class="bottom-bar">
+    <div class="chat-input">Mensagem para sua audiência</div>
+    <div class="bottom-icon">&#128717;</div>
+    <div class="bottom-icon">+</div>
+  </div>
+
+  <div class="label label-1">1</div>
+  <div class="label label-2">2</div>
+  <div class="label label-3">3</div>
+  <div class="label label-4">4</div>
+  <div class="label label-5">5</div>
+  <div class="label label-6">6</div>
+</div>
+</body></html>

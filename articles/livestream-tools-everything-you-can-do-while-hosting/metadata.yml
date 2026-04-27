@@ -7,11 +7,11 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-04-27T00:00:00Z
 locales:
   pt-br:
-    title: 'Ferramentas de Live — Tudo o Que Você Pode Fazer Enquanto Apresenta'
-    description: ''
+    title: 'Ferramentas de Live, Tudo o Que Você Pode Fazer Apresentando'
+    description: 'Tour por todas as ferramentas que você usa apresentando uma live na Jamble: vendas, produtos, chat, batalhas e mais.'
   en:
-    title: 'Livestream Tools — Everything You Can Do While Hosting'
-    description: "This guide covers all the tools available to you while hosting a live show on Jamble. You'll learn what each button does, where to find it on screen, and how to use the tools effectively during your show."
+    title: 'Livestream Tools, Everything You Can Do While Hosting'
+    description: 'Tour of every tool you use while hosting a live show on Jamble: sales, products, chat, battles, and more.'

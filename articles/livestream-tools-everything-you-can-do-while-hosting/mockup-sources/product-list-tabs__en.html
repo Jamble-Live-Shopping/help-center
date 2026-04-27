@@ -1,0 +1,82 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding-bottom: 12px; }
+
+.handle { width: 36px; height: 4px; background: #DADDE3; border-radius: 2px; margin: 8px auto 12px; }
+.title-row { display: flex; align-items: center; justify-content: space-between; padding: 0 16px 10px; }
+.title { font-size: 17px; font-weight: 600; color: #162233; }
+.close-x { width: 28px; height: 28px; border-radius: 14px; background: #F0F1F5; color: #6B7A92; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; }
+.search { margin: 0 16px 12px; height: 32px; border-radius: 10px; background: #F0F1F5; display: flex; align-items: center; padding: 0 10px; gap: 6px; color: #A0A7B7; font-size: 13px; }
+
+.tabs { display: flex; gap: 6px; padding: 0 16px 12px; }
+.tab { flex: 1; height: 30px; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #6B7A92; background: #F0F1F5; }
+.tab.active { background: #162233; color: #FFFFFF; }
+.tab-count { font-size: 11px; opacity: 0.7; margin-left: 4px; }
+
+.list { padding: 0 12px; }
+.row { display: flex; align-items: center; gap: 10px; padding: 10px 6px; border-bottom: 1px solid #F0F1F5; }
+.row:last-child { border-bottom: none; }
+.thumb { width: 44px; height: 44px; border-radius: 8px; flex-shrink: 0; }
+.thumb.t1 { background: linear-gradient(135deg,#F4B53F,#D88527); }
+.thumb.t2 { background: linear-gradient(135deg,#5BB6FF,#1F6FE0); }
+.thumb.t3 { background: linear-gradient(135deg,#9F7BF7,#6F47CE); }
+.row-text { flex: 1; min-width: 0; }
+.row-name { font-size: 14px; font-weight: 600; color: #162233; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row-price { font-size: 12px; color: #6B7A92; margin-top: 2px; }
+
+.row-actions { display: flex; gap: 6px; flex-shrink: 0; }
+.btn { height: 28px; border-radius: 14px; padding: 0 10px; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; }
+.btn-pin { background: #F0F1F5; color: #162233; }
+.btn-pin.pinned { background: #7E53F8; color: #FFFFFF; }
+.btn-start { background: #162233; color: #FFFFFF; }
+</style></head><body>
+<div class="phone">
+  <div class="handle"></div>
+  <div class="title-row">
+    <div class="title">Listings</div>
+    <div class="close-x">x</div>
+  </div>
+  <div class="search">Search for a listing</div>
+  <div class="tabs">
+    <div class="tab active">Upcoming<span class="tab-count">3</span></div>
+    <div class="tab">Unsold<span class="tab-count">1</span></div>
+    <div class="tab">Sold<span class="tab-count">5</span></div>
+  </div>
+  <div class="list">
+    <div class="row">
+      <div class="thumb t1"></div>
+      <div class="row-text">
+        <div class="row-name">Charizard Holo PSA 9</div>
+        <div class="row-price">Starts at $50</div>
+      </div>
+      <div class="row-actions">
+        <div class="btn btn-pin pinned">Pin</div>
+        <div class="btn btn-start">Start</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="thumb t2"></div>
+      <div class="row-text">
+        <div class="row-name">Hot Wheels Treasure Hunt</div>
+        <div class="row-price">Buy Now $16</div>
+      </div>
+      <div class="row-actions">
+        <div class="btn btn-pin">Pin</div>
+        <div class="btn btn-start">Start</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="thumb t3"></div>
+      <div class="row-text">
+        <div class="row-name">Pikachu VMAX</div>
+        <div class="row-price">Starts at $36</div>
+      </div>
+      <div class="row-actions">
+        <div class="btn btn-pin">Pin</div>
+        <div class="btn btn-start">Start</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>
