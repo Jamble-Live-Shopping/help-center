@@ -70,9 +70,23 @@ Viewers can see:
 - The top participants and their scores
 - Their individual ranking and any rewards they earned
 
-## Rewards
+## Rewards and battle tiers
 
-The top players on the winning team receive **credits** (store credits they can use on future purchases). Credits expire **7 days** after being awarded, so winners should use them quickly. The exact reward amounts depend on the battle tier and the player's ranking.
+The top players on the winning team receive **credits** (store credits they can use on future purchases). Credits expire **7 days** after being awarded. The reward amount distributed in your show depends on your **battle tier**.
+
+### The 3 tiers
+
+Every seller has a battle tier. The higher your tier, the larger the reward your battle distributes to the winning viewers.
+
+- **Bronze**, $25 reward, default for all active sellers
+- **Silver**, $50 reward, your 3 best lives in the last 14 days average 600+ viewers and 12h+ of watch time per live
+- **Gold**, $200 reward, your 5 best lives in the last 14 days average 1,400+ viewers and 40h+ of watch time per live
+
+### How your tier is calculated
+
+Your tier is recalculated automatically every day based on your **best lives in the last 14 days**. Only lives that lasted **30 minutes or more** are counted, so a technical issue or a short promo live won't break your tier.
+
+You don't need to do anything special. The more consistent your best lives perform, the higher your tier and the bigger the reward your battle offers your audience.
 
 First-time Battle participants also receive a small bonus just for joining.
 
@@ -109,6 +123,9 @@ Yes. Viewers must be online when the Battle ends to receive their rewards. If th
 
 **What's the difference between a Battle and a Raid?**
 A Battle is a competition within YOUR show — your audience splits into two teams and competes. A Raid is when you redirect your audience to ANOTHER seller's show when yours ends.
+
+**How do I move up tiers (Bronze, Silver, Gold)?**
+Keep going live consistently with quality shows. Your tier is recalculated automatically based on your best lives in the last 14 days, and only lives 30 minutes or longer are counted. The more viewers you bring in and the longer they stay, the higher your tier and the bigger your battle reward.
 
 ## Need help?
 
