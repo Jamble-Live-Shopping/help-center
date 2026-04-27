@@ -7,11 +7,11 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-04-27T00:00:00Z
 locales:
   pt-br:
     title: 'Gerenciamento do Show para Vendedores'
-    description: ''
+    description: 'Gerencie seu show na Jamble do agendamento ao pós-show: prévia, edição, modo de prática, ao vivo, raid e encerramento.'
   en:
     title: 'Show Management for Sellers'
-    description: "This guide covers the full lifecycle of a Jamble show: from the moment you schedule it to what happens after you end it. You'll learn how to manage your show before, during, and after going live."
+    description: 'Manage your Jamble show from scheduling to post-show: preview, edit, practice mode, live host controls, raid, and ending.'
