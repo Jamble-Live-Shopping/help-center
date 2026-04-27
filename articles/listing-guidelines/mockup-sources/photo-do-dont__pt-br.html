@@ -1,90 +1,93 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
-.phone { width: 340px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding-bottom: 16px; }
-.row-title { font-size: 12px; font-weight: 700; padding: 14px 16px 8px; text-transform: uppercase; letter-spacing: 0.5px; }
-.row-title.do { color: #0E7D45; }
-.row-title.dont { color: #B91C1C; }
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 0 16px 12px; }
-.slot { aspect-ratio: 1; border-radius: 8px; position: relative; overflow: hidden; border: 1.5px solid; }
-.slot.good { border-color: #1FAA5F; }
-.slot.bad { border-color: #D92C20; }
-.tick { position: absolute; bottom: 6px; right: 6px; width: 20px; height: 20px; background: #1FAA5F; color: white; border-radius: 50%; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; z-index: 3; }
-.cross { position: absolute; bottom: 6px; right: 6px; width: 20px; height: 20px; background: #D92C20; color: white; border-radius: 50%; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; z-index: 3; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding: 16px 0 18px; }
+.section-header { font-size: 12px; font-weight: 600; color: #6D6D80; text-transform: uppercase; letter-spacing: 0.6px; padding: 6px 20px 10px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 0 16px 4px; }
+.cell { display: flex; flex-direction: column; gap: 6px; }
+.thumb { aspect-ratio: 1; border-radius: 12px; position: relative; overflow: hidden; border: 1px solid #E9EAEF; }
+.thumb-inner { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+.shape { width: 50%; height: 64%; border-radius: 6px; background: rgba(255,255,255,0.55); border: 1px solid rgba(255,255,255,0.8); box-shadow: 0 1px 3px rgba(22,34,51,0.08); }
+.badge { position: absolute; top: 8px; right: 8px; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(22,34,51,0.18); z-index: 3; }
+.badge.ok { background: #22C55E; }
+.badge.no { background: #EF4444; }
+.badge svg { width: 12px; height: 12px; }
+.label { font-size: 11px; color: #162233; font-weight: 600; text-align: center; line-height: 14px; padding: 0 2px; }
+.label.muted { color: #828DA2; font-weight: 500; }
+.divider { height: 1px; background: #F0F1F5; margin: 14px 16px 12px; }
 
-/* Good 1: Pokemon card front, well lit white background */
-.g1 { background: #FAFAFA; display: flex; align-items: center; justify-content: center; }
-.g1-card { width: 60%; height: 78%; background: linear-gradient(160deg, #F9D648 0%, #E8B533 100%); border-radius: 3px; border: 1.2px solid #C99A22; position: relative; box-shadow: 0 1px 3px rgba(0,0,0,0.12); }
-.g1-win { position: absolute; top: 22%; left: 12%; right: 12%; bottom: 38%; background: #7B4D2C; border-radius: 2px; }
-.g1-bar { position: absolute; top: 6%; left: 8%; right: 32%; height: 6%; background: rgba(0,0,0,0.18); border-radius: 1px; }
-.g1-hp { position: absolute; top: 5%; right: 7%; width: 22%; height: 9%; background: #E84545; border-radius: 2px; }
+/* Good thumbs: clean, well-lit, light pastel gradients */
+.t-good-1 { background: linear-gradient(160deg, #FAFBFD 0%, #EEF1F7 100%); }
+.t-good-2 { background: linear-gradient(160deg, #F4F7FB 0%, #E6ECF4 100%); }
+.t-good-3 { background: linear-gradient(160deg, #F9FAFC 0%, #ECEEF3 100%); }
 
-/* Good 2: PSA graded card */
-.g2 { background: #EEF1F5; display: flex; align-items: center; justify-content: center; }
-.g2-card { width: 62%; height: 84%; background: white; border-radius: 2px; border: 2px solid #1A2942; position: relative; box-shadow: 1px 1px 3px rgba(0,0,0,0.15); }
-.g2-grade { position: absolute; top: 5%; left: 6%; right: 6%; height: 18%; background: #D92C20; border-radius: 1px; display: flex; align-items: center; justify-content: center; color: white; font-size: 7px; font-weight: 800; letter-spacing: 0.4px; }
-.g2-img { position: absolute; top: 28%; left: 8%; right: 8%; bottom: 32%; background: linear-gradient(160deg, #F9D648 0%, #C99A22 100%); border-radius: 1px; }
-
-/* Good 3: Hot Wheels diecast on white */
-.g3 { background: #FCFCFC; display: flex; align-items: center; justify-content: center; }
-.g3-car { width: 78%; height: 38%; background: linear-gradient(180deg, #D92C20 0%, #8E1812 100%); border-radius: 5px 5px 16px 16px / 5px 5px 8px 8px; position: relative; box-shadow: 0 2px 4px rgba(0,0,0,0.15); margin-top: 28%; }
-.g3-window { position: absolute; top: 22%; left: 22%; right: 22%; height: 30%; background: rgba(255,255,255,0.4); border-radius: 4px; }
-.g3-wheel { position: absolute; bottom: -8%; width: 22%; height: 30%; background: #1A1A1A; border-radius: 50%; border: 2px solid #6B6B6B; }
-.g3-w1 { left: 8%; }
-.g3-w2 { right: 8%; }
-
-/* Bad 1: Blurry / dark */
-.b1 { background: #2A2D38; display: flex; align-items: center; justify-content: center; position: relative; filter: blur(1.5px); }
-.b1-card { width: 55%; height: 75%; background: linear-gradient(160deg, rgba(249,214,72,0.5) 0%, rgba(232,181,51,0.5) 100%); border-radius: 3px; opacity: 0.7; }
-
-/* Bad 2: Stock / watermark */
-.b2 { background: linear-gradient(135deg, #D8DEE5 0%, #B5BEC9 100%); display: flex; align-items: center; justify-content: center; position: relative; }
-.b2-card { width: 60%; height: 78%; background: linear-gradient(160deg, #F9D648 0%, #E8B533 100%); border-radius: 3px; border: 1.2px solid #C99A22; }
-.b2-watermark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-22deg); color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 800; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); letter-spacing: 1px; z-index: 2; }
-
-/* Bad 3: Multiple unrelated items in shot */
-.b3 { background: #F5EFE2; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px; padding: 8px; }
-.b3-c { background: linear-gradient(160deg, #F9D648 0%, #E8B533 100%); border-radius: 2px; border: 1px solid #C99A22; }
-.b3-a { width: 32px; height: 44px; transform: rotate(-8deg); }
-.b3-b { width: 28px; height: 38px; transform: rotate(12deg); }
-.b3-d { width: 22px; height: 30px; transform: rotate(-3deg); background: #B5BEC9; }
-.b3-e { width: 26px; height: 36px; transform: rotate(15deg); background: #4A6FA5; }
-</style></head><body><div class="phone">
-
-<div class="row-title do">Faça assim</div>
-<div class="grid">
-  <div class="slot good g1">
-    <div class="g1-card"><div class="g1-bar"></div><div class="g1-hp"></div><div class="g1-win"></div></div>
-    <div class="tick">✓</div>
+/* Bad thumbs: visual problems hinted, never cartoon */
+.t-bad-1 { background: linear-gradient(160deg, #2A2D38 0%, #1A1C24 100%); }
+.t-bad-1 .shape { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.22); filter: blur(2px); }
+.t-bad-2 { background: linear-gradient(160deg, #EDEFF3 0%, #D8DEE5 100%); position: relative; }
+.t-bad-2::after { content: "STOCK"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-22deg); color: rgba(22,34,51,0.18); font-size: 18px; font-weight: 800; letter-spacing: 2px; z-index: 2; }
+.t-bad-3 { background: linear-gradient(160deg, #FAFBFD 0%, #EEF1F7 100%); }
+.t-bad-3 .shape { width: 28%; height: 38%; position: absolute; }
+.t-bad-3 .s1 { top: 16%; left: 14%; transform: rotate(-8deg); }
+.t-bad-3 .s2 { top: 22%; right: 12%; transform: rotate(10deg); width: 24%; height: 32%; }
+.t-bad-3 .s3 { bottom: 14%; left: 22%; transform: rotate(-3deg); width: 30%; height: 36%; }
+.t-bad-3 .s4 { bottom: 18%; right: 16%; transform: rotate(14deg); width: 22%; height: 30%; }
+</style></head><body>
+<div class="phone">
+  <div class="section-header">Faça assim</div>
+  <div class="grid">
+    <div class="cell">
+      <div class="thumb t-good-1">
+        <div class="thumb-inner"><div class="shape"></div></div>
+        <div class="badge ok"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+      </div>
+      <div class="label">Bem iluminada</div>
+    </div>
+    <div class="cell">
+      <div class="thumb t-good-2">
+        <div class="thumb-inner"><div class="shape"></div></div>
+        <div class="badge ok"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+      </div>
+      <div class="label">Fundo limpo</div>
+    </div>
+    <div class="cell">
+      <div class="thumb t-good-3">
+        <div class="thumb-inner"><div class="shape" style="width:74%;height:74%"></div></div>
+        <div class="badge ok"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+      </div>
+      <div class="label">Close-up</div>
+    </div>
   </div>
-  <div class="slot good g2">
-    <div class="g2-card"><div class="g2-grade">PSA 10</div><div class="g2-img"></div></div>
-    <div class="tick">✓</div>
-  </div>
-  <div class="slot good g3">
-    <div class="g3-car"><div class="g3-window"></div><div class="g3-wheel g3-w1"></div><div class="g3-wheel g3-w2"></div></div>
-    <div class="tick">✓</div>
+
+  <div class="divider"></div>
+
+  <div class="section-header">Não faça assim</div>
+  <div class="grid">
+    <div class="cell">
+      <div class="thumb t-bad-1">
+        <div class="thumb-inner"><div class="shape"></div></div>
+        <div class="badge no"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+      </div>
+      <div class="label muted">Borrada / escura</div>
+    </div>
+    <div class="cell">
+      <div class="thumb t-bad-2">
+        <div class="thumb-inner"><div class="shape" style="opacity:0.6"></div></div>
+        <div class="badge no"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+      </div>
+      <div class="label muted">Foto de stock</div>
+    </div>
+    <div class="cell">
+      <div class="thumb t-bad-3">
+        <div class="shape s1"></div>
+        <div class="shape s2"></div>
+        <div class="shape s3"></div>
+        <div class="shape s4"></div>
+        <div class="badge no"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+      </div>
+      <div class="label muted">Vários itens</div>
+    </div>
   </div>
 </div>
-
-<div class="row-title dont">Não faça assim</div>
-<div class="grid">
-  <div class="slot bad b1">
-    <div class="b1-card"></div>
-    <div class="cross">✕</div>
-  </div>
-  <div class="slot bad b2">
-    <div class="b2-card"></div>
-    <div class="b2-watermark">STOCK</div>
-    <div class="cross">✕</div>
-  </div>
-  <div class="slot bad b3">
-    <div class="b3-c b3-a"></div>
-    <div class="b3-c b3-b"></div>
-    <div class="b3-c b3-d"></div>
-    <div class="b3-c b3-e"></div>
-    <div class="cross">✕</div>
-  </div>
-</div>
-
-</div></body></html>
+</body></html>
