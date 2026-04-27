@@ -70,9 +70,23 @@ Espectadores podem ver:
 - Os melhores participantes e suas pontuações
 - Seu ranking individual e recompensas recebidas
 
-## Recompensas
+## Recompensas e níveis de batalha
 
-Os melhores jogadores do time vencedor recebem **créditos** (créditos de loja que podem usar em compras futuras). Os créditos expiram **7 dias** depois de concedidos, então os vencedores devem usá-los rapidamente. Os valores exatos dependem do nível da batalha e do ranking do jogador.
+Os melhores jogadores do time vencedor recebem **créditos** (créditos de loja que podem usar em compras futuras). Os créditos expiram **7 dias** depois de concedidos. O valor da recompensa distribuída no seu show depende do **nível da sua batalha**.
+
+### Os 3 níveis
+
+Cada vendedor tem um nível de batalha. Quanto mais alto o nível, maior a recompensa que sua batalha distribui aos espectadores vencedores.
+
+- **Bronze**, R$ 25 de recompensa, padrão para todos os vendedores ativos
+- **Silver**, R$ 50 de recompensa, suas 3 melhores lives nos últimos 14 dias têm em média 600+ espectadores e 12h+ de tempo assistido por live
+- **Gold**, R$ 200 de recompensa, suas 5 melhores lives nos últimos 14 dias têm em média 1.400+ espectadores e 40h+ de tempo assistido por live
+
+### Como seu nível é calculado
+
+Seu nível é recalculado automaticamente todos os dias com base nas suas **melhores lives dos últimos 14 dias**. Apenas as lives que duraram **30 minutos ou mais** são contadas, então um problema técnico ou uma live curta de promoção não derruba seu nível.
+
+Você não precisa fazer nada de especial. Quanto mais consistente for o desempenho das suas melhores lives, mais alto seu nível e maior a recompensa que sua batalha oferece à sua audiência.
 
 Participantes de primeira vez em Batalhas também recebem um pequeno bônus só por participar.
 
@@ -109,6 +123,9 @@ Sim. Os espectadores precisam estar online quando a Batalha termina para receber
 
 **Qual a diferença entre uma Batalha e um Raid?**
 Uma Batalha é uma competição dentro do SEU show — sua audiência se divide em dois times e compete. Um Raid é quando você redireciona sua audiência para o show de OUTRO vendedor quando o seu termina.
+
+**Como faço para subir de nível (Bronze, Silver, Gold)?**
+Continue fazendo lives consistentes e de qualidade. Seu nível é recalculado automaticamente com base nas suas melhores lives dos últimos 14 dias, e apenas lives de 30 minutos ou mais são contadas. Quanto mais espectadores você atrai e quanto mais tempo eles ficam, mais alto seu nível e maior a recompensa da sua batalha.
 
 ## Precisa de ajuda?
 
