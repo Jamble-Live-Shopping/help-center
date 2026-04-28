@@ -2,7 +2,7 @@
 
 ## O que você vai aprender
 
-Este guia explica como o sistema de recompensas da Jamble funciona, como compradores ganham e usam **gemas** durante seus shows, e como a **Classificação de Vendedores** e os badges reconhecem os melhores vendedores.
+Este guia explica como o sistema de recompensas da Jamble funciona, como compradores ganham e usam **gemas** durante seus shows, e como a **Classificação de Vendedores** mensal recompensa quem fica no topo.
 
 ## Antes de começar
 
@@ -17,7 +17,7 @@ A Jamble tem um sistema de recompensas que beneficia compradores e vendedores ao
 1. **Compradores ganham gemas** assistindo shows e completando desafios
 2. **Compradores usam gemas** para enviar emojis durante seus shows ao vivo
 3. **Vendedores ganham pontos de classificação** quando compradores enviam gemas no seu show
-4. **Os melhores vendedores ganham badges** e reconhecimento com base no desempenho
+4. **Os vendedores no topo da classificação** ganham mais visibilidade na plataforma
 
 Como vendedor, você não precisa fazer nada especial para participar. Acontece automaticamente durante seus shows. Entender o sistema te ajuda a engajar sua audiência.
 
@@ -59,49 +59,19 @@ Subir na classificação aumenta sua visibilidade na plataforma. Vendedores no t
 
 - Aparecem mais nas recomendações e na busca
 - Constroem reputação com compradores que conferem o ranking
-- Podem se qualificar para um nível de **badge verificado** (veja abaixo)
 
-## Badges verificados
-
-Vendedores em destaque podem ganhar um **badge verificado** que aparece no perfil. Ele sinaliza confiança e qualidade para os compradores.
-
-![Galeria com os 4 niveis de badges verificados Rising Elite Ultra e Parceiro da Jamble](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/rewards-gems-and-seller-ranking__badge-gallery__pt-br__v2.png)
-
-Os 4 níveis aparecem em ordem de progressão. Cada badge tem sua cor própria, da mais nova (Rising) até o reconhecimento de parceiro oficial (Parceiro da Jamble).
-
-### Os 4 níveis de badge
-
-- **Rising Live Seller**, vendedor novo mostrando crescimento forte e atividade consistente
-- **Elite Live Seller**, vendedor de alto desempenho com excelente histórico
-- **Ultra Live Seller**, um dos melhores vendedores da plataforma
-- **Parceiro da Jamble**, parceiro oficial Jamble, reconhecido como vendedor líder
-
-### Como badges são atribuídos
-
-Os badges são **atribuídos pela Jamble** com base no seu desempenho geral. Você não pede ou se candidata. Os critérios incluem classificação, volume de vendas, consistência, satisfação do comprador e engajamento na plataforma.
-
-Se você atende aos critérios, o badge aparece no seu perfil automaticamente.
-
-### Onde o seu badge aparece
-
-Seu badge fica visível em vários lugares:
-- Na sua **página de perfil**, ao lado do seu nome de usuário
-- **Durante seus shows ao vivo**, onde compradores veem o badge
-- **Nos resultados de busca**, fazendo seu perfil se destacar nas listagens
-
-## Como subir na classificação e ganhar um badge
+## Como subir na classificação
 
 1. **Faça shows com regularidade.** Consistência importa mais do que um show grande isolado. Shows regulares te mantêm na classificação
 2. **Engaje sua audiência.** Compradores que curtem seu show enviam mais emojis (gemas) para te apoiar
 3. **Venda produtos com qualidade.** Volume de vendas faz parte da fórmula da classificação. Mais vendas, mais pontos
 4. **Construa uma audiência fiel.** Espectadores recorrentes que conhecem seu show enviam mais apoio em emojis
-5. **Entregue uma boa experiência.** Os critérios de badge incluem satisfação do comprador. Envie rápido, seja honesto sobre o estado do produto e comunique bem
+5. **Entregue uma boa experiência.** Envie rápido, seja honesto sobre o estado do produto e comunique bem
 
 ## Dicas importantes
 
 - **Você não precisa gastar dinheiro.** A classificação roda com a atividade dos compradores e seu desempenho de vendas. Não há nada que você precise comprar
 - **Emojis são sinal de engajamento.** Se sua audiência envia muitos emojis, é sinal de que estão curtindo. Agradeça e mantenha a energia
-- **Badges levam tempo.** Não espere um badge depois de um único show. É baseado em desempenho sustentado
 - **Reset mensal significa novas oportunidades.** Mesmo que tenha tido um mês fraco, o próximo começa do zero. Mantenha a consistência
 
 ## Perguntas frequentes
@@ -115,14 +85,8 @@ O sistema de gemas é pensado para os compradores. Como vendedor, seu foco é fa
 **Com que frequência a classificação atualiza?**
 A classificação é mensal. Sua posição atualiza ao longo do mês com base nos pontos acumulados, e reseta no primeiro dia do mês seguinte.
 
-**Qual a diferença entre classificação e badges?**
-A **classificação** é mensal e reseta todo mês. Os **badges** (Rising Live Seller, Elite Live Seller, Ultra Live Seller, Parceiro da Jamble) são reconhecimentos de longo prazo, baseados em desempenho geral, e não resetam mensalmente.
-
-**Posso perder meu badge?**
-Os badges são baseados em desempenho sustentado. Se sua atividade ou desempenho mudarem bastante ao longo do tempo, seu nível de badge pode ser ajustado.
-
-**Vendo há um tempo mas ainda não tenho badge. Por quê?**
-Os critérios de badge são gerenciados pela Jamble e consideram vários fatores além das vendas, incluindo consistência, satisfação do comprador e engajamento na comunidade. Continue entregando ótimas experiências e o reconhecimento vem.
+**Quais ações contam para a classificação?**
+Duas coisas: o **apoio em gemas** que sua audiência te envia durante os shows (emojis) e suas **vendas concluídas** no mês. Os dois somam pontos no mesmo placar.
 
 ## Precisa de ajuda?
 
