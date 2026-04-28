@@ -31,6 +31,13 @@ Each row is a verifiable check. The script below automates every check that can 
 | 9 | Step 10 (code audit) | `code-audit-<id>.md` exists and has no open MISMATCH rows | File existence + grep for `MISMATCH` without corresponding decision |
 | 10 | Step 11 (content audit) | `content-audit-<id>.md` exists and has zero BLOCKERS | File existence + grep for `BLOCKER` |
 | 11 | Step 12 (self) | This compliance run produced `compliance-<id>.md` with ALL checks PASS | Output of this script |
+| 12 | Step 1.3b (icons) | For every `UIImage(named: "X")` referenced in `code-audit`, the corresponding asset is either embedded inline (SVG) or base64 (PNG) in the mockup HTML, OR justified as not visible in the rendered scope | MANUAL grep on HTML for the icon name + visual review |
+| 13 | Worktree (Phase 0) | If the article was produced in a parallel batch (3+ workers), the worker created and cleaned up a `/tmp/wt-<slug>` worktree | `git worktree list` empty after merge |
+| 14 | Step 11 Scan 6 (stale-feature) | `content-audit` includes Scan 6 with zero hits on deprecated terms (Verified badges Rising/Elite/Ultra/Partner, Auction/Leilão user-facing, Jamble Prime) | File scan + cross-corpus grep |
+| 15 | DA discipline (Step 3) | No cartoon illustrations of cards/products, no big-text product placeholders ("CHARIZARD"-style hexagon), no CSS-drawn icons quand un asset iOS existe | MANUAL visual review against reference v2 mockups (account-security, apply-to-sell-on-jamble, battle-welcome) |
+| 16 | DA tokens (Step 3) | Mockup uses Jamble design-system tokens (`#7E53F8`, `#162233`, `#F9FAFC`, `#828DA2`, `#22C55E`, `#EF4444`) and no rogue brand colors | Regex scan on HTML for hardcoded color values vs allowlist |
+| 17 | Visual fidelity (Step 10) | Mockup matches iOS simulator OR built from code reading + design system tokens (justified in code-audit) | MANUAL review |
+| 18 | (reserved for future) |  |  |
 
 ## The compliance script
 

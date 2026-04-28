@@ -73,8 +73,53 @@ Record both locales in `code-notes-boxN.md` (see example below).
 - Conditional states (selected / unselected / pending / error)
 
 ### Icons (`UIImage(named: "...")`)
-- Note every icon name; you'll download the SVG in Step 3
-- Path convention: `Jamble/RESOURCES/Assets.xcassets/icon/<name>.imageset/<name>.svg`
+- Note every icon name; you'll **extract the SVG / PNG from `Assets.xcassets/` into `assets/icons-ios/`** in this same step (see below) and embed it inline in Step 3 HTML.
+- Path convention: `Jamble/RESOURCES/Assets.xcassets/<name>.imageset/<name>.<svg|png|pdf>`
+
+### MANDATORY icon extraction workflow
+
+For every `UIImage(named: "X")` reference in the Swift file, extract the asset into `assets/icons-ios/`. This step is non-negotiable: a mockup with a CSS-drawn icon when the iOS asset exists = compliance reject (check #18 in process/12).
+
+```bash
+# 1. List assets matching the feature
+ls /Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/ | grep -i "<feature>"
+
+# 2. For each imageset, identify the format
+ls /Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/<name>.imageset/
+
+# 3. Copy into assets/icons-ios/ (the help-center repo's pool, shared cross-articles)
+# SVG (best for HTML embedding):
+cp /Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/<name>.imageset/<name>.svg \
+   assets/icons-ios/<name>.svg
+
+# PNG:
+cp /Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/<name>.imageset/*.png \
+   assets/icons-ios/<name>.png
+
+# PDF: iOS template assets, rendered with tint at runtime. sips/qlmanage/pdftoppm
+# produce blank/transparent output. Workaround = hand-craft a clean SVG in
+# SF-Symbols style with `currentColor` (tinted via CSS at consume site).
+# References: assets/icons-ios/icon_skull.svg, bag_icon.svg, icon_cart.svg
+```
+
+### Inventaire pool (au 2026-04-28)
+
+`assets/icons-ios/` contient déjà les assets les plus utilisés. Avant d'extraire un nouveau asset, **check the pool first** :
+
+| Asset | Format | Usage |
+|---|---|---|
+| `icon-clock.svg` | SVG | Horloge / timer (Real-time offers, battles) |
+| `icon-badge.svg` | SVG | Verified checkmark générique |
+| `icon-chat-star.svg` | SVG | Star sur chat (rating reviews) |
+| `icon_reward_star.svg` | SVG | Reward star (rewards) |
+| `gem-icon.png` | PNG | Jamble Gems icon principal |
+| `icon_gem_28.png` | PNG | Small gem button |
+| `audience_like_gem.png` | PNG | Gem avec sparkle |
+| `icon_skull.svg` | SVG hand-crafted | Sudden Death (PDF original ne convertit pas) |
+| `bag_icon.svg`, `icon_cart.svg` | SVG hand-crafted | Buy It Now / cart (fallback) |
+| `live_camera_icon.svg`, `pin_icon_purple.svg`, `icon-live-shop.svg`, `battle_icon.svg`, `close_live_icon.svg`, `icon-payment.svg`, `icon-audio.svg`, `icon-help.svg`, etc. | SVG | Live show controls (livestream-tools workflow) |
+
+⚠ **Deprecated** (do not use, feature killed 2026-04-28) : `icon-badge-rising.png`, `icon-badge-elite.png`, `icon-badge-ultra.png`. Si nécessaires pour un context historique, flag à Aymar.
 
 ## Document your findings
 

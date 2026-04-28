@@ -294,3 +294,48 @@ Extend `content-audit-<article-id>.md`:
 - Word-diet suggestions must be acted on (accept or justify rejection). Do not ignore.
 - Tone-of-voice test must end with PASS. If any sentence makes the reader pause, rewrite it.
 - No audit run, no ship. Step 12 (procedure compliance) will fail this article.
+
+---
+
+## Scan 6, Stale-feature audit (BLOCKER if hit)
+
+**Source de vérité finale = produit / Aymar, pas le code seul.** iOS Assets.xcassets garde les anciens assets après deprecation produit. Audit code-only n'attrape pas. Cas connu : badges deprecated 2026-04-28 alors que `icon-badge-rising/elite/ultra.png` existent encore dans iOS.
+
+### Workflow
+
+For each backend feature mentioned in the article :
+
+```bash
+# 1. Backend grep for active endpoints
+grep -ri "<feature_keywords>" /Users/aymardumoulin/Projects/jamble_backend/
+
+# 2. Cross-corpus check : la feature est-elle mentionnée comme "vivante" ailleurs ?
+grep -rln -iE "<feature_keywords>" articles/
+
+# 3. Si doute sur le statut produit (zéro hit backend ou code only without product confirmation), FLAG à Aymar AVANT le ship
+```
+
+### Cas connus deprecated (do NOT mention as active)
+
+| Feature | Status | Date deprecation | Termes à grep |
+|---|---|---|---|
+| Verified badges | DEPRECATED | 2026-04-28 | `Rising Live Seller`, `Elite Live Seller`, `Ultra Live Seller`, `Jamble Partner`, `Parceiro da Jamble`, `verified.*badge`, `niveis? de badge`, `levels? of badge` |
+| Auction wording user-facing | NEVER (use "Real-time offers") | n/a | `\b[Aa]uction\b`, `\b[Ll]eil[aã]o\b` |
+| Jamble Prime | DEPRECATED | 2026-01 | `Jamble Prime`, IAP subscription |
+
+### Hit means BLOCKER
+
+If a deprecated term is found anywhere in `pt-br.md`, `en.md`, `metadata.yml`, or any mockup HTML : remove the reference (text, image, FAQ entry, mockup), update the audit, restart Phase 5.
+
+### Audit template addition
+
+```markdown
+## Scan 6, Stale-feature audit
+| Feature scanned | Hits in body | Hits in metadata | Hits in mockups | Verdict |
+|---|---|---|---|---|
+| Verified badges (Rising/Elite/Ultra/Partner) | 0 | 0 | 0 | PASS |
+| Auction / Leilão | 0 | 0 | 0 | PASS |
+| Jamble Prime | 0 | 0 | 0 | PASS |
+```
+
+If any non-zero count → BLOCKER, do not ship.
