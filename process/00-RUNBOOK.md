@@ -11,7 +11,7 @@ Si ce runbook est ambigu sur un point précis, lire le doc numéroté correspond
 ## Constantes universelles (jamais transgresser)
 
 ```
-Source de vérité      = iOS code (Jamble-iOS repo)
+Source de vérité      = iOS code (Jamble-iOS repo) + product status (cross-check Aymar)
 Locale primary        = pt-BR
 Locale mirror         = EN (1:1 mirror, currency localisée seulement)
 PNG suffix            = __v2 (cache-bust obligatoire pour tout nouveau PNG)
@@ -22,6 +22,8 @@ En-dash count target  = 0 (Rule 0)
 Auction/leilão target = 0 (Rule 2c)
 R$ in EN body target  = 0 (Rule 2b)
 Mockups par article   = 1 minimum si l'article décrit un écran, sinon 0
+Real iOS icons        = MANDATORY si l'asset existe dans Jamble-iOS Assets.xcassets (jamais CSS-drawn approximation)
+DA reference          = account-security, apply-to-sell-on-jamble, battle-welcome
 ```
 
 ---
@@ -34,6 +36,34 @@ Le caller doit donner au worker:
 - `collection_id`: ex `19177935`
 - Bullet 1-line **why critical** (ASCII / R$ leak / no mockups / etc.)
 - N mockups attendus (estimation, le worker peut justifier +/- 1)
+
+### Worktree-from-start (BLOQUANT pour batch parallèle)
+
+Si > 1 worker tourne en parallèle sur le repo, **chaque worker DOIT créer un git worktree depuis le démarrage**. Sans ça, les workers se piétinent sur le main worktree (branch HEAD shifts, untracked files clobbered, linter reverts).
+
+```bash
+cd "/Users/aymardumoulin/Projects/Jamble Coworker/help-center"
+git fetch origin main
+git worktree add /tmp/wt-<slug>-<task> origin/main
+cd /tmp/wt-<slug>-<task>
+git checkout -b <feature-branch>
+# ... toutes les phases suivantes tournent dans ce worktree ...
+```
+
+**Cleanup obligatoire** après merge :
+
+```bash
+cd /
+git -C "/Users/aymardumoulin/Projects/Jamble Coworker/help-center" worktree remove /tmp/wt-<slug>-<task> --force
+```
+
+**Quand worktree obligatoire vs optionnel** :
+
+| Cas | Worktree ? |
+|---|---|
+| Batch parallèle (3+ workers) | **MANDATORY** |
+| Single-file surgical edit | Optionnel |
+| Modification de fichier que main worktree pourrait toucher en parallèle | Mandatory même solo |
 
 ---
 
@@ -48,8 +78,40 @@ Le caller doit donner au worker:
 3. **Lire** chaque Swift file et extraire:
    - Toutes les `String(localized: "...")` → titres, sous-titres, labels boutons, alerts
    - Couleurs (`UIColor.rgba(...)`, `UIColor.customPurple`, hex)
-   - Icons (`UIImage(named: "...")`)
+   - Icons (`UIImage(named: "...")`) → noms qui mappent vers `Jamble/RESOURCES/Assets.xcassets/<name>.imageset/`
    - Layout (corner radius, padding, font sizes, weights)
+
+### 3b. Extraction icons depuis Assets.xcassets (MANDATORY si asset iOS existe)
+
+Pour chaque `UIImage(named: "X")` trouvé dans le Swift code, extraire l'asset depuis `Assets.xcassets/` vers `assets/icons-ios/`. Cette étape est **mandatory** : un mockup avec icône CSS-drawn quand un asset iOS existe = reject auto.
+
+```bash
+# 1. Lister assets potentiels
+ls /Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/ | grep -i "<feature>"
+
+# 2. Pour chaque imageset, identifier le format
+ls /Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/<name>.imageset/
+
+# 3. Copier dans assets/icons-ios/ selon le format
+# SVG : copier tel quel
+cp /Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/<name>.imageset/<name>.svg \
+   assets/icons-ios/<name>.svg
+
+# PNG : copier tel quel
+cp /Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/<name>.imageset/<file>.png \
+   assets/icons-ios/<name>.png
+
+# PDF : tenter conversion. PDFs iOS sont des templates rendered avec tint runtime.
+# sips/qlmanage/pdftoppm produisent du blanc/transparent.
+# Workaround = SVG hand-crafted SF-Symbols-style avec currentColor.
+# Voir icon_skull.svg, bag_icon.svg, icon_cart.svg comme références.
+```
+
+### 3c. Embed dans HTML (Phase 3)
+
+- **SVG** : inline `<svg>...</svg>` (peut tinter via parent CSS `color:` quand le SVG utilise `currentColor`)
+- **PNG** : base64 data URI (`<img src="data:image/png;base64,...">`) ou path raw.githubusercontent
+- **JAMAIS** : CSS-drawn divs / hand-approximated SVG paths quand un asset iOS existe
 4. **Pull pt-BR** pour chaque string EN via `Localizable.xcstrings`:
    ```bash
    python3 -c "
@@ -265,13 +327,30 @@ Tableau "Article claim → iOS source → Verdict (MATCH / MISMATCH)". Zero MISM
 
 ### 7b. `content-audit-<intercom_id>.md`
 
-6 scans: PII, banned words, currency, word diet, tone, alt-text quality. Zero BLOCKER pour ship.
+7 scans: PII, banned words, currency, word diet, tone, alt-text quality, **stale-feature audit**. Zero BLOCKER pour ship.
+
+**Stale-feature audit** : pour chaque feature backend mentionnée dans l'article, vérifier qu'elle est toujours en prod. Source de vérité finale = produit / Aymar, pas le code seul. iOS Assets.xcassets garde les anciens assets après deprecation produit (cas badges deprecated 2026-04-28 alors que Rising/Elite/Ultra PNGs existent encore dans iOS).
+
+```bash
+# 1. Backend grep pour endpoints actifs
+grep -ri "<feature>" /Users/aymardumoulin/Projects/jamble_backend/
+
+# 2. Si doute sur le statut produit, FLAG à Aymar avant ship (pas après)
+
+# 3. Cross-corpus : vérifier que la feature n'est pas mentionnée comme "vivante" ailleurs
+grep -rln -iE "<feature_terms>" articles/
+```
+
+Cas connus deprecated (à ne JAMAIS mentionner) :
+- **Verified badges** (Rising / Elite / Ultra / Jamble Partner / Parceiro da Jamble) — deprecated 2026-04-28
+- **Auction / Leilão** wording user-facing — toujours "Real-time offers" / "Ofertas em tempo real" même si Swift utilise `ShowSaleType.AUCTION`
+- **Jamble Prime** — IAP stoppé jan 2026
 
 ### 7c. `compliance-<intercom_id>.md`
 
-17 checks (cf process/12). ALL PASS pour ship. Si `OUT OF SCOPE`, justifier.
+18 checks (cf process/12). ALL PASS pour ship. Si `OUT OF SCOPE`, justifier.
 
-**Bail-out**: si un audit révèle un MISMATCH, retourner Phase 1. Si BLOCKER, retourner Phase 5.
+**Bail-out**: si un audit révèle un MISMATCH, retourner Phase 1. Si BLOCKER (incl stale-feature), retourner Phase 5.
 
 ---
 
@@ -326,6 +405,12 @@ gh run watch <run_id> --exit-status
 | Description > 140 chars copiée du body | Phase 6: lead avec job-to-do, cut everything past first keyword |
 | pt-BR vide ou copié de l'EN | Rule 7: pt-BR primary, écrit en premier |
 | Mockup pt-br avec strings en anglais qui leakent | Phase 1.4: pull xcstrings pt-BR pour CHAQUE string EN |
+| Skull / cart / bag drawn-by-hand en SVG path approximatif (panda face au lieu de skull) | Phase 1.3b : extract real iOS asset depuis Assets.xcassets, jamais inventer la forme |
+| CSS-drawn icons quand l'asset iOS existe | Phase 3c : embed inline SVG / base64 PNG, never approximate |
+| Cartoonish "FAÇA / NÃO FAÇA" illustrations de cards / produits | Phase 5 : DA discipline, gradient swatches + Apple-style ✓/✗ pills, jamais cartoons |
+| Big-text product placeholders type "CHARIZARD" hexagon orange | DA : subtle gradient cover swatch, le texte du body fait le job pédagogique |
+| Mention de feature deprecated (badges Rising/Elite/Ultra) après son kill produit | Phase 7b stale-feature audit : grep backend + cross-corpus + flag Aymar avant ship |
+| Workers en parallèle qui se piétinent sur le main worktree | Phase 0 worktree-from-start MANDATORY pour batch 3+ workers |
 
 ---
 

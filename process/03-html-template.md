@@ -127,23 +127,62 @@ Match: create-product photos section, create-show image upload.
 .hint { font-size: 13px; color: #8E8E93; padding: 8px 0 0; text-align: center; }
 ```
 
-## Embedding real iOS icons
+## Embedding real iOS icons (MANDATORY when the asset exists)
 
-For any mockup that includes an icon referenced in the code, download it as SVG and embed inline as a base64 data URI:
+If the Swift code references an icon (`UIImage(named: "X")`), the mockup MUST embed the **real** asset, not a CSS-drawn approximation. Two acceptable paths:
 
-```bash
-# Download
-gh api repos/Jamble-Live-Shopping/Jamble-iOS/contents/Jamble/RESOURCES/Assets.xcassets/icon/<name>.imageset/<name>.svg \
-  --jq '.content' | base64 -d > <name>.svg
+### Path A: extract once into `assets/icons-ios/` (preferred for shared icons)
 
-# Embed in HTML
-SVG_B64=$(base64 -i <name>.svg | tr -d '\n')
-# Then in HTML: <img src="data:image/svg+xml;base64,$SVG_B64" />
+Step 02 documents the extraction workflow into the help-center repo's shared pool `assets/icons-ios/`. Once an asset lives there, embed it inline in the mockup HTML:
+
+```html
+<!-- SVG: paste inner content of assets/icons-ios/<name>.svg into the HTML -->
+<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="..." fill="currentColor"/>
+</svg>
+
+<!-- PNG: base64 embed -->
+<img src="data:image/png;base64,$(base64 -i assets/icons-ios/<name>.png)"
+     alt="" style="width: 24px; height: 24px;" />
 ```
 
-**Why inline, not external URL**: at screenshot time Puppeteer loads the HTML via `file://`, external fetches can fail. Inline data URIs are self-contained and deterministic.
+### Path B: download fresh from Jamble-iOS repo (one-off)
 
-**Don't retint**: icons ship with their designed colors (`#828DA2`, `#6C7B93`). Changing them breaks visual parity with the app. If the icon looks too dark/light in the mockup, the source icon is wrong and needs a design fix, not a CSS hack.
+Same as before, useful when iterating before pushing to the shared pool:
+
+```bash
+# Download SVG from the iOS repo
+gh api repos/Jamble-Live-Shopping/Jamble-iOS/contents/Jamble/RESOURCES/Assets.xcassets/<name>.imageset/<name>.svg \
+  --jq '.content' | base64 -d > /tmp/<name>.svg
+
+# Embed in HTML (file approach to avoid base64 hygiene issues)
+SVG_B64=$(base64 -i /tmp/<name>.svg | tr -d '\n')
+cat > mockup.html <<EOF
+<img src="data:image/svg+xml;base64,${SVG_B64}" alt="..." />
+EOF
+```
+
+### PDF templates: hand-craft SVG fallback
+
+iOS PDFs in `Assets.xcassets/` are **template assets** rendered with runtime tinting. `sips`, `qlmanage`, and `pdftoppm` produce blank/transparent output because the PDF expects a tint color the iOS runtime applies. **Workaround**: hand-craft a clean SVG in SF-Symbols style with `currentColor` so the parent CSS `color:` tints it.
+
+References: `assets/icons-ios/icon_skull.svg`, `bag_icon.svg`, `icon_cart.svg`. Each is a simple iconic shape using `currentColor` so it can be tinted purple (selected state) or gray (unselected) via parent `color:`.
+
+```html
+<div class="opt-icon" style="color: #7E53F8;">
+  <!-- Selected state, tinted brand purple -->
+  <svg viewBox="0 0 24 24"><path d="..." fill="currentColor"/></svg>
+</div>
+
+<div class="opt-icon" style="color: #828DA2;">
+  <!-- Unselected, tinted Jamble gray -->
+  <svg viewBox="0 0 24 24"><path d="..." fill="currentColor"/></svg>
+</div>
+```
+
+**Why inline, not external URL**: at screenshot time Puppeteer loads the HTML via `file://`, external fetches can fail. Inline data URIs / inline SVG are self-contained and deterministic.
+
+**Don't retint** SVGs that ship with hardcoded fills (`#828DA2`, `#172233`). Changing them breaks visual parity. Only retint SVGs that use `currentColor` (the hand-crafted fallbacks).
 
 ### Binary data hygiene, NEVER echo base64 to stdout
 
@@ -199,6 +238,33 @@ For articles with both locales, produce `<mockup>__en.html` and `<mockup>__pt-br
 - PNG files: `<slug>__<mockup>__<locale>.png` in ROOT `assets/mockups/` — **never** under `articles/<slug>/assets/` (md-to-html resolves `./assets/` against repo root; nested PNGs won't reach raw.githubusercontent)
 - One mockup per HTML file
 - Always open locally in a browser once before moving to Step 4, the final PNG is deterministic but a bad HTML won't error, it'll just render wrong
+
+## DA discipline (clean Jamble aesthetic, no cartoons)
+
+The mockup must match the Jamble app's visual language. Reference v2 mockups : `articles/account-security/mockup-sources/*.html`, `articles/apply-to-sell-on-jamble/mockup-sources/*.html`, `articles/battles-team-competition-in-your-show/mockup-sources/battle-welcome__*.html`.
+
+**Tokens**:
+- Brand purple `#7E53F8`
+- Navy text `#162233` / `#172233`
+- Gray secondary `#828DA2` / `#A0A7B7`
+- Light bg `#F9FAFC`
+- Dividers `#E9EAEF`, `#F0F1F5`
+- Phone radius 24px, card 12px, button 24px
+- Success `#22C55E` (Apple ✓), Error `#EF4444` (Apple ✗)
+
+**Forbidden**:
+- Cartoonish illustrations of cards / products / objects (bordered card drawings, multi-card stacks, "FAÇA / NÃO FAÇA" banner art)
+- Big-text product placeholders type "CHARIZARD" hexagon (use a subtle gradient cover swatch instead)
+- Bordered illustrations façon stickers
+- CSS-drawn icons quand un asset iOS existe (extract first into `assets/icons-ios/`)
+
+**Photo good vs bad** (e.g. listing-guidelines `photo-do-dont`) :
+- Subtle gradient swatches representing photo thumbnails
+- Apple-style ✓/✗ pills in 22px colored circles in the top-right corner
+- Section labels typographic ("Bem iluminada", "Borrada") under each thumbnail
+- Section headers small caps muted (uppercase tracking, `#828DA2`), never bold green/red banners
+
+Compliance check #18 enforces this (see process/12).
 
 ## Anti-patterns to avoid
 
