@@ -94,7 +94,22 @@ icons_fallback_feather: false
 # touch prices (e.g. DM, profile, notifications).
 currency_required: false
 
-# Legal, product, or operational tensions to surface in the PR body. Soft
-# warn: the validator echoes them in CI summary as a reminder. Reviewers use
-# them to gate the merge. Empty array = no flags.
+# Legal, product, or operational tensions to surface in the PR body.
+# HARD FAIL when metadata.state == "published" AND risk_flags is non-empty
+# AND resolved_decisions is empty: an article with active risks cannot
+# ship as published. To unblock, either resolve the risk and remove it
+# from risk_flags, or document the decision in resolved_decisions and
+# leave the risk in place for traceability.
 risk_flags: []
+
+# Per-risk decisions that explicitly green-light publication despite a
+# remaining risk_flag. One entry per risk that was reviewed by humans
+# and intentionally accepted. Use this when a risk cannot be removed
+# (e.g. legal label staying ambiguous) but the team agreed to ship.
+# Each entry: who made the call, when, and why.
+#   resolved_decisions:
+#     - risk: "ToU R$ 100 cap vs code R$ 500"
+#       decided_by: "Aymar + Yamila"
+#       decided_at: "2026-05-05"
+#       rationale: "ToU 25.B.2.d update planned 2026-05-15, ship article with code value"
+resolved_decisions: []

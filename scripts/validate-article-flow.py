@@ -2,7 +2,7 @@
 """Validate article flow contract.
 
 Reads articles/<slug>/flow.yml + metadata.yml + content files + mockups +
-audit triplet. Enforces 13 hard fails and 2 soft warns per process/ doctrine.
+audit triplet. Enforces 21 hard fails and 2 soft warns per process/ doctrine.
 
 Usage:
     scripts/validate-article-flow.py articles/<slug>           # validate one
@@ -12,7 +12,8 @@ Usage:
 Exit code 0 if all hard fails pass. Exit 1 with structured error report
 otherwise. Soft warns echo to stderr regardless.
 
-Source of truth: process/00-RUNBOOK.md and process/templates/article-flow.yml.
+Source of truth: process/00-RUNBOOK.md, process/templates/article-flow.yml,
+process/workflows/article-v2.yml.
 """
 from __future__ import annotations
 
@@ -35,11 +36,85 @@ except ImportError:
 REPO_ROOT = Path(__file__).resolve().parent.parent
 ICONS_POOL_DIR = REPO_ROOT / "assets" / "icons-ios"
 MOCKUPS_DIR = REPO_ROOT / "assets" / "mockups"
+WORKFLOW_FILE = REPO_ROOT / "process" / "workflows" / "article-v2.yml"
 
 EM_DASH = "—"
 EN_DASH = "–"
 AUCTION_PATTERN = re.compile(r"\b(auction|leil[aã]o)\b", re.IGNORECASE)
 RDOLLAR_PATTERN = re.compile(r"R\$")
+H2_PATTERN = re.compile(r"^##\s+\S", re.MULTILINE)
+PNG_REF_PATTERN = re.compile(r"!\[[^\]]*\]\([^)]*?/([a-z0-9-]+)__([a-z0-9-]+)__(pt-br|en)__v\d+\.png", re.IGNORECASE)
+
+
+# Workflow config defaults; overridden by process/workflows/article-v2.yml when present.
+DEFAULT_WORKFLOW = {
+    "thresholds": {
+        "toc_required_h2_count": 6,
+        "mockup_png_min_width": 900,
+        "description_max_chars": 140,
+        "max_hard_fails": 0,
+    },
+    "toc_markers": {
+        "pt_br": [
+            "## Conteudo",
+            "## Conteúdo",
+            "## Sumario",
+            "## Sumário",
+            "## Neste guia",
+            "[[toc]]",
+        ],
+        "en": [
+            "## Contents",
+            "## On this page",
+            "## In this guide",
+            "## Table of contents",
+            "[[toc]]",
+        ],
+    },
+    "audit_markers": {
+        "code_audit_ship_ready_blockers": [
+            "PARTIAL",
+            "not re-audited",
+            "not reaudited",
+            "requires cross-check",
+            "requires crosscheck",
+            "to be verified",
+            "TBD",
+        ],
+        "content_audit_scan6_required": [
+            "Scan 6",
+            "stale-feature",
+            "stale feature",
+        ],
+    },
+    "mockup_filename": {
+        "current_suffix": "v3",
+        "fallback_suffix": "v2",
+    },
+}
+
+
+def load_workflow_config() -> dict[str, Any]:
+    """Load process/workflows/article-v2.yml if present, fall back to defaults."""
+    if not WORKFLOW_FILE.exists():
+        return DEFAULT_WORKFLOW
+    try:
+        loaded = yaml.safe_load(WORKFLOW_FILE.read_text(encoding="utf-8")) or {}
+    except (OSError, yaml.YAMLError):
+        return DEFAULT_WORKFLOW
+    # Shallow merge: per-key fallback to defaults if missing.
+    cfg = {**DEFAULT_WORKFLOW}
+    for k, v in loaded.items():
+        if k in cfg and isinstance(cfg[k], dict) and isinstance(v, dict):
+            merged = {**cfg[k]}
+            merged.update(v)
+            cfg[k] = merged
+        else:
+            cfg[k] = v
+    return cfg
+
+
+WORKFLOW = load_workflow_config()
 
 
 @dataclass
@@ -359,6 +434,168 @@ def validate_article(article_dir: Path) -> Report:
             "feather_fallback_enabled",
             "icons_fallback_feather=true requires explicit reviewer override and risk_flag entry",
         )
+
+    # =====================================================================
+    # v1.1 hard fails: tightenings driven by Codex review of DM rewrite.
+    # =====================================================================
+
+    th = WORKFLOW.get("thresholds", {})
+    toc_markers = WORKFLOW.get("toc_markers", {})
+    audit_markers = WORKFLOW.get("audit_markers", {})
+
+    # ---- rule 17: TOC required when article has >= toc_required_h2_count H2 sections
+    toc_threshold = int(th.get("toc_required_h2_count", 6))
+    pt_h2_count = len(H2_PATTERN.findall(pt_body))
+    en_h2_count = len(H2_PATTERN.findall(en_body))
+    if pt_h2_count >= toc_threshold:
+        pt_toc_markers = toc_markers.get("pt_br", []) or toc_markers.get("pt-br", [])
+        if not any(m in pt_body for m in pt_toc_markers):
+            rep.fail(
+                "toc_missing_pt",
+                f"pt-br.md has {pt_h2_count} H2 sections (>={toc_threshold}) but no TOC. "
+                f"Add a section like '## Conteúdo' or '## Neste guia' listing the article sections.",
+            )
+    if en_h2_count >= toc_threshold:
+        en_toc_markers = toc_markers.get("en", [])
+        if not any(m in en_body for m in en_toc_markers):
+            rep.fail(
+                "toc_missing_en",
+                f"en.md has {en_h2_count} H2 sections (>={toc_threshold}) but no TOC. "
+                f"Add a section like '## Contents' or '## In this guide'.",
+            )
+
+    # ---- rule 18+19: bidirectional mockup-screen check
+    # 18 (declared_but_not_referenced): every flow.yml screen must appear at
+    #     least once in pt-br.md AND en.md as a markdown image reference.
+    # 19 (referenced_but_not_declared): every PNG referenced via
+    #     ![...](url with __<screen>__<lang>__vN.png) must correspond to a
+    #     screen in flow.yml.mockup_plan.screens.
+    if mockup_required:
+        declared_screens = {s.get("name") for s in (screens or []) if isinstance(s, dict) and s.get("name")}
+
+        # Extract referenced screens from each markdown (looking for slug__screen__lang__v3.png pattern)
+        def extract_screen_refs(md_body: str) -> set[str]:
+            return {m.group(2) for m in PNG_REF_PATTERN.finditer(md_body)}
+
+        pt_refs = extract_screen_refs(pt_body)
+        en_refs = extract_screen_refs(en_body)
+
+        # 18: declared but not referenced
+        for screen_name in sorted(declared_screens):
+            if screen_name not in pt_refs:
+                rep.fail(
+                    "mockup_declared_not_in_pt",
+                    f"screen '{screen_name}' is declared in flow.yml.mockup_plan.screens "
+                    f"but no markdown image reference to '{slug}__{screen_name}__pt-br__v3.png' "
+                    f"(or v2 fallback) found in pt-br.md. Either reference it or remove from flow.yml.",
+                )
+            if screen_name not in en_refs:
+                rep.fail(
+                    "mockup_declared_not_in_en",
+                    f"screen '{screen_name}' is declared in flow.yml.mockup_plan.screens "
+                    f"but no markdown image reference to '{slug}__{screen_name}__en__v3.png' "
+                    f"(or v2 fallback) found in en.md.",
+                )
+
+        # 19: referenced but not declared
+        for screen_name in sorted(pt_refs | en_refs):
+            if screen_name not in declared_screens:
+                rep.fail(
+                    "mockup_referenced_not_declared",
+                    f"screen '{screen_name}' is referenced in markdown but not declared in "
+                    f"flow.yml.mockup_plan.screens. Add it (with name, purpose, source) or "
+                    f"remove the image reference.",
+                )
+
+    # ---- rule 20: state:published + active risk_flags require resolved_decisions
+    risk_flags_list = flow.get("risk_flags") or []
+    resolved_decisions = flow.get("resolved_decisions") or []
+    meta_state = (metadata.get("state") or "").lower()
+    if meta_state == "published" and risk_flags_list and not resolved_decisions:
+        rep.fail(
+            "published_with_unresolved_risks",
+            f"metadata.state='published' but flow.yml has {len(risk_flags_list)} active "
+            f"risk_flag(s) and no resolved_decisions entries. Either set state='draft', "
+            f"resolve the risks (remove from risk_flags), or document each accepted risk "
+            f"in resolved_decisions with decided_by, decided_at, rationale.",
+        )
+
+    # ---- rule 21: code-audit cannot say ship-ready if it contains blocker fragments
+    if intercom_id is not None and audit_dir.exists():
+        code_audit_path = audit_dir / f"code-audit-{intercom_id}.md"
+        if code_audit_path.exists():
+            try:
+                code_audit_body = code_audit_path.read_text(encoding="utf-8")
+            except OSError:
+                code_audit_body = ""
+            ship_ready_markers = ["ship-ready", "ship ready", "shipready"]
+            blockers = audit_markers.get("code_audit_ship_ready_blockers", [])
+            says_ship_ready = any(m.lower() in code_audit_body.lower() for m in ship_ready_markers)
+            blocker_hits = [b for b in blockers if b.lower() in code_audit_body.lower()]
+            if says_ship_ready and blocker_hits:
+                rep.fail(
+                    "code_audit_inconsistent",
+                    f"code-audit-{intercom_id}.md claims 'ship-ready' but contains uncertain "
+                    f"language: {blocker_hits}. Either resolve the uncertainty (re-audit) or "
+                    f"remove the ship-ready claim from the verdict.",
+                )
+
+    # ---- rule 22: content-audit must include Scan 6 / stale-feature
+    if intercom_id is not None and audit_dir.exists():
+        content_audit_path = audit_dir / f"content-audit-{intercom_id}.md"
+        if content_audit_path.exists():
+            try:
+                content_audit_body = content_audit_path.read_text(encoding="utf-8")
+            except OSError:
+                content_audit_body = ""
+            scan6_markers = audit_markers.get("content_audit_scan6_required", [])
+            if not any(m.lower() in content_audit_body.lower() for m in scan6_markers):
+                rep.fail(
+                    "content_audit_missing_scan6",
+                    f"content-audit-{intercom_id}.md does not mention Scan 6 (stale-feature). "
+                    f"Add a 'Scan 6 (stale-feature)' subsection that confirms every feature, "
+                    f"button, and label described in the article still exists in production.",
+                )
+
+    # ---- rule 23: compliance cannot say ALL PASS if active risk_flags remain
+    if intercom_id is not None and audit_dir.exists():
+        compliance_path = audit_dir / f"compliance-{intercom_id}.md"
+        if compliance_path.exists():
+            try:
+                compliance_body = compliance_path.read_text(encoding="utf-8")
+            except OSError:
+                compliance_body = ""
+            says_all_pass = "ALL PASS" in compliance_body
+            if says_all_pass and risk_flags_list and not resolved_decisions:
+                rep.fail(
+                    "compliance_all_pass_with_risks",
+                    f"compliance-{intercom_id}.md says 'ALL PASS' but flow.yml has "
+                    f"{len(risk_flags_list)} active risk_flag(s) without resolved_decisions. "
+                    f"Either resolve the risks or downgrade the verdict from 'ALL PASS' to "
+                    f"'PASS pending risk resolution'.",
+                )
+
+    # ---- rule 24: backend_files declared require evidence in code-audit
+    backend_files = (flow.get("source_of_truth") or {}).get("backend_files") or []
+    if backend_files and intercom_id is not None and audit_dir.exists():
+        code_audit_path = audit_dir / f"code-audit-{intercom_id}.md"
+        if code_audit_path.exists():
+            try:
+                code_audit_body = code_audit_path.read_text(encoding="utf-8")
+            except OSError:
+                code_audit_body = ""
+            # Evidence = any of the declared backend file paths or the substring "jamble_backend"
+            backend_referenced = "jamble_backend" in code_audit_body or any(
+                bf in code_audit_body for bf in backend_files if isinstance(bf, str)
+            )
+            if not backend_referenced:
+                rep.fail(
+                    "backend_files_not_audited",
+                    f"flow.yml declares {len(backend_files)} backend_file(s) in source_of_truth "
+                    f"but code-audit-{intercom_id}.md never mentions 'jamble_backend' or any "
+                    f"of the declared paths. Either add the evidence (cite at least one backend "
+                    f"file:line in the audit table) or remove from source_of_truth.",
+                )
 
     # ---- rule 14: must_answer keywords (soft warn)
     must_answer = cc.get("must_answer") or []
