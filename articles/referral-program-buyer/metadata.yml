@@ -1,0 +1,19 @@
+intercom_id: 14975215
+slug: referral-program-buyer
+collection_id: 11348923
+default_locale: pt-BR
+state: published
+author_id: 7980507
+titles:
+  pt-BR: Programa de Indicação para Compradores
+  en: Buyer Referral Program
+descriptions:
+  pt-BR: Convide um amigo para comprar na Jamble. Ele ganha R$ 75 e você ganha R$ 100 em créditos.
+  en: Invite a friend to shop on Jamble. They get $75 and you get $100 in credits.
+locales:
+  pt-BR:
+    title: 'Programa de Indicação para Compradores'
+    description: 'Convide um amigo para comprar na Jamble. Ele ganha R$ 75 e você ganha R$ 100 em créditos.'
+  en:
+    title: 'Buyer Referral Program'
+    description: 'Invite a friend to shop on Jamble. They get $75 and you get $100 in credits.'

@@ -5,15 +5,15 @@ default_locale: pt-BR
 state: published
 author_id: 7980507
 titles:
-  pt-BR: Programa de Indicação
-  en: Referral Program
+  pt-BR: Programa de Indicação de Vendedores
+  en: Seller Referral Program
 descriptions:
-  pt-BR: Convide amigos, vocês dois ganham R$ 30. Aprenda como compartilhar seu código e acompanhar suas indicações no app.
-  en: Invite friends, you both get R$ 30. Learn how to share your code and track your referrals in the app.
+  pt-BR: Convide outros vendedores e ganhe R$ 500 em dinheiro quando seu indicado fizer a primeira venda.
+  en: Invite other sellers and earn $500 in cash when your referral makes their first sale on Jamble.
 locales:
   pt-BR:
-    title: 'Programa de Indicação'
-    description: 'Convide amigos, vocês dois ganham R$ 30. Aprenda como compartilhar seu código e acompanhar suas indicações no app.'
+    title: 'Programa de Indicação de Vendedores'
+    description: 'Convide outros vendedores e ganhe R$ 500 em dinheiro quando seu indicado fizer a primeira venda.'
   en:
-    title: 'Referral Program'
-    description: 'Invite friends, you both get R$ 30. Learn how to share your code and track your referrals in the app.'
+    title: 'Seller Referral Program'
+    description: 'Invite other sellers and earn $500 in cash when your referral makes their first sale on Jamble.'
