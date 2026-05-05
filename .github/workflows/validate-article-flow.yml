@@ -1,0 +1,50 @@
+name: Validate article flow
+
+# PR-only changed-articles validation. Push-to-main / --all is intentionally
+# OMITTED until the pilot direct-messages-for-sellers article has been
+# rewritten and passes the validator (today it fails 19 hard checks by
+# design). Re-enable push:main with --all only after pilot DM passes, or
+# after we add an explicit enforcement: advisory|strict mode to flow.yml.
+on:
+  pull_request:
+    paths:
+      - 'articles/**'
+      - 'process/templates/article-flow.yml'
+      - 'scripts/validate-article-flow.py'
+      - '.github/workflows/validate-article-flow.yml'
+
+concurrency:
+  group: validate-article-flow-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install pyyaml
+
+      - name: Validate (PR, changed articles)
+        run: |
+          set -euo pipefail
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          python scripts/validate-article-flow.py --changed "$BASE_SHA"
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## Article flow validation" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "Mode: PR (changed articles only)" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "push:main --all is disabled until the pilot DM article passes the validator." >> "$GITHUB_STEP_SUMMARY"
