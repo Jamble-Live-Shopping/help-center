@@ -1,95 +1,112 @@
-# Referral Program
+# Seller Referral Program
 
 ## What you'll learn
 
-This guide explains how Jamble's Referral Program works. You'll learn how to invite friends to Jamble, how you both earn R$ 30 in shipping credit, and how to track your referrals in the app.
+This guide explains how Jamble's Seller Referral Program works. You'll learn how to invite other sellers to Jamble, how to earn $500 in cash for every valid referral, and how to track your referrals in the app.
 
 ## Before you start
 
 You need:
 
-- An active Jamble account
+- An active seller account on Jamble with complete registration
 - The Jamble app installed on your phone
+- Your bank account already registered on Jamble (the same one you use to receive your sales payouts)
 
 ## How the program works
 
-Invite a friend, they get R$ 30 in shipping credit for their first purchase and you get R$ 30 in shipping credit when they buy. The program is simple and works for any new account.
+Invite a friend to become a seller on Jamble. When they create a seller account and make their first sale, you earn $500 in cash credited directly to your bank account. Your friend also earns a $75 starter bonus.
 
-- **You earn R$ 30 in shipping credit** when your friend makes their first purchase at a Show
-- **Your friend earns R$ 30 in shipping credit** as soon as they redeem your invite code
-- **Rewards are shipping credits** applied automatically at checkout, covering only the shipping cost (not the product price)
+- **You earn $500 in cash** when your seller friend completes their first sale
+- **Your friend earns a $75 bonus** as soon as they redeem your code and complete the seller registration
+- **The reward is paid in cash**, credited to your bank account through an authorized international financial institution
+- **You can refer up to 200 sellers**, with no time limit between referrals
 
 ## Step by step
 
 ### Step 1: Open the Invite Friends screen
 
-Go to your profile in the app and tap **Invite Friends**. You'll see the program steps, your R$ 30 reward, and the **Share Friends** button.
+In your seller profile, go to **Settings** and tap **Invite Friends**. You'll see the program steps, your $500 reward, and the **Share Friends** button.
 
-![Invite Friends screen showing referral program steps, R$ 30 reward, and Share Friends button](./assets/mockups/referral-program__invite-friends__en__v2.png)
+![Invite Friends screen showing 3 program steps, $500 cash reward, and Share Friends button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/referral-program__seller-overview__en__v3.png)
+
+The screen shows the full flow: **share your code**, **your friend becomes a seller**, **they make their first sale**.
 
 ### Step 2: Share your link
 
-Tap **Share Friends** to open your phone's sharing menu. You can send the link via WhatsApp, Instagram, SMS, or any other app.
+Tap **Share Friends** to open your phone's sharing menu. You can send it via WhatsApp, Instagram, SMS, or any other app.
 
-The link already contains your code, so your friend doesn't need to type anything. They just need to tap the link and download the app.
+The link already contains your code, so your friend doesn't need to type anything. They just need to tap the link, download the app, and complete the seller registration.
 
-**Tip**: WhatsApp is the most effective channel in Brazil. Your friend taps the link and enters Jamble in seconds.
+**Tip**: WhatsApp is the most effective channel in Brazil. Send the link with a personal message explaining why they should sell on Jamble.
 
-### Step 3: Your friend redeems and purchases
+### Step 3: Your friend signs up as a seller
 
 When your friend opens the app for the first time with your link:
 
-1. **They redeem the code** and R$ 30 appears in their account right away
-2. **They have 14 days to buy 1 item at a Show** using the credit
-3. **You receive R$ 30** as soon as their purchase is confirmed
+1. **They redeem the code** and $75 in bonus appears in their account
+2. **They complete the seller registration** (profile, payout details, first product)
+3. **They have 30 days to make their first sale** at a Show
 
-Both your friend's credit and your reward expire 14 days after they're credited. Use before time runs out.
+### Step 4: You receive $500 in cash
+
+As soon as your seller friend confirms their first sale at a Show, your referral switches to **Completed** status and $500 enters the payout queue. The amount is credited directly to your bank account within 14 business days.
 
 ## How to track your referrals
 
-On the referral screen you can open **Ongoing Referrals** (friends who redeemed the code but haven't purchased yet) or **Past Referrals** (completed referrals).
+On the Invite Friends screen you can open **Ongoing Referrals** (friends who redeemed the code but haven't sold yet) or **Past Referrals** (completed referrals with payment).
 
-![Ongoing Referrals screen showing R$ 60 total pending and list of 3 friends with status and days left](./assets/mockups/referral-program__referral-rewards__en.png)
+![Past Referrals screen showing $500 earned and list of friends with Completed status](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/referral-program__seller-past-list__en__v3.png)
 
 Each friend on the list shows their name and status:
 
-- **days Left** for friends still within the 14-day window
-- **Completed** when the referral worked out and you already received the R$ 30
-- **Deadline Missed** if your friend didn't purchase within 14 days
+- **Days Left** for friends still within the 30-day window
+- **Completed** when your friend made their first sale and the $500 payout was triggered
+- **Deadline Missed** if your friend didn't sell within 30 days
 
-## How credits work
+## How payment works
 
-All referral rewards are **shipping credits** in your Jamble account. They cover only the shipping cost (not the product price) and are applied automatically at your next Show checkout.
+The $500 reward is paid in cash, **not as a coupon or shipping credit**. The processing uses an authorized international financial institution, with credit going directly to the bank account you've already registered to receive your sales payouts.
 
-**Credits expire in 14 days**, so use them fast. This applies to both your credit and your friend's credit.
+- **Gross amount**: $500 per valid referral
+- **Payment timeline**: up to 14 business days after the referral is validated
+- **Currency tax**: a 0.38% currency operations tax (IOF) is automatically withheld by the financial institution at currency settlement. Your net amount is the gross amount minus the IOF
+- **Bank account**: must be registered under the same tax ID (CPF or CNPJ) associated with your Jamble account. Payments with mismatched details are rejected
+
+You don't need to provide additional bank details. Jamble uses the same details you already have registered to receive your sales payouts.
 
 ## Important tips
 
-- **Share via WhatsApp** so your friend enters Jamble in just a few taps
-- **Your code is unique and permanent**, based on your username. You don't need to generate a new one for each invite
-- **The referral only works for new accounts**. Anyone who already has Jamble can't redeem a code
-- **Your friend needs to purchase at a Show**, not anywhere else in the app
-- **Remind your friend** to use their credit before 14 days, or they'll lose it
+- **Share via WhatsApp** with a personal message, explaining why selling on Jamble is worth it
+- **Your code is unique and permanent**, based on your username. No need to generate a new one for each invite
+- **The referral only works for new sellers**. Anyone who has already sold on Jamble can't redeem your code
+- **Your friend needs to complete the seller registration** and make their first sale at a Show, just creating the account isn't enough
+- **Keep your bank account up to date**, otherwise the payment may be rejected
 
 ## Frequently asked questions
 
 **Where do I find my referral code?**
-Go to your profile and tap **Invite Friends**. Your code appears there. You can also share directly with the **Share Friends** button, so your friend receives the link with the code already included.
+Go to your seller profile, open **Settings**, and tap **Invite Friends**. Your code appears there. You can also share directly with the **Share Friends** button, so your friend receives the link with the code already included.
 
-**My friend signed up but I didn't receive my reward. Why?**
-The reward is only credited after your friend purchases 1 item at a Show. If they redeemed the code but haven't purchased yet, the referral stays in **Ongoing Referrals**.
+**How much time does my friend have to make their first sale?**
+They have 30 days after creating the seller account to make their first sale at a Show. After that deadline, the referral expires as **Deadline Missed** and neither of you receives the bonus.
 
-**How much time does my friend have to complete the referral?**
-They have 14 days after redeeming the code to make their first purchase at a Show. After that deadline, the referral expires and neither you nor they receive anything.
+**When does the $500 hit my account?**
+The amount is processed within 14 business days after your friend's first sale is confirmed. You receive the credit directly in the bank account you already have registered on Jamble.
 
-**Do credits work on any purchase?**
-Credits cover only the shipping cost, not the product price. They're applied automatically at checkout for purchases made at Shows. If the shipping cost is less than R$ 30, the credit covers the full shipping amount.
+**Are there any deductions on the $500?**
+Yes, the 0.38% currency operations tax (IOF) is automatically withheld at settlement. The net amount is around $498.10. There may also be small bank fees charged by the financial institution, according to the prevailing fee schedule.
 
-**Can I refer someone who already has a Jamble account?**
-No. Codes only work for brand new accounts. If the person already has Jamble, the code won't be accepted.
+**Are there any tax obligations?**
+Yes. If you're a legal entity (CNPJ or MEI), you must issue a Service Invoice on the gross amount and declare the revenue under your tax regime. If you're an individual (CPF), Jamble may withhold income tax (IRRF) and provide the annual Income Statement. You're responsible for declaring the gross amounts received in your Personal Income Tax Return. See Jamble's Terms of Use (Section 25) for full details.
 
 **Is there a limit on how many friends I can refer?**
-No limit. You can invite as many friends as you want and earn R$ 30 for each one who makes their first purchase.
+Yes, the limit is 200 referrals. There's no time limit between referrals.
+
+**My friend isn't a seller, they just want to buy. Can I refer them?**
+This program is sellers only. To invite buyer friends, use the Buyer Referral Program, which works with coupons instead of cash.
+
+**I got an invite but can't access the program. Why?**
+The Invite Friends screen is only available to active sellers with complete registration. If you don't have an approved seller registration yet, complete your Live Seller registration first.
 
 ## Need help?
 
