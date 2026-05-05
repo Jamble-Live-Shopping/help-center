@@ -1,12 +1,47 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
-.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+body {
+  font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif;
+  background: #F9FAFC;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+.phone {
+  width: 340px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 2px 20px rgba(126,83,248,0.08);
+  border: 1px solid #E9EAEF;
+  overflow: hidden;
+}
 
-.phone { padding: 28px 24px 24px; }
-.twa-title { font-size: 20px; font-weight: 700; color: #162233; margin-bottom: 12px; line-height: 26px; }
-.twa-body { font-size: 15px; color: #162233; line-height: 22px; margin-bottom: 22px; }
-.twa-btn { height: 44px; border-radius: 22px; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; margin-bottom: 10px; }
-.twa-btn.primary { background: #7E53F8; color: white; }
-.twa-btn.secondary { background: #F3F4F8; color: #162233; }
-</style></head><body><div class="phone"><div class="twa-title">@nomedousuario</div><div class="twa-body">1.2k seguidores</div><div class="twa-btn secondary">Seguir</div><div class="twa-btn primary">Mensagem</div></div></body></html>
+.phone { padding: 22px 18px 18px; }
+.row { display: flex; align-items: center; gap: 14px; }
+.avatar { width: 76px; height: 76px; border-radius: 50%; background: linear-gradient(135deg,#7E53F8 0%,#FDB022 100%); flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 30px; font-weight: 700; }
+.meta { flex: 1; }
+.handle { font-size: 17px; font-weight: 700; color: #162233; line-height: 22px; }
+.followers { font-size: 13px; color: #6D6D80; margin-top: 4px; }
+.followers-num { font-weight: 700; color: #162233; }
+.bio { font-size: 13px; color: #5B6B83; margin: 14px 0 16px; line-height: 18px; }
+.btn-row { display: flex; gap: 10px; }
+.btn { flex: 1; height: 40px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; }
+.btn.primary { background: #7E53F8; color: #FFFFFF; }
+.btn.secondary { background: #FFFFFF; color: #162233; border: 1px solid #DADDE3; }
+</style></head><body>
+<div class="phone">
+  <div class="row">
+    <div class="avatar">C</div>
+    <div class="meta">
+      <div class="handle">@camila_alves</div>
+      <div class="followers"><span class="followers-num">1.234</span> seguidores</div>
+    </div>
+  </div>
+  <div class="bio">Pokemon TCG | PSA graded | Brazil based</div>
+  <div class="btn-row">
+    <div class="btn primary">Seguir</div>
+    <div class="btn secondary">Mensagem</div>
+  </div>
+</div></body></html>
