@@ -9,13 +9,34 @@
 # When you bump a threshold here, the validator picks it up automatically
 # without code changes. When you add a new gate, the validator code must be
 # updated. Do not duplicate doctrine here, only enforce-able numbers and flags.
+#
+# ----------------------------------------------------------------------------
+# Calibration philosophy (post golden-replay 2026-05-05)
+# ----------------------------------------------------------------------------
+# - The validator is a FUTURE GATE: every new article should aim for 0 hard
+#   fails before merge.
+# - Golden replay (scripts/replay-golden-articles.py against
+#   process/golden-flows/) is a CALIBRATION TOOL: it measures how the live
+#   contract scores known-good v2 articles already shipped. If the contract
+#   is too strict against history, the calibration result motivates a soft
+#   warn or a config knob (not editing the historical articles).
+# - Two outcomes from the first golden replay:
+#     * TOC is now WARN by default. 67 of 67 v2 articles in main today have
+#       no TOC. Forcing hard fail would carpet-bomb history. Hard fail can
+#       be re-enabled per-article with `flow.yml.toc_required: true` or
+#       globally by flipping `toc_policy: strict` here.
+#     * stale-feature audit stays HARD FAIL. The check was a false negative
+#       in v1.1: any "Scan 6" mention passed (e.g. "Scan 6, alt-text quality"),
+#       which let stale-feature go undocumented. Tightened to require an
+#       explicit stale-feature marker.
 
 workflow_id: article-v2
 
 # Numeric thresholds used by hard fails.
 thresholds:
   # TOC required when the article has at least this many H2 sections
-  # (markdown lines starting with "## "). Below this count, TOC is optional.
+  # (markdown lines starting with "## "). Below this count, TOC is never
+  # required. Above, the toc_policy below decides hard vs warn.
   toc_required_h2_count: 6
 
   # Mockup PNG must be at least this wide (pixels) to be considered DPR3.
@@ -28,6 +49,14 @@ thresholds:
 
   # Maximum hard fails tolerated before the validator exits 1.
   max_hard_fails: 0
+
+# TOC policy. Per-article override available via flow.yml.toc_required:
+# true|false (true forces hard fail, false skips entirely, unset uses
+# this global policy).
+#   strict = hard fail when an article has >= toc_required_h2_count H2 and no TOC
+#   warn   = soft warn instead of hard fail (default; calibrated against history)
+#   off    = TOC check disabled entirely
+toc_policy: warn
 
 # Markdown anchors used to detect a TOC in either locale. The validator
 # considers TOC present if the body contains AT LEAST ONE of these strings.
@@ -59,12 +88,17 @@ audit_markers:
     - "to be verified"
     - "TBD"
 
-  # content-audit MD must contain at least one of these markers to prove
-  # that Scan 6 (stale-feature audit) was performed. Without it, fail.
-  content_audit_scan6_required:
-    - "Scan 6"
+  # content-audit MD must contain at least one of these explicit markers to
+  # prove that the stale-feature audit was performed.
+  # IMPORTANT: do NOT add "Scan 6" alone here. v1.1 had this bug: any audit
+  # mentioning "Scan 6" (e.g. "Scan 6, alt-text quality") passed the check
+  # without actually doing the stale-feature audit. v1.1.1 tightens to the
+  # explicit phrase only.
+  content_audit_stale_feature_markers:
     - "stale-feature"
     - "stale feature"
+    - "Stale-feature audit"
+    - "Stale feature audit"
 
 # Filename conventions used by the validator. Bumping the version suffix
 # requires PNG re-render. Validator accepts the current and one fallback.

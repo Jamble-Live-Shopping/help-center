@@ -1,0 +1,81 @@
+# Golden flow for apply-to-sell-on-jamble.
+# This flow intentionally declares the canonical screen names that the
+# article SHOULD have. The historical article used asymmetric naming
+# (configuracoes-menu pt-br vs settings-apply-to-sell en, two different
+# screen names for the same iOS view), violating the 1:1 mirror principle
+# in process/03-html-template.md.
+#
+# Replay therefore fails on mockup_declared_not_in_{pt,en} for screen
+# 'settings-menu'. That is the calibration finding from the golden replay
+# (see deliverables/golden-replay-2026-05-05.md): the validator does
+# surface the asymmetry. The fail is allowlisted here as documented
+# technical debt; the article needs a separate cleanup PR to land the
+# unified settings-menu pair before the allowlist can drop.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+
+job_to_be_done: "Help a buyer or new user apply to become a Live Seller on Jamble in Brazil, understand the review timeline, and know what to do after approval"
+
+source_of_truth:
+  ios_files:
+    - PROFILE/ProfileSettings/ProfileSettingsV2ViewController.swift
+    - PROFILE/Views/ProfileHeaderViewController.swift
+    - SHOW/ViewControllers/JambleTabBarController.swift
+    - APPLY/SellerApplicationInvitationViewController.swift
+  backend_files:
+    - jamble_backend/src/services/seller_application_service.py
+  legal: []
+  support_context: []
+
+content_contract:
+  must_answer:
+    - "where to find the application entry point in the app"
+    - "how long the review takes"
+    - "what happens after approval"
+    - "max 2 applications and what to do after a refusal"
+  forbidden_terms:
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+  must_not_say:
+    - "Internal review SLAs or staffing details"
+    - "Backend service names and database tables"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: settings-menu
+      purpose: "Show the Settings IMPORTANTE section with the Apply to go Live row"
+      source: ios_required
+    - name: pending-application
+      purpose: "Show the native UIAlertController that appears when the user tries to re-apply"
+      source: ios_required
+
+icons_required: []
+icons_fallback_feather: false
+
+currency_required: false
+
+risk_flags: []
+resolved_decisions: []
+
+# Replay allowlist (technical debt tracker).
+# - mockup_declared_not_in_pt / mockup_declared_not_in_en: settings-menu
+#   pair does not yet exist in the historical article (uses the asymmetric
+#   configuracoes-menu / settings-apply-to-sell naming). Drop these once
+#   the cleanup PR lands.
+# - mockup_referenced_not_declared: same root cause; the existing markdown
+#   embeds the asymmetric file names which the unified flow does not declare.
+# - content_audit_scan6_not_stale: see other golden flows; legacy audit.
+# - backend_files_not_audited: code-audit cites only iOS; backend service
+#   was added to the contract here for documentation, not yet evidenced.
+replay_allowlist:
+  - mockup_declared_not_in_pt
+  - mockup_declared_not_in_en
+  - mockup_referenced_not_declared
+  - mockup_png_missing
+  - mockup_html_missing
+  - content_audit_scan6_not_stale
+  - content_audit_missing_stale_feature  # this article's audit has no stale section at all
+  - backend_files_not_audited
