@@ -1,17 +1,17 @@
 intercom_id: 14288089
 slug: referral-program
 collection_id: 19177934
-default_locale: pt-BR
+default_locale: pt-br
 state: published
 author_id: 7980507
 titles:
-  pt-BR: Programa de Indicação de Vendedores
+  pt-br: Programa de Indicação de Vendedores
   en: Seller Referral Program
 descriptions:
-  pt-BR: Convide outros vendedores e ganhe R$ 500 em dinheiro quando seu indicado fizer a primeira venda.
+  pt-br: Convide outros vendedores e ganhe R$ 500 em dinheiro quando seu indicado fizer a primeira venda.
   en: Invite other sellers and earn $500 in cash when your referral makes their first sale on Jamble.
 locales:
-  pt-BR:
+  pt-br:
     title: 'Programa de Indicação de Vendedores'
     description: 'Convide outros vendedores e ganhe R$ 500 em dinheiro quando seu indicado fizer a primeira venda.'
   en:
