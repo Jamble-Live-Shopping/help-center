@@ -1,0 +1,72 @@
+# Golden flow for the existing v2 article battles-team-competition-in-your-show.
+# Used by scripts/replay-golden-articles.py to calibrate the validator
+# against historical v2-quality output. NOT a live article contract: it
+# is swapped temporarily into articles/<slug>/flow.yml during replay,
+# then restored.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+
+job_to_be_done: "Help live sellers run the Battles team competition during a show, understand the timer, the scoring, and how the winner gets revealed"
+
+source_of_truth:
+  ios_files:
+    - LIVE_SHOPPING/Battle/  # battle controller + UI
+  backend_files: []
+  legal: []
+  support_context: []
+
+content_contract:
+  must_answer:
+    - "what a battle is and how it differs from a regular show"
+    - "how to start a battle and pick a duration"
+    - "how the progress bar and scoring work"
+    - "what happens when the battle ends"
+  forbidden_terms:
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+  must_not_say:
+    - "Internal scoring algorithm details"
+    - "Backend service names"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: battle-welcome
+      purpose: "Show the welcome / start screen for a battle"
+      source: ios_required
+    - name: battle-duration-picker
+      purpose: "Show the duration picker the host taps before starting"
+      source: ios_required
+    - name: battle-progress-bar
+      purpose: "Show the live progress bar with team scores"
+      source: ios_required
+    - name: battle-ended
+      purpose: "Show the end-of-battle screen revealing the winner"
+      source: ios_required
+
+icons_required: []
+icons_fallback_feather: false
+
+currency_required: false
+
+# TOC not required for this article: 7 H2 sections is borderline above the
+# threshold but the existing v2 reads naturally without one. The validator
+# now uses toc_policy=warn at workflow level; per-article override stays unset.
+# toc_required: not set, falls back to workflow toc_policy
+
+risk_flags: []
+resolved_decisions: []
+
+# Replay allowlist (technical debt tracker, not production state).
+# Each entry is a hard-fail rule the golden replay tolerates because the
+# historical article would need an unrelated rewrite to satisfy. Drop entries
+# from this list as the underlying defect is fixed in a separate PR.
+#
+# - content_audit_scan6_not_stale: the v2 content-audit for this article
+#   has a "Scan 6, alt-text quality" subsection (not stale-feature). The
+#   v1.1.1 validator now rejects that. Will be removed once the audit gets
+#   a real Stale-feature audit subsection (separate content PR, not this one).
+replay_allowlist:
+  - content_audit_scan6_not_stale

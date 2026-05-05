@@ -81,12 +81,18 @@ DEFAULT_WORKFLOW = {
             "to be verified",
             "TBD",
         ],
-        "content_audit_scan6_required": [
-            "Scan 6",
+        # Tightened in v1.1.1: explicit stale-feature markers only. Bare
+        # "Scan 6" is no longer accepted because audits like "Scan 6,
+        # alt-text quality" passed the v1.1 check without doing the actual
+        # stale-feature audit.
+        "content_audit_stale_feature_markers": [
             "stale-feature",
             "stale feature",
+            "Stale-feature audit",
+            "Stale feature audit",
         ],
     },
+    "toc_policy": "warn",
     "mockup_filename": {
         "current_suffix": "v3",
         "fallback_suffix": "v2",
@@ -443,26 +449,49 @@ def validate_article(article_dir: Path) -> Report:
     toc_markers = WORKFLOW.get("toc_markers", {})
     audit_markers = WORKFLOW.get("audit_markers", {})
 
-    # ---- rule 17: TOC required when article has >= toc_required_h2_count H2 sections
+    # ---- rule 17: TOC policy.
+    # Calibration after golden replay (2026-05-05): TOC is WARN by default
+    # because 67/67 v2 articles in main today have no TOC. Per-article
+    # override available via flow.yml.toc_required: true|false.
+    #   flow.toc_required == True  -> hard fail when missing
+    #   flow.toc_required == False -> skip the check entirely
+    #   flow.toc_required unset    -> use workflow toc_policy (warn|strict|off)
     toc_threshold = int(th.get("toc_required_h2_count", 6))
     pt_h2_count = len(H2_PATTERN.findall(pt_body))
     en_h2_count = len(H2_PATTERN.findall(en_body))
-    if pt_h2_count >= toc_threshold:
-        pt_toc_markers = toc_markers.get("pt_br", []) or toc_markers.get("pt-br", [])
-        if not any(m in pt_body for m in pt_toc_markers):
-            rep.fail(
-                "toc_missing_pt",
-                f"pt-br.md has {pt_h2_count} H2 sections (>={toc_threshold}) but no TOC. "
-                f"Add a section like '## Conteúdo' or '## Neste guia' listing the article sections.",
-            )
-    if en_h2_count >= toc_threshold:
-        en_toc_markers = toc_markers.get("en", [])
-        if not any(m in en_body for m in en_toc_markers):
-            rep.fail(
-                "toc_missing_en",
-                f"en.md has {en_h2_count} H2 sections (>={toc_threshold}) but no TOC. "
-                f"Add a section like '## Contents' or '## In this guide'.",
-            )
+
+    flow_toc_required = flow.get("toc_required")  # True | False | None
+    workflow_toc_policy = (WORKFLOW.get("toc_policy") or "warn").lower()
+
+    if flow_toc_required is True:
+        toc_mode = "strict"
+    elif flow_toc_required is False:
+        toc_mode = "off"
+    elif workflow_toc_policy in ("strict", "warn", "off"):
+        toc_mode = workflow_toc_policy
+    else:
+        toc_mode = "warn"
+
+    if toc_mode != "off":
+        report_method = rep.fail if toc_mode == "strict" else rep.warn
+        if pt_h2_count >= toc_threshold:
+            pt_toc_markers = toc_markers.get("pt_br", []) or toc_markers.get("pt-br", [])
+            if not any(m in pt_body for m in pt_toc_markers):
+                report_method(
+                    "toc_missing_pt",
+                    f"pt-br.md has {pt_h2_count} H2 sections (>={toc_threshold}) but no TOC. "
+                    f"Add a section like '## Conteúdo' or '## Neste guia' listing the article sections. "
+                    f"(toc_policy={toc_mode}, override per-article via flow.yml.toc_required: true)",
+                )
+        if en_h2_count >= toc_threshold:
+            en_toc_markers = toc_markers.get("en", [])
+            if not any(m in en_body for m in en_toc_markers):
+                report_method(
+                    "toc_missing_en",
+                    f"en.md has {en_h2_count} H2 sections (>={toc_threshold}) but no TOC. "
+                    f"Add a section like '## Contents' or '## In this guide'. "
+                    f"(toc_policy={toc_mode}, override per-article via flow.yml.toc_required: true)",
+                )
 
     # ---- rule 18+19: bidirectional mockup-screen check
     # 18 (declared_but_not_referenced): every flow.yml screen must appear at
@@ -540,7 +569,12 @@ def validate_article(article_dir: Path) -> Report:
                     f"remove the ship-ready claim from the verdict.",
                 )
 
-    # ---- rule 22: content-audit must include Scan 6 / stale-feature
+    # ---- rule 22: content-audit must include an explicit stale-feature audit.
+    # v1.1.1 tightening: bare "Scan 6" is no longer accepted because audits
+    # mentioning "Scan 6, alt-text quality" passed the v1.1 check without
+    # actually performing the stale-feature audit. The audit now requires an
+    # explicit stale-feature marker. If "Scan 6" is mentioned but the explicit
+    # marker is missing, a clearer failure surfaces the misleading section.
     if intercom_id is not None and audit_dir.exists():
         content_audit_path = audit_dir / f"content-audit-{intercom_id}.md"
         if content_audit_path.exists():
@@ -548,14 +582,34 @@ def validate_article(article_dir: Path) -> Report:
                 content_audit_body = content_audit_path.read_text(encoding="utf-8")
             except OSError:
                 content_audit_body = ""
-            scan6_markers = audit_markers.get("content_audit_scan6_required", [])
-            if not any(m.lower() in content_audit_body.lower() for m in scan6_markers):
-                rep.fail(
-                    "content_audit_missing_scan6",
-                    f"content-audit-{intercom_id}.md does not mention Scan 6 (stale-feature). "
-                    f"Add a 'Scan 6 (stale-feature)' subsection that confirms every feature, "
-                    f"button, and label described in the article still exists in production.",
-                )
+            # Backward compat: workflow yaml may still ship the v1.1 key
+            # `content_audit_scan6_required`. Prefer the new explicit key.
+            stale_markers = (
+                audit_markers.get("content_audit_stale_feature_markers")
+                or audit_markers.get("content_audit_scan6_required")
+                or []
+            )
+            has_stale_marker = any(
+                m.lower() in content_audit_body.lower() for m in stale_markers
+            )
+            mentions_scan6 = "scan 6" in content_audit_body.lower()
+            if not has_stale_marker:
+                if mentions_scan6:
+                    rep.fail(
+                        "content_audit_scan6_not_stale",
+                        f"content-audit-{intercom_id}.md mentions 'Scan 6' but does not contain "
+                        f"an explicit stale-feature marker (one of: 'stale-feature', 'stale feature', "
+                        f"'Stale-feature audit'). The 'Scan 6' label alone is not enough; rename "
+                        f"or split the subsection so the stale-feature audit is unambiguous.",
+                    )
+                else:
+                    rep.fail(
+                        "content_audit_missing_stale_feature",
+                        f"content-audit-{intercom_id}.md has no stale-feature audit. "
+                        f"Add a 'Stale-feature audit' subsection (or include 'stale-feature' / "
+                        f"'stale feature') that confirms every feature, button, and label "
+                        f"described in the article still exists in production.",
+                    )
 
     # ---- rule 23: compliance cannot say ALL PASS if active risk_flags remain
     if intercom_id is not None and audit_dir.exists():
