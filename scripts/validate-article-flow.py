@@ -109,6 +109,14 @@ def validate_article(article_dir: Path) -> Report:
         rep.fail("metadata_yaml_parse", f"could not parse {metadata_path.relative_to(REPO_ROOT)}")
         return rep
 
+    # ---- rule 0: metadata.slug matches folder slug (if metadata.slug declared)
+    meta_slug = metadata.get("slug")
+    if meta_slug is not None and meta_slug != slug:
+        rep.fail(
+            "slug_mismatch",
+            f"metadata.yml slug='{meta_slug}' does not match folder name '{slug}'",
+        )
+
     # ---- rule 1: metadata.yml locales lowercase
     locales_section = metadata.get("locales") or {}
     for key in locales_section.keys():
@@ -205,6 +213,13 @@ def validate_article(article_dir: Path) -> Report:
     mockup_required = bool(mockup_plan.get("required", False))
     screens = mockup_plan.get("screens") or []
 
+    # ---- rule 9b: mockup_plan.required=true must declare at least one screen
+    if mockup_required and not screens:
+        rep.fail(
+            "mockup_screens_empty",
+            "flow.yml mockup_plan.required=true but screens list is empty (declare each screen with name + purpose + source)",
+        )
+
     if mockup_required and screens:
         for screen in screens:
             if not isinstance(screen, dict):
@@ -263,7 +278,20 @@ def validate_article(article_dir: Path) -> Report:
             if not audit_path.exists():
                 rep.fail("audit_missing", f"missing {audit_path.relative_to(REPO_ROOT)}")
 
-    # ---- rule 12: icons_required in pool OR HTML comment
+    # ---- rule 12: icons_required must be USED in HTML mockup AND have source proof
+    #
+    # Two separate checks:
+    #   12a (icon_not_in_mockup): the icon name must appear in at least one
+    #       HTML mockup-source as alt="<name>", "<!-- icon: <name> ... -->",
+    #       or "Assets.xcassets/<name>.imageset". Without this, an icon can
+    #       sit unused in the pool and still pass validation -- exactly the
+    #       PR #69 bug we want to prevent.
+    #   12b (icon_no_source_proof): the icon must also be traceable to an
+    #       iOS source. Either it lives in the assets/icons-ios/ pool (any
+    #       of svg/png/webp), OR the HTML mockup-source explicitly cites
+    #       the iOS asset path via "Assets.xcassets/<name>.imageset" comment.
+    #       Otherwise the worker may have used a Feather lookalike under
+    #       the icon name, or a different image entirely.
     icons_required = flow.get("icons_required") or []
     if icons_required:
         # collect HTML mockup-source content for grep
@@ -280,15 +308,34 @@ def validate_article(article_dir: Path) -> Report:
                 (ICONS_POOL_DIR / f"{icon_name}.{ext}").exists()
                 for ext in ("svg", "png", "webp")
             )
-            in_html = (
-                f"Assets.xcassets/{icon_name}.imageset" in html_blob
-                or f'alt="{icon_name}"' in html_blob
-                or f"<!-- icon: {icon_name}" in html_blob
-            )
-            if not in_pool and not in_html:
+            has_xcassets_comment = f"Assets.xcassets/{icon_name}.imageset" in html_blob
+            has_alt = f'alt="{icon_name}"' in html_blob
+            has_icon_comment = f"<!-- icon: {icon_name}" in html_blob
+            in_html = has_xcassets_comment or has_alt or has_icon_comment
+
+            if not in_html:
+                pool_hint = (
+                    " (icon is in assets/icons-ios/ pool but never used in any mockup; "
+                    "either remove from icons_required or reference it in a mockup HTML)"
+                    if in_pool
+                    else ""
+                )
                 rep.fail(
-                    "icon_missing",
-                    f"icon '{icon_name}' not found in assets/icons-ios/ pool nor referenced in HTML mockup-sources",
+                    "icon_not_in_mockup",
+                    f"icon '{icon_name}' declared in flow.yml.icons_required but not "
+                    f"referenced in any HTML mockup-source{pool_hint}. "
+                    f"Use alt=\"{icon_name}\", '<!-- icon: {icon_name} -->', or "
+                    f"'Assets.xcassets/{icon_name}.imageset' comment in the HTML.",
+                )
+                continue
+
+            if not in_pool and not has_xcassets_comment:
+                rep.fail(
+                    "icon_no_source_proof",
+                    f"icon '{icon_name}' is referenced in HTML but has no source proof: "
+                    f"add the asset to assets/icons-ios/ (svg/png/webp) OR add "
+                    f"'<!-- icon: {icon_name} from Assets.xcassets/{icon_name}.imageset -->' "
+                    f"comment in the HTML mockup-source.",
                 )
 
     # ---- rule 13: forbidden_terms grep (hard fail on match)
