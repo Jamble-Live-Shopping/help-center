@@ -1,0 +1,100 @@
+# Article flow contract.
+#
+# Lives at articles/<slug>/flow.yml. Versioned per article. Read by
+# scripts/validate-article-flow.py and enforced by the
+# validate-article-flow CI workflow.
+#
+# This file is NOT a substitute for process/. The MD doctrine
+# (process/00-RUNBOOK.md, process/03-html-template.md, process/design-system.md,
+# process/12-procedure-compliance.md) remains the source of truth for HOW to
+# write an article. The flow.yml only declares WHAT this specific article is,
+# what sources it draws from, what claims it must verify, what mockups it
+# needs, what it must NOT say, and what risk flags need human review.
+#
+# Convention: every key documented below is required unless tagged optional.
+# Empty arrays are valid (e.g. ios_files: []) but signal "explicitly nothing
+# applies", not "to be filled later".
+
+# Workflow version. Used as a future-proof tag. No behavior bound to this
+# value in the current MVP; the RUNBOOK MD remains the canonical workflow.
+workflow: article-v2
+
+# Mode of work for this article. Used by reviewers to calibrate scope.
+#   v2_rewrite   = full rewrite of an existing article on the v2 mockup pipeline
+#   new_article  = brand new slug, no prior intercom_id
+#   minor_edit   = targeted fix (typo, claim correction), no mockup changes expected
+mode: v2_rewrite
+
+# Audience targeting. Drives reviewer assignment and tone calibration.
+#   seller_br   = active or aspiring sellers in Brazil
+#   buyer_br    = buyers and prospective buyers in Brazil
+#   both        = applies to both audiences (rare; usually means split into two)
+audience: seller_br
+
+# Single-sentence "job to be done" for the reader. What does the reader walk
+# away with? Used by reviewers to validate the article actually serves this job.
+job_to_be_done: ""
+
+# Sources of truth that the article must reflect. Every claim in pt-br.md and
+# en.md must be traceable to one of these. Code audit (Phase 7) cross-checks
+# this list. Empty array = explicitly no source needed (rare; flag with risk).
+source_of_truth:
+  ios_files: []          # repo-relative paths in Jamble-iOS, e.g. DISCOUNT/Views/X.swift:220-305
+  backend_files: []      # repo-relative paths in jamble_backend, e.g. src/entities/referral.py:140-272
+  legal: []              # Notion page ids, ToU section refs (e.g. "Notion 34f9449e Section 25")
+  support_context: []    # Intercom convo ids, Slack thread URLs (optional, for context only)
+
+# Content contract. Three lists with different enforcement.
+content_contract:
+  # Topics the article MUST cover. Validator soft-warns if keywords missing
+  # in pt-br.md and en.md. Use short noun phrases, not full sentences.
+  must_answer: []
+
+  # Deterministic strings or regex patterns that MUST NOT appear in pt-br.md
+  # or en.md. Hard fail. Use this for unambiguous bans (e.g. "auction",
+  # "leilao", competitor names, internal codenames). Each entry is
+  # case-insensitive substring match. Prefix with "regex:" to use a regex
+  # (e.g. "regex:\\bWise\\b" to ban a standalone word).
+  forbidden_terms: []
+
+  # Human-readable phrases / rules describing what NOT to say. Soft warn.
+  # Reviewers use this list during PR review. Validator does NOT tokenize
+  # these into keywords (would create false positives for adjacent legitimate
+  # vocabulary). For deterministic enforcement, use forbidden_terms instead.
+  must_not_say: []
+
+# Mockup plan. One entry per screen the article needs. Validator enforces:
+#   - HTML pair (__pt-br + __en) for each name in mockup-sources/
+#   - PNG pair rendered DPR3 (>=900px wide) in assets/mockups/
+mockup_plan:
+  required: true        # if false, validator skips mockup checks entirely
+  screens:
+    # Example schema (uncomment and fill per article):
+    # - name: inbox-list                  # also drives filename: <name>__pt-br.html
+    #   purpose: "Show where seller sees buyer messages"
+    #   source: ios_required              # ios_required | composite | feather_fallback
+    []
+
+# iOS icons used in the mockups. Each entry must satisfy ONE of:
+#   1. assets/icons-ios/<name>.svg or .png exists in the repo (preferred,
+#      reusable across articles), OR
+#   2. an HTML mockup-source contains a comment "Assets.xcassets/<name>.imageset"
+#      to document the inline base64 embed.
+# Worker bias: when an icon is reusable, add it to the pool. When one-off,
+# inline embed is OK but must be documented in the HTML comment.
+icons_required: []
+
+# Hard ban on Feather-style stroke SVGs for UI chrome (per process/03-html-template.md
+# section "Embedding real iOS icons"). Default false. Setting to true requires
+# explicit reviewer approval and risk_flag.
+icons_fallback_feather: false
+
+# If the article describes prices, currency_required: true forces validator to
+# fail if pt-br.md does not contain "R$". Set false for articles that don't
+# touch prices (e.g. DM, profile, notifications).
+currency_required: false
+
+# Legal, product, or operational tensions to surface in the PR body. Soft
+# warn: the validator echoes them in CI summary as a reminder. Reviewers use
+# them to gate the merge. Empty array = no flags.
+risk_flags: []

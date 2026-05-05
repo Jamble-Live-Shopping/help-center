@@ -1,0 +1,69 @@
+# Flow contract for the DM seller article. v2 rewrite scope.
+# See process/templates/article-flow.yml for field documentation.
+# See process/00-RUNBOOK.md for the canonical 8-phase workflow.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+
+job_to_be_done: "Ajudar vendedores a responder compradores sem perder o contexto do show ou do pedido"
+
+source_of_truth:
+  ios_files:
+    # Activity tab and inbox (where sellers see DMs)
+    - DISCOUNT/Views/ActivityViewController.swift
+    # DM thread view + product/transaction conversation header
+    - DM/Views/ConversationViewController.swift
+    # User profile DM CTA
+    - PROFILE/Views/UserProfileHeaderView.swift
+  backend_files:
+    # DM scope: who can message whom, when
+    - jamble_backend/src/services/conversation_service.py
+  legal: []
+  support_context: []
+
+content_contract:
+  must_answer:
+    - "where sellers find direct messages in the app"
+    - "when sellers can message buyers and vice versa"
+    - "how product and transaction conversations differ from plain DMs"
+    - "what buyers see when a seller messages them"
+    - "safety rules and what kinds of messages are not allowed"
+
+  forbidden_terms:
+    # Internal codenames and unreleased automations should never appear.
+    # These are deterministic strings, hard fail on grep.
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+
+  must_not_say:
+    - "Internal moderation tooling and admin-only override paths"
+    - "Unreleased automation features (e.g. auto-replies, AI suggestions)"
+    - "Backend service names and database schema details"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: activity-tabs
+      purpose: "Show where seller sees buyer messages in the Activity tab and how filters work"
+      source: ios_required
+    - name: dm-product-card
+      purpose: "Show the product-conversation header: product image, price, and thread context"
+      source: ios_required
+    - name: product-message-thread
+      purpose: "Show a full DM thread anchored to a product, illustrating buyer/seller exchange"
+      source: ios_required
+    - name: user-profile-header
+      purpose: "Show the Message CTA on a user profile, the entry point for plain DMs"
+      source: ios_required
+
+icons_required:
+  - live_send_message      # send action in DM composer
+  - icon-chat-star         # chat moderation reference
+icons_fallback_feather: false
+
+currency_required: false   # DM article does not document prices
+
+risk_flags:
+  - "Confirm with Aymar which buyer-to-seller DM rules are live versus planned (gating affects must_not_say scope)"
+  - "Confirm with support team whether product-conversation auto-creation behavior changed in any recent release"
