@@ -1,0 +1,73 @@
+# Article v2 workflow gates.
+#
+# This file declares the EXECUTABLE thresholds and gate conditions used by
+# scripts/validate-article-flow.py. It does NOT replicate the doctrine MD
+# files (00-RUNBOOK, 03-html-template, design-system, 12-procedure-compliance):
+# the MDs explain HOW and WHY, this YAML lists WHAT is enforced and at WHAT
+# numeric threshold.
+#
+# When you bump a threshold here, the validator picks it up automatically
+# without code changes. When you add a new gate, the validator code must be
+# updated. Do not duplicate doctrine here, only enforce-able numbers and flags.
+
+workflow_id: article-v2
+
+# Numeric thresholds used by hard fails.
+thresholds:
+  # TOC required when the article has at least this many H2 sections
+  # (markdown lines starting with "## "). Below this count, TOC is optional.
+  toc_required_h2_count: 6
+
+  # Mockup PNG must be at least this wide (pixels) to be considered DPR3.
+  # Phase 4 RUNBOOK requires DPR 3, viewport width 320px in HTML, so
+  # rendered PNG should be ~960px or more. Set 900 as a safe lower bound.
+  mockup_png_min_width: 900
+
+  # metadata.yml description max length per locale.
+  description_max_chars: 140
+
+  # Maximum hard fails tolerated before the validator exits 1.
+  max_hard_fails: 0
+
+# Markdown anchors used to detect a TOC in either locale. The validator
+# considers TOC present if the body contains AT LEAST ONE of these strings.
+toc_markers:
+  pt_br:
+    - "## Conteudo"
+    - "## Conteúdo"
+    - "## Sumario"
+    - "## Sumário"
+    - "## Neste guia"
+    - "[[toc]]"
+  en:
+    - "## Contents"
+    - "## On this page"
+    - "## In this guide"
+    - "## Table of contents"
+    - "[[toc]]"
+
+# Markers used by hard fails on audit content.
+audit_markers:
+  # If a code-audit MD claims ship-ready, none of these fragments may appear.
+  # Fragment match is case-insensitive substring.
+  code_audit_ship_ready_blockers:
+    - "PARTIAL"
+    - "not re-audited"
+    - "not reaudited"
+    - "requires cross-check"
+    - "requires crosscheck"
+    - "to be verified"
+    - "TBD"
+
+  # content-audit MD must contain at least one of these markers to prove
+  # that Scan 6 (stale-feature audit) was performed. Without it, fail.
+  content_audit_scan6_required:
+    - "Scan 6"
+    - "stale-feature"
+    - "stale feature"
+
+# Filename conventions used by the validator. Bumping the version suffix
+# requires PNG re-render. Validator accepts the current and one fallback.
+mockup_filename:
+  current_suffix: "v3"
+  fallback_suffix: "v2"
