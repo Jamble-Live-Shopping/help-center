@@ -1,0 +1,59 @@
+# Golden flow for the existing v2 article flash-sales.
+# See process/golden-flows/battles-team-competition-in-your-show.flow.yml
+# header for context on what golden flows are for.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+
+job_to_be_done: "Help sellers configure and run a flash sale during a live show, including pricing rules and product card layout"
+
+source_of_truth:
+  ios_files:
+    - LIVE_SHOPPING/HostV2/  # host controllers + flash sale config
+  backend_files: []
+  legal: []
+  support_context: []
+
+content_contract:
+  must_answer:
+    - "what a flash sale is and when to use it"
+    - "how to configure pricing tiers"
+    - "what buyers see when a flash sale runs"
+    - "how the timer behaves"
+  forbidden_terms:
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+  must_not_say:
+    - "Internal discount-engine implementation"
+    - "Backend service names"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: flash-sale-mode-picker
+      purpose: "Show the picker entry point for starting a flash sale"
+      source: ios_required
+    - name: flash-sales-config
+      purpose: "Show the configuration screen for the flash sale parameters"
+      source: ios_required
+    - name: flash-sale-product-card
+      purpose: "Show the product card buyers see during a flash sale"
+      source: ios_required
+    - name: pricing-chart
+      purpose: "Pricing-tier comparison chart"
+      source: composite
+
+icons_required: []
+icons_fallback_feather: false
+
+currency_required: true  # article documents prices
+
+risk_flags: []
+resolved_decisions: []
+
+# Replay allowlist (technical debt tracker, not production state).
+# See process/golden-flows/battles-team-competition-in-your-show.flow.yml
+# for context.
+replay_allowlist:
+  - content_audit_scan6_not_stale

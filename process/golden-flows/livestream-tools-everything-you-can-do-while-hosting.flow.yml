@@ -1,0 +1,65 @@
+# Golden flow for livestream-tools-everything-you-can-do-while-hosting.
+# Used by golden replay specifically to verify that the stale-feature gate
+# (content_audit_scan6_not_stale) catches the misleading "Scan 6" label
+# in the historical content-audit. No allowlist on that rule: replay
+# should fail until the underlying audit is rewritten with an explicit
+# stale-feature subsection.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+
+job_to_be_done: "Help live sellers learn every tool available while hosting a show: product list, settings, screen overlays, audience interactions"
+
+source_of_truth:
+  ios_files:
+    - LIVE_SHOPPING/HostV2/  # host UI controllers
+    - LIVE_SHOPPING/ProductList/  # product list management
+  backend_files: []
+  legal: []
+  support_context: []
+
+content_contract:
+  must_answer:
+    - "what controls the host has during a show"
+    - "how to add a product live"
+    - "how to configure show settings without ending the live"
+    - "what the audience can interact with"
+  forbidden_terms:
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+  must_not_say:
+    - "Internal scheduling or transcoding details"
+    - "Backend service names"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: screen-overview
+      purpose: "Annotated overview of every host control on the live screen"
+      source: ios_required
+    - name: product-list-tabs
+      purpose: "Show the product list tabs (live, queued, sold) the host uses"
+      source: ios_required
+    - name: add-products-sheet
+      purpose: "Show the bottom sheet to add products mid-show"
+      source: ios_required
+    - name: show-settings-menu
+      purpose: "Show the host settings menu accessible without ending the show"
+      source: ios_required
+
+icons_required: []
+icons_fallback_feather: false
+
+currency_required: false
+
+risk_flags: []
+resolved_decisions: []
+
+# Replay allowlist: NONE on content_audit_scan6_not_stale.
+# This article's content-audit must contain an explicit stale-feature
+# marker. If the audit only labels the section "Scan 6" without
+# stale-feature semantics, the replay will fail and surface the gap.
+# Per Aymar: stale-feature stays a real product risk and must be
+# documented explicitly, no exceptions.
+replay_allowlist: []

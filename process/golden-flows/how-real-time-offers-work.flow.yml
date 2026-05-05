@@ -1,0 +1,61 @@
+# Golden flow for the existing v2 article how-real-time-offers-work.
+# See process/golden-flows/battles-team-competition-in-your-show.flow.yml
+# header for context on what golden flows are for.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+
+job_to_be_done: "Explain to sellers what real-time offers are, how the three sell modes (sudden death, buy it now, giveaway) differ, and which one to pick"
+
+source_of_truth:
+  ios_files:
+    - LIVE_SHOPPING/HostV2/  # host + sell mode controllers
+    - SHOW/  # show context
+  backend_files: []
+  legal: []
+  support_context: []
+
+content_contract:
+  must_answer:
+    - "what a real-time offer is and how it differs from a fixed price"
+    - "the three sell modes and when each one fits"
+    - "how to start an offer during a show"
+    - "what buyers see on their side"
+  forbidden_terms:
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+  must_not_say:
+    - "Internal pricing or matching algorithm"
+    - "Backend service names"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: sell-mode-picker
+      purpose: "Show the three sell mode options the host picks before starting an offer"
+      source: ios_required
+    - name: real-time-offer-card
+      purpose: "Show the offer card buyers see during the show"
+      source: ios_required
+    - name: sudden-death-card
+      purpose: "Show the sudden-death variant of the offer card"
+      source: ios_required
+    - name: comparison-chart
+      purpose: "Comparison chart between the three sell modes"
+      source: composite
+
+icons_required: []
+icons_fallback_feather: false
+
+currency_required: true  # article documents prices
+
+risk_flags: []
+resolved_decisions: []
+
+# Replay allowlist (technical debt tracker, not production state).
+# See process/golden-flows/battles-team-competition-in-your-show.flow.yml
+# for context. Entries documented here are tolerated by the golden replay
+# until fixed in a separate content PR.
+replay_allowlist:
+  - content_audit_scan6_not_stale
