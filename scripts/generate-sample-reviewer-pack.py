@@ -30,6 +30,7 @@ from __future__ import annotations
 import json
 import subprocess
 import sys
+import html
 from pathlib import Path
 
 
@@ -152,6 +153,12 @@ def main() -> int:
 
     body = summary_html.read_text(encoding="utf-8")
     body_patched = body.replace(repo_root_uri, relative_to_repo)
+    # The renderer also shows the worktree path as visible text in each
+    # article header. Keep the committed sample free of developer-local
+    # paths while still pointing readers at the fixture worktree.
+    sample_marker = "{REPO_ROOT}/tests/fixtures/batch-coordinator/sample-worktree"
+    body_patched = body_patched.replace(str(SAMPLE_WORKTREE), sample_marker)
+    body_patched = body_patched.replace(html.escape(str(SAMPLE_WORKTREE), quote=True), sample_marker)
     if body_patched == body:
         print(
             "WARN: no file:// URIs were rewritten; the renderer may have "

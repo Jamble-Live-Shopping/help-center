@@ -15,11 +15,9 @@ What is tested:
 - review mode renderer: missing-PNG summary -> blocker visible in HTML
 - summary.html shape: scorecard table + 4 reviewer questions
 
-What is NOT tested in CI:
-- real `git worktree add` against origin/main (would require fetched repo
-  state). The dry-run path covers preflight and contract semantics; the
-  worktree primitives are a thin shell over `git worktree add`, exercised
-  manually before opening this PR.
+What is intentionally fixture-scoped:
+- real `git worktree add` is exercised against HEAD for bootstrap/rerun
+  safety, but not against a remote branch. That keeps CI deterministic.
 
 Usage:
     scripts/test-batch-coordinator.py             # run all tests
@@ -31,6 +29,7 @@ import argparse
 import importlib.util
 import json
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -69,6 +68,31 @@ def _run(args: list[str], cwd: Path | None = None) -> tuple[int, str, str]:
         cwd=str(cwd) if cwd else str(REPO_ROOT),
     )
     return proc.returncode, proc.stdout, proc.stderr
+
+
+def _cleanup_worktree_and_branch(worktree: Path | None, branch: str) -> None:
+    """Best-effort cleanup for tests that create real git worktrees.
+
+    Git may keep a prunable registration when a tempfile-backed worktree
+    disappears before `git worktree remove` can cleanly unregister it. Prune
+    explicitly so a green test run does not leave state that affects the next
+    run.
+    """
+    if worktree is not None and worktree.exists():
+        rc, _, _ = _run(["git", "worktree", "remove", "--force", str(worktree)], cwd=REPO_ROOT)
+        if rc != 0 and worktree.exists():
+            shutil.rmtree(worktree)
+    _run(["git", "worktree", "prune"], cwd=REPO_ROOT)
+    _run(["git", "branch", "-D", branch], cwd=REPO_ROOT)
+
+
+def _assert_no_git_leak(branch: str) -> None:
+    rc_b, out_b, err_b = _run(["git", "branch", "--list", branch], cwd=REPO_ROOT)
+    assert rc_b == 0, f"git branch --list failed: {err_b}"
+    rc_w, out_w, err_w = _run(["git", "worktree", "list", "--porcelain"], cwd=REPO_ROOT)
+    assert rc_w == 0, f"git worktree list failed: {err_w}"
+    combined = out_b + "\n" + out_w
+    assert branch not in combined, f"fixture branch/worktree leaked after test:\n{combined}"
 
 
 # ---------------------------------------------------------------
@@ -180,8 +204,7 @@ def test_prepare_rerun_with_same_batch_id_reuses_branch() -> None:
     # Pre-clean any leftover state from prior runs so this test is
     # reentrant. `git worktree prune` drops registrations whose
     # working trees were rm'd outside git (the tempfile case).
-    _run(["git", "worktree", "prune"], cwd=REPO_ROOT)
-    _run(["git", "branch", "-D", branch], cwd=REPO_ROOT)
+    _cleanup_worktree_and_branch(None, branch)
 
     # Use a dedicated batch_id so this test does not collide with
     # other tests' branches in a parallel run.
@@ -191,6 +214,7 @@ def test_prepare_rerun_with_same_batch_id_reuses_branch() -> None:
         "batch_id: fixture-batch-rerun",
     )
     rerun_batch.write_text(rerun_yaml, encoding="utf-8")
+    wt: Path | None = None
 
     try:
         with tempfile.TemporaryDirectory() as tmp:
@@ -234,10 +258,8 @@ def test_prepare_rerun_with_same_batch_id_reuses_branch() -> None:
         # Always drop the test branch so we do not leak it into the
         # developer's repo (even though the test does not delete it
         # automatically inside its own steps).
-        wt = base / "fixture-bootstrap-article"
-        if wt.exists():
-            _run(["git", "worktree", "remove", "--force", str(wt)], cwd=REPO_ROOT)
-        _run(["git", "branch", "-D", branch], cwd=REPO_ROOT)
+        _cleanup_worktree_and_branch(wt, branch)
+    _assert_no_git_leak(branch)
 
 
 def test_prepare_bootstraps_missing_flow_yml() -> None:
@@ -592,6 +614,56 @@ def test_render_html_is_self_contained_no_external_js() -> None:
         assert "<form" not in body.lower(), "reviewer pack must contain no <form> tags"
 
 
+def test_render_sample_summary_json_resolves_repo_root_marker() -> None:
+    """The committed sample summary.json uses `{REPO_ROOT}` markers instead
+    of developer-local paths. The renderer must still resolve those markers
+    and show the real fixture article bodies."""
+    with tempfile.TemporaryDirectory() as tmp:
+        rc, html, stdout, stderr = _render(REPO_ROOT / "_work" / "sample-batch" / "summary.json", Path(tmp))
+        assert rc == 0, f"render failed: rc={rc} stderr={stderr}"
+        body = html.read_text(encoding="utf-8")
+        assert "Este artigo e um exemplo sintetico" in body, (
+            "pt-BR fixture body did not render from {REPO_ROOT} marker"
+        )
+        assert "This article is a synthetic example" in body, (
+            "EN fixture body did not render from {REPO_ROOT} marker"
+        )
+        assert "(pt-br.md not found in worktree)" not in body
+        assert "file://" in body, "runtime-rendered sample should point images at local files"
+
+
+def test_generate_sample_pack_is_idempotent_and_has_no_local_paths() -> None:
+    """The checked-in sample is reviewer-facing documentation. Regenerating
+    it must be byte-for-byte stable and must not leak the path of whoever
+    last ran the generator."""
+    sample_dir = REPO_ROOT / "_work" / "sample-batch"
+    html_path = sample_dir / "summary.html"
+    json_path = sample_dir / "summary.json"
+    before_html = html_path.read_text(encoding="utf-8")
+    before_json = json_path.read_text(encoding="utf-8")
+
+    try:
+        rc, out, err = _run([sys.executable, str(SCRIPTS_DIR / "generate-sample-reviewer-pack.py")])
+        assert rc == 0, f"sample generator failed: rc={rc}\nout:\n{out}\nerr:\n{err}"
+
+        after_html = html_path.read_text(encoding="utf-8")
+        after_json = json_path.read_text(encoding="utf-8")
+        assert after_html == before_html, "sample summary.html is not idempotent"
+        assert after_json == before_json, "sample summary.json is not idempotent"
+
+        combined = after_html + "\n" + after_json
+        for forbidden in ("/private/tmp", "/tmp/help-center", "/Users/", "file://"):
+            assert forbidden not in combined, (
+                f"committed sample leaks local-only token {forbidden!r}"
+            )
+        assert "../../tests/fixtures/batch-coordinator/sample-worktree/assets/mockups" in after_html, (
+            "sample HTML should use repo-relative fixture mockup paths"
+        )
+    finally:
+        html_path.write_text(before_html, encoding="utf-8")
+        json_path.write_text(before_json, encoding="utf-8")
+
+
 # ---------------------------------------------------------------
 # Test runner
 # ---------------------------------------------------------------
@@ -614,6 +686,8 @@ TESTS = [
     test_decide_status_clean_review_marks_ready,
     test_render_path_with_space_uses_url_escape,
     test_render_html_is_self_contained_no_external_js,
+    test_render_sample_summary_json_resolves_repo_root_marker,
+    test_generate_sample_pack_is_idempotent_and_has_no_local_paths,
 ]
 
 
