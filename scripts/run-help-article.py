@@ -36,6 +36,7 @@ Note: `checklist` is informational, NOT a gate. The final gate is
 from __future__ import annotations
 
 import argparse
+import datetime
 import re
 import subprocess
 import sys
@@ -88,6 +89,7 @@ RULE_TO_PHASE: dict[str, tuple[int, str]] = {
     "icon_no_source_proof": (3, "Phase 3, HTML mockups (icons)"),
     "feather_fallback_enabled": (3, "Phase 3, HTML mockups (icons)"),
     "audit_missing": (7, "Phase 7, Audit triplet"),
+    "audit_skeleton_unfilled": (7, "Phase 7, Audit triplet"),
     "code_audit_inconsistent": (7, "Phase 7, Audit triplet"),
     "content_audit_missing_stale_feature": (7, "Phase 7, Audit triplet"),
     "content_audit_scan6_not_stale": (7, "Phase 7, Audit triplet"),
@@ -500,6 +502,11 @@ def phase_writer_packet(article_dir: Path) -> int:
 
 # ---------------------------- write skeletons (audit triplet only) ----------------------------
 
+# Skeleton templates for the audit triplet. Each section that the worker
+# must fill carries a `SKELETON_TODO:` marker. The validator fails on
+# `audit_skeleton_unfilled` whenever any audit file still contains the
+# marker, so a freshly-written skeleton is intentionally red until the
+# worker has actually filled the audit.
 AUDIT_SKELETONS = {
     "code-audit": """\
 # Code audit, article {intercom_id} ({slug})
@@ -512,13 +519,13 @@ xcstrings: `Jamble-iOS/Jamble/RESOURCES/Localizable.xcstrings`
 
 | Article claim | Source | Verdict |
 |---|---|---|
-| (fill: claim 1) | (file:line) | MATCH / MISMATCH |
+| SKELETON_TODO: replace this row with a real claim, cite file:line, MATCH or MISMATCH | SKELETON_TODO | SKELETON_TODO |
 
 ## Verdict
 
-(Resolve uncertainty before declaring ship-ready. The validator rejects
-"ship-ready" when the body still contains 'PARTIAL', 'not re-audited',
-'requires cross-check', 'to be verified', or 'TBD'.)
+SKELETON_TODO: write the verdict here. Resolve every PARTIAL / not
+re-audited / requires cross-check / TBD before declaring ship-ready;
+the validator rejects "ship-ready" wording paired with any of those.
 """,
     "content-audit": """\
 # Content audit, article {intercom_id} ({slug})
@@ -526,22 +533,24 @@ xcstrings: `Jamble-iOS/Jamble/RESOURCES/Localizable.xcstrings`
 Date: {date}
 
 ## 1. PII / sensitive data
-Verdict: (PASS / BLOCKER + detail)
+SKELETON_TODO: scan body and mockups for real names, emails, phone
+numbers, tokens, IDs. Verdict line goes here.
 
 ## 2. Banned words (auction / leilao)
-Verdict: PASS
+SKELETON_TODO: confirm 0 occurrences in pt-br.md and en.md.
 
 ## 3. Currency
-Verdict: PASS
+SKELETON_TODO: confirm pt-br uses R$, en uses $, no R$ leak in EN body.
 
 ## 4. Word diet
-Verdict: PASS
+SKELETON_TODO: word count, sentence length, no filler paragraphs.
 
 ## 5. Tone (against Jamble voice guidelines)
-Verdict: PASS
+SKELETON_TODO: tone check vs voice guidelines (no condescension, direct
+address `voce` / `you`).
 
 ## 6. Alt text quality
-Verdict: PASS
+SKELETON_TODO: every image has a 15-150 char descriptive alt.
 
 ## 7. Stale-feature audit
 
@@ -551,13 +560,10 @@ exists in production. Verdicts: `live_in_ios` | `live_in_backend` |
 
 | Claim / feature | Source checked | Status | Checked at | Owner | Verdict |
 |---|---|---|---|---|---|
-| (fill: feature 1) | (file path) | live | {date} | (name) | live_in_ios |
+| SKELETON_TODO: replace this row with a real feature you audited | SKELETON_TODO: cite the iOS or backend path you read | SKELETON_TODO | {date} | SKELETON_TODO | SKELETON_TODO |
 
-Verdict: (PASS / BLOCKER + detail)
-
-## Result
-
-ALL N SCANS PASS. Zero BLOCKER.
+SKELETON_TODO: write the stale-feature verdict here. Every row above
+must be filled with a real path the validator can grep against.
 """,
     "compliance": """\
 # Compliance audit, article {intercom_id} ({slug})
@@ -567,13 +573,13 @@ Reference: process/12-procedure-compliance.md (17 checks)
 
 | # | Check | Result |
 |---|---|---|
-| 1 | iOS code audit done before drafting | (PASS / BLOCKER) |
+| 1 | iOS code audit done before drafting | SKELETON_TODO |
 
 ## Verdict
 
-(Do NOT write 'ALL PASS' if the article still has active risk_flags
-without a corresponding resolved_decisions entry; the validator will
-fail.)
+SKELETON_TODO: write the verdict here. Do not type "ALL PASS" while the
+article still has active risk_flags without a corresponding
+resolved_decisions entry; the validator rejects that combination.
 """,
 }
 
@@ -592,7 +598,10 @@ def write_skeletons(article_dir: Path, intercom_id: Any, force: bool) -> int:
     audit_dir = article_dir / "audit"
     audit_dir.mkdir(exist_ok=True)
     slug = article_dir.name
-    today = "2026-05-06"  # stamp the day the skeletons are produced; worker updates as they audit
+    # Use today's date dynamically. The skeleton stamps the day it was
+    # written; the worker updates rows individually as they audit each
+    # claim.
+    today = datetime.date.today().isoformat()
 
     written: list[str] = []
     skipped: list[str] = []

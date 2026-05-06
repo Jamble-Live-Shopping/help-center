@@ -359,6 +359,30 @@ def validate_article(article_dir: Path) -> Report:
             if not audit_path.exists():
                 rep.fail("audit_missing", f"missing {audit_path.relative_to(REPO_ROOT)}")
 
+    # ---- rule 11b: audit skeletons must be filled before ship.
+    # `scripts/run-help-article.py --write-skeletons` stamps each section
+    # with a `SKELETON_TODO` marker. Any audit file that still contains
+    # the marker is unfilled work, regardless of whether the rest of the
+    # validator passes. Hard fail. Catches the "I generated a skeleton
+    # and ran the validator before actually auditing" path.
+    if intercom_id is not None and audit_dir.exists():
+        for kind in ("code-audit", "content-audit", "compliance"):
+            audit_path = audit_dir / f"{kind}-{intercom_id}.md"
+            if not audit_path.exists():
+                continue
+            try:
+                body = audit_path.read_text(encoding="utf-8")
+            except OSError:
+                continue
+            if "SKELETON_TODO" in body:
+                count = body.count("SKELETON_TODO")
+                rep.fail(
+                    "audit_skeleton_unfilled",
+                    f"{audit_path.relative_to(REPO_ROOT)} still contains "
+                    f"{count} SKELETON_TODO marker(s). Replace each one with the "
+                    f"actual audit content before declaring the article ready.",
+                )
+
     # ---- rule 12: icons_required must be USED in HTML mockup AND have source proof
     #
     # Two separate checks:
