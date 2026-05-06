@@ -50,6 +50,10 @@ VALIDATOR = REPO_ROOT / "scripts" / "validate-article-flow.py"
 
 # Mapping from validator hard-fail rule -> RUNBOOK phase that owns the fix.
 RULE_TO_PHASE: dict[str, tuple[int, str]] = {
+    # Phase 0: contract setup (article does not even have a parseable flow.yml)
+    "flow_missing": (0, "Phase 0, Contract setup"),
+    "flow_yaml_parse": (0, "Phase 0, Contract setup"),
+    # Phase 1: code audit
     "backend_files_not_audited": (1, "Phase 1, Code audit"),
     "em_dash": (5, "Phase 5, Article body"),
     "en_dash": (5, "Phase 5, Article body"),
@@ -60,6 +64,8 @@ RULE_TO_PHASE: dict[str, tuple[int, str]] = {
     "content_missing": (5, "Phase 5, Article body"),
     "toc_missing_pt": (5, "Phase 5, Article body"),
     "toc_missing_en": (5, "Phase 5, Article body"),
+    "metadata_missing": (6, "Phase 6, metadata.yml"),
+    "metadata_yaml_parse": (6, "Phase 6, metadata.yml"),
     "locale_lowercase": (6, "Phase 6, metadata.yml"),
     "intercom_id_mismatch": (6, "Phase 6, metadata.yml"),
     "description_too_long": (6, "Phase 6, metadata.yml"),
@@ -115,6 +121,70 @@ def load_yaml(path: Path) -> dict[str, Any]:
         return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     except (OSError, yaml.YAMLError):
         return {}
+
+
+def preflight(article_dir: Path) -> int:
+    """Common contract preflight for every phase.
+
+    Returns 0 if the article is well-formed enough to be processed, or 2
+    with a clear stderr message if not. The runner must NEVER print
+    "ready" or report 0 fails when these checks do not pass: the
+    underlying validator silently skips paths without a flow.yml, so
+    every phase has to fail loud here instead.
+    """
+    if not article_dir.exists():
+        print(f"ERROR: {article_dir} does not exist", file=sys.stderr)
+        return 2
+    if not article_dir.is_dir():
+        print(f"ERROR: {article_dir} is not a directory", file=sys.stderr)
+        return 2
+
+    flow_path = article_dir / "flow.yml"
+    if not flow_path.exists():
+        rel = article_dir.relative_to(REPO_ROOT) if article_dir.is_relative_to(REPO_ROOT) else article_dir
+        print(
+            f"ERROR [flow_missing]: {rel}/flow.yml is missing. "
+            f"This is a Phase 0 (contract setup) error: bootstrap the flow with "
+            f"scripts/init-article-flow.py --slug {article_dir.name} or copy "
+            f"process/templates/article-flow.yml.",
+            file=sys.stderr,
+        )
+        return 2
+    try:
+        parsed = yaml.safe_load(flow_path.read_text(encoding="utf-8"))
+    except (OSError, yaml.YAMLError) as exc:
+        print(
+            f"ERROR [flow_yaml_parse]: cannot parse {flow_path.relative_to(REPO_ROOT)}: {exc}",
+            file=sys.stderr,
+        )
+        return 2
+    if not isinstance(parsed, dict):
+        print(
+            f"ERROR [flow_yaml_parse]: {flow_path.relative_to(REPO_ROOT)} does not parse to a mapping",
+            file=sys.stderr,
+        )
+        return 2
+
+    metadata_path = article_dir / "metadata.yml"
+    if metadata_path.exists():
+        try:
+            meta_parsed = yaml.safe_load(metadata_path.read_text(encoding="utf-8"))
+        except (OSError, yaml.YAMLError) as exc:
+            print(
+                f"ERROR [metadata_yaml_parse]: cannot parse "
+                f"{metadata_path.relative_to(REPO_ROOT)}: {exc}",
+                file=sys.stderr,
+            )
+            return 2
+        if not isinstance(meta_parsed, dict):
+            print(
+                f"ERROR [metadata_yaml_parse]: "
+                f"{metadata_path.relative_to(REPO_ROOT)} does not parse to a mapping",
+                file=sys.stderr,
+            )
+            return 2
+
+    return 0
 
 
 def phase_plan(article_dir: Path) -> int:
@@ -261,15 +331,20 @@ def main() -> int:
     args = parser.parse_args()
 
     article_dir = Path(args.article_dir).resolve()
-    if not article_dir.is_dir():
-        print(f"ERROR: {args.article_dir} is not a directory", file=sys.stderr)
-        return 2
 
     try:
         article_dir.relative_to(REPO_ROOT)
     except ValueError:
         print(f"ERROR: {args.article_dir} must be inside {REPO_ROOT}", file=sys.stderr)
         return 2
+
+    # Common preflight: fail loud on contract setup errors. The validator
+    # silently skips paths without a flow.yml; without this preflight,
+    # `validate` and `checklist` would mistakenly print "ready" on an
+    # article that has no contract yet.
+    rc = preflight(article_dir)
+    if rc != 0:
+        return rc
 
     if args.phase == "plan":
         return phase_plan(article_dir)

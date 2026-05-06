@@ -22,7 +22,27 @@ Run from the repo root.
 |-----------|------------------------------------------------------------|------|----------------|
 | plan      | `python3 scripts/run-help-article.py articles/<slug> --phase plan`      | 0 / 2 | Job-to-be-done, audience, mode, intercom_id, then the ordered checklist of artefacts grouped by RUNBOOK phase (Phase 1 to Phase 8). Includes risk_flags and resolved_decisions if any. |
 | validate  | `python3 scripts/run-help-article.py articles/<slug> --phase validate`  | 0 / 1 / 2 | Forwards the validator output verbatim. Exit code mirrors the validator's. |
-| checklist | `python3 scripts/run-help-article.py articles/<slug> --phase checklist` | 0 / 2 | Runs the validator, parses each FAIL line, and groups them by RUNBOOK phase ("Phase 1, Code audit", "Phase 5, Article body", "Phase 7, Audit triplet", etc.). Always exit 0; the goal is to print the plan, not gate it. |
+| checklist | `python3 scripts/run-help-article.py articles/<slug> --phase checklist` | 0 / 2 | Runs the validator, parses each FAIL line, and groups them by RUNBOOK phase. **Exits 0 only after the contract preflight passes** (see below). Otherwise exits 2. |
+
+## Contract preflight (every phase)
+
+Before the runner does anything else, it checks the article folder is a
+real contract:
+
+1. `articles/<slug>/` exists and is a directory inside the repo
+2. `articles/<slug>/flow.yml` exists and parses to a YAML mapping
+3. `articles/<slug>/metadata.yml`, if present, parses to a YAML mapping
+
+If any of these fail, the runner exits **2** with a clear `[flow_missing]`,
+`[flow_yaml_parse]`, or `[metadata_yaml_parse]` marker on stderr, and
+points to `scripts/init-article-flow.py` to bootstrap the flow.
+
+The preflight prevents a class of false greens: the underlying
+`scripts/validate-article-flow.py` silently skips paths that have no
+`flow.yml` and prints "No articles to validate". Without preflight, the
+runner would call that, see exit 0, and report "Article is ready" on an
+article that has no contract at all. The preflight makes this a hard
+setup error (Phase 0 in the RUNBOOK mapping).
 
 ## What the runner does
 
