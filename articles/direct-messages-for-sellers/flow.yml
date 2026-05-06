@@ -58,8 +58,7 @@ mockup_plan:
       source: ios_required
 
 icons_required:
-  - live_send_message      # send action in DM composer
-  - icon-chat-star         # chat moderation reference
+  - live_send_message      # send action in DM composer (used in product-message-thread mockup)
 icons_fallback_feather: false
 
 currency_required: false   # DM article does not document prices
