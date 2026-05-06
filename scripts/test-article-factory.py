@@ -304,6 +304,172 @@ def test_expected_fails_list_length_mismatch_fails() -> None:
 
 
 # ---------------------------------------------------------------
+# Tests for run-help-article.py preflight (PR #79 false-green class)
+# ---------------------------------------------------------------
+
+RUN_HELP = SCRIPTS_DIR / "run-help-article.py"
+
+
+def _make_articleless_fixture() -> Path:
+    """Create a temp article dir without flow.yml (mirrors apply-to-sell repro)."""
+    tmp = Path(tempfile.mkdtemp(prefix="article-no-flow-", dir=str(REPO_ROOT / "articles")))
+    return tmp
+
+
+def test_runner_validate_no_flow_returns_nonzero() -> None:
+    art = _make_articleless_fixture()
+    try:
+        rc, out, err = _run([sys.executable, str(RUN_HELP), str(art), "--phase", "validate"])
+        assert rc != 0, f"validate without flow.yml must NOT exit 0; got rc={rc}, out={out!r}"
+        assert "flow_missing" in err or "flow_missing" in out, (
+            f"expected 'flow_missing' marker in output; got out={out!r} err={err!r}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_runner_checklist_no_flow_does_not_print_ready() -> None:
+    art = _make_articleless_fixture()
+    try:
+        rc, out, err = _run([sys.executable, str(RUN_HELP), str(art), "--phase", "checklist"])
+        assert rc != 0, f"checklist without flow.yml must NOT exit 0; got rc={rc}"
+        assert "ready" not in out.lower(), (
+            f"checklist must not print 'ready' on a flow_missing article; got out={out!r}"
+        )
+        assert "flow_missing" in err or "flow_missing" in out, (
+            f"expected 'flow_missing' marker; got out={out!r} err={err!r}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_runner_checklist_metadata_missing_is_phase6() -> None:
+    """When metadata.yml is absent, the validator emits metadata_missing.
+    The runner checklist must NOT bucket it under 'Unmapped'."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("run_help_article", str(RUN_HELP))
+    mod = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(mod)
+    mapping = mod.RULE_TO_PHASE
+    assert "metadata_missing" in mapping, "metadata_missing must be mapped"
+    assert mapping["metadata_missing"][0] == 6, mapping["metadata_missing"]
+    assert "metadata_yaml_parse" in mapping, "metadata_yaml_parse must be mapped"
+    assert mapping["metadata_yaml_parse"][0] == 6, mapping["metadata_yaml_parse"]
+    assert "flow_missing" in mapping
+    assert "flow_yaml_parse" in mapping
+    assert mapping["flow_missing"][0] == 0
+    assert mapping["flow_yaml_parse"][0] == 0
+
+
+def test_runner_checklist_count_matches_validator() -> None:
+    """The number of FAIL lines printed by the runner checklist must equal
+    the FAIL line count of the underlying validator on the same article.
+
+    Uses a synthetic fixture with a flow.yml + an empty metadata.yml so
+    the validator emits a deterministic, small set of fails.
+    """
+    art = Path(tempfile.mkdtemp(prefix="article-counter-", dir=str(REPO_ROOT / "articles")))
+    try:
+        flow_yaml = """\
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+job_to_be_done: ""
+source_of_truth:
+  ios_files: []
+  backend_files: []
+  legal: []
+  support_context: []
+content_contract:
+  must_answer: []
+  forbidden_terms: []
+  must_not_say: []
+mockup_plan:
+  required: false
+  screens: []
+icons_required: []
+icons_fallback_feather: false
+currency_required: false
+risk_flags: []
+resolved_decisions: []
+"""
+        (art / "flow.yml").write_text(flow_yaml, encoding="utf-8")
+        # Minimal but parseable metadata so preflight passes; the validator
+        # will still flag content_missing for pt-br/en + description_empty etc.
+        (art / "metadata.yml").write_text(
+            "intercom_id: 999999\n"
+            f"slug: {art.name}\n"
+            "default_locale: pt-br\n"
+            "state: draft\n"
+            "locales:\n"
+            "  pt-br:\n"
+            "    title: 'X'\n"
+            "    description: 'Y'\n"
+            "  en:\n"
+            "    title: 'X'\n"
+            "    description: 'Y'\n",
+            encoding="utf-8",
+        )
+        # Compare validator vs runner checklist on the same fixture
+        rc_v, out_v, err_v = _run([
+            sys.executable, str(SCRIPTS_DIR / "validate-article-flow.py"), str(art),
+        ])
+        validator_fail_lines = sum(
+            1 for ln in (out_v + err_v).splitlines() if "FAIL  [" in ln or " FAIL [" in ln
+        )
+
+        rc_r, out_r, err_r = _run([sys.executable, str(RUN_HELP), str(art), "--phase", "checklist"])
+        # Runner formats fails as "  - [rule] ..."
+        runner_fail_lines = sum(
+            1 for ln in (out_r + err_r).splitlines() if ln.lstrip().startswith("- [")
+        )
+        assert validator_fail_lines == runner_fail_lines, (
+            f"runner counted {runner_fail_lines} fails, validator {validator_fail_lines}; "
+            f"validator out={out_v!r}; runner out={out_r!r}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_runner_validate_dm_preserves_validator_nonzero() -> None:
+    """run-help-article --phase validate must forward the validator's
+    non-zero exit code on an article with real defects."""
+    # Build a minimal article fixture that triggers at least one validator hard fail
+    art = Path(tempfile.mkdtemp(prefix="article-redfix-", dir=str(REPO_ROOT / "articles")))
+    try:
+        flow_yaml = """\
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+job_to_be_done: ""
+source_of_truth:
+  ios_files: []
+  backend_files: []
+  legal: []
+  support_context: []
+content_contract:
+  must_answer: []
+  forbidden_terms: []
+  must_not_say: []
+mockup_plan:
+  required: false
+  screens: []
+icons_required: []
+icons_fallback_feather: false
+currency_required: false
+risk_flags: []
+resolved_decisions: []
+"""
+        (art / "flow.yml").write_text(flow_yaml, encoding="utf-8")
+        # No metadata.yml -> validator emits metadata_missing -> rc 1
+        rc, out, err = _run([sys.executable, str(RUN_HELP), str(art), "--phase", "validate"])
+        assert rc == 1, f"expected rc=1 (validator non-zero forwarded), got rc={rc}; out={out!r}"
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+# ---------------------------------------------------------------
 # Test runner
 # ---------------------------------------------------------------
 
@@ -318,6 +484,11 @@ TESTS = [
     test_expected_fails_strict_all_match_passes,
     test_expected_fails_list_positional_passes,
     test_expected_fails_list_length_mismatch_fails,
+    test_runner_validate_no_flow_returns_nonzero,
+    test_runner_checklist_no_flow_does_not_print_ready,
+    test_runner_checklist_metadata_missing_is_phase6,
+    test_runner_checklist_count_matches_validator,
+    test_runner_validate_dm_preserves_validator_nonzero,
 ]
 
 
