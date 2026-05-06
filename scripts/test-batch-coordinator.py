@@ -664,6 +664,120 @@ def test_generate_sample_pack_is_idempotent_and_has_no_local_paths() -> None:
         json_path.write_text(before_json, encoding="utf-8")
 
 
+def test_prepare_and_review_use_worktree_local_runner_end_to_end() -> None:
+    """End-to-end integration: prove the coordinator spawns the runner
+    that lives INSIDE each per-article worktree, not the outer-worktree
+    copy, AND that prepare's writer-packet + checklist contain real
+    RUNBOOK output, AND that review parses the validate summary line.
+
+    Regression for the bug PR #84's first batch surfaced:
+      - write_worker_brief and collect_article_review used a module
+        constant `RUN_ARTICLE = SCRIPTS_DIR / "run-help-article.py"`
+        pointing at the OUTER worktree.
+      - run-help-article.py validates `article_dir.relative_to(REPO_ROOT)`
+        against its OWN `__file__` parent.parent. With the outer runner,
+        that check rejects every per-article worktree path with
+        "must be inside REPO_ROOT".
+      - Briefs and review pack ended up empty (every writer-packet held
+        only the rejection STDERR; review summaries had hard/soft = -1
+        with exit 2).
+
+    This test sets up a real worktree from HEAD, runs prepare on a
+    bootstrap fixture (so the path goes through both the bootstrap and
+    the writer-packet branch), reads the produced files, and runs review
+    to assert hard/soft >= 0.
+    """
+    branch = "feat/batch-fixture-batch-runner-path-fixture-bootstrap-article"
+    _run(["git", "worktree", "prune"], cwd=REPO_ROOT)
+    _run(["git", "branch", "-D", branch], cwd=REPO_ROOT)
+
+    custom_batch = REPO_ROOT / "tests" / "fixtures" / "batch-coordinator" / "batch-1-runner-path.yml"
+    custom_yaml = (FIX / "batch-1-new-article.yml").read_text(encoding="utf-8").replace(
+        "batch_id: fixture-batch-bootstrap",
+        "batch_id: fixture-batch-runner-path",
+    )
+    custom_batch.write_text(custom_yaml, encoding="utf-8")
+
+    try:
+        with tempfile.TemporaryDirectory() as tmp:
+            base = Path(tmp) / "wt-runner-path"
+            review_out = Path(tmp) / "review"
+
+            rc, out, err = _run(
+                [
+                    sys.executable,
+                    str(COORDINATOR),
+                    "--mode", "prepare",
+                    "--batch", str(custom_batch),
+                    "--worktree-base", str(base),
+                    "--base-ref", "HEAD",
+                ]
+            )
+            assert rc == 0, f"prepare failed: rc={rc}\nout:\n{out}\nerr:\n{err}"
+
+            wt = base / "fixture-bootstrap-article"
+            wp_path = wt / "_work" / "fixture-bootstrap-article__writer-packet.md"
+            cl_path = wt / "_work" / "fixture-bootstrap-article__checklist.md"
+            assert wp_path.exists(), "writer-packet file not written"
+            assert cl_path.exists(), "checklist file not written"
+
+            wp_text = wp_path.read_text(encoding="utf-8")
+            cl_text = cl_path.read_text(encoding="utf-8")
+
+            assert "must be inside" not in wp_text, (
+                "writer-packet contains the runner's REPO_ROOT rejection. "
+                "The coordinator is calling the OUTER worktree's runner instead "
+                "of the per-article worktree's runner.\n"
+                f"writer-packet head:\n{wp_text[:300]}"
+            )
+            assert "must be inside" not in cl_text, (
+                "checklist contains the runner's REPO_ROOT rejection - same root cause."
+            )
+            assert wp_text.lstrip().startswith("# Writer packet"), (
+                f"writer-packet does not look like real RUNBOOK output:\n{wp_text[:300]}"
+            )
+            assert "## Article identity" in wp_text or "## Job to be done" in wp_text, (
+                "writer-packet missing expected RUNBOOK headings"
+            )
+            assert cl_text.lstrip().startswith("# Checklist"), (
+                f"checklist does not look like real RUNBOOK output:\n{cl_text[:300]}"
+            )
+
+            # Review must also parse the validate summary, proving the
+            # runner-in-worktree fix applies to collect_article_review too.
+            rc_rev, out_rev, err_rev = _run(
+                [
+                    sys.executable,
+                    str(COORDINATOR),
+                    "--mode", "review",
+                    "--batch", str(custom_batch),
+                    "--worktree-base", str(base),
+                    "--out", str(review_out),
+                ]
+            )
+            # rc_rev != 0 expected: the bootstrapped article has no body,
+            # mockups, or audit triplet. We only check that review
+            # collected real data, not that the article passed.
+            summary_json = review_out / "summary.json"
+            assert summary_json.exists(), "review did not produce summary.json"
+            payload = json.loads(summary_json.read_text(encoding="utf-8"))
+            assert len(payload["articles"]) == 1
+            article = payload["articles"][0]
+            assert article["hard_fail_count"] >= 0, (
+                f"review failed to parse the validate summary line "
+                f"(hard_fail_count={article['hard_fail_count']!r}, soft_warn_count={article['soft_warn_count']!r}). "
+                f"validate_output:\n{article['validate_output'][:600]}"
+            )
+            assert article["soft_warn_count"] >= 0, (
+                f"review failed to parse the validate summary line "
+                f"(soft_warn_count={article['soft_warn_count']!r})"
+            )
+    finally:
+        custom_batch.unlink(missing_ok=True)
+        _run(["git", "worktree", "prune"], cwd=REPO_ROOT)
+        _run(["git", "branch", "-D", branch], cwd=REPO_ROOT)
+
+
 # ---------------------------------------------------------------
 # Test runner
 # ---------------------------------------------------------------
@@ -676,6 +790,7 @@ TESTS = [
     test_prepare_existing_worktree_path_returns_exit_3,
     test_prepare_bootstraps_missing_flow_yml,
     test_prepare_rerun_with_same_batch_id_reuses_branch,
+    test_prepare_and_review_use_worktree_local_runner_end_to_end,
     test_render_ready_summary_produces_html_with_scorecard_and_questions,
     test_render_hardfail_summary_marks_blocked_in_html,
     test_render_missing_png_summary_lists_missing_pngs,

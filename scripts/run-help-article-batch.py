@@ -84,8 +84,28 @@ except ImportError:
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SCRIPTS_DIR = REPO_ROOT / "scripts"
 BATCH_VALIDATOR = SCRIPTS_DIR / "validate-article-batch.py"
-RUN_ARTICLE = SCRIPTS_DIR / "run-help-article.py"
 RENDER_PACK = SCRIPTS_DIR / "render-reviewer-pack.py"
+
+# Note: there is no module-level RUN_ARTICLE constant. Each per-article
+# worktree carries its own copy of `scripts/run-help-article.py`, and
+# the runner's `REPO_ROOT` is computed relative to that script. We MUST
+# call the worktree-local copy when prepping briefs or collecting review
+# data, otherwise the runner rejects the article path with
+# "must be inside REPO_ROOT" because the article lives in the per-
+# article worktree, not in the coordinator's outer worktree. See
+# `_runner_in_worktree` below.
+
+
+def _runner_in_worktree(worktree_path: Path) -> Path:
+    """Return the path to the per-article worktree's
+    `scripts/run-help-article.py`. This is what `write_worker_brief`
+    and `collect_article_review` must spawn, NOT the coordinator's
+    outer-worktree copy.
+
+    If the runner is missing inside the worktree, the caller should
+    surface a clear error so the operator updates the base ref.
+    """
+    return worktree_path / "scripts" / "run-help-article.py"
 
 # Hardcoded cap. The reviewer pack is designed for 15 min review; that is
 # 5 min per article. Beyond 3, the pack stops being human-reviewable in
@@ -359,9 +379,24 @@ def write_worker_brief(
             )
             return rc if rc != 0 else 1
 
+    # Spawn the runner that lives INSIDE the per-article worktree. The
+    # runner computes its REPO_ROOT from its own location, so the article
+    # path passed via argv must live under the same repo root. Calling
+    # the coordinator's outer-worktree runner here makes the runner
+    # reject the article path with "must be inside REPO_ROOT", which is
+    # what produced the empty briefs that PR #84 hit.
+    runner = _runner_in_worktree(worktree_path)
+    if not runner.exists():
+        (work_dir / f"{entry.slug}__brief.md").write_text(
+            f"# Worker brief: {entry.slug}\n\n"
+            f"ERROR: {runner} not found in worktree (base ref out of date?).\n",
+            encoding="utf-8",
+        )
+        return 1
+
     # Capture writer-packet output (read-only on the article).
     rc, out, err = _run(
-        [sys.executable, str(RUN_ARTICLE), str(article_dir), "--phase", "writer-packet"],
+        [sys.executable, str(runner), str(article_dir), "--phase", "writer-packet"],
         cwd=worktree_path,
     )
     (work_dir / f"{entry.slug}__writer-packet.md").write_text(
@@ -369,9 +404,10 @@ def write_worker_brief(
         encoding="utf-8",
     )
 
-    # Capture current checklist (informational).
+    # Capture current checklist (informational). Same runner-in-worktree
+    # contract as writer-packet above.
     rc2, out2, err2 = _run(
-        [sys.executable, str(RUN_ARTICLE), str(article_dir), "--phase", "checklist"],
+        [sys.executable, str(runner), str(article_dir), "--phase", "checklist"],
         cwd=worktree_path,
     )
     (work_dir / f"{entry.slug}__checklist.md").write_text(
@@ -541,10 +577,18 @@ def collect_article_review(
         review.blockers.append(f"articles/{entry.slug}/ does not exist in worktree")
         return review
 
-    # Validate via the existing single-article runner so we get the same
-    # exit semantics as the canonical gate.
+    # Validate via the per-article worktree's own runner so we get the
+    # same exit semantics as the canonical gate. The OUTER coordinator's
+    # `scripts/run-help-article.py` would reject the article path with
+    # "must be inside REPO_ROOT" because it is not under the outer
+    # worktree. See `_runner_in_worktree`.
+    runner = _runner_in_worktree(worktree_path)
+    if not runner.exists():
+        review.status = "failed"
+        review.blockers.append(f"{runner} not found in worktree (base ref out of date?)")
+        return review
     rc, out, err = _run(
-        [sys.executable, str(RUN_ARTICLE), str(article_dir), "--phase", "validate"],
+        [sys.executable, str(runner), str(article_dir), "--phase", "validate"],
         cwd=worktree_path,
     )
     review.validate_returncode = rc
