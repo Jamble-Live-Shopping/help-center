@@ -1,0 +1,53 @@
+# Flow contract for the notification settings article. v2 rewrite scope.
+# See process/templates/article-flow.yml for field documentation.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: both
+
+job_to_be_done: "Help users tune which Jamble notifications they receive across pushes and in-app banners"
+
+source_of_truth:
+  ios_files:
+    - PROFILE/ProfileSettings/Notifications/NotificationsViewController.swift
+    - PROFILE/ProfileSettings/Notifications/View/NotificationsView.swift
+    - PROFILE/ProfileSettings/Notifications/View/NotificationPermissionSheet.swift
+    - RESOURCES/Localizable.xcstrings
+  backend_files: []
+  legal: []
+  support_context: []
+
+content_contract:
+  must_answer:
+    - "where to find notification settings in the app"
+    - "what each category controls"
+    - "what happens when iOS push permission is off"
+  forbidden_terms:
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+  must_not_say:
+    - "Email or in-app banner notification configuration (current surface is push only)"
+    - "Internal feature flags or A/B test names"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: notifications-list
+      purpose: "Show the Notifications screen with the 4 collapsible category sections (Promotional, Activity, Live Shows, Transactions) and their parent toggles"
+      source: ios_required
+    - name: permission-sheet
+      purpose: "Show the bottom sheet that prompts the user to turn on iOS push permission when it is off"
+      source: ios_required
+
+icons_required: []
+icons_fallback_feather: false
+
+currency_required: false
+
+risk_flags:
+  - "Notification category section titles (Promotional, Activity, Live Shows, Transactions) are rendered in English even on pt-BR locale because the iOS surface reads them from a dynamic backend payload that is not localised. Article documents this as the live state."
+resolved_decisions:
+  - risk: "pt-BR locale shows English category titles in the notification settings screen"
+    decided_by: "Aymar"
+    decided_at: "2026-05-06"
+    rationale: "Reflects the actual iOS surface; localising the labels server-side is a backend follow-up tracked separately."
