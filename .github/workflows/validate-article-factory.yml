@@ -1,0 +1,59 @@
+name: Validate article factory
+
+# Smoke tests for the Help Center Article Factory: golden replay, batch
+# validator, flow initializer, and YAML output parseability. Triggers
+# only when factory paths change to keep regular content PRs fast.
+
+on:
+  pull_request:
+    paths:
+      - 'process/golden-flows/**'
+      - 'process/batches/**'
+      - 'process/workflows/**'
+      - 'process/templates/article-flow.yml'
+      - 'scripts/replay-golden-articles.py'
+      - 'scripts/validate-article-batch.py'
+      - 'scripts/init-article-flow.py'
+      - 'scripts/validate-article-flow.py'
+      - '.github/workflows/validate-article-factory.yml'
+
+concurrency:
+  group: validate-article-factory-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  factory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install pyyaml
+
+      - name: Golden replay
+        run: python3 scripts/replay-golden-articles.py
+
+      - name: Validate batch example
+        run: python3 scripts/validate-article-batch.py process/batches/article-batch.example.yml
+
+      - name: Init flow dry-run
+        run: |
+          python3 scripts/init-article-flow.py \
+            --slug wishlist-and-favorites \
+            --from-batch process/batches/article-batch.example.yml \
+            --dry-run > /tmp/flow.yml
+
+      - name: Verify init output is valid YAML with workflow=article-v2
+        run: |
+          python3 - <<'PY'
+          import yaml
+          data = yaml.safe_load(open("/tmp/flow.yml"))
+          assert data["workflow"] == "article-v2", data.get("workflow")
+          print("YAML_PARSE_OK")
+          PY

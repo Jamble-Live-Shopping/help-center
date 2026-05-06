@@ -38,20 +38,22 @@ ARTICLES_DIR = REPO_ROOT / "articles"
 TEMPLATE_PATH = REPO_ROOT / "process" / "templates" / "article-flow.yml"
 
 
-def load_batch_entry(batch_path: Path, slug: str) -> dict[str, Any] | None:
+def load_batch_entry(batch_path: Path, slug: str) -> tuple[dict[str, Any] | None, str | None]:
+    """Return (article_entry, batch_mode). batch_mode is the top-level batch.mode."""
     try:
         data = yaml.safe_load(batch_path.read_text(encoding="utf-8")) or {}
     except (OSError, yaml.YAMLError) as exc:
         print(f"ERROR: cannot read batch {batch_path}: {exc}", file=sys.stderr)
         sys.exit(2)
 
+    batch_mode = data.get("mode") if isinstance(data.get("mode"), str) else None
     for art in data.get("articles") or []:
         if isinstance(art, dict) and art.get("slug") == slug:
-            return art
-    return None
+            return art, batch_mode
+    return None, batch_mode
 
 
-def render_flow(slug: str, batch_entry: dict[str, Any] | None) -> str:
+def render_flow(slug: str, batch_entry: dict[str, Any] | None, batch_mode: str | None) -> str:
     """Render the flow.yml as a YAML string, preserving comments from template."""
     template = TEMPLATE_PATH.read_text(encoding="utf-8")
 
@@ -61,6 +63,10 @@ def render_flow(slug: str, batch_entry: dict[str, Any] | None) -> str:
     ios_files: list[str] = []
     backend_files: list[str] = []
     mockup_count = 0
+    # mode resolution order: article.mode -> batch.mode -> fallback
+    mode = "v2_rewrite"
+    if batch_mode:
+        mode = batch_mode
 
     if batch_entry:
         audience = batch_entry.get("audience") or audience
@@ -72,9 +78,13 @@ def render_flow(slug: str, batch_entry: dict[str, Any] | None) -> str:
             mockup_count = int(batch_entry.get("mockup_count_target") or 0)
         except (TypeError, ValueError):
             mockup_count = 0
+        article_mode = batch_entry.get("mode")
+        if isinstance(article_mode, str) and article_mode:
+            mode = article_mode
 
-    # Substitute the audience line
+    # Substitute mode + audience + job_to_be_done
     text = template
+    text = _replace_yaml_field(text, "mode", mode)
     text = _replace_yaml_field(text, "audience", audience)
     text = _replace_yaml_field(text, "job_to_be_done", _yaml_quote(jtbd))
 
@@ -217,12 +227,13 @@ def main() -> int:
     flow_path = article_dir / "flow.yml"
 
     batch_entry = None
+    batch_mode = None
     if args.from_batch:
         batch_path = Path(args.from_batch).resolve()
         if not batch_path.is_file():
             print(f"ERROR: --from-batch {args.from_batch} not found", file=sys.stderr)
             return 2
-        batch_entry = load_batch_entry(batch_path, slug)
+        batch_entry, batch_mode = load_batch_entry(batch_path, slug)
         if batch_entry is None:
             print(f"ERROR: slug {slug!r} not in batch {batch_path.name}", file=sys.stderr)
             return 2
@@ -235,7 +246,7 @@ def main() -> int:
         )
         return 1
 
-    rendered = render_flow(slug, batch_entry)
+    rendered = render_flow(slug, batch_entry, batch_mode)
 
     if args.dry_run:
         print(rendered)

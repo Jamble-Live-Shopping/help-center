@@ -70,15 +70,42 @@ def validate_article(idx: int, art: Any, batch_mode: str) -> list[str]:
         fails.append(f"{where}: job_to_be_done is required and must be non-empty")
 
     if "source_hints" not in art:
-        fails.append(f"{where}: source_hints is required (can be empty arrays)")
+        fails.append(f"{where}: source_hints is required")
     else:
         hints = art["source_hints"]
         if not isinstance(hints, dict):
             fails.append(f"{where}: source_hints must be a mapping")
         else:
-            for k in ("ios_files", "backend_files"):
-                if k in hints and not isinstance(hints[k], list):
-                    fails.append(f"{where}: source_hints.{k} must be a list (got {type(hints[k]).__name__})")
+            ios_present = "ios_files" in hints
+            backend_present = "backend_files" in hints
+            if not ios_present:
+                fails.append(f"{where}: source_hints.ios_files is required (use [] if none)")
+            if not backend_present:
+                fails.append(f"{where}: source_hints.backend_files is required (use [] if none)")
+            ios_files = hints.get("ios_files") if ios_present else None
+            backend_files = hints.get("backend_files") if backend_present else None
+            if ios_present and not isinstance(ios_files, list):
+                fails.append(f"{where}: source_hints.ios_files must be a list (got {type(ios_files).__name__})")
+                ios_files = None
+            if backend_present and not isinstance(backend_files, list):
+                fails.append(f"{where}: source_hints.backend_files must be a list (got {type(backend_files).__name__})")
+                backend_files = None
+            # If both lists are present and both empty, require an explicit
+            # justification. Empty source_hints with no rationale is a strong
+            # smell: every v2 article should be traceable to iOS or backend.
+            if (
+                isinstance(ios_files, list)
+                and isinstance(backend_files, list)
+                and len(ios_files) == 0
+                and len(backend_files) == 0
+            ):
+                justification = hints.get("justification")
+                if not isinstance(justification, str) or not justification.strip():
+                    fails.append(
+                        f"{where}: source_hints.ios_files and backend_files are both empty; "
+                        f"add source_hints.justification (non-empty string) explaining why "
+                        f"the article needs no source of truth (e.g. 'copy-only metadata test')"
+                    )
 
     article_mode = art.get("mode") or batch_mode
     if article_mode not in VALID_MODES:
@@ -131,13 +158,32 @@ def validate_batch(path: Path) -> list[str]:
         fails.append(f"batch size {len(articles)} exceeds max {MAX_BATCH_SIZE}")
 
     seen_slugs: set[str] = set()
+    seen_priorities: list[int] = []
     for i, art in enumerate(articles):
         slug = art.get("slug") if isinstance(art, dict) else None
         fails.extend(validate_article(i, art, mode if isinstance(mode, str) else "v2_rewrite"))
+        # Collect priority for batch-level uniqueness + ordering checks.
+        if isinstance(art, dict):
+            pr = art.get("priority")
+            if isinstance(pr, int) and pr >= 1:
+                seen_priorities.append(pr)
         if isinstance(slug, str) and slug:
             if slug in seen_slugs:
                 fails.append(f"articles[{i}]: duplicate slug {slug!r} in batch")
             seen_slugs.add(slug)
+
+    # Batch-level priority checks (run after per-article validation so we
+    # only inspect well-formed integers). Priorities must be unique and
+    # listed in ascending order.
+    if len(seen_priorities) != len(set(seen_priorities)):
+        dups = sorted({p for p in seen_priorities if seen_priorities.count(p) > 1})
+        fails.append(
+            f"duplicate priorities in batch: {dups}; each article must have a unique priority"
+        )
+    if seen_priorities != sorted(seen_priorities):
+        fails.append(
+            f"priorities must be listed in ascending order; got {seen_priorities}"
+        )
 
     return fails
 

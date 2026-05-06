@@ -86,8 +86,10 @@ expected_fails:
     removal_path: "Update en.md image link to settings-menu after the cleanup PR ships the unified pair"
   - rule: mockup_referenced_not_declared
     count: 2
-    contains: "configuracoes-menu"
-    reason: "pt-br.md and en.md reference the legacy v2 PNG names (configuracoes-menu, settings-apply-to-sell) that this unified flow does not declare"
+    contains:
+      - "configuracoes-menu"
+      - "settings-apply-to-sell"
+    reason: "pt-br.md references legacy 'configuracoes-menu' and en.md references legacy 'settings-apply-to-sell'; the unified flow declares only settings-menu"
     removal_path: "Cleanup PR replaces both legacy embeds with the unified settings-menu pair"
   - rule: content_audit_missing_stale_feature
     count: 1

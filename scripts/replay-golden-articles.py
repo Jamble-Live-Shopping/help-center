@@ -100,10 +100,18 @@ def load_expectations(golden_path: Path) -> tuple[list[dict[str, Any]], list[str
         rule = entry.get("rule")
         if not isinstance(rule, str) or not rule:
             continue
+        # Preserve `contains` type: str | list[str] | other (treated as missing).
+        raw_contains = entry.get("contains", "")
+        if isinstance(raw_contains, list):
+            contains: Any = [str(x) for x in raw_contains]
+        elif isinstance(raw_contains, str):
+            contains = raw_contains
+        else:
+            contains = ""
         expected.append({
             "rule": rule,
             "count": int(entry.get("count", 1)),
-            "contains": str(entry.get("contains", "")),
+            "contains": contains,
             "reason": str(entry.get("reason", "")),
             "removal_path": str(entry.get("removal_path", "")),
         })
@@ -170,7 +178,16 @@ def evaluate_expectations(
 
     expected_rules = {e["rule"] for e in expected}
 
-    # Check each expected_fail
+    # Check each expected_fail.
+    #
+    # contains semantics (PR #77 hardening):
+    #   - string -> EVERY occurrence of the rule must contain that substring.
+    #     (PR #76 was loose: it accepted if at least one occurrence matched,
+    #      which let extra unrelated fails sneak in under the same rule.)
+    #   - list   -> length must equal count; each occurrence (in observed
+    #     order) must contain the substring at the same index.
+    #   - missing or empty string -> no per-message check, but count still
+    #     enforced.
     for entry in expected:
         rule = entry["rule"]
         want_count = int(entry["count"])
@@ -181,11 +198,26 @@ def evaluate_expectations(
                 f"rule '{rule}': expected count={want_count}, got {len(actual_msgs)}"
             )
             continue
-        if contains and not any(contains in m for m in actual_msgs):
-            deviations.append(
-                f"rule '{rule}': none of the {len(actual_msgs)} fail message(s) "
-                f"contain expected substring {contains!r}"
-            )
+        if isinstance(contains, list):
+            if len(contains) != want_count:
+                deviations.append(
+                    f"rule '{rule}': contains list length {len(contains)} != count {want_count}"
+                )
+                continue
+            for i, (needle, msg) in enumerate(zip(contains, actual_msgs)):
+                if needle and needle not in msg:
+                    deviations.append(
+                        f"rule '{rule}' occurrence #{i+1}: message does not contain "
+                        f"expected substring {needle!r}"
+                    )
+        elif isinstance(contains, str) and contains:
+            for i, msg in enumerate(actual_msgs):
+                if contains not in msg:
+                    deviations.append(
+                        f"rule '{rule}' occurrence #{i+1}: message does not contain "
+                        f"expected substring {contains!r} (every occurrence must match; "
+                        f"use a list of substrings if they differ per occurrence)"
+                    )
 
     # Any rule fired but not declared = unexpected
     for rule in actual_by_rule:
