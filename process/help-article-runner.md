@@ -18,11 +18,23 @@ without re-reading the entire RUNBOOK each time:
 
 Run from the repo root.
 
-| Phase     | Command                                                    | Exit | What it prints |
-|-----------|------------------------------------------------------------|------|----------------|
-| plan      | `python3 scripts/run-help-article.py articles/<slug> --phase plan`      | 0 / 2 | Job-to-be-done, audience, mode, intercom_id, then the ordered checklist of artefacts grouped by RUNBOOK phase (Phase 1 to Phase 8). Includes risk_flags and resolved_decisions if any. |
-| validate  | `python3 scripts/run-help-article.py articles/<slug> --phase validate`  | 0 / 1 / 2 | Forwards the validator output verbatim. Exit code mirrors the validator's. |
-| checklist | `python3 scripts/run-help-article.py articles/<slug> --phase checklist` | 0 / 2 | Runs the validator, parses each FAIL line, and groups them by RUNBOOK phase. **Exits 0 only after the contract preflight passes** (see below). Otherwise exits 2. |
+| Phase           | Command                                                    | Exit      | What it prints |
+|-----------------|------------------------------------------------------------|-----------|----------------|
+| plan            | `python3 scripts/run-help-article.py articles/<slug> --phase plan`           | 0 / 2     | Identity, job, ordered artefact checklist grouped by RUNBOOK phase, risk_flags, resolved_decisions. |
+| validate        | `python3 scripts/run-help-article.py articles/<slug> --phase validate`       | 0 / 1 / 2 | **Final gate.** Forwards the validator output and exit code verbatim. Use this in any automation. |
+| checklist       | `python3 scripts/run-help-article.py articles/<slug> --phase checklist`      | 0 / 2     | Validator hard fails grouped by RUNBOOK phase. **Informational, not a gate**: exits 0 even when the validator reports fails, because the goal is to print the action plan. |
+| writer-packet   | `python3 scripts/run-help-article.py articles/<slug> --phase writer-packet`  | 0 / 2     | Markdown packet for a worker (human or LLM): identity, job, source-of-truth reading checklist, content_contract, mockup_plan with expected file pairs, icons_required, risks, deliverables in order, final validate command. Read-only. |
+| writer-packet + skeletons | `--phase writer-packet --write-skeletons [--force]`                  | 0 / 2     | Same packet, plus creates the audit triplet skeletons (`code-audit-<id>.md`, `content-audit-<id>.md`, `compliance-<id>.md`) when missing. Never overwrites without `--force`. Does NOT create body or mockups. No LLM. |
+
+## Phases that are gates vs. informational
+
+- **`validate` is the only gate.** It exits 0 iff the article passes the
+  contract. Automation, batch runners, and any future writer mode MUST
+  call `--phase validate` and respect its exit code as the final
+  decision.
+- **`checklist`, `plan`, `writer-packet` are informational.** They can
+  exit 0 even when the article still has validator hard fails. Their
+  job is to print a useful action plan, not to gate.
 
 ## Contract preflight (every phase)
 
