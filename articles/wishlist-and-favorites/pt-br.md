@@ -31,9 +31,9 @@ Quando você está navegando pelo app ou assistindo a um show ao vivo, cada prod
 1. Toque no **ícone de marcador** no canto do card do produto
 2. O ícone fica preenchido, o produto entra na sua aba **Favoritos**
 
-![Card de produto com o ícone de marcador destacado e mensagem confirmando que o produto foi salvo](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/wishlist-and-favorites__product-bookmark-cta__pt-br__v3.png)
+![Card de produto com o ícone de marcador preenchido no canto superior direito, indicando o estado salvo](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/wishlist-and-favorites__product-bookmark-cta__pt-br__v3.png)
 
-Para remover um produto, toque no ícone de marcador uma segunda fois. Ele se desativa e o produto sai da aba Favoritos. O vendedor não vê quem salvou ou quem retirou.
+Para remover um produto, toque no ícone de marcador uma segunda vez. Ele se desativa e o produto sai da aba Favoritos. Favoritar um produto não identifica você para o vendedor.
 
 ## Quando a sua lista está vazia
 
@@ -51,7 +51,7 @@ Os shows que você marcou aparecem em **Configurações** > **Programas marcados
 
 ## Notificações
 
-A Jamble envia uma notificação push para cada item salvo, à condition que a notificação correspondante seja habilitada em **Configurações** > **Notificações** > **Shows ao vivo**.
+A Jamble envia uma notificação push para cada item salvo, desde que a notificação correspondente esteja ativada em **Configurações** > **Notificações** > **Shows ao vivo**.
 
 - **Programas marcados** avisa antes de um show salvo começar
 - **Produto marcado em um show** avisa quando um produto da sua aba Favoritos é colocado à venda em um show ao vivo
@@ -63,7 +63,7 @@ Sem essas notificações ativadas, salvar um item ainda funciona, mas você desc
 - **Salve antes do show começar.** Se você vê um produto que te interessa em um show futuro, marque imediatamente. Você recebe a notificação no momento em que o vendedor entra ao vivo
 - **Confira a aba Ofertas regularmente.** Cada oferta sua em andamento aparece aqui. É a forma mais simples de acompanhar pelo que você está competindo
 - **Habilite as notificações.** Sem elas, a Jamble não consegue te avisar em tempo real
-- **Os vendedores não veem nomes individuais.** Eles veem apenas o número total de pessoas que salvaram, não quem você é
+- **Os favoritos são privados.** Favoritar um produto ou um show não identifica você para o vendedor
 
 ## Perguntas frequentes
 
@@ -77,7 +77,7 @@ Favoritos guarda os produtos que você quer revisitar. Ofertas mostra os produto
 Sim. Toque no ícone de marcador uma segunda vez no produto ou no show. Ele sai da sua lista.
 
 **O vendedor sabe quem salvou o produto dele?**
-Não. Os favoritos são privados. O vendedor vê apenas o total de pessoas que salvaram, sem identificar ninguém.
+Não. Os favoritos são privados. Favoritar um produto não identifica você para o vendedor.
 
 **Existe um limite de produtos salvos?**
 Não. Salve quantos quiser.

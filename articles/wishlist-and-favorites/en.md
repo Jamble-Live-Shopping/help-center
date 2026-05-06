@@ -31,9 +31,9 @@ Whenever you browse the app or watch a live show, each product appears with its 
 1. Tap the **bookmark icon** in the corner of the product card
 2. The icon fills, and the product moves into your **Bookmarks** tab
 
-![Product card with the bookmark icon highlighted and a confirmation message that the product was saved](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/wishlist-and-favorites__product-bookmark-cta__en__v3.png)
+![Product card with the bookmark icon filled in the top right corner, showing the saved state](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/wishlist-and-favorites__product-bookmark-cta__en__v3.png)
 
-To remove a product, tap the bookmark icon again. It toggles off and the product leaves the Bookmarks tab. The seller does not see who saved or who unsaved.
+To remove a product, tap the bookmark icon again. It toggles off and the product leaves the Bookmarks tab. Saving a product does not identify you to the seller.
 
 ## When your wishlist is empty
 
@@ -63,7 +63,7 @@ Without those notifications, saving still works, but you only catch the event wh
 - **Save before the show starts.** If you see a product you want in an upcoming show, bookmark it right away. You will get the alert as soon as the seller goes live
 - **Check the Bids tab regularly.** Every offer of yours in flight shows up there. It is the simplest way to track what you are competing for
 - **Enable notifications.** Without them, Jamble cannot warn you in real time
-- **Sellers do not see individual names.** They see only the total number of saves, never who you are
+- **Bookmarks are private.** Saving a product or a show does not identify you to the seller
 
 ## Frequently asked questions
 
@@ -77,7 +77,7 @@ Bookmarks holds the products you want to revisit. Bids shows the products where 
 Yes. Tap the bookmark icon again on the product or show. It leaves your wishlist.
 
 **Does the seller know who saved their product?**
-No. Bookmarks are private. The seller sees only the total number of saves, not who you are.
+No. Bookmarks are private. Saving a product does not identify you to the seller.
 
 **Is there a limit on saved products?**
 No. Save as many as you want.

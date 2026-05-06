@@ -16,9 +16,8 @@ body {
   box-shadow: 0 2px 20px rgba(126,83,248,0.08);
   border: 1px solid #E9EAEF;
   overflow: hidden;
+  padding: 22px 18px;
 }
-
-.phone { padding: 22px 18px; }
 .card { position: relative; border-radius: 18px; overflow: hidden; border: 1px solid #E9EAEF; background: #FFFFFF; }
 .thumb { width: 100%; height: 240px; background: linear-gradient(135deg,#FDB022 0%,#FF8A00 100%); display: flex; align-items: center; justify-content: center; font-size: 64px; }
 .bookmark-btn { position: absolute; top: 12px; right: 12px; width: 40px; height: 40px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 2px 8px rgba(22,34,51,0.12); display: flex; align-items: center; justify-content: center; }
@@ -26,10 +25,10 @@ body {
 .body { padding: 14px 16px 16px; }
 .title { font-size: 16px; font-weight: 600; color: #162233; line-height: 20px; }
 .price { font-size: 18px; font-weight: 700; color: #162233; margin-top: 6px; }
-.toast { margin: 14px 0 0; background: #ECFDF3; border: 1px solid #ABEFC6; border-radius: 14px; padding: 12px 14px; display: flex; align-items: center; gap: 10px; }
-.toast-icon { width: 22px; height: 22px; border-radius: 50%; background: #079455; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.toast-icon svg { width: 14px; height: 14px; }
-.toast-label { font-size: 13px; font-weight: 600; color: #079455; }
+.callout { margin-top: 14px; display: flex; align-items: center; gap: 10px; padding: 10px 12px; }
+.callout-arrow { font-size: 18px; color: #7E53F8; line-height: 1; }
+.callout-text { font-size: 13px; color: #6D6D80; line-height: 18px; }
+.callout-text b { color: #162233; font-weight: 600; }
 </style></head><body>
 <div class="phone">
   <div class="card">
@@ -42,10 +41,8 @@ body {
       <div class="price">R$ 1.450,00</div>
     </div>
   </div>
-  <div class="toast">
-    <div class="toast-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-    </div>
-    <div class="toast-label">Produto salvo nos Favoritos</div>
+  <div class="callout">
+    <div class="callout-arrow">↗</div>
+    <div class="callout-text">Toque no <b>ícone de marcador</b>. Quando ele fica preenchido, o produto entra na aba <b>Favoritos</b>.</div>
   </div>
 </div></body></html>

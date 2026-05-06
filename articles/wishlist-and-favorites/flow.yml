@@ -16,6 +16,8 @@ source_of_truth:
     - WISHLIST/Views/WishlistPageViewController.swift
     - WISHLIST/Models/WishlistPage.swift           # tab labels Favoritos / Ofertas
     - WISHLIST/ViewModels/WishlistPageViewModel.swift  # empty state strings
+    - PROFILE/View Models/ProfileBottomViewModel.swift # wishlist mounted in profile
+    - PRODUCT/View Models/ProductViewModel.swift   # bookmarkProduct + bookmarkShow
     - RESOURCES/Localizable.xcstrings              # pt-BR translations
   backend_files: []
   legal: []

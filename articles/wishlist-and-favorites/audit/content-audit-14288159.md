@@ -47,8 +47,8 @@ Verdict: PASS.
 |---|---|---|
 | wishlist-tabs pt-br | 88 chars, names tabs and content | PASS |
 | wishlist-tabs en | 80 chars, mirror | PASS |
-| product-bookmark-cta pt-br | 96 chars, names icon and toast | PASS |
-| product-bookmark-cta en | 90 chars, mirror | PASS |
+| product-bookmark-cta pt-br | names filled bookmark icon and saved state | PASS |
+| product-bookmark-cta en | mirror | PASS |
 | wishlist-empty-state pt-br | 89 chars, includes empty-state title | PASS |
 | wishlist-empty-state en | 79 chars, mirror | PASS |
 
