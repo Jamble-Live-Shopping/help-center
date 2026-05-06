@@ -432,10 +432,13 @@ resolved_decisions: []
         shutil.rmtree(art, ignore_errors=True)
 
 
-def test_runner_validate_dm_preserves_validator_nonzero() -> None:
+def test_runner_validate_forwards_validator_nonzero() -> None:
     """run-help-article --phase validate must forward the validator's
-    non-zero exit code on an article with real defects."""
-    # Build a minimal article fixture that triggers at least one validator hard fail
+    non-zero exit code on an article with real defects.
+
+    Uses a synthetic fixture (not DM, despite earlier naming) so the
+    test stays deterministic and self-contained.
+    """
     art = Path(tempfile.mkdtemp(prefix="article-redfix-", dir=str(REPO_ROOT / "articles")))
     try:
         flow_yaml = """\
@@ -470,6 +473,157 @@ resolved_decisions: []
 
 
 # ---------------------------------------------------------------
+# Tests for --phase writer-packet (PR #80)
+# ---------------------------------------------------------------
+
+def _writer_fixture(slug_prefix: str, *, with_metadata: bool = True, intercom_id: int = 9999001) -> Path:
+    art = Path(tempfile.mkdtemp(prefix=slug_prefix, dir=str(REPO_ROOT / "articles")))
+    flow_yaml = f"""\
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+job_to_be_done: "Help sellers learn the writer packet feature"
+source_of_truth:
+  ios_files:
+    - DISCOUNT/Views/SomeView.swift
+  backend_files:
+    - jamble_backend/src/services/some_service.py
+  legal: []
+  support_context: []
+content_contract:
+  must_answer:
+    - "what the writer packet shows"
+  forbidden_terms:
+    - "regex:\\\\bauction\\\\b"
+  must_not_say:
+    - "Internal moderation tooling"
+mockup_plan:
+  required: true
+  screens:
+    - name: example-screen
+      purpose: "demo"
+      source: ios_required
+icons_required:
+  - icon-clock
+icons_fallback_feather: false
+currency_required: false
+risk_flags:
+  - "needs PM review"
+resolved_decisions: []
+"""
+    (art / "flow.yml").write_text(flow_yaml, encoding="utf-8")
+    if with_metadata:
+        (art / "metadata.yml").write_text(
+            f"intercom_id: {intercom_id}\n"
+            f"slug: {art.name}\n"
+            "default_locale: pt-br\n"
+            "state: draft\n"
+            "locales:\n"
+            "  pt-br: { title: 'X', description: 'Y' }\n"
+            "  en:    { title: 'X', description: 'Y' }\n",
+            encoding="utf-8",
+        )
+    return art
+
+
+def test_writer_packet_contains_all_sections() -> None:
+    art = _writer_fixture("writer-packet-")
+    try:
+        rc, out, err = _run([sys.executable, str(RUN_HELP), str(art), "--phase", "writer-packet"])
+        assert rc == 0, f"writer-packet exit {rc}; err={err!r}"
+        for required in [
+            "## Article identity",
+            "## Job to be done",
+            "## Source of truth",
+            "## Content contract",
+            "### must_answer",
+            "### forbidden_terms",
+            "### must_not_say",
+            "## Mockup plan",
+            "## Icons required",
+            "## Risks",
+            "## Deliverables",
+            "icon-clock",
+            "example-screen",
+            "--phase validate",
+        ]:
+            assert required in out, f"writer-packet missing section/marker: {required!r}"
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_writer_packet_exits_2_on_missing_flow() -> None:
+    art = Path(tempfile.mkdtemp(prefix="writer-no-flow-", dir=str(REPO_ROOT / "articles")))
+    try:
+        rc, out, err = _run([sys.executable, str(RUN_HELP), str(art), "--phase", "writer-packet"])
+        assert rc == 2, f"writer-packet on no-flow must exit 2; got {rc}"
+        assert "flow_missing" in (out + err), f"expected flow_missing marker, got out={out!r} err={err!r}"
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_writer_packet_does_not_modify_files() -> None:
+    art = _writer_fixture("writer-packet-noop-")
+    try:
+        before = sorted((p.relative_to(art), p.stat().st_mtime_ns) for p in art.rglob("*") if p.is_file())
+        rc, _, _ = _run([sys.executable, str(RUN_HELP), str(art), "--phase", "writer-packet"])
+        assert rc == 0
+        after = sorted((p.relative_to(art), p.stat().st_mtime_ns) for p in art.rglob("*") if p.is_file())
+        assert before == after, f"writer-packet must not modify files; before={before}; after={after}"
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_write_skeletons_creates_audit_triplet() -> None:
+    art = _writer_fixture("writer-skel-", intercom_id=9999002)
+    try:
+        rc, out, _ = _run([
+            sys.executable, str(RUN_HELP), str(art), "--phase", "writer-packet", "--write-skeletons",
+        ])
+        assert rc == 0
+        for kind in ("code-audit", "content-audit", "compliance"):
+            target = art / "audit" / f"{kind}-9999002.md"
+            assert target.exists(), f"missing skeleton: {target}"
+        # The article body and mockups must NOT be touched
+        for body_file in ("pt-br.md", "en.md"):
+            assert not (art / body_file).exists(), f"writer must NOT create {body_file}"
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_write_skeletons_does_not_overwrite_without_force() -> None:
+    art = _writer_fixture("writer-skel-noforce-", intercom_id=9999003)
+    try:
+        # First run creates the triplet
+        rc1, _, _ = _run([
+            sys.executable, str(RUN_HELP), str(art), "--phase", "writer-packet", "--write-skeletons",
+        ])
+        assert rc1 == 0
+        # Mutate one of the audits to detect overwrite
+        target = art / "audit" / "code-audit-9999003.md"
+        target.write_text("USER MUTATION\n", encoding="utf-8")
+        # Second run without --force must skip
+        rc2, out2, _ = _run([
+            sys.executable, str(RUN_HELP), str(art), "--phase", "writer-packet", "--write-skeletons",
+        ])
+        assert rc2 == 0
+        assert "USER MUTATION" in target.read_text(encoding="utf-8"), (
+            "without --force, existing audit must be preserved"
+        )
+        assert "Skipped" in out2 or "skipped" in out2, f"expected 'Skipped' message; got {out2!r}"
+        # Third run with --force must overwrite
+        rc3, out3, _ = _run([
+            sys.executable, str(RUN_HELP), str(art), "--phase", "writer-packet", "--write-skeletons", "--force",
+        ])
+        assert rc3 == 0
+        assert "USER MUTATION" not in target.read_text(encoding="utf-8"), (
+            "--force must overwrite existing audit"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+# ---------------------------------------------------------------
 # Test runner
 # ---------------------------------------------------------------
 
@@ -488,7 +642,12 @@ TESTS = [
     test_runner_checklist_no_flow_does_not_print_ready,
     test_runner_checklist_metadata_missing_is_phase6,
     test_runner_checklist_count_matches_validator,
-    test_runner_validate_dm_preserves_validator_nonzero,
+    test_runner_validate_forwards_validator_nonzero,
+    test_writer_packet_contains_all_sections,
+    test_writer_packet_exits_2_on_missing_flow,
+    test_writer_packet_does_not_modify_files,
+    test_write_skeletons_creates_audit_triplet,
+    test_write_skeletons_does_not_overwrite_without_force,
 ]
 
 

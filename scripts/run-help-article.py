@@ -28,6 +28,10 @@ Usage:
     scripts/run-help-article.py articles/<slug> --phase plan
     scripts/run-help-article.py articles/<slug> --phase validate
     scripts/run-help-article.py articles/<slug> --phase checklist
+    scripts/run-help-article.py articles/<slug> --phase writer-packet [--write-skeletons [--force]]
+
+Note: `checklist` is informational, NOT a gate. The final gate is
+`--phase validate`, which forwards the validator's exit code.
 """
 from __future__ import annotations
 
@@ -295,10 +299,10 @@ def phase_checklist(article_dir: Path) -> int:
     print(f"# Checklist: {article_dir.relative_to(REPO_ROOT)}")
     print()
     if not fails:
-        print("0 hard fails. Article is ready for review and PR.")
+        print("0 hard fails. Article looks ready against the validator.")
         print()
-        print(f"Next: open a draft PR. The CI workflow validate-article-flow")
-        print(f"      will re-run the validator on the changed paths.")
+        print("This phase is informational, NOT a gate. The final gate is:")
+        print(f"    python3 scripts/run-help-article.py {article_dir.relative_to(REPO_ROOT)} --phase validate")
         return 0
 
     by_phase: dict[tuple[int, str], list[tuple[str, str]]] = defaultdict(list)
@@ -315,7 +319,300 @@ def phase_checklist(article_dir: Path) -> int:
 
     print(f"Total hard fails: {len(fails)}")
     print()
-    print(f"Next: address phase by phase, starting with the lowest phase number.")
+    print("This phase is informational, NOT a gate. Use --phase validate as the final gate.")
+    return 0
+
+
+# ---------------------------- phase: writer-packet ----------------------------
+
+def phase_writer_packet(article_dir: Path) -> int:
+    """Print a structured Markdown packet that briefs Claude (or any human
+    worker) on what the article needs, in the order the worker should
+    produce it. Read-only: this phase does NOT modify any file.
+    """
+    slug = article_dir.name
+    flow = load_yaml(article_dir / "flow.yml")
+    meta = load_yaml(article_dir / "metadata.yml")
+    intercom_id = meta.get("intercom_id") or flow.get("intercom_id") or "<intercom_id>"
+
+    print(f"# Writer packet: {slug}")
+    print()
+
+    # ---- Identity
+    print("## Article identity")
+    print()
+    print(f"- slug         : `{slug}`")
+    print(f"- mode         : {flow.get('mode') or '(unset)'}")
+    print(f"- audience     : {flow.get('audience') or '(unset)'}")
+    print(f"- workflow     : {flow.get('workflow') or '(unset)'}")
+    print(f"- intercom_id  : {intercom_id}")
+    print(f"- state        : {meta.get('state') or '(unset)'}")
+    print(f"- collection_id: {meta.get('collection_id') or '(unset)'}")
+    print()
+
+    # ---- Job to be done
+    print("## Job to be done")
+    print()
+    print(f"> {flow.get('job_to_be_done') or '(empty, fill in flow.yml)'}")
+    print()
+
+    # ---- Source-of-truth reading checklist
+    print("## Source of truth (read before writing)")
+    print()
+    sot = flow.get("source_of_truth") or {}
+    ios_files = sot.get("ios_files") or []
+    backend_files = sot.get("backend_files") or []
+    legal = sot.get("legal") or []
+    support = sot.get("support_context") or []
+    print(f"- iOS files ({len(ios_files)}):")
+    for f in ios_files:
+        print(f"  - [ ] {f}")
+    print(f"- Backend files ({len(backend_files)}):")
+    for f in backend_files:
+        print(f"  - [ ] {f}")
+    if legal:
+        print(f"- Legal references ({len(legal)}):")
+        for l in legal:
+            print(f"  - [ ] {l}")
+    if support:
+        print(f"- Support context ({len(support)}):")
+        for s in support:
+            print(f"  - [ ] {s}")
+    print()
+
+    # ---- Content contract
+    print("## Content contract")
+    print()
+    cc = flow.get("content_contract") or {}
+    must_answer = cc.get("must_answer") or []
+    forbidden = cc.get("forbidden_terms") or []
+    must_not_say = cc.get("must_not_say") or []
+    print(f"### must_answer ({len(must_answer)})")
+    for q in must_answer:
+        print(f"- [ ] {q}")
+    print()
+    print(f"### forbidden_terms ({len(forbidden)})  -- HARD FAIL on grep, both md files")
+    for t in forbidden:
+        print(f"- {t}")
+    print()
+    print(f"### must_not_say ({len(must_not_say)})  -- soft warn, reviewer judgment")
+    for t in must_not_say:
+        print(f"- {t}")
+    print()
+
+    # ---- Mockup plan
+    print("## Mockup plan")
+    print()
+    mp = flow.get("mockup_plan") or {}
+    required = bool(mp.get("required", False))
+    screens = mp.get("screens") or []
+    print(f"- required : {required}")
+    print(f"- screens  : {len(screens)} declared")
+    print()
+    if screens:
+        print("| screen name | source | expected HTML pair | expected PNG pair |")
+        print("|---|---|---|---|")
+        for s in screens:
+            if not isinstance(s, dict):
+                continue
+            name = s.get("name", "")
+            source = s.get("source", "")
+            html = f"mockup-sources/{name}__pt-br.html + __en.html"
+            png = f"assets/mockups/{slug}__{name}__{{pt-br,en}}__v3.png"
+            print(f"| {name} | {source} | {html} | {png} |")
+        print()
+        print("Each screen produces two HTML files and two PNGs DPR3 (>=900px wide).")
+        print()
+
+    # ---- Icons
+    print("## Icons required")
+    print()
+    icons = flow.get("icons_required") or []
+    print(f"- declared: {len(icons)}")
+    for icon in icons:
+        print(f"  - [ ] {icon} (must appear in HTML alt or comment as `Assets.xcassets/{icon}.imageset` or `<!-- icon: {icon} -->`)")
+    print()
+    print(f"- icons_fallback_feather: {flow.get('icons_fallback_feather', False)}")
+    print()
+
+    # ---- Risks
+    print("## Risks")
+    print()
+    risks = flow.get("risk_flags") or []
+    resolved = flow.get("resolved_decisions") or []
+    if not risks and not resolved:
+        print("- (none)")
+    else:
+        if risks:
+            print(f"### Active risk_flags ({len(risks)})")
+            for r in risks:
+                print(f"- {r}")
+            print()
+        if resolved:
+            print(f"### resolved_decisions ({len(resolved)})")
+            for r in resolved:
+                if isinstance(r, dict):
+                    risk = r.get("risk", "?")
+                    by = r.get("decided_by", "?")
+                    when = r.get("decided_at", "?")
+                    why = r.get("rationale", "?")
+                    print(f"- {risk}  (decided by {by} on {when}: {why})")
+            print()
+    if risks and not resolved and (meta.get("state") or "").lower() == "published":
+        print("> WARN: state=published with active risk_flags and no resolved_decisions.")
+        print("> Validator will block the merge until risks are resolved or documented.")
+        print()
+
+    # ---- Deliverables in order
+    print("## Deliverables (produce in this order)")
+    print()
+    print(f"1. `articles/{slug}/audit/code-audit-{intercom_id}.md` (cite iOS file:line per claim)")
+    print(f"2. `articles/{slug}/pt-br.md` (PRIMARY, writer's first focus)")
+    print(f"3. `articles/{slug}/en.md` (1:1 mirror, currency localised, no R$ in EN body)")
+    if screens:
+        print(f"4. mockup HTMLs in `articles/{slug}/mockup-sources/` (one pair per screen above)")
+        png_cmd_lines = []
+        for s in screens:
+            if not isinstance(s, dict) or not s.get("name"):
+                continue
+            name = s["name"]
+            png_cmd_lines.append(f"   node scripts/shot-retina.mjs articles/{slug}/mockup-sources/{name}__pt-br.html assets/mockups/{slug}__{name}__pt-br__v3.png")
+            png_cmd_lines.append(f"   node scripts/shot-retina.mjs articles/{slug}/mockup-sources/{name}__en.html assets/mockups/{slug}__{name}__en__v3.png")
+        print(f"5. render PNGs DPR3 (commands):")
+        print("   ```bash")
+        for l in png_cmd_lines:
+            print(l)
+        print("   ```")
+    else:
+        print(f"4. (no mockups declared; skip)")
+        print(f"5. (no mockups declared; skip)")
+    print(f"6. `articles/{slug}/audit/content-audit-{intercom_id}.md` (with explicit Stale-feature audit table)")
+    print(f"   `articles/{slug}/audit/compliance-{intercom_id}.md`     (no 'ALL PASS' if active risk_flags remain)")
+    print(f"7. final gate (article is shippable iff this exits 0):")
+    print()
+    print("   ```bash")
+    print(f"   python3 scripts/run-help-article.py articles/{slug} --phase validate")
+    print("   ```")
+    print()
+    print("Open a draft PR only after the final gate exits 0.")
+    return 0
+
+
+# ---------------------------- write skeletons (audit triplet only) ----------------------------
+
+AUDIT_SKELETONS = {
+    "code-audit": """\
+# Code audit, article {intercom_id} ({slug})
+
+Date: {date}
+Source iOS: Jamble-iOS develop. Sources cited in flow.yml.
+xcstrings: `Jamble-iOS/Jamble/RESOURCES/Localizable.xcstrings`
+
+## Claims article vs source code
+
+| Article claim | Source | Verdict |
+|---|---|---|
+| (fill: claim 1) | (file:line) | MATCH / MISMATCH |
+
+## Verdict
+
+(Resolve uncertainty before declaring ship-ready. The validator rejects
+"ship-ready" when the body still contains 'PARTIAL', 'not re-audited',
+'requires cross-check', 'to be verified', or 'TBD'.)
+""",
+    "content-audit": """\
+# Content audit, article {intercom_id} ({slug})
+
+Date: {date}
+
+## 1. PII / sensitive data
+Verdict: (PASS / BLOCKER + detail)
+
+## 2. Banned words (auction / leilao)
+Verdict: PASS
+
+## 3. Currency
+Verdict: PASS
+
+## 4. Word diet
+Verdict: PASS
+
+## 5. Tone (against Jamble voice guidelines)
+Verdict: PASS
+
+## 6. Alt text quality
+Verdict: PASS
+
+## 7. Stale-feature audit
+
+Confirms every feature, button, and label described in the article still
+exists in production. Verdicts: `live_in_ios` | `live_in_backend` |
+`product_confirmed` | `deprecated` | `unknown_blocker`.
+
+| Claim / feature | Source checked | Status | Checked at | Owner | Verdict |
+|---|---|---|---|---|---|
+| (fill: feature 1) | (file path) | live | {date} | (name) | live_in_ios |
+
+Verdict: (PASS / BLOCKER + detail)
+
+## Result
+
+ALL N SCANS PASS. Zero BLOCKER.
+""",
+    "compliance": """\
+# Compliance audit, article {intercom_id} ({slug})
+
+Date: {date}
+Reference: process/12-procedure-compliance.md (17 checks)
+
+| # | Check | Result |
+|---|---|---|
+| 1 | iOS code audit done before drafting | (PASS / BLOCKER) |
+
+## Verdict
+
+(Do NOT write 'ALL PASS' if the article still has active risk_flags
+without a corresponding resolved_decisions entry; the validator will
+fail.)
+""",
+}
+
+
+def write_skeletons(article_dir: Path, intercom_id: Any, force: bool) -> int:
+    """Create the 3 audit triplet skeleton files. Surgical: only touches
+    `articles/<slug>/audit/`, never modifies article body, mockups, or
+    flow.yml. Skips files that already exist unless --force is set."""
+    if intercom_id in (None, "", "<intercom_id>"):
+        print(
+            "ERROR: --write-skeletons requires an intercom_id in metadata.yml or flow.yml",
+            file=sys.stderr,
+        )
+        return 2
+
+    audit_dir = article_dir / "audit"
+    audit_dir.mkdir(exist_ok=True)
+    slug = article_dir.name
+    today = "2026-05-06"  # stamp the day the skeletons are produced; worker updates as they audit
+
+    written: list[str] = []
+    skipped: list[str] = []
+    for kind, template in AUDIT_SKELETONS.items():
+        target = audit_dir / f"{kind}-{intercom_id}.md"
+        if target.exists() and not force:
+            skipped.append(target.name)
+            continue
+        body = template.format(intercom_id=intercom_id, slug=slug, date=today)
+        target.write_text(body, encoding="utf-8")
+        written.append(target.name)
+
+    if written:
+        print("Wrote audit skeleton(s):")
+        for n in written:
+            print(f"  - {audit_dir.relative_to(REPO_ROOT)}/{n}")
+    if skipped:
+        print("Skipped (already exists; pass --force to overwrite):")
+        for n in skipped:
+            print(f"  - {audit_dir.relative_to(REPO_ROOT)}/{n}")
     return 0
 
 
@@ -324,9 +621,19 @@ def main() -> int:
     parser.add_argument("article_dir", help="path to articles/<slug>")
     parser.add_argument(
         "--phase",
-        choices=["plan", "validate", "checklist"],
+        choices=["plan", "validate", "checklist", "writer-packet"],
         required=True,
         help="which phase to run",
+    )
+    parser.add_argument(
+        "--write-skeletons",
+        action="store_true",
+        help="(writer-packet only) also create empty audit triplet skeletons in articles/<slug>/audit/",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="(--write-skeletons only) overwrite existing audit files",
     )
     args = parser.parse_args()
 
@@ -352,6 +659,14 @@ def main() -> int:
         return phase_validate(article_dir)
     if args.phase == "checklist":
         return phase_checklist(article_dir)
+    if args.phase == "writer-packet":
+        rc = phase_writer_packet(article_dir)
+        if rc == 0 and args.write_skeletons:
+            meta = load_yaml(article_dir / "metadata.yml")
+            flow = load_yaml(article_dir / "flow.yml")
+            intercom_id = meta.get("intercom_id") or flow.get("intercom_id")
+            return write_skeletons(article_dir, intercom_id, args.force)
+        return rc
     return 2
 
 
