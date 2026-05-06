@@ -70,13 +70,13 @@ Confirms every feature, button, and label described in the article still exists 
 | Claim / feature | Source checked | Status | Checked at | Owner | Verdict |
 |---|---|---|---|---|---|
 | Live screen overview with 6 functional areas | LIVE_SHOPPING/HostV2/ShostHostV2ViewController.swift | live | 2026-05-06 | Aymar | live_in_ios |
-| Camera controls (front/back, mirror, audio) | LIVE_SHOPPING/HostV2/CameraControlsView.swift | live | 2026-05-06 | Aymar | live_in_ios |
-| Product list tabs (live, queued, sold) | LIVE_SHOPPING/ProductList/ProductListViewController.swift | live | 2026-05-06 | Aymar | live_in_ios |
-| Add products mid-show via bottom sheet | LIVE_SHOPPING/ProductList/AddProductsSheet.swift | live | 2026-05-06 | Aymar | live_in_ios |
-| Show settings menu accessible during live | LIVE_SHOPPING/HostV2/ShowSettingsViewController.swift | live | 2026-05-06 | Aymar | live_in_ios |
-| Co-host / Live Duo invitation flow | LIVE_SHOPPING/LiveDuo/LiveDuoCoordinator.swift | live | 2026-05-06 | Aymar | live_in_ios |
+| Camera controls (front/back, mirror, audio) | LIVE_SHOPPING/HostV2/ShostHostV2ViewController.swift (camera toggle handled in the host controller; no dedicated CameraControlsView) | live | 2026-05-06 | Aymar | live_in_ios |
+| Product list tabs (live, queued, sold) | LIVE_SHOPPING/Host/View/ShowHostProductsViewController.swift | live | 2026-05-06 | Aymar | live_in_ios |
+| Add products mid-show via bottom sheet | LIVE_SHOPPING/Host/View/ShowHostProductsViewController.swift (presents the product import flow as a sheet) | live | 2026-05-06 | Aymar | live_in_ios |
+| Show settings menu accessible during live | (no dedicated ShowSettingsViewController; settings entries are surfaced inline in the host UI per ShostHostV2ViewController.swift) | confirmed | 2026-05-06 | Aymar | product_confirmed |
+| Co-host / Live Duo invitation flow | LIVE_SHOPPING/Duo/View/InviteDuoShowViewController.swift | live | 2026-05-06 | Aymar | live_in_ios |
 
-Verdict: PASS. All 6 documented features confirmed live in iOS as of audit date.
+Verdict: PASS. 5 of 6 features confirmed live_in_ios with verified file paths; show settings menu downgraded to product_confirmed because there is no dedicated ShowSettingsViewController file (entries live inline in the host UI), product behavior is unchanged.
 
 ## Result
 
