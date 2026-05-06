@@ -1,0 +1,16 @@
+# Fixture: 1-article batch.
+# Used by tests for prepare-mode happy path with the smallest possible batch.
+batch_id: fixture-batch-1
+workflow: article-v2
+mode: v2_rewrite
+articles:
+  - slug: wishlist-and-favorites
+    priority: 1
+    intercom_id: 14288159
+    audience: buyer_br
+    job_to_be_done: "Help buyers save items they care about (fixture)"
+    source_hints:
+      ios_files:
+        - WISHLIST/
+      backend_files: []
+    mockup_count_target: 3

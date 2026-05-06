@@ -1,0 +1,31 @@
+{
+  "batch_id": "fixture-summary-hardfail",
+  "batch_path": "tests/fixtures/batch-coordinator/batch-1.yml",
+  "worktree_base": "/tmp/fixture-worktrees",
+  "articles": [
+    {
+      "slug": "sample-hardfail",
+      "audience": "buyer_br",
+      "intercom_id": 99002,
+      "worktree": "tests/fixtures/batch-coordinator/worktrees-stub/sample-hardfail",
+      "branch": "feat/batch-fixture-sample-hardfail",
+      "validate_returncode": 1,
+      "validate_output": "=== sample-hardfail ===\n\nFAIL [em_dash]: pt-br.md has 7 em-dash(es)\nFAIL [audit_missing]: audit/code-audit-99002.md missing\n\nValidated 1 article(s): 2 hard fail(s), 0 soft warn(s)\n",
+      "hard_fail_count": 2,
+      "soft_warn_count": 0,
+      "mockups_declared": 2,
+      "mockups_present": 2,
+      "missing_mockups": [],
+      "audit_files_present": 0,
+      "audit_skeleton_unfilled": false,
+      "em_dash_count_pt": 7,
+      "em_dash_count_en": 0,
+      "rdollar_leak_en_count": 0,
+      "pt_br_md_path": null,
+      "en_md_path": null,
+      "mockup_pngs": [],
+      "status": "blocked",
+      "blockers": ["validate exit 1", "2 validator hard fail(s)"]
+    }
+  ]
+}

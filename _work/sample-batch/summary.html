@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Reviewer pack — fixture-summary-3articles</title><style>
+:root {
+  --fg: #162233;
+  --muted: #6D6D80;
+  --bg: #F9FAFC;
+  --card: #FFFFFF;
+  --border: #E9EAEF;
+  --brand: #7E53F8;
+  --ok: #0F8A3C;
+  --fail: #B42318;
+  --warn: #B45309;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif;
+  background: var(--bg); color: var(--fg);
+  margin: 0; padding: 24px;
+  font-size: 14px; line-height: 1.5;
+}
+h1, h2, h3 { color: var(--fg); }
+h1 { font-size: 24px; margin: 0 0 6px; }
+h2 { font-size: 20px; margin: 18px 0 8px; }
+h3 { font-size: 15px; margin: 14px 0 6px; }
+.subtitle { color: var(--muted); margin-bottom: 20px; }
+.muted { color: var(--muted); }
+.small { font-size: 12px; }
+table.scorecard {
+  width: 100%; border-collapse: collapse;
+  background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
+  margin-bottom: 28px;
+}
+.scorecard th, .scorecard td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+.scorecard th { background: #F4F4F8; font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; color: var(--muted); }
+.scorecard td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.scorecard td.num.ok { color: var(--ok); }
+.scorecard td.num.fail { color: var(--fail); font-weight: 600; }
+.scorecard td.num.warn { color: var(--warn); }
+.scorecard td.num.muted { color: var(--muted); }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.3px; }
+.blockers { font-size: 12px; color: var(--fail); margin-top: 4px; }
+.article {
+  background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 20px; margin-bottom: 24px;
+}
+.article header h2 { display: flex; align-items: center; gap: 10px; margin-top: 0; }
+.alert {
+  background: #FEF3C7; border: 1px solid #FDE68A; color: #B45309;
+  padding: 10px 14px; border-radius: 8px; margin: 10px 0;
+}
+.alert ul { margin: 6px 0 0 18px; }
+details { margin: 12px 0; border: 1px solid var(--border); border-radius: 8px; padding: 0 12px; }
+details > summary { padding: 10px 0; font-weight: 600; cursor: pointer; }
+details[open] > summary { border-bottom: 1px solid var(--border); }
+pre.validate {
+  background: #1B1530; color: #E9E5FB;
+  padding: 12px 14px; border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px; overflow-x: auto; white-space: pre-wrap;
+  margin: 12px 0;
+}
+.md-preview { padding: 4px 0 12px; max-width: 720px; }
+.md-preview h1 { font-size: 22px; margin-top: 16px; }
+.md-preview h2 { font-size: 17px; margin-top: 18px; padding-top: 8px; border-top: 1px solid var(--border); }
+.md-preview h3 { font-size: 14px; }
+.md-preview p { margin: 6px 0; }
+.md-preview img { max-width: 100%; border-radius: 6px; border: 1px solid var(--border); margin: 8px 0; }
+.md-preview ul, .md-preview ol { padding-left: 22px; }
+.mockup-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 8px 0 16px; }
+.mock { margin: 0; }
+.mock img { width: 100%; border-radius: 8px; border: 1px solid var(--border); background: #FFF; }
+.mock figcaption { font-size: 11px; color: var(--muted); padding: 4px 2px; word-break: break-all; }
+.questions { background: #F4EFFF; border: 1px solid #DCC9FF; border-radius: 10px; padding: 14px 18px; margin-top: 16px; }
+.questions h3 { margin-top: 0; color: var(--brand); }
+.questions ol { margin: 6px 0 0 22px; }
+.questions li { margin: 6px 0; }
+</style></head><body><header><h1>Reviewer pack — batch <code>fixture-summary-3articles</code></h1><div class="subtitle">3 article(s) reviewed. 2 ready, 1 blocked, 0 failed.</div></header><table class="scorecard"><thead><tr><th>article</th><th>status</th><th>hard</th><th>soft</th><th>em-dash<br><span class="muted small">pt/en</span></th><th>R$ leak<br><span class="muted small">en body</span></th><th>mockups<br><span class="muted small">present/declared</span></th><th>audit<br><span class="muted small">files/3</span></th><th>validate</th></tr></thead><tbody><tr><td><a href="#article-direct-messages-for-sellers"><b>direct-messages-for-sellers</b></a><div class="muted small">audience: seller_br</div></td><td><span class="badge" style="color:#0F8A3C;background:#E8F5E9;">READY</span></td><td class="num ok">0</td><td class="num">3</td><td class="num ok">0/0</td><td class="num ok">0</td><td class="num ok">8/8</td><td class="num ok">3/3</td><td class="num">exit 0</td></tr><tr><td><a href="#article-wishlist-and-favorites"><b>wishlist-and-favorites</b></a><div class="muted small">audience: buyer_br</div></td><td><span class="badge" style="color:#0F8A3C;background:#E8F5E9;">READY</span></td><td class="num ok">0</td><td class="num">6</td><td class="num ok">0/0</td><td class="num ok">0</td><td class="num ok">6/6</td><td class="num ok">3/3</td><td class="num">exit 0</td></tr><tr><td><a href="#article-notification-settings"><b>notification-settings</b></a><div class="muted small">audience: both</div></td><td><span class="badge" style="color:#B45309;background:#FEF3C7;">BLOCKED</span><div class="blockers">validate exit 1<br>1 validator hard fail(s)</div></td><td class="num fail">1</td><td class="num">2</td><td class="num fail">3/0</td><td class="num ok">0</td><td class="num ok">4/4</td><td class="num ok">3/3</td><td class="num">exit 1</td></tr></tbody></table><section id="article-direct-messages-for-sellers" class="article"><header><h2>direct-messages-for-sellers <span class="badge" style="color:#0F8A3C;background:#E8F5E9;">READY</span></h2><div class="muted">audience: seller_br · intercom_id: 14288169 · worktree: <code>tests/fixtures/batch-coordinator/worktrees-stub/direct-messages-for-sellers</code><span class="muted small"> · branch: <code>feat/batch-fixture-direct-messages-for-sellers</code></span></div></header><details open><summary>Validate output</summary><pre class="validate">Validated 1 article(s): 0 hard fail(s), 3 soft warn(s)
+</pre></details><details><summary>pt-BR body (rendered preview)</summary><div class="md-preview"><i class='muted'>(pt-br.md not found in worktree)</i></div></details><details><summary>EN body (rendered preview)</summary><div class="md-preview"><i class='muted'>(en.md not found in worktree)</i></div></details><h3>Mockups</h3><p class="muted">No mockup PNGs.</p><div class="questions"><h3>Reviewer questions</h3><ol><li><b>Tone, pt-BR.</b> Does the pt-br body sound like a Brazilian buyer or seller would write it? Any words that still sound translated rather than native?</li><li><b>Mockups.</b> Do the rendered PNGs look professional and not placeholder-ish? Any cartoon emoji, big-text placeholder, missing icon?</li><li><b>Factual claims.</b> Are all factual claims grounded in the cited iOS or backend file:line in the code-audit? Any claim that feels invented or unsupported?</li><li><b>Publishable in Intercom today?</b> If yes, leave a GO comment on the PR. If no, list the blockers and stop the batch.</li></ol></div></section><section id="article-wishlist-and-favorites" class="article"><header><h2>wishlist-and-favorites <span class="badge" style="color:#0F8A3C;background:#E8F5E9;">READY</span></h2><div class="muted">audience: buyer_br · intercom_id: 14288159 · worktree: <code>tests/fixtures/batch-coordinator/worktrees-stub/wishlist-and-favorites</code><span class="muted small"> · branch: <code>feat/batch-fixture-wishlist-and-favorites</code></span></div></header><details open><summary>Validate output</summary><pre class="validate">Validated 1 article(s): 0 hard fail(s), 6 soft warn(s)
+</pre></details><details><summary>pt-BR body (rendered preview)</summary><div class="md-preview"><i class='muted'>(pt-br.md not found in worktree)</i></div></details><details><summary>EN body (rendered preview)</summary><div class="md-preview"><i class='muted'>(en.md not found in worktree)</i></div></details><h3>Mockups</h3><p class="muted">No mockup PNGs.</p><div class="questions"><h3>Reviewer questions</h3><ol><li><b>Tone, pt-BR.</b> Does the pt-br body sound like a Brazilian buyer or seller would write it? Any words that still sound translated rather than native?</li><li><b>Mockups.</b> Do the rendered PNGs look professional and not placeholder-ish? Any cartoon emoji, big-text placeholder, missing icon?</li><li><b>Factual claims.</b> Are all factual claims grounded in the cited iOS or backend file:line in the code-audit? Any claim that feels invented or unsupported?</li><li><b>Publishable in Intercom today?</b> If yes, leave a GO comment on the PR. If no, list the blockers and stop the batch.</li></ol></div></section><section id="article-notification-settings" class="article"><header><h2>notification-settings <span class="badge" style="color:#B45309;background:#FEF3C7;">BLOCKED</span></h2><div class="muted">audience: both · intercom_id: 14288145 · worktree: <code>tests/fixtures/batch-coordinator/worktrees-stub/notification-settings</code><span class="muted small"> · branch: <code>feat/batch-fixture-notification-settings</code></span></div></header><div class="alert"><b>Blockers:</b><ul><li>validate exit 1</li><li>1 validator hard fail(s)</li></ul></div><details open><summary>Validate output</summary><pre class="validate">FAIL [em_dash]: pt-br.md has 3 em-dash(es)
+Validated 1 article(s): 1 hard fail(s), 2 soft warn(s)
+</pre></details><details><summary>pt-BR body (rendered preview)</summary><div class="md-preview"><i class='muted'>(pt-br.md not found in worktree)</i></div></details><details><summary>EN body (rendered preview)</summary><div class="md-preview"><i class='muted'>(en.md not found in worktree)</i></div></details><h3>Mockups</h3><p class="muted">No mockup PNGs.</p><div class="questions"><h3>Reviewer questions</h3><ol><li><b>Tone, pt-BR.</b> Does the pt-br body sound like a Brazilian buyer or seller would write it? Any words that still sound translated rather than native?</li><li><b>Mockups.</b> Do the rendered PNGs look professional and not placeholder-ish? Any cartoon emoji, big-text placeholder, missing icon?</li><li><b>Factual claims.</b> Are all factual claims grounded in the cited iOS or backend file:line in the code-audit? Any claim that feels invented or unsupported?</li><li><b>Publishable in Intercom today?</b> If yes, leave a GO comment on the PR. If no, list the blockers and stop the batch.</li></ol></div></section><footer class="muted small" style="margin-top:32px;">Generated by <code>scripts/render-reviewer-pack.py</code>. Static HTML, no scripts. Open in any browser; image links work locally via file://.</footer></body></html>

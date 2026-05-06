@@ -1,0 +1,25 @@
+# Fixture: duplicate slug. Coordinator must reject (also caught by
+# the upstream batch validator, defense in depth).
+batch_id: fixture-batch-dup
+workflow: article-v2
+mode: v2_rewrite
+articles:
+  - slug: wishlist-and-favorites
+    priority: 1
+    intercom_id: 14288159
+    audience: buyer_br
+    job_to_be_done: "(fixture)"
+    source_hints:
+      ios_files: [WISHLIST/]
+      backend_files: []
+    mockup_count_target: 1
+
+  - slug: wishlist-and-favorites
+    priority: 2
+    intercom_id: 14288159
+    audience: buyer_br
+    job_to_be_done: "(fixture, duplicate slug)"
+    source_hints:
+      ios_files: [WISHLIST/]
+      backend_files: []
+    mockup_count_target: 1

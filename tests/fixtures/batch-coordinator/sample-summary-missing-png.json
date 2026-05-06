@@ -1,0 +1,33 @@
+{
+  "batch_id": "fixture-summary-missing-png",
+  "batch_path": "tests/fixtures/batch-coordinator/batch-1.yml",
+  "worktree_base": "/tmp/fixture-worktrees",
+  "articles": [
+    {
+      "slug": "sample-missing-png",
+      "audience": "seller_br",
+      "intercom_id": 99003,
+      "worktree": "tests/fixtures/batch-coordinator/worktrees-stub/sample-missing-png",
+      "branch": "feat/batch-fixture-sample-missing-png",
+      "validate_returncode": 0,
+      "validate_output": "=== sample-missing-png ===\n\nValidated 1 article(s): 0 hard fail(s), 1 soft warn(s)\n",
+      "hard_fail_count": 0,
+      "soft_warn_count": 1,
+      "mockups_declared": 2,
+      "mockups_present": 1,
+      "missing_mockups": ["assets/mockups/sample-missing-png__screen-x__en__v*.png"],
+      "audit_files_present": 3,
+      "audit_skeleton_unfilled": false,
+      "em_dash_count_pt": 0,
+      "em_dash_count_en": 0,
+      "rdollar_leak_en_count": 0,
+      "pt_br_md_path": null,
+      "en_md_path": null,
+      "mockup_pngs": [
+        "assets/mockups/sample-missing-png__screen-x__pt-br__v3.png"
+      ],
+      "status": "blocked",
+      "blockers": ["1 mockup PNG(s) missing"]
+    }
+  ]
+}
