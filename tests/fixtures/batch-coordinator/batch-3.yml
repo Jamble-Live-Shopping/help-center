@@ -1,0 +1,39 @@
+# Fixture: 3-article batch (the coordinator cap).
+# All 3 slugs must already exist on the base branch in mode=v2_rewrite,
+# so we point at slugs that exist on origin/main.
+batch_id: fixture-batch-3
+workflow: article-v2
+mode: v2_rewrite
+articles:
+  - slug: direct-messages-for-sellers
+    priority: 1
+    intercom_id: 14288169
+    audience: seller_br
+    job_to_be_done: "Help sellers respond to buyers (fixture)"
+    source_hints:
+      ios_files:
+        - ACTIVITY/
+      backend_files: []
+    mockup_count_target: 4
+
+  - slug: wishlist-and-favorites
+    priority: 2
+    intercom_id: 14288159
+    audience: buyer_br
+    job_to_be_done: "Help buyers save items (fixture)"
+    source_hints:
+      ios_files:
+        - WISHLIST/
+      backend_files: []
+    mockup_count_target: 3
+
+  - slug: notification-settings
+    priority: 3
+    intercom_id: 14288145
+    audience: both
+    job_to_be_done: "Help users tune notifications (fixture)"
+    source_hints:
+      ios_files:
+        - PROFILE/
+      backend_files: []
+    mockup_count_target: 2

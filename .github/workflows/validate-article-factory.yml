@@ -18,6 +18,13 @@ on:
       - 'scripts/validate-article-flow.py'
       - 'scripts/test-article-factory.py'
       - 'scripts/run-help-article.py'
+      - 'scripts/run-help-article-batch.py'
+      - 'scripts/render-reviewer-pack.py'
+      - 'scripts/test-batch-coordinator.py'
+      - 'scripts/generate-sample-reviewer-pack.py'
+      - 'tests/fixtures/batch-coordinator/**'
+      - 'process/14-batch-coordinator.md'
+      - '_work/sample-batch/**'
       - '.github/workflows/validate-article-factory.yml'
 
 concurrency:
@@ -41,6 +48,9 @@ jobs:
 
       - name: Factory regression tests
         run: python3 scripts/test-article-factory.py
+
+      - name: Batch coordinator regression tests
+        run: python3 scripts/test-batch-coordinator.py
 
       - name: Golden replay
         run: python3 scripts/replay-golden-articles.py

@@ -1,0 +1,17 @@
+# Fixture: 1-article batch in new_article mode.
+# Used by tests for the auto-bootstrap path: prepare must create
+# articles/<slug>/flow.yml from this batch when none exists yet in
+# the worktree.
+batch_id: fixture-batch-bootstrap
+workflow: article-v2
+mode: new_article
+articles:
+  - slug: fixture-bootstrap-article
+    priority: 1
+    audience: buyer_br
+    job_to_be_done: "Synthetic fixture article for bootstrap test"
+    source_hints:
+      ios_files: []
+      backend_files: []
+      justification: "Synthetic fixture used only by test-batch-coordinator.py"
+    mockup_count_target: 1

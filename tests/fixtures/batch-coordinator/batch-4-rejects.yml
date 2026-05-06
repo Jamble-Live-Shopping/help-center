@@ -1,0 +1,44 @@
+# Fixture: 4-article batch. Coordinator must reject this with cap=3.
+batch_id: fixture-batch-4
+workflow: article-v2
+mode: v2_rewrite
+articles:
+  - slug: direct-messages-for-sellers
+    priority: 1
+    intercom_id: 14288169
+    audience: seller_br
+    job_to_be_done: "(fixture)"
+    source_hints:
+      ios_files: [ACTIVITY/]
+      backend_files: []
+    mockup_count_target: 1
+
+  - slug: wishlist-and-favorites
+    priority: 2
+    intercom_id: 14288159
+    audience: buyer_br
+    job_to_be_done: "(fixture)"
+    source_hints:
+      ios_files: [WISHLIST/]
+      backend_files: []
+    mockup_count_target: 1
+
+  - slug: notification-settings
+    priority: 3
+    intercom_id: 14288145
+    audience: both
+    job_to_be_done: "(fixture)"
+    source_hints:
+      ios_files: [PROFILE/]
+      backend_files: []
+    mockup_count_target: 1
+
+  - slug: how-real-time-offers-work
+    priority: 4
+    intercom_id: 14288092
+    audience: buyer_br
+    job_to_be_done: "(fixture, exceeds cap)"
+    source_hints:
+      ios_files: [BIDS/]
+      backend_files: []
+    mockup_count_target: 1
