@@ -1,0 +1,56 @@
+# Flow contract for wishlist-and-favorites.
+# Canary v2 rewrite (PR #82). Pre-filled from process/batches/article-batch.example.yml
+# then refined after the iOS code audit + xcstrings pull on 2026-05-06.
+#
+# See process/templates/article-flow.yml for field documentation.
+# See process/00-RUNBOOK.md for the canonical 8-phase workflow.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: buyer_br
+
+job_to_be_done: "Help buyers save the products and shows they care about and find them again later, with the right pt-BR labels"
+
+source_of_truth:
+  ios_files:
+    - WISHLIST/Views/WishlistPageViewController.swift
+    - WISHLIST/Models/WishlistPage.swift           # tab labels Favoritos / Ofertas
+    - WISHLIST/ViewModels/WishlistPageViewModel.swift  # empty state strings
+    - RESOURCES/Localizable.xcstrings              # pt-BR translations
+  backend_files: []
+  legal: []
+  support_context: []
+
+content_contract:
+  must_answer:
+    - "where to find the wishlist in the app"
+    - "what the two tabs (Favoritos and Ofertas) show"
+    - "how to bookmark a product from a card"
+    - "what notifications a buyer gets after bookmarking"
+  forbidden_terms:
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+  must_not_say:
+    - "Internal notification scheduling implementation"
+    - "Backend service names"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: product-bookmark-cta
+      purpose: "Show the bookmark icon on a product card and the tap-to-save instruction"
+      source: ios_required
+    - name: wishlist-tabs
+      purpose: "Show the Wishlist screen with the Favoritos and Ofertas tabs and a few sample cards"
+      source: ios_required
+    - name: wishlist-empty-state
+      purpose: "Show the empty Wishlist state with the 'Start Exploring Deals' / 'Comece a explorar as ofertas' message"
+      source: ios_required
+
+icons_required: []
+icons_fallback_feather: false
+
+currency_required: false  # mockups show prices on product cards but the body does not document price mechanics
+
+risk_flags: []
+resolved_decisions: []
