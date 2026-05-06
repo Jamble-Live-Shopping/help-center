@@ -53,9 +53,12 @@ currency_required: true  # article documents prices
 risk_flags: []
 resolved_decisions: []
 
-# Replay allowlist (technical debt tracker, not production state).
+# Expected fails (technical debt tracker, structured).
 # See process/golden-flows/battles-team-competition-in-your-show.flow.yml
-# for context. Entries documented here are tolerated by the golden replay
-# until fixed in a separate content PR.
-replay_allowlist:
-  - content_audit_scan6_not_stale
+# for the schema and policy.
+expected_fails:
+  - rule: content_audit_scan6_not_stale
+    count: 1
+    contains: "Scan 6"
+    reason: "v2 content-audit uses 'Scan 6, alt-text quality' label, not a stale-feature subsection"
+    removal_path: "Add a real 'Stale-feature audit' subsection with the structured table"

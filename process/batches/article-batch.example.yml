@@ -1,0 +1,57 @@
+# Example article batch for the Help Center Article Factory.
+#
+# A batch describes N articles to write in one production round. The batch
+# YAML is the input to:
+#   - scripts/validate-article-batch.py        (lint the batch)
+#   - scripts/init-article-flow.py             (bootstrap one flow.yml from batch hints)
+#   - (post-PR-#76) the /help-article skill    (produce one article)
+#   - (post-PR-#76) the batch runner            (parallelize across N worktrees)
+#
+# Constraints (enforced by validate-article-batch.py):
+#   - batch size <= 10 articles
+#   - no duplicate slug
+#   - each article: priority, audience, job_to_be_done required
+#   - each article: source_hints present (can be empty arrays)
+#   - mode in {v2_rewrite, new_article, minor_edit}
+#   - if mode != new_article, articles/<slug> must exist
+
+batch_id: seller-tools-v2-batch-01
+workflow: article-v2
+mode: v2_rewrite
+articles:
+  - slug: direct-messages-for-sellers
+    priority: 1
+    intercom_id: 14288169
+    audience: seller_br
+    job_to_be_done: "Help sellers respond to buyers without losing context of the show or the order"
+    source_hints:
+      ios_files:
+        - ACTIVITY/ActivityList/Models/ActivityType.swift
+        - ACTIVITY/ActivityPage/Views/ActivityViewController.swift
+        - ACTIVITY/MessageViewController.swift
+        - PROFILE/Views/ProfileHeaderViewController.swift
+      backend_files:
+        - jamble_backend/src/services/conversation_service.py
+    mockup_count_target: 4
+
+  - slug: wishlist-and-favorites
+    priority: 2
+    intercom_id: 14288163
+    audience: buyer_br
+    job_to_be_done: "Help buyers track items they like and get notified when they go on sale or come back to a show"
+    source_hints:
+      ios_files:
+        - WISHLIST/
+      backend_files: []
+    mockup_count_target: 3
+
+  - slug: notification-settings
+    priority: 3
+    intercom_id: 14288145
+    audience: both
+    job_to_be_done: "Help users tune which Jamble notifications they receive across pushes, email, and in-app banners"
+    source_hints:
+      ios_files:
+        - PROFILE/ProfileSettings/NotificationSettingsViewController.swift
+      backend_files: []
+    mockup_count_target: 2

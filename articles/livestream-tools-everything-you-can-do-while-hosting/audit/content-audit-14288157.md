@@ -63,6 +63,21 @@ All alt texts are 15-150 chars, descriptive (no `screenshot of`, no `image of`),
 
 Verdict: PASS
 
+## 7. Stale-feature audit
+
+Confirms every feature, button, and label described in the article still exists in production. Verdicts: `live_in_ios` | `live_in_backend` | `product_confirmed` | `deprecated` | `unknown_blocker`.
+
+| Claim / feature | Source checked | Status | Checked at | Owner | Verdict |
+|---|---|---|---|---|---|
+| Live screen overview with 6 functional areas | LIVE_SHOPPING/HostV2/ShostHostV2ViewController.swift | live | 2026-05-06 | Aymar | live_in_ios |
+| Camera controls (front/back, mirror, audio) | LIVE_SHOPPING/HostV2/CameraControlsView.swift | live | 2026-05-06 | Aymar | live_in_ios |
+| Product list tabs (live, queued, sold) | LIVE_SHOPPING/ProductList/ProductListViewController.swift | live | 2026-05-06 | Aymar | live_in_ios |
+| Add products mid-show via bottom sheet | LIVE_SHOPPING/ProductList/AddProductsSheet.swift | live | 2026-05-06 | Aymar | live_in_ios |
+| Show settings menu accessible during live | LIVE_SHOPPING/HostV2/ShowSettingsViewController.swift | live | 2026-05-06 | Aymar | live_in_ios |
+| Co-host / Live Duo invitation flow | LIVE_SHOPPING/LiveDuo/LiveDuoCoordinator.swift | live | 2026-05-06 | Aymar | live_in_ios |
+
+Verdict: PASS. All 6 documented features confirmed live in iOS as of audit date.
+
 ## Result
 
-ALL 6 SCANS PASS. Zero BLOCKER. Article ready for ship from a content-quality standpoint.
+ALL 7 SCANS PASS. Zero BLOCKER. Article ready for ship from a content-quality standpoint.
