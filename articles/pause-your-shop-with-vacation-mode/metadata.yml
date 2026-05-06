@@ -7,11 +7,11 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-05-06T00:00:00Z
 locales:
   pt-br:
-    title: 'Pause Sua Loja com o Modo Férias'
-    description: ''
+    title: 'Pause sua loja com o Modo de Férias'
+    description: 'Como ativar e desativar o Modo de Férias para que sua loja pause limpa sem quebrar pedidos em andamento.'
   en:
     title: 'Pause Your Shop with Vacation Mode'
-    description: 'This guide explains how to use Vacation Mode on Jamble. When you need to take a break — whether for travel, personal time, or just to catch up on shipping — Vacation Mode lets you temporarily make your products unavailable for purchase.'
+    description: 'How to turn Vacation Mode on and off so your shop pauses cleanly without breaking active orders.'
