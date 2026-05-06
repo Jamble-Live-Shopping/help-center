@@ -13,14 +13,14 @@ You need:
 
 ## Where to find your wishlist
 
-Your wishlist lives on your profile page. It has two tabs:
+Your wishlist sits on your profile page. It has two tabs:
 
 - **Bookmarks** lists every product you saved
 - **Bids** lists the products where you have an active offer
 
 ![Wishlist screen with Bookmarks and Bids tabs and product cards with prices](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/wishlist-and-favorites__wishlist-tabs__en__v3.png)
 
-The **Bookmarks** tab is your product vault. Anything you saved while browsing or watching a show lands here.
+The **Bookmarks** tab is where your saved products go. Anything you saved while browsing or watching a show lands here.
 
 The **Bids** tab is more dynamic. Every product that shows up here has an offer of yours in flight. Tap any card to see the current price and adjust your bid.
 
@@ -41,7 +41,7 @@ If you open the wishlist for the first time, or if you cleared it out, Jamble sh
 
 ![Empty wishlist screen with the message Start Exploring Deals and a prompt to discover products](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/wishlist-and-favorites__wishlist-empty-state__en__v3.png)
 
-The **"Start Exploring Deals"** prompt drops you straight into the product feed. Tap, browse, save one item, and the **Bookmarks** tab fills up immediately.
+The **"Start Exploring Deals"** prompt drops you straight into the product feed. Tap, browse, save one item, and it shows up in the **Bookmarks** tab right away.
 
 ## Save a show
 

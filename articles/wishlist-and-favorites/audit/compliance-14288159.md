@@ -19,7 +19,7 @@ Reference: process/12-procedure-compliance.md (17 checks) + scripts/validate-art
 | 12 | Zero ASCII box | PASS |
 | 13 | PNG suffix __v3 cache-bust | PASS |
 | 14 | PNG DPR 3 (>=900px wide) | PASS, all 6 PNGs are 1020px wide |
-| 15 | Mockup pt-br portuguese, en english, mirror layout | PASS, generated from a shared template with locale params |
+| 15 | DA discipline: no cartoon card/product placeholders, no big-text placeholders, no CSS-drawn icons when an iOS asset exists; mockup pt-br portuguese, en english, mirror layout | PASS after manual visual review on 2026-05-06: 4 product-bearing mockups (product-bookmark-cta + wishlist-tabs, both locales) re-rendered to replace `🎴`/`🃏` cartoon placeholders with neutral photo-style thumbnails containing a small white card silhouette. Locale mirror preserved via shared template |
 | 16 | Strings from xcstrings or product-stable sources | PASS |
 | 17 | metadata.yml syntax + locales lowercase + intercom_id 14288159 matches metadata canonical | PASS |
 

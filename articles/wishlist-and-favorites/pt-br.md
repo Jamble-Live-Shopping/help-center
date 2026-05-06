@@ -13,14 +13,14 @@ Você precisa de:
 
 ## Onde encontrar a sua lista
 
-A sua lista de desejos vive na página do seu perfil. Ela tem duas abas:
+Sua lista de desejos fica na página do seu perfil. Ela tem duas abas:
 
 - **Favoritos** mostra todos os produtos que você salvou
 - **Ofertas** mostra os produtos onde você já tem ofertas ativas
 
 ![Tela da lista de desejos com as abas Favoritos e Ofertas e cards de produtos com preço](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/wishlist-and-favorites__wishlist-tabs__pt-br__v3.png)
 
-A aba **Favoritos** é o seu cofre de produtos. Tudo o que você salvou enquanto navegava ou assistia a um show fica aqui.
+A aba **Favoritos** é o lugar para guardar produtos salvos. Tudo o que você salvou enquanto navegava ou assistia a um show fica aqui.
 
 A aba **Ofertas** é mais dinâmica. Cada produto que aparece nesta aba tem uma oferta sua em andamento. Toque em qualquer card para ver o preço atual e ajustar a sua oferta.
 
@@ -41,7 +41,7 @@ Se você abre a lista pela primeira vez ou se removeu tudo, a Jamble mostra um e
 
 ![Tela da lista de desejos vazia com a mensagem Comece a explorar as ofertas e o convite a descobrir produtos](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/wishlist-and-favorites__wishlist-empty-state__pt-br__v3.png)
 
-A mensagem **"Comece a explorar as ofertas"** abre direto para o feed de produtos. Toque, navegue, salve um item, a aba **Favoritos** se enche imediatamente.
+A mensagem **"Comece a explorar as ofertas"** abre direto para o feed de produtos. Toque, navegue, salve um item, e a aba **Favoritos** passa a mostrar o item.
 
 ## Salvar um show
 
