@@ -624,6 +624,137 @@ def test_write_skeletons_does_not_overwrite_without_force() -> None:
 
 
 # ---------------------------------------------------------------
+# Tests for skeleton hardening (PR #81)
+# ---------------------------------------------------------------
+
+VALIDATOR = SCRIPTS_DIR / "validate-article-flow.py"
+
+
+def test_skeletons_contain_skeleton_todo_marker() -> None:
+    """Every audit skeleton produced by --write-skeletons must contain the
+    SKELETON_TODO marker so the validator catches unfilled audits."""
+    art = _writer_fixture("skel-marker-", intercom_id=8881001)
+    try:
+        rc, _, _ = _run([
+            sys.executable, str(RUN_HELP), str(art), "--phase", "writer-packet", "--write-skeletons",
+        ])
+        assert rc == 0
+        for kind in ("code-audit", "content-audit", "compliance"):
+            target = art / "audit" / f"{kind}-8881001.md"
+            body = target.read_text(encoding="utf-8")
+            assert "SKELETON_TODO" in body, f"{kind} skeleton missing SKELETON_TODO marker"
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_skeletons_use_dynamic_date() -> None:
+    """Skeletons must stamp `date.today().isoformat()`, not a hardcoded
+    date that would silently lie about when the audit happened."""
+    import datetime
+    art = _writer_fixture("skel-date-", intercom_id=8881002)
+    try:
+        rc, _, _ = _run([
+            sys.executable, str(RUN_HELP), str(art), "--phase", "writer-packet", "--write-skeletons",
+        ])
+        assert rc == 0
+        today = datetime.date.today().isoformat()
+        # Hardcoded date from the previous PR that should not appear anymore
+        forbidden_hardcoded = "2026-05-06"
+        for kind in ("code-audit", "content-audit", "compliance"):
+            target = art / "audit" / f"{kind}-8881002.md"
+            body = target.read_text(encoding="utf-8")
+            assert today in body, f"{kind} skeleton missing today's date {today}"
+            # If today happens to equal the legacy hardcoded date, skip
+            # the regression check (only meaningful when they differ).
+            if today != forbidden_hardcoded:
+                assert forbidden_hardcoded not in body, (
+                    f"{kind} skeleton still contains hardcoded date {forbidden_hardcoded}"
+                )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_validator_fails_on_audit_skeleton_unfilled() -> None:
+    """Validator hard fail `audit_skeleton_unfilled` fires whenever any
+    audit file contains the SKELETON_TODO marker."""
+    art = _writer_fixture("validate-unfilled-", intercom_id=8881003)
+    try:
+        rc, _, _ = _run([
+            sys.executable, str(RUN_HELP), str(art), "--phase", "writer-packet", "--write-skeletons",
+        ])
+        assert rc == 0
+        rc_v, out_v, err_v = _run([sys.executable, str(VALIDATOR), str(art)])
+        combined = out_v + err_v
+        assert rc_v == 1, f"validator must exit 1 with unfilled skeletons; got {rc_v}"
+        assert "audit_skeleton_unfilled" in combined, (
+            f"expected audit_skeleton_unfilled rule; got {combined!r}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_validator_passes_audit_skeleton_after_markers_removed() -> None:
+    """Once a worker fills every SKELETON_TODO marker, the
+    `audit_skeleton_unfilled` rule disappears from the validator output.
+    Other unrelated rules may still fire, but not this one."""
+    art = _writer_fixture("validate-filled-", intercom_id=8881004)
+    try:
+        rc, _, _ = _run([
+            sys.executable, str(RUN_HELP), str(art), "--phase", "writer-packet", "--write-skeletons",
+        ])
+        assert rc == 0
+        for kind in ("code-audit", "content-audit", "compliance"):
+            target = art / "audit" / f"{kind}-8881004.md"
+            body = target.read_text(encoding="utf-8")
+            target.write_text(body.replace("SKELETON_TODO", "(filled-stub)"), encoding="utf-8")
+        rc_v, out_v, err_v = _run([sys.executable, str(VALIDATOR), str(art)])
+        combined = out_v + err_v
+        assert "audit_skeleton_unfilled" not in combined, (
+            f"audit_skeleton_unfilled must disappear after markers removed; got {combined!r}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_skeletons_drop_pass_like_defaults() -> None:
+    """Pre-PR-#81 skeletons shipped with `ALL N SCANS PASS. Zero
+    BLOCKER` and `Verdict: PASS` lines that would let an unfilled audit
+    look green at a glance. Post-#81, those defaults must not appear."""
+    art = _writer_fixture("skel-no-pass-", intercom_id=8881005)
+    try:
+        rc, _, _ = _run([
+            sys.executable, str(RUN_HELP), str(art), "--phase", "writer-packet", "--write-skeletons",
+        ])
+        assert rc == 0
+        forbidden_phrases = [
+            "ALL N SCANS PASS",
+            "Zero BLOCKER",
+        ]
+        for kind in ("code-audit", "content-audit", "compliance"):
+            target = art / "audit" / f"{kind}-8881005.md"
+            body = target.read_text(encoding="utf-8")
+            for phrase in forbidden_phrases:
+                assert phrase not in body, (
+                    f"{kind} skeleton still contains pre-#81 default {phrase!r}"
+                )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_runner_maps_audit_skeleton_unfilled_to_phase7() -> None:
+    """run-help-article.py's RULE_TO_PHASE must include audit_skeleton_unfilled
+    so the checklist phase groups it cleanly under Phase 7 instead of Unmapped."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("run_help_article", str(RUN_HELP))
+    mod = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(mod)
+    mapping = mod.RULE_TO_PHASE
+    assert "audit_skeleton_unfilled" in mapping
+    assert mapping["audit_skeleton_unfilled"][0] == 7
+
+
+# ---------------------------------------------------------------
 # Test runner
 # ---------------------------------------------------------------
 
@@ -648,6 +779,12 @@ TESTS = [
     test_writer_packet_does_not_modify_files,
     test_write_skeletons_creates_audit_triplet,
     test_write_skeletons_does_not_overwrite_without_force,
+    test_skeletons_contain_skeleton_todo_marker,
+    test_skeletons_use_dynamic_date,
+    test_validator_fails_on_audit_skeleton_unfilled,
+    test_validator_passes_audit_skeleton_after_markers_removed,
+    test_skeletons_drop_pass_like_defaults,
+    test_runner_maps_audit_skeleton_unfilled_to_phase7,
 ]
 
 
