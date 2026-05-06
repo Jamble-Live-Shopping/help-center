@@ -94,6 +94,17 @@ icons_fallback_feather: false
 # touch prices (e.g. DM, profile, notifications).
 currency_required: false
 
+# Per-article TOC override.
+#   true  -> hard fail when the article has >= toc_required_h2_count H2
+#            sections without a TOC marker. Use this on a long article
+#            where navigation is critical (>= 8-10 sections, dense FAQs).
+#   false -> skip the TOC check entirely. Use this on short articles or
+#            articles where a TOC would be redundant.
+#   unset -> fall back to workflow toc_policy in process/workflows/article-v2.yml
+#            (currently `warn`, calibrated against historical content).
+# This field is OPTIONAL; remove the line when leaving on workflow default.
+# toc_required: false
+
 # Legal, product, or operational tensions to surface in the PR body.
 # HARD FAIL when metadata.state == "published" AND risk_flags is non-empty
 # AND resolved_decisions is empty: an article with active risks cannot

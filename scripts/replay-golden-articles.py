@@ -14,13 +14,26 @@ Usage:
     scripts/replay-golden-articles.py <slug>      # run one
     scripts/replay-golden-articles.py --json      # machine-readable output
 
-Exit code 0 if every replayed article matches its allowlist (or 0 hard
-fails when no allowlist is set). Exit 1 if any replay fails its allowlist.
+Exit code 0 if every replayed article matches its expected_fails. Exit 1
+if any replay deviates (unexpected rule, count mismatch, missing
+`contains` substring). Exit 2 on script error.
 
-Allowlist convention: each golden flow may declare a top-level
-`replay_allowlist:` field with a list of rule names that are tolerated as
-hard fails (e.g. ["mockup_referenced_not_declared"] when the historical
-article uses v2 mockups that the validator's strict v3 regex misses).
+Expected fails format (preferred, structured):
+
+    expected_fails:
+      - rule: content_audit_scan6_not_stale
+        count: 1
+        contains: "Scan 6"
+        reason: "legacy audit used Scan 6 for alt-text, not stale-feature"
+        removal_path: "Add real stale-feature subsection"
+
+Each expected_fail must match at least `count` occurrences of `rule` in
+the validator output. The combined output of those occurrences must
+contain the `contains` substring.
+
+Backward compat: legacy `replay_allowlist: [rule_names]` is still parsed
+but emits a stderr DEPRECATION warning. New golden flows must use
+`expected_fails`.
 """
 from __future__ import annotations
 
@@ -44,12 +57,11 @@ GOLDEN_DIR = REPO_ROOT / "process" / "golden-flows"
 ARTICLES_DIR = REPO_ROOT / "articles"
 VALIDATOR = REPO_ROOT / "scripts" / "validate-article-flow.py"
 
-RULE_FROM_LINE = re.compile(r"\bFAIL\s+\[([a-z0-9_]+)\]", re.IGNORECASE)
+FAIL_LINE_PATTERN = re.compile(r"\bFAIL\s+\[([a-z0-9_]+)\]\s*(.*)$", re.IGNORECASE)
 
 
 def slug_from_golden_path(path: Path) -> str:
     name = path.name
-    # Accept "<slug>.flow.yml" or "<slug>.yml"
     if name.endswith(".flow.yml"):
         return name[: -len(".flow.yml")]
     if name.endswith(".yml"):
@@ -60,21 +72,61 @@ def slug_from_golden_path(path: Path) -> str:
 def list_golden_flows(filter_slug: str | None = None) -> list[Path]:
     if not GOLDEN_DIR.exists():
         return []
-    paths = sorted(GOLDEN_DIR.glob("*.flow.yml")) + sorted(GOLDEN_DIR.glob("*.yml"))
-    paths = [p for p in paths if p.name.endswith(".yml") and not p.name.endswith(".flow.yml") or p.name.endswith(".flow.yml")]
-    paths = sorted(set(paths))
+    paths = sorted(GOLDEN_DIR.glob("*.flow.yml"))
     if filter_slug:
         paths = [p for p in paths if slug_from_golden_path(p) == filter_slug]
     return paths
 
 
-def load_allowlist(golden_path: Path) -> list[str]:
+def load_expectations(golden_path: Path) -> tuple[list[dict[str, Any]], list[str]]:
+    """Return (expected_fails, deprecation_warnings).
+
+    expected_fails is a list of dicts {rule, count, contains, reason,
+    removal_path}. Legacy replay_allowlist entries are converted to
+    expected_fails with count=1 and an empty contains string.
+    """
+    warnings: list[str] = []
     try:
         loaded = yaml.safe_load(golden_path.read_text(encoding="utf-8")) or {}
     except (OSError, yaml.YAMLError):
-        return []
-    al = loaded.get("replay_allowlist") or []
-    return [str(x) for x in al if isinstance(x, str)]
+        return [], [f"could not parse {golden_path.name}"]
+
+    expected: list[dict[str, Any]] = []
+
+    raw_expected = loaded.get("expected_fails") or []
+    for entry in raw_expected:
+        if not isinstance(entry, dict):
+            continue
+        rule = entry.get("rule")
+        if not isinstance(rule, str) or not rule:
+            continue
+        expected.append({
+            "rule": rule,
+            "count": int(entry.get("count", 1)),
+            "contains": str(entry.get("contains", "")),
+            "reason": str(entry.get("reason", "")),
+            "removal_path": str(entry.get("removal_path", "")),
+        })
+
+    legacy = loaded.get("replay_allowlist") or []
+    if legacy:
+        warnings.append(
+            f"DEPRECATION: {golden_path.name} uses legacy `replay_allowlist`. "
+            f"Migrate to `expected_fails: [{{rule, count, contains, reason, "
+            f"removal_path}}]` (see process/golden-flows/README.md)."
+        )
+        for rule_name in legacy:
+            if not isinstance(rule_name, str) or not rule_name:
+                continue
+            expected.append({
+                "rule": rule_name,
+                "count": 1,
+                "contains": "",
+                "reason": "legacy replay_allowlist (no structured reason)",
+                "removal_path": "migrate to expected_fails",
+            })
+
+    return expected, warnings
 
 
 def run_validator(slug: str) -> tuple[int, str]:
@@ -88,8 +140,14 @@ def run_validator(slug: str) -> tuple[int, str]:
     return proc.returncode, (proc.stdout or "") + (proc.stderr or "")
 
 
-def parse_hard_fails(output: str) -> list[str]:
-    return [m.group(1) for m in RULE_FROM_LINE.finditer(output)]
+def parse_fail_lines(output: str) -> list[tuple[str, str]]:
+    """Return list of (rule_name, full_message) for every FAIL line."""
+    out: list[tuple[str, str]] = []
+    for line in output.splitlines():
+        m = FAIL_LINE_PATTERN.search(line)
+        if m:
+            out.append((m.group(1), m.group(2)))
+    return out
 
 
 def parse_summary(output: str) -> tuple[int, int]:
@@ -98,6 +156,43 @@ def parse_summary(output: str) -> tuple[int, int]:
     if not m:
         return (0, 0)
     return (int(m.group(1)), int(m.group(2)))
+
+
+def evaluate_expectations(
+    fails: list[tuple[str, str]],
+    expected: list[dict[str, Any]],
+) -> tuple[bool, list[str]]:
+    """Return (in_allowlist, deviation_messages)."""
+    deviations: list[str] = []
+    actual_by_rule: dict[str, list[str]] = {}
+    for rule, msg in fails:
+        actual_by_rule.setdefault(rule, []).append(msg)
+
+    expected_rules = {e["rule"] for e in expected}
+
+    # Check each expected_fail
+    for entry in expected:
+        rule = entry["rule"]
+        want_count = int(entry["count"])
+        contains = entry.get("contains", "")
+        actual_msgs = actual_by_rule.get(rule, [])
+        if len(actual_msgs) != want_count:
+            deviations.append(
+                f"rule '{rule}': expected count={want_count}, got {len(actual_msgs)}"
+            )
+            continue
+        if contains and not any(contains in m for m in actual_msgs):
+            deviations.append(
+                f"rule '{rule}': none of the {len(actual_msgs)} fail message(s) "
+                f"contain expected substring {contains!r}"
+            )
+
+    # Any rule fired but not declared = unexpected
+    for rule in actual_by_rule:
+        if rule not in expected_rules:
+            deviations.append(f"unexpected rule '{rule}' (not in expected_fails)")
+
+    return (len(deviations) == 0), deviations
 
 
 def replay_one(golden_path: Path) -> dict[str, Any]:
@@ -113,7 +208,9 @@ def replay_one(golden_path: Path) -> dict[str, Any]:
             "hard_fail_count": 0,
             "soft_warn_count": 0,
             "fail_rules": [],
-            "allowlist": [],
+            "expected": [],
+            "deviations": [],
+            "warnings": [],
             "in_allowlist": True,
         }
 
@@ -122,24 +219,23 @@ def replay_one(golden_path: Path) -> dict[str, Any]:
     if article_had_flow:
         backup = article_flow.read_bytes()
 
+    expected, warnings = load_expectations(golden_path)
+
     try:
         shutil.copyfile(golden_path, article_flow)
         rc, out = run_validator(slug)
-        fail_rules = parse_hard_fails(out)
+        fails = parse_fail_lines(out)
         hard_count, soft_count = parse_summary(out)
-        allowlist = load_allowlist(golden_path)
-        # In allowlist when every observed fail rule appears in allowlist,
-        # OR when there are 0 fails (allowlist not needed).
-        unexpected = [r for r in fail_rules if r not in allowlist]
-        in_allowlist = len(unexpected) == 0
+        in_allowlist, deviations = evaluate_expectations(fails, expected)
         return {
             "slug": slug,
             "status": "ok" if in_allowlist else "fail",
             "hard_fail_count": hard_count,
             "soft_warn_count": soft_count,
-            "fail_rules": fail_rules,
-            "allowlist": allowlist,
-            "unexpected": unexpected,
+            "fail_rules": [r for r, _ in fails],
+            "expected": [e["rule"] for e in expected],
+            "deviations": deviations,
+            "warnings": warnings,
             "in_allowlist": in_allowlist,
             "validator_exit": rc,
         }
@@ -190,6 +286,11 @@ def main() -> int:
 
     results = [replay_one(p) for p in golden_paths]
 
+    # Emit warnings (deprecations) on stderr regardless of output mode.
+    for r in results:
+        for w in r.get("warnings", []):
+            print(w, file=sys.stderr)
+
     if args.json:
         print(json.dumps(results, indent=2))
     else:
@@ -197,7 +298,8 @@ def main() -> int:
         print()
         for r in results:
             if r["status"] == "fail":
-                print(f"FAIL {r['slug']}: unexpected rules outside allowlist: {r.get('unexpected')}")
+                for d in r.get("deviations", []):
+                    print(f"FAIL {r['slug']}: {d}")
             elif r["status"] == "skip":
                 print(f"SKIP {r['slug']}: {r.get('reason')}")
 

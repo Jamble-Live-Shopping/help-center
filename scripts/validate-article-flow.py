@@ -610,6 +610,31 @@ def validate_article(article_dir: Path) -> Report:
                         f"'stale feature') that confirms every feature, button, and label "
                         f"described in the article still exists in production.",
                     )
+            else:
+                # ---- rule 22b: stale-feature subsection must use the structured table.
+                # Once the audit declares a stale-feature subsection, the validator
+                # checks the entries are auditable. The required columns are:
+                # "Claim / feature", "Source checked", "Status", "Verdict".
+                # Without the structure, "stale-feature: PASS" is unverifiable
+                # narrative text.
+                required_cols = ("Claim / feature", "Source checked", "Status", "Verdict")
+                table_lines = [
+                    ln for ln in content_audit_body.splitlines()
+                    if ln.lstrip().startswith("|")
+                ]
+                has_required_header = any(
+                    all(col.lower() in ln.lower() for col in required_cols)
+                    for ln in table_lines
+                )
+                if not has_required_header:
+                    rep.fail(
+                        "content_audit_stale_table_missing",
+                        f"content-audit-{intercom_id}.md has a stale-feature marker but no "
+                        f"structured audit table. Add a markdown table with columns: "
+                        f"| Claim / feature | Source checked | Status | Checked at | Owner | Verdict |. "
+                        f"Verdicts: live_in_ios | live_in_backend | product_confirmed | "
+                        f"deprecated | unknown_blocker.",
+                    )
 
     # ---- rule 23: compliance cannot say ALL PASS if active risk_flags remain
     if intercom_id is not None and audit_dir.exists():

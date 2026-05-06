@@ -56,10 +56,10 @@ currency_required: false
 risk_flags: []
 resolved_decisions: []
 
-# Replay allowlist: NONE on content_audit_scan6_not_stale.
-# This article's content-audit must contain an explicit stale-feature
-# marker. If the audit only labels the section "Scan 6" without
-# stale-feature semantics, the replay will fail and surface the gap.
-# Per Aymar: stale-feature stays a real product risk and must be
-# documented explicitly, no exceptions.
-replay_allowlist: []
+# Expected fails: empty. This article is a clean canary post-PR #76:
+# the content-audit gained an explicit "Stale-feature audit" subsection
+# with the structured table (Claim / feature, Source checked, Status,
+# Checked at, Owner, Verdict). The replay must therefore observe 0
+# hard fails. If a regression appears, the canary fails loud and the
+# team investigates instead of allowlisting.
+expected_fails: []

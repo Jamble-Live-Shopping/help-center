@@ -60,22 +60,42 @@ currency_required: false
 risk_flags: []
 resolved_decisions: []
 
-# Replay allowlist (technical debt tracker).
-# - mockup_declared_not_in_pt / mockup_declared_not_in_en: settings-menu
-#   pair does not yet exist in the historical article (uses the asymmetric
-#   configuracoes-menu / settings-apply-to-sell naming). Drop these once
-#   the cleanup PR lands.
-# - mockup_referenced_not_declared: same root cause; the existing markdown
-#   embeds the asymmetric file names which the unified flow does not declare.
-# - content_audit_scan6_not_stale: see other golden flows; legacy audit.
-# - backend_files_not_audited: code-audit cites only iOS; backend service
-#   was added to the contract here for documentation, not yet evidenced.
-replay_allowlist:
-  - mockup_declared_not_in_pt
-  - mockup_declared_not_in_en
-  - mockup_referenced_not_declared
-  - mockup_png_missing
-  - mockup_html_missing
-  - content_audit_scan6_not_stale
-  - content_audit_missing_stale_feature  # this article's audit has no stale section at all
-  - backend_files_not_audited
+# Expected fails (technical debt tracker, structured).
+# Each entry pins a single rule + count + substring guard. Drop entries
+# in a separate cleanup PR once the underlying defect is fixed.
+expected_fails:
+  - rule: mockup_png_missing
+    count: 2
+    contains: "settings-menu"
+    reason: "the unified settings-menu pair PNGs do not exist yet (legacy article uses configuracoes-menu pt-br + settings-apply-to-sell en)"
+    removal_path: "Render and commit the settings-menu pt-br + en PNGs in a cleanup PR"
+  - rule: mockup_html_missing
+    count: 2
+    contains: "settings-menu"
+    reason: "the unified settings-menu pair HTMLs do not exist yet (same legacy naming asymmetry)"
+    removal_path: "Generate the settings-menu pt-br + en HTML mockup-sources in the cleanup PR"
+  - rule: mockup_declared_not_in_pt
+    count: 1
+    contains: "settings-menu"
+    reason: "pt-br.md still embeds the legacy configuracoes-menu PNG, not the unified settings-menu name declared in this flow"
+    removal_path: "Update pt-br.md image link to settings-menu after the cleanup PR ships the unified pair"
+  - rule: mockup_declared_not_in_en
+    count: 1
+    contains: "settings-menu"
+    reason: "en.md still embeds settings-apply-to-sell PNG, not settings-menu"
+    removal_path: "Update en.md image link to settings-menu after the cleanup PR ships the unified pair"
+  - rule: mockup_referenced_not_declared
+    count: 2
+    contains: "configuracoes-menu"
+    reason: "pt-br.md and en.md reference the legacy v2 PNG names (configuracoes-menu, settings-apply-to-sell) that this unified flow does not declare"
+    removal_path: "Cleanup PR replaces both legacy embeds with the unified settings-menu pair"
+  - rule: content_audit_missing_stale_feature
+    count: 1
+    contains: "stale-feature audit"
+    reason: "this article's content-audit has no stale-feature subsection at all (older audit format)"
+    removal_path: "Add a 'Stale-feature audit' subsection with the structured table"
+  - rule: backend_files_not_audited
+    count: 1
+    contains: "jamble_backend"
+    reason: "flow declares seller_application_service.py but the historical code-audit cites only iOS files"
+    removal_path: "Add a backend evidence row to the code-audit, or drop backend_files from this flow if the dependency is not strict"
