@@ -169,6 +169,77 @@ def test_prepare_existing_worktree_path_returns_exit_3() -> None:
         assert (existing / "marker").exists(), "marker file was clobbered"
 
 
+def test_prepare_rerun_with_same_batch_id_reuses_branch() -> None:
+    """Operational regression for the friction Aymar flagged: after a
+    full prepare + worktree removal, the branch feat/batch-<id>-<slug>
+    survives. A second prepare with the same batch_id was failing on
+    `git worktree add -b` ("a branch named ... already exists"). The
+    coordinator must detect the existing branch and re-attach instead
+    of trying to recreate it. Never deletes the branch automatically."""
+    branch = "feat/batch-fixture-batch-rerun-fixture-bootstrap-article"
+    # Pre-clean any leftover state from prior runs so this test is
+    # reentrant. `git worktree prune` drops registrations whose
+    # working trees were rm'd outside git (the tempfile case).
+    _run(["git", "worktree", "prune"], cwd=REPO_ROOT)
+    _run(["git", "branch", "-D", branch], cwd=REPO_ROOT)
+
+    # Use a dedicated batch_id so this test does not collide with
+    # other tests' branches in a parallel run.
+    rerun_batch = REPO_ROOT / "tests" / "fixtures" / "batch-coordinator" / "batch-1-rerun.yml"
+    rerun_yaml = (FIX / "batch-1-new-article.yml").read_text(encoding="utf-8").replace(
+        "batch_id: fixture-batch-bootstrap",
+        "batch_id: fixture-batch-rerun",
+    )
+    rerun_batch.write_text(rerun_yaml, encoding="utf-8")
+
+    try:
+        with tempfile.TemporaryDirectory() as tmp:
+            base = Path(tmp) / "wt-rerun"
+
+            def run_prepare() -> tuple[int, str, str]:
+                return _run(
+                    [
+                        sys.executable,
+                        str(COORDINATOR),
+                        "--mode", "prepare",
+                        "--batch", str(rerun_batch),
+                        "--worktree-base", str(base),
+                        "--base-ref", "HEAD",
+                    ]
+                )
+
+            rc1, out1, err1 = run_prepare()
+            assert rc1 == 0, f"first prepare failed: rc={rc1}\nout:\n{out1}\nerr:\n{err1}"
+            wt = base / "fixture-bootstrap-article"
+            assert wt.exists(), "first prepare did not create worktree"
+
+            # Tear down the worktree but leave the branch intact, mimicking
+            # the post-cleanup state we hit in the smoke test.
+            _run(["git", "worktree", "remove", "--force", str(wt)], cwd=REPO_ROOT)
+            assert not wt.exists(), "first worktree was not torn down"
+
+            rc2, out2, err2 = run_prepare()
+            assert rc2 == 0, (
+                f"second prepare with same batch_id failed: rc={rc2}\n"
+                f"This is the rerun-safety regression. The coordinator must "
+                f"detect an existing local branch and re-attach instead of "
+                f"trying to recreate it.\nout:\n{out2}\nerr:\n{err2}"
+            )
+            assert "reusing existing local branch" in (out2 + err2), (
+                f"second prepare did not signal branch reuse:\n{out2}\n{err2}"
+            )
+            assert wt.exists(), "second prepare did not create worktree"
+    finally:
+        rerun_batch.unlink(missing_ok=True)
+        # Always drop the test branch so we do not leak it into the
+        # developer's repo (even though the test does not delete it
+        # automatically inside its own steps).
+        wt = base / "fixture-bootstrap-article"
+        if wt.exists():
+            _run(["git", "worktree", "remove", "--force", str(wt)], cwd=REPO_ROOT)
+        _run(["git", "branch", "-D", branch], cwd=REPO_ROOT)
+
+
 def test_prepare_bootstraps_missing_flow_yml() -> None:
     """Non-dry-run end-to-end: when articles/<slug>/flow.yml does not
     exist on the base ref, prepare must auto-bootstrap it via
@@ -532,6 +603,7 @@ TESTS = [
     test_prepare_duplicate_slug_rejected,
     test_prepare_existing_worktree_path_returns_exit_3,
     test_prepare_bootstraps_missing_flow_yml,
+    test_prepare_rerun_with_same_batch_id_reuses_branch,
     test_render_ready_summary_produces_html_with_scorecard_and_questions,
     test_render_hardfail_summary_marks_blocked_in_html,
     test_render_missing_png_summary_lists_missing_pngs,

@@ -21,8 +21,10 @@ on:
       - 'scripts/run-help-article-batch.py'
       - 'scripts/render-reviewer-pack.py'
       - 'scripts/test-batch-coordinator.py'
+      - 'scripts/generate-sample-reviewer-pack.py'
       - 'tests/fixtures/batch-coordinator/**'
       - 'process/14-batch-coordinator.md'
+      - '_work/sample-batch/**'
       - '.github/workflows/validate-article-factory.yml'
 
 concurrency:

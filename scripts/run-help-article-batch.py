@@ -218,6 +218,15 @@ def _git(args: list[str], cwd: Path | None = None) -> tuple[int, str, str]:
     return _run(["git"] + args, cwd=cwd)
 
 
+def _local_branch_exists(repo_root: Path, branch: str) -> bool:
+    """Return True iff a local branch with that name exists."""
+    rc, _, _ = _git(
+        ["show-ref", "--verify", "--quiet", f"refs/heads/{branch}"],
+        cwd=repo_root,
+    )
+    return rc == 0
+
+
 def prepare_worktree(
     repo_root: Path,
     worktree_path: Path,
@@ -225,10 +234,23 @@ def prepare_worktree(
     base_ref: str,
     force_clean: bool,
 ) -> int:
-    """Create a single worktree at `worktree_path` from `base_ref` on a new branch.
+    """Create or re-attach a worktree at `worktree_path` for `branch`.
 
-    Fails if `worktree_path` already exists unless `force_clean` is set.
-    Returns 0 on success, non-zero on failure.
+    Behavior:
+      - If `worktree_path` already exists, refuse (return 3) unless
+        `force_clean` is set; with --force-clean, drop the existing
+        worktree first.
+      - If a local branch named `branch` does NOT exist, create one
+        from `base_ref` and attach the worktree to it.
+      - If a local branch named `branch` DOES exist (typical when a
+        previous batch run left the branch behind after the worktree
+        was removed), re-attach to it without modifying the branch
+        history. This keeps the second `prepare` for the same
+        batch_id rerunnable without manual `git branch -D`. Never
+        deletes the existing branch silently.
+
+    Returns 0 on success, 1 on git-level failure, 3 on
+    existing-path conflict.
     """
     if worktree_path.exists():
         if not force_clean:
@@ -246,10 +268,21 @@ def prepare_worktree(
             shutil.rmtree(worktree_path)
 
     worktree_path.parent.mkdir(parents=True, exist_ok=True)
-    rc, out, err = _git(
-        ["worktree", "add", "-b", branch, str(worktree_path), base_ref],
-        cwd=repo_root,
-    )
+
+    if _local_branch_exists(repo_root, branch):
+        print(
+            f"  (reusing existing local branch {branch!r}; --base-ref ignored for re-attach)",
+            file=sys.stderr,
+        )
+        rc, out, err = _git(
+            ["worktree", "add", str(worktree_path), branch],
+            cwd=repo_root,
+        )
+    else:
+        rc, out, err = _git(
+            ["worktree", "add", "-b", branch, str(worktree_path), base_ref],
+            cwd=repo_root,
+        )
     if rc != 0:
         sys.stderr.write(out)
         sys.stderr.write(err)
