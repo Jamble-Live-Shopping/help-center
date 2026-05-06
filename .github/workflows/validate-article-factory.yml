@@ -11,10 +11,13 @@ on:
       - 'process/batches/**'
       - 'process/workflows/**'
       - 'process/templates/article-flow.yml'
+      - 'process/help-article-runner.md'
       - 'scripts/replay-golden-articles.py'
       - 'scripts/validate-article-batch.py'
       - 'scripts/init-article-flow.py'
       - 'scripts/validate-article-flow.py'
+      - 'scripts/test-article-factory.py'
+      - 'scripts/run-help-article.py'
       - '.github/workflows/validate-article-factory.yml'
 
 concurrency:
@@ -35,6 +38,9 @@ jobs:
 
       - name: Install deps
         run: pip install pyyaml
+
+      - name: Factory regression tests
+        run: python3 scripts/test-article-factory.py
 
       - name: Golden replay
         run: python3 scripts/replay-golden-articles.py
