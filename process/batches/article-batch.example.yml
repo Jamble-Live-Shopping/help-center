@@ -36,7 +36,7 @@ articles:
 
   - slug: wishlist-and-favorites
     priority: 2
-    intercom_id: 14288163
+    intercom_id: 14288159
     audience: buyer_br
     job_to_be_done: "Help buyers track items they like and get notified when they go on sale or come back to a show"
     source_hints:

@@ -1,104 +1,89 @@
-# Wishlist e Favoritos
+# Lista de desejos e favoritos
 
 ## O que você vai aprender
 
-Este guia explica como as funcionalidades de wishlist e favoritos funcionam na Jamble. Você vai aprender como salvar produtos e shows que te interessam, como acompanhar suas ofertas ativas e como usar esses recursos para nunca perder uma oportunidade.
+Este guia explica como salvar produtos e shows que te interessam na Jamble, como acompanhar suas ofertas ativas e como configurar as notificações para não perder os itens que voltam ao vivo.
 
 ## Antes de começar
 
-- Você precisa de uma conta na Jamble (comprador ou vendedor)
+Você precisa de:
 
-## Como funciona
+- Uma conta ativa na Jamble (comprador ou vendedor)
+- O app da Jamble instalado no seu celular
 
-A Jamble tem duas formas de salvar coisas que te interessam:
+## Onde encontrar a sua lista
 
-| Funcionalidade | O que você salva | Onde aparece |
-|----------------|-----------------|-------------|
-| **Salvar produtos** | Produtos individuais que você quer comprar ou acompanhar | Sua wishlist, na aba **"Bookmarks"** |
-| **Salvar shows** | Shows futuros que você quer assistir | **Settings** → **"Bookmarked shows"** |
+Sua lista de desejos fica na página do seu perfil. Ela tem duas abas:
 
-Quando você salva um produto ou show, você recebe notificações quando algo acontece — como quando um produto salvo entra ao vivo em um show, ou quando um show salvo está prestes a começar.
+- **Favoritos** mostra todos os produtos que você salvou
+- **Ofertas** mostra os produtos onde você já tem ofertas ativas
 
-## Salvando um produto
+![Tela da lista de desejos com as abas Favoritos e Ofertas e cards de produtos com preço](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/wishlist-and-favorites__wishlist-tabs__pt-br__v3.png)
 
-### Passo 1: Encontre um produto que você goste
+A aba **Favoritos** é o lugar para guardar produtos salvos. Tudo o que você salvou enquanto navegava ou assistia a um show fica aqui.
 
-Enquanto navega pelo app ou assiste a um show ao vivo, você verá produtos exibidos com título, preço e fotos.
+A aba **Ofertas** é mais dinâmica. Cada produto que aparece nesta aba tem uma oferta sua em andamento. Toque em qualquer card para ver o preço atual e ajustar a sua oferta.
 
-### Passo 2: Toque no ícone de salvar
+## Salvar um produto
 
-Toque no **ícone de salvar** (ícone de marcador) no card do produto. O ícone se preenche para confirmar que o produto foi salvo.
+Quando você está navegando pelo app ou assistindo a um show ao vivo, cada produto aparece com título, preço e fotos. Para salvar:
 
-![product-save-instruction: Cartão de produto com ícone de salvar, mostrando Nike Air Max 90 por R$200 e texto de instrução](./assets/mockups/wishlist-and-favorites__product-save-instruction__pt-br.png)
+1. Toque no **ícone de marcador** no canto do card do produto
+2. O ícone fica preenchido, o produto entra na sua aba **Favoritos**
 
-### Passo 3: Veja seus produtos salvos
+![Card de produto com o ícone de marcador preenchido no canto superior direito, indicando o estado salvo](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/wishlist-and-favorites__product-bookmark-cta__pt-br__v3.png)
 
-Para ver todos os seus produtos salvos, vá para sua **Wishlist**. Você a encontra na página do seu perfil. Sua wishlist tem duas abas:
+Para remover um produto, toque no ícone de marcador uma segunda vez. Ele se desativa e o produto sai da aba Favoritos. Favoritar um produto não identifica você para o vendedor.
 
-![Tela de lista de desejos mostrando grade de cartões de produtos com abas para Favoritos e Lances, exibindo itens Air Max e Dunk Low com preços](./assets/mockups/wishlist-and-favorites__wishlist-items-grid__pt-br.png)
+## Quando a sua lista está vazia
 
-- **Bookmarks** — todos os produtos que você salvou
-- **Bids** — produtos onde você tem pré-ofertas ativas (esta aba acompanha suas ofertas abertas em produtos futuros)
+Se você abre a lista pela primeira vez ou se removeu tudo, a Jamble mostra um estado vazio convidando você a continuar.
 
-Toque em qualquer produto para ver os detalhes completos ou para abrir o show do qual ele faz parte.
+![Tela da lista de desejos vazia com a mensagem Comece a explorar as ofertas e o convite a descobrir produtos](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/wishlist-and-favorites__wishlist-empty-state__pt-br__v3.png)
 
-## Salvando um show
+A mensagem **"Comece a explorar as ofertas"** abre direto para o feed de produtos. Toque, navegue, salve um item, e a aba **Favoritos** passa a mostrar o item.
 
-### Passo 1: Encontre um show futuro
+## Salvar um show
 
-Navegue pela página inicial ou pesquise por vendedores. Shows futuros aparecem com a data e hora agendadas.
+Os shows futuros têm um botão de marcador na pré-visualização. Toque para salvar.
 
-### Passo 2: Salve o show
+Os shows que você marcou aparecem em **Configurações** > **Programas marcados**. Quando o vendedor entra ao vivo, você recebe uma notificação push (se a notificação **Programas marcados** estiver ativada nas suas configurações).
 
-Toque no **ícone de salvar** no card do show para salvá-lo.
+## Notificações
 
-### Passo 3: Veja seus shows salvos
+A Jamble envia uma notificação push para cada item salvo, desde que a notificação correspondente esteja ativada em **Configurações** > **Notificações** > **Shows ao vivo**.
 
-Vá para **Settings** → **"Bookmarked shows"** para ver todos os shows que você salvou. Você receberá uma notificação quando um show salvo estiver prestes a começar (se a notificação **"Bookmarked shows"** estiver habilitada).
+- **Programas marcados** avisa antes de um show salvo começar
+- **Produto marcado em um show** avisa quando um produto da sua aba Favoritos é colocado à venda em um show ao vivo
 
-## Recebendo notificações sobre itens salvos
-
-A Jamble pode enviar notificações push para seus itens salvos. Vá para **Settings** → **Notifications** → **Live Shows** para configurar:
-
-- ****Bookmarked shows**** — Notifica você antes de um show salvo começar
-- ****Bookmarked product from show**** — Notifica quando um produto que você salvou aparece em um show ao vivo
-Essas notificações ajudam você a aparecer na hora certa e não perder os produtos que você mais quer.
-
-## Por que favoritos importam para vendedores
-
-Como vendedor, os favoritos trabalham a seu favor:
-
-- **Compradores que salvam seus produtos estão interessados.** Eles têm mais chance de aparecer no seu show e fazer ofertas
-- **Produtos salvos aparecem na wishlist do comprador.** Isso mantém seus produtos visíveis mesmo depois que o comprador sai do seu perfil
-- **Notificações trazem compradores de volta.** Quando você entra ao vivo e começa a vender um produto salvo, o comprador recebe uma notificação — mesmo que não estivesse planejando assistir seu show
-
-**Dica para vendedores:** Se você perceber que um produto está recebendo muitos salvamentos, destaque-o durante seu show. Esses são os itens que seu público mais quer.
+Sem essas notificações ativadas, salvar um item ainda funciona, mas você descobre o evento só ao abrir o app.
 
 ## Dicas importantes
 
-- **Salve antes do show começar.** Se você vir um produto que gosta em um show futuro, salve-o imediatamente. Você receberá uma notificação quando o vendedor entrar ao vivo com aquele produto
-- **Confira sua aba "Bids" regularmente.** Se você fez pré-ofertas em produtos, a aba Bids mostra todas as suas ofertas ativas. Isso ajuda a acompanhar pelo que você está competindo
-- **Habilite notificações para favoritos.** Sem as notificações habilitadas, salvar um item ainda funciona mas você não receberá o alerta em tempo real quando ele entrar ao vivo
+- **Salve antes do show começar.** Se você vê um produto que te interessa em um show futuro, marque imediatamente. Você recebe a notificação no momento em que o vendedor entra ao vivo
+- **Confira a aba Ofertas regularmente.** Cada oferta sua em andamento aparece aqui. É a forma mais simples de acompanhar pelo que você está competindo
+- **Habilite as notificações.** Sem elas, a Jamble não consegue te avisar em tempo real
+- **Os favoritos são privados.** Favoritar um produto ou um show não identifica você para o vendedor
 
 ## Perguntas frequentes
 
-**Onde fica minha wishlist?**
-Sua wishlist é acessível pela página do seu perfil. Ela contém duas abas: Bookmarks (produtos salvos) e Bids (suas pré-ofertas ativas).
+**Onde fica a minha lista de desejos?**
+Na página do seu perfil. Ela tem as abas **Favoritos** (produtos salvos) e **Ofertas** (suas ofertas ativas).
 
-**Qual a diferença entre bookmarks e a aba Bids?**
-Bookmarks são produtos que você salvou para ver depois. A aba Bids mostra produtos onde você fez uma pré-oferta — ou seja, você já comprometeu um valor de oferta antes do show começar.
+**Qual é a diferença entre Favoritos e Ofertas?**
+Favoritos guarda os produtos que você quer revisitar. Ofertas mostra os produtos onde você já fez uma oferta antes do show começar.
 
-**Posso remover um favorito?**
-Sim. Toque no ícone de salvar novamente no produto ou show para remover dos seus itens salvos.
+**Posso remover um item salvo?**
+Sim. Toque no ícone de marcador uma segunda vez no produto ou no show. Ele sai da sua lista.
 
-**O vendedor sabe que eu salvei o produto dele?**
-Não. Favoritos são privados. Vendedores não podem ver quais compradores específicos salvaram seus produtos.
+**O vendedor sabe quem salvou o produto dele?**
+Não. Os favoritos são privados. Favoritar um produto não identifica você para o vendedor.
 
-**Quantos produtos posso salvar?**
-Não há limite. Salve quantos produtos quiser.
+**Existe um limite de produtos salvos?**
+Não. Salve quantos quiser.
 
 **Vou receber notificação toda vez que um produto salvo entrar ao vivo?**
-Sim, se a notificação **"Bookmarked product from show"** estiver habilitada nas suas configurações de notificação. Cada vez que um vendedor iniciar uma venda com um produto que você salvou, você receberá uma notificação.
+Sim, se a notificação **Produto marcado em um show** estiver ativada. Cada vez que um vendedor iniciar a venda de um produto que você salvou, você recebe um push.
 
 ## Precisa de ajuda?
 

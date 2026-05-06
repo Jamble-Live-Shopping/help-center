@@ -7,11 +7,11 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-05-06T00:00:00Z
 locales:
   pt-br:
-    title: 'Wishlist e Favoritos'
-    description: ''
+    title: 'Lista de desejos e favoritos'
+    description: 'Salve produtos e shows que te interessam, acompanhe suas ofertas e configure as notificações para não perder um item que volta ao vivo.'
   en:
     title: 'Wishlist and Favorites'
-    description: "This guide explains how the wishlist and bookmark features work on Jamble. You'll learn how to save products and shows you're interested in, how to track your active offers, and how to use these features to never miss a deal."
+    description: 'Save products and shows you care about on Jamble, track your active offers, and set up notifications so you never miss a saved item.'
