@@ -263,16 +263,21 @@ def render_scorecard(reviews: list[dict]) -> str:
 
 
 def _make_image_rewriter(worktree: str) -> Any:
-    """Return a function that rewrites GitHub raw URLs to file:// paths
+    """Return a function that rewrites GitHub raw URLs to file:// URLs
     that point at the worktree's local PNGs, so the reviewer pack works
     when opened locally without a network round-trip.
+
+    Uses Path.as_uri() so worktree paths containing spaces or unicode
+    characters get URL-escaped correctly (a manual `f"file://{path}"`
+    would break on "/Users/.../Jamble Coworker/..." for example).
     """
     abs_root = Path(worktree).resolve()
 
     def rewrite(url: str) -> str:
         if url.startswith(GITHUB_RAW_PREFIX):
             relative = url[len(GITHUB_RAW_PREFIX):]
-            return f"file://{abs_root}/{relative}"
+            target = abs_root / relative
+            return target.as_uri()
         return url
 
     return rewrite
@@ -301,8 +306,9 @@ def render_article(r: dict) -> str:
     mockups_html = ""
     if r.get("mockup_pngs"):
         cards = []
+        worktree_root = Path(r["worktree"]).resolve()
         for rel in r["mockup_pngs"]:
-            abs_url = f"file://{Path(r['worktree']).resolve()}/{rel}"
+            abs_url = (worktree_root / rel).as_uri()
             label = Path(rel).name
             cards.append(
                 f'<figure class="mock"><a href="{_esc(abs_url)}" target="_blank">'

@@ -258,48 +258,73 @@ def prepare_worktree(
     return 0
 
 
+def bootstrap_flow_yml(
+    worktree_path: Path,
+    slug: str,
+    batch_path: Path,
+) -> tuple[int, str]:
+    """Run init-article-flow.py inside the worktree to create
+    articles/<slug>/flow.yml from the batch entry.
+
+    Calls the worktree-local copy of init-article-flow.py so that the
+    article folder gets created inside the worktree, not in the script
+    author's checkout. Returns (rc, combined_stdout_stderr).
+    """
+    init_script = worktree_path / "scripts" / "init-article-flow.py"
+    if not init_script.exists():
+        return (
+            1,
+            f"ERROR: {init_script} not found in worktree (base ref out of date?)\n",
+        )
+    rc, out, err = _run(
+        [
+            sys.executable,
+            str(init_script),
+            "--slug", slug,
+            "--from-batch", str(batch_path.resolve()),
+            "--force",
+        ],
+        cwd=worktree_path,
+    )
+    return rc, (out or "") + (err or "")
+
+
 def write_worker_brief(
     worktree_path: Path,
     entry: ArticleEntry,
     batch_id: str,
-) -> None:
-    """Inside the worktree, run writer-packet + checklist and stash a
-    CLAUDE_PROMPT.md so the worker has a single brief to read.
+    batch_path: Path,
+) -> int:
+    """Inside the worktree, ensure articles/<slug>/flow.yml exists (auto-
+    bootstrapping it from the batch entry when missing), then run
+    writer-packet + checklist and stash a single-page brief at
+    `_work/<slug>__brief.md`.
 
-    The article directory must already exist (mode=v2_rewrite assumes the
-    flow.yml lives at articles/<slug>/flow.yml on the base branch). For
-    new_article mode, the worker is expected to bootstrap the flow first.
+    Returns 0 on success, non-zero if bootstrap failed. The caller
+    propagates the worst exit code so the user sees a clear failure
+    instead of a silent "ready" on a half-prepared worktree.
     """
     article_dir = worktree_path / "articles" / entry.slug
     work_dir = worktree_path / "_work"
     work_dir.mkdir(parents=True, exist_ok=True)
 
-    if not article_dir.exists() and entry.mode != "new_article":
-        # For v2_rewrite, the article folder must already exist. Surface
-        # this clearly so the worker doesn't waste cycles.
-        (work_dir / f"{entry.slug}__brief.md").write_text(
-            f"# Worker brief: {entry.slug}\n\n"
-            f"ERROR: articles/{entry.slug}/ does not exist on the base branch "
-            f"and mode is {entry.mode!r}. Either fix the batch (use "
-            f"mode=new_article) or pick the correct base ref.\n",
-            encoding="utf-8",
-        )
-        return
-
-    # For new_article mode without an existing flow, skip writer-packet
-    # generation (it would fail) but still write a brief so the worker
-    # knows what to do.
-    if not (article_dir / "flow.yml").exists():
-        (work_dir / f"{entry.slug}__brief.md").write_text(
-            f"# Worker brief: {entry.slug}\n\n"
-            f"This article has no flow.yml yet (mode={entry.mode!r}).\n\n"
-            f"Bootstrap it:\n\n"
-            f"    python3 scripts/init-article-flow.py --slug {entry.slug} "
-            f"--from-batch <batch.yml>\n\n"
-            f"Then re-run this coordinator's prepare mode to refresh the brief.\n",
-            encoding="utf-8",
-        )
-        return
+    flow_path = article_dir / "flow.yml"
+    bootstrap_log = ""
+    if not flow_path.exists():
+        # Auto-bootstrap. init-article-flow.py creates the article folder
+        # if absent, so this works for both v2_rewrite (folder exists,
+        # flow.yml accidentally missing) and new_article (greenfield).
+        rc, bootstrap_log = bootstrap_flow_yml(worktree_path, entry.slug, batch_path)
+        if rc != 0 or not flow_path.exists():
+            (work_dir / f"{entry.slug}__brief.md").write_text(
+                f"# Worker brief: {entry.slug}\n\n"
+                f"ERROR: bootstrap of articles/{entry.slug}/flow.yml failed.\n\n"
+                f"Output from init-article-flow.py:\n\n"
+                f"```\n{bootstrap_log}\n```\n\n"
+                f"Fix the batch entry or the iOS / backend hints and re-run the coordinator.\n",
+                encoding="utf-8",
+            )
+            return rc if rc != 0 else 1
 
     # Capture writer-packet output (read-only on the article).
     rc, out, err = _run(
@@ -344,6 +369,7 @@ def write_worker_brief(
         f"Article is shippable iff the gate exits 0. Open a draft PR only after that.\n"
     )
     (work_dir / f"{entry.slug}__brief.md").write_text(brief, encoding="utf-8")
+    return 0
 
 
 def mode_prepare(
@@ -370,7 +396,7 @@ def mode_prepare(
     print(f"Dry run       : {dry_run}")
     print()
 
-    failures: list[str] = []
+    failures: list[tuple[str, int]] = []
     for entry in entries:
         worktree_path = worktree_base / entry.slug
         branch = f"feat/batch-{batch_id}-{entry.slug}"
@@ -386,18 +412,29 @@ def mode_prepare(
 
         rc = prepare_worktree(REPO_ROOT, worktree_path, branch, base_ref, force_clean)
         if rc != 0:
-            failures.append(entry.slug)
-            print(f"- status   : FAILED (worktree)\n")
+            failures.append((entry.slug, rc))
+            print(f"- status   : FAILED (worktree, exit {rc})\n")
             continue
 
-        write_worker_brief(worktree_path, entry, batch_id)
+        rc_brief = write_worker_brief(worktree_path, entry, batch_id, batch_path)
+        if rc_brief != 0:
+            failures.append((entry.slug, rc_brief))
+            print(f"- status   : FAILED (brief, exit {rc_brief})\n")
+            continue
+
         print(f"- status   : ready")
         print(f"- brief    : {worktree_path}/_work/{entry.slug}__brief.md")
         print()
 
     if failures:
-        print(f"\nERROR: {len(failures)} worktree(s) failed: {', '.join(failures)}", file=sys.stderr)
-        return 1
+        names = ", ".join(slug for slug, _ in failures)
+        print(f"\nERROR: {len(failures)} worktree(s) failed: {names}", file=sys.stderr)
+        # Propagate the most specific exit code seen. Exit 3 (existing
+        # worktree path without --force-clean) wins over 1, so the caller
+        # can scriptably distinguish "path conflict" from a generic
+        # failure.
+        worst = max(rc for _, rc in failures)
+        return worst
 
     print("Next steps:")
     print(f"  1. Open each `_work/<slug>__brief.md` to brief Claude or a human worker.")
@@ -548,24 +585,45 @@ def collect_article_review(
         review.rdollar_leak_en_count = body.count("R$")
         review.en_md_path = str(en_path.relative_to(worktree_path))
 
-    # Status decision.
+    decide_review_status(review)
+    return review
+
+
+def decide_review_status(review: ArticleReview) -> None:
+    """Apply the status decision to a populated ArticleReview, in place.
+
+    Extracted from collect_article_review() so the rules are unit-testable
+    without spinning up a worktree + validator. The five blocker rules:
+
+      1. validate exited non-zero
+      2. validator reported >=1 hard fail
+      3. validate exited 0 BUT the summary line did not parse (fail-closed:
+         a regression in the validator's output format never bypasses
+         review by default)
+      4. at least one declared mockup PNG is missing
+      5. the audit triplet still contains SKELETON_TODO markers
+    """
     blockers: list[str] = []
     if review.validate_returncode != 0:
         blockers.append(f"validate exit {review.validate_returncode}")
     if review.hard_fail_count > 0:
         blockers.append(f"{review.hard_fail_count} validator hard fail(s)")
-    if missing:
-        blockers.append(f"{len(missing)} mockup PNG(s) missing")
+    if (
+        review.validate_returncode == 0
+        and (review.hard_fail_count == -1 or review.soft_warn_count == -1)
+    ):
+        blockers.append("validator summary not parsed")
+    if review.missing_mockups:
+        blockers.append(f"{len(review.missing_mockups)} mockup PNG(s) missing")
     if review.audit_skeleton_unfilled:
         blockers.append("audit triplet still has SKELETON_TODO markers")
 
     if not blockers:
         review.status = "ready"
+        review.blockers = []
     else:
         review.status = "blocked"
         review.blockers = blockers
-
-    return review
 
 
 def mode_review(
