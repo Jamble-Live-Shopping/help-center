@@ -1,90 +1,61 @@
-# Configurações de Notificações
+# Configurações de notificações
 
 ## O que você vai aprender
 
-Este guia explica como gerenciar suas preferências de notificações push na Jamble. Você pode escolher exatamente quais notificações quer receber, para ficar informado sobre o que importa sem ser sobrecarregado.
+Como ajustar as notificações push que a Jamble envia para você: onde encontrar as configurações, o que cada categoria controla, e como reativar as notificações se o iOS estiver bloqueando o app.
 
 ## Antes de começar
 
-- Você precisa de uma conta na Jamble (comprador ou vendedor)
-- As notificações push devem estar habilitadas no seu dispositivo (a Jamble vai pedir para ativar se não estiverem)
+Você precisa de uma conta Jamble (comprador ou vendedor) e do app instalado no seu celular. As notificações push precisam estar permitidas para a Jamble nas **Configurações do iOS**. O app pede a permissão na primeira vez que você abre a tela de notificações.
 
-## Passo a passo
+## Onde encontrar
 
-### Passo 1: Abra as configurações de notificações
+No app, abra o seu perfil, toque no ícone de configurações, role até a seção **Account** e toque em **Notifications**.
 
-No app, toque no **ícone do seu perfil** no canto inferior direito, depois toque no **ícone de engrenagem** para abrir **Settings**. Role até a seção **Account** e toque em **"Notifications"**.
+## As 4 categorias
 
-![Tela de Configurações mostrando a seção Conta com itens de menu: Informações Pessoais, Notificações, Editar meu Perfil e Perfis Bloqueados](./assets/mockups/notification-settings__settings-account-menu__pt-br.png)
+A tela mostra 4 seções colapsáveis, cada uma com um botão principal que liga ou desliga toda a categoria, e botões individuais para tipos específicos.
 
-### Passo 2: Verifique as permissões do dispositivo
+> Os títulos das seções aparecem em inglês mesmo em pt-BR. Isso reflete a tela atual do app (a tradução server-side é uma melhoria futura).
 
-Quando você abre a tela de Notifications, a Jamble verifica se as notificações push estão habilitadas no seu celular. Se estiverem desativadas, uma tela vai aparecer pedindo para ativá-las nas configurações do dispositivo. Sem isso, nenhum dos controles abaixo vai funcionar.
+![Tela Notifications com as 4 seções (Promotional, Activity, Live Shows, Transactions) e seus botões principais](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/notification-settings__notifications-list__pt-br__v3.png)
 
-### Passo 3: Gerencie cada categoria de notificação
+**Promotional** : avisos sobre ofertas e promoções da Jamble.
 
-Suas configurações de notificação são organizadas em **4 categorias**. Cada categoria tem um **botão principal** que liga ou desliga todas as notificações daquele grupo, e **botões individuais** para tipos específicos de notificação.
+**Activity** : seguidores novos, mensagens diretas, curtidas no seu conteúdo.
 
-#### Promotional
+**Live Shows** : shows recomendados, shows de vendedores que você segue, lembretes de shows que você marcou (Programas marcados), e produtos marcados que entram ao vivo.
 
-Receba novidades sobre ofertas especiais, descontos e muito mais.
+**Transactions** : atualizações sobre suas compras e suas vendas (pedidos, pagamentos, status de envio).
 
-- **Promotional alerts** — Notificações sobre promoções e ofertas especiais da Jamble
-#### Activity
+## Se o iOS estiver bloqueando
 
-Atualizações sobre suas interações com outros usuários.
+Se a permissão push estiver desativada no iOS, a Jamble abre uma janela explicando o problema. Sem permissão no iOS, nenhum botão na tela acima funciona.
 
-- **Followers** — Quando alguém novo começa a te seguir
-- **Messages** — Quando você recebe uma mensagem direta
-- **Likes** — Quando alguém curte seu conteúdo
-#### Live Shows
+![Janela pedindo para ativar as notificações push da Jamble nas configurações do iOS](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/notification-settings__permission-sheet__pt-br__v3.png)
 
-Alertas sobre shows e produtos que podem te interessar.
-
-- **Recommended shows** — Shows que a Jamble acha que você vai gostar com base nos seus interesses
-- **Shows from people I follow** — Quando um vendedor que você segue inicia ou agenda um show
-- **Bookmarked shows** — Lembretes sobre shows que você salvou
-- **Bookmarked product from show** — Quando um produto que você salvou aparece em um show ao vivo
-#### Transactions
-
-Acompanhe suas compras e vendas.
-
-- **Updates on transaction status** — Mudanças de status nos seus pedidos (enviado, entregue, etc.)
-### Passo 4: Ajuste configurações individuais
-
-Para ajustar uma notificação específica:
-
-1. Encontre a categoria (ex: **Live Shows**)
-2. Se a categoria estiver recolhida, toque no **botão principal** para expandir
-3. Ative (roxo) ou desative (cinza) cada configuração individual
-
-![Configurações de notificações Live Shows com alternadores para shows recomendados, criadores seguidos, shows marcados e produtos marcados](./assets/mockups/notification-settings__live-shows-notifications__pt-br.png)
-
-**Desligar o botão principal** desativa todas as notificações daquela categoria de uma vez. Ligar novamente restaura todas.
+Toque em **Ativar notificações**. O app abre as **Configurações do iOS** na linha da Jamble. Ative **Permitir Notificações** e volte ao app. As notificações já aparecem habilitadas.
 
 ## Dicas importantes
 
-- **Mantenha "Transaction status" ligado.** Como vendedor, isso é essencial — você será notificado quando pedidos forem confirmados, enviados e entregues. Perder essas notificações pode atrasar seus envios e prejudicar sua reputação
-- **"Shows from people I follow" é ótimo para vendedores também.** Siga outros vendedores para saber quando eles entram ao vivo — você pode aprender com a forma como eles conduzem seus shows
-- **"Bookmarked product from show" é uma joia escondida para compradores.** Se você salvar um produto que gostou, a Jamble vai te notificar no momento em que ele aparecer em um show ao vivo, para você não perder a oportunidade
-- **As alterações são salvas instantaneamente.** Cada botão que você muda é salvo no servidor imediatamente — não precisa tocar em um botão de salvar
+- **Comece pelo botão principal de cada seção.** Se você quer desligar tudo de uma categoria, basta o botão de cima.
+- **Live Shows é a categoria onde você perde menos.** Os lembretes de shows marcados e de produtos que voltam ao vivo são as notificações que mais movem compras na Jamble.
+- **Transactions deve ficar ligado.** Sem isso, você pode perder o aviso de envio ou de pagamento.
+- **Se desativou tudo por engano**, basta voltar na mesma tela e reativar. O efeito é imediato.
 
 ## Perguntas frequentes
 
-**Onde encontro as configurações de notificação?**
-Vá para **Settings** (ícone de engrenagem no seu perfil) → seção **Account** → **Notifications**.
+**Eu mudei a configuração e nada chegou. O que pode ser?**
+Confira primeiro se a permissão push está ativada no iOS (**Configurações** > **Notificações** > **Jamble**). Se estiver desativada, a janela mencionada acima explica como reativar.
 
-**Não estou recebendo nenhuma notificação. O que fazer?**
-Primeiro, verifique se as notificações push estão habilitadas nas configurações do sistema do seu celular para o app Jamble. Depois, confira se os tipos específicos de notificação que você quer estão ativados dentro do app.
+**Por que os títulos das seções estão em inglês na minha tela em português?**
+A tela mostra as categorias como o servidor as envia, e a tradução server-side ainda não foi feita. As descrições deste artigo estão em pt-BR.
 
-**Posso desligar todas as notificações de uma vez?**
-Sim. Desligue o botão principal de cada uma das 4 categorias (Promotional, Activity, Live Shows, Transactions). Todas as notificações serão desativadas.
+**Posso receber notificações por email em vez de push?**
+Hoje, esta tela controla apenas as notificações push. As preferências de email são gerenciadas separadamente e não estão neste artigo.
 
-**Ainda vou ver alertas dentro do app se desligar as notificações push?**
-Sim. As configurações de notificação push controlam apenas o que é enviado para a central de notificações do seu celular. A atividade dentro do app (como mensagens aparecendo na sua caixa de entrada) continua funcionando normalmente.
-
-**As configurações de notificação sincronizam entre dispositivos?**
-As preferências de notificação são vinculadas a cada dispositivo. Se você usa a Jamble em dois celulares, precisará configurar as notificações em cada um separadamente.
+**Vou perder histórico de notificações se desligar tudo?**
+Não. Você desativa as notificações futuras. As atividades em si (mensagens, pedidos, shows) continuam acontecendo no app.
 
 ## Precisa de ajuda?
 
