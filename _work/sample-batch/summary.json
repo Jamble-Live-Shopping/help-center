@@ -28,7 +28,14 @@
         "assets/mockups/wishlist-favorites-demo__overview__en__v3.png"
       ],
       "status": "ready",
-      "blockers": []
+      "blockers": [],
+      "unresolved_risk_flags_count": 0,
+      "ios_required_screens_without_review_checks": 0,
+      "forbidden_html_contract_failures": 0,
+      "screens_with_html_contract": 0,
+      "screens_with_required_icons": 0,
+      "exception_free": true,
+      "exception_reasons": []
     },
     {
       "slug": "notification-settings-demo",
@@ -57,6 +64,15 @@
       "status": "blocked",
       "blockers": [
         "validate exit 1",
+        "1 validator hard fail(s)"
+      ],
+      "unresolved_risk_flags_count": 0,
+      "ios_required_screens_without_review_checks": 0,
+      "forbidden_html_contract_failures": 0,
+      "screens_with_html_contract": 0,
+      "screens_with_required_icons": 0,
+      "exception_free": false,
+      "exception_reasons": [
         "1 validator hard fail(s)"
       ]
     }

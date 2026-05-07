@@ -738,6 +738,170 @@ def test_render_pack_sorts_exceptions_first() -> None:
         )
 
 
+def test_render_pack_legacy_summary_does_not_count_as_exception() -> None:
+    """Trust-bug fix (post-PR-#90 review): a `ready` article whose
+    summary JSON does NOT carry an `exception_free` key (legacy
+    producer, e.g. a stale summary.json from before PR #90) must NOT
+    appear in the top-of-pack Exceptions list as a reasonless entry.
+    The renderer treats missing `exception_free` as 'unknown' and
+    surfaces a muted footer note instead.
+
+    Concretely: the article keeps its plain READY badge in the
+    scorecard. The Exceptions-to-review section says
+    "0 exceptions among ready articles" + a muted legacy note
+    "1 ready article(s) missing exception data; regenerate review
+    pack." The slug must NOT appear inside the exceptions-top
+    section as an `<li>` entry."""
+    base = {
+        "audience": "buyer_br",
+        "intercom_id": 1,
+        "worktree": "/tmp/x",
+        "branch": "feat/x",
+        "validate_returncode": 0,
+        "validate_output": "Validated 1 article(s): 0 hard fail(s), 0 soft warn(s)\n",
+        "hard_fail_count": 0,
+        "soft_warn_count": 0,
+        "mockups_declared": 0,
+        "mockups_present": 0,
+        "missing_mockups": [],
+        "audit_files_present": 3,
+        "audit_skeleton_unfilled": False,
+        "em_dash_count_pt": 0,
+        "em_dash_count_en": 0,
+        "rdollar_leak_en_count": 0,
+        "pt_br_md_path": None,
+        "en_md_path": None,
+        "mockup_pngs": [],
+        "manual_gates": [],
+        "status": "ready",
+        "blockers": [],
+        # NOTE: deliberately no `exception_free` key. Mimics a stale
+        # summary.json produced before the PR #90 coordinator fix.
+    }
+    summary = {
+        "batch_id": "test-legacy",
+        "articles": [{**base, "slug": "legacy-ready-no-flag"}],
+    }
+    with tempfile.TemporaryDirectory() as tmp:
+        json_path = Path(tmp) / "summary.json"
+        json_path.write_text(json.dumps(summary), encoding="utf-8")
+        html_path = Path(tmp) / "summary.html"
+        rc, out, err = _run([
+            sys.executable, str(RENDER_PACK),
+            "--input", str(json_path), "--output", str(html_path),
+        ])
+        assert rc == 0, f"render failed: {err}"
+        body = html_path.read_text(encoding="utf-8")
+        import re as _re
+        top_match = _re.search(
+            r'<div class="exceptions-top">.*?</div>',
+            body, _re.DOTALL,
+        )
+        assert top_match, "exceptions-top div missing"
+        top_html = top_match.group(0)
+        assert "legacy-ready-no-flag" not in top_html, (
+            f"legacy ready article (no exception_free key) leaked into "
+            f"the exceptions list:\n{top_html[:500]}"
+        )
+        assert "0 exceptions among ready articles" in top_html, (
+            f"missing 0-exceptions confirmation:\n{top_html[:500]}"
+        )
+        assert "1 ready article(s) missing exception data" in top_html, (
+            f"missing legacy-data note:\n{top_html[:500]}"
+        )
+        scorecard = _re.search(
+            r'<table\s+class="scorecard">.*?</table>', body, _re.DOTALL,
+        )
+        assert scorecard, "scorecard missing"
+        sc_html = scorecard.group(0)
+        assert ">READY<" in sc_html, (
+            "legacy ready article should show plain READY badge in "
+            "scorecard, not EXCEPTION-FREE / REVIEW NEEDED"
+        )
+
+
+def test_render_pack_legacy_note_appears_only_when_summary_is_stale() -> None:
+    """The muted legacy note must NOT appear when every ready article
+    carries the `exception_free` key. Confirms the note is targeted,
+    not always-on."""
+    base = {
+        "audience": "buyer_br",
+        "intercom_id": 1,
+        "worktree": "/tmp/x",
+        "branch": "feat/x",
+        "validate_returncode": 0,
+        "validate_output": "Validated 1 article(s): 0 hard fail(s), 0 soft warn(s)\n",
+        "hard_fail_count": 0,
+        "soft_warn_count": 0,
+        "mockups_declared": 0,
+        "mockups_present": 0,
+        "missing_mockups": [],
+        "audit_files_present": 3,
+        "audit_skeleton_unfilled": False,
+        "em_dash_count_pt": 0,
+        "em_dash_count_en": 0,
+        "rdollar_leak_en_count": 0,
+        "pt_br_md_path": None,
+        "en_md_path": None,
+        "mockup_pngs": [],
+        "manual_gates": [],
+        "status": "ready",
+        "blockers": [],
+        "exception_free": True,
+        "exception_reasons": [],
+    }
+    summary = {
+        "batch_id": "test-no-legacy",
+        "articles": [{**base, "slug": "all-flags-set"}],
+    }
+    with tempfile.TemporaryDirectory() as tmp:
+        json_path = Path(tmp) / "summary.json"
+        json_path.write_text(json.dumps(summary), encoding="utf-8")
+        html_path = Path(tmp) / "summary.html"
+        rc, out, err = _run([
+            sys.executable, str(RENDER_PACK),
+            "--input", str(json_path), "--output", str(html_path),
+        ])
+        assert rc == 0, f"render failed: {err}"
+        body = html_path.read_text(encoding="utf-8")
+        assert "missing exception data" not in body, (
+            "legacy-data note appeared even though every ready article "
+            "has the exception_free key set"
+        )
+
+
+def test_committed_sample_has_no_reasonless_ready_in_exceptions() -> None:
+    """The committed sample reviewer pack must be internally
+    consistent: no `ready` article appears inside the
+    Exceptions-to-review section without explicit reasons. This
+    catches sample drift from the PR #90 trust-bug fix going
+    forward."""
+    sample_html = REPO_ROOT / "_work" / "sample-batch" / "summary.html"
+    body = sample_html.read_text(encoding="utf-8")
+    import re as _re
+    top_match = _re.search(
+        r'<div class="exceptions-top">.*?</div>',
+        body, _re.DOTALL,
+    )
+    assert top_match, "exceptions-top div missing in committed sample"
+    top_html = top_match.group(0)
+    candidate_block = _re.search(
+        r'<h2>Exceptions to review first \(\d+\)</h2>\s*<ul>(.*?)</ul>',
+        top_html, _re.DOTALL,
+    )
+    if candidate_block:
+        items = _re.findall(r'<li>.*?</li>', candidate_block.group(1), _re.DOTALL)
+        for item in items:
+            assert "<ul>" in item, (
+                f"sample exception entry has no reasons sub-list:\n{item[:300]}"
+            )
+    else:
+        assert "0 exceptions among ready articles" in top_html, (
+            "sample exceptions-top section is neither candidate-list "
+            "nor all-clear confirmation"
+        )
+
+
 def test_render_pack_shows_exception_reasons_section() -> None:
     """The top-of-pack 'Exceptions to review first' section lists every
     `ready` article that is NOT exception_free, with its reasons. An
@@ -1461,6 +1625,9 @@ TESTS = [
     test_decide_exception_free_ios_required_without_review_checks_blocks,
     test_decide_exception_free_clean_article_passes,
     test_render_pack_sorts_exceptions_first,
+    test_render_pack_legacy_summary_does_not_count_as_exception,
+    test_render_pack_legacy_note_appears_only_when_summary_is_stale,
+    test_committed_sample_has_no_reasonless_ready_in_exceptions,
     test_render_pack_shows_exception_reasons_section,
     test_render_path_with_space_uses_url_escape,
     test_validator_screen_required_icons_missing_fails,

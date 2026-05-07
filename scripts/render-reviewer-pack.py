@@ -566,6 +566,7 @@ pre.validate {
 .exceptions-top li ul { margin-top: 4px; }
 .exceptions-top li ul li { color: var(--muted); font-size: 12px; }
 .exceptions-top .all-clear { color: #0F8A3C; font-weight: 600; margin: 4px 0 0; }
+.exceptions-top .legacy-note { color: var(--muted); font-style: italic; margin: 8px 0 0; padding-top: 8px; border-top: 1px dashed #FDE68A; }
 .exception-block { background: #FEF3C7; border: 1px solid #FDE68A; border-radius: 8px; padding: 10px 14px; margin: 10px 0; }
 .exception-block h3 { margin: 0 0 6px; color: #B45309; font-size: 13px; }
 .exception-block ul { margin: 0 0 0 18px; font-size: 12px; }
@@ -578,11 +579,39 @@ def render_exceptions_top(reviews: list[dict]) -> str:
     is NOT exception-free. `failed` and `blocked` already get loud
     treatment via per-article alert blocks; this section is the
     triage layer specifically for "ready but with exceptions"
-    articles. When the list is empty, render a green confirmation."""
+    articles. When the list is empty, render a green confirmation.
+
+    Trust contract (post-merge fix): an article is an exception
+    candidate ONLY if `exception_free is False` (the key MUST be
+    present and explicitly False). A `ready` article whose summary
+    JSON does NOT carry `exception_free` at all is treated as a
+    LEGACY entry: it stays in the scorecard with a plain READY badge
+    and is reported via a muted footer note "N ready article(s)
+    missing exception data; regenerate review pack." It does NOT
+    appear in the exception list. This guards against the trust bug
+    where a stale summary.json (pre-PR-#90 producer) would surface
+    every ready article as a reasonless exception while the
+    scorecard still showed READY.
+    """
     candidates = [
         r for r in reviews
-        if r.get("status") == "ready" and not r.get("exception_free", False)
+        if r.get("status") == "ready" and r.get("exception_free") is False
     ]
+    legacy = [
+        r for r in reviews
+        if r.get("status") == "ready" and "exception_free" not in r
+    ]
+
+    legacy_html = ""
+    if legacy:
+        legacy_html = (
+            f'<p class="legacy-note muted small">'
+            f'{len(legacy)} ready article(s) missing exception data; '
+            f'regenerate review pack to populate `exception_free` and '
+            f'`exception_reasons`.'
+            f'</p>'
+        )
+
     if not candidates:
         # Friendly confirmation. Not a green-light to skip review.
         return (
@@ -590,6 +619,7 @@ def render_exceptions_top(reviews: list[dict]) -> str:
             '<h2>Exceptions to review first</h2>'
             '<p class="all-clear">0 exceptions among ready articles. '
             'Sample-check 1-2 entries before approval.</p>'
+            f'{legacy_html}'
             '</div>'
         )
     items: list[str] = []
@@ -608,6 +638,7 @@ def render_exceptions_top(reviews: list[dict]) -> str:
         '<div class="exceptions-top">'
         f'<h2>Exceptions to review first ({len(candidates)})</h2>'
         '<ul>' + "".join(items) + '</ul>'
+        f'{legacy_html}'
         '</div>'
     )
 
