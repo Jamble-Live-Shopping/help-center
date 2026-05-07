@@ -101,3 +101,20 @@ expected_fails:
     contains: "jamble_backend"
     reason: "flow declares seller_application_service.py but the historical code-audit cites only iOS files"
     removal_path: "Add a backend evidence row to the code-audit, or drop backend_files from this flow if the dependency is not strict"
+  - rule: mockup_orphan_html
+    count: 2
+    contains:
+      - "configuracoes-menu"
+      - "settings-apply-to-sell"
+    reason: "batch real-1 calibration (rule 26): legacy mockup-sources/ HTMLs (configuracoes-menu__pt-br.html, settings-apply-to-sell__en.html) do not match the unified settings-menu screen name. Same defect class as the existing mockup_referenced_not_declared and mockup_declared_not_in_{pt,en} above."
+    removal_path: "Cleanup PR ships the unified settings-menu HTML pair AND deletes the legacy orphans (or moves them to mockup_plan.allowlist_orphans with justification)"
+  - rule: source_of_truth_path_missing
+    count: 2
+    # Order matches the validator's iteration over flow.source_of_truth.ios_files:
+    # SHOW/...JambleTabBarController.swift comes before APPLY/...VC.swift in the
+    # golden flow, so the FAIL lines surface in that order.
+    contains:
+      - "SHOW/ViewControllers/JambleTabBarController.swift"
+      - "APPLY/SellerApplicationInvitationViewController.swift"
+    reason: "batch real-1 calibration (rule 27): two ios_files entries point to paths that do not exist in current Jamble-iOS — APPLY/ folder appears to have been renamed/moved, JambleTabBarController.swift is now elsewhere. Article shipped before this rule existed."
+    removal_path: "Update these two ios_files entries to the current iOS paths (likely PROFILE/ or LIVE_SHOPPING/ subtree) or move them to source_of_truth.negative_scan with a matching risk_flag if the surfaces were intentionally removed"

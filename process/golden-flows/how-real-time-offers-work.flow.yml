@@ -62,3 +62,8 @@ expected_fails:
     contains: "Scan 6"
     reason: "v2 content-audit uses 'Scan 6, alt-text quality' label, not a stale-feature subsection"
     removal_path: "Add a real 'Stale-feature audit' subsection with the structured table"
+  - rule: source_of_truth_path_missing
+    count: 1
+    contains: "SHOW/"
+    reason: "batch real-1 calibration (rule 27): the bare 'SHOW/' directory entry no longer matches the current iOS layout (LIVE_SHOPPING/ subtree replaced SHOW/ in early 2026). Article shipped before this rule existed."
+    removal_path: "Update the entry to a precise iOS path (e.g., LIVE_SHOPPING/Show/...) or move to source_of_truth.negative_scan with a matching risk_flag"

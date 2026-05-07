@@ -43,6 +43,13 @@ source_of_truth:
   backend_files: []      # repo-relative paths in jamble_backend, e.g. src/entities/referral.py:140-272
   legal: []              # Notion page ids, ToU section refs (e.g. "Notion 34f9449e Section 25")
   support_context: []    # Intercom convo ids, Slack thread URLs (optional, for context only)
+  # Negative scan (NEW, batch real-1 calibration, rule 27):
+  # paths the writer verified are absent in Jamble-iOS but ARE relevant to
+  # the article's central claim ("we checked X, surface does not exist").
+  # Each entry expects a matching risk_flags entry. The validator hard-fails
+  # if a negative_scan path actually exists OR if negative_scan is non-empty
+  # AND risk_flags is empty. Activated only when env JAMBLE_IOS_ROOT is set.
+  # negative_scan: []
 
 # Content contract. Three lists with different enforcement.
 content_contract:
@@ -68,6 +75,12 @@ content_contract:
 #   - PNG pair rendered DPR3 (>=900px wide) in assets/mockups/
 mockup_plan:
   required: true        # if false, validator skips mockup checks entirely
+  # Allowlist for orphan HTML files (NEW, batch real-1 calibration, rule 26):
+  # any *.html in mockup-sources/ that does NOT match a declared
+  # `<screen.name>__<locale>.html` triggers `mockup_orphan_html` hard fail.
+  # Use this list to grandfather legacy artifacts that cannot be deleted yet.
+  # Document why per entry. Default empty = strict.
+  # allowlist_orphans: []
   screens:
     # Example schema (uncomment and fill per article):
     # - name: inbox-list                  # also drives filename: <name>__pt-br.html

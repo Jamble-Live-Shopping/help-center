@@ -755,6 +755,468 @@ def test_runner_maps_audit_skeleton_unfilled_to_phase7() -> None:
 
 
 # ---------------------------------------------------------------
+# Tests for batch real-1 calibration: 3 false-negative rules
+# ---------------------------------------------------------------
+# Calibrated from the 4-sample human review of batch real-1 (2026-05-07).
+# Each false-negative discovered by Aymar on an exception_free article gets
+# a deterministic rule + regression test below before any volume scale.
+
+def _calibration_fixture(slug_prefix: str, *, intercom_id: int) -> Path:
+    """Minimal article that passes the validator (used as a clean baseline
+    for the calibration tests; each test mutates ONE field to provoke its
+    target rule)."""
+    art = Path(tempfile.mkdtemp(prefix=slug_prefix, dir=str(REPO_ROOT / "articles")))
+    flow_yaml = f"""\
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+job_to_be_done: "Help sellers learn the calibration tests"
+intercom_id: {intercom_id}
+source_of_truth:
+  ios_files: []
+  backend_files: []
+  legal: []
+  support_context: []
+content_contract:
+  must_answer: []
+  forbidden_terms: []
+  must_not_say: []
+mockup_plan:
+  required: false
+  screens: []
+icons_required: []
+icons_fallback_feather: false
+currency_required: false
+risk_flags: []
+resolved_decisions: []
+"""
+    (art / "flow.yml").write_text(flow_yaml, encoding="utf-8")
+    (art / "metadata.yml").write_text(
+        f"intercom_id: {intercom_id}\n"
+        f"slug: {art.name}\n"
+        "default_locale: pt-br\n"
+        "state: draft\n"
+        "locales:\n"
+        "  pt-br: { title: 'Calibracao', description: 'Teste de calibracao deterministica' }\n"
+        "  en:    { title: 'Calibration', description: 'Deterministic calibration test' }\n",
+        encoding="utf-8",
+    )
+    (art / "pt-br.md").write_text(
+        "# Titulo unico\n\n"
+        "## Secao 1\n\nConteudo de teste em portugues sem caracteres proibidos.\n\n"
+        "## Secao 2\n\nMais conteudo.\n",
+        encoding="utf-8",
+    )
+    (art / "en.md").write_text(
+        "# Single title\n\n"
+        "## Section 1\n\nTest content in english without forbidden characters.\n\n"
+        "## Section 2\n\nMore content.\n",
+        encoding="utf-8",
+    )
+    audit = art / "audit"
+    audit.mkdir(exist_ok=True)
+    for kind in ("code-audit", "content-audit", "compliance"):
+        (audit / f"{kind}-{intercom_id}.md").write_text(
+            f"# {kind}-{intercom_id}\n\n"
+            "## Stale-feature audit\n\n"
+            "| Claim / feature | Source checked | Status | Checked at | Owner | Verdict |\n"
+            "|---|---|---|---|---|---|\n"
+            "| baseline | none | n/a | 2026-05-07 | aymar | live_in_ios |\n",
+            encoding="utf-8",
+        )
+    return art
+
+
+def test_validator_fails_on_multiple_h1_headings() -> None:
+    """Calibration false-negative #1: choose-quantities shipped with 8 H1
+    headings instead of 1 H1 + N H2. Rule heading_hierarchy must hard-fail
+    when count != 1."""
+    art = _calibration_fixture("calib-h1-many-", intercom_id=8881101)
+    try:
+        # mutate pt-br.md to have 3 H1 instead of 1
+        (art / "pt-br.md").write_text(
+            "# Primeiro titulo\n\n# Segundo titulo\n\n# Terceiro titulo\n",
+            encoding="utf-8",
+        )
+        rc, out, err = _run([sys.executable, str(VALIDATOR), str(art)])
+        combined = out + err
+        assert rc == 1, f"validator must exit 1 with multiple H1s; got {rc}"
+        assert "heading_hierarchy" in combined, (
+            f"expected heading_hierarchy rule; got {combined!r}"
+        )
+        assert "3 top-level H1" in combined or "has 3" in combined, (
+            f"rule message should report the count; got {combined!r}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_validator_passes_with_single_h1_heading() -> None:
+    """Single H1 + multiple H2 is the canonical structure; rule must not fire."""
+    art = _calibration_fixture("calib-h1-one-", intercom_id=8881102)
+    try:
+        rc, out, err = _run([sys.executable, str(VALIDATOR), str(art)])
+        combined = out + err
+        assert "heading_hierarchy" not in combined, (
+            f"heading_hierarchy must not fire on canonical structure; got {combined!r}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_validator_fails_on_orphan_mockup_html() -> None:
+    """Calibration false-negative #2: choose-quantities shipped with 3 orphan
+    HTMLs in mockup-sources/ that no longer mapped to any declared screen.
+    Rule mockup_orphan_html must hard-fail any HTML not matching a declared
+    screen pair."""
+    art = _calibration_fixture("calib-orphan-", intercom_id=8881103)
+    try:
+        # declare ONE screen (screen-1) and add the matching HTML pair
+        flow_yaml = (art / "flow.yml").read_text(encoding="utf-8")
+        flow_yaml = flow_yaml.replace(
+            "mockup_plan:\n  required: false\n  screens: []",
+            "mockup_plan:\n  required: true\n  screens:\n    - name: screen-1\n      purpose: demo\n      source: ios_required\n      review_checks: [labels_match_xcstrings]\n",
+        )
+        (art / "flow.yml").write_text(flow_yaml, encoding="utf-8")
+        mockup_dir = art / "mockup-sources"
+        mockup_dir.mkdir(exist_ok=True)
+        for fname in ("screen-1__pt-br.html", "screen-1__en.html"):
+            (mockup_dir / fname).write_text("<div class='phone'>ok</div>", encoding="utf-8")
+        # add an ORPHAN file
+        (mockup_dir / "stale-toast.html").write_text("<div class='phone'>orphan</div>", encoding="utf-8")
+        rc, out, err = _run([sys.executable, str(VALIDATOR), str(art)])
+        combined = out + err
+        assert "mockup_orphan_html" in combined, (
+            f"expected mockup_orphan_html rule; got {combined!r}"
+        )
+        assert "stale-toast.html" in combined, (
+            f"rule message should name the orphan file; got {combined!r}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_validator_passes_when_orphan_in_allowlist() -> None:
+    """Allowlist escape hatch: orphan files explicitly listed in
+    mockup_plan.allowlist_orphans don't fire the rule (rare, but supported
+    for legacy artifacts that can't be deleted yet)."""
+    art = _calibration_fixture("calib-allow-", intercom_id=8881104)
+    try:
+        flow_yaml = (art / "flow.yml").read_text(encoding="utf-8")
+        flow_yaml = flow_yaml.replace(
+            "mockup_plan:\n  required: false\n  screens: []",
+            "mockup_plan:\n  required: true\n  allowlist_orphans:\n    - legacy-stale.html\n  screens:\n    - name: screen-1\n      purpose: demo\n      source: ios_required\n      review_checks: [labels_match_xcstrings]\n",
+        )
+        (art / "flow.yml").write_text(flow_yaml, encoding="utf-8")
+        mockup_dir = art / "mockup-sources"
+        mockup_dir.mkdir(exist_ok=True)
+        for fname in ("screen-1__pt-br.html", "screen-1__en.html"):
+            (mockup_dir / fname).write_text("<div class='phone'>ok</div>", encoding="utf-8")
+        (mockup_dir / "legacy-stale.html").write_text(
+            "<div class='phone'>allowlisted</div>", encoding="utf-8",
+        )
+        rc, out, err = _run([sys.executable, str(VALIDATOR), str(art)])
+        combined = out + err
+        assert "mockup_orphan_html" not in combined, (
+            f"allowlisted orphan must not fire rule; got {combined!r}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_validator_fails_on_nonexistent_ios_path() -> None:
+    """Calibration false-negative #3: seller-analytics shipped with
+    `SELLER/Analytics/` and `SELLER/Stats/` in source_of_truth.ios_files even
+    though the article's central claim is those surfaces don't exist. Rule
+    source_of_truth_path_missing must hard-fail when JAMBLE_IOS_ROOT is set
+    AND the path doesn't exist there."""
+    # Create a fake iOS root with one valid file
+    fake_root = Path(tempfile.mkdtemp(prefix="fake-ios-", dir="/tmp"))
+    try:
+        (fake_root / "REAL").mkdir()
+        (fake_root / "REAL" / "Existing.swift").write_text("// real", encoding="utf-8")
+        art = _calibration_fixture("calib-iospath-", intercom_id=8881105)
+        try:
+            flow_yaml = (art / "flow.yml").read_text(encoding="utf-8")
+            flow_yaml = flow_yaml.replace(
+                "  ios_files: []",
+                "  ios_files:\n    - REAL/Existing.swift\n    - PHANTOM/DoesNotExist.swift",
+            )
+            (art / "flow.yml").write_text(flow_yaml, encoding="utf-8")
+            env = {**os.environ, "JAMBLE_IOS_ROOT": str(fake_root)}
+            proc = subprocess.run(
+                [sys.executable, str(VALIDATOR), str(art)],
+                capture_output=True, text=True, cwd=REPO_ROOT, env=env,
+            )
+            combined = proc.stdout + proc.stderr
+            assert proc.returncode == 1, (
+                f"validator must exit 1 when ios_files entry is missing; "
+                f"got {proc.returncode}; combined={combined!r}"
+            )
+            assert "source_of_truth_path_missing" in combined, (
+                f"expected source_of_truth_path_missing rule; got {combined!r}"
+            )
+            assert "PHANTOM/DoesNotExist.swift" in combined, (
+                f"rule message should name the missing path; got {combined!r}"
+            )
+            # The valid path must NOT trigger the rule
+            assert "REAL/Existing.swift" not in combined.split("source_of_truth_path_missing")[1] if "source_of_truth_path_missing" in combined else True
+        finally:
+            shutil.rmtree(art, ignore_errors=True)
+    finally:
+        shutil.rmtree(fake_root, ignore_errors=True)
+
+
+def test_orphan_rule_displays_safe_path_outside_repo_root() -> None:
+    """Hardening (P1): mockup_orphan_html previously called
+    `html_file.relative_to(REPO_ROOT)` and raised ValueError when the
+    article was outside REPO_ROOT (multi-worktree calibration runs,
+    external fixtures). The rule must instead emit a normal FAIL with
+    the absolute path string. Calibration: this test creates the
+    article OUTSIDE REPO_ROOT/articles to provoke the original crash."""
+    art = Path(tempfile.mkdtemp(prefix="calib-orphan-extern-", dir="/tmp"))
+    try:
+        flow_yaml = """\
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+job_to_be_done: "Validate orphan rule outside REPO_ROOT"
+intercom_id: 8881107
+source_of_truth: { ios_files: [], backend_files: [], legal: [], support_context: [] }
+content_contract: { must_answer: [], forbidden_terms: [], must_not_say: [] }
+mockup_plan:
+  required: true
+  screens:
+    - name: screen-1
+      purpose: demo
+      source: ios_required
+      review_checks: [labels_match_xcstrings]
+icons_required: []
+icons_fallback_feather: false
+currency_required: false
+risk_flags: []
+resolved_decisions: []
+"""
+        (art / "flow.yml").write_text(flow_yaml, encoding="utf-8")
+        (art / "metadata.yml").write_text(
+            "intercom_id: 8881107\n"
+            f"slug: {art.name}\n"
+            "default_locale: pt-br\n"
+            "state: draft\n"
+            "locales:\n"
+            "  pt-br: { title: 'X', description: 'X' }\n"
+            "  en:    { title: 'X', description: 'X' }\n",
+            encoding="utf-8",
+        )
+        (art / "pt-br.md").write_text("# X\n\n## S1\n\nbody\n", encoding="utf-8")
+        (art / "en.md").write_text("# X\n\n## S1\n\nbody\n", encoding="utf-8")
+        (art / "audit").mkdir()
+        for kind in ("code-audit", "content-audit", "compliance"):
+            (art / "audit" / f"{kind}-8881107.md").write_text(
+                f"# {kind}-8881107\n\n## Stale-feature audit\n\n"
+                "| Claim / feature | Source checked | Status | Checked at | Owner | Verdict |\n"
+                "|---|---|---|---|---|---|\n"
+                "| baseline | none | n/a | 2026-05-07 | aymar | live_in_ios |\n",
+                encoding="utf-8",
+            )
+        mockup_dir = art / "mockup-sources"
+        mockup_dir.mkdir()
+        for fname in ("screen-1__pt-br.html", "screen-1__en.html"):
+            (mockup_dir / fname).write_text("<div class='phone'>ok</div>", encoding="utf-8")
+        # ORPHAN — outside REPO_ROOT this used to crash with ValueError
+        (mockup_dir / "stale-extern.html").write_text(
+            "<div class='phone'>orphan</div>", encoding="utf-8",
+        )
+        rc, out, err = _run([sys.executable, str(VALIDATOR), str(art)])
+        combined = out + err
+        # Robustness: never traceback, even outside REPO_ROOT
+        assert "Traceback" not in combined, (
+            f"validator crashed instead of emitting normal FAIL; got {combined!r}"
+        )
+        assert "ValueError" not in combined, (
+            f"validator raised ValueError instead of safe display path; got {combined!r}"
+        )
+        # Behavior: the rule still fires, with absolute path in message
+        assert "mockup_orphan_html" in combined, (
+            f"expected mockup_orphan_html rule; got {combined!r}"
+        )
+        assert "stale-extern.html" in combined, (
+            f"expected the orphan filename in error message; got {combined!r}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_orphan_rule_skips_when_mockup_not_required() -> None:
+    """Hardening (P2 scope): mockup_orphan_html is a v2_rewrite product
+    invariant. When `mockup_plan.required=false`, the article opts out
+    of the mockup contract entirely — orphan files in mockup-sources/
+    must not fire the rule. Smallest gate that matches the observed
+    defect (which was on a required:true article)."""
+    art = _calibration_fixture("calib-orphan-skip-", intercom_id=8881108)
+    try:
+        # default fixture has mockup_plan.required=false and screens=[]
+        mockup_dir = art / "mockup-sources"
+        mockup_dir.mkdir(exist_ok=True)
+        (mockup_dir / "anything-goes.html").write_text(
+            "<div class='phone'>orphan</div>", encoding="utf-8",
+        )
+        rc, out, err = _run([sys.executable, str(VALIDATOR), str(art)])
+        combined = out + err
+        assert "mockup_orphan_html" not in combined, (
+            f"orphan rule must NOT fire when mockup_plan.required=false; "
+            f"got {combined!r}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_source_of_truth_warns_when_env_unset_with_ios_paths() -> None:
+    """Hardening (P2 silent skip): when the article declares
+    source_of_truth.ios_files (or negative_scan) but no iOS clone is
+    resolved (env unset AND default location absent), the validator
+    must emit a visible soft warn `source_of_truth_check_skipped`.
+    The previous version silently skipped the check, which let
+    exception_free stay True even though path-existence had not been
+    enforced — false confidence."""
+    art = _calibration_fixture("calib-skipwarn-", intercom_id=8881109)
+    try:
+        # add an ios_files entry so the rule activation logic kicks in
+        flow_yaml = (art / "flow.yml").read_text(encoding="utf-8")
+        flow_yaml = flow_yaml.replace(
+            "  ios_files: []",
+            "  ios_files:\n    - ANY/Path/Will/Do.swift",
+        )
+        (art / "flow.yml").write_text(flow_yaml, encoding="utf-8")
+        # Suppress both env and default resolution. The escape hatch
+        # JAMBLE_IOS_NO_DEFAULT_FALLBACK=1 prevents the default location
+        # from resolving without having to override HOME (which would
+        # break PyYAML import in the validator subprocess).
+        env = {**os.environ, "JAMBLE_IOS_NO_DEFAULT_FALLBACK": "1"}
+        env.pop("JAMBLE_IOS_ROOT", None)
+        proc = subprocess.run(
+            [sys.executable, str(VALIDATOR), str(art)],
+            capture_output=True, text=True, cwd=REPO_ROOT, env=env,
+        )
+        combined = proc.stdout + proc.stderr
+        assert "source_of_truth_check_skipped" in combined, (
+            f"expected visible skip warn when no iOS clone resolves; "
+            f"got {combined!r}"
+        )
+        # Confirm rule 27 itself did NOT silently fire on a phantom path
+        assert "source_of_truth_path_missing" not in combined, (
+            f"rule 27 must not fire when iOS root unresolved; got {combined!r}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_source_of_truth_check_skipped_disqualifies_exception_free() -> None:
+    """Hardening (P2 silent skip, coordinator side): when the validator
+    emits `source_of_truth_check_skipped`, the coordinator's
+    `decide_exception_free` must add an exception_reason and set
+    `exception_free=False`. Otherwise the reviewer pack would still
+    show EXCEPTION-FREE on an article whose ios paths were never
+    actually checked."""
+    import importlib.util
+    coord_path = SCRIPTS_DIR / "run-help-article-batch.py"
+    spec = importlib.util.spec_from_file_location("batch_coord", str(coord_path))
+    mod = importlib.util.module_from_spec(spec)
+    sys.modules["batch_coord"] = mod
+    assert spec.loader is not None
+    spec.loader.exec_module(mod)
+    review = mod.ArticleReview(
+        slug="x",
+        worktree=Path("/tmp/x"),
+        branch="x",
+        intercom_id=1,
+        audience="seller_br",
+        validate_returncode=0,
+        validate_output="some text",
+        hard_fail_count=0,
+        soft_warn_count=1,
+        mockups_present=2,
+        mockups_declared=2,
+        missing_mockups=[],
+        mockup_pngs=["a", "b"],
+        em_dash_count_pt=0,
+        em_dash_count_en=0,
+        rdollar_leak_en_count=0,
+        pt_br_md_path="pt-br.md",
+        en_md_path="en.md",
+        audit_files_present=3,
+        audit_skeleton_unfilled=False,
+    )
+    # Manually set the new field, mirroring what collect_article_review
+    # does when validate_output contains the warn.
+    review.source_of_truth_check_skipped = 1
+    mod.decide_exception_free(review)
+    assert review.exception_free is False, (
+        f"source_of_truth_check_skipped > 0 must disqualify exception_free; "
+        f"got exception_free={review.exception_free}, reasons={review.exception_reasons}"
+    )
+    assert any("path-existence rule was skipped" in r for r in review.exception_reasons), (
+        f"expected explicit skipped-rule reason; got {review.exception_reasons}"
+    )
+
+
+def test_validator_passes_when_path_in_negative_scan_with_risk_flag() -> None:
+    """Correct encoding for "I checked this surface and it's absent": move
+    the path to source_of_truth.negative_scan AND raise a matching
+    risk_flag. The rule must not fire on negative_scan paths, but must fire
+    if negative_scan is non-empty AND risk_flags is empty."""
+    fake_root = Path(tempfile.mkdtemp(prefix="fake-ios-neg-", dir="/tmp"))
+    try:
+        # No PHANTOM dir created; paths in negative_scan are intentionally absent
+        art = _calibration_fixture("calib-iosneg-", intercom_id=8881106)
+        try:
+            flow_yaml = (art / "flow.yml").read_text(encoding="utf-8")
+            flow_yaml = flow_yaml.replace(
+                "  ios_files: []",
+                "  ios_files: []\n  negative_scan:\n    - PHANTOM/Analytics/\n    - PHANTOM/Stats/",
+            )
+            flow_yaml = flow_yaml.replace(
+                "risk_flags: []",
+                'risk_flags:\n  - "feature-may-not-exist: PHANTOM analytics surface absent"',
+            )
+            (art / "flow.yml").write_text(flow_yaml, encoding="utf-8")
+            env = {**os.environ, "JAMBLE_IOS_ROOT": str(fake_root)}
+            proc = subprocess.run(
+                [sys.executable, str(VALIDATOR), str(art)],
+                capture_output=True, text=True, cwd=REPO_ROOT, env=env,
+            )
+            combined = proc.stdout + proc.stderr
+            assert "source_of_truth_path_missing" not in combined, (
+                f"negative_scan paths must not fire source_of_truth_path_missing; "
+                f"got {combined!r}"
+            )
+            assert "negative_scan_without_risk" not in combined, (
+                f"risk_flags is non-empty so negative_scan_without_risk must not fire; "
+                f"got {combined!r}"
+            )
+
+            # Now drop the risk_flag and confirm negative_scan_without_risk fires
+            flow_no_risk = flow_yaml.replace(
+                'risk_flags:\n  - "feature-may-not-exist: PHANTOM analytics surface absent"',
+                "risk_flags: []",
+            )
+            (art / "flow.yml").write_text(flow_no_risk, encoding="utf-8")
+            proc2 = subprocess.run(
+                [sys.executable, str(VALIDATOR), str(art)],
+                capture_output=True, text=True, cwd=REPO_ROOT, env=env,
+            )
+            combined2 = proc2.stdout + proc2.stderr
+            assert "negative_scan_without_risk" in combined2, (
+                f"empty risk_flags + non-empty negative_scan must fire "
+                f"negative_scan_without_risk; got {combined2!r}"
+            )
+        finally:
+            shutil.rmtree(art, ignore_errors=True)
+    finally:
+        shutil.rmtree(fake_root, ignore_errors=True)
+
+
+# ---------------------------------------------------------------
 # Test runner
 # ---------------------------------------------------------------
 
@@ -785,6 +1247,16 @@ TESTS = [
     test_validator_passes_audit_skeleton_after_markers_removed,
     test_skeletons_drop_pass_like_defaults,
     test_runner_maps_audit_skeleton_unfilled_to_phase7,
+    test_validator_fails_on_multiple_h1_headings,
+    test_validator_passes_with_single_h1_heading,
+    test_validator_fails_on_orphan_mockup_html,
+    test_validator_passes_when_orphan_in_allowlist,
+    test_validator_fails_on_nonexistent_ios_path,
+    test_orphan_rule_displays_safe_path_outside_repo_root,
+    test_orphan_rule_skips_when_mockup_not_required,
+    test_source_of_truth_warns_when_env_unset_with_ios_paths,
+    test_source_of_truth_check_skipped_disqualifies_exception_free,
+    test_validator_passes_when_path_in_negative_scan_with_risk_flag,
 ]
 
 
