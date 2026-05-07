@@ -763,6 +763,184 @@ def test_render_html_is_self_contained_no_external_js() -> None:
         assert "<form" not in body.lower(), "reviewer pack must contain no <form> tags"
 
 
+def test_reviewer_pack_renders_ten_article_summary_with_gates() -> None:
+    """Cap-10 proof: render a synthetic 10-article summary.json with
+    manual_gates per article and assert that the reviewer pack stays
+    auditable at the new ceiling.
+
+    Each article gets a unique slug (`fixture-10-a01` ... `fixture-10-a10`),
+    one declared screen with `required_icons` + `review_checks`, status
+    alternating between `ready` and `blocked` so both badges are
+    exercised at scale.
+
+    Asserts (per the PR #88 plan, Task A):
+    - scorecard contains exactly 10 article entries; the count is
+      SCOPED to the scorecard table only (Manual gates tables also
+      use <tr> and would pollute a global count)
+    - each of the 10 slugs appears as both an in-page anchor target
+      and an H2 in the body
+    - "Manual gates per screen" appears exactly 10 times
+    - for each article, its specific icon name + at least one
+      review_check value appears verbatim
+    - per-article Manual gates block sits BEFORE the Validate output
+      details panel (gates are visible without expanding details)
+    - HTML stays static: no <script>, no <form>, no fetch( call,
+      no external src/href outside raw.githubusercontent.com / file://
+      / relative paths (https:// to GitHub raw is allowed)
+    - HTML parses with html.parser without raising
+    """
+    statuses = ["ready", "blocked", "ready", "blocked", "ready",
+                "blocked", "ready", "blocked", "ready", "blocked"]
+    articles = []
+    for i, status in enumerate(statuses, start=1):
+        slug = f"fixture-10-a{i:02d}"
+        icon = f"icon-fixture-{i:02d}"
+        review_check = "icons_match_ios_source" if i % 2 == 1 else "labels_match_xcstrings"
+        hard = 0 if status == "ready" else 1
+        articles.append({
+            "slug": slug,
+            "audience": "buyer_br" if i % 2 == 0 else "seller_br",
+            "intercom_id": 99000 + i,
+            "worktree": f"/tmp/fixture-10/{slug}",
+            "branch": f"feat/batch-fixture-10-{slug}",
+            "validate_returncode": hard,
+            "validate_output": (
+                f"=== {slug} ===\n"
+                f"Validated 1 article(s): {hard} hard fail(s), 2 soft warn(s)\n"
+            ),
+            "hard_fail_count": hard,
+            "soft_warn_count": 2,
+            "mockups_declared": 2,
+            "mockups_present": 2,
+            "missing_mockups": [],
+            "audit_files_present": 3,
+            "audit_skeleton_unfilled": False,
+            "em_dash_count_pt": 0,
+            "em_dash_count_en": 0,
+            "rdollar_leak_en_count": 0,
+            "pt_br_md_path": None,
+            "en_md_path": None,
+            "mockup_pngs": [],
+            "manual_gates": [
+                {
+                    "screen": f"screen-{i:02d}",
+                    "source": "ios_required",
+                    "required_icons": [icon],
+                    "review_checks": [review_check],
+                }
+            ],
+            "status": status,
+            "blockers": [] if hard == 0 else [f"validate exit {hard}", f"{hard} validator hard fail(s)"],
+        })
+    summary = {"batch_id": "fixture-10", "articles": articles}
+
+    with tempfile.TemporaryDirectory() as tmp:
+        json_path = Path(tmp) / "summary.json"
+        json_path.write_text(json.dumps(summary), encoding="utf-8")
+        html_path = Path(tmp) / "summary.html"
+        rc, out, err = _run([
+            sys.executable, str(RENDER_PACK),
+            "--input", str(json_path), "--output", str(html_path),
+        ])
+        assert rc == 0, f"render failed: rc={rc}\nout:\n{out}\nerr:\n{err}"
+        body = html_path.read_text(encoding="utf-8")
+
+        # 1. HTML parses cleanly.
+        from html.parser import HTMLParser
+        class _Lint(HTMLParser):
+            def error(self, message):  # pragma: no cover - defensive
+                raise AssertionError(f"HTMLParser error: {message}")
+        _Lint().feed(body)
+
+        # 2. Scorecard <tr> count scoped to the scorecard table only.
+        # The Manual gates tables also use <tr>, so a global count
+        # would inflate. Slice between the scorecard <table> open and
+        # its matching </table>.
+        import re as _re
+        scorecard_match = _re.search(
+            r'<table\s+class="scorecard">.*?</table>', body, _re.DOTALL,
+        )
+        assert scorecard_match, "scorecard table not found"
+        scorecard_html = scorecard_match.group(0)
+        # Count <tr> that are NOT in <thead>; the body rows live in
+        # <tbody>. Strip the thead first.
+        thead_stripped = _re.sub(r'<thead\b.*?</thead>', '', scorecard_html, flags=_re.DOTALL)
+        scorecard_body_trs = thead_stripped.count("<tr>")
+        assert scorecard_body_trs == 10, (
+            f"scorecard should have exactly 10 article rows, got "
+            f"{scorecard_body_trs}\nscorecard slice (first 400 chars):\n"
+            f"{scorecard_html[:400]}"
+        )
+
+        # 3. Each slug present as anchor target + H2.
+        for i in range(1, 11):
+            slug = f"fixture-10-a{i:02d}"
+            assert f'id="article-{slug}"' in body, f"missing anchor for {slug}"
+            assert f'<h2>{slug}' in body or f">{slug}<" in body, (
+                f"slug {slug} missing as visible heading"
+            )
+
+        # 4. Manual gates section per article.
+        gates_count = body.count("Manual gates per screen")
+        assert gates_count == 10, (
+            f"expected 10 'Manual gates per screen' headers, got {gates_count}"
+        )
+
+        # 5. Per-article required_icons + review_checks visible verbatim.
+        for i in range(1, 11):
+            icon = f"icon-fixture-{i:02d}"
+            assert icon in body, f"required_icon {icon} not in body"
+        # Both review-check variants appear (alternating pattern).
+        assert "icons_match_ios_source" in body
+        assert "labels_match_xcstrings" in body
+
+        # 6. Manual gates appear BEFORE Validate output for each article.
+        # Iterate slug-by-slug so we check the per-article relative
+        # ordering (string-find returns first occurrence which is fine
+        # since each slug section starts with the gates block).
+        for i in range(1, 11):
+            slug = f"fixture-10-a{i:02d}"
+            section_start = body.find(f'id="article-{slug}"')
+            assert section_start > 0, f"section start not found for {slug}"
+            # Find the next 'Manual gates per screen' AFTER the section
+            # start, and the next 'Validate output' AFTER that.
+            gates_idx = body.find("Manual gates per screen", section_start)
+            validate_idx = body.find("Validate output", section_start)
+            assert section_start < gates_idx < validate_idx, (
+                f"gates must precede Validate output in {slug}: "
+                f"section={section_start} gates={gates_idx} validate={validate_idx}"
+            )
+
+        # 7. Static-HTML invariants.
+        # No script / form / fetch( anywhere.
+        body_lower = body.lower()
+        assert "<script" not in body_lower, "no <script> allowed"
+        assert "<form" not in body_lower, "no <form> allowed"
+        assert "fetch(" not in body_lower, "no fetch( call allowed"
+        # No external asset src/href outside the GitHub raw allowlist /
+        # file:// / relative paths. https:// to raw.githubusercontent.com
+        # is legitimate (mockup image fallback URLs); other hosts are not.
+        from urllib.parse import urlparse
+        attr_re = _re.compile(r'(?:src|href)\s*=\s*"([^"]+)"', _re.IGNORECASE)
+        external_violations: list[str] = []
+        for raw_url in attr_re.findall(body):
+            parsed = urlparse(raw_url)
+            if not parsed.scheme:
+                continue  # relative path, OK
+            if parsed.scheme == "file":
+                continue  # local file, OK
+            if parsed.scheme in ("http", "https"):
+                if parsed.netloc == "raw.githubusercontent.com":
+                    continue  # GitHub raw allowlist
+                external_violations.append(raw_url)
+            else:
+                external_violations.append(raw_url)
+        assert not external_violations, (
+            f"reviewer pack references external assets outside the "
+            f"allowlist: {external_violations[:3]}"
+        )
+
+
 def test_render_sample_summary_json_resolves_repo_root_marker() -> None:
     """The committed sample summary.json uses `{REPO_ROOT}` markers instead
     of developer-local paths. The renderer must still resolve those markers
@@ -955,6 +1133,7 @@ TESTS = [
     test_validator_review_checks_missing_softwarns_for_ios_required,
     test_reviewer_pack_renders_manual_gates_when_present,
     test_render_html_is_self_contained_no_external_js,
+    test_reviewer_pack_renders_ten_article_summary_with_gates,
     test_render_sample_summary_json_resolves_repo_root_marker,
     test_generate_sample_pack_is_idempotent_and_has_no_local_paths,
 ]
