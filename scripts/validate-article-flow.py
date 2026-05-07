@@ -42,6 +42,7 @@ EM_DASH = "—"
 EN_DASH = "–"
 AUCTION_PATTERN = re.compile(r"\b(auction|leil[aã]o)\b", re.IGNORECASE)
 RDOLLAR_PATTERN = re.compile(r"R\$")
+H1_PATTERN = re.compile(r"^#\s+\S", re.MULTILINE)
 H2_PATTERN = re.compile(r"^##\s+\S", re.MULTILINE)
 PNG_REF_PATTERN = re.compile(r"!\[[^\]]*\]\([^)]*?/([a-z0-9-]+)__([a-z0-9-]+)__(pt-br|en)__v\d+\.png", re.IGNORECASE)
 
@@ -134,6 +135,49 @@ class Report:
 
     def warn(self, rule: str, msg: str) -> None:
         self.soft_warns.append(f"[{rule}] {msg}")
+
+
+def _display_path(p: Path) -> str:
+    """Render a Path for human-readable error messages.
+
+    Falls back to the absolute path string when `p` is outside REPO_ROOT
+    instead of raising ValueError on `p.relative_to(REPO_ROOT)`. Multi-
+    worktree calibration runs, regression tests with external fixtures,
+    and any future tooling that pipes external article paths into the
+    validator must keep emitting normal `FAIL [...]` lines, not crash.
+    """
+    try:
+        return str(p.relative_to(REPO_ROOT))
+    except ValueError:
+        return str(p)
+
+
+def _resolve_ios_root() -> tuple[Path | None, str]:
+    """Resolve the iOS repo root for source_of_truth path-existence checks.
+
+    Resolution order:
+      1. env JAMBLE_IOS_ROOT (if set and points to an existing directory)
+      2. ~/Projects/Jamble-iOS/Jamble (Aymar's local convention),
+         unless JAMBLE_IOS_NO_DEFAULT_FALLBACK=1 is set (test escape hatch
+         so regression tests can simulate "no clone found" reliably
+         without altering HOME).
+
+    Returns (path, source) where source is one of "env", "default", or
+    "" when nothing was found. The validator emits a visible soft warn
+    when the article declares ios_files / negative_scan but no root was
+    resolved, so silent confidence inflation cannot happen.
+    """
+    env_val = os.environ.get("JAMBLE_IOS_ROOT", "").strip()
+    if env_val:
+        candidate = Path(env_val)
+        if candidate.is_dir():
+            return candidate, "env"
+    if os.environ.get("JAMBLE_IOS_NO_DEFAULT_FALLBACK", "").strip() == "1":
+        return None, ""
+    default_root = Path.home() / "Projects" / "Jamble-iOS" / "Jamble"
+    if default_root.is_dir():
+        return default_root, "default"
+    return None, ""
 
 
 def png_dimensions(path: Path) -> tuple[int, int] | None:
@@ -870,6 +914,162 @@ def validate_article(article_dir: Path) -> Report:
     if risk_flags:
         for flag in risk_flags:
             rep.warn("risk_flag_reminder", f"surface in PR body: {flag}")
+
+    # ---- rule 25 (NEW, batch real-1 calibration): exactly one H1 per locale.
+    # Calibrated from batch real-1 false-negative on
+    # choose-quantities-when-listing-products: article shipped with 8 top-level
+    # `#` headings instead of 1 H1 + N H2 sections. Hard fail. Articles with
+    # 0 H1 also fail (each locale must open with a single `# Title`).
+    for label, body, path in (
+        ("pt-br", pt_body, pt_path),
+        ("en", en_body, en_path),
+    ):
+        if not body:
+            continue
+        h1_count = len(H1_PATTERN.findall(body))
+        if h1_count != 1:
+            rep.fail(
+                "heading_hierarchy",
+                f"{path.name} has {h1_count} top-level H1 heading(s); "
+                f"expected exactly 1. Use a single `# Title` then `## Section` "
+                f"for each section (and `### Subsection` if needed).",
+            )
+
+    # ---- rule 26 (NEW, batch real-1 calibration): every mockup-sources/*.html
+    # must map to a declared screen.
+    # Calibrated from batch real-1 false-negative on
+    # choose-quantities-when-listing-products: article shipped with 3 orphan
+    # HTMLs (prebid-error-toast.html, quantity-stepper__pt-br.html,
+    # quantity-stepper.html) that no longer matched flow.yml screens, including
+    # 1 with stale "prebid" wording. Hard fail unless the orphan filename is
+    # listed in flow.mockup_plan.allowlist_orphans (rare, document why).
+    #
+    # Scope: gated on `mockup_required=True`. Articles with no mockup
+    # contract (mockup_plan.required=false) are out of scope; their
+    # mockup-sources/ folder is unconstrained. This matches the observed
+    # defect class (v2_rewrite articles whose mockup contract drifted
+    # from the actual files).
+    #
+    # Display path: uses `_display_path()` instead of raw
+    # `relative_to(REPO_ROOT)` so calibration runs and external fixtures
+    # cannot crash the validator with ValueError.
+    if mockup_required and mockup_dir.exists():
+        declared_pairs: set[str] = set()
+        for screen in screens or []:
+            if not isinstance(screen, dict):
+                continue
+            sname = screen.get("name", "")
+            if not sname:
+                continue
+            declared_pairs.add(f"{sname}__pt-br.html")
+            declared_pairs.add(f"{sname}__en.html")
+        raw_allowlist = mockup_plan.get("allowlist_orphans") or []
+        allowlist = {s for s in raw_allowlist if isinstance(s, str)}
+        for html_file in sorted(mockup_dir.glob("*.html")):
+            if html_file.name in declared_pairs:
+                continue
+            if html_file.name in allowlist:
+                continue
+            rep.fail(
+                "mockup_orphan_html",
+                f"{_display_path(html_file)} is not declared in "
+                f"flow.yml mockup_plan.screens (no matching "
+                f"<screen>__<locale>.html). Either delete the file, declare "
+                f"it in screens, or add the filename to "
+                f"mockup_plan.allowlist_orphans (with a justification).",
+            )
+
+    # ---- rule 27 (NEW, batch real-1 calibration): source_of_truth.ios_files
+    # entries must exist in the iOS repo.
+    # Calibrated from batch real-1 false-negative on
+    # understanding-your-seller-analytics: flow.yml listed `SELLER/Analytics/`
+    # and `SELLER/Stats/` as ios_files even though the article's central
+    # claim is that those surfaces do NOT exist. Correct encoding: drop
+    # nonexistent paths from ios_files; document them in
+    # source_of_truth.negative_scan (paths the writer verified are absent)
+    # AND raise a matching risk_flag.
+    #
+    # Activation:
+    #   - env JAMBLE_IOS_ROOT (preferred), OR
+    #   - default ~/Projects/Jamble-iOS/Jamble (Aymar's local convention).
+    # When neither is found AND the article declares ios_files or
+    # negative_scan, the validator emits a SOFT warn
+    # `source_of_truth_check_skipped` so silent confidence inflation
+    # cannot happen. The coordinator's `decide_exception_free` consumes
+    # that warn and disqualifies the article from `exception_free=True`
+    # on its own.
+    ios_root_path, ios_root_source = _resolve_ios_root()
+    sot = flow.get("source_of_truth") or {}
+    sot_ios_files = sot.get("ios_files") or []
+    sot_negative_scan = sot.get("negative_scan") or []
+    flow_risks = flow.get("risk_flags") or []
+    has_risk = bool([r for r in flow_risks if r])
+    declares_ios_paths = (
+        bool([p for p in sot_ios_files if isinstance(p, str) and p.strip()])
+        or bool([p for p in sot_negative_scan if isinstance(p, str) and p.strip()])
+    )
+
+    if ios_root_path is not None:
+        for entry in sot_ios_files:
+            if not isinstance(entry, str) or not entry.strip():
+                continue
+            # strip trailing line ranges like ":220-305"
+            clean_path = entry.split(":")[0].strip()
+            if not clean_path:
+                continue
+            full_path = ios_root_path / clean_path
+            if full_path.exists():
+                continue
+            rep.fail(
+                "source_of_truth_path_missing",
+                f"flow.yml source_of_truth.ios_files entry '{entry}' does "
+                f"not exist under {ios_root_path} (resolved via "
+                f"{ios_root_source}). Drop the entry, fix the path, or "
+                f"move it to source_of_truth.negative_scan with a matching "
+                f"risk_flag.",
+            )
+        # Negative scan: paths the writer asserts are absent. Each entry
+        # MUST NOT exist (else the writer mis-documented), and risk_flags
+        # must be non-empty (else the gap is not surfaced for review).
+        for entry in sot_negative_scan:
+            if not isinstance(entry, str) or not entry.strip():
+                continue
+            clean_path = entry.split(":")[0].strip()
+            if not clean_path:
+                continue
+            full_path = ios_root_path / clean_path
+            if full_path.exists():
+                rep.fail(
+                    "negative_scan_path_actually_exists",
+                    f"flow.yml source_of_truth.negative_scan entry '{entry}' "
+                    f"is declared as absent but actually exists under "
+                    f"{ios_root_path}. Move it to source_of_truth.ios_files "
+                    f"or remove from negative_scan.",
+                )
+        if sot_negative_scan and not has_risk:
+            rep.fail(
+                "negative_scan_without_risk",
+                f"flow.yml source_of_truth.negative_scan has "
+                f"{len(sot_negative_scan)} entry/entries but risk_flags is "
+                f"empty. A documented missing surface must surface in "
+                f"risk_flags so reviewers see it.",
+            )
+    elif declares_ios_paths:
+        # No iOS root resolved AND article declares paths -> visible skip.
+        # Soft warn, not hard fail: the validator is still useful without
+        # the iOS clone for everything else. The coordinator-level
+        # exception_free signal degrades to False so the reviewer pack
+        # surfaces "ios path check was skipped" explicitly.
+        default_hint = Path.home() / "Projects" / "Jamble-iOS" / "Jamble"
+        rep.warn(
+            "source_of_truth_check_skipped",
+            f"flow.yml declares source_of_truth.ios_files or negative_scan "
+            f"but no iOS clone was resolved. Set env JAMBLE_IOS_ROOT or "
+            f"clone the iOS repo at {default_hint}. Until then, rule 27 "
+            f"path-existence checks were NOT enforced; "
+            f"`exception_free` is downgraded to False at the coordinator "
+            f"level to prevent silent confidence inflation.",
+        )
 
     return rep
 

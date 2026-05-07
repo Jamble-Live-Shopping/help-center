@@ -39,6 +39,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -138,12 +139,31 @@ def load_expectations(golden_path: Path) -> tuple[list[dict[str, Any]], list[str
 
 
 def run_validator(slug: str) -> tuple[int, str]:
-    """Return (returncode, combined_output)."""
+    """Return (returncode, combined_output).
+
+    Golden replay deliberately runs in no-iOS mode so the harness is
+    deterministic on CI (where the Jamble-iOS clone is absent) AND on
+    local dev machines that happen to have the clone at the default
+    path. Concretely:
+
+      - JAMBLE_IOS_ROOT is forced unset
+      - JAMBLE_IOS_NO_DEFAULT_FALLBACK=1 disables the
+        ~/Projects/Jamble-iOS/Jamble fallback
+
+    Net effect: rule 27 (source_of_truth_path_missing) does NOT fire
+    during golden replay. The path-existence rule is still proven by
+    the fake-JAMBLE_IOS_ROOT regression tests in test-article-factory.py
+    so coverage does not regress.
+    """
+    env = dict(os.environ)
+    env.pop("JAMBLE_IOS_ROOT", None)
+    env["JAMBLE_IOS_NO_DEFAULT_FALLBACK"] = "1"
     proc = subprocess.run(
         [sys.executable, str(VALIDATOR), str(ARTICLES_DIR / slug)],
         capture_output=True,
         text=True,
         cwd=REPO_ROOT,
+        env=env,
     )
     return proc.returncode, (proc.stdout or "") + (proc.stderr or "")
 

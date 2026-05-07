@@ -99,6 +99,11 @@ RULE_TO_PHASE: dict[str, tuple[int, str]] = {
     "content_audit_stale_table_missing": (7, "Phase 7, Audit triplet"),
     "compliance_all_pass_with_risks": (7, "Phase 7, Audit triplet"),
     "published_with_unresolved_risks": (8, "Phase 8, PR and sync"),
+    "heading_hierarchy": (5, "Phase 5, Article body"),
+    "mockup_orphan_html": (3, "Phase 3, HTML mockups"),
+    "source_of_truth_path_missing": (0, "Phase 0, Contract setup"),
+    "negative_scan_path_actually_exists": (0, "Phase 0, Contract setup"),
+    "negative_scan_without_risk": (0, "Phase 0, Contract setup"),
 }
 
 FAIL_LINE = re.compile(r"\bFAIL\s+\[([a-z0-9_]+)\]\s*(.*)$", re.IGNORECASE)

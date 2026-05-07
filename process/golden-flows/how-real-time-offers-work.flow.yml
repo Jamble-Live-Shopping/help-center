@@ -62,3 +62,7 @@ expected_fails:
     contains: "Scan 6"
     reason: "v2 content-audit uses 'Scan 6, alt-text quality' label, not a stale-feature subsection"
     removal_path: "Add a real 'Stale-feature audit' subsection with the structured table"
+# NOTE: NO source_of_truth_path_missing entry here. Rule 27 depends on a
+# Jamble-iOS clone (CI does not have one). Replay forces no-iOS mode so
+# rule 27 is intentionally skipped during golden replay. The rule is
+# proven by fake-JAMBLE_IOS_ROOT tests in test-article-factory.py.

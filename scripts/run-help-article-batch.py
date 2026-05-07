@@ -170,6 +170,13 @@ class ArticleReview:
     unresolved_risk_flags_count: int = 0
     ios_required_screens_without_review_checks: int = 0
     forbidden_html_contract_failures: int = 0
+    # Batch real-1 calibration (rule 27 hardening): when JAMBLE_IOS_ROOT
+    # is unresolved AND the article declares ios_files / negative_scan,
+    # the validator emits a soft warn `source_of_truth_check_skipped`.
+    # Counting it here lets `decide_exception_free` exclude such articles
+    # from `exception_free=True` so a missing iOS clone never inflates
+    # the reviewer pack confidence silently.
+    source_of_truth_check_skipped: int = 0
     screens_with_html_contract: int = 0       # informational coverage
     screens_with_required_icons: int = 0      # informational coverage
     exception_free: bool = False
@@ -684,6 +691,12 @@ def collect_article_review(
     review.forbidden_html_contract_failures = (
         review.validate_output.count("screen_html_forbidden_text_present")
     )
+    # Batch real-1 calibration (rule 27 hardening): count the visible
+    # skip warn so `decide_exception_free` can disqualify articles where
+    # the path-existence rule did not actually run.
+    review.source_of_truth_check_skipped = (
+        review.validate_output.count("source_of_truth_check_skipped")
+    )
 
     mockup_dir = worktree_path / "assets" / "mockups"
     present_pngs: list[str] = []
@@ -825,6 +838,11 @@ def decide_exception_free(review: ArticleReview) -> None:
         reasons.append(
             f"{review.forbidden_html_contract_failures} forbidden HTML "
             "contract violation(s)"
+        )
+    if review.source_of_truth_check_skipped > 0:
+        reasons.append(
+            "source_of_truth path-existence rule was skipped "
+            "(JAMBLE_IOS_ROOT unresolved); cannot certify ios paths"
         )
     review.exception_reasons = reasons
     review.exception_free = (len(reasons) == 0)
