@@ -7,11 +7,11 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-05-06T00:00:00Z
 locales:
   pt-br:
-    title: 'Mensagens Diretas para Vendedores'
-    description: ''
+    title: 'Mensagens diretas para vendedores'
+    description: 'Onde encontrar mensagens dos compradores na aba Atividade, o que cada filtro mostra, como abrir uma conversa pelo perfil.'
   en:
     title: 'Direct Messages for Sellers'
-    description: "This guide explains how direct messages (DMs) work for sellers on Jamble. You'll learn how to access your messages, communicate with buyers about orders, send photos, and manage your inbox. DMs are your main channel for communicating with buyers outs"
+    description: 'Where to find buyer messages in the Activity tab, what each filter shows, and how to open a conversation from a buyer profile.'
