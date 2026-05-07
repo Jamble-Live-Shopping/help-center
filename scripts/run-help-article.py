@@ -83,6 +83,8 @@ RULE_TO_PHASE: dict[str, tuple[int, str]] = {
     "mockup_screens_empty": (3, "Phase 3, HTML mockups"),
     "mockup_screen_no_name": (3, "Phase 3, HTML mockups"),
     "screen_icon_not_in_html": (3, "Phase 3, HTML mockups (screen icons)"),
+    "screen_html_required_text_missing": (3, "Phase 3, HTML mockups (text contract)"),
+    "screen_html_forbidden_text_present": (3, "Phase 3, HTML mockups (text contract)"),
     "mockup_declared_not_in_pt": (5, "Phase 5, Article body (image refs)"),
     "mockup_declared_not_in_en": (5, "Phase 5, Article body (image refs)"),
     "mockup_referenced_not_declared": (5, "Phase 5, Article body (image refs)"),
@@ -441,6 +443,19 @@ def phase_writer_packet(article_dir: Path) -> int:
                 print(f"- review_checks : (none declared; soft warn). Add at least one of `icons_match_ios_source`, `labels_match_xcstrings`, `no_invented_ui_state` so the reviewer pack lists the manual gates.")
             else:
                 print(f"- review_checks : (none declared)")
+            # PR #89A: deterministic per-screen HTML text contract.
+            html_must_contain = s.get("html_must_contain") or {}
+            html_must_not_contain = s.get("html_must_not_contain") or []
+            if isinstance(html_must_contain, dict) and any(html_must_contain.values()):
+                print(f"- html_must_contain (hard fail per locale if missing):")
+                for lang_key in ("pt-br", "en"):
+                    needles = html_must_contain.get(lang_key) or []
+                    if needles:
+                        print(f"  - {lang_key}: {needles}")
+            if html_must_not_contain:
+                print(f"- html_must_not_contain (hard fail if present in either locale):")
+                for needle in html_must_not_contain:
+                    print(f"  - [ ] avoid: `{needle}`")
             print()
         print("Each screen produces two HTML files and two PNGs DPR3 (>=900px wide).")
         print()

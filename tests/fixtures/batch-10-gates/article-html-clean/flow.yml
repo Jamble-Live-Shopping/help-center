@@ -1,0 +1,42 @@
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+job_to_be_done: "Synthetic fixture: both contracts declared and satisfied; rules must NOT fire"
+source_of_truth:
+  ios_files:
+    - X/Y.swift
+  backend_files: []
+  legal: []
+  support_context: []
+content_contract:
+  must_answer: []
+  forbidden_terms: []
+  must_not_say: []
+mockup_plan:
+  required: true
+  screens:
+    - name: profile
+      purpose: "All required text present, all forbidden text absent"
+      source: ios_required
+      required_icons: []
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Seguir"
+          - "Mensagem"
+        en:
+          - "Follow"
+          - "Message"
+      html_must_not_contain:
+        - "::before"
+        - "<img"
+        - "<svg"
+        - "icon-"
+icons_required: []
+icons_fallback_feather: false
+currency_required: false
+risk_flags: []
+resolved_decisions: []

@@ -1,0 +1,14 @@
+intercom_id: 99200
+slug: article-html-forbidden-present
+collection_id: 19177939
+default_locale: pt-br
+state: draft
+author_id: 7980507
+last_sync: 2026-05-07T00:00:00Z
+locales:
+  pt-br:
+    title: 'Fixture html_must_not_contain hits'
+    description: 'Synthetic fixture'
+  en:
+    title: 'Fixture html_must_not_contain hits'
+    description: 'Synthetic fixture'

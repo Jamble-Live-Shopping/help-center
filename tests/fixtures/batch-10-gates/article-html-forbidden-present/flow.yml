@@ -1,0 +1,34 @@
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+job_to_be_done: "Synthetic fixture: html_must_not_contain MUST hard-fail when the forbidden string is in the HTML"
+source_of_truth:
+  ios_files:
+    - X/Y.swift
+  backend_files: []
+  legal: []
+  support_context: []
+content_contract:
+  must_answer: []
+  forbidden_terms: []
+  must_not_say: []
+mockup_plan:
+  required: true
+  screens:
+    - name: profile
+      purpose: "Mimics the DM regression: text-only iOS button, no icon"
+      source: ios_required
+      required_icons: []
+      review_checks:
+        - icons_match_ios_source
+        - no_invented_ui_state
+      html_must_not_contain:
+        - "::before"
+        - "<img"
+        - "<svg"
+        - "icon-"
+icons_required: []
+icons_fallback_feather: false
+currency_required: false
+risk_flags: []
+resolved_decisions: []

@@ -101,6 +101,34 @@ mockup_plan:
     #   review_checks:
     #     - icons_match_ios_source
     #     - labels_match_xcstrings
+    #
+    #   # Screen-scoped HTML text contract (PR #89A, deterministic
+    #   # negative visual contract). OPTIONAL. Pure substring grep on
+    #   # the screen's HTML files; no LLM, no regex, no semantic check.
+    #   #
+    #   # `html_must_contain` is locale-specific: each list applies
+    #   # ONLY to its matching `<screen>__<lang>.html`. The rule
+    #   # `screen_html_required_text_missing` HARD-fails when a
+    #   # required string is missing for that locale.
+    #   html_must_contain:
+    #     pt-br:
+    #       - "Seguir"
+    #       - "Mensagem"
+    #     en:
+    #       - "Follow"
+    #       - "Message"
+    #
+    #   # `html_must_not_contain` applies to BOTH locales (a flat list).
+    #   # The rule `screen_html_forbidden_text_present` HARD-fails when
+    #   # any listed string appears in either pt-br or en HTML. Use
+    #   # this on screens whose iOS source says "no icon", "no toast",
+    #   # "no <feature X>" so the validator catches the moment a
+    #   # mockup smuggles invented UI back in.
+    #   html_must_not_contain:
+    #     - "::before"
+    #     - "<img"
+    #     - "<svg"
+    #     - "icon-"
     []
 
 # iOS icons used in the mockups. Each entry must satisfy ONE of:
