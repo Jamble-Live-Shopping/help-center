@@ -57,6 +57,24 @@ mockup_plan:
         - icons_match_ios_source
         - labels_match_xcstrings
         - no_invented_ui_state
+      # PR #89A deterministic HTML text contract. Locks in the iOS
+      # truth: the button labels MUST be present per locale, and the
+      # invented-icon patterns (`::before` pseudo-element, smuggled
+      # `<img>` / `<svg>` tags, leftover `icon-` classes) MUST NOT
+      # come back. Catches the exact regression that shipped in the
+      # original PR #87 mockup.
+      html_must_contain:
+        pt-br:
+          - "Seguir"
+          - "Mensagem"
+        en:
+          - "Follow"
+          - "Message"
+      html_must_not_contain:
+        - "::before"
+        - "<img"
+        - "<svg"
+        - "icon-"
 
 icons_required: []
 icons_fallback_feather: false
