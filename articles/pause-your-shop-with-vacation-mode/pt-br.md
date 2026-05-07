@@ -1,77 +1,64 @@
-# Pause Sua Loja com o Modo Férias
+# Pause sua loja com o Modo de Férias
 
 ## O que você vai aprender
 
-Este guia explica como usar o Modo Férias na Jamble. Quando você precisa de uma pausa — seja por viagem, questões pessoais ou apenas para colocar envios em dia — o Modo Férias permite que você temporariamente deixe seus produtos indisponíveis para compra.
+Como ativar o **Modo de Férias** para que seus produtos fiquem indisponíveis para compra enquanto você está fora, e como desativar quando voltar. Vale para qualquer pausa: viagem, atraso de envios, motivo pessoal.
 
 ## Antes de começar
 
-Você precisa de:
-- Uma conta de vendedor aprovada na Jamble
+Você precisa de uma conta de vendedor aprovada na Jamble e do app instalado no seu celular.
 
-## Como o Modo Férias funciona
+## Onde encontrar o Modo de Férias
 
-Quando você ativa o Modo Férias:
-- Todos os seus produtos ficam **indisponíveis para compra**
-- Os compradores não podem comprar seus itens até você desativar
-- Seu perfil e produtos ainda ficam visíveis, mas a compra é bloqueada
+Abra o seu perfil, toque no ícone de configurações e role até a seção **Sell**. A linha **Modo de férias** fica logo abaixo das outras opções de venda.
 
-Quando você desativa, tudo volta ao normal — seus produtos ficam disponíveis para compra novamente.
+![Tela Configurações com a seção Sell e a linha Modo de férias destacada](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/pause-your-shop-with-vacation-mode__settings-vacation-cell__pt-br__v3.png)
 
-## Passo a passo
+## O que acontece quando você ativa
 
-### Passo 1: Abra suas configurações
+Toque em **Modo de férias**. A Jamble abre uma janela de confirmação com o aviso oficial:
 
-Vá ao seu perfil e toque em **Configurações** (ícone de engrenagem).
+> Ao ativar o Modo de Férias, todos os seus itens ficarão indisponíveis para serem comprados por outras pessoas.
 
-### Passo 2: Encontre o toggle do Modo Férias
+![Janela de confirmação do Modo de férias com a mensagem de aviso e o botão Ativar](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/pause-your-shop-with-vacation-mode__vacation-modal-on__pt-br__v3.png)
 
-Role até a seção **SELL**. Você verá **"Vacation mode"** com um toggle.
+Toque em **Ativar** para confirmar. A partir desse momento:
 
-![Tela Configurações com seção SELL mostrando linhas My Sales, My Wallet, Shipping Preferences e checkbox Vacation mode](./assets/mockups/pause-your-shop-with-vacation-mode__configuracoes-sell__pt-br.png)
+- Todos os seus produtos ficam **indisponíveis para compra**.
+- Os compradores ainda veem seu perfil e seus itens, mas não conseguem finalizar uma compra.
+- Pedidos que já estavam em andamento continuam normalmente. Você ainda precisa enviar esses pedidos no prazo.
 
-### Passo 3: Ative o Modo Férias
+## Como desativar
 
-Toque em **"Vacation mode"**. Uma tela de confirmação aparece:
+Volte em **Configurações** > **Sell** > **Modo de férias**. A janela mostra agora a confirmação de saída:
 
-![Tela de informações do Modo Férias com descrição e botão Ativar](./assets/mockups/pause-your-shop-with-vacation-mode__vacation-mode-info__pt-br.png)
+> No momento, você está no Modo de Férias. Ao desativá-lo, todos os seus itens estarão disponíveis para compra.
 
-Toque em **"Turn On"** para ativar o Modo Férias.
-
-### Passo 4: Desative o Modo Férias quando estiver pronto
-
-Quando quiser voltar a vender, vá em Configurações > SELL > Vacation mode. A tela agora mostra:
-
-![vacation-mode-status: Tela exibindo status atual do Modo de Férias com texto explicativo e botão Desativar](./assets/mockups/pause-your-shop-with-vacation-mode__vacation-mode-status__pt-br.png)
-
-Toque em **"Turn Off"** e sua loja volta ao normal.
+Toque em **Desativar**. Seus produtos voltam a ficar disponíveis na hora.
 
 ## Dicas importantes
 
-- **Ative o Modo Férias antes de sair.** Se sabe que não vai conseguir enviar pedidos por alguns dias, ative o Modo Férias antes de viajar. Isso evita vendas que você não pode cumprir no prazo
-- **Envie todos os pedidos pendentes primeiro.** O Modo Férias impede novas compras, mas não cancela pedidos existentes. Certifique-se de enviar qualquer pedido pendente antes ou durante sua pausa
-- **Não tem limite de tempo.** Você pode manter o Modo Férias ativo pelo tempo que precisar. Desative quando estiver pronto para vender novamente
-- **O efeito é imediato.** No momento que você toca em "Turn On", seus produtos ficam indisponíveis. O mesmo para desativar — os produtos ficam disponíveis novamente instantaneamente
+- **Despache os pedidos pendentes primeiro.** O Modo de Férias bloqueia compras novas, não cancela compras existentes.
+- **Ative antes de viajar.** Assim você não recebe pedidos que não vai conseguir enviar a tempo.
+- **Não tem prazo limite.** Mantenha ativado pelo tempo que precisar.
+- **O efeito é imediato.** Não precisa esperar nada depois de tocar em Ativar ou Desativar.
 
 ## Perguntas frequentes
 
-**Os compradores ainda podem ver meu perfil quando estou no Modo Férias?**
-Sim. Seu perfil e produtos ainda ficam visíveis na Jamble. Os compradores podem navegar pelas suas listagens, mas não podem fazer compras até você desativar o Modo Férias.
+**Os compradores ainda veem meu perfil?**
+Sim. Seu perfil e seus produtos ficam visíveis. A única diferença é que a compra fica bloqueada.
 
-**O Modo Férias cancela meus shows agendados?**
-Não. O Modo Férias afeta compras de produtos, não shows. Se você tem shows agendados, deve cancelá-los separadamente se não estiver disponível para apresentar.
+**O Modo de Férias cancela meus shows agendados?**
+Não. Modo de Férias afeta a venda de produtos. Se você não vai poder fazer um show agendado, cancele o show separadamente.
 
-**O que acontece com pedidos pendentes quando eu ativo o Modo Férias?**
-Pedidos existentes não são afetados. Você ainda precisa enviar qualquer pedido feito antes de ativar o Modo Férias. Apenas novas compras são bloqueadas.
+**E os pedidos que já estavam em andamento?**
+Continuam. Você ainda precisa enviar esses pedidos. O Modo de Férias só bloqueia compras novas.
 
-**Posso ativar e desativar o Modo Férias quantas vezes quiser?**
-Sim. Não há limite ou período de espera. Você pode alternar quantas vezes precisar.
+**Posso ativar e desativar várias vezes?**
+Sim. Não tem limite nem tempo de espera.
 
-**Vou perder seguidores ou visibilidade se usar o Modo Férias?**
-Não. Seu perfil, seguidores e visibilidade não são afetados. Quando você desativar o Modo Férias, tudo estará exatamente como você deixou.
-
-**Esqueci de ativar o Modo Férias e recebi um pedido que não consigo enviar. O que devo fazer?**
-Entre em contato com o comprador pelo app para informar sobre o atraso. Se não conseguir enviar em tempo razoável, pode ser necessário cancelar o pedido. Depois ative o Modo Férias para evitar mais pedidos até estar pronto.
+**Vou perder seguidores ou visibilidade?**
+Não. Quando você desativar, sua loja volta exatamente como estava.
 
 ## Precisa de ajuda?
 
