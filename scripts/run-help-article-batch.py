@@ -164,6 +164,16 @@ class ArticleReview:
     manual_gates: list[dict] = field(default_factory=list)
     status: str = "pending"  # ready | blocked | failed
     blockers: list[str] = field(default_factory=list)
+    # PR #90 exception-only triage signals. All 5 inputs below feed
+    # `exception_free`. The two coverage signals after them are
+    # informational only (zero coverage is not a defect).
+    unresolved_risk_flags_count: int = 0
+    ios_required_screens_without_review_checks: int = 0
+    forbidden_html_contract_failures: int = 0
+    screens_with_html_contract: int = 0       # informational coverage
+    screens_with_required_icons: int = 0      # informational coverage
+    exception_free: bool = False
+    exception_reasons: list[str] = field(default_factory=list)
 
 
 # --------------------------------------------------------------------------
@@ -622,18 +632,58 @@ def collect_article_review(
     screens = ((flow.get("mockup_plan") or {}).get("screens")) or []
     declared_pairs: list[str] = []
     manual_gates: list[dict] = []
+    # PR #90 evidence counters derived from the same screen walk.
+    ios_req_no_review_checks = 0
+    screens_with_html = 0
+    screens_with_icons = 0
     for s in screens:
-        if isinstance(s, dict) and s.get("name"):
-            declared_pairs.append(f"{s['name']}__pt-br")
-            declared_pairs.append(f"{s['name']}__en")
-            manual_gates.append({
-                "screen": s["name"],
-                "source": s.get("source", ""),
-                "required_icons": list(s.get("required_icons") or []),
-                "review_checks": list(s.get("review_checks") or []),
-            })
+        if not isinstance(s, dict) or not s.get("name"):
+            continue
+        declared_pairs.append(f"{s['name']}__pt-br")
+        declared_pairs.append(f"{s['name']}__en")
+        manual_gates.append({
+            "screen": s["name"],
+            "source": s.get("source", ""),
+            "required_icons": list(s.get("required_icons") or []),
+            "review_checks": list(s.get("review_checks") or []),
+        })
+        # ios_required without review_checks counts as an exception trigger.
+        if s.get("source") == "ios_required" and not (s.get("review_checks") or []):
+            ios_req_no_review_checks += 1
+        # Coverage: html contract declared on this screen?
+        html_must = s.get("html_must_contain") or {}
+        html_must_not = s.get("html_must_not_contain") or []
+        has_html_contract = (
+            (isinstance(html_must, dict) and any(html_must.values()))
+            or (isinstance(html_must_not, list) and len(html_must_not) > 0)
+        )
+        if has_html_contract:
+            screens_with_html += 1
+        # Coverage: required_icons declared non-empty on this screen?
+        if list(s.get("required_icons") or []):
+            screens_with_icons += 1
     review.mockups_declared = len(declared_pairs)
     review.manual_gates = manual_gates
+    review.ios_required_screens_without_review_checks = ios_req_no_review_checks
+    review.screens_with_html_contract = screens_with_html
+    review.screens_with_required_icons = screens_with_icons
+
+    # Unresolved risk flags: `risk_flags` count minus `resolved_decisions`
+    # count, floor at 0. Existing factory practice pairs decisions to
+    # risks 1-to-1; a stricter name-match would be a separate scope.
+    risk_flags_list = flow.get("risk_flags") or []
+    resolved_decisions_list = flow.get("resolved_decisions") or []
+    review.unresolved_risk_flags_count = max(
+        0, len(risk_flags_list) - len(resolved_decisions_list)
+    )
+
+    # PR #89A forbidden HTML contract violation count, parsed from the
+    # validator output we already captured. The validator emits one
+    # `screen_html_forbidden_text_present` line per (screen, locale,
+    # forbidden-token) hit; counting line occurrences is the right granularity.
+    review.forbidden_html_contract_failures = (
+        review.validate_output.count("screen_html_forbidden_text_present")
+    )
 
     mockup_dir = worktree_path / "assets" / "mockups"
     present_pngs: list[str] = []
@@ -721,6 +771,64 @@ def decide_review_status(review: ArticleReview) -> None:
         review.status = "blocked"
         review.blockers = blockers
 
+    # PR #90: derive the informational `exception_free` signal AFTER the
+    # status decision. The status field stays the source of truth for
+    # blocked/failed/ready; exception_free is an additional triage layer
+    # that only matters for the reviewer pack sort + display.
+    decide_exception_free(review)
+
+
+def decide_exception_free(review: ArticleReview) -> None:
+    """Compute the informational `exception_free` signal and the
+    human-readable `exception_reasons` list, in place.
+
+    PR #90 triage helper. NOT a publication gate. The reviewer always
+    retains final authority over what ships. `exception_free == True`
+    means "no exceptions remain for the reviewer to inspect", not
+    "ship without review".
+
+    Inputs (all deterministic, no LLM, no vision, no semantic scoring):
+
+    - hard_fail_count          (validator output)
+    - audit_skeleton_unfilled  (filesystem grep, already populated)
+    - audit_files_present      (filesystem count, already populated)
+    - mockups_present vs mockups_declared (already populated)
+    - unresolved_risk_flags_count                (PR #90 new)
+    - ios_required_screens_without_review_checks (PR #90 new)
+    - forbidden_html_contract_failures           (PR #90 new, parsed
+      from validator output for `screen_html_forbidden_text_present`)
+
+    Each failed criterion appends a short human-readable string to
+    `exception_reasons`. Order is stable so reviewer-pack diffs are
+    readable.
+    """
+    reasons: list[str] = []
+    if review.hard_fail_count > 0:
+        reasons.append(f"{review.hard_fail_count} validator hard fail(s)")
+    if review.audit_skeleton_unfilled:
+        reasons.append("audit triplet still has SKELETON_TODO markers")
+    if review.audit_files_present < 3:
+        reasons.append(
+            f"audit triplet incomplete ({review.audit_files_present}/3)"
+        )
+    if review.mockups_declared > 0 and review.mockups_present < review.mockups_declared:
+        missing = review.mockups_declared - review.mockups_present
+        reasons.append(f"{missing} mockup PNG(s) missing")
+    if review.unresolved_risk_flags_count > 0:
+        reasons.append(
+            f"{review.unresolved_risk_flags_count} unresolved risk_flag(s)"
+        )
+    if review.ios_required_screens_without_review_checks > 0:
+        n = review.ios_required_screens_without_review_checks
+        reasons.append(f"{n} ios_required screen(s) without review_checks")
+    if review.forbidden_html_contract_failures > 0:
+        reasons.append(
+            f"{review.forbidden_html_contract_failures} forbidden HTML "
+            "contract violation(s)"
+        )
+    review.exception_reasons = reasons
+    review.exception_free = (len(reasons) == 0)
+
 
 def mode_review(
     batch_path: Path,
@@ -737,6 +845,19 @@ def mode_review(
         worktree_path = worktree_base / entry.slug
         review = collect_article_review(REPO_ROOT, worktree_path, entry)
         reviews.append(review)
+
+    # PR #90: sort by exception severity so the reviewer pack opens
+    # with the worst-state articles at the top of the scorecard.
+    # Sort key: failed -> blocked -> ready+not exception_free -> ready+exception_free.
+    def _sort_key(r: ArticleReview) -> int:
+        if r.status == "failed":
+            return 0
+        if r.status == "blocked":
+            return 1
+        if not r.exception_free:
+            return 2
+        return 3
+    reviews.sort(key=_sort_key)
 
     # Persist machine-readable result before generating the HTML pack so
     # CI / debugging always has the raw data even if rendering fails.

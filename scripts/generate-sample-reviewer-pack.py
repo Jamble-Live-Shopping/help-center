@@ -84,6 +84,16 @@ def _build_summary() -> dict:
                 ],
                 "status": "ready",
                 "blockers": [],
+                # PR #90 informational triage: this article is exception_free
+                # so it gets the green EXCEPTION-FREE badge and does NOT
+                # appear in the top-of-pack Exceptions section.
+                "unresolved_risk_flags_count": 0,
+                "ios_required_screens_without_review_checks": 0,
+                "forbidden_html_contract_failures": 0,
+                "screens_with_html_contract": 0,
+                "screens_with_required_icons": 0,
+                "exception_free": True,
+                "exception_reasons": [],
             },
             {
                 "slug": "notification-settings-demo",
@@ -115,6 +125,19 @@ def _build_summary() -> dict:
                 ],
                 "status": "blocked",
                 "blockers": ["validate exit 1", "1 validator hard fail(s)"],
+                # PR #90: blocked articles are not exception-free by
+                # definition (the hard fail is itself a reason). They do
+                # NOT appear in the Exceptions-to-review section, which
+                # is scoped to ready+not exception_free; blocked rows
+                # are surfaced via the existing scorecard + per-article
+                # blockers alert.
+                "unresolved_risk_flags_count": 0,
+                "ios_required_screens_without_review_checks": 0,
+                "forbidden_html_contract_failures": 0,
+                "screens_with_html_contract": 0,
+                "screens_with_required_icons": 0,
+                "exception_free": False,
+                "exception_reasons": ["1 validator hard fail(s)"],
             },
         ],
     }
