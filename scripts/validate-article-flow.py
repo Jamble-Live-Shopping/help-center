@@ -411,6 +411,82 @@ def validate_article(article_dir: Path) -> Report:
                     f"the manual gates explicitly.",
                 )
 
+    # ---- rule 10d (NEW, PR #89A, screen-scoped HTML text contract).
+    #
+    # Two HARD-FAIL rules for catching invented or missing UI text in
+    # mockup HTMLs. Calibrated from the PR #87 DM bug: iOS Follow +
+    # Message buttons are text-only (no icon), but the original mockup
+    # invented a CSS-drawn purple-square pseudo-element on the Message
+    # button. The required_icons rule (10b) is dormant when no icons
+    # are required, so it could not catch this class of regression.
+    # html_must_not_contain plugs that gap with deterministic grep:
+    # if a screen's iOS source says "no icon", declare ["::before",
+    # "<img", "<svg", "icon-"] in html_must_not_contain and the
+    # validator hard-fails the moment any of those reappears.
+    #
+    # screen_html_required_text_missing (HARD FAIL):
+    #   When `screen.html_must_contain.<lang>` is non-empty for `pt-br`
+    #   or `en`, every string in that list must appear (case-sensitive
+    #   substring) in the corresponding `<screen>__<lang>.html`.
+    #
+    # screen_html_forbidden_text_present (HARD FAIL):
+    #   When `screen.html_must_not_contain` is non-empty (a flat list
+    #   that applies to BOTH locales), no string in the list may
+    #   appear in either `<screen>__pt-br.html` or `<screen>__en.html`.
+    #
+    # Pure substring grep. NO regex, NO LLM, NO semantic scoring.
+    # Backward-compat: if both fields are absent or empty, the rules
+    # are no-ops on that screen, so historical articles keep their
+    # current validate output.
+    if mockup_required and screens and mockup_dir.exists():
+        for screen in screens:
+            if not isinstance(screen, dict):
+                continue
+            name = screen.get("name", "")
+            if not name:
+                continue
+            must_contain = screen.get("html_must_contain")
+            must_not_contain_list = screen.get("html_must_not_contain") or []
+            if not must_contain and not must_not_contain_list:
+                continue  # backward-compat: no contract declared
+            for lang_label in ("pt-br", "en"):
+                html_path = mockup_dir / f"{name}__{lang_label}.html"
+                if not html_path.exists():
+                    continue
+                try:
+                    blob = html_path.read_text(encoding="utf-8")
+                except OSError:
+                    continue
+                # Locale-specific required strings.
+                required_for_lang: list[str] = []
+                if isinstance(must_contain, dict):
+                    raw = must_contain.get(lang_label)
+                    if isinstance(raw, list):
+                        required_for_lang = [
+                            s for s in raw if isinstance(s, str) and s
+                        ]
+                for needle in required_for_lang:
+                    if needle not in blob:
+                        rep.fail(
+                            "screen_html_required_text_missing",
+                            f"screen '{name}' declares html_must_contain."
+                            f"{lang_label} ['{needle}'] but it is not "
+                            f"present in {html_path.relative_to(REPO_ROOT)}.",
+                        )
+                # Forbidden strings (apply to BOTH locales).
+                forbidden = [
+                    s for s in must_not_contain_list
+                    if isinstance(s, str) and s
+                ]
+                for needle in forbidden:
+                    if needle in blob:
+                        rep.fail(
+                            "screen_html_forbidden_text_present",
+                            f"screen '{name}' declares html_must_not_contain "
+                            f"['{needle}'] but it IS present in "
+                            f"{html_path.relative_to(REPO_ROOT)}.",
+                        )
+
     # ---- rule 11: audit triplet present
     intercom_id = meta_id or flow_id
     if intercom_id is None:

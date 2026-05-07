@@ -665,6 +665,85 @@ def test_validator_screen_required_icons_present_passes() -> None:
     )
 
 
+def test_validator_screen_html_forbidden_text_present_fails() -> None:
+    """PR #89A regression-defense for the DM bug.
+
+    When `screen.html_must_not_contain` declares a forbidden substring
+    AND the mockup HTML contains that substring, the validator must
+    hard-fail with `screen_html_forbidden_text_present`. Both locales
+    are checked independently (the fixture has the forbidden token in
+    both pt-br and en, so we expect at least 2 fail lines for the
+    ::before token alone, plus more for the other forbidden strings
+    declared in the fixture).
+
+    This is the exact gate Aymar asked for: a screen whose iOS source
+    says "text-only button, no icon" must fail if the mockup HTML
+    smuggles an icon back via `::before`, `<img`, `<svg`, or
+    `icon-`."""
+    fixture = REPO_ROOT / "tests" / "fixtures" / "batch-10-gates" / "article-html-forbidden-present"
+    rc, out, err = _run([sys.executable, str(SCRIPTS_DIR / "validate-article-flow.py"), str(fixture)])
+    combined = out + err
+    # The rule fires per (locale, forbidden-token) pair the fixture
+    # declares 4 forbidden tokens in both locales, so 8 hits is the
+    # upper bound. Assert at least one ::before hit on each locale.
+    assert "screen_html_forbidden_text_present" in combined, (
+        f"forbidden token present but rule did not fire:\n{combined[:800]}"
+    )
+    assert combined.count("screen_html_forbidden_text_present") >= 2, (
+        f"expected at least 2 hits (one per locale), got "
+        f"{combined.count('screen_html_forbidden_text_present')} in:\n{combined[:800]}"
+    )
+    assert "::before" in combined, (
+        f"expected the ::before token in the failure message:\n{combined[:800]}"
+    )
+
+
+def test_validator_screen_html_required_text_missing_in_locale_fails() -> None:
+    """PR #89A: html_must_contain is locale-specific.
+
+    The fixture declares pt-br: ['Seguir', 'Mensagem'], en: ['Follow',
+    'Message']. The pt-br HTML intentionally lacks 'Seguir' (but has
+    'Mensagem'), and the en HTML has both Follow and Message. The
+    validator must:
+    - hard-fail with `screen_html_required_text_missing` for the
+      missing pt-br 'Seguir' (and ONLY that one — Mensagem is
+      present)
+    - NOT fire on en (both required strings present)
+
+    This proves the rule is locale-scoped, not aggregate."""
+    fixture = REPO_ROOT / "tests" / "fixtures" / "batch-10-gates" / "article-html-required-missing"
+    rc, out, err = _run([sys.executable, str(SCRIPTS_DIR / "validate-article-flow.py"), str(fixture)])
+    combined = out + err
+    assert "screen_html_required_text_missing" in combined, (
+        f"required string missing but rule did not fire:\n{combined[:800]}"
+    )
+    # Exactly one hit: the missing pt-br 'Seguir'. Not the present
+    # 'Mensagem', not anything on en (Follow + Message both present).
+    assert combined.count("screen_html_required_text_missing") == 1, (
+        f"expected exactly 1 hit (pt-br Seguir missing), got "
+        f"{combined.count('screen_html_required_text_missing')} in:\n{combined[:800]}"
+    )
+    assert "Seguir" in combined and "pt-br" in combined, (
+        f"failure message should name 'Seguir' and the pt-br locale:\n{combined[:800]}"
+    )
+
+
+def test_validator_screen_html_contracts_clean_does_not_fire() -> None:
+    """PR #89A counterpart: when both contracts are declared and
+    satisfied, neither rule fires. Other validator rules may still
+    flag the fixture for unrelated reasons (PNG missing, audit content
+    not yet filled), but the two new rules must stay silent."""
+    fixture = REPO_ROOT / "tests" / "fixtures" / "batch-10-gates" / "article-html-clean"
+    rc, out, err = _run([sys.executable, str(SCRIPTS_DIR / "validate-article-flow.py"), str(fixture)])
+    combined = out + err
+    assert "screen_html_required_text_missing" not in combined, (
+        f"required text IS present but rule still fired:\n{combined[:800]}"
+    )
+    assert "screen_html_forbidden_text_present" not in combined, (
+        f"forbidden text NOT present but rule still fired:\n{combined[:800]}"
+    )
+
+
 def test_validator_review_checks_missing_softwarns_for_ios_required() -> None:
     """When a screen is `source: ios_required` but `review_checks` is
     empty/missing, the validator emits a SOFT warn (not a hard fail).
@@ -1130,6 +1209,9 @@ TESTS = [
     test_render_path_with_space_uses_url_escape,
     test_validator_screen_required_icons_missing_fails,
     test_validator_screen_required_icons_present_passes,
+    test_validator_screen_html_forbidden_text_present_fails,
+    test_validator_screen_html_required_text_missing_in_locale_fails,
+    test_validator_screen_html_contracts_clean_does_not_fire,
     test_validator_review_checks_missing_softwarns_for_ios_required,
     test_reviewer_pack_renders_manual_gates_when_present,
     test_render_html_is_self_contained_no_external_js,
