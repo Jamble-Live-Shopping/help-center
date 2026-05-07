@@ -56,15 +56,16 @@ currency_required: false
 risk_flags: []
 resolved_decisions: []
 
-# Expected fails: post batch real-1 calibration the canary picks up
-# rule 27 (source_of_truth_path_missing) because LIVE_SHOPPING/ProductList/
-# does not match the current iOS layout. The article itself stays clean
-# on every other rule (the stale-feature gate continues to pass). Drop
-# this entry once the path is corrected (or moved to negative_scan with
-# a matching risk_flag).
-expected_fails:
-  - rule: source_of_truth_path_missing
-    count: 1
-    contains: "LIVE_SHOPPING/ProductList/"
-    reason: "batch real-1 calibration (rule 27): the LIVE_SHOPPING/ProductList/ entry does not exist at this exact path in current Jamble-iOS — the directory was renamed/moved in early 2026. Article shipped before this rule existed."
-    removal_path: "Update the entry to the current iOS path or move to source_of_truth.negative_scan with a matching risk_flag"
+# Expected fails: empty. This article is a clean canary post-PR #76:
+# the content-audit gained an explicit "Stale-feature audit" subsection
+# with the structured table (Claim / feature, Source checked, Status,
+# Checked at, Owner, Verdict). The replay must therefore observe 0
+# hard fails. If a regression appears, the canary fails loud and the
+# team investigates instead of allowlisting.
+#
+# NOTE: rule 27 (source_of_truth_path_missing) is intentionally NOT
+# expected here. Replay forces no-iOS mode (JAMBLE_IOS_ROOT unset,
+# JAMBLE_IOS_NO_DEFAULT_FALLBACK=1) so path-existence is skipped and
+# expected_fails stay filesystem-portable for CI. The rule is proven
+# by fake-JAMBLE_IOS_ROOT tests in test-article-factory.py.
+expected_fails: []
