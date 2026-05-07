@@ -183,12 +183,34 @@ STATUS_BADGE = {
     "blocked": ('#B45309', '#FEF3C7', 'BLOCKED'),
     "failed":  ('#B42318', '#FEE4E2', 'FAILED'),
     "pending": ('#475467', '#F2F4F7', 'PENDING'),
+    # PR #90 informational badges, distinct from the validator-derived
+    # status. Same shape so the existing CSS keeps working.
+    "exception_free": ('#0F8A3C', '#E8F5E9', 'EXCEPTION-FREE'),
+    "review_needed":  ('#B45309', '#FEF3C7', 'REVIEW NEEDED'),
 }
 
 
 def _badge_html(status: str) -> str:
     fg, bg, label = STATUS_BADGE.get(status, STATUS_BADGE["pending"])
     return f'<span class="badge" style="color:{fg};background:{bg};">{label}</span>'
+
+
+def _effective_badge(r: dict) -> str:
+    """PR #90: pick the badge that best summarises the article state.
+
+    `failed` and `blocked` keep their validator-derived badges
+    unchanged (those are hard signals the reviewer must address).
+    A `ready` article gets the EXCEPTION-FREE green pill when the
+    informational `exception_free` flag is True, REVIEW NEEDED yellow
+    otherwise. The original READY badge becomes a fallback only when
+    the JSON does not carry an `exception_free` key (older summaries).
+    """
+    status = r.get("status", "pending")
+    if status != "ready":
+        return _badge_html(status)
+    if "exception_free" not in r:
+        return _badge_html("ready")
+    return _badge_html("exception_free" if r.get("exception_free") else "review_needed")
 
 
 def render_scorecard(reviews: list[dict]) -> str:
@@ -235,7 +257,7 @@ def render_scorecard(reviews: list[dict]) -> str:
             f'<tr>'
             f'<td><a href="#article-{_esc(r["slug"])}"><b>{_esc(r["slug"])}</b></a>'
             f'<div class="muted small">audience: {_esc(r["audience"])}</div></td>'
-            f'<td>{_badge_html(r["status"])}{blockers_html}</td>'
+            f'<td>{_effective_badge(r)}{blockers_html}</td>'
             f'<td class="num {hard_class}">{hard if hard >= 0 else "-"}</td>'
             f'<td class="num">{soft if soft >= 0 else "-"}</td>'
             f'<td class="num {em_class}">{em_str}</td>'
@@ -366,6 +388,25 @@ def render_article(r: dict) -> str:
             + "</ul></div>"
         )
 
+    # PR #90: per-article exception-reasons sub-block, only for `ready`
+    # articles that are NOT exception-free. Always visible (no
+    # <details> wrap). For blocked/failed articles the existing
+    # blockers alert already covers it; we don't duplicate.
+    exceptions_html = ""
+    if (
+        r.get("status") == "ready"
+        and r.get("exception_free") is False
+        and r.get("exception_reasons")
+    ):
+        reasons = r["exception_reasons"]
+        exceptions_html = (
+            '<div class="exception-block">'
+            '<h3>Exception reasons (informational, not gating)</h3>'
+            '<ul>'
+            + "".join(f"<li>{_esc(reason)}</li>" for reason in reasons)
+            + '</ul></div>'
+        )
+
     branch_link = ""
     if r.get("branch"):
         branch_link = f'<span class="muted small"> · branch: <code>{_esc(r["branch"])}</code></span>'
@@ -415,12 +456,13 @@ def render_article(r: dict) -> str:
 
     return (
         f'<section id="article-{_esc(r["slug"])}" class="article">'
-        f'<header><h2>{_esc(r["slug"])} {_badge_html(r["status"])}</h2>'
+        f'<header><h2>{_esc(r["slug"])} {_effective_badge(r)}</h2>'
         f'<div class="muted">audience: {_esc(r["audience"])} · '
         f'intercom_id: {r.get("intercom_id") or "-"} · '
         f'worktree: <code>{_esc(r["worktree"])}</code>{branch_link}</div></header>'
         f'{blockers_html}'
         f'{missing_html}'
+        f'{exceptions_html}'
         f'{gates_html}'
         f'<details open><summary>Validate output</summary>{validate_pre}</details>'
         f'<details><summary>pt-BR body (rendered preview)</summary>'
@@ -517,7 +559,57 @@ pre.validate {
 .questions h3 { margin-top: 0; color: var(--brand); }
 .questions ol { margin: 6px 0 0 22px; }
 .questions li { margin: 6px 0; }
+.exceptions-top { background: #FEF3C7; border: 1px solid #FDE68A; border-radius: 10px; padding: 14px 18px; margin-bottom: 24px; }
+.exceptions-top h2 { margin: 0 0 8px; color: #B45309; font-size: 16px; }
+.exceptions-top ul { margin: 6px 0 0 18px; }
+.exceptions-top li { margin: 6px 0; font-size: 13px; }
+.exceptions-top li ul { margin-top: 4px; }
+.exceptions-top li ul li { color: var(--muted); font-size: 12px; }
+.exceptions-top .all-clear { color: #0F8A3C; font-weight: 600; margin: 4px 0 0; }
+.exception-block { background: #FEF3C7; border: 1px solid #FDE68A; border-radius: 8px; padding: 10px 14px; margin: 10px 0; }
+.exception-block h3 { margin: 0 0 6px; color: #B45309; font-size: 13px; }
+.exception-block ul { margin: 0 0 0 18px; font-size: 12px; }
+.exception-block li { margin: 3px 0; }
 """
+
+
+def render_exceptions_top(reviews: list[dict]) -> str:
+    """PR #90: top-of-page summary listing every `ready` article that
+    is NOT exception-free. `failed` and `blocked` already get loud
+    treatment via per-article alert blocks; this section is the
+    triage layer specifically for "ready but with exceptions"
+    articles. When the list is empty, render a green confirmation."""
+    candidates = [
+        r for r in reviews
+        if r.get("status") == "ready" and not r.get("exception_free", False)
+    ]
+    if not candidates:
+        # Friendly confirmation. Not a green-light to skip review.
+        return (
+            '<div class="exceptions-top">'
+            '<h2>Exceptions to review first</h2>'
+            '<p class="all-clear">0 exceptions among ready articles. '
+            'Sample-check 1-2 entries before approval.</p>'
+            '</div>'
+        )
+    items: list[str] = []
+    for r in candidates:
+        slug = _esc(r.get("slug", ""))
+        reasons = r.get("exception_reasons") or []
+        reasons_html = (
+            '<ul>' + "".join(f"<li>{_esc(reason)}</li>" for reason in reasons) + '</ul>'
+            if reasons else ""
+        )
+        items.append(
+            f'<li><a href="#article-{slug}"><b>{slug}</b></a>'
+            f'{reasons_html}</li>'
+        )
+    return (
+        '<div class="exceptions-top">'
+        f'<h2>Exceptions to review first ({len(candidates)})</h2>'
+        '<ul>' + "".join(items) + '</ul>'
+        '</div>'
+    )
 
 
 def render_pack(payload: dict) -> str:
@@ -535,6 +627,7 @@ def render_pack(payload: dict) -> str:
         f'<h1>Reviewer pack — batch <code>{_esc(batch_id)}</code></h1>'
         f'<div class="subtitle">{_esc(summary_line)}</div>'
         '</header>'
+        + render_exceptions_top(reviews)
         + render_scorecard(reviews)
         + "".join(render_article(r) for r in reviews)
         + (

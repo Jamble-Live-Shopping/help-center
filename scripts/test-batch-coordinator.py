@@ -572,6 +572,257 @@ def test_decide_status_clean_review_marks_ready() -> None:
     assert review.blockers == [], f"clean review should have no blockers, got {review.blockers}"
 
 
+# ---------------------------------------------------------------
+# PR #90: exception-only reviewer pack
+# ---------------------------------------------------------------
+
+def _build_clean_review(mod: Any) -> Any:
+    """Helper: synthetic ArticleReview with all 9 inputs to
+    `decide_exception_free` set to a green state. Tests below flip
+    one signal at a time to assert the rule fires correctly."""
+    return mod.ArticleReview(
+        slug="x",
+        audience="buyer_br",
+        intercom_id=99,
+        worktree="/tmp/x",
+        branch="feat/x",
+        validate_returncode=0,
+        validate_output="Validated 1 article(s): 0 hard fail(s), 1 soft warn(s)\n",
+        hard_fail_count=0,
+        soft_warn_count=1,
+        mockups_declared=2,
+        mockups_present=2,
+        missing_mockups=[],
+        audit_files_present=3,
+        audit_skeleton_unfilled=False,
+        em_dash_count_pt=0,
+        em_dash_count_en=0,
+        rdollar_leak_en_count=0,
+        pt_br_md_path=None,
+        en_md_path=None,
+        unresolved_risk_flags_count=0,
+        ios_required_screens_without_review_checks=0,
+        forbidden_html_contract_failures=0,
+    )
+
+
+def test_decide_exception_free_unresolved_risk_blocks() -> None:
+    """A risk_flag that has no matching resolved_decisions entry must
+    keep the article in the "exceptions to review" bucket. The signal
+    is informational; the article still ships, but the reviewer must
+    inspect this one first."""
+    mod = _load_coordinator_module()
+    review = _build_clean_review(mod)
+    review.unresolved_risk_flags_count = 1
+    mod.decide_review_status(review)
+    assert review.exception_free is False, (
+        f"unresolved risk should block exception_free, got {review.exception_free}"
+    )
+    assert any("unresolved risk_flag" in r for r in review.exception_reasons), (
+        f"reasons should mention unresolved risk_flag, got {review.exception_reasons}"
+    )
+
+
+def test_decide_exception_free_ios_required_without_review_checks_blocks() -> None:
+    """An ios_required screen without a review_checks list signals
+    the worker did not record what manual gate the reviewer must
+    apply. The article goes into the exceptions bucket so the
+    reviewer notices the gap."""
+    mod = _load_coordinator_module()
+    review = _build_clean_review(mod)
+    review.ios_required_screens_without_review_checks = 1
+    mod.decide_review_status(review)
+    assert review.exception_free is False, (
+        f"ios_required without review_checks should block exception_free, "
+        f"got {review.exception_free}"
+    )
+    assert any(
+        "ios_required screen" in r and "without review_checks" in r
+        for r in review.exception_reasons
+    ), f"reasons should name the missing review_checks gap, got {review.exception_reasons}"
+
+
+def test_decide_exception_free_clean_article_passes() -> None:
+    """All 9 inputs green -> exception_free is True and reasons is empty.
+    This is the streamlined-review case. The reviewer can sample-check
+    the body without a deep audit."""
+    mod = _load_coordinator_module()
+    review = _build_clean_review(mod)
+    mod.decide_review_status(review)
+    assert review.exception_free is True, (
+        f"clean review should be exception_free, got {review.exception_free}"
+    )
+    assert review.exception_reasons == [], (
+        f"clean review should have no exception_reasons, got {review.exception_reasons}"
+    )
+
+
+def test_render_pack_sorts_exceptions_first() -> None:
+    """The reviewer pack opens with the worst-state articles at the
+    top of the scorecard so triage is visual: failed -> blocked ->
+    ready+not exception_free -> ready+exception_free.
+
+    The mode_review code sorts before persisting summary.json. The
+    renderer renders rows in the order it receives them. This test
+    feeds a pre-sorted JSON to the renderer to confirm the scorecard
+    HTML preserves that order."""
+    base = {
+        "audience": "buyer_br",
+        "intercom_id": 1,
+        "worktree": "/tmp/x",
+        "branch": "feat/x",
+        "soft_warn_count": 0,
+        "mockups_declared": 0,
+        "mockups_present": 0,
+        "missing_mockups": [],
+        "audit_files_present": 3,
+        "audit_skeleton_unfilled": False,
+        "em_dash_count_pt": 0,
+        "em_dash_count_en": 0,
+        "rdollar_leak_en_count": 0,
+        "pt_br_md_path": None,
+        "en_md_path": None,
+        "mockup_pngs": [],
+        "manual_gates": [],
+    }
+    articles = [
+        {**base, "slug": "z-failed", "validate_returncode": 2,
+         "validate_output": "(no summary)\n", "hard_fail_count": -1,
+         "status": "failed", "blockers": ["worktree does not exist"],
+         "exception_free": False, "exception_reasons": ["worktree missing"]},
+        {**base, "slug": "y-blocked", "validate_returncode": 1,
+         "validate_output": "Validated 1 article(s): 1 hard fail(s), 0 soft warn(s)\n",
+         "hard_fail_count": 1, "status": "blocked", "blockers": ["1 validator hard fail(s)"],
+         "exception_free": False, "exception_reasons": ["1 validator hard fail(s)"]},
+        {**base, "slug": "x-review-needed", "validate_returncode": 0,
+         "validate_output": "Validated 1 article(s): 0 hard fail(s), 0 soft warn(s)\n",
+         "hard_fail_count": 0, "status": "ready", "blockers": [],
+         "exception_free": False, "exception_reasons": ["1 unresolved risk_flag(s)"]},
+        {**base, "slug": "a-exception-free", "validate_returncode": 0,
+         "validate_output": "Validated 1 article(s): 0 hard fail(s), 0 soft warn(s)\n",
+         "hard_fail_count": 0, "status": "ready", "blockers": [],
+         "exception_free": True, "exception_reasons": []},
+    ]
+    summary = {"batch_id": "test-sort", "articles": articles}
+    with tempfile.TemporaryDirectory() as tmp:
+        json_path = Path(tmp) / "summary.json"
+        json_path.write_text(json.dumps(summary), encoding="utf-8")
+        html_path = Path(tmp) / "summary.html"
+        rc, out, err = _run([
+            sys.executable, str(RENDER_PACK),
+            "--input", str(json_path), "--output", str(html_path),
+        ])
+        assert rc == 0, f"render failed: {err}"
+        body = html_path.read_text(encoding="utf-8")
+        # Scope the slug-order check to the scorecard table only.
+        # The exceptions-top section also lists ready-but-not-
+        # exception-free slugs (so `x-review-needed` legitimately
+        # appears there BEFORE the scorecard), and that is exactly
+        # the design — but it would invert the scorecard ordering
+        # check if we did a global find.
+        import re as _re
+        scorecard = _re.search(
+            r'<table\s+class="scorecard">.*?</table>',
+            body, _re.DOTALL,
+        )
+        assert scorecard, "scorecard table missing"
+        scorecard_html = scorecard.group(0)
+        idx_failed = scorecard_html.find("z-failed")
+        idx_blocked = scorecard_html.find("y-blocked")
+        idx_review = scorecard_html.find("x-review-needed")
+        idx_ef = scorecard_html.find("a-exception-free")
+        assert 0 < idx_failed < idx_blocked < idx_review < idx_ef, (
+            f"scorecard sort order broken: failed={idx_failed} blocked={idx_blocked} "
+            f"review-needed={idx_review} exception-free={idx_ef}\n"
+            f"scorecard slice (first 600 chars):\n{scorecard_html[:600]}"
+        )
+
+
+def test_render_pack_shows_exception_reasons_section() -> None:
+    """The top-of-pack 'Exceptions to review first' section lists every
+    `ready` article that is NOT exception_free, with its reasons. An
+    article that IS exception_free must NOT appear in that section."""
+    base = {
+        "audience": "buyer_br",
+        "intercom_id": 1,
+        "worktree": "/tmp/x",
+        "branch": "feat/x",
+        "soft_warn_count": 0,
+        "mockups_declared": 0,
+        "mockups_present": 0,
+        "missing_mockups": [],
+        "audit_files_present": 3,
+        "audit_skeleton_unfilled": False,
+        "em_dash_count_pt": 0,
+        "em_dash_count_en": 0,
+        "rdollar_leak_en_count": 0,
+        "pt_br_md_path": None,
+        "en_md_path": None,
+        "mockup_pngs": [],
+        "manual_gates": [],
+        "validate_returncode": 0,
+        "validate_output": "Validated 1 article(s): 0 hard fail(s), 0 soft warn(s)\n",
+        "hard_fail_count": 0,
+        "status": "ready",
+        "blockers": [],
+    }
+    summary = {
+        "batch_id": "test-exceptions",
+        "articles": [
+            {**base, "slug": "needs-attention", "exception_free": False,
+             "exception_reasons": [
+                 "1 unresolved risk_flag(s)",
+                 "2 ios_required screen(s) without review_checks",
+             ]},
+            {**base, "slug": "all-clear", "exception_free": True,
+             "exception_reasons": []},
+        ],
+    }
+    with tempfile.TemporaryDirectory() as tmp:
+        json_path = Path(tmp) / "summary.json"
+        json_path.write_text(json.dumps(summary), encoding="utf-8")
+        html_path = Path(tmp) / "summary.html"
+        rc, out, err = _run([
+            sys.executable, str(RENDER_PACK),
+            "--input", str(json_path), "--output", str(html_path),
+        ])
+        assert rc == 0, f"render failed: {err}"
+        body = html_path.read_text(encoding="utf-8")
+
+        # Section header present.
+        assert "Exceptions to review first" in body, (
+            "top-of-pack exceptions section missing"
+        )
+
+        # The exceptions-top section is rendered BEFORE the scorecard
+        # table; isolate that slice so we don't accidentally match the
+        # per-article exception-block elsewhere in the doc.
+        import re as _re
+        top_match = _re.search(
+            r'<div class="exceptions-top">.*?</div>',
+            body, _re.DOTALL,
+        )
+        assert top_match, "exceptions-top div not found"
+        top_html = top_match.group(0)
+
+        assert "needs-attention" in top_html, (
+            "non-exception-free slug should appear in the exceptions-top section"
+        )
+        assert "all-clear" not in top_html, (
+            "exception-free slug must NOT appear in the exceptions-top section"
+        )
+        assert "1 unresolved risk_flag" in top_html, (
+            "exception reasons should be visible in the exceptions-top section"
+        )
+        assert "ios_required screen" in top_html, (
+            "second exception reason should be visible too"
+        )
+        # The scorecard badge for the exception-free article should
+        # be the EXCEPTION-FREE green pill, not READY.
+        assert "EXCEPTION-FREE" in body, "EXCEPTION-FREE badge missing"
+        assert "REVIEW NEEDED" in body, "REVIEW NEEDED badge missing"
+
+
 def test_render_path_with_space_uses_url_escape() -> None:
     """Worktrees can live in paths that contain spaces, like
     `/Users/.../Jamble Coworker/help-center`. Manual `f"file://{path}"`
@@ -1206,6 +1457,11 @@ TESTS = [
     test_render_real_md_files_show_in_preview,
     test_decide_status_validator_unparseable_blocks,
     test_decide_status_clean_review_marks_ready,
+    test_decide_exception_free_unresolved_risk_blocks,
+    test_decide_exception_free_ios_required_without_review_checks_blocks,
+    test_decide_exception_free_clean_article_passes,
+    test_render_pack_sorts_exceptions_first,
+    test_render_pack_shows_exception_reasons_section,
     test_render_path_with_space_uses_url_escape,
     test_validator_screen_required_icons_missing_fails,
     test_validator_screen_required_icons_present_passes,

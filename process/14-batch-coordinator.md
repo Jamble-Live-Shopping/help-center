@@ -80,6 +80,65 @@ The validator does NOT enforce the semantic content of
 prints to the worker and the reviewer pack surfaces at the top of
 each article block.
 
+## Exception-free criteria (PR #90)
+
+To make 10-article reviews tractable, every article in a batch is
+tagged with an informational `exception_free` boolean. The signal is
+NOT a publication gate; it is a triage helper. The reviewer always
+retains final authority. `exception_free == True` means "no
+exceptions remain for the reviewer to inspect", not "ship without
+review".
+
+The signal is the AND of seven deterministic inputs:
+
+1. `hard_fail_count == 0` (validator output, already collected)
+2. `audit_skeleton_unfilled == False` (filesystem grep)
+3. `audit_files_present == 3` (filesystem count)
+4. `mockups_present == mockups_declared` (flow + filesystem)
+5. `unresolved_risk_flags_count == 0` (PR #90, derived from
+   `flow.yml.risk_flags` minus `resolved_decisions` count)
+6. `ios_required_screens_without_review_checks == 0` (PR #90,
+   counts screens whose `source: ios_required` was declared without
+   any `review_checks`)
+7. `forbidden_html_contract_failures == 0` (PR #90, parsed from
+   the validator's `screen_html_forbidden_text_present` lines)
+
+When any input fails, the article gets a yellow **REVIEW NEEDED**
+badge in the scorecard, an entry in the top-of-pack
+**Exceptions to review first** section listing the specific failed
+gates, and a per-article exception-reasons sub-block above the
+Validate output panel. When all seven pass, the article gets a
+green **EXCEPTION-FREE** badge.
+
+Two informational coverage signals also surface in `summary.json`
+but do NOT feed `exception_free`:
+
+- `screens_with_html_contract` — count of screens that opt into
+  PR #89A's `html_must_contain` / `html_must_not_contain`.
+- `screens_with_required_icons` — count of screens that opt into
+  PR #88's per-screen `required_icons`.
+
+Zero coverage on either is not a defect — many screens legitimately
+have no required_icons or no HTML text contract. The fields are
+present so the reviewer can see, at a glance, how much of the
+post-PR-89A negative-visual-contract this article opts into.
+
+### Reviewer workflow at batch-10
+
+1. Open `summary.html`. The pack opens with the **Exceptions to
+   review first** section listing every `ready` article that is NOT
+   exception-free, with the specific reasons each failed.
+2. Inspect those articles top to bottom: read the body, check the
+   mockups, verify the flagged exception(s) are acceptable.
+3. Sample-check 1-2 exception-free articles to confirm the signal
+   is honest on this batch (the signal is deterministic but the
+   inputs are filesystem-derived; a flow.yml that lies about
+   `resolved_decisions` would slip through).
+4. Ship the rest by manual approval. `exception_free == True` is
+   never a substitute for the reviewer's signoff; it is the
+   triage helper that lets the reviewer focus on the worst 1-3
+   articles instead of all 10.
+
 ## Lifecycle
 
 ```
