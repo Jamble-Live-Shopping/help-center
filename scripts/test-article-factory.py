@@ -1111,6 +1111,146 @@ def test_source_of_truth_warns_when_env_unset_with_ios_paths() -> None:
         shutil.rmtree(art, ignore_errors=True)
 
 
+def test_unanchored_icon_review_check_warns_and_disqualifies() -> None:
+    """Hardening (Aymar sample-review false-negative, 2026-05-07): if a
+    screen declares review_checks=[icons_match_ios_source] but has
+    neither required_icons (real-icon anchor) nor html_must_not_contain
+    icon-blockers (text-only anchor), the validator must emit the soft
+    warn `screen_icon_review_check_unanchored` AND the coordinator's
+    `decide_exception_free` must disqualify the article. Calibrated from
+    the wishlist product-bookmark-cta bug where exception_free=true on a
+    mockup that rendered an invented flag glyph instead of the real iOS
+    heart asset, slipping past existing rules because the icon-match
+    claim was descriptive rather than enforced.
+
+    Three sub-assertions: (1) warn fires when neither anchor present;
+    (2) warn does NOT fire when required_icons is non-empty (real-icon
+    opt-in); (3) warn does NOT fire when html_must_not_contain blocks
+    icon markup (text-only opt-in). Plus coordinator-level proof that
+    decide_exception_free disqualifies on the warn."""
+    art = _calibration_fixture("calib-icon-anchor-", intercom_id=8881110)
+    try:
+        # (1) UNANCHORED — warn must fire
+        flow_yaml = (art / "flow.yml").read_text(encoding="utf-8")
+        flow_yaml = flow_yaml.replace(
+            "mockup_plan:\n  required: false\n  screens: []",
+            "mockup_plan:\n  required: true\n  screens:\n"
+            "    - name: screen-1\n"
+            "      purpose: demo\n"
+            "      source: ios_required\n"
+            "      review_checks: [icons_match_ios_source, labels_match_xcstrings]\n",
+        )
+        (art / "flow.yml").write_text(flow_yaml, encoding="utf-8")
+        mockup_dir = art / "mockup-sources"
+        mockup_dir.mkdir(exist_ok=True)
+        for fname in ("screen-1__pt-br.html", "screen-1__en.html"):
+            (mockup_dir / fname).write_text("<div class='phone'>ok</div>", encoding="utf-8")
+        rc, out, err = _run([sys.executable, str(VALIDATOR), str(art)])
+        combined = out + err
+        assert "screen_icon_review_check_unanchored" in combined, (
+            f"warn must fire when icons_match_ios_source has no anchor; "
+            f"got {combined!r}"
+        )
+
+        # (1b) coordinator-level: decide_exception_free disqualifies
+        import importlib.util
+        coord_path = SCRIPTS_DIR / "run-help-article-batch.py"
+        spec = importlib.util.spec_from_file_location("batch_coord_anchor", str(coord_path))
+        mod = importlib.util.module_from_spec(spec)
+        sys.modules["batch_coord_anchor"] = mod
+        assert spec.loader is not None
+        spec.loader.exec_module(mod)
+        review = mod.ArticleReview(
+            slug="x", worktree=Path("/tmp/x"), branch="x", intercom_id=1,
+            audience="seller_br",
+            validate_returncode=0,
+            validate_output="WARN [screen_icon_review_check_unanchored] screen 'screen-1' ...",
+            hard_fail_count=0, soft_warn_count=1,
+            mockups_present=2, mockups_declared=2, missing_mockups=[],
+            mockup_pngs=["a", "b"],
+            em_dash_count_pt=0, em_dash_count_en=0, rdollar_leak_en_count=0,
+            pt_br_md_path="pt-br.md", en_md_path="en.md",
+            audit_files_present=3, audit_skeleton_unfilled=False,
+        )
+        review.screens_with_unanchored_icon_check = 1
+        mod.decide_exception_free(review)
+        assert review.exception_free is False, (
+            f"unanchored icon check must disqualify exception_free; "
+            f"got exception_free={review.exception_free}, "
+            f"reasons={review.exception_reasons}"
+        )
+        assert any("icons_match_ios_source" in r for r in review.exception_reasons), (
+            f"expected explicit unanchored-icon reason; "
+            f"got {review.exception_reasons}"
+        )
+
+        # (2) ANCHORED via required_icons — warn must NOT fire
+        flow_yaml_anchored = (art / "flow.yml").read_text(encoding="utf-8")
+        flow_yaml_anchored = flow_yaml_anchored.replace(
+            "      review_checks: [icons_match_ios_source, labels_match_xcstrings]\n",
+            "      review_checks: [icons_match_ios_source, labels_match_xcstrings]\n"
+            "      required_icons: [real_asset_name]\n",
+        )
+        (art / "flow.yml").write_text(flow_yaml_anchored, encoding="utf-8")
+        for fname in ("screen-1__pt-br.html", "screen-1__en.html"):
+            (mockup_dir / fname).write_text(
+                "<div class='phone'><!-- icon: real_asset_name from "
+                "Assets.xcassets/real_asset_name.imageset --></div>",
+                encoding="utf-8",
+            )
+        rc2, out2, err2 = _run([sys.executable, str(VALIDATOR), str(art)])
+        combined2 = out2 + err2
+        assert "screen_icon_review_check_unanchored" not in combined2, (
+            f"warn must NOT fire when required_icons is non-empty; "
+            f"got {combined2!r}"
+        )
+
+        # (3a) PARTIAL anchor via html_must_not_contain (only "<img") —
+        # warn STILL fires because each of the three icon-blockers
+        # covers a distinct regression vector (bitmap, inline SVG, CSS
+        # icon class). A partial subset would let the other vectors
+        # slip past unanchored. Aymar 2026-05-07 hardening.
+        flow_yaml_partial = (art / "flow.yml").read_text(encoding="utf-8")
+        flow_yaml_partial = flow_yaml_partial.replace(
+            "      review_checks: [icons_match_ios_source, labels_match_xcstrings]\n"
+            "      required_icons: [real_asset_name]\n",
+            "      review_checks: [icons_match_ios_source, labels_match_xcstrings]\n"
+            "      html_must_not_contain: ['<img']\n",
+        )
+        (art / "flow.yml").write_text(flow_yaml_partial, encoding="utf-8")
+        for fname in ("screen-1__pt-br.html", "screen-1__en.html"):
+            (mockup_dir / fname).write_text(
+                "<div class='phone'>text-only with partial anchor</div>",
+                encoding="utf-8",
+            )
+        rc3a, out3a, err3a = _run([sys.executable, str(VALIDATOR), str(art)])
+        combined3a = out3a + err3a
+        assert "screen_icon_review_check_unanchored" in combined3a, (
+            f"warn MUST still fire when html_must_not_contain has only "
+            f"a partial blocker subset (text-only anchor must declare "
+            f"all three: '<img', '<svg', 'icon-'); got {combined3a!r}"
+        )
+
+        # (3b) FULL anchor via html_must_not_contain — warn must NOT fire
+        flow_yaml_textonly = (art / "flow.yml").read_text(encoding="utf-8")
+        flow_yaml_textonly = flow_yaml_textonly.replace(
+            "      review_checks: [icons_match_ios_source, labels_match_xcstrings]\n"
+            "      html_must_not_contain: ['<img']\n",
+            "      review_checks: [icons_match_ios_source, labels_match_xcstrings]\n"
+            "      html_must_not_contain: ['<img', '<svg', 'icon-']\n",
+        )
+        (art / "flow.yml").write_text(flow_yaml_textonly, encoding="utf-8")
+        rc3, out3, err3 = _run([sys.executable, str(VALIDATOR), str(art)])
+        combined3 = out3 + err3
+        assert "screen_icon_review_check_unanchored" not in combined3, (
+            f"warn must NOT fire when html_must_not_contain has the "
+            f"complete icon-blocker set ['<img', '<svg', 'icon-']; "
+            f"got {combined3!r}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
 def test_source_of_truth_check_skipped_disqualifies_exception_free() -> None:
     """Hardening (P2 silent skip, coordinator side): when the validator
     emits `source_of_truth_check_skipped`, the coordinator's
@@ -1256,6 +1396,7 @@ TESTS = [
     test_orphan_rule_skips_when_mockup_not_required,
     test_source_of_truth_warns_when_env_unset_with_ios_paths,
     test_source_of_truth_check_skipped_disqualifies_exception_free,
+    test_unanchored_icon_review_check_warns_and_disqualifies,
     test_validator_passes_when_path_in_negative_scan_with_risk_flag,
 ]
 

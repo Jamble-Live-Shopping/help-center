@@ -455,6 +455,72 @@ def validate_article(article_dir: Path) -> Report:
                     f"the manual gates explicitly.",
                 )
 
+    # ---- rule 10e (NEW, post batch real-1-rerun calibration):
+    # screen_icon_review_check_unanchored.
+    # Calibrated from the wishlist-and-favorites product-bookmark-cta
+    # false negative (2026-05-07): the screen declared
+    # `review_checks: [icons_match_ios_source, ...]` but had neither a
+    # `required_icons` list (real-icon screen) nor an
+    # `html_must_not_contain` entry blocking icon markup (text-only
+    # screen). The icon-match claim was descriptive, not enforced, so
+    # the mockup shipped with an invented flag/bookmark glyph instead
+    # of the actual iOS heart asset. Same defect class as PR #87 DM
+    # purple-square invented icon, just on a different screen.
+    #
+    # The rule is soft-warn only (backward-compatible: every existing
+    # batch real-1 article that declared icons_match_ios_source without
+    # an anchor would have hard-failed otherwise). The coordinator's
+    # `decide_exception_free` consumes the warn and downgrades
+    # exception_free to False so the reviewer pack surfaces it.
+    #
+    # Force-a-choice contract:
+    #   - real-icon screen   -> required_icons: ["<asset_name>", ...]
+    #   - text-only screen   -> html_must_not_contain MUST contain ALL
+    #                          icon-blockers: "<img", "<svg", "icon-"
+    #                          (any partial subset still fires the warn
+    #                          because each blocker covers a distinct
+    #                          regression vector: bitmap img tag, inline
+    #                          SVG, and CSS icon class.)
+    #   - dynamic user image -> add review_check note (not enforced
+    #                          here; reviewer judgment).
+    if mockup_required and screens:
+        for screen in screens:
+            if not isinstance(screen, dict):
+                continue
+            name = screen.get("name", "")
+            review_checks = screen.get("review_checks") or []
+            if not name:
+                continue
+            if "icons_match_ios_source" not in review_checks:
+                continue
+            req_icons_list = screen.get("required_icons") or []
+            has_required_icons = any(
+                isinstance(i, str) and i.strip() for i in req_icons_list
+            )
+            must_not_list = screen.get("html_must_not_contain") or []
+            REQUIRED_ICON_BLOCKERS = ("<img", "<svg", "icon-")
+            must_not_set = {
+                s for s in must_not_list if isinstance(s, str)
+            }
+            has_text_only_contract = all(
+                blocker in must_not_set for blocker in REQUIRED_ICON_BLOCKERS
+            )
+            if not has_required_icons and not has_text_only_contract:
+                rep.warn(
+                    "screen_icon_review_check_unanchored",
+                    f"screen '{name}' declares review_checks: "
+                    f"[icons_match_ios_source] but has neither "
+                    f"required_icons (real-icon anchor) nor a complete "
+                    f"text-only anchor. The icon-match claim is hollow "
+                    f"and the reviewer pack cannot certify the glyph "
+                    f"deterministically. Either: (a) declare "
+                    f"required_icons with the real iOS asset name, or "
+                    f"(b) add html_must_not_contain with ALL three "
+                    f"icon-blockers: ['<img', '<svg', 'icon-'] (partial "
+                    f"subsets still fire because each blocker covers a "
+                    f"distinct regression vector).",
+                )
+
     # ---- rule 10d (NEW, PR #89A, screen-scoped HTML text contract).
     #
     # Two HARD-FAIL rules for catching invented or missing UI text in
