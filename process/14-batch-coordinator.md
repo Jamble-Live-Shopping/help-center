@@ -1,30 +1,84 @@
 # 14, Batch coordinator + reviewer pack
 
 This document is the operating manual for `scripts/run-help-article-batch.py`,
-the coordinator that orchestrates 1 to 3 article worktrees through the
+the coordinator that orchestrates 1 to 10 article worktrees through the
 factory and produces a single static reviewer pack the human reviewer
-can audit in 15 minutes.
+can audit in one pass.
 
 The coordinator is **not a writer**. It does not generate article
 content, does not call any LLM from Python, and does not auto-publish,
 auto-merge, or mark a PR ready. It strictly:
 
-- validates the batch contract (3-article cap, no duplicates),
+- validates the batch contract (10-article cap, no duplicates),
 - prepares isolated worktrees with a worker brief,
 - collects validate output and mockup status after the worker has
   written content,
 - emits a static HTML reviewer pack and a machine-readable JSON.
 
-## Why a 3-article cap
+## Why a 10-article cap
 
-The reviewer pack is designed for 15 minutes of audit time. That is
-5 minutes per article: ~2 min skim pt-BR tone, ~1 min mockup quality,
-~1 min spot-check factual claims, ~1 min "publishable today?" decision.
+The cap was raised from 3 to 10 in PR #88, after the PR #84 batch-3
+calibration run validated the coordinator end-to-end. The reviewer
+pack now relies on three triage signals to stay reviewable at 10:
 
-Beyond 3 articles, the pack stops being human-reviewable in a single
-sitting and the format breaks down. The cap is hardcoded in
-`run-help-article-batch.py` (`MAX_BATCH_ARTICLES`). Do not raise it
-without rebuilding the pack format.
+1. **Top scorecard.** One row per article with the validator counts +
+   mockup ratio + audit ratio + status badge. Lets the reviewer
+   triage by status colour in seconds.
+2. **Manual gates per screen** (PR #88). Each article block opens
+   with a table that lists `required_icons` and `review_checks` per
+   declared screen, sourced from `flow.yml.mockup_plan.screens`.
+   This is what the reviewer scans to decide which articles need a
+   close look at the mockups vs. which can be approved on the
+   scorecard alone.
+3. **Collapsed details.** pt-BR / EN body previews are collapsed by
+   default. The reviewer expands only the articles flagged on the
+   scorecard or where a manual gate looks suspicious.
+
+Above 10 the format would need a different review pattern (sampled
+review or sub-batches). The cap is hardcoded as
+`MAX_BATCH_ARTICLES = 10` in `run-help-article-batch.py` and aligned
+with `validate-article-batch.py`'s own `MAX_BATCH_SIZE = 10`, so 11+
+is rejected at preflight by either layer.
+
+## Per-screen contract (PR #88)
+
+Each entry in `mockup_plan.screens` accepts two new optional fields:
+
+```yaml
+mockup_plan:
+  screens:
+    - name: composer
+      purpose: "DM composer with photo + send icons"
+      source: ios_required
+      required_icons:
+        - icon-send
+        - icon-camera
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+```
+
+Validator rules (deterministic, no LLM):
+
+- `screen_icon_not_in_html` (HARD FAIL): when `required_icons` is
+  non-empty, every icon name must appear in BOTH
+  `articles/<slug>/mockup-sources/<screen>__pt-br.html` AND
+  `<screen>__en.html` via `alt="<icon>"`,
+  `<!-- icon: <icon> -->`, or
+  `Assets.xcassets/<icon>.imageset` comment. Defends against the bug
+  PR #87 surfaced: invented icons inside a mockup that the global
+  `flow.icons_required` rule cannot catch per-screen.
+- `screen_review_checks_missing` (SOFT WARN): when
+  `source: ios_required` and `review_checks` is empty, nudges the
+  worker to record what the reviewer must check. Backward-compatible:
+  historical articles that pre-date the contract keep validating
+  exit 0.
+
+The validator does NOT enforce the semantic content of
+`review_checks`. It is descriptive metadata that the writer-packet
+prints to the worker and the reviewer pack surfaces at the top of
+each article block.
 
 ## Lifecycle
 
@@ -55,7 +109,7 @@ What it does, in order:
 
 1. Calls `scripts/validate-article-batch.py` against the batch YAML.
    If the upstream validator rejects, prepare exits 2.
-2. Enforces the coordinator's tighter 3-article cap. Above 3 → exit 2.
+2. Enforces the coordinator's 10-article cap. Above 10 → exit 2.
 3. Defense-in-depth duplicate-slug check.
 4. For each article:
    - Creates an isolated worktree at `<worktree-base>/<slug>/` from
@@ -142,7 +196,7 @@ Exit code:
 - `0` if every article is `ready` (validate exit 0, no missing PNG,
   audit triplet complete and unfilled).
 - `1` if any article is `blocked` or `failed`.
-- `2` on contract violation (batch YAML invalid, >3 articles).
+- `2` on contract violation (batch YAML invalid, >10 articles).
 
 The reviewer pack at `<out>/summary.html` is a single static HTML
 file with:
@@ -189,7 +243,7 @@ never want to drop those silently.
 
 | Symptom | Cause | What to do |
 |---|---|---|
-| `prepare` exits 2 with "coordinator cap is 3" | batch YAML has >3 articles | split the batch into multiple files |
+| `prepare` exits 2 with "coordinator cap is 10" / "exceeds max 10" | batch YAML has >10 articles | split into multiple batches |
 | `prepare` exits 2 immediately | `validate-article-batch.py` rejected the batch (dup slug, missing required field, etc.) | read the upstream validator's stderr and fix the YAML |
 | `prepare` exits 3 for a slug | `<worktree-base>/<slug>/` already exists | pick a different `--worktree-base`, or pass `--force-clean` |
 | `review` exits 1 with "blocked" rows | at least one article failed validate, has missing PNGs, or has SKELETON_TODO | open `summary.html`, fix each blocker, re-run review |
@@ -201,8 +255,10 @@ The coordinator and the renderer ship with checked-in fixtures under
 `tests/fixtures/batch-coordinator/`:
 
 - `batch-1.yml` — 1-article happy path
-- `batch-3.yml` — 3-article happy path (the cap)
-- `batch-4-rejects.yml` — must reject (over cap)
+- `batch-3.yml` — 3-article happy path
+- `batch-10.yml` — 10-article happy path at the cap (PR #88)
+- `batch-11-rejects.yml` — must reject (over cap, PR #88)
+- `batch-10-gates/article-icon-{missing,present}/` — synthetic articles for the new validator rules `screen_icon_not_in_html` (PR #88)
 - `batch-dup-rejects.yml` — must reject (duplicate slug)
 - `sample-summary-ready.json`, `sample-summary-hardfail.json`,
   `sample-summary-missing-png.json`, `sample-summary-3articles.json`

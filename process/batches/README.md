@@ -17,7 +17,7 @@ batch.yml ──┐
 
 Single-article path stays the same as before: `init-article-flow.py`
 + `run-help-article.py`. The batch path adds `run-help-article-batch.py`
-on top, so 1 to 3 articles can be set up and reviewed in a single
+on top, so 1 to 10 articles can be set up and reviewed in a single
 session without any LLM-in-Python.
 
 ## Authoring a batch YAML
@@ -52,8 +52,11 @@ Optional:
 The upstream validator (`validate-article-batch.py`) enforces the
 required fields. The batch coordinator adds two tighter checks:
 
-- batch size is capped at **3 articles** (the reviewer pack is
-  designed for 15-min review and does not scale beyond 3).
+- batch size is capped at **10 articles** (PR #88; aligned with the
+  upstream validator's `MAX_BATCH_SIZE = 10`). The reviewer pack
+  scales to 10 via the per-screen Manual gates callout introduced
+  in the same PR; above 10 the format would need a different review
+  pattern.
 - the same defense-in-depth duplicate-slug check.
 
 ## Files in this directory
@@ -73,7 +76,7 @@ Test fixtures for the coordinator live separately under
 # 1. Lint the batch.
 python3 scripts/validate-article-batch.py process/batches/<file>.yml
 
-# 2. Prepare worktrees (cap 3, isolated, fails if path exists).
+# 2. Prepare worktrees (cap 10, isolated, fails if path exists).
 python3 scripts/run-help-article-batch.py --mode prepare \
     --batch process/batches/<file>.yml \
     --worktree-base /tmp/wt-batch-<batch_id>

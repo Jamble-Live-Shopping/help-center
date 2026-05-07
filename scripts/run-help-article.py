@@ -82,6 +82,7 @@ RULE_TO_PHASE: dict[str, tuple[int, str]] = {
     "mockup_html_missing": (3, "Phase 3, HTML mockups"),
     "mockup_screens_empty": (3, "Phase 3, HTML mockups"),
     "mockup_screen_no_name": (3, "Phase 3, HTML mockups"),
+    "screen_icon_not_in_html": (3, "Phase 3, HTML mockups (screen icons)"),
     "mockup_declared_not_in_pt": (5, "Phase 5, Article body (image refs)"),
     "mockup_declared_not_in_en": (5, "Phase 5, Article body (image refs)"),
     "mockup_referenced_not_declared": (5, "Phase 5, Article body (image refs)"),
@@ -412,19 +413,55 @@ def phase_writer_packet(article_dir: Path) -> int:
     print(f"- screens  : {len(screens)} declared")
     print()
     if screens:
-        print("| screen name | source | expected HTML pair | expected PNG pair |")
-        print("|---|---|---|---|")
         for s in screens:
             if not isinstance(s, dict):
                 continue
             name = s.get("name", "")
             source = s.get("source", "")
-            html = f"mockup-sources/{name}__pt-br.html + __en.html"
-            png = f"assets/mockups/{slug}__{name}__{{pt-br,en}}__v3.png"
-            print(f"| {name} | {source} | {html} | {png} |")
-        print()
+            req_icons = s.get("required_icons") or []
+            review_checks = s.get("review_checks") or []
+            print(f"### Screen: {name}")
+            print()
+            if s.get("purpose"):
+                print(f"- purpose : {s.get('purpose')}")
+            print(f"- source  : {source}")
+            print(f"- HTMLs   : `articles/{slug}/mockup-sources/{name}__pt-br.html`, `articles/{slug}/mockup-sources/{name}__en.html`")
+            print(f"- PNGs    : `assets/mockups/{slug}__{name}__pt-br__v3.png`, `assets/mockups/{slug}__{name}__en__v3.png` (DPR3, >=900px)")
+            if req_icons:
+                print(f"- required_icons ({len(req_icons)}, hard fail if missing in either HTML):")
+                for icon in req_icons:
+                    print(f"  - [ ] {icon} (use `alt=\"{icon}\"`, `<!-- icon: {icon} -->`, or `Assets.xcassets/{icon}.imageset`)")
+            else:
+                print(f"- required_icons : (none declared; pass `screen.required_icons: [name1, name2]` to enforce icon usage)")
+            if review_checks:
+                print(f"- review_checks ({len(review_checks)}, surfaced verbatim in the reviewer pack):")
+                for chk in review_checks:
+                    print(f"  - [ ] {chk}")
+            elif source == "ios_required":
+                print(f"- review_checks : (none declared; soft warn). Add at least one of `icons_match_ios_source`, `labels_match_xcstrings`, `no_invented_ui_state` so the reviewer pack lists the manual gates.")
+            else:
+                print(f"- review_checks : (none declared)")
+            print()
         print("Each screen produces two HTML files and two PNGs DPR3 (>=900px wide).")
         print()
+
+    # ---- Source documentation prompt
+    print("## Source documentation (record what you used)")
+    print()
+    sot_full = flow.get("source_of_truth") or {}
+    ios_files_doc = sot_full.get("ios_files") or []
+    if ios_files_doc:
+        print("For each iOS file declared in `source_of_truth.ios_files`, record")
+        print("which lines or strings you actually used. Drop this list into the")
+        print("code-audit triplet so the reviewer can spot-check without")
+        print("re-deriving the audit:")
+        print()
+        for f in ios_files_doc:
+            print(f"- [ ] {f} : <lines used, xcstrings keys pulled>")
+        print()
+    print("xcstrings: list the exact keys you copied (one per line). Avoid")
+    print("paraphrasing; copy the value verbatim and let the audit cite the key.")
+    print()
 
     # ---- Icons
     print("## Icons required")

@@ -73,6 +73,34 @@ mockup_plan:
     # - name: inbox-list                  # also drives filename: <name>__pt-br.html
     #   purpose: "Show where seller sees buyer messages"
     #   source: ios_required              # ios_required | composite | feather_fallback
+    #
+    #   # Screen-scoped icon contract (PR #88, batch-10 readiness gate).
+    #   # OPTIONAL. When non-empty, the validator (rule
+    #   # `screen_icon_not_in_html`) fails if any of these icon names is
+    #   # missing from BOTH `<name>__pt-br.html` AND `<name>__en.html`.
+    #   # Reference an icon via `alt="<icon>"`, `<!-- icon: <icon> -->`,
+    #   # or `Assets.xcassets/<icon>.imageset`. Use this to lock the
+    #   # iOS icon set for a specific screen, which the global
+    #   # `flow.icons_required` rule cannot do per-screen.
+    #   required_icons:
+    #     - icon-send
+    #     - icon-camera
+    #
+    #   # Manual review-gate list (PR #88, batch-10 readiness gate).
+    #   # OPTIONAL. The validator does NOT enforce semantic content; this
+    #   # is descriptive metadata that the reviewer pack surfaces at the
+    #   # top of each article block so a reviewer scanning a 10-article
+    #   # batch can see what to scrutinise without expanding every detail.
+    #   # When `source: ios_required` and review_checks is empty, the
+    #   # validator emits a SOFT warn (`screen_review_checks_missing`)
+    #   # nudging the worker to record what the reviewer must check.
+    #   # Conventional values:
+    #   #   - icons_match_ios_source
+    #   #   - labels_match_xcstrings
+    #   #   - no_invented_ui_state
+    #   review_checks:
+    #     - icons_match_ios_source
+    #     - labels_match_xcstrings
     []
 
 # iOS icons used in the mockups. Each entry must satisfy ONE of:

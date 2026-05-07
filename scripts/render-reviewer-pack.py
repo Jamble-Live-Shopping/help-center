@@ -370,6 +370,47 @@ def render_article(r: dict) -> str:
     if r.get("branch"):
         branch_link = f'<span class="muted small"> · branch: <code>{_esc(r["branch"])}</code></span>'
 
+    # Manual-gates callout (batch-10 readiness): show per-screen
+    # required_icons + review_checks at the TOP of the article block
+    # so a reviewer scanning 10 articles can see what to check without
+    # opening every detail panel. Always-visible (no <details>).
+    gates_html = ""
+    manual_gates = r.get("manual_gates") or []
+    if manual_gates:
+        rows = []
+        for g in manual_gates:
+            screen = _esc(g.get("screen", ""))
+            source = _esc(g.get("source", ""))
+            req_icons = g.get("required_icons") or []
+            review_checks = g.get("review_checks") or []
+            icons_html = (
+                ", ".join(f"<code>{_esc(i)}</code>" for i in req_icons)
+                if req_icons else '<span class="muted">none</span>'
+            )
+            checks_html = (
+                ", ".join(f"<code>{_esc(c)}</code>" for c in review_checks)
+                if review_checks else '<span class="muted">none</span>'
+            )
+            badge_class = "ok" if review_checks else ("warn" if source == "ios_required" else "muted")
+            rows.append(
+                f'<tr>'
+                f'<td><b>{screen}</b><div class="muted small">source: {source or "-"}</div></td>'
+                f'<td>{icons_html}</td>'
+                f'<td class="{badge_class}">{checks_html}</td>'
+                f'</tr>'
+            )
+        gates_html = (
+            '<div class="gates">'
+            '<h3>Manual gates per screen</h3>'
+            '<table class="gates-table">'
+            '<thead><tr><th>screen</th><th>required_icons</th><th>review_checks</th></tr></thead>'
+            '<tbody>' + "".join(rows) + '</tbody>'
+            '</table>'
+            '<p class="muted small">Validator enforces required_icons (hard fail in HTML grep). '
+            'review_checks are descriptive: scan each one yourself for this screen.</p>'
+            '</div>'
+        )
+
     no_mockups_html = '<p class="muted">No mockup PNGs.</p>'
 
     return (
@@ -380,6 +421,7 @@ def render_article(r: dict) -> str:
         f'worktree: <code>{_esc(r["worktree"])}</code>{branch_link}</div></header>'
         f'{blockers_html}'
         f'{missing_html}'
+        f'{gates_html}'
         f'<details open><summary>Validate output</summary>{validate_pre}</details>'
         f'<details><summary>pt-BR body (rendered preview)</summary>'
         f'<div class="md-preview">{pt_html}</div></details>'
@@ -463,6 +505,14 @@ pre.validate {
 .mock { margin: 0; }
 .mock img { width: 100%; border-radius: 8px; border: 1px solid var(--border); background: #FFF; }
 .mock figcaption { font-size: 11px; color: var(--muted); padding: 4px 2px; word-break: break-all; }
+.gates { background: #FFF6E5; border: 1px solid #FDD58E; border-radius: 10px; padding: 14px 18px; margin-top: 12px; }
+.gates h3 { margin-top: 0; color: #B45309; font-size: 14px; }
+.gates-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 6px; }
+.gates-table th, .gates-table td { padding: 6px 8px; border-bottom: 1px solid #FCE5B5; text-align: left; vertical-align: top; }
+.gates-table th { background: #FFEFCB; color: #92400E; font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; }
+.gates-table td.ok { color: #0F8A3C; }
+.gates-table td.warn { color: #B45309; }
+.gates-table td.muted { color: #6D6D80; }
 .questions { background: #F4EFFF; border: 1px solid #DCC9FF; border-radius: 10px; padding: 14px 18px; margin-top: 16px; }
 .questions h3 { margin-top: 0; color: var(--brand); }
 .questions ol { margin: 6px 0 0 22px; }

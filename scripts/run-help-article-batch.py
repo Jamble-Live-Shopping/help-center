@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Batch coordinator for the Help Center Article Factory.
 
-Coordinates 1 to 3 article worktrees so that:
+Coordinates 1 to 10 article worktrees so that:
   - Claude (or a human worker) writes the article inside each worktree,
     one article per branch, under the writer-packet contract that PR #80
     introduced for single-article runs.
   - A static reviewer pack is produced after the worker has written the
-    content, so Aymar can audit the 1 to 3 articles in 15 minutes from a
+    content, so Aymar can audit the 1 to 10 articles in one review pass from a
     single HTML page.
 
 This script does NOT generate article content. It does NOT call any LLM.
@@ -21,7 +21,7 @@ It does NOT auto-publish, auto-merge, or mark a PR ready. It strictly:
 
 Three modes:
 
-    prepare    Validate batch YAML (cap 3 articles), create one isolated
+    prepare    Validate batch YAML (cap 10 articles), create one isolated
                worktree per article from the fetched base branch, write a
                writer-packet + checklist + CLAUDE_PROMPT.md inside each
                worktree's `_work/` so the worker has everything they need
@@ -58,7 +58,7 @@ Usage:
 Exit codes:
     0  success
     1  validate hard fail or missing PNG (review mode)
-    2  contract violation (>3 articles, dup slug, malformed YAML, etc.)
+    2  contract violation (>10 articles, dup slug, malformed YAML, etc.)
     3  worktree already exists and --force-clean not passed (prepare)
 """
 from __future__ import annotations
@@ -107,11 +107,15 @@ def _runner_in_worktree(worktree_path: Path) -> Path:
     """
     return worktree_path / "scripts" / "run-help-article.py"
 
-# Hardcoded cap. The reviewer pack is designed for 15 min review; that is
-# 5 min per article. Beyond 3, the pack stops being human-reviewable in
-# one sitting and the format breaks down. Do not raise this cap without
-# rebuilding the pack format.
-MAX_BATCH_ARTICLES = 3
+# Hardcoded cap. Aligned with the upstream `validate-article-batch.py`
+# `MAX_BATCH_SIZE = 10` so the coordinator and the upstream lint share
+# one ceiling. The PR #84 calibration run validated that the
+# coordinator + reviewer pack work end-to-end; the per-screen
+# `manual_gates` callout in the reviewer pack lets a reviewer triage
+# 10 articles without expanding every detail panel. Above 10 the pack
+# format would need a different review pattern (sampled review, or
+# split into sub-batches), so the cap stays at 10.
+MAX_BATCH_ARTICLES = 10
 
 
 # --------------------------------------------------------------------------
@@ -152,6 +156,12 @@ class ArticleReview:
     pt_br_md_path: str | None
     en_md_path: str | None
     mockup_pngs: list[str] = field(default_factory=list)
+    # Per-screen manual gates harvested from flow.yml.mockup_plan.screens
+    # so the reviewer pack can surface them at the top of each article
+    # block. Each entry: {"screen": str, "required_icons": [...],
+    # "review_checks": [...], "source": str}. The validator does NOT
+    # enforce semantic content; this is purely the manual-review surface.
+    manual_gates: list[dict] = field(default_factory=list)
     status: str = "pending"  # ready | blocked | failed
     blockers: list[str] = field(default_factory=list)
 
@@ -167,7 +177,7 @@ def _run(args: list[str], cwd: Path | None = None) -> tuple[int, str, str]:
 
 def load_and_validate_batch(batch_path: Path) -> tuple[dict, list[ArticleEntry]]:
     """Load batch YAML and run the existing batch validator. Then enforce
-    the coordinator's tighter cap (3 articles). Returns (raw_dict, entries).
+    the coordinator's cap (MAX_BATCH_ARTICLES). Returns (raw_dict, entries).
 
     Raises SystemExit(2) on any contract violation.
     """
@@ -199,9 +209,10 @@ def load_and_validate_batch(batch_path: Path) -> tuple[dict, list[ArticleEntry]]
     if len(articles) > MAX_BATCH_ARTICLES:
         print(
             f"ERROR: batch has {len(articles)} articles; coordinator cap is "
-            f"{MAX_BATCH_ARTICLES}. The reviewer pack is designed for 15 min "
-            f"review and does not scale beyond {MAX_BATCH_ARTICLES} articles. "
-            f"Split the batch.",
+            f"{MAX_BATCH_ARTICLES}. The reviewer pack scales to "
+            f"{MAX_BATCH_ARTICLES} articles using the manual-gates callout for "
+            f"per-screen triage; beyond that the format would need a different "
+            f"review pattern (sampled review or sub-batches). Split the batch.",
             file=sys.stderr,
         )
         raise SystemExit(2)
@@ -610,11 +621,19 @@ def collect_article_review(
             flow = {}
     screens = ((flow.get("mockup_plan") or {}).get("screens")) or []
     declared_pairs: list[str] = []
+    manual_gates: list[dict] = []
     for s in screens:
         if isinstance(s, dict) and s.get("name"):
             declared_pairs.append(f"{s['name']}__pt-br")
             declared_pairs.append(f"{s['name']}__en")
+            manual_gates.append({
+                "screen": s["name"],
+                "source": s.get("source", ""),
+                "required_icons": list(s.get("required_icons") or []),
+                "review_checks": list(s.get("review_checks") or []),
+            })
     review.mockups_declared = len(declared_pairs)
+    review.manual_gates = manual_gates
 
     mockup_dir = worktree_path / "assets" / "mockups"
     present_pngs: list[str] = []
