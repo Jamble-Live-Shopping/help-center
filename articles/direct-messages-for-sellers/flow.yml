@@ -14,6 +14,7 @@ source_of_truth:
   ios_files:
     - ACTIVITY/ActivityList/Models/ActivityListTab.swift                  # 6 tab cases + localised titles
     - ACTIVITY/ActivityPage/Views/ActivityViewController.swift            # Activity surface + empty-state copy
+    - PROFILE/Views/ProfileHeaderViewController.swift                     # Follow + Message buttons (lines 328-360, text-only buttons, no icon)
     - RESOURCES/Localizable.xcstrings                                     # pt-BR translations
   backend_files: []
   legal: []
@@ -39,9 +40,23 @@ mockup_plan:
     - name: activity-tabs
       purpose: "Show the Activity screen with the 6 sub-tabs (Todos / Mensagens / Não lido / Compras / Vendas / Concluído) and a few message rows"
       source: ios_required
+      required_icons: []  # avatars are dynamic user data, not stable iOS assets
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
     - name: profile-message-cta
-      purpose: "Show a buyer profile with the Message CTA that opens a new DM"
+      purpose: "Show a buyer profile with the Follow + Message CTAs that open a new DM"
       source: ios_required
+      # iOS Follow + Message buttons are TEXT-ONLY, no icon (verified
+      # at PROFILE/Views/ProfileHeaderViewController.swift:328-360,
+      # both buttons configure UIButton.Configuration.filled with a
+      # title and no setImage call). Inventing a CSS-drawn icon for
+      # the mockup was the bug the PR #88 gate is designed to catch.
+      required_icons: []
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
 
 icons_required: []
 icons_fallback_feather: false

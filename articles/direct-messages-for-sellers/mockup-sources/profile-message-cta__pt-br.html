@@ -3,7 +3,7 @@
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
-.phone { width: 340px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding: 0 0 16px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding: 0 0 18px; }
 .cover { width: 100%; height: 110px; background: linear-gradient(160deg, #1B1530 0%, #4A3B6B 100%); }
 .identity { display: flex; flex-direction: column; align-items: center; padding: 0 18px; margin-top: -36px; }
 .avatar { width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(160deg, #FDB022 0%, #FF6A1F 100%); border: 4px solid #FFFFFF; box-shadow: 0 2px 8px rgba(0,0,0,0.18); }
@@ -13,11 +13,12 @@ body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-
 .stat { display: flex; flex-direction: column; align-items: center; }
 .stat-num { font-size: 14px; font-weight: 700; color: #162233; }
 .stat-label { font-size: 11px; color: #6D6D80; margin-top: 2px; text-transform: lowercase; }
-.actions { display: flex; gap: 8px; padding: 18px 18px 0; }
-.btn { flex: 1; height: 38px; border-radius: 19px; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px; }
-.btn-follow { background: #7E53F8; color: #FFFFFF; }
-.btn-msg { background: #FFFFFF; color: #162233; border: 1.5px solid #E9EAEF; position: relative; }
-.btn-msg::before { content: ''; width: 14px; height: 14px; border-radius: 3px; background: linear-gradient(135deg, #7E53F8 0%, #4F2DA9 100%); }
+/* iOS uses both Follow and Message as filled UIButton.Configuration with
+   baseBackgroundColor #162131, white text, capsule cornerStyle, 15pt
+   medium font, no icon. Verified at
+   PROFILE/Views/ProfileHeaderViewController.swift:328-360. */
+.actions { display: flex; gap: 10px; padding: 20px 18px 0; }
+.btn { flex: 1; height: 40px; border-radius: 20px; background: #162131; color: #FFFFFF; font-size: 15px; font-weight: 500; display: flex; align-items: center; justify-content: center; padding: 0 24px; }
 </style></head><body>
 <div class="phone">
   <div class="cover"></div>
@@ -32,7 +33,7 @@ body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-
     </div>
   </div>
   <div class="actions">
-    <div class="btn btn-follow">Seguir</div>
-    <div class="btn btn-msg">Mensagem</div>
+    <div class="btn">Seguir</div>
+    <div class="btn">Mensagem</div>
   </div>
 </div></body></html>
