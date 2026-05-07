@@ -1,0 +1,29 @@
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+job_to_be_done: "Synthetic fixture for screen_icon_not_in_html rule (positive case)"
+source_of_truth:
+  ios_files:
+    - X/Y.swift
+  backend_files: []
+  legal: []
+  support_context: []
+content_contract:
+  must_answer: []
+  forbidden_terms: []
+  must_not_say: []
+mockup_plan:
+  required: true
+  screens:
+    - name: composer
+      purpose: "DM composer"
+      source: ios_required
+      required_icons:
+        - icon-send
+      review_checks:
+        - icons_match_ios_source
+icons_required: []
+icons_fallback_feather: false
+currency_required: false
+risk_flags: []
+resolved_decisions: []

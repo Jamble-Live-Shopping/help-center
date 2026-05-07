@@ -133,21 +133,52 @@ def test_prepare_three_articles_dry_run_succeeds() -> None:
     assert out.count("would-create") == 3, f"expected 3 would-create lines, got:\n{out}"
 
 
-def test_prepare_four_articles_rejected_with_cap_message() -> None:
+def test_prepare_ten_articles_accepted_at_cap() -> None:
+    """Cap raised from 3 to 10 in PR #88. The 10-article fixture must
+    be accepted by prepare. Uses --dry-run because the test does not
+    need to create real worktrees."""
     rc, out, err = _run(
         [
             sys.executable,
             str(COORDINATOR),
             "--mode", "prepare",
-            "--batch", str(FIX / "batch-4-rejects.yml"),
-            "--worktree-base", "/tmp/wt-batch-fixture-4",
+            "--batch", str(FIX / "batch-10.yml"),
+            "--worktree-base", "/tmp/wt-batch-fixture-10",
             "--dry-run",
         ]
     )
-    assert rc == 2, f"4-article batch should exit 2, got rc={rc}"
-    combined = out + err
-    assert "coordinator cap is 3" in combined.lower() or "cap is 3" in combined.lower(), (
-        f"missing cap rationale in stderr:\n{combined}"
+    assert rc == 0, f"10-article batch should exit 0, got rc={rc}\nout:\n{out}\nerr:\n{err}"
+    assert out.count("would-create") == 10, (
+        f"expected 10 would-create lines, got:\n{out}"
+    )
+
+
+def test_prepare_eleven_articles_rejected_with_cap_message() -> None:
+    """11 articles must reject. Either layer can do the rejecting:
+    `validate-article-batch.py` (MAX_BATCH_SIZE=10) runs first as a
+    preflight, and if it accepted (e.g. cap raised), the coordinator's
+    own MAX_BATCH_ARTICLES=10 check would catch it. Both layers share
+    the same ceiling, so 11 articles always rejects with rc=2 and the
+    user sees a clear "exceeds max 10" / "cap is 10" message."""
+    rc, out, err = _run(
+        [
+            sys.executable,
+            str(COORDINATOR),
+            "--mode", "prepare",
+            "--batch", str(FIX / "batch-11-rejects.yml"),
+            "--worktree-base", "/tmp/wt-batch-fixture-11",
+            "--dry-run",
+        ]
+    )
+    assert rc == 2, f"11-article batch should exit 2, got rc={rc}\nout:\n{out}\nerr:\n{err}"
+    combined = (out + err).lower()
+    assert (
+        "cap is 10" in combined
+        or "coordinator cap is 10" in combined
+        or "exceeds max 10" in combined
+    ), (
+        f"11-article batch rejected without a clear cap rationale "
+        f"(expected 'cap is 10' or 'exceeds max 10'):\n{out}\n{err}"
     )
 
 
@@ -603,6 +634,124 @@ def test_render_path_with_space_uses_url_escape() -> None:
         )
 
 
+def test_validator_screen_required_icons_missing_fails() -> None:
+    """When `screen.required_icons` declares an icon name that is NOT
+    referenced in the screen's pt-br/en HTML, the validator must hard
+    fail with `screen_icon_not_in_html`. Defends against the bug PR #87
+    surfaced: invented icons inside a mockup that the global
+    `flow.icons_required` rule cannot catch."""
+    fixture = REPO_ROOT / "tests" / "fixtures" / "batch-10-gates" / "article-icon-missing"
+    rc, out, err = _run([sys.executable, str(SCRIPTS_DIR / "validate-article-flow.py"), str(fixture)])
+    combined = out + err
+    assert "screen_icon_not_in_html" in combined, (
+        f"missing required-icon should trigger `screen_icon_not_in_html`:\n{combined[:600]}"
+    )
+    # Both locales should fail (one entry per HTML).
+    assert combined.count("screen_icon_not_in_html") >= 2, (
+        f"expected >=2 hits (pt-br + en), got:\n{combined[:600]}"
+    )
+
+
+def test_validator_screen_required_icons_present_passes() -> None:
+    """Counterpart: when the icon IS referenced in BOTH HTMLs (via
+    alt, `<!-- icon: -->`, or xcassets comment), the rule does NOT
+    fail. Other validator rules may still flag the fixture for
+    unrelated reasons, but `screen_icon_not_in_html` must not appear."""
+    fixture = REPO_ROOT / "tests" / "fixtures" / "batch-10-gates" / "article-icon-present"
+    rc, out, err = _run([sys.executable, str(SCRIPTS_DIR / "validate-article-flow.py"), str(fixture)])
+    combined = out + err
+    assert "screen_icon_not_in_html" not in combined, (
+        f"icon IS in HTML but rule still fired:\n{combined[:600]}"
+    )
+
+
+def test_validator_review_checks_missing_softwarns_for_ios_required() -> None:
+    """When a screen is `source: ios_required` but `review_checks` is
+    empty/missing, the validator emits a SOFT warn (not a hard fail).
+    Backward compatibility: existing articles that pre-date this contract
+    must keep validating exit 0; the warn is just a process nudge."""
+    # The wishlist-and-favorites article on main has 3 screens with
+    # source: ios_required and no review_checks declared, so it is the
+    # ideal natural-history fixture.
+    article = REPO_ROOT / "articles" / "wishlist-and-favorites"
+    if not article.exists():
+        # Skip cleanly when running on a checkout that doesn't have it.
+        return
+    rc, out, err = _run([sys.executable, str(SCRIPTS_DIR / "validate-article-flow.py"), str(article)])
+    combined = out + err
+    assert "screen_review_checks_missing" in combined, (
+        f"`screen_review_checks_missing` should fire on wishlist-and-favorites:\n{combined[:600]}"
+    )
+    # Soft warn must NOT promote to hard fail; rc must stay 0.
+    assert rc == 0, f"backward-compat broken: review_checks soft warn promoted to hard fail (rc={rc})"
+
+
+def test_reviewer_pack_renders_manual_gates_when_present() -> None:
+    """When summary.json carries `manual_gates` per article, the renderer
+    must surface them in a Manual gates table at the top of the article
+    block, visible without expanding any details panel."""
+    summary = {
+        "batch_id": "test-gates",
+        "articles": [
+            {
+                "slug": "x",
+                "audience": "buyer_br",
+                "intercom_id": 1,
+                "worktree": "/tmp/x",
+                "branch": "feat/x",
+                "validate_returncode": 0,
+                "validate_output": "Validated 1 article(s): 0 hard fail(s), 0 soft warn(s)\n",
+                "hard_fail_count": 0,
+                "soft_warn_count": 0,
+                "mockups_declared": 0,
+                "mockups_present": 0,
+                "missing_mockups": [],
+                "audit_files_present": 3,
+                "audit_skeleton_unfilled": False,
+                "em_dash_count_pt": 0,
+                "em_dash_count_en": 0,
+                "rdollar_leak_en_count": 0,
+                "pt_br_md_path": None,
+                "en_md_path": None,
+                "mockup_pngs": [],
+                "manual_gates": [
+                    {
+                        "screen": "composer",
+                        "source": "ios_required",
+                        "required_icons": ["icon-send", "icon-camera"],
+                        "review_checks": ["icons_match_ios_source", "labels_match_xcstrings"],
+                    }
+                ],
+                "status": "ready",
+                "blockers": [],
+            }
+        ],
+    }
+    with tempfile.TemporaryDirectory() as tmp:
+        json_path = Path(tmp) / "summary.json"
+        json_path.write_text(json.dumps(summary), encoding="utf-8")
+        html_path = Path(tmp) / "summary.html"
+        rc, out, err = _run([
+            sys.executable, str(RENDER_PACK),
+            "--input", str(json_path), "--output", str(html_path),
+        ])
+        assert rc == 0, f"render failed: {err}"
+        body = html_path.read_text(encoding="utf-8")
+        # Section header
+        assert "Manual gates per screen" in body, "manual gates section missing"
+        # Required icons rendered as code spans
+        assert "icon-send" in body and "icon-camera" in body, "required_icons not rendered"
+        # Review checks rendered as code spans
+        assert "icons_match_ios_source" in body, "review_checks not rendered"
+        # Section is visible without <details> (no <details> wrapping it)
+        gates_idx = body.find("Manual gates per screen")
+        validate_idx = body.find("Validate output")
+        # Gates must appear ABOVE the Validate output details panel.
+        assert 0 < gates_idx < validate_idx, (
+            f"gates should appear above validate output: gates={gates_idx} validate={validate_idx}"
+        )
+
+
 def test_render_html_is_self_contained_no_external_js() -> None:
     """Reviewer pack must be a static page with no <script> tags or
     external fetch dependencies. Confirms the no-server constraint."""
@@ -612,6 +761,184 @@ def test_render_html_is_self_contained_no_external_js() -> None:
         body = html.read_text(encoding="utf-8")
         assert "<script" not in body.lower(), "reviewer pack must contain no <script> tags"
         assert "<form" not in body.lower(), "reviewer pack must contain no <form> tags"
+
+
+def test_reviewer_pack_renders_ten_article_summary_with_gates() -> None:
+    """Cap-10 proof: render a synthetic 10-article summary.json with
+    manual_gates per article and assert that the reviewer pack stays
+    auditable at the new ceiling.
+
+    Each article gets a unique slug (`fixture-10-a01` ... `fixture-10-a10`),
+    one declared screen with `required_icons` + `review_checks`, status
+    alternating between `ready` and `blocked` so both badges are
+    exercised at scale.
+
+    Asserts (per the PR #88 plan, Task A):
+    - scorecard contains exactly 10 article entries; the count is
+      SCOPED to the scorecard table only (Manual gates tables also
+      use <tr> and would pollute a global count)
+    - each of the 10 slugs appears as both an in-page anchor target
+      and an H2 in the body
+    - "Manual gates per screen" appears exactly 10 times
+    - for each article, its specific icon name + at least one
+      review_check value appears verbatim
+    - per-article Manual gates block sits BEFORE the Validate output
+      details panel (gates are visible without expanding details)
+    - HTML stays static: no <script>, no <form>, no fetch( call,
+      no external src/href outside raw.githubusercontent.com / file://
+      / relative paths (https:// to GitHub raw is allowed)
+    - HTML parses with html.parser without raising
+    """
+    statuses = ["ready", "blocked", "ready", "blocked", "ready",
+                "blocked", "ready", "blocked", "ready", "blocked"]
+    articles = []
+    for i, status in enumerate(statuses, start=1):
+        slug = f"fixture-10-a{i:02d}"
+        icon = f"icon-fixture-{i:02d}"
+        review_check = "icons_match_ios_source" if i % 2 == 1 else "labels_match_xcstrings"
+        hard = 0 if status == "ready" else 1
+        articles.append({
+            "slug": slug,
+            "audience": "buyer_br" if i % 2 == 0 else "seller_br",
+            "intercom_id": 99000 + i,
+            "worktree": f"/tmp/fixture-10/{slug}",
+            "branch": f"feat/batch-fixture-10-{slug}",
+            "validate_returncode": hard,
+            "validate_output": (
+                f"=== {slug} ===\n"
+                f"Validated 1 article(s): {hard} hard fail(s), 2 soft warn(s)\n"
+            ),
+            "hard_fail_count": hard,
+            "soft_warn_count": 2,
+            "mockups_declared": 2,
+            "mockups_present": 2,
+            "missing_mockups": [],
+            "audit_files_present": 3,
+            "audit_skeleton_unfilled": False,
+            "em_dash_count_pt": 0,
+            "em_dash_count_en": 0,
+            "rdollar_leak_en_count": 0,
+            "pt_br_md_path": None,
+            "en_md_path": None,
+            "mockup_pngs": [],
+            "manual_gates": [
+                {
+                    "screen": f"screen-{i:02d}",
+                    "source": "ios_required",
+                    "required_icons": [icon],
+                    "review_checks": [review_check],
+                }
+            ],
+            "status": status,
+            "blockers": [] if hard == 0 else [f"validate exit {hard}", f"{hard} validator hard fail(s)"],
+        })
+    summary = {"batch_id": "fixture-10", "articles": articles}
+
+    with tempfile.TemporaryDirectory() as tmp:
+        json_path = Path(tmp) / "summary.json"
+        json_path.write_text(json.dumps(summary), encoding="utf-8")
+        html_path = Path(tmp) / "summary.html"
+        rc, out, err = _run([
+            sys.executable, str(RENDER_PACK),
+            "--input", str(json_path), "--output", str(html_path),
+        ])
+        assert rc == 0, f"render failed: rc={rc}\nout:\n{out}\nerr:\n{err}"
+        body = html_path.read_text(encoding="utf-8")
+
+        # 1. HTML parses cleanly.
+        from html.parser import HTMLParser
+        class _Lint(HTMLParser):
+            def error(self, message):  # pragma: no cover - defensive
+                raise AssertionError(f"HTMLParser error: {message}")
+        _Lint().feed(body)
+
+        # 2. Scorecard <tr> count scoped to the scorecard table only.
+        # The Manual gates tables also use <tr>, so a global count
+        # would inflate. Slice between the scorecard <table> open and
+        # its matching </table>.
+        import re as _re
+        scorecard_match = _re.search(
+            r'<table\s+class="scorecard">.*?</table>', body, _re.DOTALL,
+        )
+        assert scorecard_match, "scorecard table not found"
+        scorecard_html = scorecard_match.group(0)
+        # Count <tr> that are NOT in <thead>; the body rows live in
+        # <tbody>. Strip the thead first.
+        thead_stripped = _re.sub(r'<thead\b.*?</thead>', '', scorecard_html, flags=_re.DOTALL)
+        scorecard_body_trs = thead_stripped.count("<tr>")
+        assert scorecard_body_trs == 10, (
+            f"scorecard should have exactly 10 article rows, got "
+            f"{scorecard_body_trs}\nscorecard slice (first 400 chars):\n"
+            f"{scorecard_html[:400]}"
+        )
+
+        # 3. Each slug present as anchor target + H2.
+        for i in range(1, 11):
+            slug = f"fixture-10-a{i:02d}"
+            assert f'id="article-{slug}"' in body, f"missing anchor for {slug}"
+            assert f'<h2>{slug}' in body or f">{slug}<" in body, (
+                f"slug {slug} missing as visible heading"
+            )
+
+        # 4. Manual gates section per article.
+        gates_count = body.count("Manual gates per screen")
+        assert gates_count == 10, (
+            f"expected 10 'Manual gates per screen' headers, got {gates_count}"
+        )
+
+        # 5. Per-article required_icons + review_checks visible verbatim.
+        for i in range(1, 11):
+            icon = f"icon-fixture-{i:02d}"
+            assert icon in body, f"required_icon {icon} not in body"
+        # Both review-check variants appear (alternating pattern).
+        assert "icons_match_ios_source" in body
+        assert "labels_match_xcstrings" in body
+
+        # 6. Manual gates appear BEFORE Validate output for each article.
+        # Iterate slug-by-slug so we check the per-article relative
+        # ordering (string-find returns first occurrence which is fine
+        # since each slug section starts with the gates block).
+        for i in range(1, 11):
+            slug = f"fixture-10-a{i:02d}"
+            section_start = body.find(f'id="article-{slug}"')
+            assert section_start > 0, f"section start not found for {slug}"
+            # Find the next 'Manual gates per screen' AFTER the section
+            # start, and the next 'Validate output' AFTER that.
+            gates_idx = body.find("Manual gates per screen", section_start)
+            validate_idx = body.find("Validate output", section_start)
+            assert section_start < gates_idx < validate_idx, (
+                f"gates must precede Validate output in {slug}: "
+                f"section={section_start} gates={gates_idx} validate={validate_idx}"
+            )
+
+        # 7. Static-HTML invariants.
+        # No script / form / fetch( anywhere.
+        body_lower = body.lower()
+        assert "<script" not in body_lower, "no <script> allowed"
+        assert "<form" not in body_lower, "no <form> allowed"
+        assert "fetch(" not in body_lower, "no fetch( call allowed"
+        # No external asset src/href outside the GitHub raw allowlist /
+        # file:// / relative paths. https:// to raw.githubusercontent.com
+        # is legitimate (mockup image fallback URLs); other hosts are not.
+        from urllib.parse import urlparse
+        attr_re = _re.compile(r'(?:src|href)\s*=\s*"([^"]+)"', _re.IGNORECASE)
+        external_violations: list[str] = []
+        for raw_url in attr_re.findall(body):
+            parsed = urlparse(raw_url)
+            if not parsed.scheme:
+                continue  # relative path, OK
+            if parsed.scheme == "file":
+                continue  # local file, OK
+            if parsed.scheme in ("http", "https"):
+                if parsed.netloc == "raw.githubusercontent.com":
+                    continue  # GitHub raw allowlist
+                external_violations.append(raw_url)
+            else:
+                external_violations.append(raw_url)
+        assert not external_violations, (
+            f"reviewer pack references external assets outside the "
+            f"allowlist: {external_violations[:3]}"
+        )
 
 
 def test_render_sample_summary_json_resolves_repo_root_marker() -> None:
@@ -785,7 +1112,8 @@ def test_prepare_and_review_use_worktree_local_runner_end_to_end() -> None:
 TESTS = [
     test_prepare_one_article_dry_run_succeeds,
     test_prepare_three_articles_dry_run_succeeds,
-    test_prepare_four_articles_rejected_with_cap_message,
+    test_prepare_ten_articles_accepted_at_cap,
+    test_prepare_eleven_articles_rejected_with_cap_message,
     test_prepare_duplicate_slug_rejected,
     test_prepare_existing_worktree_path_returns_exit_3,
     test_prepare_bootstraps_missing_flow_yml,
@@ -800,7 +1128,12 @@ TESTS = [
     test_decide_status_validator_unparseable_blocks,
     test_decide_status_clean_review_marks_ready,
     test_render_path_with_space_uses_url_escape,
+    test_validator_screen_required_icons_missing_fails,
+    test_validator_screen_required_icons_present_passes,
+    test_validator_review_checks_missing_softwarns_for_ios_required,
+    test_reviewer_pack_renders_manual_gates_when_present,
     test_render_html_is_self_contained_no_external_js,
+    test_reviewer_pack_renders_ten_article_summary_with_gates,
     test_render_sample_summary_json_resolves_repo_root_marker,
     test_generate_sample_pack_is_idempotent_and_has_no_local_paths,
 ]

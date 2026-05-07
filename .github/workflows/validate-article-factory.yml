@@ -23,6 +23,7 @@ on:
       - 'scripts/test-batch-coordinator.py'
       - 'scripts/generate-sample-reviewer-pack.py'
       - 'tests/fixtures/batch-coordinator/**'
+      - 'tests/fixtures/batch-10-gates/**'
       - 'process/14-batch-coordinator.md'
       - '_work/sample-batch/**'
       - '.github/workflows/validate-article-factory.yml'

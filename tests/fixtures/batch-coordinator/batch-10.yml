@@ -1,0 +1,98 @@
+# Fixture: 10-article batch (the coordinator cap after PR #88).
+# Used by tests for the upper bound: prepare must accept exactly 10
+# articles. All slugs are synthetic + new_article mode so they don't
+# need to exist on the base ref.
+batch_id: fixture-batch-10
+workflow: article-v2
+mode: new_article
+articles:
+  - slug: fixture-batch-10-a01
+    priority: 1
+    audience: buyer_br
+    job_to_be_done: "Synthetic fixture article a01"
+    source_hints:
+      ios_files: []
+      backend_files: []
+      justification: "Synthetic fixture used only by test-batch-coordinator.py"
+    mockup_count_target: 1
+  - slug: fixture-batch-10-a02
+    priority: 2
+    audience: buyer_br
+    job_to_be_done: "Synthetic fixture article a02"
+    source_hints:
+      ios_files: []
+      backend_files: []
+      justification: "Synthetic fixture used only by test-batch-coordinator.py"
+    mockup_count_target: 1
+  - slug: fixture-batch-10-a03
+    priority: 3
+    audience: seller_br
+    job_to_be_done: "Synthetic fixture article a03"
+    source_hints:
+      ios_files: []
+      backend_files: []
+      justification: "Synthetic fixture used only by test-batch-coordinator.py"
+    mockup_count_target: 1
+  - slug: fixture-batch-10-a04
+    priority: 4
+    audience: seller_br
+    job_to_be_done: "Synthetic fixture article a04"
+    source_hints:
+      ios_files: []
+      backend_files: []
+      justification: "Synthetic fixture used only by test-batch-coordinator.py"
+    mockup_count_target: 1
+  - slug: fixture-batch-10-a05
+    priority: 5
+    audience: both
+    job_to_be_done: "Synthetic fixture article a05"
+    source_hints:
+      ios_files: []
+      backend_files: []
+      justification: "Synthetic fixture used only by test-batch-coordinator.py"
+    mockup_count_target: 1
+  - slug: fixture-batch-10-a06
+    priority: 6
+    audience: both
+    job_to_be_done: "Synthetic fixture article a06"
+    source_hints:
+      ios_files: []
+      backend_files: []
+      justification: "Synthetic fixture used only by test-batch-coordinator.py"
+    mockup_count_target: 1
+  - slug: fixture-batch-10-a07
+    priority: 7
+    audience: buyer_br
+    job_to_be_done: "Synthetic fixture article a07"
+    source_hints:
+      ios_files: []
+      backend_files: []
+      justification: "Synthetic fixture used only by test-batch-coordinator.py"
+    mockup_count_target: 1
+  - slug: fixture-batch-10-a08
+    priority: 8
+    audience: seller_br
+    job_to_be_done: "Synthetic fixture article a08"
+    source_hints:
+      ios_files: []
+      backend_files: []
+      justification: "Synthetic fixture used only by test-batch-coordinator.py"
+    mockup_count_target: 1
+  - slug: fixture-batch-10-a09
+    priority: 9
+    audience: seller_br
+    job_to_be_done: "Synthetic fixture article a09"
+    source_hints:
+      ios_files: []
+      backend_files: []
+      justification: "Synthetic fixture used only by test-batch-coordinator.py"
+    mockup_count_target: 1
+  - slug: fixture-batch-10-a10
+    priority: 10
+    audience: buyer_br
+    job_to_be_done: "Synthetic fixture article a10"
+    source_hints:
+      ios_files: []
+      backend_files: []
+      justification: "Synthetic fixture used only by test-batch-coordinator.py"
+    mockup_count_target: 1

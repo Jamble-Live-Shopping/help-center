@@ -349,6 +349,68 @@ def validate_article(article_dir: Path) -> Report:
             if not en_html.exists():
                 rep.fail("mockup_html_missing", f"missing {en_html.relative_to(REPO_ROOT)}")
 
+    # ---- rule 10b (NEW, batch-10 gate): screen-scoped required_icons
+    # check. Only fires when the field is declared and non-empty, so
+    # historical flow.yml files without the field stay green.
+    if mockup_required and screens and mockup_dir.exists():
+        for screen in screens:
+            if not isinstance(screen, dict):
+                continue
+            name = screen.get("name", "")
+            req_icons = screen.get("required_icons") or []
+            if not name or not req_icons:
+                continue
+            pt_html = mockup_dir / f"{name}__pt-br.html"
+            en_html = mockup_dir / f"{name}__en.html"
+            for lang_label, html_path in (("pt-br", pt_html), ("en", en_html)):
+                if not html_path.exists():
+                    # The HTML pair check above already failed; do not
+                    # cascade a redundant icon error.
+                    continue
+                try:
+                    blob = html_path.read_text(encoding="utf-8")
+                except OSError:
+                    continue
+                for icon_name in req_icons:
+                    if not isinstance(icon_name, str) or not icon_name:
+                        continue
+                    has_alt = f'alt="{icon_name}"' in blob
+                    has_icon_comment = f"<!-- icon: {icon_name}" in blob
+                    has_xcassets_comment = f"Assets.xcassets/{icon_name}.imageset" in blob
+                    if not (has_alt or has_icon_comment or has_xcassets_comment):
+                        rep.fail(
+                            "screen_icon_not_in_html",
+                            f"screen '{name}' declares required_icons "
+                            f"['{icon_name}'] but it is not referenced in "
+                            f"{html_path.relative_to(REPO_ROOT)}. Use "
+                            f'alt="{icon_name}", `<!-- icon: {icon_name} -->`, '
+                            f"or `Assets.xcassets/{icon_name}.imageset` "
+                            f"comment in the HTML.",
+                        )
+
+    # ---- rule 10c (NEW, batch-10 gate): manual review_checks nudge.
+    # Soft warn when a screen is sourced from iOS but no review_checks
+    # are declared. Encourages explicit reviewer guidance before
+    # scaling the batch. Soft only (backward-compatible).
+    if mockup_required and screens:
+        for screen in screens:
+            if not isinstance(screen, dict):
+                continue
+            name = screen.get("name", "")
+            source = screen.get("source", "")
+            review_checks = screen.get("review_checks") or []
+            if not name:
+                continue
+            if source == "ios_required" and not review_checks:
+                rep.warn(
+                    "screen_review_checks_missing",
+                    f"screen '{name}' has source: ios_required but no "
+                    f"review_checks declared. Add at least one of "
+                    f"icons_match_ios_source, labels_match_xcstrings, "
+                    f"no_invented_ui_state so the reviewer pack lists "
+                    f"the manual gates explicitly.",
+                )
+
     # ---- rule 11: audit triplet present
     intercom_id = meta_id or flow_id
     if intercom_id is None:
