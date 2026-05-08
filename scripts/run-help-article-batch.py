@@ -177,6 +177,16 @@ class ArticleReview:
     # from `exception_free=True` so a missing iOS clone never inflates
     # the reviewer pack confidence silently.
     source_of_truth_check_skipped: int = 0
+    # Batch real-1-rerun calibration (rule 10e): when a screen declares
+    # review_checks=[icons_match_ios_source] but has neither
+    # required_icons (real-icon anchor) nor html_must_not_contain
+    # icon-blockers (text-only anchor), the validator emits the soft
+    # warn `screen_icon_review_check_unanchored`. Counting it here
+    # lets `decide_exception_free` disqualify the article so the
+    # reviewer pack surfaces the unanchored icon claim instead of
+    # certifying it. Calibrated from the wishlist product-bookmark-cta
+    # false negative discovered in Aymar's sample review on 2026-05-07.
+    screens_with_unanchored_icon_check: int = 0
     screens_with_html_contract: int = 0       # informational coverage
     screens_with_required_icons: int = 0      # informational coverage
     exception_free: bool = False
@@ -697,6 +707,13 @@ def collect_article_review(
     review.source_of_truth_check_skipped = (
         review.validate_output.count("source_of_truth_check_skipped")
     )
+    # Batch real-1-rerun calibration (rule 10e): count
+    # screen_icon_review_check_unanchored warns so the unanchored
+    # icon-match claim is surfaced as an exception in the reviewer pack
+    # rather than silently certified.
+    review.screens_with_unanchored_icon_check = (
+        review.validate_output.count("screen_icon_review_check_unanchored")
+    )
 
     mockup_dir = worktree_path / "assets" / "mockups"
     present_pngs: list[str] = []
@@ -838,6 +855,12 @@ def decide_exception_free(review: ArticleReview) -> None:
         reasons.append(
             f"{review.forbidden_html_contract_failures} forbidden HTML "
             "contract violation(s)"
+        )
+    if review.screens_with_unanchored_icon_check > 0:
+        n = review.screens_with_unanchored_icon_check
+        reasons.append(
+            f"{n} screen(s) declare review_checks: [icons_match_ios_source] "
+            "without required_icons or html_must_not_contain anchor"
         )
     if review.source_of_truth_check_skipped > 0:
         reasons.append(
