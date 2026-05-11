@@ -14,7 +14,7 @@ Ao criar um anúncio, o app mostra uma linha **Condição** na lista de informa�
 
 ![Linha Condição no fluxo de criação de anúncio, posicionada entre Cor e Preço](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/understanding-listing-conditions-and-expectations__section-row__pt-br__v3.png)
 
-A linha **Condição** mostra a condição selecionada à direita. Toque para abrir a tela de seleção.
+A linha **Condição** mostra a condição selecionada empilhada abaixo do título da linha, igual aos outros atributos da lista. Toque na linha para abrir a tela de seleção.
 
 ## As cinco condições disponíveis
 

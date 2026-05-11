@@ -14,7 +14,7 @@ When you create a listing, the app shows a **Condition** row in the product info
 
 ![Condition row inside the create-listing flow, sitting between Color and Price](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/understanding-listing-conditions-and-expectations__section-row__en__v3.png)
 
-The **Condition** row shows the selected condition on the right side. Tap it to open the selection screen.
+The **Condition** row shows the selected condition stacked below the row title, like the other attributes in the list. Tap the row to open the selection screen.
 
 ## The five available conditions
 
