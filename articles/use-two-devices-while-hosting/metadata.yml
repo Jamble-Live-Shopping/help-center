@@ -7,11 +7,11 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-05-08T00:00:00Z
 locales:
   pt-br:
-    title: 'Usar Dois Dispositivos Durante o Show'
-    description: ''
+    title: 'Usar dois dispositivos durante o show'
+    description: 'Use um segundo celular como controle remoto do seu show ao vivo, ou troque a transmissao entre os dois dispositivos.'
   en:
-    title: 'Use Two Devices While Hosting'
-    description: 'This guide explains how to use two phones while hosting a live show on Jamble. One phone broadcasts your video, while the other becomes a remote control for managing products, chat, and sales — so you can focus on the camera without juggling everythi'
+    title: 'Use two devices while hosting'
+    description: 'Turn a second phone into a remote control for your live show, or hand off the broadcast between the two devices when needed.'

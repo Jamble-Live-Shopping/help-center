@@ -1,0 +1,99 @@
+# Flow contract for use-two-devices-while-hosting.
+# Batch real-1-rerun-2 (PR #92, rule 10e calibration). v2 rewrite.
+# Source: iOS Jamble code (CloseRemoteButton + ShowAudienceVC + ShowHostVC + ShostHostV2VC).
+#
+# See process/templates/article-flow.yml for field documentation.
+# See process/00-RUNBOOK.md for the canonical 8-phase workflow.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+
+job_to_be_done: "Help sellers host a show from a second device (extra angle, prep, monitor) without dropping the primary stream"
+
+source_of_truth:
+  ios_files:
+    - LIVE_SHOPPING/Audience/View/ShowAudienceViewController.swift
+    - LIVE_SHOPPING/Host/View/ShowHostViewController.swift
+    - LIVE_SHOPPING/HostV2/ShostHostV2ViewController.swift
+    - UTILS/COMPONENTS/Buttons/CloseRemoteButton.swift
+    - RESOURCES/Localizable.xcstrings
+  backend_files: []
+  legal: []
+  support_context: []
+
+content_contract:
+  must_answer:
+    - "remote control mode"
+    - "offline jamble overlay"
+    - "iphones video camera while hosting"
+  forbidden_terms:
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+    - "Close Remote"
+    - "Fechar Controle Remoto"
+  must_not_say:
+    - "Android-specific UI states (no Android source audited in this article)"
+    - "Invented button labels for the Close Remote control (it is icon-only)"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: remote-control-picker
+      purpose: "Show the Remote Control bulletin (BLTNPageItem) with the two action buttons sellers see when they open a live show on a second device"
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Controle remoto"
+          - "Use como um controle remoto"
+          - "Transmiss"
+        en:
+          - "Remote Control"
+          - "Use as a remote"
+          - "Livestream from this device"
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+
+    - name: close-remote-button
+      purpose: "Show the icon-only Close Remote control (av.remote.fill SF Symbol white tint, red close badge with icon-close glyph) anchored top right of the host video while the device is in remote mode"
+      source: ios_required
+      required_icons:
+        - av.remote.fill
+        - icon-close
+      review_checks:
+        - icons_match_ios_source
+        - no_invented_ui_state
+
+    - name: host-offline-overlay
+      purpose: "Show the dark rounded overlay surfaced on the remote device when the broadcasting device goes offline (Aguarde / Seu dispositivo principal parece estar off-line + loading indicator)"
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Aguarde"
+          - "Seu dispositivo principal parece estar off-line"
+        en:
+          - "Hold on"
+          - "Your main device seems offline"
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+
+icons_required:
+  - av.remote.fill
+  - icon-close
+
+icons_fallback_feather: false
+
+currency_required: false
+
+risk_flags: []
+resolved_decisions: []

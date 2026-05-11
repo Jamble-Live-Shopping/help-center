@@ -1,96 +1,93 @@
-# Usar Dois Dispositivos Durante o Show
+# Usar dois dispositivos durante o show
 
 ## O que voce vai aprender
 
-Este guia explica como usar dois celulares enquanto faz um show ao vivo na Jamble. Um celular transmite o video, enquanto o outro vira um controle remoto para gerenciar produtos, chat e vendas — assim voce pode focar na camera sem precisar fazer tudo em uma tela so.
+Este guia explica como usar um segundo celular durante um show ao vivo na Jamble. Um celular transmite o video. O outro vira um controle remoto que mostra os produtos, o chat e as ferramentas de venda. Assim voce nao precisa fazer tudo numa tela so e mantem o foco na camera.
 
 ## Antes de comecar
 
-Voce precisa de:
+Voce vai precisar de:
+
 - Uma conta de vendedor aprovada na Jamble
-- Dois celulares (iOS ou Android — pode misturar)
-- O app Jamble instalado nos dois celulares
-- Sua conta conectada nos dois celulares
+- Dois iPhones com o app Jamble instalado
+- Sua conta logada nos dois iPhones
+- Os dois aparelhos com internet estavel
 
 ## Como funciona
 
-Quando voce abre o mesmo show ao vivo em dois dispositivos, a Jamble detecta automaticamente que voce ja esta transmitindo de outro celular. O app pergunta o que voce quer fazer com o segundo dispositivo.
+Quando voce abre o mesmo show ao vivo no segundo celular logado na mesma conta, o app pergunta o que voce quer fazer com esse aparelho. Voce escolhe entre transmitir deste novo celular ou usa-lo como controle remoto.
 
-**Apenas um dispositivo transmite video por vez.** O outro dispositivo vira um controle remoto — voce ve os controles do show, a lista de produtos e o chat, mas a camera fica desligada nesse dispositivo.
+Apenas um celular transmite video por vez. O outro celular fica em modo controle remoto: a camera fica desligada nesse aparelho, mas voce continua vendo o show e tem acesso aos controles.
 
 ## Passo a passo
 
-### Passo 1: Comece o show no seu dispositivo principal
+### Passo 1: Comece o show no celular principal
 
-Inicie o show normalmente no seu **celular principal** — aquele que voce quer usar como camera. Esse e o dispositivo que transmite o video para os espectadores.
+Inicie o show normalmente no celular que vai ser sua camera. Esse e o aparelho que transmite o video para os espectadores.
 
-### Passo 2: Abra o mesmo show no segundo dispositivo
+### Passo 2: Abra o mesmo show no segundo celular
 
-No seu **segundo celular** (logado na mesma conta Jamble), abra o app e acesse o show ao vivo. Como voce ja esta transmitindo do dispositivo principal, um dialogo aparece:
+No segundo celular, abra o app e entre no mesmo show ao vivo. Como voce ja esta transmitindo do celular principal, a Jamble mostra um cartao com o titulo *Controle remoto* e dois botoes:
 
-**No iOS:**
-![Tela Controle Remoto com dois botões de ação empilhados para selecionar modo do dispositivo](./assets/mockups/use-two-devices-while-hosting__remote-control-mode-picker__pt-br.png)
+![Cartao Controle remoto com os botoes Use como um controle remoto e Transmissao ao vivo a partir deste dispositivo](./assets/mockups/use-two-devices-while-hosting__remote-control-picker__pt-br__v3.png)
 
-**No Android:**
-![Diálogo de alerta perguntando se deseja assumir transmissão de outro dispositivo](./assets/mockups/use-two-devices-while-hosting__dual-device-transmission-prompt__pt-br.png)
+Os dois botoes sao:
 
-### Passo 3: Escolha "Usar como controle remoto"
+- *Use como um controle remoto*: o segundo celular vira um painel de controle do show. A camera fica desligada nesse celular.
+- *Transmissao ao vivo a partir deste dispositivo*: a transmissao de video troca para esse celular. O celular principal vira automaticamente o controle remoto.
 
-Toque na opcao de controle remoto. Seu segundo dispositivo agora mostra a interface do show com uma camada escura sobre a area do video — isso significa que a camera esta desligada neste dispositivo, mas todos os controles estao ativos.
+### Passo 3: Use o segundo celular como controle remoto
 
-Agora voce pode:
-- **Ler e responder no chat** sem bloquear a camera
-- **Fixar produtos** e gerenciar a fila de produtos
-- **Iniciar e gerenciar vendas** (ofertas em tempo real, Compra Direta, Vendas Relampago)
-- **Ver os valores das ofertas** e o status da venda
-- **Bloquear ou moderar usuarios** no chat
+Toque em *Use como um controle remoto*. O segundo celular abre a interface do show com a camera desligada e um indicador no canto superior direito que sinaliza o modo controle remoto.
 
-Um botao **"Fechar Controle Remoto"** aparece no canto superior direito. Toque nele quando quiser desconectar este dispositivo da sessao remota.
+![Modo controle remoto com o indicador no canto superior direito do show ao vivo](./assets/mockups/use-two-devices-while-hosting__close-remote-button__pt-br__v3.png)
 
-### Passo 4: Trocar a transmissao para o outro dispositivo (opcional)
+A partir dai, no celular controle voce pode:
 
-Se voce quiser trocar qual celular esta na camera:
+- Ler e responder o chat sem tirar o rosto da camera principal
+- Fixar produtos e organizar a fila
+- Iniciar e gerenciar vendas (Compra Direta, Vendas Relampago, ofertas em tempo real)
+- Acompanhar o valor das ofertas e o status da venda
+- Bloquear ou silenciar usuarios no chat
 
-1. No segundo dispositivo, escolha **"Transmitir deste dispositivo"** (iOS) ou **"Assumir transmissao"** (Android)
-2. A transmissao de video muda para este dispositivo imediatamente
-3. O primeiro dispositivo vira automaticamente o controle remoto
+Quando quiser sair do modo controle remoto neste celular, toque no indicador no canto superior direito.
 
-Isso e util se o celular principal esta com a bateria acabando, ou se voce quer mudar o angulo da camera.
+### Passo 4: Trocar a transmissao para o outro celular (opcional)
 
-## O que acontece se o dispositivo principal ficar offline
+Se voce quiser trocar qual celular esta na camera, abra o cartao *Controle remoto* novamente no celular que voce quer usar como camera e toque em *Transmissao ao vivo a partir deste dispositivo*. A transmissao de video troca de aparelho na hora, e o celular que estava transmitindo vira automaticamente o controle remoto.
 
-Se o celular que esta transmitindo perder a conexao (bateria acabou, app travou, Wi-Fi caiu), seu dispositivo remoto mostrara uma mensagem:
+Isso ajuda quando o celular principal esta com a bateria baixa ou quando voce quer mudar o angulo da camera no meio do show.
 
-![device-offline-loading: Estado de carregamento mostrando mensagem de dispositivo primário offline com ícone de ampulheta](./assets/mockups/use-two-devices-while-hosting__device-offline-loading__pt-br.png)
+## O que acontece se o celular principal cair
 
-Voce pode entao **assumir a transmissao** do dispositivo remoto para continuar o show sem interrupcao.
+Se o celular que esta transmitindo perder a conexao (bateria descarregada, app fechado, Wi-Fi ruim), o celular controle remoto mostra um aviso escuro com o texto *Aguarde* seguido de *Seu dispositivo principal parece estar off-line* e um indicador girando enquanto o app tenta restabelecer a transmissao:
 
-## Dicas importantes
+![Aviso Aguarde com a frase Seu dispositivo principal parece estar off-line e um indicador girando](./assets/mockups/use-two-devices-while-hosting__host-offline-overlay__pt-br__v3.png)
 
-- **Use a melhor camera como dispositivo principal.** O celular que transmite deve ser aquele com a melhor camera e conexao de internet mais estavel
-- **Mantenha o celular remoto por perto.** Use-o em uma mesa ou suporte ao seu lado para facil acesso ao chat e gerenciamento de produtos
-- **Os dois dispositivos precisam estar na mesma conta.** Esse recurso nao funciona com contas diferentes — para isso existe o recurso de co-host
-- **Voce pode misturar iOS e Android.** Sua camera principal pode ser um iPhone e o controle remoto um celular Android, ou o contrario
-- **Troque de dispositivo se a bateria acabar.** Em vez de parar o show para carregar, transfira a transmissao para o segundo dispositivo
-- **Isso e diferente de co-hosting.** Dois dispositivos = uma pessoa usando dois celulares. Co-hosting = duas pessoas diferentes no mesmo show. Se voce quer que outro vendedor participe do seu show, use o recurso "Convidar co-host"
+Enquanto esse aviso aparece, voce pode trocar a transmissao para o celular controle remoto. Abra de novo o cartao *Controle remoto* nesse celular e toque em *Transmissao ao vivo a partir deste dispositivo*. O show continua sem precisar parar.
+
+## Dicas praticas
+
+- *Use a melhor camera como aparelho principal.* O celular que transmite deve ser aquele com camera melhor e conexao mais estavel.
+- *Deixe o celular controle por perto.* Em uma mesa ou suporte do seu lado, para alcancar o chat e os produtos sem virar a camera.
+- *Os dois aparelhos precisam estar logados na mesma conta.* Esse recurso nao funciona com contas diferentes. Para convidar outro vendedor, use co-host.
+- *Troque de aparelho se a bateria estiver acabando.* Em vez de parar o show para carregar, transfira a transmissao para o segundo celular.
+- *Dois dispositivos nao e o mesmo que co-host.* Dois dispositivos = uma pessoa com dois aparelhos. Co-host = dois vendedores diferentes no mesmo show. Para convidar outro vendedor existe a opcao co-host.
 
 ## Perguntas frequentes
 
-**Posso usar mais de dois dispositivos?**
-Voce pode ter varios dispositivos conectados, mas apenas um transmite video por vez. Os dispositivos extras funcionam como controle remoto.
+*Posso conectar mais de dois aparelhos?*
+Voce pode ter mais de um celular conectado, mas apenas um transmite video por vez. Os outros funcionam como controles remotos.
 
-**O dispositivo remoto gasta muita bateria?**
-Menos que o dispositivo que transmite, ja que a camera esta desligada. Mas ele continua conectado ao show e recebendo o feed ao vivo, entao vai usar alguma bateria.
+*O celular controle remoto consome muita bateria?*
+Menos do que o celular que transmite, ja que a camera fica desligada. Mas ele continua conectado ao show, entao gasta alguma bateria.
 
-**Os espectadores sabem que estou usando dois dispositivos?**
-Nao. Os espectadores veem a mesma experiencia do show independente de quantos dispositivos voce esta usando. Eles so veem o video do dispositivo que esta transmitindo.
+*Os espectadores percebem que estou usando dois celulares?*
+Nao. Os espectadores so veem o video do celular que esta transmitindo no momento. A troca de aparelho nao aparece para eles.
 
-**E se eu fechar o app no dispositivo principal sem querer?**
-O show continua ao vivo brevemente enquanto o sistema espera a reconexao. Abra o show novamente naquele dispositivo, ou assuma a transmissao do dispositivo remoto para continuar sem interrupcao.
-
-**Esse recurso esta disponivel no iOS e Android?**
-Sim. As duas plataformas suportam o uso de dois dispositivos. Voce pode ate misturar — por exemplo, usar um iPhone como camera e um celular Android como controle remoto.
+*E se eu fechar o app sem querer no celular principal?*
+O show fica em estado de espera enquanto o sistema aguarda a reconexao. Voce pode reabrir o show no mesmo celular, ou trocar a transmissao para o celular controle remoto e continuar de onde parou.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat dentro do app ou pelo email support@jambleapp.com.
