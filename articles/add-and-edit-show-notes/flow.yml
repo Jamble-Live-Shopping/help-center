@@ -1,0 +1,85 @@
+# Flow contract for the add-and-edit-show-notes article. v2 rewrite scope.
+# See process/templates/article-flow.yml for field documentation.
+# See process/00-RUNBOOK.md for the canonical 8-phase workflow.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+
+job_to_be_done: "Help sellers attach show notes (rules, lots, special offers) to a show and edit them before going live"
+
+source_of_truth:
+  ios_files:
+    # Show creation/edit form: NOTES field + 200-char cap + DESCRIPTION field
+    - LIVE_SHOPPING/Create/Show/Views/CreateShowDetailsViewController.swift
+    # Header component for the NOTES label and character counter "(0/200)"
+    - LIVE_SHOPPING/Create/Show/Views/Components/CreateShowDetailsHeader.swift
+    # Pinned message render in chat: white-on-overlay, avatar + note text
+    - LIVE_SHOPPING/Chat/View/ShowPinnedMessageView.swift
+    # Pinned message trigger and auto-dismiss timer (estimated reading time)
+    - LIVE_SHOPPING/Chat/View/ShowChatViewController.swift
+    # Notes button in audience top-right (re-opens pinned message)
+    - LIVE_SHOPPING/Audience/View/ShowAudienceViewController.swift
+    # Edit Show button on host: hidden while show is live (pre-live edit only)
+    - LIVE_SHOPPING/Host/View/ShowHostViewController.swift
+  backend_files: []
+  legal: []
+  support_context: []
+
+content_contract:
+  must_answer:
+    - "where to add notes when creating or editing a show"
+    - "200-character limit on notes"
+    - "notes appear as a pinned message during the live show"
+    - "notes can be re-opened with the notes icon during the show"
+    - "notes can only be edited before the show goes live"
+
+  forbidden_terms:
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+
+  must_not_say:
+    - "Internal moderation tooling and admin-only override paths"
+    - "That sellers can edit notes while the show is broadcasting (Edit Show button is hidden mid-live per ShowHostViewController.swift:945-951)"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: screen-1
+      purpose: "Show the create/edit show details form with the NOTES field, 200-char counter, and Optional label"
+      source: ios_required
+      # Procedural fix 2026-05-11 (post rerun-2): rule 10c was firing
+      # because review_checks was unset. screen-1 is a text-form view
+      # (NOTES field + 200-char counter), no icons to verify, so
+      # icons_match_ios_source is NOT applicable; declaring just the
+      # label + no-invented-state pair is the minimum that clears the
+      # rule without introducing rule 10e (unanchored icon claim).
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+    - name: screen-2
+      purpose: "Show the live audience view with the pinned message at the top of chat and the notes icon top-right"
+      source: ios_required
+      # screen-2 has the note_icon top-right; the article-level
+      # icons_required (note_icon) already enforces icon presence via
+      # rule 10b. icons_match_ios_source is NOT added here because the
+      # icon source proof lives at the article level, not the screen
+      # level, and rule 10e is screen-scoped.
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+
+icons_required:
+  - note_icon          # round notes icon shown top-right of audience view to re-open pinned message
+icons_fallback_feather: false
+
+currency_required: false
+
+risk_flags:
+  - "ShowHostViewController.swift:945-951 hides Edit Show button while show is live (has_started == true AND is_over == false). Article scoped to pre-live editing only with explicit limit note. Brief asked for mid-stream editing; reframed accordingly."
+
+resolved_decisions:
+  - risk: "ShowHostViewController.swift:945-951 hides Edit Show button while show is live"
+    decided_by: "Aymar (rerun-1 finding, carried forward)"
+    decided_at: "2026-05-08"
+    rationale: "Article reframed around pre-live editing. Explicit limit note added. Source-of-truth code is unambiguous; no UX change planned. Document the limit so sellers do not look for an in-stream edit affordance that does not exist."
