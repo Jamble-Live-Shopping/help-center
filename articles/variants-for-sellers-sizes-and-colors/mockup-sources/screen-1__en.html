@@ -1,0 +1,31 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding: 20px 0; }
+.group { background: #FFFFFF; margin: 0 12px 12px; border-radius: 12px; overflow: hidden; border: 1px solid #E9EAEF; padding: 14px 16px; }
+.cell-title { font-family: -apple-system-round, "SF Pro Rounded", -apple-system, system-ui, sans-serif; font-size: 17px; font-weight: 600; color: #162233; line-height: 22px; }
+.cell-row { display: flex; align-items: center; justify-content: space-between; }
+.cell-value { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 500; color: #4F5C72; line-height: 22px; }
+.chev { color: #A0A7B7; font-size: 14px; line-height: 1; }
+.swatch { width: 16px; height: 16px; border-radius: 50%; border: 1px solid #E9EAEF; }
+</style></head><body>
+<div class="phone">
+  <div class="group">
+    <div class="cell-row">
+      <div class="cell-title">Size</div>
+      <div class="cell-value">M <span class="chev">&#9656;</span></div>
+    </div>
+  </div>
+  <div class="group">
+    <div class="cell-row">
+      <div class="cell-title">Color</div>
+      <div class="cell-value">
+        <span class="swatch" style="background:#162233;"></span>
+        Black
+        <span class="chev">&#9656;</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

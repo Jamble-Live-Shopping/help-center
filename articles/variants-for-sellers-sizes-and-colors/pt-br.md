@@ -1,138 +1,87 @@
-# Variantes para Vendedores — Tamanhos e Cores
+# Variantes para Vendedores, Tamanhos e Cores
 
-## O que você vai aprender
+## O que voce vai aprender
 
-Este guia explica como tamanhos e cores funcionam ao listar produtos na Jamble. Você vai aprender como selecionar o tamanho certo para cada produto, como as opções de tamanho mudam com base na categoria que você escolhe, e como selecionar cores entre as opções disponíveis.
+Como tamanho e cor funcionam ao listar produtos na Jamble, e como lidar com o mesmo item em varios tamanhos ou cores usando a opcao **Clonar listagens de shows anteriores**.
 
-## Antes de começar
+## Antes de comecar
 
-Você precisa de:
+Voce precisa de:
+
 - Uma conta de vendedor aprovada na Jamble
 - Um show com produtos para listar
 
-## Como tamanhos e cores funcionam na Jamble
+## A regra principal, um produto, um tamanho, uma cor
 
-Cada produto na Jamble tem **um tamanho** e **uma cor**. Quando você cria uma listagem, escolhe o tamanho e a cor que correspondem ao seu item.
+Na Jamble, cada anuncio tem **um tamanho** e **uma cor**. Nao existe um campo de "variantes" no app, nem editor que permita marcar varios tamanhos em uma unica listagem.
 
-Se você tem o mesmo item em vários tamanhos ou cores (por exemplo, uma camiseta em P, M e G), você cria **uma listagem por tamanho**. Cada listagem é um produto separado com seu próprio preço, fotos e detalhes.
+Se voce vende o mesmo item em mais de um tamanho ou cor, voce cria **um anuncio por combinacao**. Por exemplo, uma camiseta nos tamanhos P, M e G vira tres anuncios, cada um com seu proprio preco, fotos, quantidade, **Tamanho** e **Cor**.
 
-**Tamanho e cor são opcionais** ao listar produtos para um show. São fortemente recomendados porque compradores usam tamanho e cor para decidir se compram — mas sua listagem será salva sem eles.
+Contexto Brasil: a maior parte do GMV no pais vem de colecionaveis (cartas Pokemon, Diecast), onde a maioria dos itens nao tem tamanho ou cor variavel. A regra "um produto, um tamanho, uma cor" continua valendo, mas raramente voce vai precisar criar varios anuncios para o mesmo item.
 
-## Selecionando um tamanho
+## Onde tamanho e cor aparecem no formulario
 
-As opções de tamanho dependem da **categoria** que você seleciona. Veja como funciona:
+Ao criar um produto, voce ve duas celulas: **Tamanho** e **Cor**. O campo **Tamanho** so aparece depois que voce escolhe a categoria completa (Genero, Categoria, Subcategoria). O campo **Cor** esta sempre disponivel.
 
-### Passo 1: Selecione uma categoria primeiro
+![Celulas Tamanho e Cor no formulario de criacao de produto, cada uma com um valor selecionado](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/variants-for-sellers-sizes-and-colors__screen-1__pt-br__v3.png)
 
-Ao criar uma listagem, selecione a categoria antes do tamanho. A categoria usa uma hierarquia de três níveis:
+Toque em cada celula para abrir o seletor. Tamanho mostra opcoes dependentes da categoria (por exemplo, P, M, G para camisetas; numeros US para calcados). Cor mostra a grade de cores disponivel.
 
-1. **Gênero** — Homens ou Mulheres
-2. **Categoria** — Roupas, Calçados, Acessórios ou Beleza
-3. **Subcategoria** — o tipo específico do item (ex: Camisetas/Tops, Tênis, Jeans)
+## Definir a quantidade do anuncio
 
-Quando você seleciona os três níveis, o campo **Tamanho** aparece automaticamente com as opções de tamanho corretas para sua seleção.
+A celula **Quantidade** define quantas unidades **identicas** o anuncio cobre, com o mesmo tamanho e a mesma cor. Por padrao, o valor e 1. O minimo e 1 e o maximo e **1.000** por anuncio.
 
-![Formulário de seleção de categoria com campos de Gênero, Categoria, Subcategoria e Tamanho](./assets/mockups/variants-for-sellers-sizes-and-colors__category-selection-form__pt-br.png)
+Se voce tem 5 camisetas P da mesma cor, faca um anuncio com quantidade 5. Se as 5 camisetas estao em tamanhos diferentes, voce precisa de 5 anuncios separados, cada um com quantidade 1.
 
-**Se você não selecionar uma categoria, o campo de tamanho não aparece.** É assim por design — a Jamble precisa saber que tipo de item você está vendendo para mostrar as opções de tamanho certas.
+## Listar o mesmo item em varios tamanhos
 
-### Passo 2: Escolha o tamanho
+Cenario: voce tem um Nike Air Max nos tamanhos 40, 41 e 42, todos na cor preta.
 
-Toque no campo Tamanho e você verá uma lista de tamanhos apropriados para o tipo do seu item. Toque em um para selecionar.
+Voce precisa de 3 anuncios. Para nao perder tempo digitando os mesmos detalhes tres vezes, use **Clonar listagens de shows anteriores** a partir do menu de adicionar produto no show.
 
-Os tamanhos disponíveis mudam dependendo do que você está vendendo:
+![Menu de adicionar produto no show com a opcao Clonar listagens de shows anteriores visivel](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/variants-for-sellers-sizes-and-colors__screen-2__pt-br__v3.png)
 
-**Roupas (tops, suéteres, jaquetas, vestidos):**
-One Size, XXS, XS, S, M, L, XL, XXL, XXXL, 4XL, 5XL
+Fluxo recomendado:
 
-**Parte de baixo — Homens (calças, jeans, bermudas):**
-Tamanhos de cintura: 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41
-Mais tamanhos de letra: XXS, XS, S, M, L, XL, XXL, XXXL, 4XL, 5XL
+1. Crie o primeiro anuncio completo (fotos, titulo, descricao, preco, **Quantidade**, **Tamanho** 40, **Cor**).
+2. No show seguinte (ou no mesmo show, repetindo o menu de adicionar produto), toque em **Clonar listagens de shows anteriores** para reimportar o anuncio.
+3. Edite apenas o **Tamanho** e o titulo da copia. Salve.
+4. Repita para 41 e 42.
 
-**Parte de baixo — Mulheres (calças, jeans, bermudas, saias, leggings):**
-25 (US 0), 26 (US 2), 27 (US 4), 28 (US 6), 29 (US 8), 30 (US 10), 31 (US 12), 32 (US 14)
-Mais tamanhos de letra: XXS, XS, S, M, L, XL, XXL, XXXL, 4XL, 5XL
+A clonagem traz fotos, descricao, preco, marca e a categoria do anuncio original. Voce so muda o que precisa ser diferente, no caso, o tamanho.
 
-**Calçados masculinos:**
-4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15
+## O resultado, varios anuncios do mesmo item no show
 
-**Calçados femininos:**
-US 4, US 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13
+No show, os tres tamanhos aparecem como tres produtos distintos na lista do vendedor. Compradores escolhem o que serve para eles, e a Jamble exibe o tamanho de cada produto durante a venda ao vivo.
 
-**Acessórios e Beleza:**
-One Size, Others
+![Lista de produtos do vendedor dentro de um show, com tres anuncios do mesmo Nike Air Max em tamanhos 40, 41 e 42](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/variants-for-sellers-sizes-and-colors__screen-3__pt-br__v3.png)
 
-Toda categoria também inclui uma opção **"One Size"** (para itens que não têm tamanho específico) e uma opção **"Others"** (para tamanhos que não estão na lista).
-
-### O que acontece se eu mudar a categoria?
-
-Se você mudar a categoria depois de selecionar um tamanho, o tamanho é resetado automaticamente. Você precisará escolher um novo tamanho entre as opções atualizadas. Isso evita tamanhos incompatíveis (como ter um tamanho de calçado em uma listagem de camiseta).
-
-## Selecionando uma cor
-
-Cor funciona diferente do tamanho — as mesmas **28 opções de cores** estão disponíveis para todo produto, independente da categoria.
-
-Toque no campo Cor para ver a grade completa de cores. Cada cor é mostrada como um círculo com seu nome. Toque em uma para selecionar.
-
-As 28 cores disponíveis são:
-
-| | | | |
-|---|---|---|---|
-| Preto | Branco | Cinza | Prata |
-| Bege | Creme | Damasco | Amarelo |
-| Mostarda | Dourado | Laranja | Coral |
-| Rosa Claro | Rosa | Vermelho | Bordô |
-| Malva | Roxo | Marrom | Castanho |
-| Menta | Turquesa | Azul Claro | Azul |
-| Azul Marinho | Verde | Verde Escuro | **Multi** |
-
-**"Multi"** é para itens com múltiplas cores — como uma camiseta tie-dye, um vestido estampado, ou um tênis multicolorido.
-
-![Tela seletor de cores com grade de 28 círculos coloridos e botão limpar](./assets/mockups/variants-for-sellers-sizes-and-colors__color-picker-grid__pt-br.png)
-
-Você pode tocar em **"CLEAR"** para remover sua seleção de cor se quiser deixar vazio.
-
-## Lidando com múltiplos tamanhos do mesmo item
-
-Como cada produto tem exatamente um tamanho e uma cor, veja como lidar com itens em múltiplos tamanhos:
-
-**Cenário:** Você tem um Nike Air Max nos tamanhos 40, 41 e 42.
-
-**O que fazer:** Crie 3 listagens separadas — uma para cada tamanho. Você pode acelerar isso:
-1. Criando a primeira listagem com todos os detalhes
-2. Usando **Clonar** para duplicá-la (veja [Duplicar (Clonar) Produtos](7-duplicar-produtos.md))
-3. Editando apenas o tamanho e título em cada clone
-
-Isso leva cerca de 30 segundos por tamanho adicional depois de criar a primeira listagem.
+Cada anuncio tem sua propria quantidade. Quando uma unidade e vendida, a contagem daquele anuncio cai em 1; quando chega em zero, aquele tamanho e marcado como esgotado, sem afetar os outros.
 
 ## Dicas importantes
 
-- **Selecione uma categoria antes de escolher um tamanho.** As opções de tamanho só aparecem depois que você seleciona Gênero → Categoria → Subcategoria. Se não vê o campo Tamanho, é porque você não completou a seleção de categoria
-- **Inclua o tamanho no título.** Compradores frequentemente leem títulos rapidamente durante os shows. "Nike Air Max 90 - 42" é imediatamente claro. Não dependa apenas do campo de tamanho
-- **Use "One Size" para itens universais.** Bolsas, bonés e a maioria dos acessórios não têm tamanho específico. Escolha "One Size" para indicar isso
-- **Use "Multi" para itens multicoloridos.** Não escolha apenas uma das cores — se o item tem múltiplas cores proeminentes, selecione "Multi"
-- **Seja preciso com tamanhos de calçados.** Compradores brasileiros conhecem seus tamanhos mas as convenções variam. Se seus calçados são tamanhos europeus, mencione no título: "Nike Dunk - EUR 42 / BR 40"
-- **Clone para eficiência.** Se você está listando o mesmo item em 5 tamanhos, crie uma listagem, clone 4 vezes, e mude apenas o tamanho em cada. É muito mais rápido do que criar 5 do zero
+- **Inclua o tamanho no titulo.** Compradores rolam o feed rapido durante shows. "Nike Air Max 90, 42, preto" e imediatamente claro.
+- **Cor "Multi" para itens com varias cores.** Se o item tem mais de uma cor predominante (camiseta estampada, tenis multicolorido), escolha **Multi** na grade de cores em vez de uma cor unica.
+- **One Size para itens universais.** Bones, bolsas e a maioria dos acessorios usam **One Size**.
+- **Others para tamanhos fora da lista.** Se o tamanho exato do seu item nao esta nas opcoes (por exemplo, EUR 46), escolha **Others** e mencione o tamanho exato no titulo ou descricao.
+- **Confira antes de clonar.** Apos clonar, sempre revise foto, preco e tamanho antes de publicar a copia. A clonagem mantem tudo do original, inclusive coisas que voce talvez queira mudar.
 
 ## Perguntas frequentes
 
-**Tamanho e cor são obrigatórios?**
-Ao listar para um show, são opcionais. São recomendados porque ajudam compradores a decidir, mas sua listagem será salva sem eles.
+**Posso adicionar varios tamanhos em uma unica listagem?**
+Nao. Cada listagem tem exatamente um tamanho. Se voce tem o mesmo item em varios tamanhos, crie uma listagem por tamanho. Use **Clonar listagens de shows anteriores** para acelerar.
 
-**Posso adicionar um tamanho personalizado que não está na lista?**
-Você pode selecionar "Others" se seu tamanho não está nas opções predefinidas. Mencione o tamanho específico no título ou descrição (ex: "Tamanho: EUR 46 - ver descrição").
+**Posso selecionar varias cores em uma listagem?**
+Nao. Cada listagem tem uma cor. Se o item tem varias cores, selecione **Multi**.
 
-**Posso selecionar múltiplas cores para um produto?**
-Não. Cada produto tem uma cor. Se seu item tem múltiplas cores, selecione **"Multi"** — é exatamente para isso que serve.
+**Por que nao vejo o campo Tamanho?**
+O campo Tamanho so aparece depois que voce seleciona a categoria completa (Genero, Categoria, Subcategoria). Se faltar algum dos tres, o campo nao e exibido.
 
-**Uma listagem pode ter múltiplos tamanhos (como P, M, G)?**
-Não. Cada listagem tem exatamente um tamanho. Se você tem o mesmo item em múltiplos tamanhos, crie uma listagem por tamanho. Use a função Clonar para acelerar isso.
+**Tamanho e cor sao obrigatorios?**
+Para listagens em shows, sao opcionais, mas fortemente recomendados. O comprador usa essas informacoes para decidir; sem elas, o anuncio salva, mas converte menos.
 
-**Por que não vejo o campo Tamanho?**
-Você precisa selecionar uma categoria completa primeiro (Gênero → Categoria → Subcategoria). O campo Tamanho só aparece depois que os três níveis são selecionados.
-
-**Os compradores veem o tamanho e a cor durante um show?**
-Sim. O tamanho é exibido no produto durante o show ao vivo (a menos que esteja definido como "Others" ou vazio). A informação de cor também é visível nos detalhes do produto.
+**O recurso de variantes vai chegar?**
+A Jamble nao tem um campo de variantes hoje. Se for adicionado no futuro, este artigo sera atualizado. Por enquanto, o caminho oficial e o descrito acima.
 
 ## Precisa de ajuda?
 
