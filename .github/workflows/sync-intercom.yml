@@ -1,15 +1,35 @@
 name: Sync articles to Intercom
 
+# Trigger policy, post batch real-1-rerun-2 process breach (2026-05-11):
+#
+# The previous workflow had `on: push` on main paths `articles/**`, so
+# every article PR merge auto-published to Intercom. During the 10-PR
+# merge wave, PR #93 auto-synced article 14288117 before Aymar could
+# disable the workflow. That was an accidental publish, not a content
+# defect.
+#
+# To prevent recurrence:
+#   - NO `on: push` trigger any more. Merging an article PR to main
+#     does NOT publish to Intercom.
+#   - workflow_dispatch only. Each run requires an explicit `article`
+#     input (one slug per run; no "sync all" fallback).
+#   - Defense in depth: a `confirm` input must be exactly the string
+#     "yes" for the sync step to run. Defaults to "no" so an accidental
+#     `Run workflow` click on the UI without changing the field
+#     refuses to publish.
+#
+# Process docs: see process/15-intercom-sync.md for the manual
+# publish runbook.
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'articles/**'
   workflow_dispatch:
     inputs:
       article:
-        description: 'Article slug to force-sync (e.g. articles/choose-quantities-when-listing-products). Leave empty to sync all changed in the last commit.'
-        required: false
+        description: 'Article slug OR path to sync. Examples: choose-quantities-when-listing-products  or  articles/choose-quantities-when-listing-products. One per run.'
+        required: true
+      confirm:
+        description: 'Type "yes" (lowercase, no quotes) to confirm publishing to production Intercom. Anything else aborts the sync.'
+        required: true
+        default: 'no'
 
 concurrency:
   group: sync-intercom
@@ -19,10 +39,14 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      - name: Refuse without confirm
+        if: github.event.inputs.confirm != 'yes'
+        run: |
+          echo "::error::Sync refused. The 'confirm' input must be exactly 'yes' to publish to Intercom. Got: '${{ github.event.inputs.confirm }}'"
+          exit 1
+
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -33,55 +57,40 @@ jobs:
       - name: Install deps
         run: npm ci
 
-      - name: Determine articles to sync
-        id: articles
+      - name: Resolve article path
+        id: article
         run: |
           set -euo pipefail
-          if [[ -n "${{ github.event.inputs.article }}" ]]; then
-            echo "Manual dispatch for ${{ github.event.inputs.article }}"
-            echo "${{ github.event.inputs.article }}" > /tmp/articles.txt
-          else
-            # Find changed files under articles/ in this push, resolve to article dirs
-            git diff --name-only HEAD~1 HEAD -- 'articles/**' \
-              | awk -F/ '{ if ($1 == "articles" && $2 != "") print $1"/"$2 }' \
-              | sort -u \
-              > /tmp/articles.txt
+          INPUT="${{ github.event.inputs.article }}"
+          # Accept "slug" or "articles/slug". Strip trailing slash.
+          case "$INPUT" in
+            articles/*) DIR="${INPUT%/}" ;;
+            *)          DIR="articles/${INPUT%/}" ;;
+          esac
+          if [[ ! -d "$DIR" ]]; then
+            echo "::error::Article directory not found: $DIR"
+            exit 1
           fi
-          echo "Articles to sync:"
-          cat /tmp/articles.txt || true
-          echo "count=$(wc -l < /tmp/articles.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+          if [[ ! -f "$DIR/metadata.yml" ]]; then
+            echo "::error::Article folder has no metadata.yml: $DIR"
+            exit 1
+          fi
+          echo "dir=$DIR" >> "$GITHUB_OUTPUT"
+          echo "Will sync: $DIR"
 
-      - name: Sync each changed article
-        if: steps.articles.outputs.count != '0'
+      - name: Sync the article
         env:
           INTERCOM_TOKEN: ${{ secrets.INTERCOM_TOKEN }}
         run: |
           set -euo pipefail
-          FAILED=0
-          while IFS= read -r article; do
-            [[ -z "$article" ]] && continue
-            [[ ! -d "$article" ]] && { echo "Skip missing: $article"; continue; }
-            echo "=== $article ==="
-            if bash scripts/sync-one.sh "$article"; then
-              echo "OK $article"
-            else
-              echo "FAIL $article" >&2
-              FAILED=$((FAILED+1))
-            fi
-          done < /tmp/articles.txt
-          if [[ $FAILED -gt 0 ]]; then
-            echo "::error::$FAILED article(s) failed to sync"
-            exit 1
-          fi
+          echo "=== ${{ steps.article.outputs.dir }} ==="
+          bash scripts/sync-one.sh "${{ steps.article.outputs.dir }}"
 
       - name: Summary
         if: always()
         run: |
           echo "## Sync summary" >> "$GITHUB_STEP_SUMMARY"
-          echo "Articles queued: ${{ steps.articles.outputs.count }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "Article: ${{ steps.article.outputs.dir }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "Confirm: ${{ github.event.inputs.confirm }}" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
-          if [[ -f /tmp/articles.txt ]]; then
-            echo '```' >> "$GITHUB_STEP_SUMMARY"
-            cat /tmp/articles.txt >> "$GITHUB_STEP_SUMMARY"
-            echo '```' >> "$GITHUB_STEP_SUMMARY"
-          fi
+          echo "Triggered by: ${{ github.actor }} via workflow_dispatch" >> "$GITHUB_STEP_SUMMARY"
