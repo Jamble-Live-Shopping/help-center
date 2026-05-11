@@ -9,7 +9,7 @@ Reference: `process/12-procedure-compliance.md` (18 checks).
 | 1 | pt-BR primary, en mirror 1:1 | PASS | Title and section structure mirrored line-by-line. Currency localisation N/A (no prices). |
 | 2 | Em-dash count = 0 in both files | PASS | grep returns 0 occurrences of U+2014. |
 | 3 | En-dash count = 0 in both files | PASS | grep returns 0 occurrences of U+2013. |
-| 4 | Auction/Leilao count = 0 (user-facing) | PASS | flow.yml.forbidden_terms hard-fail grep clean. Article uses "Real-time offers" / "Oferta em tempo real". |
+| 4 | Auction/Leilao count = 0 (user-facing) | PASS | flow.yml.forbidden_terms hard-fail grep clean. Article uses xcstrings-localized user-facing labels: EN `Real Time Offer` / pt-BR `Oferta em tempo real`. |
 | 5 | EN body: zero `R$` | PASS | Article does not document price mechanics. |
 | 6 | Description <= 140 chars | PASS | pt-BR description: 114 chars; EN: under 140. |
 | 7 | Title without em-dash | PASS | Both titles: comma-only. |
@@ -19,7 +19,7 @@ Reference: `process/12-procedure-compliance.md` (18 checks).
 | 11 | ASCII art / box-drawing | PASS | Zero box-drawing characters in body. |
 | 12 | Mockup pair per declared screen (HTML pt-br + en, PNG pt-br + en) | PASS | 3 screens, 6 HTMLs, 6 PNGs DPR3 at 960px wide. |
 | 13 | Mockup PNG suffix `__v3` | PASS | All 6 files use `__v3.png` suffix. |
-| 14 | xcstrings verbatim (no invented copy) | PASS | Quantity, Pre-Bid, Pre-oferta, Quantidade, Auction -> Oferta em tempo real, Sudden Death -> Morte subita, Buy It Now -> Comprar agora, error toast title (Oops, something happened! / Opa, aconteceu alguma coisa!), error toast subtitle (You can not use prebid if you have more than one quantity / Voce nao pode usar o servico de pre-oferta se tiver mais de uma unidade.) all sourced from `Localizable.xcstrings`. |
+| 14 | xcstrings verbatim (no invented copy) | PASS (2026-05-11 patch) | EN user-facing labels: `Quantity`, `Pre-Offer`, `Real Time Offer`, `Sudden Death`, `Buy It Now`. pt-BR user-facing labels: `Quantidade`, `Pré-oferta` (accented), `Oferta em tempo real`, `Morte súbita` (accented), `Comprar agora`. Toggle title: EN `Enable Pre-Offer?` / pt-BR `Ativar Pré-oferta?`. Error toast title `Oops, something happened!` / `Opa, aconteceu alguma coisa!`. Error toast subtitle preserved verbatim (iOS literal `prebid` lowercase one-word / pt-BR `pre-oferta` no accent are literal error strings, NOT section titles, kept verbatim). All sourced from `Localizable.xcstrings`. The 2026-05-08 audit confused the iOS source key `Pre-Bid` with the user-facing label; xcstrings ground truth verified 2026-05-11. |
 | 15 | Code audit triplet present | PASS | code-audit-14288094.md, content-audit-14288094.md, compliance-14288094.md all present. |
 | 16 | Risk flags resolved or documented | PASS | flow.yml.risk_flags = []; no active risks. |
 | 17 | Stale-feature audit | PASS | All cited features confirmed in iOS code as of 2026-05-08. |
