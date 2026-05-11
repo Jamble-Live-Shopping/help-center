@@ -8,12 +8,12 @@ titles:
   pt-br: Programa de Indicação para Compradores
   en: Buyer Referral Program
 descriptions:
-  pt-br: Convide um amigo para comprar na Jamble. Ele ganha R$ 75 e você ganha R$ 100 em créditos.
-  en: Invite a friend to shop on Jamble. They get $75 and you get $100 in credits.
+  pt-br: Convide um amigo para comprar na Jamble. Vocês dois ganham crédito quando ele faz a primeira compra em um Show.
+  en: Invite a friend to shop on Jamble. You both earn credit when they make their first purchase at a Show.
 locales:
   pt-br:
     title: 'Programa de Indicação para Compradores'
-    description: 'Convide um amigo para comprar na Jamble. Ele ganha R$ 75 e você ganha R$ 100 em créditos.'
+    description: 'Convide um amigo para comprar na Jamble. Vocês dois ganham crédito quando ele faz a primeira compra em um Show.'
   en:
     title: 'Buyer Referral Program'
-    description: 'Invite a friend to shop on Jamble. They get $75 and you get $100 in credits.'
+    description: 'Invite a friend to shop on Jamble. You both earn credit when they make their first purchase at a Show.'

@@ -1,0 +1,137 @@
+# Flow contract for referral-program-buyer.
+# v2 rewrite, batch-10 real-2 (2026-05-11): PR #91/#92/#103/#104 contracts.
+#
+# Money grounding decision (rule 6, brief 2026-05-11):
+# iOS surface for buyer referral is purely API-driven. ReferralView.swift
+# renders `$\(amount) pending` / `$\(amount) earned` with values pulled from
+# repository.profile.getReferralSetting() at runtime. Localizable.xcstrings
+# contains no R$ amount keys for the referral flow (confirmed by grep on
+# RESOURCES/Localizable.xcstrings, 2026-05-11). The body therefore quotes
+# NO hardcoded R$ amount, and references the amounts shown on screen so the
+# article ages without churn when ops re-tunes the reward. See
+# audit/code-audit-14975215.md for the negative-scan evidence.
+#
+# See process/templates/article-flow.yml for field documentation.
+# See process/00-RUNBOOK.md for the canonical 8-phase workflow.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: buyer_br
+
+job_to_be_done: "Help buyers understand the referral program: how the reward works, how to share an invite, how to claim once a friend buys"
+
+source_of_truth:
+  ios_files:
+    - DISCOUNT/Views/ReferralView.swift
+    - DISCOUNT/Views/ReferralViewController.swift
+    - DISCOUNT/Views/ReferralInviteListView.swift
+    - DISCOUNT/Views/ReferralInviteListViewController.swift
+    - DISCOUNT/View Models/ReferralViewModel.swift
+    - DISCOUNT/View Models/ReferralInviteListViewModel.swift
+    - DISCOUNT/Models/ReferralListType.swift
+    - SERVICE/API/Repository/Modules/Profile/Model/Response/ReferralSettingsResponse.swift
+    - SERVICE/API/Repository/Modules/Profile/Model/Response/GetReferralsResponse.swift
+    - RESOURCES/Localizable.xcstrings
+  backend_files: []
+  legal: []
+  support_context: []
+
+content_contract:
+  # must_answer is matched in BOTH pt-br.md and en.md; use language-neutral
+  # tokens (proper nouns, UI strings that are identical across both, or words
+  # that legitimately appear in both bodies).
+  must_answer:
+    - "WhatsApp"
+    - "Jamble"
+    - "Show"
+  forbidden_terms:
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+  must_not_say:
+    - "Internal payout pipeline timing"
+    - "Backend service names"
+    - "Specific Real amounts not present in xcstrings"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: buyer-overview
+      purpose: "Show the Invite Friends screen: program steps, reward section, Ongoing/Past tiles with the icon-clock pending glyph, Share Friends primary button (icon-send), I have a referral code secondary link. Mirrors DISCOUNT/Views/ReferralView.swift body."
+      source: ios_required
+      required_icons:
+        - icon-send
+        - icon-clock
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Compartilhar amigos"
+          - "Tenho um código de convite"
+          - "Referências contínuas"
+          - "Referências anteriores"
+        en:
+          - "Share Friends"
+          - "I have a referral code"
+          - "Ongoing Referrals"
+          - "Past Referrals"
+
+    - name: redeem-code
+      purpose: "Show the redemption entry surface a referred friend sees when they enter their referral code. Mirrors the secondary `Redeem a code` flow from xcstrings (state: translated)."
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Resgatar"
+          - "Digite seu código"
+        en:
+          - "Redeem"
+          - "Enter your code"
+      # Option B text-only anchor (rule 10e): the redeem surface in iOS is
+      # purely text + textfield + button, no glyphs. The three icon-blockers
+      # below pin the mockup to that text-only contract.
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+
+    - name: buyer-past-list
+      purpose: "Show the Past Referrals list with a completed referral (Concluído / Completed) and a missed one (Prazo perdido / Deadline Missed). Mirrors ReferralInviteListView.swift pastInviteCell. iOS does not show a clock here (clock is reserved for Ongoing). Text-only anchor."
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Referências anteriores"
+          - "Concluído"
+          - "Prazo perdido"
+        en:
+          - "Past Referrals"
+          - "Completed"
+          - "Deadline Missed"
+      # Option B text-only anchor (rule 10e): no required_icons, so the
+      # icon-blockers below pin the mockup to a text + avatar + status
+      # contract. iOS code path (ReferralInviteListView.swift:165-205)
+      # has no icon-clock in pastInviteCell.
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+
+icons_required:
+  - icon-send
+  - icon-clock
+icons_fallback_feather: false
+
+# Body intentionally does NOT quote specific R$ amounts (see header note).
+# Mockups show illustrative API-driven state ($ symbol matches iOS UI source).
+currency_required: false
+
+toc_required: false
+
+risk_flags: []
+resolved_decisions: []
