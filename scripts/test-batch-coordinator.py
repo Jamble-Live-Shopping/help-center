@@ -29,6 +29,7 @@ import argparse
 import importlib.util
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -1162,22 +1163,96 @@ def test_validator_screen_html_contracts_clean_does_not_fire() -> None:
 def test_validator_review_checks_missing_softwarns_for_ios_required() -> None:
     """When a screen is `source: ios_required` but `review_checks` is
     empty/missing, the validator emits a SOFT warn (not a hard fail).
-    Backward compatibility: existing articles that pre-date this contract
-    must keep validating exit 0; the warn is just a process nudge."""
-    # The wishlist-and-favorites article on main has 3 screens with
-    # source: ios_required and no review_checks declared, so it is the
-    # ideal natural-history fixture.
-    article = REPO_ROOT / "articles" / "wishlist-and-favorites"
-    if not article.exists():
-        # Skip cleanly when running on a checkout that doesn't have it.
-        return
-    rc, out, err = _run([sys.executable, str(SCRIPTS_DIR / "validate-article-flow.py"), str(article)])
-    combined = out + err
-    assert "screen_review_checks_missing" in combined, (
-        f"`screen_review_checks_missing` should fire on wishlist-and-favorites:\n{combined[:600]}"
-    )
-    # Soft warn must NOT promote to hard fail; rc must stay 0.
-    assert rc == 0, f"backward-compat broken: review_checks soft warn promoted to hard fail (rc={rc})"
+    Backward compatibility: articles without review_checks must keep
+    validating without a hard-fail promotion; the warn is a process
+    nudge that the reviewer pack picks up.
+
+    Synthetic fixture (post 2026-05-11, batch real-1-rerun-2 PR #101).
+    The previous version used `articles/wishlist-and-favorites` as a
+    natural-history fixture (the article on main predated rule 10c
+    and had no review_checks). PR #101 patched wishlist to declare
+    review_checks on all 3 screens (Option A real-icon anchor per
+    rule 10e), which broke the fixture's assumption. This rewrite
+    uses a tempdir fixture under REPO_ROOT/articles/ so the test's
+    invariant is independent of real-article state.
+    """
+    art = Path(tempfile.mkdtemp(prefix="rcm-synthetic-", dir=str(REPO_ROOT / "articles")))
+    try:
+        intercom_id = 9990700
+        slug = art.name
+
+        # flow.yml: 1 screen with source: ios_required AND no
+        # review_checks (the exact precondition rule 10c targets).
+        # mockup_plan.required=true so the rule loop iterates the
+        # screen.
+        (art / "flow.yml").write_text(
+            "workflow: article-v2\n"
+            "mode: v2_rewrite\n"
+            "audience: seller_br\n"
+            f"intercom_id: {intercom_id}\n"
+            'job_to_be_done: "synthetic fixture for rule 10c soft warn"\n'
+            "source_of_truth:\n"
+            "  ios_files: []\n"
+            "  backend_files: []\n"
+            "  legal: []\n"
+            "  support_context: []\n"
+            "content_contract:\n"
+            "  must_answer: []\n"
+            "  forbidden_terms: []\n"
+            "  must_not_say: []\n"
+            "mockup_plan:\n"
+            "  required: true\n"
+            "  screens:\n"
+            "    - name: screen-1\n"
+            '      purpose: "synthetic fixture screen"\n'
+            "      source: ios_required\n"
+            "      # review_checks intentionally omitted to provoke rule 10c\n"
+            "icons_required: []\n"
+            "icons_fallback_feather: false\n"
+            "currency_required: false\n"
+            "risk_flags: []\n"
+            "resolved_decisions: []\n",
+            encoding="utf-8",
+        )
+        (art / "metadata.yml").write_text(
+            f"intercom_id: {intercom_id}\n"
+            f"slug: {slug}\n"
+            "default_locale: pt-br\n"
+            "state: draft\n"
+            "locales:\n"
+            "  pt-br: { title: 'Fixture', description: 'Synthetic fixture for rule 10c soft warn' }\n"
+            "  en:    { title: 'Fixture', description: 'Synthetic fixture for rule 10c soft warn' }\n",
+            encoding="utf-8",
+        )
+        (art / "pt-br.md").write_text(
+            "# Fixture\n\n## Conteudo\n\nFixture body for the synthetic rule-10c test.\n",
+            encoding="utf-8",
+        )
+        (art / "en.md").write_text(
+            "# Fixture\n\n## Content\n\nFixture body for the synthetic rule-10c test.\n",
+            encoding="utf-8",
+        )
+
+        rc, out, err = _run([sys.executable, str(SCRIPTS_DIR / "validate-article-flow.py"), str(art)])
+        combined = out + err
+
+        # The invariant under test: rule 10c fires the soft warn for a
+        # screen with source: ios_required + no review_checks.
+        assert "screen_review_checks_missing" in combined, (
+            f"`screen_review_checks_missing` should fire on the synthetic "
+            f"fixture (source: ios_required + no review_checks):\n{combined[:800]}"
+        )
+
+        # And the rule must fire as `warn`, not `FAIL`. Hard-fail
+        # promotion would break backward compat for legacy articles.
+        assert re.search(
+            r"warn\s+\[screen_review_checks_missing\]", combined, re.IGNORECASE
+        ), (
+            f"`screen_review_checks_missing` must be emitted as a soft warn, "
+            f"not a hard fail (backward-compat invariant):\n{combined[:800]}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
 
 
 def test_reviewer_pack_renders_manual_gates_when_present() -> None:
