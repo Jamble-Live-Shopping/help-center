@@ -1,0 +1,112 @@
+# Article flow contract for invite-a-co-host-live-duo.
+# Schema: PR #91 + PR #92 (per-screen icon anchor required).
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+job_to_be_done: "Help sellers run a duo show by inviting a co-host before or during a live"
+
+source_of_truth:
+  ios_files:
+    - LIVE_SHOPPING/Duo/View/InviteDuoShowViewController.swift
+    - LIVE_SHOPPING/Duo/View/InvitationDuoShowViewController.swift
+    - LIVE_SHOPPING/Duo/View/InviteDuoInfoView.swift
+    - LIVE_SHOPPING/Duo/ViewModel/InviteDuoShowViewModel.swift
+    - LIVE_SHOPPING/Host/View/ShowHostViewController.swift
+    - LIVE_SHOPPING/Audience/View/ShowAudienceViewController.swift
+    - RESOURCES/Localizable.xcstrings
+  backend_files: []
+  legal: []
+  support_context:
+    - "Intercom article 14288117"
+
+content_contract:
+  must_answer:
+    - "invite for a duo bottom sheet"
+    - "guest live duo accept"
+    - "remove guest from live duo"
+  forbidden_terms:
+    - "5 minutes"
+    - "5-minute"
+    - "five-minute"
+    - "expires after"
+    - "expira apos"
+    - "five minute"
+  must_not_say:
+    - "Co-host can sell products"
+    - "Multiple guests at the same time"
+    - "Live Duo is on Android"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: invite-bottom-sheet
+      purpose: "Host-side bottom sheet titled 'Invite for a Duo' with viewer grid, search bar, and the bottom Invite your friend button bearing the camera-with-plus glyph."
+      source: ios_required
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      required_icons:
+        - icon-camera-add
+      html_must_contain:
+        pt-br:
+          - "Convite para uma dupla"
+          - "Convide seu amigo"
+        en:
+          - "Invite for a Duo"
+          - "Invite your friend"
+    - name: guest-invite-modal
+      purpose: "Guest-side Live Duo modal with image_video icon, the dynamic 'You have been invited to join (seller) as a guest!' line, and Accept and Join + Don't Join buttons."
+      source: ios_required
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      required_icons:
+        - image_video
+      html_must_contain:
+        pt-br:
+          - "Live Duo"
+          - "Aceitar e participar"
+          - "Nao participe"
+        en:
+          - "Live Duo"
+          - "Accept and Join"
+          - "Don't Join"
+    - name: remove-guest-alert
+      purpose: "Native iOS UIAlertController titled 'Remove (username) From Live Duo?' with stacked Cancel + Remove (destructive) actions. Text-only by iOS source: no glyph, no image, no icon class."
+      source: ios_required
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Remover"
+          - "Live Duo"
+          - "Cancelar"
+        en:
+          - "Remove"
+          - "Live Duo"
+          - "Cancel"
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+
+icons_required:
+  - icon-camera-add
+  - image_video
+
+icons_fallback_feather: false
+
+currency_required: false
+
+# Short-format article (3 mockups, sequential steps). A TOC would be redundant
+# given the linear flow, so opt out of the workflow-default TOC nudge.
+toc_required: false
+
+risk_flags: []
+
+resolved_decisions: []

@@ -7,11 +7,11 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-05-08T00:00:00Z
 locales:
   pt-br:
-    title: 'Convidar um Co-Host (Live Duo)'
-    description: ''
+    title: 'Convidar um co-host (Live Duo)'
+    description: 'Como convidar um espectador para entrar no seu show ao vivo como co-host (Live Duo), no iPhone, e como remover quando quiser.'
   en:
-    title: 'Invite a Co-Host (Live Duo)'
-    description: 'You need:'
+    title: 'Invite a co-host (Live Duo)'
+    description: 'How to invite a viewer to join your live show as a co-host (Live Duo) on iPhone, and how to remove them when you are done.'
