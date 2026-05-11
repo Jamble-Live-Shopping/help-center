@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding: 14px; }
+
+.profile-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.avatar { width: 28px; height: 28px; border-radius: 14px; background: linear-gradient(135deg,#F58220,#E04A1F); display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-weight: 600; font-size: 12px; font-family: -apple-system-round, "SF Pro Rounded", system-ui, sans-serif; }
+.profile-name { font-size: 15px; font-weight: 500; color: #4A5568; font-family: -apple-system-round, "SF Pro Rounded", system-ui, sans-serif; line-height: 16px; }
+.start-time { font-size: 12px; font-weight: 500; color: #8B92A5; line-height: 14px; }
+
+.image { width: 100%; aspect-ratio: 1 / 1; border-radius: 4px; background: linear-gradient(135deg,#162233 0%,#2D3D52 50%,#162233 100%); position: relative; overflow: hidden; }
+.card-tag { position: absolute; top: 8px; left: 8px; height: 24px; padding: 0 10px; background: rgba(255,255,255,0.92); color: #162233; border-radius: 12px; display: inline-flex; align-items: center; font-size: 11px; font-weight: 600; font-family: -apple-system-round, "SF Pro Rounded", system-ui, sans-serif; }
+.bookmark { position: absolute; bottom: 10px; right: 10px; height: 28px; padding: 0 10px; background: rgba(255,255,255,0.92); color: #162233; border-radius: 14px; display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; font-family: -apple-system-round, "SF Pro Rounded", system-ui, sans-serif; }
+.bookmark-heart { width: 12px; height: 12px; background: #F04437; border-radius: 50%; display: inline-block; }
+.product-mock { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 60%; aspect-ratio: 0.72; background: linear-gradient(135deg,#FFD23F 0%,#F58220 100%); border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.35); }
+
+.title { font-size: 16px; font-weight: 600; color: #2D3748; line-height: 22px; margin-top: 10px; padding-left: 10px; font-family: -apple-system-round, "SF Pro Rounded", system-ui, sans-serif; }
+.price-line { font-size: 14px; color: #5223D8; padding-left: 10px; margin-top: 4px; font-family: -apple-system-round, "SF Pro Rounded", system-ui, sans-serif; }
+.price-line .lead { font-weight: 600; color: #5223D8; }
+.price-line .muted { color: #7A8395; font-weight: 500; }
+
+.cta { margin-top: 8px; margin-left: 8px; height: 30px; padding: 0 12px 0 8px; background: #162233; color: #FFFFFF; border-radius: 15px; display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; font-family: -apple-system, "SF Pro Display", system-ui, sans-serif; }
+.cta .ic { width: 14px; height: 14px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; }
+.cta .ic svg { width: 14px; height: 14px; }
+</style>
+</head>
+<body>
+<div class="phone">
+  <div class="profile-row">
+    <div class="avatar">Lu</div>
+    <div>
+      <div class="profile-name">lucas.tcg</div>
+      <div class="start-time">Começa em 3h</div>
+    </div>
+  </div>
+
+  <div class="image">
+    <div class="card-tag">3h</div>
+    <div class="product-mock"></div>
+    <div class="bookmark"><span class="bookmark-heart"></span> 24</div>
+  </div>
+
+  <div class="title">Charizard Holo PSA 9</div>
+  <div class="price-line"><span class="muted">A partir de </span><span class="lead">R$ 50</span></div>
+
+  <!-- icon: pre_bid_icon from Assets.xcassets/pre_bid_icon.imageset -->
+  <div class="cta">
+    <span class="ic">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.1577 4.61374C6.4722 6.2992 5.4386 7.46145 4.8128 8.22635C4.02402 9.1904 3.98502 10.509 4.80934 11.4921C5.17515 11.9283 5.6793 12.4844 6.37145 13.1765C7.0636 13.8687 7.6197 14.3729 8.05595 14.7387C9.039 15.563 10.3576 15.524 11.3216 14.7352C12.0865 14.1094 13.2488 13.0758 14.9342 11.3903C16.6198 9.70485 17.6534 8.5426 18.2792 7.7777C19.0679 6.81365 19.107 5.49505 18.2826 4.51201C17.9168 4.07576 17.4127 3.51967 16.7205 2.82752C16.0284 2.13537 15.4722 1.6312 15.036 1.2654C14.0529 0.441077 12.7344 0.480078 11.7703 1.26885C11.0054 1.89467 9.84315 2.92828 8.1577 4.61374ZM14.0703 13.9709C16.1865 16.3161 17.7114 18.0344 18.5618 18.9981C19.143 19.6568 20.2395 20.3659 21.3954 19.7889C21.753 19.6104 22.1364 19.3489 22.5151 18.9702C22.8938 18.5915 23.1553 18.2081 23.3337 17.8505C23.9107 16.6946 23.2018 15.5981 22.5431 15.0169C21.5793 14.1665 19.8611 12.6416 17.5158 10.5254C17.036 11.0372 16.4747 11.6177 15.8181 12.2743C15.1621 12.9304 14.5818 13.4914 14.0703 13.9709ZM7.12115 17.75C6.26755 17.75 5.41925 17.7982 4.83415 17.8409C4.14662 17.8911 3.44871 18.221 3.03594 18.8797C2.65849 19.4821 2.16383 20.4543 1.87732 21.75H1.5C1.08579 21.75 0.75 22.0858 0.75 22.5C0.75 22.9142 1.08579 23.25 1.5 23.25H12.5C12.9142 23.25 13.25 22.9142 13.25 22.5C13.25 22.0858 12.9142 21.75 12.5 21.75H12.1274C11.8894 20.5944 11.5314 19.6996 11.2378 19.1C10.8516 18.3118 10.0735 17.887 9.2822 17.8319C8.70545 17.7918 7.9158 17.75 7.12115 17.75Z" fill="#FFFFFF"/></svg>
+    </span>
+    Enviar oferta
+  </div>
+</div>
+</body>
+</html>

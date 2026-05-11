@@ -1,101 +1,93 @@
-# Pre-offers — Let Buyers Place Offers Before Your Show
+# Pre-Offers, let buyers offer before your show
 
 ## What you'll learn
 
-This guide explains how pre-offers work on Jamble. Pre-offers allow buyers to place offers on your products before your show starts, building excitement and guaranteeing competition from the first second you go live.
+A Pre-Offer lets a buyer place an offer on a product before the show goes live. When the show starts, the product already has offers on its card, which warms up the sale from the very first second. This guide shows when a Pre-Offer is available, how the buyer places one, and how the seller sees those offers during the show.
 
 ## Before you start
 
-You need:
-- An approved seller account on Jamble
-- A scheduled show with products listed
-- Products set to **Real-time offers** or **Sudden Death** sell mode with a quantity of **1**
+- The product must be in a scheduled show (not started yet)
+- The sell mode must be **Real Time Offer** or **Sudden Death**
+- The product quantity must be **1**
+- The buyer must be on the iOS app to open the Pre-Offer screen
 
-## What are pre-offers?
+## When a Pre-Offer is available
 
-Pre-offers let buyers place offers on your products before your show begins. When a buyer sees your upcoming show and browses your product list, they can place an offer on items they want — even hours or days before you go live.
+A Pre-Offer is only available on products that will be sold in **Real Time Offer** or **Sudden Death** mode, with a quantity of **1**. Modes like **Buy It Now** (fixed price) and **Giveaway** do not accept Pre-Offers, and listings with more than one unit of the same item do not either.
 
-This means that when your show starts and you put that product up for sale, the price already has competing offers. This creates immediate energy and drives the final price higher.
+On the buyer side, Pre-Offers appear on the product cards inside upcoming shows: when browsing the calendar of scheduled shows, every eligible product shows a **Submit Offer** button under the listing.
 
-## How to enable pre-offers
+![Upcoming show product card with name, countdown timer and Submit Offer button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/pre-offers-let-buyers-place-offers-before-your-show__screen-1__en__v3.png)
 
-Pre-offers are enabled per product when you list it. When creating a product:
+The **Submit Offer** button opens the Pre-Offer screen. Above the button, the card shows either the starting price (**Starts at $X**) or the current highest Pre-Offer with the offer count (**$X · 3 offers**) when someone has already pre-offered.
 
-1. Set the sell mode to **Real-time offers** or **Sudden Death**
-2. Set the quantity to **1**
-3. Toggle **pre-offers on**
+## How a buyer places a Pre-Offer
 
-Pre-offers are only available when:
-- The sell mode is **Real-time offers** or **Sudden Death** (not Buy It Now)
-- The product quantity is exactly **1**
-- The show hasn't started yet
+When the buyer taps **Submit Offer**, the Pre-Offer screen opens. This screen has everything the buyer needs to set their max offer:
 
-## How it works — Buyer's perspective
+![Pre-Offer screen with final-offer warning, current Pre-Offer value, max offer field and submit button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/pre-offers-let-buyers-place-offers-before-your-show__screen-2__en__v3.png)
 
-When a buyer opens your upcoming show and browses products, they see items that accept pre-offers. They can:
+The screen shows:
 
-1. Tap on a product to open the pre-offer screen
-2. See the current status:
-   - **"Starts at R$ X"** — no one has placed a pre-offer yet
-   - **"Current: R$ X"** — someone has already placed a pre-offer
-   - **"Your Offer: R$ X"** — they already have an active pre-offer
-3. Enter their offer amount (must be at least R$ 1 above the current highest pre-offer, or at least the starting price)
-4. Confirm the pre-offer
+- The product name and how long until the show starts
+- A warning: **Offers are final. You can increase anytime but cannot decrease or cancel your max bid.**
+- The title **Your max offer** with a subtitle explaining this is the maximum the buyer is willing to pay for the item
+- The current Pre-Offer status at the top:
+  - **Starts at $X** when no one has pre-offered yet
+  - **Current: $X** when someone has pre-offered (and the buyer has not)
+  - **Your Offer: $X** when the buyer already has an active Pre-Offer
+- The minimum next offer on the central pill (e.g. **Minimum: $26**)
 
-The minimum offer amount is shown on screen (e.g., "Minimum: R$ 26").
+The buyer types the max amount in the numeric field and slides the **Submit Offer** control to confirm. After confirmation, they see the **Offer confirmed!** screen with confetti, and the product and show are saved automatically to favorites.
 
-After placing a pre-offer, the product and show are automatically bookmarked so the buyer can easily return when the show starts.
+Offers have a minimum rule: they must be at least **$1 above the current highest Pre-Offer**, or at least the starting price when no one has pre-offered yet. If the buyer tries a lower value, they see **Your offer amount is too low. Increase your offer and try again.**
 
-## How it works — Seller's perspective
+## How the seller sees Pre-Offers during the show
 
-As the seller, you don't need to manage pre-offers actively. Here's what happens:
+During the show, in the host's product list, each item shows the live state of its Pre-Offers. Instead of the default **Starts at $X**, the card switches to show the highest Pre-Offer and the offer count.
 
-1. **Before the show** — buyers discover your products and place pre-offers. You can see the pre-offer activity on your products
-2. **When you go live** — pre-offers carry over to the live sale. The starting price reflects the highest pre-offer
-3. **During the show** — the sale continues normally with live offers from your audience, starting from the pre-offer price
+![Seller product list during the show with a card showing starts-at price plus three offers in highlight](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/pre-offers-let-buyers-place-offers-before-your-show__screen-3__en__v3.png)
 
-Pre-offers essentially "warm up" your products before the show starts.
+For **Real Time Offer** products, the card displays **Starts at $X · N Offers** with the highest Pre-Offer amount highlighted. For **Sudden Death** products, the same card carries the **Sudden Death** subtitle.
 
-## Where buyers see their pre-offers
+When the seller starts the sale for that product during the show, the Pre-Offers carry into the competition automatically: the starting price reflects the highest Pre-Offer, and the sale runs from there, with the live audience bidding up. The seller does not need to accept Pre-Offers one by one; they all roll into the live sale when the product hits the stage.
 
-Buyers can track all their pre-offers in one place. The pre-offers screen has two tabs:
+## Where the buyer tracks their Pre-Offers
 
-- **Active Offers** — pre-offers on products in upcoming shows that haven't started yet
-- **Closed Offers** — pre-offers on products that have already been sold (won or lost)
+Buyers have a dedicated **Offers** screen with two tabs:
+
+- **Active Offers**, Pre-Offers on products in upcoming shows that have not started yet
+- **Closed Offers**, Pre-Offers on products that have already been sold during the show (won or lost)
+
+Each row shows the product, the current Pre-Offer and the status. Buyers can tap any active Pre-Offer to reopen the Pre-Offer screen and **increase** their amount before the show starts.
 
 ## Important tips
 
-- **Pre-offers work best for high-demand items.** If you're selling a popular brand or a limited item, enabling pre-offers creates competition before you even go live
-- **Set a realistic starting price.** The starting price is the minimum pre-offer amount. If you set it too high, buyers won't pre-offer. If you set it low (even R$ 5), you'll attract more pre-offers and drive competition
-- **Pre-offers build your audience.** When a buyer places a pre-offer, they automatically bookmark your show. This means they're much more likely to come back when you go live
-- **Only quantity 1 supports pre-offers.** If you're selling multiple units of the same item, pre-offers won't be available. This is because pre-offers are designed for unique, one-of-a-kind items where competition drives value
+- **Pre-Offers work best on rare items.** If you are selling a graded card or a limited item, enabling Pre-Offers creates competition before the show, and the starting price climbs with the first offers
+- **Set a realistic starting price.** The starting price is the minimum for the first Pre-Offer. Set at $1 (platform minimum) it attracts more offers; set too high, no one pre-offers
+- **Pre-Offers build an audience.** When a buyer places a Pre-Offer, they automatically save the show to favorites, so they are far more likely to show up when you go live
+- **Pre-Offers only work with quantity 1.** If you list 2 or more units of the same product, the option becomes unavailable. Pre-Offers are designed for unique items where competition drives the price up
 
 ## Common questions
 
-**Can I see who placed pre-offers on my products?**
-You can see the pre-offer activity on your products, including the current highest pre-offer amount.
+**Can I see who placed Pre-Offers on my product?**
+You see the highest Pre-Offer value and the offer count directly on the product card during the show. The identity of the bidder only becomes visible when that buyer wins the live sale.
 
-**Can a buyer cancel or lower their pre-offer?**
-No. Pre-offers are final — buyers can increase their offer at any time, but they cannot decrease or cancel it. This is clearly stated in the app: "Bids are final. You can increase anytime but cannot decrease or cancel your max bid."
+**Can a buyer cancel or lower their Pre-Offer?**
+No. The Pre-Offer screen states it literally: **Offers are final. You can increase anytime but cannot decrease or cancel your max bid.** The buyer can only raise their amount before the show starts.
 
-**What happens if no one places a pre-offer?**
-Nothing changes. The product starts at the price you set when the live sale begins. Pre-offers are a bonus, not a requirement.
+**Does the buyer pay when they place a Pre-Offer?**
+No. A Pre-Offer is a commitment to buy at that price if they win. The charge happens when the product enters the live sale and the buyer ends as the winner. If someone outbids them during the show, they pay nothing.
 
-**Can I disable pre-offers on a product after enabling them?**
-Yes. You can edit the product and toggle pre-offers off before the show starts.
+**What if the seller never puts the product up for sale during the show?**
+If the show ends without that product going up for sale, the Pre-Offers are closed and no charge happens.
 
-**What if the show is over and a pre-offer was never put on sale?**
-If a product with pre-offers was never put up for sale during the show, the pre-offers are closed and no transaction occurs.
+**Can I place a Pre-Offer on my own product?**
+No. Attempting to offer on your own product shows the alert **You cannot bid your own product.**
 
-**Does the buyer pay when they place a pre-offer?**
-No. A pre-offer is a commitment to buy at that price, but no payment is charged until the buyer wins the live sale. If someone outbids them during the show, they don't pay anything.
-
-**Is the pre-offer feature available on Android?**
-Currently, pre-offers can only be placed from the **iOS app**. Android users can see pre-offer information on products but cannot place pre-offers yet.
-
-**Can the seller place a pre-offer on their own product?**
-No. You cannot place offers on your own products.
+**Is the Pre-Offer feature available on Android?**
+The Pre-Offer screen lives in the iOS app today. Android buyers see the card and the offer count, but confirming a Pre-Offer happens through iOS.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Reach out via the in-app chat or email support@jambleapp.com.
