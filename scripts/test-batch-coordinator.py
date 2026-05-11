@@ -1675,6 +1675,83 @@ def test_prepare_and_review_use_worktree_local_runner_end_to_end() -> None:
 
 
 # ---------------------------------------------------------------
+# Intercom sync gate (post batch real-1-rerun-2, 2026-05-11)
+# ---------------------------------------------------------------
+
+def test_sync_intercom_workflow_is_manual_dispatch_only() -> None:
+    """The Sync articles to Intercom workflow must NOT auto-trigger
+    on push. PR #93 (batch real-1-rerun-2 wave 1) accidentally
+    published article 14288117 because the workflow had `on: push`
+    on main paths `articles/**`. The gate PR converts the trigger to
+    workflow_dispatch only with two required inputs (article + confirm).
+
+    Static contract :
+    1. workflow file `.github/workflows/sync-intercom.yml` MUST exist
+    2. its `on:` block MUST NOT contain a `push:` trigger
+    3. it MUST declare a `workflow_dispatch:` trigger
+    4. the `article` input MUST be `required: true`
+    5. the `confirm` input MUST be `required: true`
+    6. the first step name MUST be `Refuse without confirm` (defense
+       in depth: a "Run workflow" click without changing the default
+       `confirm: no` aborts before the sync step runs).
+    """
+    wf = REPO_ROOT / ".github" / "workflows" / "sync-intercom.yml"
+    assert wf.exists(), f"workflow file missing at {wf}"
+    body = wf.read_text(encoding="utf-8")
+
+    # Find the `on:` block boundary (top-level `on:` followed by indented
+    # children until the next top-level key).
+    on_block_match = re.search(
+        r"(?ms)^on:\n((?:[ \t].*\n)+)",
+        body,
+    )
+    assert on_block_match is not None, (
+        f"workflow file has no top-level `on:` block:\n{body[:200]!r}"
+    )
+    on_block = on_block_match.group(1)
+
+    # (2) MUST NOT contain a `push:` trigger inside the on block.
+    assert not re.search(r"^\s+push:\s*$|^\s+push:\s*\n", on_block, re.MULTILINE), (
+        f"workflow `on:` block still contains a `push:` trigger:\n{on_block}"
+    )
+
+    # (3) MUST contain `workflow_dispatch:` inside the on block.
+    assert re.search(r"^\s+workflow_dispatch:\s*$", on_block, re.MULTILINE), (
+        f"workflow `on:` block missing `workflow_dispatch:`:\n{on_block}"
+    )
+
+    # (4) + (5) inputs `article` and `confirm` both `required: true`.
+    # Look in the entire body since indent levels can vary.
+    article_block = re.search(
+        r"article:\s*\n(?:\s+description:.*\n)?\s+required:\s*true",
+        body,
+    )
+    assert article_block is not None, (
+        f"workflow_dispatch.inputs.article is not `required: true`:\n{body[:600]!r}"
+    )
+    confirm_block = re.search(
+        r"confirm:\s*\n(?:\s+description:.*\n)?\s+required:\s*true",
+        body,
+    )
+    assert confirm_block is not None, (
+        f"workflow_dispatch.inputs.confirm is not `required: true`:\n{body[:600]!r}"
+    )
+
+    # (6) Refuse-without-confirm step must be the first job step (defense
+    # in depth: a `Run workflow` click that leaves `confirm: no` aborts
+    # before any checkout / sync).
+    refuse_match = re.search(
+        r"steps:\s*\n\s+- name:\s+Refuse without confirm\s*\n"
+        r"\s+if:\s+github\.event\.inputs\.confirm\s*!=\s*'yes'",
+        body,
+    )
+    assert refuse_match is not None, (
+        f"first step must be `Refuse without confirm` gated on confirm != 'yes'; "
+        f"got body slice:\n{body[:800]!r}"
+    )
+
+
+# ---------------------------------------------------------------
 # Test runner
 # ---------------------------------------------------------------
 
@@ -1704,6 +1781,7 @@ TESTS = [
     test_render_pack_legacy_note_appears_only_when_summary_is_stale,
     test_committed_sample_has_no_reasonless_ready_in_exceptions,
     test_render_pack_shows_exception_reasons_section,
+    test_sync_intercom_workflow_is_manual_dispatch_only,
     test_render_path_with_space_uses_url_escape,
     test_validator_screen_required_icons_missing_fails,
     test_validator_screen_required_icons_present_passes,
