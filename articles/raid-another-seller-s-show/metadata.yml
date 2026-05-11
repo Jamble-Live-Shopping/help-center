@@ -7,11 +7,11 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-05-11T00:00:00Z
 locales:
   pt-br:
-    title: 'Fazer um Raid no Show de Outro Vendedor'
-    description: ''
+    title: 'Fazer um Raid no show de outro vendedor'
+    description: 'Como enviar seus espectadores para o show ao vivo de outro vendedor ao encerrar o seu, e o que aparece para todos os lados.'
   en:
     title: "Raid Another Seller's Show"
-    description: "This guide explains how the **Jamble Raid** works. A raid lets you send your viewers to another seller's live show when you're done selling — it's a great way to support the community and help other sellers get more viewers."
+    description: "How to send your viewers to another seller's live show when you end yours, and what everyone sees on screen during the raid."
