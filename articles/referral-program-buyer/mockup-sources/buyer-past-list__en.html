@@ -21,11 +21,15 @@ body {
 .nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; padding: 0 4px; }
 .nav-title { font-size: 17px; font-weight: 700; color: #162233; flex: 1; text-align: center; }
 .close-btn { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; color: #6D6D80; font-size: 18px; font-weight: 700; }
-.summary-card { background: #ECFDF3; border-radius: 22px; padding: 18px 16px 20px; text-align: center; margin-bottom: 16px; }
-.summary-label { font-size: 13px; font-weight: 600; color: #079455; margin-bottom: 8px; }
-.summary-value { display: inline-flex; align-items: center; gap: 6px; font-size: 30px; font-weight: 700; color: #079455; }
-.summary-conv { font-size: 12px; color: #2F855A; margin-top: 10px; }
-.coin-glyph { width: 24px; height: 24px; border-radius: 50%; background: #079455; display: inline-flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 13px; font-weight: 700; }
+/* Summary card uses .bg.brand per ReferralListType.swift:33 (case .past
+   returns Color(uiColor: .bg.brand) = Jamble purple). Label string is
+   verbatim from ReferralListType.swift:26 (case .past returns "You've earned").
+   Color + label both verified iOS-faithful 2026-05-11. */
+.summary-card { background: #7E53F8; border-radius: 22px; padding: 18px 16px 20px; text-align: center; margin-bottom: 16px; }
+.summary-label { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.86); margin-bottom: 8px; }
+.summary-value { display: inline-flex; align-items: center; gap: 6px; font-size: 30px; font-weight: 700; color: #FFFFFF; }
+.summary-conv { font-size: 12px; color: rgba(255,255,255,0.78); margin-top: 10px; }
+.coin-glyph { width: 24px; height: 24px; border-radius: 50%; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; color: #7E53F8; font-size: 13px; font-weight: 700; }
 .list-cell { display: flex; align-items: center; gap: 12px; padding: 12px 6px; }
 .avatar { width: 44px; height: 44px; border-radius: 22px; flex-shrink: 0; background: linear-gradient(150deg, #FBBF24, #F59E0B); display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-weight: 700; font-size: 16px; }
 .avatar.b { background: linear-gradient(150deg, #60A5FA, #2563EB); }
@@ -45,7 +49,7 @@ hr { border: none; border-top: 1px solid #F1F2F5; margin: 0; }
     <div class="close-btn">×</div>
   </div>
   <div class="summary-card">
-    <div class="summary-label">Total earned</div>
+    <div class="summary-label">You've earned</div>
     <div class="summary-value">
       <span class="coin-glyph">$</span>
       <span>6</span>
