@@ -1,0 +1,43 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Order detail - Cancel Order button (EN)</title><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+
+.status-card { background: #FFFFFF; border-radius: 16px; margin: 12px; padding: 0; box-shadow: 0 1px 8px rgba(0,0,0,0.06); border: 1px solid #EFEFF4; }
+.status-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 14px 15px 0 15px; gap: 10px; }
+.status-label { font-size: 16px; font-weight: 500; color: #B07CFF; line-height: 20px; flex: 1; }
+.cancel-btn { font-size: 14px; font-weight: 500; color: #FF3B5C; border: 1px solid #FF3B5C; background: transparent; border-radius: 8px; padding: 5px 10px; line-height: 1.1; white-space: nowrap; cursor: pointer; }
+.action-text { font-family: -apple-system, "SF Pro Rounded", system-ui; font-size: 22px; font-weight: 700; color: #000; padding: 6px 15px 0 15px; line-height: 28px; }
+.step-bar { display: flex; gap: 4px; padding: 12px 15px 0 15px; }
+.step { flex: 1; height: 8px; border-radius: 4px; background: #E5E5EA; }
+.step.active { background: #B07CFF; }
+.status-desc { font-size: 14px; color: #8E93A1; padding: 10px 15px 14px 15px; line-height: 20px; }
+.delim { height: 2px; background: #E5E5EA; margin: 0; }
+.ship-section { padding: 14px 15px; }
+.ship-title { font-size: 16px; font-weight: 600; color: #000; margin-bottom: 10px; }
+.ship-addr { font-size: 14px; color: #8E93A1; line-height: 20px; }
+.ship-addr-name { color: #000; font-weight: 500; }
+</style></head><body>
+<div class="phone">
+  <div class="status-card">
+    <div class="status-row">
+      <div class="status-label">Created</div>
+      <button type="button" class="cancel-btn">Cancel Order</button>
+    </div>
+    <div class="action-text">Awaiting Seller Confirmation</div>
+    <div class="step-bar">
+      <div class="step active"></div>
+      <div class="step"></div>
+      <div class="step"></div>
+      <div class="step"></div>
+      <div class="step"></div>
+    </div>
+    <div class="status-desc">We'll notify you upon seller confirmation.</div>
+    <div class="delim"></div>
+    <div class="ship-section">
+      <div class="ship-title">Ship to</div>
+      <div class="ship-addr"><span class="ship-addr-name">Mariana S.</span><br>Rua das Palmeiras, 123<br>Sao Paulo, SP, 01310-100</div>
+    </div>
+  </div>
+</div>
+</body></html>
