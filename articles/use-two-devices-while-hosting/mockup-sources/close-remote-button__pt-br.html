@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  Real iOS assets used in this mockup:
+    - SF Symbol "av.remote.fill" (white tint), used in iOS via UIImage(systemName: "av.remote.fill"). Source proof: Assets.xcassets/av.remote.fill.imageset (logical alias documenting the SF Symbol used by CloseRemoteButton.swift line 14).
+    - Assets.xcassets/icon-close.imageset (white X glyph), embedded inline below from /Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/Search/icon-close.imageset/icon-close.svg.
+  Source: UTILS/COMPONENTS/Buttons/CloseRemoteButton.swift line 14 (UIImageView(image: .init(systemName: "av.remote.fill"))) and line 30 (UIImage(named: "icon-close")).
+-->
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif;
+  background: #F9FAFC;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+.phone {
+  width: 320px;
+  background: #0F1320;
+  border-radius: 24px;
+  box-shadow: 0 6px 28px rgba(22,34,51,0.10);
+  border: 1px solid #E9EAEF;
+  overflow: hidden;
+  position: relative;
+  height: 540px;
+}
+
+/* Background simulating a host video frame, dark + soft glow. */
+.video-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 25%, rgba(126,83,248,0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 70% 80%, rgba(255,255,255,0.05) 0%, transparent 55%),
+    linear-gradient(180deg, #1B1530 0%, #0F1320 70%);
+}
+
+/* Small status pill top-left, mimics the LIVE badge that always sits there. */
+.live-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 12px;
+  background: #F04437;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.4px;
+}
+.viewer-pill {
+  position: absolute;
+  top: 16px;
+  left: 70px;
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.45);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+/* The Close Remote button (top right). Vertical stack, iconView on top, red close badge below with -8 spacing. */
+.close-remote {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.cr-glyph {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cr-glyph svg { width: 24px; height: 24px; }
+.cr-badge {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: #D92C20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -8px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+.cr-badge svg { width: 12px; height: 12px; }
+
+/* Side helper card explaining the icon, kept minimal so the icon stays the hero. */
+.side-card {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  right: 18px;
+  background: rgba(255,255,255,0.96);
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.side-card-arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 7px solid #FFFFFF;
+  position: absolute;
+  top: -7px;
+  right: 24px;
+}
+.side-card-text {
+  font-size: 13px;
+  color: #162233;
+  line-height: 18px;
+  font-weight: 500;
+  flex: 1;
+}
+.side-card-text strong { color: #7E53F8; font-weight: 700; }
+</style></head><body>
+<div class="phone">
+  <div class="video-bg"></div>
+  <div class="live-badge">AO VIVO</div>
+  <div class="viewer-pill">42</div>
+
+  <div class="close-remote">
+    <div class="cr-glyph">
+      <!--
+        SF Symbol av.remote.fill, white tint, 24x24pt.
+        Source: UTILS/COMPONENTS/Buttons/CloseRemoteButton.swift line 14.
+        Hand-crafted SVG approximating the SF Symbol shape so the
+        mockup tints/renders deterministically without a system font.
+      -->
+      <!-- icon: av.remote.fill -->
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="6" y="2.5" width="12" height="19" rx="2.6" fill="#FFFFFF"/>
+        <rect x="9" y="5.5" width="6" height="3" rx="0.7" fill="#0F1320"/>
+        <circle cx="12" cy="14.5" r="2.4" fill="#0F1320"/>
+      </svg>
+    </div>
+    <div class="cr-badge">
+      <!--
+        Real Jamble asset Assets.xcassets/icon-close.imageset/icon-close.svg.
+        Embedded verbatim below.
+      -->
+      <!-- icon: icon-close -->
+      <svg viewBox="0 0 19 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M5.85829 15.8587C5.22496 16.492 4.27496 16.492 3.64163 15.8587C3.00829 15.2253 3.00829 14.2753 3.64163 13.642L7.28329 10.0003L3.64163 6.35866C3.00829 5.72532 3.00829 4.77533 3.64163 4.14199C4.27496 3.50866 5.22496 3.50866 5.85829 4.14199L9.49996 7.78366L13.1416 4.14199C13.775 3.50866 14.725 3.50866 15.3583 4.14199C15.9916 4.77533 15.9916 5.72532 15.3583 6.35866L11.7166 10.0003L15.3583 13.642C15.9916 14.2753 15.9916 15.2253 15.3583 15.8587C14.725 16.492 13.775 16.492 13.1416 15.8587L9.49996 12.217L5.85829 15.8587Z" fill="#FFFFFF"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="side-card">
+    <div class="side-card-arrow"></div>
+    <div class="side-card-text">Toque no <strong>botão do controle remoto</strong> no canto superior direito para sair do modo controle remoto neste celular.</div>
+  </div>
+</div></body></html>
