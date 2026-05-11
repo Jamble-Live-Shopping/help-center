@@ -1,92 +1,78 @@
-# O Que Fazer Se um Pacote Está Atrasado
+# O que fazer se um pacote estiver atrasado
 
-## O que você vai aprender
+## O que voce vai aprender
 
-Este guia explica o que fazer quando um pacote que você enviou demora mais do que o esperado para chegar. Você vai aprender a verificar o rastreamento, se comunicar com o comprador e quando contatar o suporte.
+Onde acompanhar a entrega do seu pedido, o que significa cada status que aparece na tela, em que momento contatar o vendedor e quando a Jamble reembolsa voce automaticamente.
 
-## Antes de começar
+## Antes de comecar
 
-Você precisa de:
-- Uma conta de vendedor aprovada na Jamble
-- Um pedido enviado com número de rastreio
+Voce precisa de:
+- Um pedido confirmado pelo vendedor (status **Confirmado**, **Em Entrega** ou similar)
+- Acesso a aba **Compras** no app
 
-## Como saber se um pacote está atrasado
+## Acompanhe a entrega pelo proprio pedido
 
-Depois que você envia um pacote e os Correios fazem a leitura, as atualizações de rastreamento começam. Você e o comprador podem acompanhar a jornada do pacote pelo app.
+Toda atualizacao de envio vive dentro do pedido. Em **Compras**, toque no pedido para abrir o cartao de status. Enquanto o pacote esta a caminho, o status mostra **Em Entrega**, com uma barra de progresso e a previsao de entrega no topo (**Chegando hoje**, **Chegando amanha** ou **Estimado para** uma data).
 
-Um pacote pode estar atrasado se:
-- O rastreamento não foi atualizado por vários dias
-- A data estimada de entrega passou
-- O pacote está parado em um centro de distribuição dos Correios
+![Tela de detalhe do pedido com status Em Entrega, banner Chegando amanha e secao de rastreamento com Transportadora, Numero de rastreamento e botao Track](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/what-to-do-if-a-package-is-delayed__screen-1__pt-br__v3.png)
 
-## Passo a passo
+Logo abaixo, voce ve a **Transportadora**, o **Numero de rastreamento** (com um botao para copiar) e um botao **Track** que abre a pagina da transportadora. A lista de eventos a seguir mostra cada leitura feita pelos Correios, do mais recente para o mais antigo.
 
-### Passo 1: Verifique o status de rastreamento
+## Quando achar que esta atrasado
 
-Abra o pedido no app e confira o status atual. Observe:
-- **Última atualização** — quando o pacote foi escaneado pela última vez?
-- **Localização atual** — onde está o pacote na rede dos Correios?
-- **Entrega estimada** — a data esperada já passou?
+Um envio pode parecer atrasado em algumas situacoes:
+- A previsao mostrada no topo do cartao ja passou e o pacote ainda nao foi entregue
+- Os eventos de rastreamento nao foram atualizados ha varios dias
+- A leitura mais recente mostra o pacote parado em um centro de distribuicao dos Correios
 
-### Passo 2: Avalie a situação
+Antes de agir, leia o ultimo evento na lista. Frases como "Objeto encaminhado" ou "Em transito" indicam que o pacote ainda esta na rede, mesmo sem atualizacao diaria. Trajetos longos entre estados ou para areas remotas costumam ter intervalos maiores entre leituras.
 
-| Cenário | O que fazer |
-|---------|-----------|
-| Rastreamento mostra pacote em trânsito, última atualização 1-3 dias atrás | **Aguarde.** Os Correios podem levar alguns dias entre leituras, especialmente em rotas mais longas |
-| Sem atualização há 5+ dias | **Contate o suporte.** O pacote pode estar parado ou perdido |
-| Pacote em centro de distribuição há mais de uma semana | **Contate o suporte.** Eles podem investigar com os Correios |
-| Rastreamento mostra "tentativa de entrega" mas comprador diz que não recebeu | **Diga ao comprador para verificar** com a agência local dos Correios ou portaria do prédio |
-| Rastreamento mostra "devolvido ao remetente" | **Veja nosso guia:** "O Que Fazer Se o Envio For Devolvido" |
+## Quando falar com o vendedor
 
-### Passo 3: Comunique-se com o comprador
+Se o rastreamento ainda parece normal mas voce quer um aviso, a forma mais rapida e abrir o perfil do vendedor a partir do proprio pedido. Toque na linha do vendedor no topo da tela e use o botao de mensagem direta para mandar uma DM. Combine algo objetivo, por exemplo: "Oi, o pacote esta parado em [cidade] desde [data]. Voce tem alguma novidade da transportadora?" O vendedor pode pedir uma reclamacao nos Correios pelo lado dele, ja que e quem fez a postagem.
 
-Se o comprador entrar em contato sobre um pacote atrasado:
-- **Seja transparente.** Compartilhe o que sabe pelo rastreamento
-- **Não faça promessas sobre datas de entrega.** Os prazos dos Correios variam por região e estão fora do seu controle
-- **Tranquilize o comprador.** Diga que está monitorando a situação e vai ajudar a resolver
+Se o pacote ainda nao saiu da casa do vendedor, voce nao precisa cobrar pelo chat: o app cuida disso por voce. A Jamble da ao vendedor **10 dias corridos depois da confirmacao** para postar. Se o prazo passa, o status muda automaticamente e a descricao do pedido explica o proximo passo.
 
-### Passo 4: Contate o suporte se necessário
+## Quando a Jamble reembolsa automaticamente
 
-Se o pacote parece perdido ou está parado por muito tempo, contate o suporte da Jamble. Eles podem:
-- Investigar o envio com os Correios
-- Abrir uma reclamação de seguro se o pacote estava segurado
-- Ajudar a encontrar uma solução com o comprador (reembolso ou reenvio)
+Em duas situacoes voce nao precisa fazer nada para receber o reembolso:
 
-## Causas comuns de atraso no Brasil
+- **O vendedor nao posta dentro de 10 dias.** O status passa para um estado de atraso de envio, o cartao mostra a mensagem _"O vendedor nao enviou seu pedido a tempo. Ele tem [tempo] para envia-lo, ou voce sera reembolsado automaticamente"_ e, se ele ainda assim nao postar, o pedido e cancelado e o valor volta para o seu metodo de pagamento.
+- **O pacote e devolvido ao remetente.** Se os Correios devolverem o pacote ao vendedor (endereco invalido, ninguem para receber, etc.), o status passa para **Cancelado** com a mensagem _"Seu pedido nao pode ser entregue e foi devolvido ao vendedor. Voce recebera um reembolso no metodo de pagamento em ate 5 dias uteis"_.
 
-- **Áreas remotas.** Entregas para cidades menores ou áreas rurais podem demorar significativamente mais do que entregas urbanas
-- **Períodos de feriado.** Os Correios têm alto volume durante feriados (Natal, Black Friday, Carnaval), causando atrasos
-- **Clima e greves.** Mau tempo severo ou ações trabalhistas dos Correios podem temporariamente interromper entregas em certas regiões
-- **Endereço incorreto ou incompleto.** Se o endereço do comprador tem erros, os Correios podem tentar entrega várias vezes antes de devolver
-- **Pacote retido para inspeção.** Em casos raros, pacotes podem ser retidos para inspeção
+![Tela de detalhe do pedido com status Cancelado em vermelho, barra de progresso vermelha e mensagem informando reembolso em ate 5 dias uteis](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/what-to-do-if-a-package-is-delayed__screen-2__pt-br__v3.png)
 
-## Dicas importantes
+Nos dois casos, o reembolso chega no mesmo cartao ou Pix usado na compra, **em ate 5 dias uteis** apos o cancelamento.
 
-- **Envie rapidamente após a venda.** Quanto mais cedo o pacote entrar no sistema dos Correios, mais cedo chega. A maioria das reclamações de atraso começa com o vendedor demorando para enviar
-- **Use o perfil de envio correto.** Um perfil incorreto pode causar problemas nas instalações dos Correios se o pacote real não corresponder às dimensões da etiqueta
-- **Ative o seguro para itens valiosos.** Se um pacote for perdido, o seguro dá um caminho claro para resolução. Sem ele, recuperar o valor é muito mais difícil
-- **Mantenha o número de rastreio acessível.** Se precisar abrir um chamado de suporte ou reclamação nos Correios, vai precisar do número
-- **Defina expectativas realistas.** Se sabe que o comprador mora em área remota, avise que a entrega pode demorar mais
+## Quando abrir um chamado de suporte
+
+Abra um chamado se:
+- O ultimo evento dos Correios e de mais de 7 dias e o vendedor nao responde
+- O rastreamento mostra "entregue" mas voce nao recebeu o pacote
+- O pacote foi marcado como danificado, extraviado ou retido para inspecao
+- Voce ja foi reembolsado mas o valor nao apareceu no metodo de pagamento depois de 5 dias uteis
+
+Se um chamado foi aberto para esse pedido, o cartao **Your Support Ticket** aparece no topo da tela do pedido, com o botao **Open Ticket** para voltar para a conversa com o suporte.
 
 ## Perguntas frequentes
 
-**Quanto tempo demora normalmente a entrega dos Correios?**
-Varia por rota e serviço. PAC (econômico) pode levar 5-15 dias úteis dependendo de origem e destino. SEDEX (expresso) é tipicamente 1-5 dias úteis. Áreas remotas podem demorar mais.
+**Quem cuida do envio: a Jamble ou o vendedor?**
+O vendedor e quem posta o pacote, usando uma etiqueta gerada pela Jamble. Os Correios sao a transportadora. A Jamble acompanha tudo pelo rastreamento e age automaticamente nos casos de prazo estourado ou devolucao.
 
-**Tem algo que eu possa fazer para acelerar um pacote atrasado?**
-Infelizmente, uma vez que o pacote está no sistema dos Correios, a velocidade está fora do seu controle. Contate o suporte se o atraso for excessivo.
+**Quanto tempo a entrega leva normalmente?**
+Depende da rota e do servico. PAC pode levar de 5 a 15 dias uteis dependendo da origem e do destino. SEDEX fica tipicamente entre 1 e 5 dias uteis. Areas remotas demoram mais.
 
-**Serei penalizado se os Correios atrasarem meu pacote?**
-Não. Atrasos dos Correios não são culpa sua. Porém, você é responsável por enviar rapidamente. Se você enviou tarde e o atraso se agravou, o comprador pode responsabilizá-lo.
+**O rastreamento mostra "entregue" mas eu nao recebi. O que faco?**
+Cheque na portaria, com vizinhos e na agencia dos Correios mais proxima antes de qualquer outra coisa. Se nao aparecer, abra um chamado pelo proprio pedido e o suporte investiga com a transportadora.
 
-**E se o pacote for perdido?**
-Contate o suporte. Se o pacote estava segurado, uma reclamação de seguro pode ser aberta. Se não, o suporte trabalhará com você e o comprador para encontrar uma solução.
+**Posso cancelar pedindo o reembolso eu mesmo enquanto o pacote esta em transito?**
+Nao diretamente. Depois que o vendedor confirma a venda, o botao **Cancelar pedido** sai do cartao. Mande uma DM para o vendedor pedindo o cancelamento, ou abra um chamado de suporte se ele nao responder.
 
-**O comprador diz que não recebeu, mas o rastreamento mostra que foi entregue. O que faço?**
-Peça ao comprador para verificar com a portaria do prédio, vizinhos ou agência local dos Correios. Se o problema persistir, contate o suporte — eles podem investigar mais.
+**Tenho que pagar alguma taxa pelo atraso?**
+Nao. Atrasos dos Correios nao sao culpa do comprador e nao geram cobranca adicional. O reembolso, quando acontece, devolve o valor integral, incluindo o frete.
 
-**Posso verificar o rastreamento dos Correios fora do app da Jamble?**
-Sim. Você pode rastrear qualquer pacote dos Correios no site dos Correios (rastreamento.correios.com.br) usando o número de rastreio.
+**Posso rastrear o pacote fora do app?**
+Sim. Voce pode usar o numero de rastreamento no site dos Correios (rastreamento.correios.com.br). E o mesmo numero que aparece no cartao do pedido, com botao de copiar do lado.
 
 ## Precisa de ajuda?
 
