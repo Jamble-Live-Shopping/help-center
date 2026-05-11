@@ -2,82 +2,88 @@
 
 ## What you'll learn
 
-This guide explains how to make adjustments to shipping details on an order before or after generating a label. You'll learn how to confirm or change the shipping weight and what to do if something needs to be corrected.
+This guide explains what you can adjust on an order's shipping details before you generate the label, and what to do if something needs to change after the label has already been purchased.
+
+The simple rule: before the label, you adjust it yourself in the app. After the label, the adjustment goes through support.
 
 ## Before you start
 
 You need:
-- A confirmed sale that you're preparing to ship
-- To know the actual weight or size of your packaged item
 
-## What adjustments can you make?
+- An approved seller account on Jamble
+- A sale on the post-show dashboard, with the label not yet generated (case 1) or already generated (case 2)
 
-When preparing to ship an order, you may need to adjust certain details:
+## Case 1: before generating the label
 
-| Adjustment | When | How |
-|-----------|------|-----|
-| **Confirm or change weight** | Before generating the label | From the order detail screen |
-| **Change shipping profile on a product** | Before the product sells | Edit the product listing |
-| **Contact support for label issues** | After the label is generated | Through app chat or email |
+Before you tap to generate the label, the only shipping detail you control yourself is your **sender address** (the address on your seller profile). The buyer's address is set by them at checkout and you cannot edit it.
 
-## Step by step
+### Fix the sender address
 
-### Step 1: Confirm the shipping weight
+Open the **Edit Shipping Address** screen from your seller profile. You see the BR form with a **Personal Information** section (First Name, Last Name, Phone Number) and a **Shipping Address** section (ZIP Code, Street Name, Street Number, Interior/Apt, Neighborhood, City, State, Country):
 
-Before generating a label, you may be asked to confirm the weight of your package. This ensures the shipping cost is accurate.
+![Edit Shipping Address screen showing the Personal Information and Shipping Address sections with the ZIP Code, Street Name, Street Number, Interior/Apt, Neighborhood, City, State and Country fields, and the Edit button at the bottom](./assets/mockups/make-a-shipping-adjustment__screen-1__en__v3.png)
 
-A screen titled **"CONFIRM WEIGHT"** appears showing:
+Update the fields that need changing. ZIP Code follows the XXXXX-XXX format (8 digits). State is the 2-letter abbreviation (SP, RJ, MG, and so on). Tap **Edit** at the bottom to save.
 
-![Confirm Weight screen with current weight display and new weight input field](./assets/mockups/make-a-shipping-adjustment__confirm-weight__en.png)
+The updated address is what the system uses when you generate the label. So the golden rule: check this address **before** you tap generate, not after.
 
-- The **current weight** is based on the shipping profile assigned to the product
-- You can adjust the weight if the actual packaged item is different from the estimate
-- Tap **Confirm** to save
+### Product weight and shipping profile
 
-**Why this matters:** The shipping cost is calculated from the weight. If you confirm a weight that's too low, the package may be rejected or incur extra charges at Correios. If too high, the buyer overpays for shipping.
+The weight and dimensions the carrier uses come from the **shipping profile** you assigned to the product when you listed it.
 
-### Step 2: Adjust a product's shipping profile before it sells
+- If the product **has not sold yet**, you can edit the listing and change the shipping profile (see *Choose a shipping profile*).
+- If the product **has already sold**, the profile is locked. You cannot change the profile or enter a new weight yourself in the app before generating the label. If the actual package is very different from what the profile assumes, talk to support before generating the label.
 
-If you realize a product has the wrong shipping profile, you can change it before it sells:
+## Case 2: after the label is generated
 
-1. Go to your product listing
-2. Tap to edit the product
-3. Change the **shipping profile** to the correct one
-4. Tap **Save Changes**
+When you tap generate, the system purchases a Correios label through Melhor Envio with the weight, dimensions, and address as they stand at that moment. From then on, the bundle row in the post-show dashboard shows two buttons:
 
-This updates the shipping cost calculation for future buyers. You cannot change the shipping profile after a sale is completed.
+![Post-show dashboard with the PACKAGE 1 row, the price the seller paid for shipping, and the Open Label and Nota Fiscal buttons that appear once the label has been generated](./assets/mockups/make-a-shipping-adjustment__screen-2__en__v3.png)
 
-### Step 3: Request adjustments after label generation
+- **Open Label**: opens the purchased label PDF, with address, tracking code, and barcode
+- **Nota Fiscal**: opens the NF-e flow (add manually, extract from a file, or declare exemption)
 
-Once a label is generated, you cannot directly edit the shipping details yourself. If you need to make changes after the label is created:
+There is no in-app button to adjust the label, change the weight, change the address, or cancel the label. For any of those, open the support chat.
 
-- **Wrong buyer address** — contact support immediately. The label may need to be canceled and regenerated
-- **Package is larger/heavier than expected** — if the difference is significant, contact support. A new label with correct dimensions may be needed
-- **Wrong shipping profile** — contact support for guidance on how to proceed
+### When to talk to support
 
-## Important tips
+| Situation | What to ask support |
+|---|---|
+| Buyer address is wrong | Ask them to coordinate with the buyer, void the current label, and issue a new one with the correct address |
+| Package turned out heavier or larger than expected | Ask them to void the label and generate a new one with the real dimensions |
+| Label was purchased but the order is going to be canceled | Ask them to void the label before shipping (once Correios has scanned it, voiding is usually not possible) |
+| You want to use your own Correios label | Ask for guidance; in the app, you can also add an external tracking number on the bundle screen (see *Change or fix your shipping label*) |
 
-- **Always weigh your package before confirming.** A kitchen scale works fine for most items. Accuracy prevents shipping issues
-- **The shipping profile sets the baseline weight.** When you confirm the weight, you're fine-tuning the estimate. Stay within the profile's range if possible
-- **You cannot change the buyer's address.** The buyer's address is set at the time of purchase. If the address is wrong, the buyer needs to contact support
-- **Act before generating the label.** Most adjustments are easy before label generation. After that, changes require support intervention
+## Who pays for what
+
+- **Editing the address before generating the label**: free, built into the app
+- **Editing the shipping profile before a sale**: free, built into the app
+- **Voiding and regenerating a label through support**: the cost of the new label is normally deducted from you (the seller), the same as any new label. Confirm with support case by case
+- **Weight differences caught by Correios at the counter**: the extra charge is on you. That is why it is worth asking support for an adjustment before shipping, rather than discovering it at the counter
+
+## Best practices
+
+- **Check your address once before generating the first label of each show.** It is the cheapest adjustment that exists and saves you most support cases
+- **Weigh the real package before generating.** If the weight is far from the profile, talk to support before you tap generate
+- **Do not print the label without looking at the printed address first.** If anything is wrong, stop and open the support chat before going to Correios
+- **Treat post-label adjustment as the exception, not the routine.** Each label adjustment costs support time and slows down shipping
 
 ## Common questions
 
-**Can I change the shipping weight after the label is generated?**
-No. Once the label is generated, the weight is locked in. If you discover the weight is significantly different, contact support before shipping.
+**Can I change the label weight after it has been generated?**
+Not from the app. You open a support ticket, support voids the current label, and a new one is generated with the correct weight.
 
-**What happens if my package is heavier than the label says?**
-Correios may charge the difference at the agency, or the package may be returned. Always confirm the accurate weight before generating the label.
+**What if the buyer wants to change their delivery address?**
+The buyer needs to contact Jamble support. You cannot edit the buyer's address from your side, either before or after the label.
 
-**Can I change the shipping profile after a sale?**
-No. The shipping profile is locked once the product is sold. Adjust the weight during the confirm step if the actual package differs from the profile estimate.
+**Can I cancel the label myself if I made a mistake?**
+Not from the app. Support checks whether the label has been used at Correios yet and, if it has not, voids it. Once it has been scanned, voiding is usually not possible.
 
-**What if the buyer wants to change their address?**
-The buyer needs to contact Jamble support directly. You cannot change the buyer's delivery address from your end.
+**Why does the app not let me adjust the weight myself before generating?**
+The weight comes from the shipping profile you set when you created the product. Today, adjusting the weight of an already-sold item goes through support. The team reviews the impact and generates the label with the right weight, instead of you having to guess twice.
 
-**Is there a cost to making shipping adjustments?**
-Confirming or adjusting the weight before label generation is free. If a label needs to be canceled and regenerated after creation, contact support — they'll handle the process.
+**Does support charge for these adjustments?**
+Support itself is free. If the operation involves generating a new label, the cost of that new label is normally deducted from you. Support explains the case before doing it.
 
 ## Need help?
 

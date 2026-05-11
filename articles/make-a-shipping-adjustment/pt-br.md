@@ -2,82 +2,88 @@
 
 ## O que você vai aprender
 
-Este guia explica como fazer ajustes nos detalhes de envio de um pedido antes ou depois de gerar uma etiqueta. Você vai aprender como confirmar ou alterar o peso do envio e o que fazer se algo precisar ser corrigido.
+Este guia explica o que você pode ajustar no envio de um pedido antes de gerar a etiqueta, e o que fazer se algo precisar mudar depois que a etiqueta já foi comprada.
+
+A regra simples: antes da etiqueta, você ajusta direto no app. Depois da etiqueta, o ajuste passa pelo suporte.
 
 ## Antes de começar
 
 Você precisa de:
-- Uma venda confirmada que está preparando para enviar
-- Saber o peso ou tamanho real do seu item embalado
 
-## Que ajustes você pode fazer?
+- Uma conta de vendedor aprovada na Jamble
+- Uma venda no painel pós-show, com a etiqueta ainda não gerada (caso 1) ou já gerada (caso 2)
 
-Ao preparar o envio de um pedido, pode ser necessário ajustar certos detalhes:
+## Caso 1: antes de gerar a etiqueta
 
-| Ajuste | Quando | Como |
-|--------|--------|------|
-| **Confirmar ou alterar peso** | Antes de gerar a etiqueta | Pela tela de detalhes do pedido |
-| **Mudar perfil de envio de um produto** | Antes do produto ser vendido | Editando a listagem do produto |
-| **Contatar suporte para problemas com etiqueta** | Depois da etiqueta ser gerada | Pelo chat do app ou email |
+Antes de você apertar para gerar a etiqueta, o único dado de envio que você controla direto é o seu **endereço de remetente** (o endereço cadastrado no seu perfil de vendedor). O endereço do comprador é definido por ele na hora da compra e você não consegue editar.
 
-## Passo a passo
+### Corrigir o endereço de remetente
 
-### Passo 1: Confirme o peso do envio
+Abra a tela **Editar Endereço de Entrega** no seu perfil de vendedor. Você vê os campos do formulário brasileiro com **Informações Pessoais** (Nome, Sobrenome, Telefone) e **Endereço de Entrega** (CEP, Nome da rua, Número, Complemento, Bairro, Cidade, Estado, País):
 
-Antes de gerar uma etiqueta, pode ser pedido que você confirme o peso do seu pacote. Isso garante que o custo do frete seja preciso.
+![Tela Editar Endereço de Entrega mostrando seções Informações Pessoais e Endereço de Entrega com os campos CEP, Nome da rua, Número, Complemento, Bairro, Cidade, Estado e País, e o botão Editar no rodapé](./assets/mockups/make-a-shipping-adjustment__screen-1__pt-br__v3.png)
 
-Uma tela com o título **"CONFIRM WEIGHT"** aparece mostrando:
+Atualize os campos que precisam mudar. O CEP segue o formato XXXXX-XXX (8 dígitos). O Estado é a sigla de 2 letras (SP, RJ, MG, etc.). Toque em **Editar** no rodapé para salvar.
 
-![Tela de confirmação de peso mostrando peso atual de 0.99 lbs com campo de entrada para inserir novo peso em lbs e botão Confirmar](./assets/mockups/make-a-shipping-adjustment__confirm-weight__pt-br.png)
+O endereço atualizado é usado quando você gera a etiqueta. Por isso a regra de ouro: confira esse endereço **antes** de tocar em gerar etiqueta, não depois.
 
-- O **peso atual** é baseado no perfil de envio atribuído ao produto
-- Você pode ajustar o peso se o item embalado for diferente da estimativa
-- Toque em **Confirm** para salvar
+### Peso e perfil de envio do produto
 
-**Por que isso importa:** O custo do frete é calculado a partir do peso. Se você confirmar um peso muito baixo, o pacote pode ser rejeitado ou ter cobranças extras nos Correios. Se muito alto, o comprador paga mais do que o necessário pelo frete.
+O peso e as dimensões usadas pela transportadora vêm do **perfil de envio** que você atribuiu ao produto na hora de listar.
 
-### Passo 2: Ajuste o perfil de envio de um produto antes da venda
+- Se o produto **ainda não foi vendido**, você pode editar a listagem e mudar o perfil de envio (veja o guia *Choose a shipping profile*).
+- Se o produto **já foi vendido**, o perfil fica travado. Você não consegue mudar o perfil ou inserir um peso novo direto no app antes de gerar a etiqueta. Se o pacote real for muito diferente do que o perfil prevê, fale com o suporte antes de gerar a etiqueta.
 
-Se perceber que um produto está com o perfil de envio errado, você pode mudá-lo antes que seja vendido:
+## Caso 2: depois que a etiqueta já foi gerada
 
-1. Vá à listagem do seu produto
-2. Toque para editar o produto
-3. Mude o **perfil de envio** para o correto
-4. Toque em **Save Changes**
+Quando você gera a etiqueta, o sistema compra uma etiqueta dos Correios via Melhor Envio com o peso, as dimensões e o endereço daquele momento. A partir daí, a linha do pacote no painel pós-show passa a mostrar dois botões:
 
-Isso atualiza o cálculo do custo de frete para futuros compradores. Você não pode mudar o perfil de envio depois que a venda é concluída.
+![Painel pós-show com a linha do PACOTE 1, valor pago pelo vendedor, e os botões Abrir etiqueta e Nota Fiscal disponíveis depois que a etiqueta foi gerada](./assets/mockups/make-a-shipping-adjustment__screen-2__pt-br__v3.png)
 
-### Passo 3: Solicite ajustes após a geração da etiqueta
+- **Abrir etiqueta**: abre o PDF da etiqueta já comprada, com endereço, código de rastreio e código de barras
+- **Nota Fiscal**: abre o fluxo de chave de NF-e (adicionar manualmente, extrair de um arquivo, ou declarar isenção)
 
-Uma vez que a etiqueta é gerada, você não pode editar diretamente os detalhes de envio. Se precisar fazer mudanças depois da etiqueta ser criada:
+Não existe botão de ajustar a etiqueta, mudar o peso, trocar o endereço, ou cancelar a etiqueta no app. Para qualquer um desses casos, abra o chat do suporte.
 
-- **Endereço do comprador errado** — entre em contato com o suporte imediatamente. A etiqueta pode precisar ser cancelada e regerada
-- **Pacote maior/mais pesado que o esperado** — se a diferença for significativa, entre em contato com o suporte. Uma nova etiqueta com dimensões corretas pode ser necessária
-- **Perfil de envio errado** — entre em contato com o suporte para orientação sobre como proceder
+### Quando falar com o suporte
 
-## Dicas importantes
+| Situação | O que pedir ao suporte |
+|---|---|
+| Endereço do comprador está errado | Pedir para coordenar com o comprador, anular a etiqueta atual e emitir uma nova com o endereço correto |
+| Pacote ficou muito mais pesado ou maior que o previsto | Pedir para anular a etiqueta e gerar uma nova com as dimensões reais |
+| Etiqueta foi comprada mas o pedido vai ser cancelado | Pedir para anular a etiqueta antes do envio (se já foi escaneada pelos Correios, normalmente não dá para anular) |
+| Você quer usar uma etiqueta sua dos Correios | Pedir orientação; no app, você pode também adicionar o rastreio externo na tela do pacote (veja *Change or fix your shipping label*) |
 
-- **Sempre pese seu pacote antes de confirmar.** Uma balança de cozinha funciona bem para a maioria dos itens. Precisão previne problemas de envio
-- **O perfil de envio define o peso base.** Quando você confirma o peso, está refinando a estimativa. Fique dentro da faixa do perfil se possível
-- **Você não pode mudar o endereço do comprador.** O endereço do comprador é definido no momento da compra. Se o endereço estiver errado, o comprador precisa contatar o suporte
-- **Aja antes de gerar a etiqueta.** A maioria dos ajustes é fácil antes da geração da etiqueta. Depois disso, mudanças requerem intervenção do suporte
+## Quem paga o quê
+
+- **Editar o endereço antes de gerar a etiqueta**: gratuito, faz parte do app
+- **Editar o perfil de envio antes da venda**: gratuito, faz parte do app
+- **Anular e regerar uma etiqueta pelo suporte**: o custo da nova etiqueta é descontado de você (o vendedor) normalmente, igual a uma etiqueta nova. Confirme com o suporte caso a caso
+- **Diferenças de peso detectadas pelos Correios na agência**: a cobrança extra fica com você. Por isso vale a pena pedir um ajuste pelo suporte antes de postar, em vez de descobrir na agência
+
+## Boas práticas
+
+- **Confira o endereço uma vez antes de gerar a primeira etiqueta de cada show.** É o ajuste mais barato que existe e te livra da maior parte dos casos de suporte
+- **Pese o pacote real antes de gerar.** Se o peso é muito diferente do perfil, fale com o suporte antes de tocar em gerar etiqueta
+- **Não imprima a etiqueta antes de bater o olho no endereço impresso.** Se algo estiver errado, pare e abra o chat do suporte antes de ir aos Correios
+- **Trate ajuste pós-etiqueta como exceção, não rotina.** Cada ajuste de etiqueta custa tempo do suporte e atrasa o envio
 
 ## Perguntas frequentes
 
-**Posso mudar o peso do envio depois da etiqueta ser gerada?**
-Não. Uma vez que a etiqueta é gerada, o peso é fixado. Se descobrir que o peso é significativamente diferente, entre em contato com o suporte antes de enviar.
+**Tem como mudar o peso da etiqueta depois dela gerada?**
+Não pelo app. Você abre um chamado no suporte para anular a etiqueta atual e gerar uma nova com o peso correto.
 
-**O que acontece se meu pacote for mais pesado do que a etiqueta diz?**
-Os Correios podem cobrar a diferença na agência, ou o pacote pode ser devolvido. Sempre confirme o peso correto antes de gerar a etiqueta.
+**E se o comprador quiser trocar o endereço de entrega?**
+O comprador precisa entrar em contato com o suporte da Jamble. Você não consegue editar o endereço do comprador do seu lado, nem antes nem depois da etiqueta.
 
-**Posso mudar o perfil de envio depois de uma venda?**
-Não. O perfil de envio é fixado quando o produto é vendido. Ajuste o peso durante a etapa de confirmação se o pacote real for diferente da estimativa do perfil.
+**Posso cancelar a etiqueta sozinho se errei?**
+Não pelo app. O suporte verifica se a etiqueta ainda não foi usada nos Correios e, se possível, anula. Se já foi escaneada, geralmente não dá para anular.
 
-**E se o comprador quiser mudar o endereço?**
-O comprador precisa contatar o suporte da Jamble diretamente. Você não pode mudar o endereço de entrega do comprador do seu lado.
+**Por que o app não me deixa ajustar o peso sozinho antes de gerar?**
+O peso vem do perfil de envio que você definiu quando criou o produto. Hoje, ajustar o peso de um item já vendido passa pelo suporte. A equipe avalia o impacto e gera a etiqueta com o peso certo, em vez de você ter que adivinhar duas vezes.
 
-**Tem custo fazer ajustes de envio?**
-Confirmar ou ajustar o peso antes da geração da etiqueta é gratuito. Se uma etiqueta precisar ser cancelada e regerada após a criação, entre em contato com o suporte — eles cuidam do processo.
+**O suporte cobra para fazer esses ajustes?**
+O suporte em si é gratuito. Se a operação envolve gerar uma etiqueta nova, o custo dessa etiqueta nova é descontado de você, normalmente. O suporte explica o caso antes de fazer.
 
 ## Precisa de ajuda?
 

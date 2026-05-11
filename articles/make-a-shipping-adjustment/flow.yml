@@ -1,0 +1,82 @@
+# Generated from process/templates/article-flow.yml by scripts/init-article-flow.py
+# slug: make-a-shipping-adjustment
+#
+# Article flow contract.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+job_to_be_done: "Help sellers adjust a shipping label after creation: when adjustments are allowed, how to access the adjust flow, what costs the seller covers"
+
+# Sources of truth.
+source_of_truth:
+  ios_files:
+    - SHIPPING/Add Edit Shipping Address/Views/AddEditShippingAddressInformationView.swift
+    - SHIPPING/Add Edit Shipping Address/Configuration/BRAddressFormConfiguration.swift
+    - LIVE_SHOPPING/DashboardHost/Views/DashboardBundleView.swift
+    - LIVE_SHOPPING/DashboardHost/Models/DashboardBundle.swift
+    - LIVE_SHOPPING/DashboardHost/ViewModels/DashboardBundleViewModel.swift
+    - TRANSACTION/Sale/ChangeShippingWeightViewController.swift
+    - RESOURCES/Localizable.xcstrings
+  backend_files: []
+  legal: []
+  support_context: []
+  # Note: TRANSACTION/Sale/ChangeShippingWeightViewController.swift is
+  # listed in ios_files (the path exists) but is dead code in production:
+  # `grep -r ChangeShippingWeightViewController Jamble/` returns only its
+  # own declaration. The article documents that this surface is unreachable
+  # for sellers today, see risk_flags / resolved_decisions below and the
+  # Stale-surface section in audit/code-audit-14288137.md.
+
+# Content contract.
+content_contract:
+  must_answer:
+    - "Correios"
+    - "Melhor Envio"
+    - "Nota Fiscal"
+  forbidden_terms: []
+  must_not_say:
+    - "Do not claim sellers can self-serve a weight or label edit from the bundle row after the label is purchased; the iOS DashboardBundleView only exposes Open Label / Add Nota Fiscal / Exempt Nota Fiscal once a label exists."
+
+# Mockup plan.
+mockup_plan:
+  required: true
+  screens:
+    - name: screen-1
+      purpose: "Edit Shipping Address screen, the only sender-side self-service adjustment available before label purchase."
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+    - name: screen-2
+      purpose: "Post-show bundle row after the label is purchased: the only available actions are Open Label and Nota Fiscal. There is no self-service adjustment button."
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+
+# Icons used: none. Both mockups use plain text + simple CSS chrome.
+icons_required: []
+
+icons_fallback_feather: false
+
+# Article does not quote prices in body.
+currency_required: false
+
+# Article has 8 H2 sections but the structure is linear (Case 1 / Case 2 /
+# Who pays / Best practices / FAQ / Need help) and a TOC would duplicate
+# the H2 list. Silence the soft TOC warn.
+toc_required: false
+
+# Risk flag: ChangeShippingWeightViewController.swift exists but has zero
+# call sites. Article documents this surface as not accessible in production
+# and routes weight-discrepancy cases through support. If a future engineering
+# rewire makes the screen reachable, this article must be revisited.
+risk_flags:
+  - "ChangeShippingWeightViewController.swift defined in TRANSACTION/Sale/ but has zero call sites. The Confirm Weight modal documented in the prior v1 article was unreachable in production. Article reframed around address fix before label + support route after label. Re-audit if a future PR wires the controller back in."
+
+resolved_decisions:
+  - risk: "ChangeShippingWeightViewController.swift defined in TRANSACTION/Sale/ but has zero call sites. The Confirm Weight modal documented in the prior v1 article was unreachable in production. Article reframed around address fix before label + support route after label. Re-audit if a future PR wires the controller back in."
+    decided_by: "Aymar"
+    decided_at: "2026-05-11"
+    rationale: "v2 rewrite drops the unreachable Confirm Weight surface and aligns the article with the surfaces sellers actually see today: Edit Shipping Address (pre-label) and the bundle action row (post-label). The dead controller is documented via negative_scan + this risk flag so a future re-audit can detect rewiring."
