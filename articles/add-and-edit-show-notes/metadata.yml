@@ -7,11 +7,11 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-05-08T00:00:00Z
 locales:
   pt-br:
     title: 'Adicionar e Editar Notas do Show'
-    description: ''
+    description: 'Adicione notas curtas (até 200 caracteres) ao seu show. Elas aparecem como mensagem fixada no chat ao vivo.'
   en:
     title: 'Add and Edit Show Notes'
-    description: 'This guide explains how to add notes to your show that are displayed to your audience during the live. Notes are a great way to share important information — show rules, shipping announcements, discount codes, or anything you want every viewer to see'
+    description: 'Add short notes (up to 200 characters) to your show. They appear as a pinned message in the live chat.'
