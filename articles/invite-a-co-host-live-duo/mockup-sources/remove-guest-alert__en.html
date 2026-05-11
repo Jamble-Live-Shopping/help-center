@@ -1,0 +1,28 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; height: 520px; background: #1A1F2E; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; }
+.dim { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.55); }
+.alert { position: relative; width: 270px; background: rgba(45, 45, 50, 0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 14px; overflow: hidden; text-align: center; }
+.alert-body { padding: 18px 16px 18px; }
+.alert-title { font-size: 17px; font-weight: 600; color: #FFFFFF; line-height: 22px; }
+.alert-btns { border-top: 0.5px solid rgba(255, 255, 255, 0.18); }
+.alert-btn { display: block; width: 100%; padding: 11px 8px; font-size: 17px; border: none; background: transparent; cursor: pointer; font-family: inherit; border-bottom: 0.5px solid rgba(255, 255, 255, 0.18); color: #007AFF; }
+.alert-btn:last-child { border-bottom: none; }
+.alert-btn.cancel { font-weight: 600; color: #007AFF; }
+.alert-btn.destructive { color: #FF453A; font-weight: 400; }
+</style></head><body>
+<div class="phone">
+  <div class="dim"></div>
+  <div class="alert">
+    <div class="alert-body">
+      <div class="alert-title">Remove @ana_cards From Live Duo?</div>
+    </div>
+    <div class="alert-btns">
+      <button class="alert-btn cancel">Cancel</button>
+      <button class="alert-btn destructive">Remove</button>
+    </div>
+  </div>
+</div>
+</body></html>

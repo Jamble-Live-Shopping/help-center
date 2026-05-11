@@ -1,112 +1,91 @@
-# Convidar um Co-Host (Live Duo)
+# Convidar um co-host (Live Duo)
 
-> Este recurso está disponível apenas no **iPhone** no momento.
+> Disponivel apenas no iPhone no momento.
 
-## O que você vai aprender
+## O que voce vai aprender
 
-Este guia explica como convidar alguém para participar do seu show ao vivo como co-host usando o recurso **Live Duo**. Você vai aprender como convidar um espectador, o que seu co-host pode fazer e como gerenciar o duo durante o show.
+Como convidar alguem para entrar no seu show ao vivo como co-host (a Jamble chama de "convidado") usando o **Live Duo**, o que esse convidado pode fazer durante o show, e como remove-lo quando voce quiser encerrar a participacao.
 
-## Antes de começar
+## Antes de comecar
 
-Você precisa de:
-- Uma conta de vendedor aprovada na Jamble (iPhone)
-- Um show que esteja ao vivo (você já precisa estar transmitindo)
-- Pelo menos um espectador no show, ou o nome de usuário de alguém que deseja convidar
+- Conta de vendedor aprovada na Jamble (iPhone)
+- Voce ja precisa estar transmitindo. O botao de convite so aparece com o show ao vivo
+- Pelo menos um espectador no seu show, ou alguem que voce possa encontrar pela busca
 
 ## Como o Live Duo funciona
 
-O Live Duo permite trazer outra pessoa para a câmera durante seu show. Seu co-host (chamado de "convidado") aparece como uma pequena janela de vídeo sobre sua tela, para que ambos fiquem visíveis para a audiência ao mesmo tempo.
+O Live Duo permite trazer outra pessoa para a sua transmissao. O convidado aparece no canto superior esquerdo da tela em uma janela menor, enquanto a sua camera continua como o feed principal. Sua audiencia ve as duas pessoas ao mesmo tempo.
 
-Isso é ótimo para:
-- Fazer um show com um amigo ou parceiro de negócios
-- Trazer um especialista para falar sobre um produto específico
-- Criar conteúdo mais dinâmico com duas personalidades
+Voce pode ter **um convidado por vez**. Para trocar, remova o atual antes de convidar outra pessoa.
 
-Você pode ter **um convidado por vez**.
+## Passo 1, abrir a tela de convite
 
-## Passo a passo
+Com o show ao vivo, toque no botao de camera com sinal de mais que aparece no canto superior direito. O botao some quando voce ja tem um convidado, entao se voce nao o ve, primeiro remova o convidado atual.
 
-### Passo 1: Inicie seu show
+Uma planilha aparece com o titulo **Invite for a Duo**, mostrando os espectadores que estao assistindo agora. Voce pode rolar a lista ou usar a barra de busca para encontrar alguem pelo nome de usuario.
 
-Vá ao vivo primeiro. A opção Live Duo só está disponível durante um show ao vivo — você não pode convidar um co-host antes de começar.
+![Planilha Invite for a Duo com barra de busca, grade de avatares de espectadores e botao roxo Invite your friend no rodape](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/invite-a-co-host-live-duo__invite-bottom-sheet__pt-br__v3.png)
 
-### Passo 2: Toque no ícone de câmera
+Toque em um espectador para selecionar. O botao **Invite your friend** so fica disponivel depois da selecao. Toque nele para enviar o convite.
 
-Enquanto estiver ao vivo, procure o **ícone de câmera com +** na área superior direita da sua tela. Toque nele para abrir a tela de convite.
+## Passo 2, esperar o convidado aceitar
 
-Este ícone só aparece quando você ainda não tem um convidado na tela.
+A pessoa que voce convidou recebe na tela uma janela com o titulo **Live Duo** e a frase **You have been invited to join (seu nome de usuario) as a guest!**.
 
-### Passo 3: Escolha quem convidar
+![Modal Live Duo visto pelo convidado: imagem de video, mensagem de convite e dois botoes, Accept and Join em destaque e Don't Join em texto vermelho](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/invite-a-co-host-live-duo__guest-invite-modal__pt-br__v3.png)
 
-Uma tela com o título **"Invite for a Duo"** aparece, mostrando os espectadores assistindo seu show. Você pode rolar pela lista ou usar a **barra de busca** para encontrar alguém pelo nome de usuário.
+O convidado pode tocar em **Accept and Join** para entrar. Se ainda nao tiver dado permissao de camera e microfone, o botao mostra **Allow Camera Access and Join** e o app pede o acesso antes de continuar. Para recusar, toque em **Don't Join**.
 
-![Tela Convite para Duo com campo de busca por nome de usuário, três slots de avatar de usuário e botão Convide seu amigo](./assets/mockups/invite-a-co-host-live-duo__invite-duo-cohost__pt-br.png)
+## Passo 3, ir ao vivo juntos
 
-Toque em um espectador para selecioná-lo, depois toque em **"Invite your friend"** para enviar o convite.
+Quando o convidado aceita, a camera dele liga e o video aparece como uma pequena janela no canto superior esquerdo da sua tela. A sua camera continua em tela cheia como feed principal e a sua audiencia ve as duas pessoas.
 
-### Passo 4: Espere a aceitação
+## Como remover o convidado
 
-Seu convidado recebe uma notificação convidando-o a participar. Na tela dele, ele vê:
+Para encerrar a participacao do convidado durante o show:
 
-![Tela de convite Live Duo com título, mensagem sobre participação como convidado e botões de aceitar/rejeitar](./assets/mockups/invite-a-co-host-live-duo__live-duo-invitation__pt-br.png)
+1. Toque na foto circular do convidado no canto superior direito (botao do convidado)
+2. Aparece um alerta de iOS com o titulo **Remove (nome de usuario) From Live Duo?**
+3. Toque em **Remove** (em vermelho) para confirmar, ou em **Cancel** para fechar sem remover
 
-Ele pode tocar em **"Accept and Join"** (que requer acesso à câmera e microfone) ou **"Don't Join"** para recusar.
+![Alerta nativo de iOS Remove username From Live Duo? com dois botoes empilhados, Cancel acima e Remove em vermelho abaixo](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/invite-a-co-host-live-duo__remove-guest-alert__pt-br__v3.png)
 
-O convite expira após **5 minutos**. Se não responder a tempo, o convite é automaticamente cancelado.
+O convidado e notificado e volta a ser espectador comum.
 
-### Passo 5: Vão ao vivo juntos
+O convidado tambem pode sair sozinho. Tocando no proprio botao de transmissao, ele ve o alerta **Stop broadcasting?** e confirma com **Stop**.
 
-Quando seu convidado aceitar, a câmera dele ativa e ele aparece como uma **pequena janela de vídeo** na sua tela. Sua audiência vê os dois.
+## O que o convidado pode e nao pode fazer
 
-![live-duo-tabs: Navegação com duas abas mostrando Vídeo do convidado e Seu feed principal](./assets/mockups/invite-a-co-host-live-duo__live-duo-tabs__pt-br.png)
+- **Pode**, transmitir camera e audio, ser visto e ouvido pela audiencia, interagir com o chat, parar de transmitir e voltar a assistir
+- **Nao pode**, vender produtos, abrir o gerenciador de produtos, encerrar o show, convidar outras pessoas
 
-O vídeo do convidado aparece no canto superior esquerdo como uma pequena janela picture-in-picture. Sua câmera continua como o feed principal em tela cheia.
-
-## Removendo um convidado
-
-Para remover seu convidado durante o show:
-
-1. Toque no ícone do perfil do convidado (foto circular pequena no canto superior direito)
-2. Uma mensagem de confirmação aparece: **"Remove [nome] From Live Duo?"**
-3. Toque em **"Remove"** para confirmar
-
-Seu convidado será notificado e voltará à audiência regular.
-
-O convidado também pode sair por conta própria tocando no botão de transmissão e confirmando **"Stop broadcasting?"**.
-
-## O que o convidado pode e não pode fazer
-
-- **Transmitir câmera e áudio** — Iniciar ou encerrar o show
-- **Ser visto e ouvido pela audiência** — Gerenciar produtos ou vendas
-- **Interagir com o chat** — Acessar ferramentas de apresentador
-- **Parar de transmitir e voltar** — Convidar outros convidados
-O convidado é basicamente um espectador que aparece na câmera — ele não tem controles de apresentador.
+O convidado e basicamente um espectador que aparece na camera. Os controles de apresentador ficam apenas com voce.
 
 ## Dicas importantes
 
-- **Qualquer espectador pode ser convidado** — não precisa ser vendedor ou te seguir. Qualquer pessoa na sua audiência pode se tornar convidado
-- **Apenas um convidado por vez.** Se quiser trocar, remova o atual primeiro e convide outra pessoa
-- **Teste o áudio antes de convidar.** Certifique-se de que seu convidado sabe que precisará de permissões de câmera e microfone
-- **Mantenha natural.** Shows em duo funcionam melhor quando ambos têm algo a contribuir
-- **O convite expira em 5 minutos.** Se seu convidado perder, você pode enviar um novo convite
+- **Qualquer espectador pode ser convidado**, nao precisa ser vendedor nem te seguir
+- **Apenas um convidado por vez**. Para trocar, remova o atual primeiro
+- **Combine antes**, avise o convidado que ele vai precisar liberar camera e microfone no celular dele
+- **Mantenha natural**, shows em duo funcionam melhor quando as duas pessoas tem algo a contribuir
+- **Sem botao de convite?** Confira se voce ja esta ao vivo e se nao ha um convidado ativo
 
 ## Perguntas frequentes
 
-**O convidado precisa ser vendedor?**
-Não. Qualquer usuário da Jamble pode ser convidado. Só precisa ter permissões de câmera e microfone.
+**O convidado precisa ter conta de vendedor?**
+Nao. Qualquer usuario da Jamble pode ser convidado. Ele so precisa autorizar camera e microfone no iPhone.
 
 **Posso ter mais de um convidado?**
-Não. O Live Duo suporta um convidado por vez.
+Nao. O Live Duo aceita um convidado por vez.
 
-**E se o convidado perder a conexão?**
-O vídeo dele desaparece da sua tela. Ele pode voltar ao duo se reconectar ao show.
+**E se o convidado perder a conexao?**
+A janela do video dele desaparece da sua tela. Quando ele voltar ao show, pode ser convidado novamente.
 
-**O Live Duo está disponível no Android?**
-Ainda não. O Live Duo está disponível apenas no iPhone no momento.
+**O Live Duo esta disponivel no Android?**
+Ainda nao. O recurso esta apenas no app de iPhone.
 
 **O convidado pode vender produtos durante o show?**
-Não. Apenas o apresentador pode gerenciar produtos e vendas.
+Nao. Apenas o apresentador (voce) gerencia produtos e vendas.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app ou envie um email para support@jambleapp.com.
