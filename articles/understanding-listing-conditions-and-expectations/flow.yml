@@ -1,0 +1,93 @@
+# Article flow contract for understanding-listing-conditions-and-expectations.
+# Concept article: explains the 5 condition tiers Jamble exposes today.
+# Source of truth = backend condition.json (server-driven titles + descriptions).
+
+workflow: article-v2
+mode: v2_rewrite
+audience: both
+
+job_to_be_done: "Explain how Jamble defines item condition tiers (New, Like New, Used, etc.), what buyers and sellers should expect from each tier, and how to pick the right tier when listing"
+
+source_of_truth:
+  ios_files:
+    - PRODUCT/Models/ProductCondition.swift:1-25
+    - PRODUCT/Models/Product.swift:319-324
+    - PRODUCT/Views/Components/ProductConditionCell.swift:11-137
+    - PRODUCT/Views/SelectProductAttributeViewController.swift:1-300
+    - PRODUCT/View Models/CreateProductViewModel.swift:494-548
+    - PRODUCT/View Models/CreateProductViewModel.swift:670-680
+    - PRODUCT/View Models/CreateProductViewModel.swift:175-182
+    - PRODUCT/Models/CreateProductSectionType.swift:57-58
+    - PRODUCT/Views/SwiftUI/Components/ProductInfoSection.swift:167-176
+    - SERVICE/API/Repository/Modules/Product/ProductRepository.swift:69
+    - SERVICE/API/Repository/Modules/Product/ProductRepository.swift:432-434
+  backend_files:
+    - src/routers/product.py:1242-1255
+    - src/product_attributes/configs/attributes/condition.json:1-97
+  legal: []
+  support_context: []
+
+content_contract:
+  # must_answer is a substring scan applied to BOTH pt-br.md and en.md.
+  # We use language-neutral or shared-cognate terms (5, edit) that appear
+  # in both translations. Locale-specific tier names are enforced via the
+  # screens' html_must_contain (which IS locale-specific).
+  must_answer:
+    - "5"
+    - "edit"
+  forbidden_terms:
+    - "auction"
+    - "leilao"
+    - "leilão"
+  must_not_say:
+    - "Condition is optional"
+    - "number one cause"
+    - "Products with a condition rating sell better"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: condition-picker
+      purpose: "iOS condition picker screen: nav title 'Condição', 5 tier rows (title + description + radio), selected state on 'Muito Bom'"
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Condição"
+          - "Novo com etiquetas"
+          - "Novo sem etiquetas"
+          - "Muito Bom"
+          - "Bom"
+          - "Satisfatório"
+        en:
+          - "Condition"
+          - "New with tags"
+          - "New without tags"
+          - "Very Good"
+          - "Good"
+          - "Satisfactory"
+    - name: section-row
+      purpose: "Condition row inside the create-product flow (sits between Color and Price), with a value chip showing the selected tier"
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Condição"
+        en:
+          - "Condition"
+
+icons_required: []
+icons_fallback_feather: false
+currency_required: false
+
+# Concept article with 10 short, linear H2 sections. The headings form a
+# self-navigating outline and a TOC would only push content below the fold
+# on mobile. Disable the TOC check.
+toc_required: false
+
+risk_flags: []
+resolved_decisions: []

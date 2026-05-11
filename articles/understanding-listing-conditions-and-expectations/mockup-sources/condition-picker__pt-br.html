@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+
+/* iOS-style top bar: back chevron, centred title, optional CLEAR button (right) */
+.topbar { position: relative; height: 44px; display: flex; align-items: center; justify-content: center; }
+.topbar .back { position: absolute; left: 16px; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; }
+.topbar .back svg { width: 14px; height: 21px; }
+.topbar .title { font-size: 17px; font-weight: 500; color: #162233; }
+.topbar .clear { position: absolute; right: 16px; font-size: 15px; font-weight: 600; color: #7E53F8; }
+.topbar-divider { height: 0.5px; background: #DADDE3; }
+
+/* List of conditions, matches ProductConditionCell.swift layout */
+.row { display: flex; align-items: center; padding: 14px 20px; min-height: 56px; position: relative; }
+.row + .row::before { content: ""; position: absolute; top: 0; left: 20px; right: 20px; height: 0.5px; background: #E9EAEF; }
+.row-text { flex: 1; padding-right: 16px; }
+.row-title { font-size: 17px; font-weight: 500; color: #162233; line-height: 22px; }
+.row-desc { font-size: 15px; font-weight: 400; color: #4A6378; line-height: 20px; margin-top: 1px; }
+.radio { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid #A0A7B7; flex-shrink: 0; }
+.row.selected .radio { border-color: #162233; position: relative; }
+.row.selected .radio::after { content: ""; position: absolute; top: 3px; left: 3px; width: 10px; height: 10px; border-radius: 50%; background: #162233; }
+</style></head><body>
+<div class="phone">
+  <div class="topbar">
+    <div class="back"><svg viewBox="0 0 14 21" fill="none" stroke="#162233" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="11 2 2 10.5 11 19"/></svg></div>
+    <div class="title">Condição</div>
+    <div class="clear">Limpar</div>
+  </div>
+  <div class="topbar-divider"></div>
+
+  <div class="row">
+    <div class="row-text">
+      <div class="row-title">Novo com etiquetas</div>
+      <div class="row-desc">Nunca usado e impecável, completo com as etiquetas originais de compra.</div>
+    </div>
+    <div class="radio"></div>
+  </div>
+
+  <div class="row">
+    <div class="row-text">
+      <div class="row-title">Novo sem etiquetas</div>
+      <div class="row-desc">Nunca usado, em perfeito estado, mas sem as etiquetas originais.</div>
+    </div>
+    <div class="radio"></div>
+  </div>
+
+  <div class="row selected">
+    <div class="row-text">
+      <div class="row-title">Muito Bom</div>
+      <div class="row-desc">Pouco usado, com sinais mínimos de desgaste, bem conservado.</div>
+    </div>
+    <div class="radio"></div>
+  </div>
+
+  <div class="row">
+    <div class="row-text">
+      <div class="row-title">Bom</div>
+      <div class="row-desc">Usado com cuidado e bem conservado, com quaisquer defeitos claramente indicados.</div>
+    </div>
+    <div class="radio"></div>
+  </div>
+
+  <div class="row">
+    <div class="row-text">
+      <div class="row-title">Satisfatório</div>
+      <div class="row-desc">Usado frequentemente, com desgaste visível e defeitos notados.</div>
+    </div>
+    <div class="radio"></div>
+  </div>
+</div>
+</body></html>
