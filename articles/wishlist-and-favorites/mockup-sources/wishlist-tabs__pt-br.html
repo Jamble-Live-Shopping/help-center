@@ -64,8 +64,19 @@ body {
 .cs-meta span { height: 3px; border-radius: 1px; background: rgba(22,34,51,0.14); }
 .cs-meta span:nth-child(1) { width: 75%; }
 .cs-meta span:nth-child(2) { width: 50%; }
-.cell-mark { position: absolute; top: 8px; right: 8px; width: 26px; height: 26px; border-radius: 50%; background: rgba(255,255,255,0.95); display: flex; align-items: center; justify-content: center; z-index: 2; box-shadow: 0 1px 4px rgba(0,0,0,0.18); }
-.cell-mark svg { width: 14px; height: 14px; }
+/* Saved-state heart pill: white heart on liveRed background, copied
+   verbatim from Assets.xcassets/bookmark_heart_white_icon.imageset.
+   Used by iOS in ProductPhotosSection.swift:51 with .liveRed fill. */
+.cell-mark {
+  position: absolute; top: 8px; right: 8px;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: #F14A22; /* UIColor.liveRed = rgb(241, 74, 34) */
+  display: flex; align-items: center; justify-content: center;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(22,34,51,0.20);
+  border: 0.5px solid rgba(255,255,255,0.08);
+}
+.cell-mark svg { width: 14px; height: 13px; display: block; }
 .cell-body { padding: 8px 10px; }
 .cell-title { font-size: 12px; font-weight: 600; color: #162233; line-height: 15px; }
 .cell-price { font-size: 13px; font-weight: 700; color: #162233; margin-top: 3px; }
@@ -83,7 +94,14 @@ body {
           <div class="cs-art cs-art-1"></div>
           <div class="cs-meta"><span></span><span></span></div>
         </div>
-        <div class="cell-mark"><svg viewBox="0 0 24 24" fill="#7E53F8" stroke="#7E53F8" stroke-width="1.6"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+        <!-- icon: bookmark_heart_white_icon -->
+        <!-- Assets.xcassets/bookmark_heart_white_icon.imageset/bookmark_heart_white_icon.svg -->
+        <!-- Real iOS asset, copied verbatim. -->
+        <div class="cell-mark" role="img" aria-label="bookmark_heart_white_icon (ícone de coração)" alt="bookmark_heart_white_icon">
+          <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M7.49651 13.7643C7.26611 13.7643 6.91701 13.563 6.59583 13.3547C2.75577 10.8626 0.235291 7.89145 0.235291 4.91338C0.235291 2.1852 2.14136 0.352539 4.43144 0.352539C5.85575 0.352539 6.88908 1.13697 7.49651 2.26851C8.11091 1.13003 9.14424 0.352539 10.5686 0.352539C12.8587 0.352539 14.7647 2.1852 14.7647 4.91338C14.7647 7.89145 12.2442 10.8626 8.40416 13.3547C8.08298 13.563 7.73389 13.7643 7.49651 13.7643Z" fill="white"/>
+          </svg>
+        </div>
       </div>
       <div class="cell-body"><div class="cell-title">Charizard PSA 9</div><div class="cell-price">R$ 1.450,00</div></div>
     </div>
@@ -93,7 +111,14 @@ body {
           <div class="cs-art cs-art-2"></div>
           <div class="cs-meta"><span></span><span></span></div>
         </div>
-        <div class="cell-mark"><svg viewBox="0 0 24 24" fill="#7E53F8" stroke="#7E53F8" stroke-width="1.6"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+        <!-- icon: bookmark_heart_white_icon -->
+        <!-- Assets.xcassets/bookmark_heart_white_icon.imageset/bookmark_heart_white_icon.svg -->
+        <!-- Real iOS asset, copied verbatim. -->
+        <div class="cell-mark" role="img" aria-label="bookmark_heart_white_icon (ícone de coração)" alt="bookmark_heart_white_icon">
+          <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M7.49651 13.7643C7.26611 13.7643 6.91701 13.563 6.59583 13.3547C2.75577 10.8626 0.235291 7.89145 0.235291 4.91338C0.235291 2.1852 2.14136 0.352539 4.43144 0.352539C5.85575 0.352539 6.88908 1.13697 7.49651 2.26851C8.11091 1.13003 9.14424 0.352539 10.5686 0.352539C12.8587 0.352539 14.7647 2.1852 14.7647 4.91338C14.7647 7.89145 12.2442 10.8626 8.40416 13.3547C8.08298 13.563 7.73389 13.7643 7.49651 13.7643Z" fill="white"/>
+          </svg>
+        </div>
       </div>
       <div class="cell-body"><div class="cell-title">Pikachu Holo</div><div class="cell-price">R$ 320,00</div></div>
     </div>

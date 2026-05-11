@@ -2,7 +2,7 @@
 
 ## O que você vai aprender
 
-Este guia explica como salvar produtos e shows que te interessam na Jamble, como acompanhar suas ofertas ativas e como configurar as notificações para não perder os itens que voltam ao vivo.
+Este guia explica onde encontrar a sua lista de desejos no app, como salvar produtos e shows que te interessam, como acompanhar suas ofertas ativas e como configurar as notificações para não perder os itens que voltam ao vivo.
 
 ## Antes de começar
 
@@ -18,7 +18,7 @@ Sua lista de desejos fica na página do seu perfil. Ela tem duas abas:
 - **Favoritos** mostra todos os produtos que você salvou
 - **Ofertas** mostra os produtos onde você já tem ofertas ativas
 
-![Tela da lista de desejos com as abas Favoritos e Ofertas e cards de produtos com preço](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/wishlist-and-favorites__wishlist-tabs__pt-br__v3.png)
+![Tela da lista de desejos com as abas Favoritos e Ofertas e cards de produtos com o ícone de coração](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/wishlist-and-favorites__wishlist-tabs__pt-br__v3.png)
 
 A aba **Favoritos** é o lugar para guardar produtos salvos. Tudo o que você salvou enquanto navegava ou assistia a um show fica aqui.
 
@@ -28,24 +28,24 @@ A aba **Ofertas** é mais dinâmica. Cada produto que aparece nesta aba tem uma 
 
 Quando você está navegando pelo app ou assistindo a um show ao vivo, cada produto aparece com título, preço e fotos. Para salvar:
 
-1. Toque no **ícone de marcador** no canto do card do produto
-2. O ícone fica preenchido, o produto entra na sua aba **Favoritos**
+1. Toque no **ícone de coração** no canto da foto do produto
+2. O ícone fica preenchido em vermelho, o produto entra na sua aba **Favoritos**
 
-![Card de produto com o ícone de marcador preenchido no canto superior direito, indicando o estado salvo](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/wishlist-and-favorites__product-bookmark-cta__pt-br__v3.png)
+![Card de produto com o ícone de coração preenchido em vermelho no canto superior direito, indicando o estado salvo](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/wishlist-and-favorites__product-bookmark-cta__pt-br__v3.png)
 
-Para remover um produto, toque no ícone de marcador uma segunda vez. Ele se desativa e o produto sai da aba Favoritos. Favoritar um produto não identifica você para o vendedor.
+Para remover um produto, toque no ícone de coração uma segunda vez. Ele se desativa e o produto sai da aba Favoritos. Favoritar um produto não identifica você para o vendedor.
 
 ## Quando a sua lista está vazia
 
 Se você abre a lista pela primeira vez ou se removeu tudo, a Jamble mostra um estado vazio convidando você a continuar.
 
-![Tela da lista de desejos vazia com a mensagem Comece a explorar as ofertas e o convite a descobrir produtos](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/wishlist-and-favorites__wishlist-empty-state__pt-br__v3.png)
+![Tela da lista de desejos vazia com o ícone de coração e a mensagem Comece a explorar as ofertas](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/wishlist-and-favorites__wishlist-empty-state__pt-br__v3.png)
 
 A mensagem **"Comece a explorar as ofertas"** abre direto para o feed de produtos. Toque, navegue, salve um item, e a aba **Favoritos** passa a mostrar o item.
 
 ## Salvar um show
 
-Os shows futuros têm um botão de marcador na pré-visualização. Toque para salvar.
+Os shows futuros têm um botão de coração na pré-visualização. Toque para salvar.
 
 Os shows que você marcou aparecem em **Configurações** > **Programas marcados**. Quando o vendedor entra ao vivo, você recebe uma notificação push (se a notificação **Programas marcados** estiver ativada nas suas configurações).
 
@@ -74,7 +74,7 @@ Na página do seu perfil. Ela tem as abas **Favoritos** (produtos salvos) e **Of
 Favoritos guarda os produtos que você quer revisitar. Ofertas mostra os produtos onde você já fez uma oferta antes do show começar.
 
 **Posso remover um item salvo?**
-Sim. Toque no ícone de marcador uma segunda vez no produto ou no show. Ele sai da sua lista.
+Sim. Toque no ícone de coração uma segunda vez no produto ou no show. Ele sai da sua lista.
 
 **O vendedor sabe quem salvou o produto dele?**
 Não. Os favoritos são privados. Favoritar um produto não identifica você para o vendedor.

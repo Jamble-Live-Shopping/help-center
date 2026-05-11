@@ -1,6 +1,9 @@
 # Flow contract for wishlist-and-favorites.
-# Canary v2 rewrite (PR #82). Pre-filled from process/batches/article-batch.example.yml
-# then refined after the iOS code audit + xcstrings pull on 2026-05-06.
+# v2 rewrite, rerun-2 (2026-05-08): PR #92 rule 10e anchoring + PR #91
+# heading_hierarchy / mockup_orphan_html / source_of_truth_path_missing
+# contracts. Rule 10e canary: `product-bookmark-cta` is the screen that
+# triggered PR #92 (false negative on a flag glyph instead of the real
+# `bookmark_heart_white_icon` heart asset).
 #
 # See process/templates/article-flow.yml for field documentation.
 # See process/00-RUNBOOK.md for the canonical 8-phase workflow.
@@ -9,26 +12,30 @@ workflow: article-v2
 mode: v2_rewrite
 audience: buyer_br
 
-job_to_be_done: "Help buyers save the products and shows they care about and find them again later, with the right pt-BR labels"
+job_to_be_done: "Help buyers track items they like and get notified when they go on sale or come back to a show"
 
 source_of_truth:
   ios_files:
     - WISHLIST/Views/WishlistPageViewController.swift
-    - WISHLIST/Models/WishlistPage.swift           # tab labels Favoritos / Ofertas
-    - WISHLIST/ViewModels/WishlistPageViewModel.swift  # empty state strings
-    - PROFILE/View Models/ProfileBottomViewModel.swift # wishlist mounted in profile
-    - PRODUCT/View Models/ProductViewModel.swift   # bookmarkProduct + bookmarkShow
-    - RESOURCES/Localizable.xcstrings              # pt-BR translations
+    - WISHLIST/Models/WishlistPage.swift
+    - WISHLIST/ViewModels/WishlistPageViewModel.swift
+    - PROFILE/View Models/ProfileBottomViewModel.swift
+    - PRODUCT/View Models/ProductViewModel.swift
+    - PRODUCT/Views/SwiftUI/Components/ProductStickyActionSection.swift
+    - PRODUCT/Views/SwiftUI/Components/ProductPhotosSection.swift
+    - PRODUCT/Views/SwiftUI/Components/ProductSocialActionsSection.swift
+    - RESOURCES/Localizable.xcstrings
+    - RESOURCES/Assets.xcassets/bookmark_heart_white_icon.imageset/bookmark_heart_white_icon.svg
   backend_files: []
   legal: []
   support_context: []
 
 content_contract:
   must_answer:
-    - "where to find the wishlist in the app"
-    - "what the two tabs (Favoritos and Ofertas) show"
-    - "how to bookmark a product from a card"
-    - "what notifications a buyer gets after bookmarking"
+    - "favoritos"
+    - "ofertas"
+    - "bookmark"
+    - "notifica"
   forbidden_terms:
     - "regex:\\bauction\\b"
     - "regex:\\bleil[aã]o\\b"
@@ -40,19 +47,63 @@ mockup_plan:
   required: true
   screens:
     - name: product-bookmark-cta
-      purpose: "Show the bookmark icon on a product card and the tap-to-save instruction"
+      purpose: "Show the heart bookmark icon on a product photo and the tap-to-save instruction. Canary screen for PR #92 rule 10e: the iOS asset is a heart, not a flag/bookmark glyph."
       source: ios_required
-    - name: wishlist-tabs
-      purpose: "Show the Wishlist screen with the Favoritos and Ofertas tabs and a few sample cards"
-      source: ios_required
-    - name: wishlist-empty-state
-      purpose: "Show the empty Wishlist state with the 'Start Exploring Deals' / 'Comece a explorar as ofertas' message"
-      source: ios_required
+      required_icons:
+        - bookmark_heart_white_icon
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "ícone de coração"
+        en:
+          - "heart icon"
 
-icons_required: []
+    - name: wishlist-tabs
+      purpose: "Show the Wishlist screen with the Favoritos / Ofertas tabs (xcstrings: Bookmarks->Favoritos, Bids->Offers/Ofertas) and saved cards with the heart fill"
+      source: ios_required
+      required_icons:
+        - bookmark_heart_white_icon
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Favoritos"
+          - "Ofertas"
+        en:
+          - "Bookmarks"
+          - "Offers"
+
+    - name: wishlist-empty-state
+      purpose: "Show the empty Wishlist state with the 'Start Exploring Deals' / 'Comece a explorar as ofertas' message and the heart illustration"
+      source: ios_required
+      required_icons:
+        - bookmark_heart_white_icon
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Comece a explorar as ofertas"
+          - "Favoritos"
+          - "Ofertas"
+        en:
+          - "Start Exploring Deals"
+          - "Bookmarks"
+          - "Offers"
+
+icons_required:
+  - bookmark_heart_white_icon
 icons_fallback_feather: false
 
 currency_required: false  # mockups show prices on product cards but the body does not document price mechanics
+
+toc_required: false  # 10 H2s but the article reads top-down; a TOC would add noise without helping the buyer find a deeper section.
 
 risk_flags: []
 resolved_decisions: []
