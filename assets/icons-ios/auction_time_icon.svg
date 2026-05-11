@@ -1,0 +1,11 @@
+<!-- Hand-traced from iOS asset Assets.xcassets/auction_time_icon.imageset/auction_time_icon.pdf
+     (PDF, no SVG in source ; this trace mirrors the clock-glyph semantics
+     used as the saleTimerButton image in LIVE_SHOPPING/SaleView/View/ShowSaleView.swift:861).
+     iOS uses .withRenderingMode(.alwaysTemplate) so foregroundColor controls fill ;
+     callers tint to .content.warning (amber) or .content.negativeSoft when finishing. -->
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="8" cy="9" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/>
+  <path d="M8 6 L8 9 L10.4 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M5.5 2.5 L10.5 2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M8 2.5 L8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

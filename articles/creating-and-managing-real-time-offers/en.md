@@ -1,166 +1,134 @@
-# Creating and Managing Real-Time Offers
+# Creating and managing Real Time Offers
 
-## What you'll learn
+## What you will learn
 
-This guide explains how to start, manage, and complete sales during your live show on Jamble. You'll learn the difference between the three sell modes, how timers work, and how to handle common situations like no offers or canceling a sale.
+This guide explains how to run the **Real Time Offer** sale mode during your live show on Jamble. You will set up the product, pin the item in your show, watch buyer offers land in real time, and accept the winning offer when the timer ends.
 
 ## Before you start
 
 You need:
+
 - An approved seller account on Jamble
-- A live show with products added
-- Products assigned to a sell mode (Real-time offers, Sudden Death, or Buy It Now)
+- A product added to your show with **Real Time Offer** selected as the sale mode
+- The app open on the show screen, ready to go live
 
-## The three sell modes
+## How the Real Time Offer mode works
 
-When you list a product, you choose how it will be sold during your show:
+When you publish a product with **Real Time Offer** as the sale mode, the sale runs as a timed contest. During the show:
 
-### Real-time offers
+1. You pin the product on the show screen
+2. A countdown timer starts
+3. Buyers send offers from the **Send Offer** button (the highest offer is visible to everyone)
+4. When an offer lands near the end, the timer adds a few extra seconds
+5. When the timer reaches zero with no new offers, the highest offer wins
 
-Buyers compete by placing offers. The highest offer wins when the timer ends.
+The last offerer wins at the end of the time. You do not need to accept manually: the system closes the sale on the highest offer as soon as the timer hits zero.
 
-- **Timer extends** when an offer is placed near the end — this gives other buyers a chance to respond
-- Creates excitement and competition, often driving the price up
-- Best for unique, desirable items where you expect demand
+## Step by step
 
-### Sudden Death
+### Step 1: pick the sale mode for the product
 
-Similar to Real-time offers, but with one key difference: **no time extensions**. The timer counts down without adding extra time when offers are placed.
+When you add or edit a product in your show, open the **Sell mode** screen and select **Real Time Offer**. The **Start at** and **Timer (Seconds)** fields appear right under the selected option.
 
-- Creates urgency — buyers must act fast or miss out
-- Sales finish quicker than Real-time offers
-- Best for items where you want speed over maximum price
+![Sell mode screen with three options, Real Time Offer selected and highlighted, and the Start at and Timer (Seconds) fields visible below](./assets/mockups/creating-and-managing-real-time-offers__screen-1__en__v3.png)
 
-### Buy It Now
+The screen shows the three available modes:
 
-Fixed price. Buyers purchase instantly at the price you set — no competition, no timer countdown for offers.
+- **Real Time Offer**, with a timer and live offer contest
+- **Sudden Death**, similar to Real Time Offer but **with no timer extension**
+- **Buy It Now**, fixed price, no timer
 
-- You can also enable a **Flash Sale** — a temporary discount (percentage off) with a countdown timer
-- When quantity is more than 1, multiple buyers can purchase until stock runs out
-- Best for items with a clear market price
+Set the **Start at** (starting price, between $5 and $5,000) and the **Timer (Seconds)** for the countdown (between 10 and 90 seconds). The starting price acts as the minimum: offers must be at or above it.
 
-## Step by step — Starting a sale
+### Step 2: enable Pre-Offer if you want (optional)
 
-### Step 1: Pin a product
+For **Real Time Offer** products with quantity equal to 1, still on the create-product screen, you will see the **Enable Pre-Offer?** toggle. When on, buyers can place offers before the show starts.
 
-Open your product list (tap the **shop bag icon** at the bottom of your screen) and tap **Pin** on the product you want to sell.
+![Enable Pre-Offer? row with the toggle on in purple, subtitle Offers can be placed before the show starts](./assets/mockups/creating-and-managing-real-time-offers__screen-3__en__v3.png)
 
-The product appears on screen for your audience to see. At this point, no sale has started yet — you're just showcasing the product.
+Pre-Offer builds anticipation and guarantees there is already a contest when you go live. Offers placed before the show count when the product is pinned.
 
-![product-offer-card displaying product image, name, price R$ 15,00, and Start action button](./assets/mockups/creating-and-managing-real-time-offers__product-offer-card__en.png)
+### Step 3: pin the product in the show
 
-### Step 2: Start the sale
+When you are live, open your product list from the shop bag icon at the bottom of the screen, and tap **Pin** on the product you want to sell. The item shows up on the show screen for your audience, but the sale has not started yet.
 
-Tap the **Start** button on the sale bar. The behavior depends on the sell mode:
+### Step 4: start the sale
 
-- **Real-time offers**: A countdown timer appears. Buyers can now place offers. Each offer is shown in real time
-- **Sudden Death**: Same as above, but the timer will not extend
-- **Buy It Now**: The product becomes available for instant purchase. If Flash Sale is enabled, a discount timer appears
+Tap the **Start Real Time Offer** button on the sale bar. The timer starts counting down and the bar switches to showing the live offer count.
 
-**For Flash Sale products:** When you pin a product that has Flash Sale enabled, you'll be asked: "Do you want to pin this item as a Flash Sale?" with options **"Flash Sale"**, **"Buy It Now"**, or **"Later"**.
+![Live show overlay: Real-Time Sales label in the top-left, the product card at the bottom with the photo and name of the product on the left, the highest-offer price $75.00 and the compact countdown timer (auction_time_icon + 0:18) stacked on the right of the card, and a purple 3 offers button on a separate row below](./assets/mockups/creating-and-managing-real-time-offers__screen-2__en__v3.png)
 
-### Step 3: Manage the sale
+The visible elements are:
 
-While a sale is running:
+- **Real-Time Sales**, in the top-left corner, with the current sale value next to it
+- **Compact countdown timer** (clock icon + time left, in the example **0:18**), placed below the highest-offer price in the right column of the product card. The timer is amber and turns red when it is about to finish.
+- **Product card at the bottom**, with the photo and name of the product on the left, the current price and timer stacked on the right, and the purple **3 offers** button on a separate row below (the count updates every time a new offer lands)
 
-- **Real-time offers / Sudden Death**: You see the timer counting down and the current highest offer amount. The sale bar shows the number of offers placed
-- **Buy It Now**: You see how many items have been sold. When all inventory is sold, the sale ends automatically
+### Step 5: watch the offers and the timer
 
-You don't need to do anything during an active sale — the system manages the timer and offers. Focus on engaging your audience, showing the product, and building excitement.
+You do not need to do anything while the timer runs. The system tracks the highest offer in real time and adds seconds whenever an offer lands near the end. Focus on showing the product on camera and talking to your audience.
 
-### Step 4: Sale ends
+### Step 6: accept the winning offer
 
-The sale ends automatically when:
-- **Real-time offers**: Timer runs out (with extensions for late offers)
-- **Sudden Death**: Timer runs out (no extensions)
-- **Buy It Now**: Timer runs out OR all inventory is sold
+When the timer hits zero with no new offers, the sale ends automatically. The sale-bar button switches to **Offer ended** and the app announces the winner on the show screen. You do not need to confirm manually: the system closes the order on the highest offer.
 
-After the sale ends:
-- The winner (highest offer) is announced for Real-time offers and Sudden Death
-- The sale bar shows the result and gives you options:
-  - **"Run Again"** — re-run the sale for the same product (useful if you have more stock)
-  - **"Next item"** — move to the next product in your queue
+From there, the sale bar shows two follow-up actions:
 
-## Timer mechanics
+- **Run Again**, to run the same product again, useful when you have more units or when the first offer ended low
+- **Next item**, to move to the next product in your queue
 
-### Real-time offers — extensions
+## How the timer works
 
-When a buyer places an offer near the end of the timer, extra seconds are added. This prevents last-second sniping and gives all buyers a fair chance to respond.
+**Start at** sets the minimum price of the contest and **Timer (Seconds)** sets the initial countdown. When an offer lands near the end of the timer, a few extra seconds are added to give other buyers a chance to respond. The timer keeps extending as long as new offers come in near the end, and the sale only closes when the time runs out with no new offer.
 
-The timer keeps extending as long as new offers come in near the end. The sale only finishes when no new offer is placed before the timer runs out.
+This behavior prevents last-second sniping and pushes the price up naturally. That is why the minimum duration is short (10 seconds): the contest gains time on its own when the audience is engaged.
 
-### Sudden Death — no extensions
+## When no one places an offer
 
-The timer counts down from start to zero, regardless of when offers are placed. No extra time is added for any reason. This creates urgency: if a buyer waits too long, they miss the sale.
+If the timer hits zero with no offers:
 
-### Buy It Now with Flash Sale — countdown
+- The sale ends with no winner
+- The product leaves the live screen and is available for you to run again
+- You can tap **Run Again** or open your product list from the shop bag icon
 
-Flash Sales have a fixed timer. When the timer ends, the discounted price expires. If there's still inventory, the product reverts to its regular Buy It Now price.
+This is normal. Before running it again, it is worth describing the product more on camera, lowering the **Start at** a little, or showcasing another item to warm the audience back up.
 
-## Pre-offers
+## Real Time Offer or Sudden Death
 
-For Real-time offers and Sudden Death products with a **quantity of 1**, you can enable **pre-offers**. This allows buyers to place offers on your product **before the show even starts**.
+Both modes are offer contests. The difference is how the timer reacts:
 
-Pre-offers create anticipation and guarantee that there's already competition when you go live. They're set during product creation.
+- **Real Time Offer**: the timer gains extra seconds when an offer lands near the end. Good for rare items, where the contest can stretch and push the price up
+- **Sudden Death**: the timer never gains extra time. Good for moving stock fast and creating urgency (the buyer has to decide before the zero)
 
-## Canceling a sale
+There is no rule: sellers usually mix both in the same show, **Real Time Offer** for highlights and **Sudden Death** to speed up the standard catalog.
 
-If you need to cancel a sale that's in progress:
+## Tips to run your show
 
-- Open your product list (shop bag icon) and find the active product
-- Tap the cancel option on that product
-- You'll be asked to select a reason for cancellation
-- Once canceled, the product returns to your queue and can be re-listed
-
-**Use cancellation sparingly.** Frequently canceling active sales can frustrate your audience.
-
-## What happens when no one places an offer
-
-If a Real-time offers or Sudden Death sale ends with zero offers:
-- No winner is selected
-- The product moves to your "Unsold" tab
-- You can **Rerun** the sale at any time during the show
-
-This is normal — not every product sells on the first try. Consider adjusting the starting price or generating more excitement before the next attempt.
-
-## Sale targeting
-
-You can restrict who can place offers on a sale:
-
-- **All** — anyone watching can participate (default)
-- **Followers** — only your followers can place offers
-- **Buyers** — only users who have previously purchased from you can participate
-
-This is configured per product and can be useful for special items or loyalty rewards.
-
-## Important tips
-
-- **Talk about the product before starting the sale.** Build excitement by describing the item, its condition, and why it's special. Then start the sale when the audience is engaged
-- **Use Real-time offers for your best items.** Competition drives prices up. Save Sudden Death for items where you want quick turnover
-- **Flash Sales work great for large quantities.** If you have 10 of the same item, a Flash Sale with a limited-time discount creates urgency
-- **Don't start all your sales at once.** Focus your audience's attention on one product at a time for maximum engagement
-- **Pre-offers generate buzz.** Enable them for your headline items so buyers are already competing before you go live
+- **Showcase the product before starting.** Tell the story of the item, its condition, why it is special. The audience needs to be paying attention before the timer starts
+- **Use a short duration to create excitement.** Between 15 and 30 seconds tends to work well, because the timer extends on its own as offers land
+- **Enable Pre-Offer on headline items.** Buyers walk in already competing, and the show opens with energy
+- **Do not start several sales at once.** Focus the audience on one product at a time
 
 ## Common questions
 
-**What's the difference between Real-time offers and Sudden Death?**
-Both involve buyers competing by placing offers. The difference is the timer: Real-time offers add extra time when offers come in near the end, while Sudden Death has a fixed countdown with no extensions.
+**Can I set a minimum price?**
+Yes. The **Start at** is the starting price and acts as the minimum. Offers have to be at or above this value.
 
-**Can I set a minimum price for Real-time offers?**
-The starting price you set when listing the product acts as the minimum. Offers must be at or above this price.
+**What happens if two buyers send the same amount?**
+The offer that was sent first wins. The system records the exact time of each offer.
 
-**What happens if two buyers place the same offer amount?**
-The offer that was placed first wins. The system records the exact time of each offer.
+**Can I end the sale before the timer?**
+You do not control the timer manually. The sale closes on its own when the time hits zero with no new offer. For unpaid orders, the app opens an alert asking if you want to **Run Again** the product.
 
-**Can I end a sale early?**
-You can cancel a sale in progress through the settings menu. However, if offers have already been placed, canceling should be done carefully and only when necessary.
+**Can I use Pre-Offer in every mode?**
+No. Pre-Offer is only available on **Real Time Offer** and **Sudden Death**, both with quantity equal to 1. The **Buy It Now** and Giveaway modes do not have this toggle.
 
-**How do I know which sell mode to choose?**
-Use **Real-time offers** for unique items where you want maximum price. Use **Sudden Death** for quick sales. Use **Buy It Now** for items with a clear fixed value. You can always change the sell mode when editing a product before selling it.
+**How long can a Real Time Offer last?**
+You choose. The minimum duration is 10 seconds and the maximum is 90 seconds. The timer can extend on its own when offers land near the end.
 
-**What is a Flash Sale?**
-A Flash Sale is a temporary discount on a Buy It Now item. You set the percentage off and a timer. When the timer ends, the product reverts to full price.
+**Does the buyer pay shipping?**
+Yes. Shipping is calculated and added at checkout, like for any other purchase on Jamble.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Reach out via the in-app chat or email support@jambleapp.com.

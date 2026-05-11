@@ -7,11 +7,11 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-05-11T00:00:00Z
 locales:
   pt-br:
-    title: 'Criar e Gerenciar Ofertas em Tempo Real'
-    description: ''
+    title: 'Criar e gerenciar Ofertas em tempo real'
+    description: 'Como configurar o modo Oferta em tempo real, acompanhar as ofertas durante o show e aceitar a oferta vencedora.'
   en:
-    title: 'Creating and Managing Real-Time Offers'
-    description: "This guide explains how to start, manage, and complete sales during your live show on Jamble. You'll learn the difference between the three sell modes, how timers work, and how to handle common situations like no offers or canceling a sale."
+    title: 'Creating and managing Real Time Offers'
+    description: 'Set up the Real Time Offer sale mode, watch offers land during your show, and accept the winning offer.'

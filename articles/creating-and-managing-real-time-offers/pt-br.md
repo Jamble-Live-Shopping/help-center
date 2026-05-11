@@ -1,166 +1,134 @@
-# Criar e Gerenciar Ofertas em Tempo Real
+# Criar e gerenciar Ofertas em tempo real
 
 ## O que você vai aprender
 
-Este guia explica como iniciar, gerenciar e completar vendas durante seu show ao vivo na Jamble. Você vai aprender a diferença entre os três modos de venda, como os timers funcionam e como lidar com situações comuns como nenhuma oferta ou cancelamento de uma venda.
+Este guia explica como rodar o modo **Oferta em tempo real** durante o seu show ao vivo na Jamble. Você vai configurar o produto, fixar o item no show, acompanhar as ofertas dos compradores em tempo real e aceitar a oferta vencedora ao final do timer.
 
 ## Antes de começar
 
 Você precisa de:
+
 - Uma conta de vendedor aprovada na Jamble
-- Um show ao vivo com produtos adicionados
-- Produtos atribuídos a um modo de venda (Ofertas em tempo real, Sudden Death ou Compra Direta)
+- Um produto adicionado ao seu show com o modo de venda **Oferta em tempo real** selecionado
+- O app aberto na tela do show, pronto para entrar ao vivo
 
-## Os três modos de venda
+## Como funciona o modo Oferta em tempo real
 
-Quando você lista um produto, escolhe como ele será vendido durante seu show:
+Quando você publica um produto com o modo **Oferta em tempo real**, a venda acontece em formato de disputa por tempo. Durante o show:
 
-### Ofertas em tempo real
+1. Você fixa o produto na tela do show
+2. Um timer de contagem regressiva começa
+3. Os compradores enviam ofertas pelo botão **Oferta** (a maior oferta fica visível para todos)
+4. Quando uma oferta chega perto do final, o timer ganha alguns segundos extras
+5. Ao acabar o timer sem novas ofertas, a maior oferta vence
 
-Os compradores competem fazendo ofertas. A oferta mais alta ganha quando o timer acaba.
+A última oferta vence ao final do tempo. Você não precisa aceitar manualmente: o sistema fecha a venda na maior oferta assim que o timer zera.
 
-- **O timer se estende** quando uma oferta é feita perto do final — isso dá chance para outros compradores responderem
-- Cria empolgação e competição, frequentemente elevando o preço
-- Melhor para itens únicos e desejados onde você espera demanda
+## Passo a passo
 
-### Sudden Death
+### Passo 1: escolha o modo de venda do produto
 
-Similar às ofertas em tempo real, mas com uma diferença importante: **sem extensões de tempo**. O timer conta sem adicionar tempo extra quando ofertas são feitas.
+Ao adicionar ou editar um produto no seu show, abra a tela **Modo de venda** e selecione **Oferta em tempo real**. Os campos **Comece em** e **Duração (segundos)** aparecem logo abaixo da opção marcada.
 
-- Cria urgência — compradores precisam agir rápido ou perdem
-- Vendas terminam mais rápido que ofertas em tempo real
-- Melhor para itens onde você quer velocidade ao invés de preço máximo
+![Tela Modo de venda com três opções, Oferta em tempo real selecionado em destaque, e os campos Comece em e Duração (segundos) visíveis abaixo](./assets/mockups/creating-and-managing-real-time-offers__screen-1__pt-br__v3.png)
 
-### Compra Direta
+A tela mostra os três modos disponíveis:
 
-Preço fixo. Compradores compram instantaneamente pelo preço que você definiu — sem competição, sem contagem regressiva de ofertas.
+- **Oferta em tempo real**, com timer e disputa em tempo real
+- **Morte súbita**, parecida com a Oferta em tempo real, mas **sem prorrogação de tempo**
+- **Comprar agora**, preço fixo, sem timer
 
-- Você também pode ativar uma **Venda Relâmpago** — um desconto temporário (percentual) com timer
-- Quando a quantidade é maior que 1, múltiplos compradores podem comprar até esgotar
-- Melhor para itens com preço de mercado claro
+Defina o **Comece em** (preço inicial, entre R$ 5,00 e R$ 5.000,00) e a **Duração (segundos)** do timer (entre 10 e 90 segundos). O preço inicial funciona como mínimo: as ofertas precisam ser iguais ou maiores que ele.
 
-## Passo a passo — Iniciando uma venda
+### Passo 2: ative a Pré-oferta, se quiser (opcional)
 
-### Passo 1: Fixe um produto
+Para produtos de **Oferta em tempo real** com quantidade igual a 1, ainda na tela de criação do produto, há o seletor **Ativar Pré-oferta?**. Quando ativo, os compradores podem fazer ofertas antes do show começar.
 
-Abra sua lista de produtos (toque no **ícone de sacola** na parte inferior da tela) e toque em **Pin** no produto que quer vender.
+![Linha Ativar Pré-oferta? com o seletor ativado em roxo, subtítulo As ofertas podem ser feitos antes do início do show](./assets/mockups/creating-and-managing-real-time-offers__screen-3__pt-br__v3.png)
 
-O produto aparece na tela para sua audiência. Neste momento, nenhuma venda começou — você está apenas mostrando o produto.
+A Pré-oferta cria expectativa e garante que já existe disputa quando você entra ao vivo. As ofertas feitas antes do show são levadas em conta quando o produto é fixado.
 
-![product-offer-card exibindo imagem do produto, nome, preço R$ 15,00 e botão Start](./assets/mockups/creating-and-managing-real-time-offers__product-offer-card__pt-br.png)
+### Passo 3: fixe o produto no show
 
-### Passo 2: Inicie a venda
+Quando estiver ao vivo, abra a sua lista de produtos pelo ícone de sacola, no canto inferior da tela, e toque em **Fixar** no produto que você quer vender. O item aparece na tela do show para a audiência, mas a venda ainda não começou.
 
-Toque no botão **Start** na barra de venda. O comportamento depende do modo:
+### Passo 4: inicie a venda
 
-- **Ofertas em tempo real**: Um timer de contagem regressiva aparece. Compradores agora podem fazer ofertas, mostradas em tempo real
-- **Sudden Death**: Igual, mas o timer não vai se estender
-- **Compra Direta**: O produto fica disponível para compra instantânea. Se Venda Relâmpago estiver ativada, um timer de desconto aparece
+Toque no botão **Iniciar Oferta** que aparece no rodapé da barra de venda. O timer começa a contar e a barra passa a mostrar a quantidade de ofertas em tempo real.
 
-**Para produtos com Venda Relâmpago:** Ao fixar um produto com Venda Relâmpago ativada, você será perguntado: "Do you want to pin this item as a Flash Sale?" com opções **"Flash Sale"**, **"Buy It Now"** ou **"Later"**.
+![Sobreposição ao vivo do show: rótulo Vendas em tempo real no canto superior esquerdo, card do produto na parte inferior com a foto e o nome do produto à esquerda, o preço da maior oferta R$ 75,00 e o cronômetro compacto (ícone auction_time_icon + 0:18) empilhados à direita do card e o botão roxo 3 ofertas em uma linha separada abaixo](./assets/mockups/creating-and-managing-real-time-offers__screen-2__pt-br__v3.png)
 
-### Passo 3: Gerencie a venda
+Os elementos visíveis são:
 
-Enquanto uma venda está ativa:
+- **Vendas em tempo real**, no canto superior esquerdo, com o valor atual ao lado
+- **Cronômetro compacto** (ícone de relógio + tempo restante, no exemplo **0:18**), posicionado logo abaixo do preço da maior oferta, na coluna direita do card. O cronômetro fica em âmbar e muda para vermelho quando está prestes a terminar.
+- **Card do produto na parte inferior**, com a foto e o nome do produto à esquerda, o preço atual e o cronômetro empilhados à direita, e o botão roxo **3 ofertas** em uma linha separada logo abaixo (a quantidade atualiza a cada oferta nova)
 
-- **Ofertas em tempo real / Sudden Death**: Você vê o timer contando e o valor da oferta mais alta. A barra de venda mostra o número de ofertas
-- **Compra Direta**: Você vê quantos itens foram vendidos. Quando todo o estoque acaba, a venda encerra automaticamente
+### Passo 5: acompanhe as ofertas e o timer
 
-Você não precisa fazer nada durante uma venda ativa — o sistema gerencia o timer e ofertas. Foque em engajar sua audiência, mostrar o produto e gerar empolgação.
+Você não precisa fazer nada enquanto o timer está rodando. O sistema atualiza a maior oferta em tempo real e adiciona segundos quando uma oferta chega perto do final. Foque em mostrar o produto na câmera e falar com a audiência.
 
-### Passo 4: Venda encerra
+### Passo 6: aceite a oferta vencedora
 
-A venda encerra automaticamente quando:
-- **Ofertas em tempo real**: Timer acaba (com extensões para ofertas tardias)
-- **Sudden Death**: Timer acaba (sem extensões)
-- **Compra Direta**: Timer acaba OU todo o estoque é vendido
+Quando o timer chega a zero sem novas ofertas, a venda encerra automaticamente. O botão da barra de venda muda para **Oferta encerrada** e o app anuncia o ganhador na tela do show. Você não precisa confirmar manualmente: o sistema fecha o pedido na maior oferta.
 
-Após a venda encerrar:
-- O ganhador (oferta mais alta) é anunciado para ofertas em tempo real e Sudden Death
-- A barra de venda mostra o resultado e te dá opções:
-  - **"Run Again"** — rodar a venda novamente para o mesmo produto (útil se tem mais estoque)
-  - **"Next item"** — ir para o próximo produto na fila
+A partir daí, a barra de venda mostra duas ações para o próximo passo:
 
-## Mecânica dos timers
+- **Reiniciar**, para rodar o mesmo produto de novo, útil quando você tem mais unidades ou quando a primeira oferta ficou baixa
+- **Próximo item**, para passar para o próximo produto da fila
 
-### Ofertas em tempo real — extensões
+## Como o timer funciona
 
-Quando um comprador faz uma oferta perto do final do timer, segundos extras são adicionados. Isso previne ofertas de última hora e dá a todos os compradores uma chance justa de responder.
+O **Comece em** define o preço mínimo da disputa e a **Duração (segundos)** define o tempo inicial. Quando uma oferta é enviada perto do final do timer, alguns segundos extras são adicionados para dar chance de resposta. O timer continua se estendendo enquanto novas ofertas chegam perto do final, e a venda só fecha quando passa o tempo sem nova oferta.
 
-O timer continua se estendendo enquanto novas ofertas chegam perto do final. A venda só encerra quando nenhuma nova oferta é feita antes do timer acabar.
+Esse comportamento previne ofertas de última hora e empurra o preço para cima naturalmente. Por isso a duração mínima é curta (10 segundos): a disputa ganha tempo sozinha quando o público está engajado.
 
-### Sudden Death — sem extensões
+## Quando ninguém faz oferta
 
-O timer conta do início até zero, independente de quando ofertas são feitas. Nenhum tempo extra é adicionado por qualquer motivo. Isso cria urgência: se um comprador esperar demais, perde a venda.
+Se o timer zera sem nenhuma oferta:
 
-### Compra Direta com Venda Relâmpago — contagem regressiva
+- A venda encerra sem ganhador
+- O produto sai da tela ativa e fica disponível para você rodar de novo
+- Você pode tocar em **Reiniciar** ou voltar para a sua lista de produtos pelo ícone de sacola
 
-Vendas Relâmpago têm um timer fixo. Quando o timer acaba, o preço com desconto expira. Se ainda houver estoque, o produto volta ao preço normal de Compra Direta.
+Isso é normal. Antes de rodar de novo, vale falar mais do produto na câmera, baixar um pouco o **Comece em** ou apresentar outro item para aquecer a audiência.
 
-## Pré-ofertas
+## Oferta em tempo real ou Morte súbita
 
-Para produtos de Ofertas em tempo real e Sudden Death com **quantidade igual a 1**, você pode ativar **pré-ofertas**. Isso permite que compradores façam ofertas no seu produto **antes do show começar**.
+Os dois modos têm disputa por ofertas. A diferença é como o timer reage:
 
-Pré-ofertas criam expectativa e garantem que já há competição quando você entra ao vivo. São configuradas durante a criação do produto.
+- **Oferta em tempo real**: o timer ganha segundos extras quando uma oferta chega perto do final. Bom para itens raros, onde a disputa pode esticar e puxar o preço para cima
+- **Morte súbita**: o timer não ganha tempo extra. Bom para girar estoque rápido e criar urgência (o comprador precisa decidir antes do zero)
 
-## Cancelando uma venda
+Não existe regra: vendedores costumam misturar os dois no mesmo show, **Oferta em tempo real** nos destaques e **Morte súbita** para acelerar o catálogo padrão.
 
-Se precisar cancelar uma venda em andamento:
+## Dicas para rodar o seu show
 
-- Abra sua lista de produtos (ícone de sacola) e encontre o produto ativo
-- Toque na opção de cancelar naquele produto
-- Será pedido que selecione um motivo para o cancelamento
-- Uma vez cancelado, o produto volta para sua fila e pode ser relistado
-
-**Use o cancelamento com moderação.** Cancelar vendas ativas frequentemente pode frustrar sua audiência.
-
-## O que acontece quando ninguém faz oferta
-
-Se uma venda de Ofertas em tempo real ou Sudden Death encerra com zero ofertas:
-- Nenhum ganhador é selecionado
-- O produto vai para sua aba "Unsold"
-- Você pode usar **Rerun** a qualquer momento durante o show
-
-Isso é normal — nem todo produto vende na primeira tentativa. Considere ajustar o preço inicial ou gerar mais empolgação antes da próxima tentativa.
-
-## Segmentação de venda
-
-Você pode restringir quem pode fazer ofertas:
-
-- **Todos** — qualquer pessoa assistindo pode participar (padrão)
-- **Seguidores** — apenas seus seguidores podem fazer ofertas
-- **Compradores** — apenas usuários que já compraram de você podem participar
-
-Configurado por produto, útil para itens especiais ou recompensas de fidelidade.
-
-## Dicas importantes
-
-- **Fale sobre o produto antes de iniciar a venda.** Gere empolgação descrevendo o item, seu estado e por que é especial. Depois inicie a venda quando a audiência estiver engajada
-- **Use ofertas em tempo real para seus melhores itens.** Competição eleva preços. Reserve Sudden Death para itens onde quer giro rápido
-- **Vendas Relâmpago funcionam muito bem para grandes quantidades.** Se tem 10 do mesmo item, uma Venda Relâmpago com desconto por tempo limitado cria urgência
-- **Não inicie todas as vendas de uma vez.** Foque a atenção da audiência em um produto por vez para máximo engajamento
-- **Pré-ofertas geram buzz.** Ative para seus itens destaque para que compradores já estejam competindo antes de você entrar ao vivo
+- **Apresente o produto antes de iniciar.** Conte a história do item, o estado, por que ele é especial. A audiência precisa estar atenta antes do timer começar
+- **Use uma duração curta para criar empolgação.** Entre 15 e 30 segundos costuma funcionar bem, porque o timer se estende sozinho quando aparece oferta
+- **Ative Pré-oferta nos itens destaque.** Os compradores já entram disputando, e o show abre com energia
+- **Não inicie várias vendas ao mesmo tempo.** Foque a atenção da audiência em um produto por vez
 
 ## Perguntas frequentes
 
-**Qual a diferença entre Ofertas em tempo real e Sudden Death?**
-Ambos envolvem compradores competindo com ofertas. A diferença é o timer: Ofertas em tempo real adicionam tempo extra quando ofertas chegam perto do final, enquanto Sudden Death tem contagem fixa sem extensões.
-
 **Posso definir um preço mínimo?**
-O preço inicial que você define ao listar funciona como mínimo. Ofertas precisam ser iguais ou acima deste valor.
+Sim. O **Comece em** é o preço inicial e funciona como mínimo. As ofertas precisam ser iguais ou maiores que esse valor.
 
-**O que acontece se dois compradores fazem a mesma oferta?**
-A oferta feita primeiro ganha. O sistema registra o horário exato de cada oferta.
+**O que acontece se dois compradores enviam o mesmo valor?**
+A oferta enviada primeiro ganha. O sistema registra o horário exato de cada oferta.
 
-**Posso encerrar uma venda antes do tempo?**
-Você pode cancelar uma venda em andamento pela lista de produtos. Porém, se ofertas já foram feitas, cancele com cuidado e apenas quando necessário.
+**Posso encerrar a venda antes do timer?**
+Você não controla o timer manualmente. A venda fecha sozinha quando o tempo zera sem nova oferta. Em casos de pagamento não confirmado, o app abre um alerta perguntando se você quer **Reiniciar** o produto.
 
-**Como sei qual modo de venda escolher?**
-Use **Ofertas em tempo real** para itens únicos onde quer preço máximo. Use **Sudden Death** para vendas rápidas. Use **Compra Direta** para itens com valor fixo claro. Você sempre pode mudar o modo ao editar um produto.
+**Posso usar Pré-oferta em todos os modos?**
+Não. A Pré-oferta só fica disponível em **Oferta em tempo real** e **Morte súbita**, sempre com quantidade igual a 1. Os modos **Comprar agora** e Doação não têm esse seletor.
 
-**O que é uma Venda Relâmpago?**
-Uma Venda Relâmpago é um desconto temporário em um item de Compra Direta. Você define o percentual e um timer. Quando o timer acaba, o preço volta ao normal.
+**Quanto dura a Oferta em tempo real?**
+Você escolhe. A duração mínima é 10 segundos e a máxima é 90 segundos. O timer pode esticar sozinho quando aparecem ofertas perto do final.
+
+**O comprador paga o frete?**
+Sim. O frete é calculado e somado no checkout, como em qualquer compra na Jamble.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app ou envie um email para support@jambleapp.com.
