@@ -7,11 +7,11 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-05-08T00:00:00Z
 locales:
   pt-br:
-    title: 'Entendendo Suas Análises de Vendedor'
-    description: ''
+    title: 'Entendendo seus dados de vendedor'
+    description: 'Entenda onde ver seu desempenho na Jamble: o resumo pos-show, o painel ao vivo e a carteira. E o que ainda nao existe no app.'
   en:
-    title: 'Understanding Your Seller Analytics'
-    description: "This guide explains where to find your performance data on Jamble — your sales numbers, revenue, viewer stats, and financial information. You'll learn how to read your post-show dashboard, check your earnings, and track your progress over time."
+    title: 'Understanding Your Seller Data'
+    description: "See where your performance lives on Jamble: the post-show summary, the live overlay, and the wallet. And what the app does not have yet."
