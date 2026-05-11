@@ -1,156 +1,95 @@
 # How Discoverability Works on Jamble
 
+## In this guide
+
+- What you'll learn
+- The three home tabs
+- The Deals tab
+- The Explore tab
+- The Follow tab
+- How search works
+- Saved searches
+- Personalized recommendations
+- Common questions
+- Need help?
+
 ## What you'll learn
 
-This guide explains how buyers find your shows and products on Jamble — how the homepage works, what makes your shows appear higher in the feed, and what you can do to get more visibility. Understanding discoverability helps you attract more viewers and grow your audience.
+This guide explains how to find shows, products and sellers on Jamble. You will learn what each home tab shows, how to use search to find what you're looking for, and how to save a search so you hear about new matching items.
 
-## Before you start
+## The three home tabs
 
-You need:
-- An approved seller account on Jamble
-- At least one show scheduled or completed
+When you open Jamble, you find three tabs at the top of the screen.
 
-## How buyers discover you
+![The three Jamble home tabs: Deals, Explore and Follow](./assets/mockups/how-discoverability-works-on-jamble__screen-1__en__v3.png)
 
-Buyers find sellers and products through three main places:
+Each tab shows a different type of content. Tap a tab to switch.
 
-1. **The homepage** — the first screen buyers see when they open the app
-2. **Search** — when buyers look for specific products, brands, or sellers
-3. **The Follow tab** — shows from sellers they already follow
+## The Deals tab
 
-Each of these works differently, and understanding them helps you optimize your visibility.
+The **Deals** tab shows products from shows that are happening now or starting soon. This is where you browse items you can buy.
 
-## The homepage
+## The Explore tab
 
-When a buyer opens Jamble, they see three tabs at the top of the screen:
+The **Explore** tab shows live and upcoming shows. This is the main way to discover new sellers.
 
-![Discoverability tabs with Deals, Explore, and Follow options showing products below](./assets/mockups/how-discoverability-works-on-jamble__discoverability-tabs__en.png)
+At the top of the Explore tab, there are subcategories that change throughout the day. Which subcategories appear depends on the shows that are active right now, so the list you see can be different from the list another buyer sees.
 
-### Deals tab
+## The Follow tab
 
-The Deals tab shows **products** from upcoming and live shows. This is where buyers browse items they can buy.
+The **Follow** tab shows live and upcoming shows from the sellers you already follow. When you don't follow anyone yet, the tab also suggests sellers with the line "You may be interested by these sellers".
 
-Your products appear here when you list them for a show. Products with **more people interested** (bookmarks, pre-offers) appear higher in the feed.
+If you have no followed sellers yet, the tab shows the message "There is nothing here yet" with an "Explore Lives" button that takes you straight to the Explore tab.
 
-### Explore tab
-
-The Explore tab shows **live and upcoming shows**. This is the main way buyers discover new sellers.
-
-At the top of the Explore tab, there are category filters:
-
-![Discovery tabs showing For You, Shoes, Contemporary, Beauty, and more categories](./assets/mockups/how-discoverability-works-on-jamble__discovery-tabs__en.png)
-
-- **For You** — shows Jamble thinks the buyer will like, based on their past activity
-- **Category tags** — only shows up if there are active shows in that category (Shoes, Contemporary, Beauty, Collectibles, Luxury, Kids, Jewelry, Activewear, and more)
-
-**Live shows always appear first.** Below them, you see upcoming shows sorted by how soon they start.
-
-### Follow tab
-
-The Follow tab shows upcoming and live shows from **sellers the buyer already follows**. It also suggests new sellers to follow based on their sales activity.
-
-If you have a strong track record of sales, you may appear in the **"Sellers to Follow"** suggestions shown to buyers who don't follow you yet.
-
-## What makes your shows rank higher
-
-Jamble uses several signals to decide which shows appear first in the feed. Here's what matters:
-
-### For live shows (while you're on air)
-
-When your show is live, these things help you appear higher:
-
-- ****Sales during the show**** — Selling actively is the strongest signal. Shows with more sales and higher revenue per minute rank higher
-- ****Current viewers**** — More people watching = more visible. Shows with 30 or more viewers get a significant visibility boost
-- ****Bookmarks**** — People who saved your show before it started count in your favor
-- ****Items sold**** — Each item sold during the show improves your position
-### For upcoming shows (before you go live)
-
-Before your show starts, the ranking depends on:
-
-- ****Bookmarks**** — This is by far the most important factor for upcoming shows. The more people save your show, the higher it appears
-- ****Products listed**** — Shows with more products listed rank higher than shows with few products
-- ****Your seller reputation**** — Your overall track record as a seller contributes to your ranking
-- ****How soon the show starts**** — Shows starting sooner appear before shows scheduled far in the future
 ## How search works
 
-Buyers can search for products, brands, and sellers using the search screen.
+When you tap into search, two sub-tabs appear at the top: **Members** and **Shows**.
 
-### Product search
+![Search screen with the two tabs Members and Shows](./assets/mockups/how-discoverability-works-on-jamble__screen-2__en__v3.png)
 
-Buyers can filter products by:
-- **Category** — Clothes, Shoes, Bags, Accessories, Beauty
-- **Brand** — any brand name
-- **Size** — mapped to Brazilian sizing
-- **Color**
-- **Condition** — New with tags, New without tags, Used, etc.
-- **Price range** — minimum and maximum price
-- **Sale type** — Real-time offers, Buy It Now
+- **Members** searches for sellers and other users by name
+- **Shows** searches for shows by title or content
 
-They can also sort results by relevance, newest, oldest, most expensive, or cheapest.
+To look for products, open a show or a category and use the available filters. You can filter by **Category**, **Brands**, **Color**, **Condition**, **Size**, **Price** and **Sale Type**. Results can be sorted by **Relevance**, **Newest**, **Oldest**, **Priciest** or **Cheapest**.
 
-### Seller search
+## Saved searches
 
-When buyers search for a seller by name, sellers with **more followers** and **more total sales** appear higher in results. Verified sellers also get a small boost in search results.
+After running a search, Jamble may offer you the option to save it.
 
-### Saved searches
+![Screen offering to save the search so you stay updated on what you're looking for](./assets/mockups/how-discoverability-works-on-jamble__screen-3__en__v3.png)
 
-Buyers can save searches they do often. When new products match their saved search, they see an indicator — which means your new listings can bring back returning buyers automatically.
+The screen reads: "Save this Search to stay updated on what you're looking for without searching again. Jamble works best this way!"
+
+You have two options:
+
+- **Save this Search** keeps the search so you can come back to it later
+- **I'll do later** closes the sheet without saving
+
+Saving searches is useful when you are looking for a specific brand, size or type of product and want to revisit the results without re-running the search every time.
 
 ## Personalized recommendations
 
-Jamble learns what each buyer likes based on their activity — which brands they browse, which sizes they buy, which shows they watch. Over time, the **For You** section of the Explore tab and the Deals tab show products and shows that match their preferences.
+Jamble adapts the home content to your activity in the app. The more you use Jamble, the more the content across the three tabs reflects what you tend to browse and watch.
 
-This means: **the more consistently you sell in a specific niche, the more Jamble will recommend you to buyers who like that niche.**
-
-## How to improve your visibility
-
-Based on how discoverability works, here are the most effective things you can do:
-
-1. **Get people to bookmark your shows.** Bookmarks are the biggest factor for upcoming show visibility. Promote your shows on social media, tell your followers to save the show, and schedule your shows in advance so people have time to bookmark them
-
-2. **Choose the right category tag.** When you schedule a show, pick the tag that best matches what you're selling. Your show will appear under that category tab on the Explore page. If no tag fits perfectly, your show still appears in "For You"
-
-3. **List your products before the show.** Shows with more products listed rank higher in the upcoming feed. Don't add products last minute — list them when you schedule the show so buyers can browse and bookmark
-
-4. **Add good product photos.** Products with real photos (not the default placeholder) perform better in the feed. Take clear, well-lit photos that show the product clearly
-
-5. **Enable pre-offers on your best items.** Products with pre-offers generate more engagement before your show, which helps your show rank higher
-
-6. **Sell actively during your show.** Revenue per minute is the strongest signal for live show ranking. Keep the sales flowing — pin products, start offers, and engage your audience to keep buying
-
-7. **Build your audience over time.** More followers = more bookmarks = higher visibility. Consistent shows, good products, and great customer experience build a loyal following
-
-8. **Host shows regularly.** Regular sellers build a reputation score that factors into their ranking. Consistency matters more than one big show
-
-9. **Price some items accessibly.** Having a range of price points, including some affordable items, helps attract new buyers and keeps your show active
-
-## Important tips
-
-- **There's no paid promotion on Jamble.** You can't pay to appear higher in the feed. Visibility is earned through engagement, sales, and bookmarks
-- **Category tags only appear when there are shows in that category.** If no one is streaming shoes right now, the "Shoes" tab won't show up. This means niche categories can be less crowded
-- **New buyers see a slightly different feed.** Jamble prioritizes giveaways and affordable items for brand new users to help them discover the platform
-- **Followers see your shows first.** Your followers always see your shows in their Follow tab, regardless of ranking. Building followers is the most reliable way to get viewers
+This means two people opening Jamble at the same time can see different shows and products in the same tab. That's normal. It's how the app personalizes your experience.
 
 ## Common questions
 
-**How do I add a category tag to my show?**
-When you schedule a show, you can select a tag from the list of categories. This tag determines which category tab your show appears under on the Explore page. See the "Schedule a Show" article for details.
+**Why do the Explore subcategories change?**
+Explore subcategories depend on shows that are active right now. If no one is currently streaming a category, it does not appear. When a seller starts a show in that category, it can come back.
 
-**Why isn't my show appearing on the Explore page?**
-All active (live and upcoming) shows appear on the Explore page. If you don't see yours, make sure your show is scheduled and not in draft mode. Shows that have ended no longer appear in the feed.
+**Why is my Follow tab empty?**
+The Follow tab only shows shows from sellers you already follow. If you don't follow anyone yet, or if none of the sellers you follow currently have a live or upcoming show, the tab shows the message "There is nothing here yet" with an "Explore Lives" button.
 
-**Can I see how many people bookmarked my show?**
-Yes. The bookmark count is visible on your show details. This is a key metric to track — more bookmarks mean higher visibility.
+**Can I search products directly from the main search bar?**
+The main search has two tabs: **Members** and **Shows**. To find specific products, use the filters inside a show or a category. The available filters are Category, Brands, Color, Condition, Size, Price and Sale Type.
 
-**Does it matter what time I schedule my show?**
-Yes, indirectly. Shows starting sooner appear before shows far in the future. Also, going live during peak hours (evenings and weekends) means more potential viewers browsing the app.
+**How do I go back to a search I saved?**
+Saved searches stay available on the search screen. When you open search again, Jamble remembers the searches you saved so you can come back to them with one tap.
 
-**How does the "For You" recommendation work?**
-Jamble tracks what brands, sizes, and categories each buyer interacts with. Over time, it recommends shows and products that match their preferences. If you consistently sell in a niche, Jamble will recommend you to buyers who like that niche.
-
-**I'm a new seller. How do I get my first viewers?**
-Start by sharing your scheduled shows on social media and with friends. Ask them to bookmark the show — this helps your visibility from day one. Host regular shows to build a track record, and price some items accessibly to attract new buyers.
+**Is the home content the same for everyone?**
+No. Content is personalized to your activity in the app. That is why two buyers can see different shows and products in the same tab at the same time.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Reach out through the app chat or email support@jambleapp.com.
