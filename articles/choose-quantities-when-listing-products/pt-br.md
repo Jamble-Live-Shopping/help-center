@@ -2,7 +2,7 @@
 
 ## O que voce vai aprender
 
-Defina quantas unidades identicas voce tem por anuncio, de 1 a 1.000. Veja como a quantidade se comporta durante o show e por que Pre-Bid so funciona quando a quantidade e igual a 1.
+Defina quantas unidades identicas voce tem por anuncio, de 1 a 1.000. Veja como a quantidade se comporta durante o show e por que Pré-oferta so funciona quando a quantidade e igual a 1.
 
 ## Antes de comecar
 
@@ -27,19 +27,19 @@ Ao criar ou editar um produto, role ate o campo **Quantidade**. Por padrao, o va
 
 ![Campo Quantidade no formulario do produto, com botoes de menos e mais ao redor do valor 1](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/choose-quantities-when-listing-products__screen-1__pt-br__v3.png)
 
-Toque em **+** para aumentar, **-** para diminuir, ou digite o numero direto. O minimo e 1 e o maximo e **1.000** por anuncio, em todos os modos de venda (Oferta em tempo real, Morte subita, Comprar agora). Salve o produto para confirmar.
+Toque em **+** para aumentar, **-** para diminuir, ou digite o numero direto. O minimo e 1 e o maximo e **1.000** por anuncio, em todos os modos de venda (Oferta em tempo real, Morte súbita, Comprar agora). Salve o produto para confirmar.
 
-## Pre-Bid e quantidade
+## Pré-oferta e quantidade
 
-Se voce ativar **Pre-Bid** em um produto, a quantidade precisa ser **1**. Pre-Bid nao funciona quando o anuncio tem mais de uma unidade.
+Se voce ativar **Pré-oferta** em um produto, a quantidade precisa ser **1**. Pré-oferta nao funciona quando o anuncio tem mais de uma unidade.
 
-![Celula Pre-Bid com toggle ligado e celula Quantidade com valor 2, configuracao que dispara o erro](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/choose-quantities-when-listing-products__screen-2__pt-br__v3.png)
+![Celula Pré-oferta com toggle ligado e celula Quantidade com valor 2, configuracao que dispara o erro](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/choose-quantities-when-listing-products__screen-2__pt-br__v3.png)
 
-Se tentar ligar Pre-Bid com quantidade maior que 1, a Jamble bloqueia a acao e mostra esta mensagem:
+Se tentar ligar Pré-oferta com quantidade maior que 1, a Jamble bloqueia a acao e mostra esta mensagem:
 
 ![Toast de erro com o texto Opa, aconteceu alguma coisa! Voce nao pode usar o servico de pre-oferta se tiver mais de uma unidade.](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/choose-quantities-when-listing-products__screen-3__pt-br__v3.png)
 
-O toggle volta para desligado. Para usar Pre-Bid, defina a quantidade de volta para 1 e tente de novo.
+O toggle volta para desligado. Para usar Pré-oferta, defina a quantidade de volta para 1 e tente de novo.
 
 ## Como as quantidades funcionam durante um show
 
@@ -52,7 +52,7 @@ Quando voce fixa um produto com varias unidades durante o show ao vivo, o compor
 - O banner mostra a contagem restante: "3 restantes", "2 restantes", e assim por diante
 - Quando a ultima unidade e comprada, o produto fica esgotado
 
-**Oferta em tempo real e Morte subita**
+**Oferta em tempo real e Morte súbita**
 
 - A primeira unidade vai para a maior oferta quando o cronometro acaba
 - A proxima unidade comeca automaticamente
@@ -69,7 +69,7 @@ Quando voce fixa um produto com varias unidades durante o show ao vivo, o compor
 
 **Qual a quantidade maxima que posso definir?**
 
-1.000 unidades por anuncio, em Oferta em tempo real, Morte subita e Comprar agora.
+1.000 unidades por anuncio, em Oferta em tempo real, Morte súbita e Comprar agora.
 
 **Posso mudar a quantidade depois de criar o anuncio?**
 
@@ -77,7 +77,7 @@ Sim. Atualize a qualquer momento antes de todas as unidades serem vendidas. Toqu
 
 **O que acontece se eu definir a quantidade como 1?**
 
-O produto funciona como item unico. Um comprador o leva e ele e marcado como vendido. Quantidade igual a 1 tambem libera **Pre-Bid** em Oferta em tempo real e Morte subita.
+O produto funciona como item unico. Um comprador o leva e ele e marcado como vendido. Quantidade igual a 1 tambem libera **Pré-oferta** em Oferta em tempo real e Morte súbita.
 
 **Compradores podem comprar mais de uma unidade de uma vez?**
 
@@ -89,7 +89,7 @@ Quando a ultima unidade e vendida, o produto e marcado como esgotado automaticam
 
 **A quantidade afeta o preco?**
 
-Nao. Cada unidade e vendida pelo mesmo preco. Em Comprar agora, todo comprador paga o mesmo valor fixo. Em Oferta em tempo real e Morte subita, cada unidade tem sua propria rodada.
+Nao. Cada unidade e vendida pelo mesmo preco. Em Comprar agora, todo comprador paga o mesmo valor fixo. Em Oferta em tempo real e Morte súbita, cada unidade tem sua propria rodada.
 
 ## Precisa de ajuda?
 

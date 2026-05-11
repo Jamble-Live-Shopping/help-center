@@ -25,14 +25,22 @@ source_of_truth:
 content_contract:
   must_answer:
     - "1.000"
-    - "Pre-Bid"
     - "Buy It Now"
+  # Calibration patch 2026-05-11 (PR review): the previous flow banned
+  # `pre-offer` and `pre-offers`, but `Pre-Offer` is the CORRECT EN
+  # user-facing label per xcstrings (`Pre-Bid` source key resolves to
+  # EN `Pre-Offer` and pt-BR `Pré-oferta`). Those bans were inverted.
+  # Patched to:
+  #   - keep `pre-ofertas` (deprecated pt-BR plural form)
+  #   - ban `regex:\\bPre-Bid\\b` (with hyphen, case-insensitive): the
+  #     iOS source key must not leak into user-facing body or mockups.
+  #     The lowercase one-word "prebid" used verbatim in the iOS error
+  #     toast is NOT matched by the hyphenated regex; preserved.
   forbidden_terms:
     - "regex:\\bauction\\b"
     - "regex:\\bleil[aã]o\\b"
     - "pre-ofertas"
-    - "pre-offer"
-    - "pre-offers"
+    - "regex:\\bPre-Bid\\b"
   must_not_say:
     - "Verified badges"
     - "Jamble Prime"

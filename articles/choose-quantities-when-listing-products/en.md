@@ -2,7 +2,7 @@
 
 ## What you'll learn
 
-Set how many identical units you have per listing, from 1 up to 1,000. Learn how quantity behaves during a show, and why Pre-Bid only works when the quantity is 1.
+Set how many identical units you have per listing, from 1 up to 1,000. Learn how quantity behaves during a show, and why Pre-Offer only works when the quantity is 1.
 
 ## Before you start
 
@@ -27,19 +27,19 @@ When creating or editing a product, scroll to the **Quantity** field. The defaul
 
 ![Quantity field on the product form, with minus and plus buttons around a value of 1](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/choose-quantities-when-listing-products__screen-1__en__v3.png)
 
-Tap **+** to increase, **-** to decrease, or type the number directly. The minimum is 1 and the maximum is **1,000** per listing, across all sell modes (Real-time offers, Sudden Death, Buy It Now). Save the product to confirm.
+Tap **+** to increase, **-** to decrease, or type the number directly. The minimum is 1 and the maximum is **1,000** per listing, across all sell modes (Real Time Offer, Sudden Death, Buy It Now). Save the product to confirm.
 
-## Pre-Bid and quantity
+## Pre-Offer and quantity
 
-If you enable **Pre-Bid** on a product, the quantity must be **1**. Pre-Bid is not available when the listing has more than one unit.
+If you enable **Pre-Offer** on a product, the quantity must be **1**. Pre-Offer is not available when the listing has more than one unit.
 
-![Pre-Bid cell with the toggle on and the Quantity cell set to 2, the configuration that triggers the error](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/choose-quantities-when-listing-products__screen-2__en__v3.png)
+![Pre-Offer cell with the toggle on and the Quantity cell set to 2, the configuration that triggers the error](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/choose-quantities-when-listing-products__screen-2__en__v3.png)
 
-If you try to turn on Pre-Bid with a quantity higher than 1, Jamble blocks the action and shows this error:
+If you try to turn on Pre-Offer with a quantity higher than 1, Jamble blocks the action and shows this error:
 
 ![Error toast saying Oops, something happened! You can not use prebid if you have more than one quantity](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/choose-quantities-when-listing-products__screen-3__en__v3.png)
 
-The toggle snaps back to off. To use Pre-Bid, set the quantity back to 1 and try again.
+The toggle snaps back to off. To use Pre-Offer, set the quantity back to 1 and try again.
 
 ## What happens during a show
 
@@ -52,7 +52,7 @@ When you pin a product with multiple units during your live show, the behavior d
 - The banner shows the remaining count: "3 left", "2 left", and so on
 - When the last unit is purchased, the product is sold out
 
-**Real-time offers and Sudden Death**
+**Real Time Offer and Sudden Death**
 
 - The first unit goes to the highest offer when the timer ends
 - The next unit starts automatically
@@ -69,7 +69,7 @@ When you pin a product with multiple units during your live show, the behavior d
 
 **What's the maximum quantity I can set?**
 
-1,000 units per listing, for Real-time offers, Sudden Death, and Buy It Now.
+1,000 units per listing, for Real Time Offer, Sudden Death, and Buy It Now.
 
 **Can I change the quantity after creating a listing?**
 
@@ -77,7 +77,7 @@ Yes. Update it at any time before all units are sold. Tap the listing, change th
 
 **What happens if I set quantity to 1?**
 
-The product works as a single item. One buyer purchases it, and it is sold. A quantity of 1 also unlocks **Pre-Bid** on Real-time offers and Sudden Death.
+The product works as a single item. One buyer purchases it, and it is sold. A quantity of 1 also unlocks **Pre-Offer** on Real Time Offer and Sudden Death.
 
 **Can buyers purchase more than one unit at a time?**
 
@@ -89,7 +89,7 @@ When the last unit is sold, the product is automatically marked sold out. You ca
 
 **Does quantity affect the price?**
 
-No. Each unit sells at the same price. For Buy It Now, every buyer pays the same fixed price. For Real-time offers and Sudden Death, each unit runs its own round.
+No. Each unit sells at the same price. For Buy It Now, every buyer pays the same fixed price. For Real Time Offer and Sudden Death, each unit runs its own round.
 
 ## Need help?
 
