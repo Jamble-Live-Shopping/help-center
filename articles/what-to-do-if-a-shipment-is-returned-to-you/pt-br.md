@@ -40,7 +40,7 @@ Quando o pacote chega de volta a você e o status muda para devolvido, o detalhe
 
 A etiqueta **Cancelado** aparece no topo do cartão de status, a barra de progresso fica totalmente vermelha e a descrição é a mensagem do backend, **Seu item não pôde ser entregue e foi devolvido a você**.
 
-O número do pedido continua disponível logo abaixo, junto com a transportadora e o número de rastreio. Você pode tocar em **Faixa** para abrir a página dos Correios e ver onde o pacote esteve antes de voltar.
+O número do pedido continua disponível logo abaixo do cartão de status, então você consegue casar o pacote com a venda certa no seu histórico.
 
 Como o pedido está fechado, o botão **Cancelar venda** não aparece mais. Não há nada a cancelar, o pedido já é considerado encerrado pelo sistema.
 

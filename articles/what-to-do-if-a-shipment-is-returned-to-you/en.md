@@ -40,7 +40,7 @@ When the parcel reaches you back and the status changes to returned, the sale de
 
 The **Canceled** label appears at the top of the status card, the progress bar turns fully red, and the description is the system message **Your item could not be delivered and was returned to you**.
 
-The order number is still visible just below, along with the carrier and the tracking number. You can tap **Track** to open the Correios page and see where the package was before coming back.
+The order number is still visible just below the status card, so you can match the package to the right sale in your records.
 
 Since the order is closed, the **Cancel Sale** button is no longer shown. There's nothing to cancel, the system already considers the order finalized.
 
