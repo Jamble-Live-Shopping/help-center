@@ -49,8 +49,20 @@ body {
 .ps-meta span { height: 5px; border-radius: 2px; background: rgba(22,34,51,0.14); }
 .ps-meta span:nth-child(1) { width: 78%; }
 .ps-meta span:nth-child(2) { width: 48%; }
-.bookmark-btn { position: absolute; top: 12px; right: 12px; width: 40px; height: 40px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 2px 8px rgba(22,34,51,0.18); display: flex; align-items: center; justify-content: center; }
-.bookmark-btn svg { width: 22px; height: 22px; }
+/* Saved-state pill: white heart on a liveRed background, matching iOS
+   ProductPhotosSection.swift:51 (Image("bookmark_heart_white_icon"))
+   wrapped in a RoundedRectangle filled with .liveRed when isBookmarked. */
+.bookmark-pill {
+  position: absolute; top: 12px; right: 12px;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 14px;
+  border-radius: 50px;
+  background: #F14A22; /* UIColor.liveRed = rgb(241, 74, 34) */
+  box-shadow: 0 2px 8px rgba(22,34,51,0.18);
+  border: 0.5px solid rgba(255,255,255,0.08);
+}
+.bookmark-pill svg { display: block; }
+.bookmark-pill .count { color: #FFFFFF; font-size: 14px; font-weight: 600; line-height: 1; }
 .body { padding: 14px 16px 16px; }
 .title { font-size: 16px; font-weight: 600; color: #162233; line-height: 20px; }
 .price { font-size: 18px; font-weight: 700; color: #162233; margin-top: 6px; }
@@ -67,8 +79,15 @@ body {
         <div class="ps-meta"><span></span><span></span></div>
       </div>
     </div>
-    <div class="bookmark-btn">
-      <svg viewBox="0 0 24 24" fill="#7E53F8" stroke="#7E53F8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+    <!-- icon: bookmark_heart_white_icon -->
+    <!-- Assets.xcassets/bookmark_heart_white_icon.imageset/bookmark_heart_white_icon.svg -->
+    <!-- Real iOS asset, copied verbatim. Source: Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/bookmark_heart_white_icon.imageset/bookmark_heart_white_icon.svg -->
+    <!-- Used in PRODUCT/Views/SwiftUI/Components/ProductPhotosSection.swift:51 -->
+    <div class="bookmark-pill" role="img" aria-label="bookmark_heart_white_icon (ícone de coração)" alt="bookmark_heart_white_icon">
+      <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M7.49651 13.7643C7.26611 13.7643 6.91701 13.563 6.59583 13.3547C2.75577 10.8626 0.235291 7.89145 0.235291 4.91338C0.235291 2.1852 2.14136 0.352539 4.43144 0.352539C5.85575 0.352539 6.88908 1.13697 7.49651 2.26851C8.11091 1.13003 9.14424 0.352539 10.5686 0.352539C12.8587 0.352539 14.7647 2.1852 14.7647 4.91338C14.7647 7.89145 12.2442 10.8626 8.40416 13.3547C8.08298 13.563 7.73389 13.7643 7.49651 13.7643Z" fill="white"/>
+      </svg>
+      <span class="count">12</span>
     </div>
     <div class="body">
       <div class="title">Charizard PSA 9 Base Set</div>
@@ -77,6 +96,6 @@ body {
   </div>
   <div class="callout">
     <div class="callout-arrow">↗</div>
-    <div class="callout-text">Toque no <b>ícone de marcador</b>. Quando ele fica preenchido, o produto entra na aba <b>Favoritos</b>.</div>
+    <div class="callout-text">Toque no <b>ícone de coração</b>. Quando ele fica preenchido, o produto entra na aba <b>Favoritos</b>.</div>
   </div>
 </div></body></html>
