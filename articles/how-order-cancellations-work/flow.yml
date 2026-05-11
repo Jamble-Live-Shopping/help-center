@@ -1,0 +1,130 @@
+# Generated from process/templates/article-flow.yml by scripts/init-article-flow.py
+# slug: how-order-cancellations-work
+# Audience: buyer_br
+#
+# Article flow contract.
+#
+# Lives at articles/<slug>/flow.yml. Versioned per article. Read by
+# scripts/validate-article-flow.py and enforced by the
+# validate-article-flow CI workflow.
+#
+# This file is NOT a substitute for process/. The MD doctrine
+# (process/00-RUNBOOK.md, process/03-html-template.md, process/design-system.md,
+# process/12-procedure-compliance.md) remains the source of truth for HOW to
+# write an article. The flow.yml only declares WHAT this specific article is,
+# what sources it draws from, what claims it must verify, what mockups it
+# needs, what it must NOT say, and what risk flags need human review.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: buyer_br
+job_to_be_done: "Explain when and how a buyer can cancel an order on Jamble, what triggers an automatic cancellation, and refund timing"
+
+source_of_truth:
+  ios_files:
+    - TRANSACTION/Purchase/View/PurchaseViewController.swift:657-672
+    - TRANSACTION/Purchase/View/PurchaseViewController.swift:1068-1137
+  backend_files:
+    - jamble_backend/src/entities/transaction.py:60-72
+    - jamble_backend/src/entities/transaction.py:622-625
+    - jamble_backend/src/entities/transaction.py:604-605
+    - jamble_backend/src/entities/transaction.py:614-615
+  legal: []
+  support_context: []
+
+content_contract:
+  must_answer: []
+  forbidden_terms: []
+  must_not_say: []
+
+mockup_plan:
+  required: true
+  screens:
+    # Screen 1: order detail with Cancel Order button (status=Created)
+    # iOS source: PurchaseViewController.swift:657-672
+    # Button is text-only (no icon): red text, red border, transparent
+    # background. Per rule 10e: text-only contract enforced.
+    - name: order-detail-cancel-button
+      purpose: "Show buyer where to find the Cancel Order button on a Created-status order"
+      source: ios_required
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Cancelar pedido"
+          - "Criado"
+          - "Aguardando Confirmação do Vendedor"
+        en:
+          - "Cancel Order"
+          - "Created"
+          - "Awaiting Seller Confirmation"
+      # Text-only anchor (rule 10e Option B): the iOS Cancel Order
+      # button at PurchaseViewController.swift:657-672 is rendered with
+      # plain UIButton text, no UIImage. All three icon-blockers
+      # required to pass screen_icon_review_check_unanchored.
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+
+    # Screen 2: BLTNBoard cancel-confirmation sheet
+    # iOS source: PurchaseViewController.swift:1068-1137
+    # Sheet has title, description, two text buttons - no icons.
+    - name: cancel-order-bulletin-sheet
+      purpose: "Show the BLTNBoard cancel-confirmation sheet that appears when the buyer taps Cancel Order"
+      source: ios_required
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Cancelar este pedido"
+          - "Após o cancelamento, esse pedido será fechado e você será reembolsado."
+          - "Sim, eu cancelo"
+          - "Não, voltar"
+        en:
+          - "Cancel this order"
+          - "Upon cancelation, This order will be closed and you will be refunded."
+          - "Yes, I cancel"
+          - "No, back"
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+
+    # Screen 3: order detail after cancellation (status=Canceled, refund pending)
+    # iOS source: PurchaseViewController status banner using buyerStatusInfos
+    # backend: transaction.py:418 (status="Canceled"/"Cancelado")
+    # backend: transaction.py:622-625 (description with 5 business days)
+    - name: order-canceled-refund-status
+      purpose: "Show the order-detail status banner after cancellation, communicating refund timing"
+      source: ios_required
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Cancelado"
+          - "5 dias úteis"
+        en:
+          - "Canceled"
+          - "5 business days"
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+
+icons_required: []
+icons_fallback_feather: false
+currency_required: false
+
+# Short article (3 mockups + concise FAQ). 7 H2 sections, all reachable
+# by linear scroll. A TOC would be more chrome than help.
+toc_required: false
+
+risk_flags: []
+resolved_decisions: []
