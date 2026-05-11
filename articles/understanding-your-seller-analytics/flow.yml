@@ -1,0 +1,151 @@
+# Flow contract for understanding-your-seller-analytics.
+# v2 rewrite, batch 10 rerun-2 (post PR #91 + #92, 2026-05-08).
+#
+# This article is a "feature-may-not-exist" case: iOS has NO dedicated seller
+# analytics surface. The article is honest about that gap and walks the seller
+# through the three real surfaces they DO have. Encoded via:
+#   - source_of_truth.ios_files: only paths that exist
+#   - source_of_truth.negative_scan: SELLER/Analytics/ + SELLER/Stats/
+#   - risk_flags: matching feature-may-not-exist entry
+#   - resolved_decisions: green-lights publication because the article's whole
+#     job is to surface the gap honestly
+#
+# Each screen with review_checks: [icons_match_ios_source] is anchored via
+# Option B (html_must_not_contain: ["<img", "<svg", "icon-"]) because the
+# three mockups are intentionally text-only iOS surfaces.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+
+intercom_id: 14288160
+
+job_to_be_done: "Help sellers read their analytics dashboard: views, conversion, top items, audience, and what to act on"
+
+source_of_truth:
+  ios_files:
+    - LIVE_SHOPPING/DashboardHost/Views/ShowHostDashboardView.swift  # post-show summary card 4 tiles, lines 123-156
+    - LIVE_SHOPPING/Host/View/ShowHostViewController.swift           # Real-Time Sales overlay, lines 754-797
+    - PROFILE/ProfileSettings/Wallet/View/SellerWalletView.swift     # wallet financial only
+    - RESOURCES/Localizable.xcstrings                                # pt-BR translations (RESUMO, Vendas em tempo real, Minha carteira, Sacar)
+  backend_files: []
+  legal: []
+  support_context: []
+  # Negative scan: paths the writer verified are absent in Jamble-iOS but ARE
+  # relevant to the article's central claim. Each entry has a matching
+  # risk_flags entry below.
+  negative_scan:
+    - SELLER/Analytics/
+    - SELLER/Stats/
+
+content_contract:
+  must_answer:
+    - "RESUMO SUMMARY"
+    - "AFTER FEES Jamble"
+    - "Real-Time Sales"
+    - "Jamble@jambleapp.com support"
+  forbidden_terms:
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+    # Aymar editorial: AFTER FEES is NOT lucro / profit / real take / real
+    # profit. Use "valor liquido depois da taxa Jamble" / "net amount after
+    # Jamble's fee" instead. The article must not mislead a seller into
+    # thinking this number is their profit.
+    - "regex:\\blucro\\b"
+    - "regex:\\bprofit\\b"
+    - "regex:\\breal take\\b"
+    - "regex:\\breal profit\\b"
+  must_not_say:
+    - "Implementation detail of the dashboard view model"
+    - "Backend service names"
+    - "Invented analytics surfaces (charts, weekly graphs, exports, top-items breakdowns, audience demographics, conversion-rate widgets)"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: post-show-summary
+      purpose: "Show the post-show summary card with 4 tiles (TOTAL, AFTER FEES, SOLD, BUYERS) under the localized RESUMO / SUMMARY header. The 4 tile labels are English even on a pt-BR device."
+      source: ios_required
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      # Option B (text-only anchor): the summary card is text + numbers
+      # only. No glyphs in the iOS source either. All three icon-blockers
+      # are present so rule 10e fires green.
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+      html_must_contain:
+        pt-br:
+          - "RESUMO"
+          - "TOTAL"
+          - "AFTER FEES"
+          - "SOLD"
+          - "BUYERS"
+        en:
+          - "SUMMARY"
+          - "TOTAL"
+          - "AFTER FEES"
+          - "SOLD"
+          - "BUYERS"
+    - name: live-realtime-sales
+      purpose: "Show the live-show Real-Time Sales overlay top-left: title + running total + price-per-item caption."
+      source: ios_required
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      # Option B (text-only anchor): the overlay is text + numbers only on
+      # iOS. The audience/viewer-count badge and other top-right chrome
+      # are NOT included in this mockup; this mockup focuses on the
+      # text-only Real-Time Sales container only.
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+      html_must_contain:
+        pt-br:
+          - "Vendas em tempo real"
+        en:
+          - "Real-Time Sales"
+    - name: wallet-summary
+      purpose: "Show the wallet view: title bar + Available balance / Saldo disponível caption + R$ amount + Sacar / Withdraw button."
+      source: ios_required
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      # Option B (text-only anchor): rerun-1 found this screen had an
+      # unanchored icons_match_ios_source. The wallet mockup is
+      # intentionally text-only, no clock icon, no chevron, no SVG.
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+      html_must_contain:
+        pt-br:
+          - "Minha carteira"
+          - "Saldo dispon"
+          - "Sacar"
+        en:
+          - "My Wallet"
+          - "Available balance"
+          - "Withdraw"
+
+icons_required: []
+icons_fallback_feather: false
+
+# pt-br body documents the wallet R$ amount example, so currency_required is
+# true to enforce the R$ presence in pt-br.md.
+currency_required: true
+
+risk_flags:
+  - "feature-may-not-exist: iOS has NO dedicated seller analytics surface (no SELLER/Analytics/, no SELLER/Stats/, no charts, no exports, no top-items breakdown, no audience demographics, no conversion-rate display). The article is intentionally honest about the gap."
+
+resolved_decisions:
+  - risk: "feature-may-not-exist: iOS has NO dedicated seller analytics surface (no SELLER/Analytics/, no SELLER/Stats/, no charts, no exports, no top-items breakdown, no audience demographics, no conversion-rate display). The article is intentionally honest about the gap."
+    decided_by: "Aymar"
+    decided_at: "2026-05-08"
+    rationale: "The article's whole job is to surface this gap honestly. Sellers asking 'where are my analytics?' deserve a clear answer (post-show summary + wallet + live overlay; nothing else exists today) instead of an article that papers over the absence. Negative scan documents the verified absence; risk stays in flow.yml for traceability when the analytics surface ships."

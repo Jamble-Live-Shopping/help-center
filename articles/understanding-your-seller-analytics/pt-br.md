@@ -1,111 +1,120 @@
-# Entendendo Suas Análises de Vendedor
+# Entendendo seus dados de vendedor
 
-## O que você vai aprender
+## O que voce vai aprender
 
-Este guia explica onde encontrar seus dados de desempenho na Jamble — seus números de vendas, receita, estatísticas de espectadores e informações financeiras. Você vai aprender a ler seu dashboard pós-show, verificar seus ganhos e acompanhar seu progresso.
+Este guia explica onde ver seu desempenho como vendedor na Jamble hoje. Voce vai aprender a ler o resumo pos-show, o painel ao vivo durante o show e os dados financeiros na sua carteira. O guia tambem deixa claro o que o app ainda nao mostra, para voce nao perder tempo procurando uma tela que ainda nao existe.
 
-## Antes de começar
+## O que existe hoje
 
-Você precisa de:
-- Uma conta de vendedor aprovada na Jamble
-- Pelo menos um show completado (para ver estatísticas)
+A Jamble oferece tres lugares para acompanhar seu desempenho como vendedor:
 
-## Onde encontrar suas análises
+1. Resumo pos-show, que aparece automaticamente quando voce encerra um show
+2. Painel ao vivo no canto da tela enquanto voce esta apresentando
+3. Carteira, com saldo e botao de saque
 
-Seus dados de desempenho na Jamble estão disponíveis em três lugares:
+Sao tres telas separadas. Nao existe um painel unico que junte tudo, e isso e proposital de mencionar antes para voce saber onde olhar para cada coisa.
 
-1. **Dashboard pós-show** — estatísticas detalhadas de cada show, mostrado logo após encerrar uma live
-2. **Sua carteira** — visão financeira com ganhos, saques e histórico de transações
-3. **Seu perfil** — estatísticas gerais visíveis para você e seus seguidores
+## O que ainda nao existe no app
 
-## Dashboard pós-show
+Antes de continuar, vale alinhar expectativas. Hoje o app de vendedor da Jamble nao oferece:
 
-Depois de encerrar um show, um resumo aparece automaticamente. Toque em **"My Dashboard"** para ver o detalhamento completo.
+- Graficos historicos ou tendencias semana a semana
+- Exportar suas vendas para CSV ou planilha
+- Ranking dos seus produtos mais vendidos em todos os shows
+- Demografia da audiencia (idade, regiao, genero)
+- Taxa de conversao calculada pelo app
+- Painel unico com todos esses dados juntos
 
-![Tela de boas-vindas do painel do vendedor com nome de usuário e botão "Meu Painel"](./assets/mockups/understanding-your-seller-analytics__seller-dashboard-welcome__pt-br.png)
+Quando voce precisar de algum desses numeros, o caminho hoje e olhar manualmente o resumo de cada show passado e comparar voce mesmo. A Jamble pode adicionar essas funcoes no futuro, mas elas nao estao no app agora.
 
-### O que o dashboard mostra
+## Resumo pos-show
 
-O dashboard exibe métricas principais do seu show:
+Quando voce encerra um show, o resumo aparece automaticamente. No topo, voce ve o card chamado RESUMO com quatro numeros principais.
 
-- ****TOTAL**** — Receita total de todas as vendas durante o show (em R$)
-- ****AFTER FEES**** — Seus ganhos reais após a comissão de 14% da Jamble
-- ****SOLD**** — Número de produtos vendidos
-- ****BUYERS**** — Número de compradores únicos
-Você também verá uma lista de todos os itens vendidos com preços individuais, e itens que não foram vendidos.
+![Card de resumo pos-show com cabecalho RESUMO e quatro tiles (TOTAL, AFTER FEES, SOLD, BUYERS) em ingles](./assets/mockups/understanding-your-seller-analytics__post-show-summary__pt-br__v3.png)
 
-### Usando o dashboard para melhorar
+### Os quatro numeros do RESUMO
 
-Preste atenção em:
-- **Proporção vendidos vs. não vendidos** — se muitos produtos ficaram sem vender, considere ajustar preços iniciais, melhorar descrições ou agendar shows em horários com mais compradores
-- **Número de compradores** — um número alto de compradores relativo à sua audiência significa que seus produtos são atrativos. Um número baixo pode significar que sua audiência está assistindo mas não comprando — tente engajar mais durante as vendas
-- **Receita por item** — compare entre shows para entender quais categorias de produto performam melhor
+- **TOTAL**: receita bruta de todas as vendas durante o show, somando o preco cheio que cada comprador pagou
+- **AFTER FEES**: valor liquido depois da taxa Jamble de 14%. Importante: este numero **nao** inclui o custo do produto, frete que sai do seu bolso, embalagem, impostos, eventuais reembolsos. E o valor que sai da Jamble para voce, nada alem disso
+- **SOLD**: numero de produtos vendidos no show
+- **BUYERS**: numero de compradores unicos (uma pessoa que comprou tres itens conta como 1 buyer)
 
-## Sua carteira
+### Por que os rotulos aparecem em ingles
 
-Para verificar seus dados financeiros:
+Voce vai notar que o cabecalho **RESUMO** aparece em portugues, mas os quatro rotulos (TOTAL, AFTER FEES, SOLD, BUYERS) aparecem em ingles, mesmo no app em portugues. E uma pendencia de traducao do app: esses rotulos especificos ainda nao estao traduzidos para portugues. O conteudo dos numeros e o seu, do seu show, na moeda do seu show.
 
-1. Vá ao seu perfil
-2. Abra **Configurações**
-3. Toque em **"My Wallet"** na seção VENDER
+### O que olhar no resumo
 
-![Tela de saldo da carteira mostrando saldo disponível de R$ 1.250,00 com dados bancários e botão sacar](./assets/mockups/understanding-your-seller-analytics__wallet-balance__pt-br.png)
+- Compare TOTAL e AFTER FEES para ver quanto a taxa Jamble retira (14% do TOTAL)
+- Compare SOLD e BUYERS: se SOLD e bem maior que BUYERS, voce esta vendendo varios itens por comprador, sinal saudavel de cesta cheia
+- Role abaixo do card de resumo para ver a lista das vendas confirmadas e dos itens que ficaram sem comprador
 
-### O que você verá na carteira
+## Painel ao vivo durante o show
 
-- **Saldo disponível** — quanto você pode sacar agora
-- **Dados bancários** — sua conta bancária registrada para saques via PIX
-- **Botão de saque** — solicite um pagamento para sua conta
-- **Histórico de Saques** — toque no ícone de relógio para ver a lista de todos os saques com datas e valores
+Enquanto voce esta apresentando, o canto superior esquerdo mostra um pequeno painel chamado **Vendas em tempo real**. Ele atualiza sozinho cada vez que uma venda fecha.
 
-## Estatísticas do seu perfil
+![Sobreposicao Vendas em tempo real no canto superior esquerdo durante uma live, com total acumulado e preco medio por item](./assets/mockups/understanding-your-seller-analytics__live-realtime-sales__pt-br__v3.png)
 
-Sua página de perfil mostra estatísticas básicas visíveis para você e qualquer pessoa que visite seu perfil:
+O painel ao vivo mostra:
 
-- **Seguidores** — número de usuários te seguindo
-- **Shows** — número de shows que você apresentou
-- **Vendas** — dados acumulados de vendas
+- O total acumulado de vendas confirmadas no show ate agora
+- O preco medio por item vendido (a linha menor logo abaixo)
 
-Estas são métricas gerais. Para dados detalhados de desempenho, use seu dashboard pós-show e carteira.
+E util para voce sentir o pulso do show sem ter que sair da camera. Se o numero de vendas para de subir por muitos minutos, esse e um sinal direto de que e hora de mudar o produto ou engajar mais o chat.
 
-## Durante um show ao vivo
+## Carteira
 
-Enquanto está apresentando, você pode acompanhar o desempenho em tempo real:
+Para ver seus dados financeiros acumulados e solicitar um saque:
 
-- **Vendas em tempo real** (canto superior esquerdo) — mostra o total de vendas, receita em R$ e preço médio por item. Atualiza ao vivo conforme as vendas são fechadas
-- **Contagem de espectadores** (canto superior direito, badge vermelho) — mostra quantas pessoas estão assistindo. Toque para ver a lista de espectadores
+1. Va ao seu perfil
+2. Abra **Configuracoes**
+3. Toque em **Minha carteira** na secao SELL
 
-## Visualizando shows anteriores
+![Tela Minha carteira com saldo disponivel R$ 1.250,00 e botao Sacar](./assets/mockups/understanding-your-seller-analytics__wallet-summary__pt-br__v3.png)
 
-Você pode revisitar seus shows passados para revisar o desempenho:
+A tela da carteira mostra:
 
-1. Vá ao seu perfil
-2. Role até a lista de shows
-3. Toque em qualquer show passado para ver detalhes, incluindo produtos vendidos e receita
+- **Saldo disponivel**: o valor em R$ que voce pode sacar agora via PIX
+- Botao **Sacar**: solicita um pagamento para a sua conta bancaria
 
-## Dicas importantes
+A carteira nao mostra graficos nem historico semanal. Ela mostra o saldo atual e libera o saque. O historico de saques anteriores fica em uma tela separada de Configuracoes.
 
-- **Revise seu dashboard após cada show.** Mesmo uma olhada rápida em vendidos vs. não vendidos e número de compradores vai te ajudar a melhorar
-- **Acompanhe seu preço médio por item.** Se está caindo entre shows, pode ser hora de melhorar a qualidade ou apresentação dos produtos
-- **Use o histórico de saques para controlar sua renda.** Isso dá um registro claro de todo dinheiro recebido da Jamble
-- **A contagem de espectadores é seu pulso ao vivo.** Se espectadores saem em um momento parado, tente engajar o chat, iniciar uma venda ou trocar para um produto mais empolgante
+## Como usar esses tres lugares juntos
+
+Como nao ha um painel unico, a rotina pratica e:
+
+- Durante o show: olhe o painel ao vivo para sentir o ritmo
+- Logo apos encerrar: leia o RESUMO pos-show e anote os quatro numeros se quiser comparar entre shows
+- Quando quiser sacar: abra a carteira
+
+Se voce quiser comparar dois shows seguidos, abra um show passado pelo seu perfil para ver o resumo dele de novo. Os numeros ficam salvos.
+
+## Dicas
+
+- O AFTER FEES e o ponto de partida do seu calculo financeiro, nao o final. Tire dele o custo do produto, o frete que voce paga, embalagem e impostos para chegar ao seu resultado real
+- Se BUYERS sobe show a show e SOLD nao acompanha, tente vender combos no mesmo show para que cada comprador leve mais de um item
+- Anote em uma planilha sua os quatro numeros de cada show ate o app ter um historico proprio. Cinco minutos por show te dao a tendencia que o app ainda nao calcula
 
 ## Perguntas frequentes
 
-**Existe um dashboard de análises com gráficos ou tendências?**
-Atualmente, a Jamble não tem um dashboard standalone com gráficos históricos. Seus dados de desempenho estão disponíveis por show (dashboard pós-show) e financeiramente (carteira). Para tendências ao longo do tempo, compare seus dashboards de vários shows.
+**Existe um painel com graficos ou tendencias semana a semana?**
+Nao. Hoje a Jamble nao tem essa tela. Os dados ficam por show (resumo pos-show) e financeiros agregados (carteira). Para tendencias, voce precisa comparar manualmente.
 
-**Posso exportar meus dados de vendas?**
-Não há recurso de exportação no momento. Você pode ver seus dados no app pelo dashboard pós-show e carteira.
+**Posso exportar minhas vendas para uma planilha?**
+Nao. Nao existe funcao de exportar no app hoje.
 
-**A Jamble mostra minha taxa de conversão?**
-Não diretamente. Mas você pode estimar comparando sua contagem de espectadores (mostrada durante a live) com seu número de compradores (mostrado no dashboard).
+**O app mostra minha taxa de conversao?**
+Nao diretamente. Voce pode estimar comparando a contagem de espectadores durante a live (no canto direito da tela do host) com o numero BUYERS no resumo pos-show.
 
-**O quão precisa é a contagem de espectadores?**
-A contagem mostra o número de pessoas assistindo naquele momento, atualizado em tempo real. A contagem total de audiência no dashboard mostra espectadores únicos que entraram em qualquer momento durante o show.
+**O AFTER FEES ja e o que sobra para mim no final?**
+Nao. AFTER FEES e o **valor liquido depois da taxa Jamble de 14%**, antes de qualquer outro custo seu. Para chegar ao seu resultado real, subtraia o custo do produto, frete que voce paga, embalagem, impostos e eventuais reembolsos.
 
-**Quando o dashboard pós-show fica disponível?**
-Imediatamente após encerrar seu show. Aparece automaticamente, e você pode acessá-lo depois tocando no show passado.
+**Por que TOTAL, AFTER FEES, SOLD e BUYERS aparecem em ingles na minha versao em portugues?**
+E uma pendencia de traducao do app. Os numeros sao seus, em R$. So os rotulos ainda estao em ingles.
+
+**Quando o resumo pos-show fica disponivel?**
+Imediatamente apos voce encerrar o show. Ele aparece automaticamente, e voce pode reabrir depois tocando no show passado pelo seu perfil.
 
 ## Precisa de ajuda?
 
