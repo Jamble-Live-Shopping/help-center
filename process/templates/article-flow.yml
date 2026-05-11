@@ -108,12 +108,32 @@ mockup_plan:
     #   # validator emits a SOFT warn (`screen_review_checks_missing`)
     #   # nudging the worker to record what the reviewer must check.
     #   # Conventional values:
-    #   #   - icons_match_ios_source
-    #   #   - labels_match_xcstrings
-    #   #   - no_invented_ui_state
+    #   #   - icons_match_ios_source       — asset name matches iOS, anchored via required_icons
+    #   #   - labels_match_xcstrings       — copy verbatim from RESOURCES/Localizable.xcstrings
+    #   #   - no_invented_ui_state         — no fabricated states or interaction paths
+    #   #   - layout_matches_ios_source    — placement / parent / alignment match iOS XIB or
+    #   #                                    SwiftUI body, proven by a Layout Proof Table.
+    #   #                                    Added post batch real-2 false negative on
+    #   #                                    creating-and-managing-real-time-offers screen-2
+    #   #                                    (2026-05-11): asset matched, layout invented.
+    #   #                                    See `process/16-layout-proof-table.md` for the
+    #   #                                    full contract. Add this review_check ONLY after
+    #   #                                    `_work/<slug>__layout-proof.md` is complete.
+    #   #
+    #   # Layout anchor comment (post batch real-2). For any screen with
+    #   # `source: ios_required` AND `layout_matches_ios_source` review_check, add a
+    #   # short source-backed layout-anchor comment ABOVE the screen entry, e.g.:
+    #   #   - name: <screen-name>
+    #   #     # Layout anchor:
+    #   #     #   files: <swift / xib paths and line ranges>
+    #   #     #   parents: <top-level container hierarchy>
+    #   #     #   key placements: <2-4 critical placement relationships>
+    #   #     #   forbidden layouts: <2-3 wrong layouts the writer must NOT produce>
     #   review_checks:
     #     - icons_match_ios_source
     #     - labels_match_xcstrings
+    #     - no_invented_ui_state
+    #     - layout_matches_ios_source    # only after Layout Proof Table complete
     #
     #   # Screen-scoped HTML text contract (PR #89A, deterministic
     #   # negative visual contract). OPTIONAL. Pure substring grep on
