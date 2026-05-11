@@ -1,33 +1,47 @@
-# What you'll learn
+# Choose Quantities When Listing Products
 
-Set how many units you have per listing, from 1 up to 1,000. Learn how quantities behave during a show, and why Pre-Bid only works with a single unit.
+## What you'll learn
 
-# Before you start
+Set how many identical units you have per listing, from 1 up to 1,000. Learn how quantity behaves during a show, and why Pre-Bid only works when the quantity is 1.
+
+## Before you start
 
 You need:
 
 - An approved seller account on Jamble
 - A show created with products to add
 
-# How quantities work
+## How quantities work
 
-A quantity is the number of identical units you're selling in a single listing. Instead of creating 10 separate listings for 10 identical t-shirts, you create one listing with a quantity of 10.
+A quantity is the number of identical units you sell in a single listing. Instead of creating 10 separate listings for 10 identical t-shirts, you create one listing with a quantity of 10.
 
 During your show, when you pin the product:
 
 - Buyers see how many units are left (for example, "3 left")
 - Each purchase reduces the count by one
-- When all units are sold, the product is marked sold out
+- When the last unit is sold, the product is marked sold out
 
-## Set your quantity
+## Set the quantity
 
-When creating or editing a product, scroll to the **Quantity** field. It looks like this:
+When creating or editing a product, scroll to the **Quantity** field. The default value is 1.
 
-![Quantity field on the product form, minus and plus buttons around a value of 1](./assets/mockups/choose-quantities-when-listing-products__quantity-stepper.png)
+![Quantity field on the product form, with minus and plus buttons around a value of 1](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/choose-quantities-when-listing-products__screen-1__en__v3.png)
 
 Tap **+** to increase, **-** to decrease, or type the number directly. The minimum is 1 and the maximum is **1,000** per listing, across all sell modes (Real-time offers, Sudden Death, Buy It Now). Save the product to confirm.
 
-# What happens during a show
+## Pre-Bid and quantity
+
+If you enable **Pre-Bid** on a product, the quantity must be **1**. Pre-Bid is not available when the listing has more than one unit.
+
+![Pre-Bid cell with the toggle on and the Quantity cell set to 2, the configuration that triggers the error](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/choose-quantities-when-listing-products__screen-2__en__v3.png)
+
+If you try to turn on Pre-Bid with a quantity higher than 1, Jamble blocks the action and shows this error:
+
+![Error toast saying Oops, something happened! You can not use prebid if you have more than one quantity](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/choose-quantities-when-listing-products__screen-3__en__v3.png)
+
+The toggle snaps back to off. To use Pre-Bid, set the quantity back to 1 and try again.
+
+## What happens during a show
 
 When you pin a product with multiple units during your live show, the behavior depends on the sell mode.
 
@@ -44,24 +58,14 @@ When you pin a product with multiple units during your live show, the behavior d
 - The next unit starts automatically
 - This continues until all units are sold, or you stop the sale
 
-# Pre-Bid and quantity
-
-If you enable **Pre-Bid** on a product, the quantity must be **1**. Pre-Bid is not available when the listing has more than one unit.
-
-If you try to turn on Pre-Bid with a higher quantity, Jamble blocks the action and shows this error:
-
-![Error toast saying Oops, something happened! You can not use prebid if you have more than one quantity](./assets/mockups/choose-quantities-when-listing-products__prebid-error-toast.png)
-
-The toggle snaps back to off. To use Pre-Bid, set the quantity back to 1 and try again.
-
-# Tips
+## Important tips
 
 - **Use quantities for identical items only.** All units share the same title, photos, description, and price. If items differ (sizes, colors, conditions), create separate listings.
 - **Quantities save time.** One listing with quantity 20 replaces 20 individual listings for 20 identical stickers.
-- **Edit before a unit sells.** If you realize you have more or fewer units, update the quantity before the first sale.
+- **Edit before the first unit sells.** If you realize you have more or fewer units, update the quantity before the first sale.
 - **Watch the count on camera.** When stock runs low, announce it on air to create urgency.
 
-# Common questions
+## Common questions
 
 **What's the maximum quantity I can set?**
 
@@ -73,7 +77,7 @@ Yes. Update it at any time before all units are sold. Tap the listing, change th
 
 **What happens if I set quantity to 1?**
 
-The product works as a single item. One buyer purchases it, and it's sold. A quantity of 1 also unlocks **Pre-Bid** on Real-time offers and Sudden Death.
+The product works as a single item. One buyer purchases it, and it is sold. A quantity of 1 also unlocks **Pre-Bid** on Real-time offers and Sudden Death.
 
 **Can buyers purchase more than one unit at a time?**
 
@@ -81,11 +85,15 @@ During a show, each purchase covers one unit. A buyer who wants two units buys t
 
 **What if I run out of stock during a show?**
 
-The product is automatically marked sold out when the last unit is sold. You can unpin it and move to the next product.
+When the last unit is sold, the product is automatically marked sold out. You can unpin it and move to the next product.
 
 **Does quantity affect the price?**
 
 No. Each unit sells at the same price. For Buy It Now, every buyer pays the same fixed price. For Real-time offers and Sudden Death, each unit runs its own round.
+
+## Need help?
+
+Reach out via the in-app chat or email support@jambleapp.com.
 
 ---
 

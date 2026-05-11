@@ -1,0 +1,70 @@
+# Flow contract for choose-quantities-when-listing-products.
+# Worker batch real-1-rerun-2 (2026-05-08).
+#
+# See process/templates/article-flow.yml for field documentation.
+# See process/00-RUNBOOK.md for the canonical 8-phase workflow.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+
+job_to_be_done: "Help sellers configure available stock per listing, including single-item and multi-quantity flows"
+
+source_of_truth:
+  ios_files:
+    - PRODUCT/Views/Components/CreateProductQuantityCell.swift
+    - PRODUCT/View Models/CreateProductViewModel.swift
+    - PRODUCT/Views/Components/PreBidToggleCell.swift
+    - LIVE_SHOPPING/Show/Model/ShowSaleType.swift
+    - LIVE_SHOPPING/SaleView/View/Components/ShowBuyItNowBannerView.swift
+    - RESOURCES/Localizable.xcstrings
+  backend_files: []
+  legal: []
+  support_context: []
+
+content_contract:
+  must_answer:
+    - "1.000"
+    - "Pre-Bid"
+    - "Buy It Now"
+  forbidden_terms:
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+    - "pre-ofertas"
+    - "pre-offer"
+    - "pre-offers"
+  must_not_say:
+    - "Verified badges"
+    - "Jamble Prime"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: screen-1
+      purpose: "Quantity stepper cell on the product creation form, default value 1"
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+    - name: screen-2
+      purpose: "Pre-Bid toggle cell, with the Quantity cell showing 2, illustrating the conflict that triggers the error toast"
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+    - name: screen-3
+      purpose: "Error toast shown when Pre-Bid is enabled while quantity is greater than 1"
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+
+icons_required: []
+icons_fallback_feather: false
+
+currency_required: false
+
+toc_required: false
+
+risk_flags: []
+resolved_decisions: []

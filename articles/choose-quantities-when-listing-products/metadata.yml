@@ -13,7 +13,7 @@ reviewers:
 locales:
   pt-br:
     title: Definir Quantidades ao Listar Produtos
-    description: Defina quantas unidades voce tem por anuncio, de 1 ate 1.000. Veja as regras de quantidade por modo de venda e por que Pre-Bid precisa de uma unidade so.
+    description: Defina quantas unidades voce tem por anuncio, de 1 a 1.000, e descubra por que Pre-Bid exige quantidade igual a 1.
     # Bootstrapped from legacy Intercom body (2026-04-16). Content predates the EN rewrite of
     # the same day. Pending editorial refresh under the pipeline (terminology: "pre-ofertas"
     # should become "Pre-Bid" to match the app UI).
