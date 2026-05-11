@@ -85,6 +85,81 @@ Confidence check on a real case (the PM 2026-05-11 false negative) :
 
 The first one says "right" but renders left. The second one's CSS structure visibly enforces "right". That is the difference between proof and intent.
 
+## Step 2.6 — Locale-aware xcstrings ground-truth check (post 2026-05-11 PT-BR Track/Faixa drift)
+
+**A label rendered in a mockup is not proof of correctness. Every visible text token in a `source: ios_required` mockup must resolve through `Localizable.xcstrings` to the LOCALIZED value for that mockup's locale.**
+
+This step exists because of the PT-BR drift on `what-to-do-if-a-package-is-delayed` screen-1 (2026-05-11) : the writer correctly wrote a `Track` button label, the mockup HTML rendered `Track`, the body referenced `botão Track`, and the layout-proof retro said `NO_CHANGE` — because mockup ↔ body ↔ proof were all internally consistent. But the iOS source resolves the xcstrings key `"Track"` → PT-BR `"Faixa"`. A real PT-BR user sees `Faixa` in the app. The mockup, body, and proof were drifted from iOS ground truth even though they agreed with each other. Same shape as the PM 2026-05-11 Step 2.5 false negative — surface consistency without ground-truth cross-check, applied to localized strings instead of CSS placement.
+
+### Procedure
+
+For every `source: ios_required` screen, before claiming the screen ready :
+
+1. **List every visible user-facing text token** in `mockup-sources/<screen>__<locale>.html`. Exclude :
+   - Class names, CSS comments, CSS property values
+   - `alt=""` of icons + `aria-label=""` that refer to an iOS asset name (e.g. `aria-label="auction_time_icon"` is documentation, not a user-facing label)
+   - Numeric values (prices, counts, timer values, dates)
+   - User-supplied content (product titles, usernames, addresses)
+   - Real-world entities (Correios, PSA, Pokémon, etc.)
+
+2. **For each remaining token**, search `RESOURCES/Localizable.xcstrings` :
+
+   ```bash
+   rg -n "<token>" /path/to/Jamble-iOS/Jamble/RESOURCES/Localizable.xcstrings
+   ```
+
+3. **For each token found in xcstrings**, verify the locale-resolved value matches the token :
+   - For `<screen>__en.html` : token must equal the xcstrings key's `.localizations.en.stringUnit.value`
+   - For `<screen>__pt-br.html` : token must equal `.localizations.pt-BR.stringUnit.value`
+   - If the values diverge, the mockup is drifted — patch.
+
+4. **For each token NOT found in xcstrings**, verify it's an iOS hard-coded literal :
+
+   ```bash
+   rg -n '"<token>"' /path/to/Jamble-iOS/Jamble/<area>/ --type swift
+   ```
+
+   - If a hard-coded literal exists in the cited iOS files (e.g. `"The Jamble Raid"` in `RaidViewController.swift` with no `String(localized:)` wrapper), the token is OK in BOTH locales.
+   - If no literal exists, the token is **invented**. Patch out or anchor to a real source.
+
+### Stop conditions
+
+STOP and patch instead of claiming ready if any of these fire :
+
+- A token in `<screen>__pt-br.html` doesn't match the `pt-BR` localization of its xcstrings key.
+- A token in `<screen>__en.html` doesn't match the `en` localization of its xcstrings key.
+- A token is absent from xcstrings AND from iOS hard-coded literals.
+- The team intentionally chose to ship a divergent label (e.g. "Faixa" is a known mistranslation) — `flow.yml` must carry an explicit `resolved_decisions[]` entry citing the divergence + reason. The rationale must NOT claim "matches what the user sees" if the localized iOS value is different. Be honest about the divergence.
+
+### Symmetry sanity check before claiming ready
+
+For every visible text token in the rendered PNG, ask : "if I showed this PNG to a {locale} user with the iOS app open, would they see the same word on the button / label / placeholder?" If no, the mockup is drifted from ground truth.
+
+### Worked example — the 2026-05-11 Track/Faixa drift
+
+- PT-BR mockup screen-1 button label : `Track`
+- Article `pt-br.md:17,19` : `botão Track`
+- `flow.yml` `resolved_decisions[0].rationale` : "article mirrors what the user actually sees in app today"
+- iOS xcstrings `"Track"` key → PT-BR localization = `"Faixa"`
+- iOS source `PurchaseViewController.swift:841` : `trackButton.setTitle(String(localized: "Track"))` → PT-BR user sees `Faixa`
+- **Drift**. Surface consistency passed, ground truth failed.
+
+Patch :
+1. PT-BR mockup HTML : `Track` → `Faixa`
+2. `pt-br.md:17,19` : `botão Track` → `botão Faixa`
+3. `flow.yml` `resolved_decisions[0]` : either remove (no longer a known divergence) OR rewrite rationale honestly if keeping the divergence
+4. Re-render PT-BR PNG, validate, commit, push
+
+### Why procedural-only (so far)
+
+Step 2.6 lives in this procedure doc, not in a validator. The same Karpathy small-procedural-gate-first philosophy that applied to Step 2.5 applies here :
+
+- First drift found : one PR (#114). Pattern is real but the class hasn't repeated yet across multiple slugs.
+- Reviewers can enforce by reading the mockup against `Localizable.xcstrings` — same rg sweep pattern as Step 2.5.
+- If the class repeats across multiple slugs in a future batch, that's the trigger to promote to a deterministic validator rule that walks the HTML, extracts tokens, and looks them up automatically.
+
+The 2026-05-11 back-sweep on batch real-2 will tell us whether this is one drift or a class. If multiple drifts surface, the next step is encoding `xcstrings_locale_drift` as a validator rule.
+
 ## Step 3 — Encode the layout anchor in `flow.yml`
 
 For every `ios_required` screen, add a short layout-anchor comment block above the screen entry :
