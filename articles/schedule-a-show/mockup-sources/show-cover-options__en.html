@@ -1,0 +1,39 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #0E0E10; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #1F1F23; overflow: hidden; min-height: 560px; padding-bottom: 22px; }
+.statusbar { display: flex; justify-content: space-between; align-items: center; padding: 14px 22px 6px; color: #FFFFFF; font-size: 13px; font-weight: 600; letter-spacing: 0.2px; }
+.statusbar-right { display: flex; align-items: center; gap: 4px; }
+.statusbar-right span { width: 4px; height: 4px; background: #FFFFFF; border-radius: 50%; opacity: 0.92; }
+.step-row { display: flex; gap: 6px; padding: 18px 22px 10px; }
+.step-bar { flex: 1; height: 3px; border-radius: 2px; background: #2A2A2E; }
+.step-bar.active { background: #FFFFFF; }
+.step-label { padding: 0 22px; font-size: 12px; color: #8E8E93; letter-spacing: 0.5px; text-transform: uppercase; }
+.import-pill { margin: 18px 22px 14px; height: 52px; background: #FFFFFF; border-radius: 26px; display: flex; align-items: center; justify-content: center; gap: 8px; color: #162233; font-size: 16px; font-weight: 600; }
+.unsplash-search { margin: 0 22px 12px; height: 38px; background: #1A1A1A; border-radius: 10px; padding: 0 14px; display: flex; align-items: center; color: #6B6B70; font-size: 14px; }
+.photo-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; padding: 0 22px 14px; }
+.photo { aspect-ratio: 1 / 1; border-radius: 4px; }
+.p1 { background: linear-gradient(135deg, #5B6B8A 0%, #3D4A66 100%); }
+.p2 { background: linear-gradient(135deg, #C7906F 0%, #8B5A3A 100%); }
+.p3 { background: linear-gradient(135deg, #6E8C5F 0%, #4A6240 100%); }
+.p4 { background: linear-gradient(135deg, #B68B5E 0%, #7E5E3A 100%); }
+.p5 { background: linear-gradient(135deg, #8C5E8C 0%, #5E3A5E 100%); }
+.p6 { background: linear-gradient(135deg, #4F6E8C 0%, #2E4A66 100%); }
+.bottom-pill { margin: 6px auto 0; width: 200px; height: 52px; background: #FFFFFF; border-radius: 26px; display: flex; align-items: center; justify-content: center; gap: 8px; color: #162233; font-size: 16px; font-weight: 600; }
+.chevron { color: #162233; font-weight: 700; font-size: 18px; line-height: 1; }
+</style></head><body><div class="phone">
+<div class="statusbar"><div>9:41</div><div class="statusbar-right"><span></span><span></span><span></span></div></div>
+<div class="step-row"><div class="step-bar active"></div><div class="step-bar active"></div><div class="step-bar active"></div><div class="step-bar"></div></div>
+<div class="step-label">Step 3 of 4</div>
+<div class="import-pill"><span>Import from library</span></div>
+<div class="unsplash-search">Search Unsplash</div>
+<div class="photo-grid">
+<div class="photo p1"></div>
+<div class="photo p2"></div>
+<div class="photo p3"></div>
+<div class="photo p4"></div>
+<div class="photo p5"></div>
+<div class="photo p6"></div>
+</div>
+<div class="bottom-pill"><span>Next</span><span class="chevron">&rsaquo;</span></div>
+</div></body></html>

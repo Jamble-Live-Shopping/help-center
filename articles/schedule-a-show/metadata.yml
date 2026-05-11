@@ -7,11 +7,11 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-05-08T00:00:00Z
 locales:
   pt-br:
     title: 'Agendar um Show'
-    description: ''
+    description: 'Aprenda a criar e agendar um show ao vivo em quatro passos: titulo, tag, capa e detalhes (data, hora, repeticao).'
   en:
     title: 'Schedule a Show'
-    description: "This guide explains how to create and schedule a live show on Jamble. You'll learn how to set up your show title, choose a category, add a cover image, set the date and time, and use repeat settings to schedule recurring shows."
+    description: "Learn how to create and schedule a live show in four steps: title, tag, cover, and details (date, time, repeat)."
