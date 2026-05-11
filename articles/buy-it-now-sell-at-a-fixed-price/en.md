@@ -1,108 +1,116 @@
-# Buy It Now — Sell at a Fixed Price
+# Buy It Now: sell at a fixed price
 
-## What you'll learn
+## What you will learn
 
-This guide explains how the Buy It Now sell mode works on Jamble. Buy It Now lets you sell products at a fixed price during your live show — buyers purchase instantly without competing with other buyers. You'll learn how to set it up, what buyers see, and how it combines with Flash Sales.
+This guide explains how the **Buy It Now** sell mode works on Jamble. With this mode, you sell a product at a fixed price during your live show. The buyer pays exactly the price you set, with no competition between buyers. You will learn how to set it up, what the buyer sees during the show, and how to combine it with Flash Sale.
 
 ## Before you start
 
 You need:
+
 - An approved seller account on Jamble
-- Products listed in a show with the **Buy It Now** sell mode selected
+- A product added to your show with the **Buy It Now** sell mode selected
 
 ## How Buy It Now works
 
-When you set a product's sell mode to **Buy It Now**, it works like a regular purchase:
+When you set a product's sell mode to **Buy It Now**, the sale works like a direct purchase:
 
-1. You pin the product during your live show
-2. Buyers see the product with your fixed price and a **"Buy it now"** button
-3. When a buyer taps the button, they purchase instantly at that price
-4. If you have multiple units, the remaining quantity updates ("X left")
+1. During the live show, you pin the product to the screen
+2. The buyer sees a purchase button with your fixed price
+3. Tapping the button charges the buyer instantly at the price you set
+4. If you listed several units, the remaining stock appears next to the label (for example, **3 left**)
 
-There is no timer counting down and no competition between buyers. The price you set is the price the buyer pays.
+There is no countdown and no competition between buyers. The price you publish is the final price.
 
 ## Step by step
 
-### Step 1: Set the sell mode when listing a product
+### Step 1: pick the sell mode
 
-When creating or editing a product for your show, choose **Buy It Now** as the sell mode.
+When adding or editing a product for your show, open the **Sell mode** screen and select **Buy It Now**.
 
-![Sell Mode screen with radio button options: Real-time offers, Sudden Death, and Buy It Now selected](./assets/mockups/buy-it-now-sell-at-a-fixed-price__sell-mode-picker__en.png)
+![Sell mode screen with three options: Real Time Offer, Sudden Death, and Buy It Now selected](./assets/mockups/buy-it-now-sell-at-a-fixed-price__screen-1__en__v3.png)
 
-### Step 2: Set your price
+The screen lists three options:
 
-Enter the fixed price you want. This is exactly what the buyer will pay (plus shipping).
+- **Real Time Offer**: the final price is decided by buyers in real time
+- **Sudden Death**: a fast variant of the timed sale, with no time extension on new bids
+- **Buy It Now**: a fixed price set by you
 
-- Minimum: **R$ 5.00**
-- Maximum: **R$ 5,000.00**
+### Step 2: set the fixed price
 
-You can also add a **retail price** (optional) to show buyers the original value and highlight the deal.
+Enter the exact amount the buyer will pay (shipping is added on top). Jamble accepts prices between **$5** and **$5,000** per item.
 
-### Step 3: Pin the product during your show
+Tip: research what similar items sold for on Jamble before locking your price. Because there is no negotiation, the published price is what closes the sale.
 
-During your live show, go to your product list and tap on the product to pin it. When a Buy It Now product is pinned, buyers see a banner at the top of the show:
+### Step 3: enable Flash Sale if you want (optional)
 
-![Buy It Now section header with shopping cart icon and 3 left inventory status](./assets/mockups/buy-it-now-sell-at-a-fixed-price__buy-it-now-section__en.png)
+Right under the price field, there is a **Flash sale** toggle. When it is on, two extra fields appear: a discount percentage and a duration in seconds. The discount sits between 10% and 90%, and the duration between 5 and 300 seconds.
 
-The banner shows "Buy It Now" in purple and the remaining quantity.
+Flash Sale is only available on **Buy It Now**. The other sell modes do not show this toggle.
 
-### Step 4: Buyers purchase
+### Step 4: pin the product during the show
 
-When the product is pinned, buyers see a **"Buy it now"** button. They tap it to purchase instantly at your price. No waiting, no competition.
+In your live show, open the product list and tap the item to pin it. The buyer sees a banner at the top of the screen with the cart icon and the label **Buy It Now** in purple, along with the remaining stock.
 
-If you listed multiple units, each purchase reduces the count. When all units are sold, the product is marked as sold out.
+![Buy It Now banner at the top of the show: translucent purple background, cart icon, Buy It Now label, and a stock pill showing 3 left](./assets/mockups/buy-it-now-sell-at-a-fixed-price__screen-2__en__v3.png)
 
-## Buy It Now with Flash Sales
+### Step 5: the buyer checks out
 
-You can combine Buy It Now with a **Flash Sale** to offer a temporary discount. When you activate a Flash Sale on a Buy It Now product:
+When the buyer taps the purchase button, they are taken straight to checkout at your price. Each purchase reduces the stock counter. When the last item is sold, the banner disappears and the product is marked as sold out.
 
-- The banner changes to green and shows **"Flash Sale • X% OFF"**
-- A countdown timer appears
-- Buyers see the discounted price alongside the original
+## Buy It Now with Flash Sale
 
-![Flash Sale banner displaying 30% OFF discount with 2 items left in stock](./assets/mockups/buy-it-now-sell-at-a-fixed-price__flash-sale-banner__en.png)
+Flash Sale applies a temporary discount on top of your fixed price. When it is active on a **Buy It Now** product:
 
-Flash Sales create urgency. They're great for moving inventory or rewarding viewers who are watching live.
+- The banner switches from purple to green
+- The title becomes **Flash Sale • X% OFF**, where X is the discount you set
+- The stock pill stays visible
 
-## When to use Buy It Now vs Real-time offers
+![Flash Sale banner at the top of the show: translucent green background, lightning icon, Flash Sale • 30% OFF label, and a stock pill showing 2 left](./assets/mockups/buy-it-now-sell-at-a-fixed-price__screen-3__en__v3.png)
 
-| | Buy It Now | Real-time offers |
+Flash Sale is great for moving inventory fast or rewarding viewers who are watching live.
+
+## When to use Buy It Now
+
+The choice between **Buy It Now** and **Real Time Offer** depends on the kind of product you are listing and the effect you want during the show.
+
+| Criterion | Buy It Now | Real Time Offer |
 |---|---|---|
-| **Price** | Fixed — you decide | Starts low — buyers compete |
-| **Speed** | Instant purchase | Timer + competition |
-| **Best for** | Items with a clear market price | Rare or unique items, creating excitement |
-| **Buyer experience** | Simple, fast | Interactive, engaging |
-| **Pre-offers** | Not available | Available (when quantity = 1) |
+| Who sets the price | You | The buyers |
+| Sale speed | Instant purchase | Timer with competition |
+| Best for | Items with a clear market price | Rare or unique items that drive excitement |
+| Buyer experience | Simple and fast | Interactive, with tension |
+| Multi-unit stock | Works very well (3 left, 2 left...) | One item at a time |
 
-**Tip:** Many sellers mix both modes in the same show. Use Real-time offers for exciting, unique items that will generate competition, and Buy It Now for standard-priced items that buyers want to grab quickly.
+Many sellers mix both modes in the same show: **Real Time Offer** for headline items, and **Buy It Now** for the standard-priced catalog that needs to move.
 
-## Important tips
+## Pricing tips
 
-- **Price it right.** Unlike Real-time offers where buyers set the final price, with Buy It Now you control the price. Research what similar items sell for on Jamble to find the sweet spot
-- **Combine with Flash Sales for urgency.** A "30% OFF for the next 2 minutes" Flash Sale on a Buy It Now item can drive quick sales
-- **Quantity works great with BIN.** If you have 5 identical shirts, list them as Buy It Now with quantity 5. Each buyer gets one at your price
-- **Talk about the product.** Even though the purchase is instant, describe the item on camera. Buyers are more likely to buy when they hear you talk about it
+- **Research before you publish.** Because the price is fixed, it is what closes the sale
+- **Use Flash Sale at peak moments.** A 30% discount for 2 minutes pulls viewers to checkout
+- **Lean into multi-unit listings.** Five identical units can become five sales in one show, with no need to list each item separately
+- **Showcase the product on camera.** Even though the purchase is instant, talking about the item drives more conversion
 
 ## Common questions
 
-**Can buyers negotiate the price on a Buy It Now listing?**
-No. On Jamble, Buy It Now is a fixed-price purchase. The buyer pays exactly the price you set. There is no offer or counter-offer system.
+**Can buyers negotiate the price on a Buy It Now item?**
+No. The price is fixed. The buyer pays exactly the amount you set, with no counter-offer.
 
-**Can I change the price after listing?**
-Yes. You can edit the price of any product before it sells. Tap the listing and update the price, then tap **Save Changes**.
+**Can I edit the price after publishing?**
+Yes, as long as the item has not been sold. Open the product, update the value, and save.
 
 **Can I use pre-offers with Buy It Now?**
-No. Pre-offers are only available for Real-time offers and Sudden Death sell modes. With Buy It Now, buyers purchase at the fixed price during the show.
+No. Pre-offers are only available on **Real Time Offer** and **Sudden Death**.
 
 **What happens when all units are sold?**
-The product is marked as sold out and disappears from the active sale view. You can unpin it and move to the next product.
+The product leaves the active show view and is marked as sold out. You can move on to the next item.
 
-**Can I add a Flash Sale to any Buy It Now product?**
-Yes. Any Buy It Now product can have a Flash Sale applied during the show. You set the discount percentage and duration.
+**Can I run Flash Sale on any Buy It Now product?**
+Yes. You set the discount (between 10% and 90%) and the duration (between 5 and 300 seconds).
 
-**Do buyers pay shipping on Buy It Now items?**
+**Does the buyer pay shipping?**
 Yes. Shipping is calculated and added at checkout, just like any other purchase on Jamble.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Reach out through the in-app chat or email support@jambleapp.com.
