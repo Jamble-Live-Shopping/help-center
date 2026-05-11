@@ -1,108 +1,116 @@
-# Compra Direta — Venda a Preço Fixo
+# Comprar agora: venda a preço fixo
 
 ## O que você vai aprender
 
-Este guia explica como o modo de venda Compra Direta funciona na Jamble. A Compra Direta permite que você venda produtos a um preço fixo durante seu show ao vivo — os compradores compram instantaneamente sem competir com outros. Você vai aprender como configurar, o que os compradores veem e como combinar com Vendas Relâmpago.
+Este guia explica como funciona o modo de venda **Comprar agora** na Jamble. Com esse modo, você vende um produto a um preço fixo durante o seu show ao vivo. O comprador paga exatamente o valor que você definiu, sem disputa com outros compradores. Você vai entender como configurar, o que o comprador vê durante o show e como combinar com a Venda relâmpago.
 
 ## Antes de começar
 
 Você precisa de:
+
 - Uma conta de vendedor aprovada na Jamble
-- Produtos listados em um show com o modo de venda **Buy It Now** selecionado
+- Um produto adicionado ao seu show com o modo de venda **Comprar agora** selecionado
 
-## Como a Compra Direta funciona
+## Como funciona o modo Comprar agora
 
-Quando você define o modo de venda de um produto como **Buy It Now**, funciona como uma compra comum:
+Quando você define o modo de venda de um produto como **Comprar agora**, a venda funciona em compra única e instantânea:
 
-1. Você fixa o produto durante seu show ao vivo
-2. Os compradores veem o produto com seu preço fixo e um botão **"Buy it now"**
-3. Quando um comprador toca no botão, ele compra instantaneamente por aquele preço
-4. Se você tiver múltiplas unidades, a quantidade restante é atualizada ("X left")
+1. Durante o show ao vivo, você fixa o produto na tela
+2. O comprador vê um botão de compra com o seu preço fixo
+3. Ao tocar no botão, o comprador paga na hora pelo valor que você definiu
+4. Se você listou várias unidades, o estoque restante aparece ao lado da etiqueta (por exemplo, **3 restantes**)
 
-Não há cronômetro regressivo e não há competição entre compradores. O preço que você definiu é o preço que o comprador paga.
+Não existe cronômetro nem competição entre compradores. O preço que você publica é o preço final.
 
 ## Passo a passo
 
-### Passo 1: Defina o modo de venda ao listar um produto
+### Passo 1: escolha o modo de venda
 
-Ao criar ou editar um produto para seu show, escolha **Buy It Now** como modo de venda.
+Ao adicionar ou editar um produto do seu show, abra a tela **Modo de venda** e selecione **Comprar agora**.
 
-![sell-mode-picker: opções de rádio para Ofertas em tempo real, Sudden Death ou Buy It Now](./assets/mockups/buy-it-now-sell-at-a-fixed-price__sell-mode-picker__pt-br.png)
+![Tela Modo de venda com três opções: Oferta em tempo real, Morte súbita e Comprar agora selecionado](./assets/mockups/buy-it-now-sell-at-a-fixed-price__screen-1__pt-br__v3.png)
 
-### Passo 2: Defina seu preço
+A tela lista três opções:
 
-Digite o preço fixo que você quer. Esse é exatamente o valor que o comprador vai pagar (mais frete).
+- **Oferta em tempo real**: o lance final é decidido pelos compradores em tempo real
+- **Morte súbita**: variação rápida da Oferta em tempo real, sem prorrogação de tempo
+- **Comprar agora**: preço fixo definido por você
 
-- Mínimo: **R$ 5,00**
-- Máximo: **R$ 5.000,00**
+### Passo 2: defina o preço fixo
 
-Você também pode adicionar um **preço de varejo** (opcional) para mostrar aos compradores o valor original e destacar a oferta.
+Digite o valor exato que o comprador vai pagar (frete à parte). A Jamble aceita preços entre **R$ 5,00** e **R$ 5.000,00** por item.
 
-### Passo 3: Fixe o produto durante seu show
+Dica: pesquise por quanto itens parecidos foram vendidos na Jamble antes de fixar o seu preço. Como o comprador não negocia, o valor publicado decide a venda.
 
-Durante seu show ao vivo, vá à sua lista de produtos e toque no produto para fixá-lo. Quando um produto Buy It Now é fixado, os compradores veem um banner no topo do show:
+### Passo 3: ative a Venda relâmpago se quiser (opcional)
 
-![buy-it-now-card: Cartão de produto com ícone de carrinho de compras, rótulo "Buy It Now" e disponibilidade de estoque de 3 unidades restantes](./assets/mockups/buy-it-now-sell-at-a-fixed-price__buy-it-now-card__pt-br.png)
+Logo abaixo do campo de preço, há o seletor **Venda relâmpago**. Quando ativo, ele revela dois campos extras: o desconto em porcentagem e a duração em segundos. O desconto fica entre 10% e 90%, e a duração entre 5 e 300 segundos.
 
-O banner mostra "Buy It Now" em roxo e a quantidade restante.
+A Venda relâmpago só fica disponível no modo **Comprar agora**. Os outros modos não têm esse seletor.
 
-### Passo 4: Compradores compram
+### Passo 4: fixe o produto durante o show
 
-Quando o produto está fixado, os compradores veem um botão **"Buy it now"**. Eles tocam para comprar instantaneamente pelo seu preço. Sem espera, sem competição.
+No seu show ao vivo, abra a lista de produtos e toque no item para fixá-lo. O comprador vê uma faixa no topo da tela com o ícone de carrinho e a etiqueta **Comprar agora** em roxo, junto com o estoque restante.
 
-Se você listou múltiplas unidades, cada compra reduz o contador. Quando todas as unidades são vendidas, o produto é marcado como esgotado.
+![Faixa Comprar agora no topo do show: fundo roxo translúcido, ícone de carrinho, rótulo Comprar agora e etiqueta de estoque com 3 restantes](./assets/mockups/buy-it-now-sell-at-a-fixed-price__screen-2__pt-br__v3.png)
 
-## Compra Direta com Vendas Relâmpago
+### Passo 5: o comprador finaliza a compra
 
-Você pode combinar a Compra Direta com uma **Venda Relâmpago** para oferecer um desconto temporário. Quando você ativa uma Venda Relâmpago em um produto Buy It Now:
+Ao tocar no botão de compra, o comprador é levado direto para a tela de checkout com o seu preço. Cada compra reduz o contador de estoque. Quando o último item é vendido, a faixa some e o produto fica marcado como esgotado.
 
-- O banner muda para verde e mostra **"Flash Sale • X% OFF"**
-- Um cronômetro regressivo aparece
-- Os compradores veem o preço com desconto ao lado do original
+## Comprar agora com Venda relâmpago
 
-![flash-sale-banner: banner promocional com ícone de raio, oferta de 30% de desconto e contagem de itens](./assets/mockups/buy-it-now-sell-at-a-fixed-price__flash-sale-banner__pt-br.png)
+A Venda relâmpago aplica um desconto temporário em cima do seu preço fixo. Quando ela está ativa em um produto **Comprar agora**:
 
-Vendas Relâmpago criam urgência. São ótimas para movimentar estoque ou recompensar espectadores que estão assistindo ao vivo.
+- A faixa muda de roxo para verde
+- O título passa a ser **Venda relâmpago • X% OFF**, onde X é o desconto que você definiu
+- A etiqueta de estoque continua visível
 
-## Quando usar Compra Direta vs Ofertas em tempo real
+![Faixa Venda relâmpago no topo do show: fundo verde translúcido, ícone de raio, rótulo Venda relâmpago • 30% OFF e etiqueta de estoque com 2 restantes](./assets/mockups/buy-it-now-sell-at-a-fixed-price__screen-3__pt-br__v3.png)
 
-| | Compra Direta | Ofertas em tempo real |
+A Venda relâmpago é ótima para girar estoque rápido ou recompensar quem está assistindo ao show ao vivo.
+
+## Quando usar Comprar agora
+
+A escolha entre **Comprar agora** e **Oferta em tempo real** depende do tipo de produto e do efeito que você quer no show.
+
+| Critério | Comprar agora | Oferta em tempo real |
 |---|---|---|
-| **Preço** | Fixo — você decide | Começa baixo — compradores competem |
-| **Velocidade** | Compra instantânea | Cronômetro + competição |
-| **Melhor para** | Itens com preço de mercado claro | Itens raros ou únicos, criar empolgação |
-| **Experiência do comprador** | Simples, rápida | Interativa, envolvente |
-| **Pré-ofertas** | Não disponível | Disponível (quando quantidade = 1) |
+| Quem define o preço | Você | Os compradores |
+| Velocidade da venda | Compra na hora | Cronômetro com disputa |
+| Melhor para | Itens com preço de mercado claro | Itens raros ou únicos que geram empolgação |
+| Experiência do comprador | Simples e rápida | Interativa, com tensão |
+| Estoque múltiplo | Funciona muito bem (3 restantes, 2 restantes...) | Disputa item a item |
 
-**Dica:** Muitos vendedores misturam os dois modos no mesmo show. Use Ofertas em tempo real para itens empolgantes e únicos que vão gerar competição, e Compra Direta para itens de preço padrão que os compradores querem pegar rapidamente.
+Muitos vendedores misturam os dois modos no mesmo show: **Oferta em tempo real** para os itens de destaque e **Comprar agora** para o catálogo de preço padrão que precisa girar.
 
-## Dicas importantes
+## Dicas para o preço
 
-- **Precifique corretamente.** Diferente das Ofertas em tempo real onde os compradores definem o preço final, com Compra Direta você controla o preço. Pesquise por quanto itens similares são vendidos na Jamble para encontrar o ponto ideal
-- **Combine com Vendas Relâmpago para urgência.** Um "30% OFF nos próximos 2 minutos" em um item Buy It Now pode gerar vendas rápidas
-- **Quantidade funciona muito bem com BIN.** Se você tem 5 camisetas idênticas, liste como Buy It Now com quantidade 5. Cada comprador pega uma pelo seu preço
-- **Fale sobre o produto.** Mesmo que a compra seja instantânea, descreva o item na câmera. Os compradores compram mais quando ouvem você falar sobre ele
+- **Pesquise antes de publicar.** Como o valor é fixo, ele decide a venda
+- **Use a Venda relâmpago em momentos-chave.** Um desconto de 30% por 2 minutos puxa o público para o checkout
+- **Aproveite o estoque múltiplo.** Cinco unidades iguais podem virar cinco vendas no mesmo show, sem precisar listar item por item
+- **Apresente o produto na câmera.** Mesmo que a compra seja instantânea, falar sobre o item gera mais conversão
 
 ## Perguntas frequentes
 
-**Os compradores podem negociar o preço em uma listagem Buy It Now?**
-Não. Na Jamble, Buy It Now é compra a preço fixo. O comprador paga exatamente o preço que você definiu. Não há sistema de oferta ou contra-oferta.
+**O comprador pode negociar o preço de um item Comprar agora?**
+Não. O preço é fixo. O comprador paga exatamente o valor que você definiu, sem contraproposta.
 
-**Posso mudar o preço depois de listar?**
-Sim. Você pode editar o preço de qualquer produto antes de ele ser vendido. Toque na listagem e atualize o preço, depois toque em **Save Changes**.
+**Posso editar o preço depois de publicar?**
+Sim, enquanto o item ainda não foi vendido. Abra o produto, atualize o valor e salve.
 
-**Posso usar pré-ofertas com Buy It Now?**
-Não. Pré-ofertas estão disponíveis apenas para Ofertas em tempo real e Sudden Death. Com Buy It Now, os compradores compram pelo preço fixo durante o show.
+**Posso usar pré-ofertas no modo Comprar agora?**
+Não. As pré-ofertas só existem nos modos **Oferta em tempo real** e **Morte súbita**.
 
 **O que acontece quando todas as unidades são vendidas?**
-O produto é marcado como esgotado e desaparece da visualização de venda ativa. Você pode desfixá-lo e passar para o próximo produto.
+O produto sai da tela ativa do show e fica marcado como esgotado. Você pode passar para o próximo item.
 
-**Posso adicionar uma Venda Relâmpago a qualquer produto Buy It Now?**
-Sim. Qualquer produto Buy It Now pode ter uma Venda Relâmpago aplicada durante o show. Você define a porcentagem de desconto e a duração.
+**Posso ativar Venda relâmpago em qualquer produto Comprar agora?**
+Sim. Você define o desconto (entre 10% e 90%) e a duração (entre 5 e 300 segundos).
 
-**Os compradores pagam frete em itens Buy It Now?**
-Sim. O frete é calculado e adicionado no checkout, assim como qualquer outra compra na Jamble.
+**O comprador paga o frete?**
+Sim. O frete é calculado e adicionado no checkout, como em qualquer compra na Jamble.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app ou envie um email para support@jambleapp.com.

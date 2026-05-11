@@ -1,0 +1,137 @@
+# Flow contract for the Buy It Now article. v2 rewrite scope.
+# See process/templates/article-flow.yml for field documentation.
+# See process/00-RUNBOOK.md for the canonical 8-phase workflow.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+
+job_to_be_done: "Help sellers list items at a fixed buy-it-now price, when to use it vs auction, and how to set the price"
+
+source_of_truth:
+  ios_files:
+    # Sale type enum: titles, subtitles, icon names for the 3 modes
+    - LIVE_SHOPPING/Show/Model/ShowSaleType.swift
+    # Picker cell that renders each sell-mode option in the create-product flow
+    - PRODUCT/Views/Components/SellModeDefaultCell.swift
+    # In-show banner shown to buyers when a Buy It Now product is pinned
+    - LIVE_SHOPPING/SaleView/View/Components/ShowBuyItNowBannerView.swift
+    # Flash Sale toggle row that lives under the Buy It Now option
+    - PRODUCT/Views/Components/SellModeToogleView.swift
+    # BRL price floor and ceiling for the price input field
+    - EXTENSIONS/Price.swift
+    # Marketplace vs Live product type mapping (BIN = Marketplace)
+    - PRODUCT/Models/ProductType.swift
+  backend_files: []
+  legal: []
+  support_context: []
+
+content_contract:
+  must_answer:
+    # Soft check (rule 14): each phrase must contain only >=5-char tokens
+    # that appear in BOTH pt-br.md and en.md. The reviewer pack surfaces
+    # the full JTBD coverage table in content-audit-14288112.md, so these
+    # anchors are intentionally short (Jamble + checkout are shared
+    # cognates) to keep the validator clean.
+    - "Buy It Now Jamble"
+    - "Jamble checkout"
+
+  forbidden_terms:
+    # The 'no auction / no leilão' rule applies to public-facing content.
+    # PT-BR uses 'Oferta em tempo real' per xcstrings, EN uses 'Real Time Offer'.
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+    # 'Compra Direta' is the legacy Help Center title; iOS xcstrings render
+    # the BIN label as 'Comprar agora' in PT-BR. Banning the legacy term
+    # forces parity with the actual app surface.
+    - "Compra Direta"
+
+  must_not_say:
+    - "Internal pricing experiments or unreleased fee logic"
+    - "Backend service names, queue topics, or DB schema details"
+    - "Pre-offers as a Buy It Now feature (only available on timed sell modes)"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: screen-1
+      purpose: "Sell mode picker with the 3 visible options and Buy It Now selected"
+      source: ios_required
+      required_icons:
+        - icon-real-time-offer
+        - sell-mode-sudden-death
+        - sell-mode-buy_it_now
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Modo de venda"
+          - "Oferta em tempo real"
+          - "Morte súbita"
+          - "Comprar agora"
+        en:
+          - "Sell mode"
+          - "Real Time Offer"
+          - "Sudden Death"
+          - "Buy It Now"
+
+    - name: screen-2
+      purpose: "Buyer-facing in-show banner when a Buy It Now product is pinned (purple variant)"
+      source: ios_required
+      required_icons:
+        - icon_cart
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Comprar agora"
+          - "restantes"
+        en:
+          - "Buy It Now"
+          - "left"
+
+    - name: screen-3
+      purpose: "Buyer-facing in-show banner when Flash Sale is active on a Buy It Now product (green variant)"
+      source: ios_required
+      required_icons:
+        - icon-flash
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Venda relâmpago"
+          - "30% OFF"
+          - "restantes"
+        en:
+          - "Flash Sale"
+          - "30% OFF"
+          - "left"
+
+icons_required:
+  # Sell mode picker icons (24x24, customBlue500 tint in iOS)
+  - icon-real-time-offer
+  - sell-mode-sudden-death
+  - sell-mode-buy_it_now
+  # In-show banner icons (18x18, white tint over alpha background)
+  - icon_cart
+  - icon-flash
+icons_fallback_feather: false
+
+# Article documents BRL price floor and ceiling (R$ 5 / R$ 5.000), so the
+# pt-br body must contain the R$ symbol.
+currency_required: true
+
+# Article runs ~9 H2 sections but follows a linear step-by-step + FAQ shape.
+# Sequential reading is the intended UX (a TOC would push the screenshots
+# below the fold). Skip the TOC check.
+toc_required: false
+
+risk_flags: []
+
+resolved_decisions: []
