@@ -1,0 +1,39 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #0E0E10; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #1F1F23; overflow: hidden; min-height: 720px; padding-bottom: 22px; }
+.statusbar { display: flex; justify-content: space-between; align-items: center; padding: 14px 22px 6px; color: #FFFFFF; font-size: 13px; font-weight: 600; letter-spacing: 0.2px; }
+.statusbar-right { display: flex; align-items: center; gap: 4px; }
+.statusbar-right span { width: 4px; height: 4px; background: #FFFFFF; border-radius: 50%; opacity: 0.92; }
+.step-row { display: flex; gap: 6px; padding: 18px 22px 10px; }
+.step-bar { flex: 1; height: 3px; border-radius: 2px; background: #2A2A2E; }
+.step-bar.active { background: #FFFFFF; }
+.step-label { padding: 0 22px; font-size: 12px; color: #8E8E93; letter-spacing: 0.5px; text-transform: uppercase; }
+.section-header { padding: 16px 22px 6px; display: flex; justify-content: space-between; align-items: baseline; color: #FFFFFF; font-size: 13px; font-weight: 500; letter-spacing: 0.4px; }
+.section-header .opt { color: #8E8E93; font-weight: 400; font-size: 12px; }
+.text-area { margin: 0 22px; background: #181818; border-radius: 12px; padding: 14px 16px; color: #6B6B70; font-size: 15px; min-height: 52px; }
+.notes-area { margin: 0 22px; background: #181818; border-radius: 12px; padding: 14px 16px; color: #6B6B70; font-size: 15px; min-height: 52px; }
+.date-row { margin: 0 22px; background: #181818; border-radius: 10px; padding: 16px; display: flex; align-items: center; gap: 8px; color: #FFFFFF; font-size: 16px; }
+.date-row .ico { width: 21px; height: 22px; flex-shrink: 0; display: inline-block; }
+.repeat-card { margin: 8px 22px 0; background: #181818; border-radius: 12px; padding: 14px 16px; }
+.repeat-row { display: flex; align-items: center; justify-content: space-between; color: #FFFFFF; font-size: 15px; }
+.toggle { width: 44px; height: 26px; background: #4D4D52; border-radius: 13px; position: relative; }
+.toggle::after { content: ""; position: absolute; top: 2px; left: 2px; width: 22px; height: 22px; background: #FFFFFF; border-radius: 50%; }
+.repeat-row.opacity { opacity: 0.55; }
+</style></head><body><div class="phone">
+<div class="statusbar"><div>9:41</div><div class="statusbar-right"><span></span><span></span><span></span></div></div>
+<div class="step-row"><div class="step-bar active"></div><div class="step-bar active"></div><div class="step-bar active"></div><div class="step-bar active"></div></div>
+<div class="step-label">Step 4 of 4</div>
+<div class="section-header"><span>DESCRIPTION</span><span class="opt">optional</span></div>
+<div class="text-area">Describe your live here</div>
+<div class="section-header"><span>NOTES</span><span class="opt">optional, 0/200</span></div>
+<div class="notes-area">Additional notes</div>
+<div class="section-header"><span>DATE</span></div>
+<!-- Assets.xcassets/icon-calendar.imageset, RESOURCES/Assets.xcassets/icon-calendar.imageset/icon-calendar.svg -->
+<div class="date-row"><span class="ico" aria-label="icon-calendar"><svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.125 2.25C6.81535 2.25 7.375 2.80964 7.375 3.5V4.75H13.6251V3.5C13.6251 2.80964 14.1848 2.25 14.8751 2.25C15.5655 2.25 16.1251 2.80964 16.1251 3.5V4.75H17.375C18.4105 4.75 19.25 5.58946 19.25 6.625V17.875C19.25 18.9105 18.4105 19.75 17.375 19.75H3.625C2.58947 19.75 1.75 18.9105 1.75 17.875V6.625C1.75 5.58946 2.58947 4.75 3.625 4.75H4.875V3.5C4.875 2.80964 5.43465 2.25 6.125 2.25ZM5.5 9.4375C5.32741 9.4375 5.1875 9.57741 5.1875 9.75V13.5C5.1875 13.6726 5.32741 13.8125 5.5 13.8125H9.25C9.42259 13.8125 9.5625 13.6726 9.5625 13.5V9.75C9.5625 9.57741 9.42259 9.4375 9.25 9.4375H5.5Z" fill="white"/>
+</svg></span><span>Select your date</span></div>
+<div class="repeat-card">
+<div class="repeat-row"><span>Repeats</span><span class="toggle"></span></div>
+</div>
+</div></body></html>

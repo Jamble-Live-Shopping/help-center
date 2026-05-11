@@ -2,157 +2,144 @@
 
 ## What you'll learn
 
-This guide explains how to create and schedule a live show on Jamble. You'll learn how to set up your show title, choose a category, add a cover image, set the date and time, and use repeat settings to schedule recurring shows.
+This guide explains how to create and schedule a live show on Jamble in four steps: title, tag, cover, and details (date, time, repeat). You'll also see how to edit a show you already scheduled and what happens to your followers when the show goes live.
 
 ## Before you start
 
 You need:
 - An approved seller account on Jamble
-- Products listed and ready to sell (you can add them to your show later)
-- A cover image ready (or you can pick one from the built-in Unsplash library)
+- Email, phone, address, and payment method already set in your profile (Jamble asks for these before your first show)
+- A cover image ready in your camera roll, or none (you can search a free Unsplash photo right inside the app)
 
-## Step by step
+## Where to start
 
-### Step 1: Start creating a show
+Open your profile in the app and tap **Schedule a Show**. That is the only path into the create-show flow. If any required profile field is missing, Jamble asks you to complete it before opening the flow.
 
-Tap the **create button** (the + icon) at the bottom of the app, then select the option to create a new show.
+## Step 1: type the show title
 
-![Create menu with options for New Listing and Schedule a Show](./assets/mockups/schedule-a-show__create-menu__en.png)
+The first screen is just one centered text field. This is what buyers will see when they scroll the upcoming-shows calendar.
 
-### Step 2: Enter your show title
+![Step 1 screen with placeholder Type your show title and a white Next pill at the bottom](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/schedule-a-show__show-title-input__en__v3.png)
 
-The first screen asks you to type your show title. This is what buyers will see when browsing upcoming shows, so make it clear and specific.
-
-![Create a new live show form with title input field and Next button](./assets/mockups/schedule-a-show__create-live-show__en.png)
+Tap the field, type the title, then tap **Next**. If you try to move on without text, Jamble shows a "No title" alert asking you to type something.
 
 **Good titles:**
-- "Sneakers Nike e Adidas - Vários tamanhos"
-- "Camisetas vintage streetwear - Lote novo"
-- "Pokémon TCG - Boosters e singles"
+- "Pokémon TCG, boosters and singles"
+- "Sneakers Nike and Adidas, several sizes"
+- "Vintage streetwear tees, fresh batch"
 
-**Bad titles:**
-- "Live" (too vague)
-- "Vem!" (tells buyers nothing)
+**Vague titles to avoid:**
+- "Live"
+- "Come join!"
 
-### Step 3: Select a tag (category)
+The more specific the title, the more it works in your favor in the show calendar.
 
-Choose a tag that best describes what you'll be selling. Buyers use tags to find shows that match their interests.
+## Step 2: pick a tag
 
-![Select 1 Tag screen with grid of category buttons including Collectible, Pokémon, Die-cast, Magic, Other TCGs, Activewear, Contemporary, Beauty, Shoes, Luxury, Jewelry, and Kids](./assets/mockups/schedule-a-show__select-tag-picker__en.png)
+The tag is the show's category. You can only pick **one**, and it decides which filters surface your show to buyers.
 
-You can only select **one tag per show**. Choose the one that best matches the majority of what you'll sell. If you skip this step, your show will default to "Collectibles."
+![Step 2 screen with twelve tags in two columns and Pokémon selected with a white background](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/schedule-a-show__show-tags-grid__en__v3.png)
 
-### Step 4: Add a cover image
+Tap the tag that best describes what you'll sell. The selected tag turns white, the others stay dark. Tap **Next** when you're ready.
 
-Choose a cover image for your show. This is the thumbnail buyers will see in their feed and on the show calendar.
+Think of the tag as the buyer's main filter. If most of your show is Pokémon TCG, pick **Pokémon**, even if you'll have one or two items from another category.
 
-You have two options:
-- **Import from library** — pick a photo from your phone's gallery
-- **Unsplash** — search and pick a free stock photo from Unsplash
+## Step 3: add a cover image
 
-![Select a cover image screen with Import from library and Search Unsplash options](./assets/mockups/schedule-a-show__select-cover-image__en.png)
+The cover is the thumbnail buyers see in the calendar and in feed cards. You have two options on the same screen.
 
-After selecting an image, you can crop it to fit the display format. A clear, eye-catching image of the products you'll be selling works best.
+![Step 3 screen with Import from library button, Unsplash search bar, and a grid of suggested photos](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/schedule-a-show__show-cover-options__en__v3.png)
 
-### Step 5: Set the date and time
+- **Import from library**: opens your camera roll. After picking, you crop the image to 1:1 inside the app.
+- **Unsplash**: Jamble pre-loads photos based on your tag. You can type a different search if you prefer.
 
-Pick when your show will go live. Tap **Select your date** to open the date and time picker.
+A photo of the actual products in your show beats a generic image. Buyers decide whether to watch from the thumbnail alone.
 
-![schedule-show-date form with title and date selection field](./assets/mockups/schedule-a-show__schedule-show-date__en.png)
+## Step 4: set date, time, and details
 
-**Scheduling rules:**
-- You cannot schedule a show in the past
-- There must be at least **1 hour** between your shows — if you already have a show at 20:00, your next one must be at 21:00 or later
-- You can schedule shows as far in advance as you want
+The last screen pulls the rest together: description, notes, date, and the option to repeat the show.
 
-### Step 6: Add a description and notes (optional)
+![Step 4 screen with Description, Notes, and Date sections plus a calendar icon and a Repeats card](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/schedule-a-show__show-details-form__en__v3.png)
 
-You can add two types of extra text:
+- **DESCRIPTION** (optional). Short text that appears for buyers scrolling the calendar. Keep it to 1 or 2 sentences.
+- **NOTES** (optional, up to 200 characters). Notes visible to your audience during the show. Great for rules, announcements, or reminders such as "Free shipping over $20".
+- **DATE**. Tap **Select your date** to open the native picker. You cannot pick a date in the past. The **Repeats** bar stays disabled until you pick a date.
+- **Repeats**. Turns recurring scheduling on. Detailed below.
 
-- **Description** — a short summary of your show. Shown to buyers browsing the show calendar. Keep it concise
-- **Notes** — additional notes visible to your audience during the show (up to 200 characters). Great for rules, announcements, or reminders
+Once a date is set, the repeat card becomes interactive.
 
-![schedule-show-form: form with description and notes textarea fields for live event details](./assets/mockups/schedule-a-show__schedule-show-form__en.png)
+## Repeat the show automatically
 
-### Step 7: Set up recurring shows (optional)
+Use **Repeats** when you go live on a fixed schedule. Jamble creates every show in the series at once.
 
-If you want to go live on a regular schedule, you can set your show to repeat automatically.
+Configure two fields:
+- **Every**: pick the unit (Day, Week, or Month) and the number of units (every 1, 2, 3 weeks, for example)
+- **Ends**: pick how the series stops. It can be a specific date (**On Date**) or a fixed number of shows (**After 1 Show**, **After 3 Shows**, **After 5 Shows**, **After 10 Shows**)
 
-Toggle the repeat option on, then configure:
-- **How often**: every X days, weeks, or months
-- **When to stop**: after a specific number of shows (1, 3, 5, or 10) or on a specific date
+Repeats can **only be configured at creation**. Once the show is created, the repeats panel no longer shows up when you edit.
 
-![repeat-schedule: Form with toggle for repeat settings, stepper input for frequency (1 week), and dropdown for end condition (after 3 lives)](./assets/mockups/schedule-a-show__repeat-schedule__en.png)
+## How to create and who is notified
 
-When you enable repeat, Jamble creates multiple shows at once. You can create up to **10 shows** in a single batch.
+When every required field is filled, the final button becomes available. Tap it to confirm. From that point:
 
-**Note:** Repeat settings can only be configured when creating a show. You cannot add or change repeat settings after the show is created.
+- The show goes into the public Jamble calendar
+- Your followers see the show in their feed and can turn on native app reminders
+- You can keep adding products and adjusting details any time before going live
 
-### Step 8: Create your show
+Reminder notifications are controlled by the app, not by you. Followers who opted in to notifications from your account get a heads-up when the show is about to start.
 
-When everything looks good, tap **Create Show** (or **Create X shows** if using repeat). Your show is now scheduled and visible to buyers.
+## Edit a scheduled show
 
-![Create Show primary button screen](./assets/mockups/schedule-a-show__create-show__en.png)
+To edit, open your profile, find the show, and tap to open the edit screen. You can change:
+- **Title**
+- **Tag**
+- **Cover image**
+- **Date and time** (with a limit, see below)
+- **Description** and **Notes**
 
-Your followers will see your upcoming show in their feed, and it will appear on the show calendar.
+You cannot add or change **Repeats** after the show is created. If you want to change the cadence, cancel the series and start a new one.
 
-## Editing a scheduled show
+### Postpone limit
 
-To edit a show you've already scheduled, go to your profile and find the show. Tap it to open the edit screen.
+You can move the show's time **to a later slot** at most **3 times**. Moving it earlier does not count. Once you hit the cap, Jamble blocks further changes and shows a "Postpone Limit, this Show cannot be postponed anymore" warning.
 
-You can change:
-- **Title** — update what your show is called
-- **Tag** — switch to a different category
-- **Cover image** — upload a new thumbnail
-- **Date and time** — reschedule your show (within limits)
-- **Description and notes** — update your text
+If you see the warning with one move left (used 2 of 3), it's a good time to lock in the final date, because the next move will be denied.
 
-You **cannot** change the repeat settings once a show is created.
+## Cancel a show
 
-**Postpone limit:** You can reschedule a show to a later date up to **3 times**. After that, the date is locked. Moving a show to an earlier time does not count as a postpone.
-
-When you hit the limit, you'll see:
-
-![Postpone Limit alert dialog explaining show cannot be postponed](./assets/mockups/schedule-a-show__postpone-limit-dialog__en.png)
-
-## Canceling a show
-
-If you need to cancel a scheduled show, open it and look for the cancel or delete option. Your show will be removed from the calendar and your followers will no longer see it.
+To cancel, open the show and use the cancel or delete option. The show disappears from the calendar and your followers stop seeing it.
 
 ## Important tips
 
-- **Schedule during peak hours.** Evenings (19:00-22:00) and weekends tend to get more viewers in Brazil
-- **Use a clear cover image.** A photo of your actual products performs much better than a generic image. Buyers decide whether to watch based on the thumbnail
-- **Set up recurring shows.** Regular shows build a loyal audience. If you go live every Thursday at 20:00, your buyers will come back
-- **Add products before the show.** You can add products to your show after scheduling it. The more products ready before going live, the smoother your show will be
-- **Use notes for your audience.** Add a pinned note like "Frete grátis acima de R$ 100" or "Aceito ofertas em todos os itens" to set expectations
+- **Schedule during peak hours.** 7 PM to 10 PM and weekends draw more buyers in Brazil
+- **Use a clear cover.** A photo of the real products in the show converts better than a generic Unsplash image
+- **Use repeats to build an audience.** Every Thursday at 8 PM becomes a habit and your buyers come back
+- **Add products before the show.** You can prep the list while the show is scheduled
+- **Use Notes for rules.** "Free shipping over $20" or "Open to offers on every item" save questions during the show
 
 ## Common questions
 
-**Can I schedule multiple shows at the same time?**
-Not at exactly the same time. There must be at least 1 hour between your shows. Use the repeat feature to create a series of shows automatically.
+**Can I schedule two shows at the same time?**
+No. Each show takes a single slot on your calendar. For back-to-back shows, leave a reasonable gap between them so they don't overlap.
 
-**Can I edit the date after scheduling?**
-Yes, but you can only push the show to a later date up to 3 times. Moving it earlier does not count toward this limit.
+**Can I change the date after scheduling?**
+Yes, within the limit above: up to 3 moves to a later time. Moving to an earlier time does not consume the limit.
 
 **What happens if I don't go live at the scheduled time?**
-Your show remains on the calendar. Buyers who show up will see that you haven't started yet. It's bad for your reputation to schedule and not show up, so only schedule shows you plan to host.
+The show stays on the calendar and buyers who show up will see the waiting screen. Repeating that pattern hurts your reputation on the platform.
 
-**Can I add products after scheduling the show?**
-Yes. You can add, remove, or rearrange products in your show at any time before going live.
+**Can I add products later?**
+Yes. You can add, remove, and reorder products at any time before the show goes live.
 
-**How many tags can I choose?**
-One tag per show. Choose the one that best represents what you'll sell.
+**How many tags can I pick per show?**
+Just one. Jamble uses that tag as the main discovery filter for your show.
 
-**What's the maximum title length?**
-There is no strict character limit, but keep it concise — short, descriptive titles perform best. On Android, the title field allows up to 60 characters.
+**Can I use a video as a cover?**
+No. The cover is a still image, in 1:1 ratio.
 
-**Can I use a video as a cover instead of an image?**
-No. Only still images are supported as cover photos.
-
-**Do my followers get notified when I schedule a show?**
-Yes. When you create a show, your followers will see it in their feed. They may also receive a notification when your show is about to start.
+**Are my followers notified when I schedule?**
+Yes. The show appears in your followers' feed and those who opted in to notifications get a reminder before it starts.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Talk to the team through the in-app chat or email support@jambleapp.com.

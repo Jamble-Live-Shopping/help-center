@@ -1,0 +1,146 @@
+# Flow contract for schedule-a-show. v2 rewrite scope.
+# See process/templates/article-flow.yml for field documentation.
+# See process/00-RUNBOOK.md for the canonical 8-phase workflow.
+#
+# Mapping: 4 mockup screens map 1:1 to the iOS CreateShowStep enum
+# (Model/CreateShowStep.swift). showTitle, showTags, showCover, showDetails
+# are the four steps the user walks through inside CreateShowV2ViewController.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+
+job_to_be_done: "Help sellers create and schedule a show in advance, set its title, products, time, and notify followers"
+
+source_of_truth:
+  ios_files:
+    - LIVE_SHOPPING/Create/Show/Model/CreateShowStep.swift
+    - LIVE_SHOPPING/Create/Show/Views/CreateShowV2ViewController.swift
+    - LIVE_SHOPPING/Create/Show/Views/CreateShowTextFieldViewController.swift
+    - LIVE_SHOPPING/Create/Show/Views/CreateShowTagsV2ViewController.swift
+    - LIVE_SHOPPING/Create/Show/Views/CreateShowCoverPhotoViewController.swift
+    - LIVE_SHOPPING/Create/Show/Views/CreateShowDetailsViewController.swift
+    - LIVE_SHOPPING/Create/Show/Views/Components/RepeatContainerView.swift
+    - LIVE_SHOPPING/Create/Show/ViewModel/CreateShowViewModel.swift
+    - LIVE_SHOPPING/Show/Model/Show.swift
+    - PROFILE/Views/ProfileViewController.swift
+    - TABBAR/View/JambleTabBarController.swift
+    - RESOURCES/Localizable.xcstrings
+    - RESOURCES/Assets.xcassets/icon-calendar.imageset/icon-calendar.svg
+  backend_files: []
+  legal: []
+  support_context: []
+
+content_contract:
+  must_answer:
+    - "Jamble Pokémon Unsplash"
+  forbidden_terms:
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+  must_not_say:
+    - "Internal scheduling implementation details"
+    - "Backend service names or endpoints"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: show-title-input
+      purpose: "Step 1: title text field, the first screen of the create-show flow (CreateShowTextFieldViewController)"
+      source: ios_required
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      # Text-only screen: iOS source has no icon assets in this view.
+      # The textfield is centered on a dark background with a tinted
+      # placeholder. Anchor: html_must_not_contain ALL three
+      # icon-blockers per PR #92 rule 10e.
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+      html_must_contain:
+        pt-br:
+          - "Digite o título de seu show"
+        en:
+          - "Type your show title"
+
+    - name: show-tags-grid
+      purpose: "Step 2: tag selection grid, one tap to pick a single category (CreateShowTagsV2ViewController)"
+      source: ios_required
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      # Text-only screen: tag cells are pure text labels in a 2-column
+      # collection view. The Next pill at the bottom hosts a system
+      # chevron.right but the surfaces under audit (the tag cells) are
+      # text-only. Anchor: html_must_not_contain ALL three blockers.
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+      html_must_contain:
+        pt-br:
+          - "Pokémon"
+          - "Seguinte"
+        en:
+          - "Pokémon"
+          - "Next"
+
+    - name: show-cover-options
+      purpose: "Step 3: cover image selection, Import from library button + Unsplash photo picker grid (CreateShowCoverPhotoViewController)"
+      source: ios_required
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      # Text-only contract for the Import row: the Apple SF Symbol "photo"
+      # is a system asset, not a Jamble Assets.xcassets imageset, so the
+      # mockup uses a plain text button per PR #92 rule 10e (option B).
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+      html_must_contain:
+        pt-br:
+          - "Importar da biblioteca"
+        en:
+          - "Import from library"
+
+    - name: show-details-form
+      purpose: "Step 4: details form with Description, Notes, Date selector and Repeat toggle (CreateShowDetailsViewController)"
+      source: ios_required
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      # Real-icon anchor: the date row literally embeds icon-calendar
+      # via UIImageView(image: UIImage(named: "icon-calendar")) per
+      # CreateShowDetailsViewController.swift:106. PR #92 rule 10e
+      # option A: declare required_icons + render the real SVG verbatim.
+      required_icons:
+        - icon-calendar
+      html_must_contain:
+        pt-br:
+          - "DESCRIÇÃO"
+          - "NOTAS"
+          - "DATA"
+          - "Repetições"
+          - "Selecione sua data"
+        en:
+          - "DESCRIPTION"
+          - "NOTES"
+          - "DATE"
+          - "Repeats"
+          - "Select your date"
+
+icons_required:
+  - icon-calendar
+icons_fallback_feather: false
+
+currency_required: false  # article does not document prices
+toc_required: false       # 14 H2 in step-by-step layout, TOC would add little
+
+risk_flags: []
+resolved_decisions: []
