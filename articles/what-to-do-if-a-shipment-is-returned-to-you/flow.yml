@@ -73,6 +73,34 @@ mockup_plan:
         - "<img"
         - "<svg"
         - "icon-"
+      # Deterministic visible_text contract (PR #117, Step 2.6 ground-truth).
+      # Status label + description resolve through backend transaction.py
+      # because action=None for DELIVERY_RETURNED and the seller's
+      # status_label falls back to `status` (line 418: "Canceled" / "Cancelado"),
+      # while status_desc reads from description() at lines 636-637.
+      # ship-title resolves through xcstrings (SaleViewController.swift:43
+      # uses literal "Order Number"). ship-addr is runtime data (JAM-... id).
+      visible_text:
+        - selector: ".status-label"
+          source: backend
+          path: "jamble_backend/src/entities/transaction.py:412-418"
+          locale_values:
+            en: "Canceled"
+            pt-br: "Cancelado"
+        - selector: ".status-desc"
+          source: backend
+          path: "jamble_backend/src/entities/transaction.py:636-637"
+          locale_values:
+            en: "Your item could not be delivered and was returned to you"
+            pt-br: "Seu item não pôde ser entregue e foi devolvido a você"
+        - selector: ".ship-title"
+          source: xcstrings
+          key: "Order Number"
+        - selector: ".ship-addr"
+          source: user_content
+      visible_text_allowlist:
+        - selector: ".ship-addr"
+          reason: "Runtime transaction id (JAM-YYYY-MM-NNNNNN), already covered by user_content entry"
 
     # Screen 2: Sales-list filter tabs with the "Devolvido" / "Returned"
     # tab visible. Real iOS asset: transaction_alert_red.imageset (red
@@ -101,6 +129,60 @@ mockup_plan:
       # `<svg` appears in the HTML.
       required_icons:
         - transaction_alert_red
+      # Deterministic visible_text contract (PR #117, Step 2.6 ground-truth).
+      # Nav title + 6 filter pills resolve through xcstrings (Sales /
+      # TransactionFilter labels). For "To Ship" and "In Delivery" the
+      # xcstrings file only ships the pt-BR localization (en uses the key
+      # as the source literal via sourceLanguage:en) ; declared as backend
+      # so the validator can compare both locales. Row pills resolve through
+      # backend transaction.py:418 ("Canceled" / "Cancelado" for
+      # delivery_returned, since TransactionV3Cell.swift:197 reads
+      # action ?? status and action=None for DELIVERY_RETURNED). Row title
+      # and meta line are runtime data (product titles + interpolated
+      # "Order number: %@" with the runtime id).
+      visible_text:
+        - selector: ".nav"
+          source: xcstrings
+          key: "Sales"
+        - selector: ".tabs > .tab:nth-of-type(1)"
+          source: xcstrings
+          key: "All"
+        - selector: ".tabs > .tab:nth-of-type(2)"
+          source: backend
+          path: "Jamble/TRANSACTION/Models/TransactionFilter.swift:60"
+          locale_values:
+            en: "To Ship"
+            pt-br: "Para envio"
+        - selector: ".tab.tab-shipped"
+          source: backend
+          path: "Jamble/TRANSACTION/Models/TransactionFilter.swift:63"
+          locale_values:
+            en: "In Delivery"
+            pt-br: "Em entrega"
+        - selector: ".tab.tab-completed"
+          source: xcstrings
+          key: "Completed"
+        - selector: ".tab.selected"
+          source: xcstrings
+          key: "Returned"
+        - selector: ".tabs > .tab:nth-of-type(6)"
+          source: xcstrings
+          key: "Canceled"
+        - selector: ".row .title"
+          source: user_content
+        - selector: ".row .meta"
+          source: user_content
+        - selector: ".row .pill"
+          source: backend
+          path: "jamble_backend/src/entities/transaction.py:412-418"
+          locale_values:
+            en: "Canceled"
+            pt-br: "Cancelado"
+      visible_text_allowlist:
+        - selector: ".row .title"
+          reason: "User-supplied product title (Charizard Holo 1999, Hot Wheels Treasure Hunt), runtime data"
+        - selector: ".row .meta"
+          reason: "Runtime interpolation of xcstrings 'Order number: %@' with the JAM-... id, full line cannot be matched as literal"
 
     # Screen 3: buyer-side order detail after delivery_returned. Shows
     # the refund-timing description verbatim from backend transaction.py:
@@ -129,6 +211,31 @@ mockup_plan:
         - "<img"
         - "<svg"
         - "icon-"
+      # Deterministic visible_text contract (PR #117, Step 2.6 ground-truth).
+      # Buyer-side variant: same banner structure as Screen 1 but the
+      # description comes from the is_buyer=True branch at transaction.py:
+      # 631-632 (refund-timing copy with "5 business days").
+      visible_text:
+        - selector: ".status-label"
+          source: backend
+          path: "jamble_backend/src/entities/transaction.py:412-418"
+          locale_values:
+            en: "Canceled"
+            pt-br: "Cancelado"
+        - selector: ".status-desc"
+          source: backend
+          path: "jamble_backend/src/entities/transaction.py:631-632"
+          locale_values:
+            en: "Your order could not be delivered and was returned to the seller. You'll receive a refund on your payment method within 5 business days"
+            pt-br: "Seu pedido não pôde ser entregue e foi devolvido ao vendedor. Você receberá um reembolso no método de pagamento em até 5 dias úteis"
+        - selector: ".ship-title"
+          source: xcstrings
+          key: "Order Number"
+        - selector: ".ship-addr"
+          source: user_content
+      visible_text_allowlist:
+        - selector: ".ship-addr"
+          reason: "Runtime transaction id (JAM-YYYY-MM-NNNNNN), already covered by user_content entry"
 
 icons_required:
   - transaction_alert_red
