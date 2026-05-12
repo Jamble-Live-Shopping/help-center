@@ -1,0 +1,33 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #0C131D; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.18); border: 1px solid #E9EAEF; overflow: hidden; padding: 18px 12px 18px; display: flex; flex-direction: column; }
+.handle { width: 40px; height: 4px; background: rgba(255,255,255,0.25); border-radius: 2px; margin: 0 auto 14px; }
+.modal-title { color: #FFFFFF; font-size: 17px; font-weight: 600; text-align: center; margin-bottom: 16px; letter-spacing: -0.01em; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 8px; padding: 0 4px 16px; }
+.row { display: contents; }
+.card { aspect-ratio: 3/4; border-radius: 14px; background-size: cover; background-position: center; position: relative; overflow: hidden; }
+.card-1 { background: linear-gradient(160deg, #5b3da8 0%, #3b5dbf 60%, #1e2a44 100%); }
+.card-2 { background: linear-gradient(180deg, #1f2733 0%, #3d342a 60%, #6b4a2a 100%); }
+.card-3 { background: linear-gradient(160deg, #2a3656 0%, #4a4a90 70%, #161e30 100%); }
+.card-4 { background: linear-gradient(180deg, #1f2733 0%, #2a3a4f 50%, #4b6f9e 100%); }
+.card.selected { outline: 3px solid #7E53F8; }
+.card .pill-live { position: absolute; top: 6px; left: 6px; background: #F04437; color: #FFFFFF; font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 8px; letter-spacing: 0.5px; }
+.card .pill-viewers { position: absolute; top: 6px; right: 6px; background: rgba(12,19,29,0.7); color: #FFFFFF; font-size: 9px; font-weight: 600; padding: 2px 6px; border-radius: 8px; display: flex; align-items: center; gap: 3px; }
+.card .pill-viewers .dot { width: 6px; height: 6px; border-radius: 50%; background: #FFFFFF; }
+.card .seller-row { position: absolute; bottom: 6px; left: 6px; right: 6px; display: flex; align-items: center; gap: 5px; }
+.card .seller-row .av { width: 16px; height: 16px; border-radius: 50%; background: linear-gradient(135deg, #FF7AA4, #7E53F8); border: 1px solid rgba(255,255,255,0.5); }
+.card .seller-row .name { color: #FFFFFF; font-size: 10px; font-weight: 600; text-shadow: 0 1px 2px rgba(0,0,0,0.5); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bottom { padding: 8px 4px 0; border-top: 0.5px solid #2E3C52; margin-top: 8px; }
+.btn-primary { width: 100%; height: 48px; background: #7E53F8; color: #FFFFFF; border-radius: 24px; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; }
+</style></head><body><div class="phone">
+  <div class="handle"></div>
+  <div class="modal-title">Selecione um Live</div>
+  <div class="grid">
+    <div class="card card-1 selected"><div class="pill-live">LIVE</div><div class="pill-viewers"><div class="dot"></div>128</div><div class="seller-row"><div class="av"></div><div class="name">marina_pkmn</div></div></div>
+    <div class="card card-2"><div class="pill-live">LIVE</div><div class="pill-viewers"><div class="dot"></div>54</div><div class="seller-row"><div class="av"></div><div class="name">rafa.diecast</div></div></div>
+    <div class="card card-3"><div class="pill-live">LIVE</div><div class="pill-viewers"><div class="dot"></div>32</div><div class="seller-row"><div class="av"></div><div class="name">lucas_tcg</div></div></div>
+    <div class="card card-4"><div class="pill-live">LIVE</div><div class="pill-viewers"><div class="dot"></div>21</div><div class="seller-row"><div class="av"></div><div class="name">bia.collect</div></div></div>
+  </div>
+  <div class="bottom"><div class="btn-primary">Selecionar show ao vivo</div></div>
+</div></body></html>

@@ -1,0 +1,124 @@
+# Flow contract for raid-another-seller-s-show (v2 rewrite, real-2 batch).
+# Sources verified against Jamble-iOS LIVE_SHOPPING/Raid/ (commit @ 2026-05-11).
+# RaidViewController has 3 RaidType states (.initial, .ended, .audience) which
+# map 1:1 to the 3 mockup screens declared below.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+
+job_to_be_done: "Help sellers raid another active seller's show at the end of their own: how to trigger the raid, what viewers see, what the host receives"
+
+source_of_truth:
+  ios_files:
+    - LIVE_SHOPPING/Raid/View/RaidViewController.swift
+    - LIVE_SHOPPING/Raid/View/RaidShowChooserViewController.swift
+    - LIVE_SHOPPING/Raid/ViewModel/RaidViewModel.swift
+    - LIVE_SHOPPING/Raid/ViewModel/RaidShowChooserViewModel.swift
+    - LIVE_SHOPPING/Host/View/ShowHostViewController.swift
+    - LIVE_SHOPPING/Audience/View/ShowAudienceViewController.swift
+    - LIVE_SHOPPING/Chat/View/Cell/ShowRaidMessageCell.swift
+    - RESOURCES/Localizable.xcstrings
+  backend_files: []
+  legal: []
+  support_context: []
+
+content_contract:
+  must_answer:
+    - "raid"
+    - "live show"
+    - "host"
+  forbidden_terms:
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+  must_not_say:
+    - "Internal endpoint or service names"
+    - "Server-side payload field names"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: screen-1
+      purpose: "The Jamble Raid intro modal (RaidType.initial): two profile photos + send icon, description, Select Live Show / End without Raid buttons"
+      source: ios_required
+      required_icons: [send_icon]
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      visible_text:
+        - selector: ".modal-title"
+          source: swift_literal
+          path: "LIVE_SHOPPING/Raid/View/RaidViewController.swift:21"
+          value: "The Jamble Raid"
+        - selector: ".accent"
+          source: xcstrings
+          key: "sending your viewers to a seller"
+        - selector: ".btn.btn-primary"
+          source: xcstrings
+          key: "Select Live Show"
+        - selector: ".btn.btn-leave"
+          source: swift_literal
+          path: "LIVE_SHOPPING/Raid/View/RaidViewController.swift:123"
+          value: "End without Raid"
+      visible_text_allowlist:
+        - selector: ".avatar-left"
+          reason: "Decorative seller-initial placeholder (single letter), not localized copy"
+        - selector: ".avatar-right"
+          reason: "Decorative unknown-target glyph ('?'), not localized copy"
+    - name: screen-2
+      purpose: "Select a Live chooser (RaidShowChooserViewController): grid of live show cards with one selected and Select Live Show CTA"
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      visible_text:
+        - selector: ".modal-title"
+          source: xcstrings
+          key: "Select a Live"
+        - selector: ".name"
+          source: user_content
+        - selector: ".btn-primary"
+          source: xcstrings
+          key: "Select Live Show"
+      visible_text_allowlist:
+        - selector: ".pill-live"
+          reason: "Stylistic uppercase 'LIVE' badge on show-card thumbnails (CSS-driven visual treatment, not localized via xcstrings 'Live' titlecase token)"
+    - name: screen-3
+      purpose: "Raid confirmed end-show panel (RaidType.ended): Success chip, large send icon, Thanks copy, End Show CTA"
+      source: ios_required
+      required_icons: [send_icon]
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      visible_text:
+        - selector: ".modal-title"
+          source: swift_literal
+          path: "LIVE_SHOPPING/Raid/View/RaidViewController.swift:21"
+          value: "The Jamble Raid"
+        - selector: ".chip"
+          source: swift_literal
+          path: "LIVE_SHOPPING/Raid/View/RaidViewController.swift:73"
+          value: "Success!"
+        - selector: ".desc"
+          source: xcstrings
+          key: "Thanks for supporting the community! You can now end your Show"
+        - selector: ".btn-primary"
+          source: xcstrings
+          key: "End Show"
+
+icons_required:
+  - send_icon
+
+icons_fallback_feather: false
+
+currency_required: false
+
+# TOC silenced: article reads naturally top-to-bottom for a single-flow walkthrough,
+# matches battles golden-flow handling. Override if reviewer requests a "Neste guia"
+# section in a follow-up.
+toc_required: false
+
+risk_flags: []
+resolved_decisions: []

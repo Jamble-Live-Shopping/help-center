@@ -1,104 +1,99 @@
-# Fazer um Raid no Show de Outro Vendedor
+# Fazer um Raid no show de outro vendedor
 
-> Este recurso está disponível apenas no **iPhone** no momento.
+> Este recurso esta disponivel apenas no **iPhone** no momento.
 
-## O que você vai aprender
+## O que voce vai aprender
 
-Este guia explica como o **Jamble Raid** funciona. Um raid permite enviar seus espectadores para o show ao vivo de outro vendedor quando você termina de vender — é uma ótima maneira de apoiar a comunidade e ajudar outros vendedores a ter mais audiência.
+Um **raid** envia seus espectadores para o show ao vivo de outro vendedor quando voce esta encerrando o seu. E uma forma de apoiar a comunidade e fortalecer relacoes com outros sellers da Jamble. Este guia mostra como acionar o raid, o que o vendedor anfitriao recebe e o que os seus espectadores veem.
 
-## Antes de começar
+## Antes de comecar
 
-Você precisa de:
+Voce precisa de:
+
 - Uma conta de vendedor aprovada na Jamble (iPhone)
-- Um show que esteja ao vivo
-- Pelo menos outro vendedor ao vivo no mesmo momento (você vai vê-lo na tela de raid)
+- Um show ao vivo em andamento (sem batalha ativa, voce nao pode iniciar um raid durante uma batalha)
+- Pelo menos outro vendedor ao vivo no mesmo momento (caso contrario, a tela de selecao aparece vazia)
 
-## O que é um raid?
+## O que e um raid
 
-Um raid é quando você **redireciona sua audiência para o show de outro vendedor** ao terminar o seu. Em vez de seus espectadores simplesmente saírem quando seu show acaba, eles são enviados para outro show ao vivo — dando a esse vendedor um impulso de espectadores.
+Um raid acontece quando voce termina o seu show e oferece sua audiencia para o show de outro vendedor que esta ao vivo. Em vez de seus espectadores simplesmente sairem, eles veem um painel anunciando o raid com a opcao de entrar no show do outro vendedor.
 
-Pense nisso como passar o bastão para outro vendedor.
+E como passar o bastao para um colega.
 
-**Raid vs Batalha:** São recursos diferentes. Um raid envia sua audiência para outro show (seu show encerra). Uma batalha é quando dois vendedores competem ao vivo lado a lado (ambos shows ficam ativos). Este artigo é sobre raids apenas.
+**Raid e Batalha sao recursos diferentes.** Um raid encaminha sua audiencia para outro show e e acionado ao encerrar o seu (somente o show do outro vendedor segue ativo). Uma batalha coloca dois vendedores competindo lado a lado e mantem os dois shows ativos ao mesmo tempo. Este guia trata apenas de raids.
 
-## Passo a passo
+## Passo 1, abra a tela do Raid
 
-### Passo 1: Decida encerrar seu show
+Quando estiver pronto para encerrar, toque no botao voltar do seu show ou abra o menu de acoes e selecione **Fim do Show**. Em vez de fechar direto, o iPhone abre o painel **The Jamble Raid**, que e o ponto de partida.
 
-Quando estiver pronto para terminar, toque no **botão voltar** ou abra o menu de ações e selecione **"End Show."**
+A tela mostra a sua foto, um icone de envio e uma silhueta desfocada do destino que voce ainda nao escolheu.
 
-Em vez de encerrar imediatamente, a Jamble mostra a tela de raid.
+![Painel The Jamble Raid em fundo escuro com avatar do vendedor, icone de envio e silhueta desfocada, descricao em portugues e botoes Selecionar show ao vivo e End without Raid](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/raid-another-seller-s-show__screen-1__pt-br__v3.png)
 
-### Passo 2: Escolha fazer o raid ou pular
+A partir daqui voce tem duas opcoes:
 
-A tela de raid aparece com o título **"The Jamble Raid"**:
+- Toque em **Selecionar show ao vivo** para escolher outro vendedor
+- Toque em **End without Raid** para encerrar direto, sem enviar ninguem
 
-![Tela intro do The Jamble Raid com título e instruções para apoiar a comunidade enviando espectadores para um vendedor ao vivo, com dois botões de ação](./assets/mockups/raid-another-seller-s-show__jamble-raid-intro__pt-br.png)
+## Passo 2, escolha um show na lista
 
-Você tem duas opções:
-- **"Select Live Show"** — navegue pelos shows ao vivo e escolha um para fazer o raid
-- **"End without Raid"** — pule o raid e encerre diretamente
+Se voce tocou em Selecionar show ao vivo, o iPhone abre a lista **Selecione um Live**. Ela mostra todos os shows ao vivo no momento, exceto o seu, organizados em uma grade de duas colunas.
 
-### Passo 3: Escolha um show ao vivo
+![Grade Selecione um Live com quatro cards de shows ao vivo, um destacado em roxo selecionado, badges LIVE e contadores de espectadores, com botao Selecionar show ao vivo no fim](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/raid-another-seller-s-show__screen-2__pt-br__v3.png)
 
-Se tocar em "Select Live Show", uma tela com o título **"Select a Live"** aparece mostrando todos os shows ao vivo (exceto o seu).
+Toque no card do show que quer apoiar. Ele ganha uma borda roxa indicando a selecao e o botao **Selecionar show ao vivo** aparece na parte de baixo. Toque nele para confirmar.
 
-Toque no show que quer fazer o raid, depois toque em **"Select Live Show"** para confirmar.
+Se nenhum outro vendedor estiver ao vivo, a tela mostra **Ainda nao ha shows para invadir**. Nesse caso, basta encerrar o show normalmente.
 
-Se nenhum outro vendedor estiver ao vivo, você verá: *"There's no shows to raid yet."* Nesse caso, encerre normalmente.
+## Passo 3, confirme e encerre
 
-### Passo 4: Raid confirmado
+Apos confirmar, o raid e enviado instantaneamente e o painel troca para o estado de sucesso, com o icone de envio em tamanho grande, o selo verde **Success!** e uma copy de agradecimento.
 
-Após selecionar um show, o raid acontece instantaneamente. Você verá uma tela de sucesso:
+![Painel The Jamble Raid em estado de sucesso com icone de envio grande em fundo roxo, selo verde Success!, mensagem de agradecimento em portugues e botao Fim do Show](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/raid-another-seller-s-show__screen-3__pt-br__v3.png)
 
-![raid-success-end-show: Diálogo de sucesso com mensagem e botão Encerrar Show](./assets/mockups/raid-another-seller-s-show__raid-success-end-show__pt-br.png)
+Toque em **Fim do Show** para finalizar o seu show. Ate voce confirmar aqui, voce ainda esta tecnicamente no ar, entao aproveite para se despedir antes de fechar.
 
-Toque em **"End Show"** para finalizar.
+## O que seus espectadores veem
 
-### O que seus espectadores veem
+No momento que o raid e confirmado, todos que estavam assistindo ao seu show veem um painel cheio: a sua foto, um icone de envio e a foto do vendedor que voce escolheu, com uma mensagem como *Aymar esta invadindo marina_pkmn!* e o botao **Join marina_pkmn Show**. Logo abaixo aparece um lembrete de que serao redirecionados automaticamente.
 
-Seus espectadores veem uma tela anunciando o raid:
+Voce tambem incentiva o engajamento: a tela sugere que eles **avisem no chat** que estao vindo do seu show, o que ajuda o anfitriao a saber quem chegou pelo raid.
 
-![raid-notification: Foto do usuário para foto de outro vendedor com mensagem "is Raiding" e botão para entrar no show](./assets/mockups/raid-another-seller-s-show__raid-notification__pt-br.png)
+## O que o vendedor anfitriao recebe
 
-Seus espectadores podem tocar em **"Join [Nome] Show"** para ir ao show do outro vendedor. Eles não são forçados — é uma escolha.
+Uma mensagem especial aparece no chat do show que recebeu o raid: **[Seu nome] esta invadindo com [N] pessoas**. Ele percebe imediatamente que tem novos espectadores chegando pelo raid, geralmente em volume maior do que a entrada organica do feed.
 
-### O que o vendedor que recebeu o raid vê
+Esse evento e visivel para todos no chat, o que costuma gerar uma onda de boas-vindas.
 
-Uma mensagem especial aparece no chat dele: **"[Seu nome] is Raiding with [N] people"** — avisando que novos espectadores estão chegando do seu show.
+## Regras importantes
 
-## Regras do raid
+- **Um raid por show.** Apos confirmar, o seletor nao reabre. Se voce voltar para a tela de encerramento, o iPhone vai direto para o estado de sucesso
+- **Voce pode escolher qualquer show ao vivo.** Nao precisa seguir o vendedor, qualquer show em andamento esta disponivel
+- **Seu proprio show nao aparece na lista.** O filtro automatico exclui voce
+- **Espectadores nao sao redirecionados a forca.** Eles veem o painel e tocam **Join** se quiserem ir, voce envia o convite, nao um redirect
+- **Nada de raid durante uma batalha.** Se voce esta em uma batalha ativa, encerre-a antes de iniciar o raid
+- **O seu show so termina quando voce toca Fim do Show.** O raid sozinho nao encerra a transmissao
 
-- **Um raid por show.** Você só pode fazer um raid por show
-- **Você pode fazer raid em qualquer show ao vivo.** Não precisa seguir o outro vendedor — qualquer show ao vivo está disponível
-- **Você não pode fazer raid no seu próprio show.** Seus próprios shows não aparecem na seleção
-- **Seu show não encerra automaticamente.** Após o raid, você ainda precisa tocar em "End Show"
-- **Espectadores escolhem ir.** O raid sugere que seus espectadores entrem no outro show, mas eles não são forçados
-- **Não é possível fazer raid durante uma batalha.** Se estiver em uma batalha ativa, precisa encerrá-la primeiro
+## Dicas
 
-## Dicas importantes
-
-- **Faça raid em vendedores da mesma categoria.** Seus espectadores vieram pelos seus produtos — eles têm mais chance de ficar em um show similar
-- **Anuncie o raid.** Antes de tocar em encerrar, diga à audiência "Vou fazer um raid no show de [vendedor] — venham com a gente!" Isso faz mais pessoas irem
-- **Raids constroem comunidade.** Outros vendedores lembram quando você faz raid neles e provavelmente vão retribuir
-- **Faça raid mesmo com pouca audiência.** Enviar 5-10 pessoas para outro show já faz diferença
+- **Raid em vendedores da mesma categoria.** Seus espectadores vieram pelos seus produtos, eles tendem a ficar se o show recebido tiver itens similares (Pokemon TCG, diecast, etc.)
+- **Anuncie antes de tocar Fim do Show.** Diga algo como *vou fazer um raid no marina_pkmn, vem comigo*. A conversao para o show recebido aumenta bastante
+- **Raids constroem relacao.** Vendedores se lembram de quem fez raid neles e tendem a retribuir
+- **Mesmo audiencia pequena ajuda.** Enviar 5 ou 10 pessoas ja faz diferenca para o vendedor recebido
 
 ## Perguntas frequentes
 
-**Posso escolher não fazer raid?**
-Sim. Quando a tela de raid aparecer, toque em "End without Raid" para encerrar sem enviar espectadores.
+**Posso escolher nao fazer raid?**
+Sim. Toque em End without Raid no primeiro painel para encerrar direto, sem enviar ninguem.
 
-**Posso fazer raid em um show que não está ao vivo?**
-Não. Apenas shows ao vivo aparecem na seleção.
+**Meus espectadores sao obrigados a ir ao outro show?**
+Nao. Eles veem o painel, podem tocar em Join para entrar ou simplesmente fechar e sair.
 
-**Meus espectadores são obrigados a ir para o outro show?**
-Não. Eles veem a tela do raid e podem escolher tocar em "Join" ou sair. É uma sugestão, não um redirecionamento forçado.
+**Posso fazer mais de um raid no mesmo show?**
+Nao. Depois do primeiro raid, o seletor nao reabre. O painel ja entra direto no estado de sucesso.
 
-**Posso fazer mais de um raid por show?**
-Não. Apenas um raid por show.
-
-**O raid está disponível no Android?**
-Ainda não. O raid está disponível apenas no iPhone no momento.
+**O recurso esta disponivel no Android?**
+No momento o recurso fica disponivel apenas no iPhone.
 
 ## Precisa de ajuda?
 

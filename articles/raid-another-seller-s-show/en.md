@@ -4,110 +4,97 @@
 
 ## What you'll learn
 
-This guide explains how the **Jamble Raid** works. A raid lets you send your viewers to another seller's live show when you're done selling — it's a great way to support the community and help other sellers get more viewers.
+A **raid** sends your viewers to another seller's live show when you are ending yours. It is a way to support the community and build relationships with other Jamble sellers. This guide shows how to trigger a raid, what the host receives, and what your viewers see.
 
 ## Before you start
 
 You need:
+
 - An approved seller account on Jamble (iPhone)
-- A show that is currently live
-- At least one other seller live at the same time (you'll see them in the raid screen)
+- A live show in progress (with no active battle, you cannot start a raid during a battle)
+- At least one other seller live at the same time (otherwise the picker comes up empty)
 
-## What is a raid?
+## What a raid is
 
-A raid is when you **redirect your audience to another seller's show** as you finish yours. Instead of your viewers just leaving when your show ends, they get sent to another live show — giving that seller a boost in viewers.
+A raid happens when you finish your show and hand your audience to another seller who is currently live. Instead of your viewers just leaving, they see a takeover panel announcing the raid with the option to join the other seller's show.
 
-Think of it as passing the torch to another seller.
+Think of it as passing the torch to a teammate.
 
-**Raid vs Battle:** These are different features. A raid sends your audience to another show (your show ends). A battle is when two sellers compete live side by side (both shows stay active). This article is about raids only.
+**Raid and Battle are different features.** A raid forwards your audience to another show and only triggers when you end yours (only the other seller's show stays active). A battle puts two sellers competing side by side and keeps both shows live at the same time. This guide is about raids only.
 
-## Step by step
+## Step 1, open the Raid panel
 
-### Step 1: Decide to end your show
+When you are ready to wrap up, tap your show's back arrow or open the action menu and pick **End Show**. Instead of closing right away, the iPhone opens the **The Jamble Raid** panel, which is the entry point.
 
-When you're ready to finish your show, tap the **back button** or open the action menu and select **"End Show."**
+The screen shows your photo, a send icon, and a blurred silhouette for the destination you have not chosen yet.
 
-Instead of ending immediately, Jamble shows you the raid screen.
+![The Jamble Raid panel on a dark background with the seller's avatar, send icon, blurred silhouette, English description, and Select Live Show plus End without Raid buttons](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/raid-another-seller-s-show__screen-1__en__v3.png)
 
-### Step 2: Choose to raid or skip
+From here you have two options:
 
-The raid screen appears with the title **"The Jamble Raid"**:
+- Tap **Select Live Show** to pick another seller
+- Tap **End without Raid** to wrap up right away without sending anyone
 
-![The Jamble Raid screen with title, description text, and two action buttons](./assets/mockups/raid-another-seller-s-show__the-jamble-raid__en.png)
+## Step 2, pick a show from the list
 
-You have two options:
-- **"Select Live Show"** — browse live shows and choose one to raid
-- **"End without Raid"** — skip the raid and end your show directly
+If you tapped Select Live Show, the iPhone opens the **Select a Live** list. It shows every show that is live right now except yours, laid out as a two-column grid.
 
-### Step 3: Pick a live show to raid
+![Select a Live grid with four live show cards, one highlighted with a purple selected outline, LIVE badges and viewer counters, and a Select Live Show button at the bottom](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/raid-another-seller-s-show__screen-2__en__v3.png)
 
-If you tap "Select Live Show," a screen titled **"Select a Live"** appears showing all currently live shows (except your own).
+Tap the card of the show you want to support. It gets a purple selected outline and the **Select Live Show** button appears at the bottom. Tap it to confirm.
 
-![Select a Live: grid of 4 live show cards with seller names and a Select Live Show button](./assets/mockups/raid-another-seller-s-show__select-live-show__en.png)
+If no other seller is live, the screen shows **There's no shows to raid yet**. In that case just end your show normally.
 
-Tap on the show you want to raid, then tap **"Select Live Show"** to confirm.
+## Step 3, confirm and end
 
-If no other seller is currently live, you'll see: *"There's no shows to raid yet."* In that case, just end your show normally.
+Once you confirm, the raid is sent instantly and the panel switches to the success state, with the large send icon, the green **Success!** pill, and a thank-you copy.
 
-### Step 4: Raid confirmed
+![The Jamble Raid panel in success state with a large send icon on a purple background, a green Success! pill, an English thank-you message, and an End Show button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/raid-another-seller-s-show__screen-3__en__v3.png)
 
-After selecting a show, the raid happens instantly. You'll see a success screen:
+Tap **End Show** to wrap up your show. Until you confirm here, you are still technically live, so use the moment to say goodbye before closing.
 
-![raid-success-confirmation: Success message with body text and End Show button](./assets/mockups/raid-another-seller-s-show__raid-success-confirmation__en.png)
+## What your viewers see
 
-Tap **"End Show"** to finish your show.
+The moment the raid is confirmed, everyone watching your show sees a full-bleed panel: your photo, a send icon, and the photo of the seller you picked, with a message like *Aymar is Raiding marina_pkmn!* and a **Join marina_pkmn Show** button. Just below it, a reminder tells them they will be redirected automatically.
 
-### What your viewers see
+You can boost engagement too: the screen encourages viewers to **announce in the chat** that they came from your show, which helps the host spot who arrived through the raid.
 
-After you raid, your viewers see a screen announcing the raid:
+## What the host receives
 
-![raid-seller-confirmation: Two profile photos with arrow, raiding announcement, participant count, and join show button](./assets/mockups/raid-another-seller-s-show__raid-seller-confirmation__en.png)
+A special message lands in the chat of the show that received the raid: **[Your name] is Raiding with [N] people**. The host sees right away that new viewers are coming in through the raid, usually a bigger spike than organic feed entries.
 
-Your viewers can tap **"Join [Name] Show"** to go to the raided seller's show. They are not forced to go — it's their choice.
+The event is visible to everyone in the chat, which usually triggers a welcome wave.
 
-### What the raided seller sees
+## Important rules
 
-A special message appears in the raided seller's chat: **"[Your name] is Raiding with [N] people"** — letting them know new viewers are coming in from your show.
+- **One raid per show.** Once you confirm, the picker does not reopen. If you go back to the End Show flow, the iPhone jumps straight to the success state
+- **You can pick any live show.** No need to follow the seller, any show currently live is available
+- **Your own show is not in the list.** The filter excludes you automatically
+- **Viewers are not forced to redirect.** They see the panel and tap **Join** if they want, you are sending an invite, not a redirect
+- **No raid during a battle.** If you are in an active battle, end it before you start a raid
+- **Your show only ends when you tap End Show.** The raid alone does not stop your stream
 
-## Raid rules
+## Tips
 
-- **One raid per show.** You can only raid once per show. After raiding, you cannot raid another show
-- **You can raid any live show.** There's no requirement to follow the other seller or be at a certain level — any live show is available
-- **You cannot raid yourself.** Your own shows won't appear in the selection
-- **Your show doesn't end automatically.** After the raid, you still need to tap "End Show" to finish
-- **Viewers choose to go.** The raid suggests your viewers join the other show, but they're not forced — they tap a button to join
-- **Cannot raid during a battle.** If you're in an active battle, you'll need to end the battle first before you can raid
-
-## Important tips
-
-- **Raid sellers in a similar category.** Your viewers came for your type of products — they'll be more likely to stay in a show with similar items
-- **Announce the raid.** Before tapping end, tell your audience "I'm going to raid [seller name] — come join us over there!" This gets more people to follow through
-- **Raids build community.** Other sellers remember when you raid them, and they're likely to return the favor. It's one of the best ways to build relationships with other sellers on Jamble
-- **Raid even with a small audience.** Even sending 5-10 people to another show makes a difference and builds goodwill
+- **Raid sellers in the same category.** Your viewers came for your kind of product, they tend to stay if the show they land on carries similar items (Pokemon TCG, diecast, etc.)
+- **Announce before you tap End Show.** Say something like *I'm raiding marina_pkmn, come over*. Conversion to the host's show goes up noticeably
+- **Raids build relationships.** Sellers remember who raided them and tend to return the favor
+- **Even a small audience helps.** Sending 5 or 10 people already makes a real difference for the receiving seller
 
 ## Common questions
 
 **Can I choose not to raid?**
-Yes. When the raid screen appears, just tap "End without Raid" to end your show without sending viewers anywhere.
+Yes. Tap End without Raid on the first panel to wrap up right away without sending anyone.
 
-**Can I raid a show that isn't live?**
-No. Only currently live shows appear in the selection. You can only raid shows that are actively broadcasting.
+**Are my viewers forced to go to the other show?**
+No. They see the panel and can tap Join to enter, or just close it and leave.
 
-**What if no one is live when I want to raid?**
-You'll see a message saying there are no shows to raid. Just end your show normally.
+**Can I raid more than once on the same show?**
+No. After the first raid the picker does not reopen. The panel jumps straight to the success state.
 
-**Do my viewers have to go to the raided show?**
-No. They see the raid screen and can choose to tap "Join" or just leave. It's a suggestion, not a forced redirect.
-
-**Can I raid more than once per show?**
-No. You can only raid once per show. After raiding, the option is no longer available.
-
-**Is the raid feature available on Android?**
-Not yet. Raid is currently available on iPhone only. It's planned for Android in a future update.
-
-**Does raiding affect my ongoing sales?**
-No. Your active sales are not affected by the raid. The raid only happens when you're ending your show.
+**Is the feature available on Android?**
+The feature is currently available on iPhone only.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Reach out via the in-app chat or send an email to support@jambleapp.com.
