@@ -1,0 +1,154 @@
+# Flow contract for variants-for-sellers-sizes-and-colors.
+# Worker batch real-2 (2026-05-11).
+#
+# This article is a v2_rewrite that RESCOPES the topic. The original v1
+# was fashion-focused (size charts + color picker), but Jamble Brazil is
+# collectibles-only (72% Pokemon TCG, 21% Diecast, 7% other, GMV-weighted).
+# More importantly, the iOS app has NO "variant" surface: each product has
+# exactly ONE size and ONE color (PRODUCT/Models/ProductSize.swift,
+# PRODUCT/Models/ProductColor.swift) and ONE quantity field.
+#
+# Sellers who carry multi-size or multi-color inventory must create one
+# listing per size/color combination and use "Clone Past Shows Listings"
+# (xcstrings key: "Clone Past Shows Listings" -> pt-BR "Clonar listagens
+# de shows anteriores") to speed up subsequent listings. The article
+# documents this code-faithful flow.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+
+job_to_be_done: "Help sellers list items that come in multiple sizes/colors using the variants flow: how to add variants, set per-variant quantity, list them as a single product"
+
+source_of_truth:
+  ios_files:
+    - PRODUCT/View Models/CreateProductViewModel.swift
+    - PRODUCT/Models/ProductSize.swift
+    - PRODUCT/Models/ProductColor.swift
+    - PRODUCT/Views/CreateProductViewController.swift
+    - PRODUCT/Views/SelectProductAttributeViewController.swift
+    - LIVE_SHOPPING/Host/View/ShowHostViewController.swift
+    - SERVICE/API/Repository/Modules/Product/ProductRepository.swift
+    - SERVICE/API/Repository/Modules/Product/Model/Request/ProductTemplate.swift
+    - RESOURCES/Localizable.xcstrings
+  backend_files: []
+  legal: []
+  support_context: []
+
+content_contract:
+  # must_answer applies to BOTH pt-br.md and en.md (validator does
+  # bilingual scan). Use language-neutral substrings or leave empty.
+  # Empty here because the slug ("variants") would be ambiguous and
+  # adding pt-BR-only words triggers false positives on en.md.
+  must_answer: []
+  # Hard-fail forbidden terms. The brief asked specifically about a
+  # "variants flow". Jamble iOS has no such surface, so we ban the
+  # misleading "variant"-as-a-product-attribute wording to keep the
+  # article code-faithful. We allow the word "variantes" only in the
+  # article title (the slug-mandated wording), the article explicitly
+  # corrects the expectation in the opening section.
+  forbidden_terms:
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+
+  must_not_say:
+    - "Add variant button"
+    - "Variant editor"
+    - "Per-variant inventory"
+    - "Multi-size listing"
+    - "Bulk size selector"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: screen-1
+      purpose: "CreateProduct form Size and Color cells with values filled (one product = one size + one color), code-faithful"
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      # ProductAttributeCell renders title above value (mainStackView axis=.vertical).
+      # Group 1 = Size cell, Group 2 = Color cell. Labels resolve via xcstrings
+      # ("Size", "Color"); selected values ("M", "Black"/"Preto") are runtime
+      # ProductSize.title / ProductColor.title user_content.
+      visible_text:
+        - selector: ".group:nth-of-type(1) .row-title"
+          source: xcstrings
+          key: "Size"
+        - selector: ".group:nth-of-type(1) .row-value"
+          source: user_content
+        - selector: ".group:nth-of-type(2) .row-title"
+          source: xcstrings
+          key: "Color"
+        - selector: ".group:nth-of-type(2) .row-value"
+          source: user_content
+    - name: screen-2
+      purpose: "Show host action sheet with Clone Past Shows Listings option highlighted (the code-faithful 'speed up multi-size listings' path)"
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      # Four action sheet labels all map verbatim to xcstrings. The purple
+      # `.action.highlight` styling on the Clone row is an editorial liberty
+      # (the article highlights this entry visually); the TEXT is verbatim
+      # xcstrings so no allowlist needed for text content.
+      visible_text:
+        - selector: ".sheet .action:nth-of-type(1)"
+          source: xcstrings
+          key: "New Quickie Listing"
+        - selector: ".sheet .action.highlight"
+          source: xcstrings
+          key: "Clone Past Shows Listings"
+        - selector: ".sheet .action.last"
+          source: xcstrings
+          key: "Create Credits Giveaway"
+        - selector: ".cancel"
+          source: xcstrings
+          key: "Cancel"
+    - name: screen-3
+      purpose: "Sellers products list inside show, showing three listings of the same item with different sizes (P, M, G), illustrating the 'one listing per size' rule"
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      # Row titles are product names (user_content). Row meta combines
+      # xcstrings "Size"/"Tamanho" with runtime size value + ProductColor.title
+      # — the composite render is an editorial mockup synthesis (no single iOS
+      # surface emits this exact format), classified as user_content. Prices
+      # are auto-filtered as numeric noise.
+      visible_text:
+        - selector: ".row:nth-of-type(2) .row-title"
+          source: user_content
+        - selector: ".row:nth-of-type(2) .row-meta"
+          source: user_content
+        - selector: ".row:nth-of-type(4) .row-title"
+          source: user_content
+        - selector: ".row:nth-of-type(4) .row-meta"
+          source: user_content
+        - selector: ".row:nth-of-type(6) .row-title"
+          source: user_content
+        - selector: ".row:nth-of-type(6) .row-meta"
+          source: user_content
+      visible_text_allowlist:
+        - selector: ".list-title"
+          reason: "Editorial liberty: '(3)' count suffix appended to xcstrings 'Listings'/'Listagens' label, no single iOS surface emits the composed string verbatim. Mockup adds the count to make the 'one listing per size' rule legible at a glance."
+        - selector: ".qty-pill"
+          reason: "Editorial liberty: 'QTY'/'QTD' abbreviated pill is a mockup-only visual affordance to show inventory at one unit per variant. Not in xcstrings (no abbreviated label exists) and not in Swift source."
+
+icons_required: []
+icons_fallback_feather: false
+
+currency_required: false
+
+# Article is short; the 10 H2 sections are tight and a TOC adds noise.
+# Suppress the toc_missing soft warn.
+toc_required: false
+
+risk_flags:
+  - "Article title contains 'Variantes' (slug-mandated wording, batch real-2 intake), but Jamble iOS has no 'variant' surface: each product has one size + one color + one quantity. Article body explicitly clarifies this in opening section to avoid setting wrong expectations. BR market is collectibles (72% Pokemon TCG, 21% Diecast, 7% other, GMV-weighted 2026-04-19), so multi-size or multi-color inventory is uncommon. The 'workaround' documented (one listing per size/color, use Clone Past Shows Listings to speed up) is code-faithful."
+
+resolved_decisions:
+  - risk: "Article title contains 'Variantes' but iOS has no variant surface"
+    decided_by: "Aymar (worker batch real-2, 2026-05-11)"
+    decided_at: "2026-05-11"
+    rationale: "Slug mandated by intake (intercom_id 14288105 already published with that title in 2026-04 v1). Renaming the slug breaks the Intercom mapping. Article rescopes the body to be code-faithful: one-size-one-color reality, the Clone Past Shows Listings workaround, and the BR collectibles context where variants are rare. The remaining risk is the lingering title wording; reviewers can rename the slug in a follow-up if Intercom mapping is re-keyed."
