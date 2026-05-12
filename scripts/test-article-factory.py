@@ -1523,6 +1523,137 @@ def test_visible_text_backend_locale_values_pass() -> None:
         shutil.rmtree(article, ignore_errors=True)
 
 
+# --- xcstrings snapshot fallback + soft-degrade (post-#117 hybrid F+G-lite) ---
+
+
+def _write_snapshot_at(repo_root: Path, mapping: dict[str, dict[str, str]]) -> Path:
+    snap_dir = repo_root / "scripts"
+    snap_dir.mkdir(parents=True, exist_ok=True)
+    snap_path = snap_dir / "xcstrings-snapshot.json"
+    payload = {
+        "generated_at": "2026-05-12T10:00:00+00:00",
+        "source": "Localizable.xcstrings",
+        "key_count": len(mapping),
+        "strings": mapping,
+    }
+    snap_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False, sort_keys=True), encoding="utf-8")
+    return snap_path
+
+
+def test_visible_text_snapshot_fallback_resolves_track_faixa() -> None:
+    """JAMBLE_IOS_ROOT unset BUT scripts/xcstrings-snapshot.json exists:
+    validator resolves via snapshot and still HARD-fails drifts."""
+    mod = _load_validator_module()
+    article, mockup_dir = _build_visible_text_fixture(
+        html_pt="<html><body><div class='track-btn'>Track</div></body></html>",
+    )
+    try:
+        real_repo = Path(mod.REPO_ROOT)
+        snap_path = real_repo / "scripts" / "xcstrings-snapshot.json"
+        backup = snap_path.read_text(encoding="utf-8") if snap_path.exists() else None
+        try:
+            _write_snapshot_at(real_repo, {"Track": {"en": "Track", "pt-BR": "Faixa"}})
+            xc_data, xc_source = mod._resolve_xcstrings_data(None, real_repo)
+            assert xc_source == "snapshot", f"expected snapshot fallback; got {xc_source!r}"
+            assert xc_data is not None and "Track" in xc_data
+            flow = {
+                "mockup_plan": {"screens": [{"name": "screen-1", "source": "ios_required",
+                    "visible_text": [{"selector": ".track-btn", "source": "xcstrings", "key": "Track"}]}]},
+            }
+            rep = mod.Report(article=str(article))
+            mod._validate_visible_text(rep, article, flow, mockup_dir, xc_data, xc_source)
+            drifts = [f for f in rep.hard_fails if "xcstrings_locale_drift" in f]
+            assert len(drifts) == 1, f"snapshot must hard-fail Track→Faixa drift; got {rep.hard_fails!r}"
+            assert "'Faixa'" in drifts[0]
+            skipped = [w for w in rep.soft_warns if "xcstrings_resolution_skipped" in w]
+            assert not skipped, f"snapshot resolved; no skipped-warn expected; got {rep.soft_warns!r}"
+        finally:
+            if backup is None:
+                snap_path.unlink(missing_ok=True)
+            else:
+                snap_path.write_text(backup, encoding="utf-8")
+    finally:
+        shutil.rmtree(article, ignore_errors=True)
+
+
+def test_visible_text_missing_root_and_missing_snapshot_emits_one_warn() -> None:
+    """No root, no snapshot -> ONE soft warn per article, no cascade."""
+    mod = _load_validator_module()
+    article, mockup_dir = _build_visible_text_fixture(
+        html_pt="""<html><body>
+            <div class='title'>Sell mode</div>
+            <div class='opt-name'>Real Time Offer</div>
+            <div class='opt-sub'>The last offerer wins at the end of the time.</div>
+        </body></html>""",
+    )
+    try:
+        flow = {
+            "mockup_plan": {"screens": [{"name": "screen-1", "source": "ios_required",
+                "visible_text": [
+                    {"selector": ".title", "source": "xcstrings", "key": "Sell mode"},
+                    {"selector": ".opt-name", "source": "xcstrings", "key": "Auction"},
+                    {"selector": ".opt-sub", "source": "xcstrings", "key": "The last bidder wins at the end of the time."},
+                ]}]},
+        }
+        rep = mod.Report(article=str(article))
+        mod._validate_visible_text(rep, article, flow, mockup_dir, None, "")
+        skipped = [w for w in rep.soft_warns if "xcstrings_resolution_skipped" in w]
+        assert len(skipped) == 1, f"expected exactly 1 summary soft warn; got {rep.soft_warns!r}"
+        assert not rep.hard_fails, f"no hard fails expected; got {rep.hard_fails!r}"
+        assert "3" in skipped[0], f"summary must cite skip count; got {skipped[0]!r}"
+    finally:
+        shutil.rmtree(article, ignore_errors=True)
+
+
+def test_visible_text_declared_selectors_covered_when_xcstrings_skipped() -> None:
+    """Declared selectors mark elements covered even when xcstrings can't resolve;
+    prevents visible_text_uncovered cascade."""
+    mod = _load_validator_module()
+    article, mockup_dir = _build_visible_text_fixture(
+        html_pt="""<html><body>
+            <div class='title'>Sell mode</div>
+            <div class='extra'>SOMETHING_NOT_DECLARED</div>
+        </body></html>""",
+    )
+    try:
+        flow = {
+            "mockup_plan": {"screens": [{"name": "screen-1", "source": "ios_required",
+                "visible_text": [{"selector": ".title", "source": "xcstrings", "key": "Sell mode"}]}]},
+        }
+        rep = mod.Report(article=str(article))
+        mod._validate_visible_text(rep, article, flow, mockup_dir, None, "")
+        uncovered = [f for f in rep.hard_fails if "visible_text_uncovered" in f]
+        assert len(uncovered) == 1, f"expected uncovered ONLY on .extra; got {rep.hard_fails!r}"
+        assert "SOMETHING_NOT_DECLARED" in uncovered[0]
+        assert "Sell mode" not in uncovered[0], f".title was declared; got {uncovered[0]!r}"
+    finally:
+        shutil.rmtree(article, ignore_errors=True)
+
+
+def test_visible_text_drift_hard_fails_with_snapshot_available() -> None:
+    """Snapshot path catches drifts as HARD fails (full enforcement in CI)."""
+    mod = _load_validator_module()
+    article, mockup_dir = _build_visible_text_fixture(
+        html_pt="<html><body><div class='nav'>Cancelado</div></body></html>",
+    )
+    try:
+        xc_data = {"Returned": {"en": "Returned", "pt-BR": "Devolvido"}}
+        flow = {
+            "mockup_plan": {"screens": [{"name": "screen-1", "source": "ios_required",
+                "visible_text": [{"selector": ".nav", "source": "xcstrings", "key": "Returned"}]}]},
+        }
+        rep = mod.Report(article=str(article))
+        mod._validate_visible_text(rep, article, flow, mockup_dir, xc_data, "snapshot")
+        drifts = [f for f in rep.hard_fails if "xcstrings_locale_drift" in f]
+        assert len(drifts) == 1, f"snapshot must hard-fail drift; got {rep.hard_fails!r}"
+        assert "'Devolvido'" in drifts[0]
+        assert "'Cancelado'" in drifts[0]
+        skipped = [w for w in rep.soft_warns if "xcstrings_resolution_skipped" in w]
+        assert not skipped, f"snapshot resolved; no skipped-warn; got {rep.soft_warns!r}"
+    finally:
+        shutil.rmtree(article, ignore_errors=True)
+
+
 def test_validator_passes_when_path_in_negative_scan_with_risk_flag() -> None:
     """Correct encoding for "I checked this surface and it's absent": move
     the path to source_of_truth.negative_scan AND raise a matching
@@ -1625,6 +1756,10 @@ TESTS = [
     test_visible_text_invented_string_uncovered,
     test_visible_text_user_content_and_numeric_pass,
     test_visible_text_backend_locale_values_pass,
+    test_visible_text_snapshot_fallback_resolves_track_faixa,
+    test_visible_text_missing_root_and_missing_snapshot_emits_one_warn,
+    test_visible_text_declared_selectors_covered_when_xcstrings_skipped,
+    test_visible_text_drift_hard_fails_with_snapshot_available,
     test_validator_passes_when_path_in_negative_scan_with_risk_flag,
 ]
 
