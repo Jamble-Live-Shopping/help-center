@@ -1,0 +1,101 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Order detail - In Delivery + Tracking (pt-BR)</title><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+
+/* Status card mirroring transactionStatusView (corner radius 16) */
+.status-card { background: #FFFFFF; border-radius: 16px; margin: 12px; padding: 0; box-shadow: 0 1px 8px rgba(0,0,0,0.06); border: 1px solid #EFEFF4; }
+.status-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 14px 15px 0 15px; gap: 10px; }
+.status-label { font-size: 16px; font-weight: 500; color: #7E53F8; line-height: 20px; flex: 1; }
+.received-btn { font-size: 14px; font-weight: 500; color: #2BA84A; border: 1px solid #2BA84A; background: transparent; border-radius: 8px; padding: 5px 10px; line-height: 1.1; white-space: nowrap; cursor: pointer; }
+.action-text { font-family: -apple-system, "SF Pro Rounded", system-ui; font-size: 22px; font-weight: 700; color: #000; padding: 6px 15px 0 15px; line-height: 28px; }
+.step-bar { display: flex; gap: 4px; padding: 12px 15px 0 15px; }
+.step { flex: 1; height: 8px; border-radius: 4px; background: #E5E5EA; }
+.step.active { background: #7E53F8; }
+.delim { height: 2px; background: #E5E5EA; margin: 12px 0 0 0; }
+.ship-section { padding: 14px 15px 12px 15px; }
+.ship-title { font-size: 14px; font-weight: 500; color: #000; }
+.ship-addr { font-size: 14px; color: #8E93A1; line-height: 20px; margin-top: 5px; }
+.ship-addr-name { color: #000; font-weight: 500; }
+
+/* Tracking row blocks */
+.row { display: flex; justify-content: space-between; align-items: flex-start; padding: 10px 15px; gap: 10px; }
+.row-left { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.row-label { font-size: 14px; font-weight: 500; color: #000; }
+.row-value { font-size: 14px; color: #8E93A1; }
+.row-action { font-size: 14px; font-weight: 400; color: #7E53F8; align-self: center; }
+.row-copy { font-size: 14px; font-weight: 400; color: #7E53F8; align-self: center; }
+
+/* Events list */
+.events { padding: 6px 15px 14px 15px; }
+.event { display: flex; gap: 10px; padding: 10px 0; align-items: flex-start; }
+.event-dot { width: 20px; height: 20px; border-radius: 10px; background: #E5E5EA; flex-shrink: 0; margin-left: 5px; margin-top: 2px; }
+.event.first .event-dot { width: 30px; height: 30px; border-radius: 15px; background: #7E53F8; margin-left: 0; margin-top: 0; }
+.event-text { flex: 1; }
+.event-title { font-size: 14px; font-weight: 500; color: #000; line-height: 18px; }
+.event-desc { font-size: 14px; color: #8E93A1; line-height: 18px; margin-top: 4px; }
+</style></head><body>
+<div class="phone">
+  <div class="status-card">
+    <div class="status-row">
+      <div class="status-label">Em entrega</div>
+      <button type="button" class="received-btn">Recebido?</button>
+    </div>
+    <div class="action-text">Chegando amanhã</div>
+    <div class="step-bar">
+      <div class="step active"></div>
+      <div class="step active"></div>
+      <div class="step active"></div>
+      <div class="step"></div>
+      <div class="step"></div>
+    </div>
+
+    <div class="delim"></div>
+    <div class="ship-section">
+      <div class="ship-title">Enviar para</div>
+      <div class="ship-addr"><span class="ship-addr-name">Mariana S.</span><br>Rua das Palmeiras, 123<br>Sao Paulo, SP, 01310-100</div>
+    </div>
+
+    <div class="delim"></div>
+    <div class="row">
+      <div class="row-left">
+        <div class="row-label">Transportadora</div>
+        <div class="row-value">Correios</div>
+      </div>
+      <div class="row-action">Faixa</div>
+    </div>
+
+    <div class="row">
+      <div class="row-left">
+        <div class="row-label">Número de rastreamento</div>
+        <div class="row-value">QB123456789BR</div>
+      </div>
+    </div>
+
+    <div class="delim"></div>
+    <div class="events">
+      <div class="event first">
+        <div class="event-dot"></div>
+        <div class="event-text">
+          <div class="event-title">Objeto encaminhado</div>
+          <div class="event-desc">CDD Vila Maria, Sao Paulo / SP</div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-dot"></div>
+        <div class="event-text">
+          <div class="event-title">Em transito para unidade de distribuicao</div>
+          <div class="event-desc">CTE Sao Paulo, SP</div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-dot"></div>
+        <div class="event-text">
+          <div class="event-title">Objeto postado</div>
+          <div class="event-desc">Agencia Correios Curitiba, PR</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,229 @@
+# Generated from process/templates/article-flow.yml by scripts/init-article-flow.py
+# slug: what-to-do-if-a-package-is-delayed
+# batch entry pre-filled audience, job_to_be_done, source_hints, mockup_plan placeholders
+#
+# Article flow contract.
+#
+# Lives at articles/<slug>/flow.yml. Versioned per article. Read by
+# scripts/validate-article-flow.py and enforced by the
+# validate-article-flow CI workflow.
+#
+# This file is NOT a substitute for process/. The MD doctrine
+# (process/00-RUNBOOK.md, process/03-html-template.md, process/design-system.md,
+# process/12-procedure-compliance.md) remains the source of truth for HOW to
+# write an article. The flow.yml only declares WHAT this specific article is,
+# what sources it draws from, what claims it must verify, what mockups it
+# needs, what it must NOT say, and what risk flags need human review.
+#
+# Convention: every key documented below is required unless tagged optional.
+# Empty arrays are valid (e.g. ios_files: []) but signal "explicitly nothing
+# applies", not "to be filled later".
+
+# Workflow version. Used as a future-proof tag. No behavior bound to this
+# value in the current MVP; the RUNBOOK MD remains the canonical workflow.
+workflow: article-v2
+
+# Mode of work for this article. Used by reviewers to calibrate scope.
+#   v2_rewrite   = full rewrite of an existing article on the v2 mockup pipeline
+#   new_article  = brand new slug, no prior intercom_id
+#   minor_edit   = targeted fix (typo, claim correction), no mockup changes expected
+mode: v2_rewrite
+
+# Audience targeting. Drives reviewer assignment and tone calibration.
+#   seller_br   = active or aspiring sellers in Brazil
+#   buyer_br    = buyers and prospective buyers in Brazil
+#   both        = applies to both audiences (rare; usually means split into two)
+audience: buyer_br
+
+# Single-sentence "job to be done" for the reader. What does the reader walk
+# away with? Used by reviewers to validate the article actually serves this job.
+job_to_be_done: "Help buyers know what to do when an order's shipping is delayed: where to check the status, what triggers a delay, when to contact the seller, refund policy"
+
+# Sources of truth that the article must reflect. Every claim in pt-br.md and
+# en.md must be traceable to one of these. Code audit (Phase 7) cross-checks
+# this list. Empty array = explicitly no source needed (rare; flag with risk).
+source_of_truth:
+  ios_files:  # repo-relative paths in Jamble-iOS, e.g. DISCOUNT/Views/X.swift:220-305
+    - TRANSACTION/Purchase/
+  backend_files:  # repo-relative paths in jamble_backend, e.g. src/entities/referral.py:140-272
+    - jamble_backend/src/entities/transaction.py
+  legal: []              # Notion page ids, ToU section refs (e.g. "Notion 34f9449e Section 25")
+  support_context: []    # Intercom convo ids, Slack thread URLs (optional, for context only)
+  # Negative scan (NEW, batch real-1 calibration, rule 27):
+  # paths the writer verified are absent in Jamble-iOS but ARE relevant to
+  # the article's central claim ("we checked X, surface does not exist").
+  # Each entry expects a matching risk_flags entry. The validator hard-fails
+  # if a negative_scan path actually exists OR if negative_scan is non-empty
+  # AND risk_flags is empty. Activated only when env JAMBLE_IOS_ROOT is set.
+  # negative_scan: []
+
+# Content contract. Three lists with different enforcement.
+content_contract:
+  # Topics the article MUST cover. Validator soft-warns if keywords missing
+  # in pt-br.md and en.md. Use short noun phrases, not full sentences.
+  must_answer: []
+
+  # Deterministic strings or regex patterns that MUST NOT appear in pt-br.md
+  # or en.md. Hard fail. Use this for unambiguous bans (e.g. "auction",
+  # "leilao", competitor names, internal codenames). Each entry is
+  # case-insensitive substring match. Prefix with "regex:" to use a regex
+  # (e.g. "regex:\\bWise\\b" to ban a standalone word).
+  forbidden_terms: []
+
+  # Human-readable phrases / rules describing what NOT to say. Soft warn.
+  # Reviewers use this list during PR review. Validator does NOT tokenize
+  # these into keywords (would create false positives for adjacent legitimate
+  # vocabulary). For deterministic enforcement, use forbidden_terms instead.
+  must_not_say: []
+
+# Mockup plan. One entry per screen the article needs. Validator enforces:
+#   - HTML pair (__pt-br + __en) for each name in mockup-sources/
+#   - PNG pair rendered DPR3 (>=900px wide) in assets/mockups/
+mockup_plan:
+  required: true        # if false, validator skips mockup checks entirely
+  # Allowlist for orphan HTML files (NEW, batch real-1 calibration, rule 26):
+  # any *.html in mockup-sources/ that does NOT match a declared
+  # `<screen.name>__<locale>.html` triggers `mockup_orphan_html` hard fail.
+  # Use this list to grandfather legacy artifacts that cannot be deleted yet.
+  # Document why per entry. Default empty = strict.
+  # allowlist_orphans: []
+  screens:
+    - name: screen-1
+      purpose: "Order detail showing the In Delivery status card with the Arriving Tomorrow estimate banner and the tracking section (Carrier, Tracking Number with copy, Track button, reverse-chronological event list)"
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+      # visible_text contract (PR #117 deterministic gate). The Track / Faixa
+      # drift on this slug was the trigger: PT-BR mockup originally showed
+      # "Track" but the iOS xcstrings PT-BR value for the "Track" key is
+      # "Faixa". The contract below locks every iOS-sourced label so the
+      # validator catches any future drift before it reaches review.
+      #
+      # NOTE on `.status-label` (In Delivery / Em entrega): the iOS xcstrings
+      # key "In Delivery" only declares the pt-BR localization; the EN value
+      # comes from the key itself via the iOS xcstrings fallback (no explicit
+      # `en` stringUnit). Because the validator requires both `en` and `pt-BR`
+      # stringUnit entries for source=xcstrings, this single element uses
+      # source=backend with locale_values so per-locale literals are pinned.
+      # The `path` cites the Swift call site, not the backend, to keep the
+      # provenance trail honest. Once the iOS team adds the EN stringUnit to
+      # Localizable.xcstrings, this entry should flip back to source=xcstrings.
+      visible_text:
+        - selector: ".status-label"
+          source: backend
+          path: "TRANSACTION/Models/TransactionFilter.swift:63"
+          locale_values:
+            en: "In Delivery"
+            pt-br: "Em entrega"
+        - selector: ".received-btn"
+          source: xcstrings
+          key: "Received?"
+        - selector: ".action-text"
+          source: xcstrings
+          key: "Arriving Tomorrow"
+        - selector: ".ship-title"
+          source: xcstrings
+          key: "Ship to"
+        - selector: ".ship-addr"
+          source: user_content
+        - selector: ".row:nth-of-type(7) .row-label"
+          source: xcstrings
+          key: "Carrier"
+        - selector: ".row:nth-of-type(7) .row-value"
+          source: user_content
+        - selector: ".row-action"
+          source: xcstrings
+          key: "Track"
+        - selector: ".row:nth-of-type(8) .row-label"
+          source: xcstrings
+          key: "Tracking Number"
+        - selector: ".row:nth-of-type(8) .row-value"
+          source: user_content
+        - selector: ".event-title"
+          source: user_content
+        - selector: ".event-desc"
+          source: user_content
+    - name: screen-2
+      purpose: "Order detail after Correios returns the package to the seller (status Canceled in red, red progress bar, refund-within-5-business-days description)"
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+      # visible_text contract: status-desc is the localized backend Localized()
+      # tuple from transaction.py:629-633 (delivery_returned, buyer). All other
+      # labels resolve through xcstrings. Order number JAM-2026-05-074521 is
+      # alphanumeric runtime user_content (not pure-numeric noise).
+      visible_text:
+        - selector: ".status-label"
+          source: xcstrings
+          key: "Canceled"
+        - selector: ".status-desc"
+          source: backend
+          path: "jamble_backend/src/entities/transaction.py:629-633"
+          locale_values:
+            en: "Your order could not be delivered and was returned to the seller. You'll receive a refund on your payment method within 5 business days"
+            pt-br: "Seu pedido não pôde ser entregue e foi devolvido ao vendedor. Você receberá um reembolso no método de pagamento em até 5 dias úteis"
+        - selector: ".ship-title"
+          source: xcstrings
+          key: "Ship to"
+        - selector: ".ship-addr"
+          source: user_content
+        - selector: ".row-label"
+          source: xcstrings
+          key: "Order Number"
+        - selector: ".row-value"
+          source: user_content
+
+# iOS icons used in the mockups. Each entry must satisfy ONE of:
+#   1. assets/icons-ios/<name>.svg or .png exists in the repo (preferred,
+#      reusable across articles), OR
+#   2. an HTML mockup-source contains a comment "Assets.xcassets/<name>.imageset"
+#      to document the inline base64 embed.
+# Worker bias: when an icon is reusable, add it to the pool. When one-off,
+# inline embed is OK but must be documented in the HTML comment.
+icons_required: []
+
+# Hard ban on Feather-style stroke SVGs for UI chrome (per process/03-html-template.md
+# section "Embedding real iOS icons"). Default false. Setting to true requires
+# explicit reviewer approval and risk_flag.
+icons_fallback_feather: false
+
+# If the article describes prices, currency_required: true forces validator to
+# fail if pt-br.md does not contain "R$". Set false for articles that don't
+# touch prices (e.g. DM, profile, notifications).
+currency_required: false
+
+# Per-article TOC override.
+#   true  -> hard fail when the article has >= toc_required_h2_count H2
+#            sections without a TOC marker. Use this on a long article
+#            where navigation is critical (>= 8-10 sections, dense FAQs).
+#   false -> skip the TOC check entirely. Use this on short articles or
+#            articles where a TOC would be redundant.
+#   unset -> fall back to workflow toc_policy in process/workflows/article-v2.yml
+#            (currently `warn`, calibrated against historical content).
+# This field is OPTIONAL; remove the line when leaving on workflow default.
+# toc_required: false
+
+# Legal, product, or operational tensions to surface in the PR body.
+# HARD FAIL when metadata.state == "published" AND risk_flags is non-empty
+# AND resolved_decisions is empty: an article with active risks cannot
+# ship as published. To unblock, either resolve the risk and remove it
+# from risk_flags, or document the decision in resolved_decisions and
+# leave the risk in place for traceability.
+risk_flags: []
+
+# Per-risk decisions that explicitly green-light publication despite a
+# remaining risk_flag. One entry per risk that was reviewed by humans
+# and intentionally accepted. Use this when a risk cannot be removed
+# (e.g. legal label staying ambiguous) but the team agreed to ship.
+# Each entry: who made the call, when, and why.
+resolved_decisions: []
