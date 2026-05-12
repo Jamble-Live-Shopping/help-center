@@ -87,4 +87,5 @@ currency_required: true
 toc_required: false
 
 risk_flags: []
-resolved_decisions: []
+resolved_decisions:
+  - "screen-3 pt-BR Sudden Death row shows '2 Bids' (literal English) because the xcstrings key 'Sudden Death \\nStarts at %@ · %lld Bids' ships with 'Bids' untranslated in pt-BR today — mockup mirrors live iOS value, not an invented label"
