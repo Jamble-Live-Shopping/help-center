@@ -1,0 +1,253 @@
+# Flow contract for the Creating and Managing Real Time Offers article.
+# v2 rewrite scope. See process/templates/article-flow.yml for field docs
+# and process/00-RUNBOOK.md for the canonical workflow.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+
+job_to_be_done: "Help sellers run the Real Time Offer (AUCTION) sale mode during a live show: set up, watch bids land, accept the winning offer"
+
+source_of_truth:
+  ios_files:
+    # Sale type enum: titles, subtitles, icon names for the 4 modes
+    - LIVE_SHOPPING/Show/Model/ShowSaleType.swift
+    # Sell-mode picker cell that renders each option with the price + timer textfields
+    - PRODUCT/Views/Components/SellModeDefaultCell.swift
+    # Pre-Offer toggle row (only available on AUCTION + SUDDEN_DEATH with qty 1)
+    - PRODUCT/Views/Components/PreBidToggleCell.swift
+    # Live host overlay (Real-Time Sales label, current value, chronometer)
+    - LIVE_SHOPPING/Host/View/ShowHostViewController.swift
+    # Sale bar view shared by host + audience (host action button: Start, %lld offers, ended states)
+    - LIVE_SHOPPING/SaleView/View/ShowSaleView.swift
+    # Sale state / action titles (Start Real Time Offer, %lld offers, Offer ended)
+    - LIVE_SHOPPING/Show/Model/ShowSale.swift
+    # Host product list cell with Start / Rerun buttons + cancel-unpaid alert
+    - LIVE_SHOPPING/Host/View/Cell/ShowHostProductCell.swift
+    - LIVE_SHOPPING/Host/View/ShowHostProductListViewController.swift
+  backend_files: []
+  legal: []
+  support_context: []
+
+content_contract:
+  must_answer:
+    # Soft check (rule 14): each phrase must use only >=5-char tokens that
+    # show up in BOTH pt-br.md and en.md. Cognates + product names keep the
+    # validator clean while documenting JTBD coverage.
+    - "Jamble Pre-Offer"
+    - "Jamble timer"
+
+  forbidden_terms:
+    # Auction / leilão are deprecated user-facing terms (Jamble policy).
+    # iOS xcstrings use 'Real Time Offer' / 'Oferta em tempo real' on every
+    # surface even though the Swift enum case is named AUCTION.
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+    # 'Sudden Death' stays in EN (xcstrings value), but pt-BR must use the
+    # accented 'Morte súbita'. Ban the unaccented form to lock parity with
+    # the app surface and match the choose-quantities post-mortem fix.
+    - "Morte subita"
+    # 'Compra Direta' is the legacy Help Center wording; iOS now ships
+    # 'Comprar agora' as the BIN label in PT-BR. Ban the legacy term so
+    # the Real Time Offer comparison block stays in sync with the app.
+    - "Compra Direta"
+    # 'Pre-Bid' is the source key, the user-facing string in iOS is
+    # 'Pre-Offer' (EN) / 'Pré-oferta' (PT-BR). Ban the legacy form.
+    - "Pre-Bid"
+    - "Pré-lance"
+
+  must_not_say:
+    - "Internal backend names, queue topics, or DB schema details"
+    - "Sale segmentation by Followers / Buyers (audience target enum exists in iOS but no user-facing picker)"
+    - "Reason picker on cancel-sale (no such surface exists in iOS today; cancel-unpaid alert offers Rerun / Cancel only)"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: screen-1
+      purpose: "Sell-mode picker with Real Time Offer selected and the Start at / Timer (Seconds) textfields revealed"
+      source: ios_required
+      required_icons:
+        - icon-real-time-offer
+        - sell-mode-sudden-death
+        - sell-mode-buy_it_now
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Modo de venda"
+          - "Oferta em tempo real"
+          - "Morte súbita"
+          - "Comprar agora"
+          - "Comece em"
+          - "Duração (segundos)"
+        en:
+          - "Sell mode"
+          - "Real Time Offer"
+          - "Sudden Death"
+          - "Buy It Now"
+          - "Start at"
+          - "Timer (Seconds)"
+      # PR #117 / Step 2.6: deterministic ground-truth gate. Every label in
+      # the sell-mode picker maps to an xcstrings key. The picker title +
+      # the three mode options (title + subtitle) + the two textfield labels
+      # are all source-bound. The two textfield VALUES (R$ 5,00 / $5.00 / 20)
+      # are auto-filtered as pure numeric/currency noise.
+      visible_text:
+        - selector: ".picker-title"
+          source: xcstrings
+          key: "Sell mode"
+        - selector: ".opt-selected-wrap .opt-name"
+          source: xcstrings
+          key: "Auction"
+        - selector: ".opt-selected-wrap .opt-sub"
+          source: xcstrings
+          key: "The last bidder wins at the end of the time."
+        - selector: ".field-row .field:nth-of-type(1) .field-label"
+          source: xcstrings
+          key: "Start at"
+        - selector: ".field-row .field:nth-of-type(2) .field-label"
+          source: xcstrings
+          key: "Timer (Seconds)"
+        - selector: '[aria-label="sell-mode-sudden-death"] + .opt-text .opt-name'
+          source: xcstrings
+          key: "Sudden Death"
+        - selector: '[aria-label="sell-mode-sudden-death"] + .opt-text .opt-sub'
+          source: xcstrings
+          key: "No added time, even if someone bids. "
+        - selector: '[aria-label="sell-mode-buy_it_now"] + .opt-text .opt-name'
+          source: xcstrings
+          key: "Buy It Now"
+        - selector: '[aria-label="sell-mode-buy_it_now"] + .opt-text .opt-sub'
+          source: xcstrings
+          key: "Offer a discount on an item during a limited time."
+
+    - name: screen-2
+      # Layout anchor (post 2026-05-11 AM + PM false-negative patches):
+      # The product card has two columns. LEFT = productView
+      # (Ogx-lZ-qCX): thumb + product title + meta. RIGHT = sale-area
+      # cp3-Bb-DxC: saleAmountLabel on top (JST-50-JEJ, trailing via
+      # rAq-QJ-REu) and saleTimerButton below (mFP-1R-Tk3, trailing
+      # via Sjh-oJ-6bY, top>=saleAmount.bottom via vAm-e3-sKd). The
+      # hostActionButtons stack view (ShowSaleView.swift:53,
+      # programmatic) is NOT inside T4f-up-gzW; it renders as a
+      # SEPARATE row below the product card.
+      # CSS shape (per process/16-layout-proof-table.md Step 2.5):
+      #   .product-row = flex row with .thumb + .pinfo (LEFT)
+      #                  and .sale-status (RIGHT, align-items: flex-end,
+      #                  pushed right by .pinfo flex:1).
+      #   .sale-status > .price-val + .sale-timer-btn (stacked, trailing).
+      #   .action-row = sibling of .product-row, justify-content: center.
+      # saleTimerButton config: height 20, transparent bg, icon-leading,
+      # title widthAnchor=45 right-aligned, semibold body S, foreground
+      # .content.warning amber (or .content.negativeSoft red finishing).
+      # setTime() at ShowSaleView.swift:861 sets auction_time_icon for
+      # AUCTION ; icon_skull for SUDDEN_DEATH.
+      # Forbidden layouts:
+      #   - NOT a top-centered countdown pill (AM false negative)
+      #   - NOT inside a class whose parent flex is visibly left-aligned
+      #     (PM false negative: .price-wrap as first child of
+      #     justify-content: space-between)
+      #   - NOT inline with the action button as siblings of
+      #     justify-content: space-between (timer is in the right column,
+      #     action button is a separate row below)
+      purpose: "Host live overlay during an active Real Time Offer sale: Real-Time Sales label, current sale value, host action button with offer count, and the compact saleTimerButton below the price (auction_time_icon + time text)"
+      source: ios_required
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+        - layout_matches_ios_source  # per process/16-layout-proof-table.md, requires _work/<slug>__layout-proof.md ; covers screen-2 layout-anchor comment above
+      required_icons:
+        - auction_time_icon
+      html_must_contain:
+        pt-br:
+          - "Vendas em tempo real"
+          - "0:18"
+          - "ofertas"
+        en:
+          - "Real-Time Sales"
+          - "0:18"
+          - "offers"
+      # PR #117 / Step 2.6: only "Real-Time Sales" / "Vendas em tempo real" is
+      # an xcstrings-bound label on this screen. The product card .pname / .psize
+      # are runtime user content. Everything else (status bar, viewer pills,
+      # fake host row, price/timer numerics, templated "%lld bids" button) is
+      # mockup decoration covered by the allowlist below.
+      visible_text:
+        - selector: ".top-label"
+          source: xcstrings
+          key: "Real-Time Sales"
+        - selector: ".product-card .pname"
+          source: user_content
+        - selector: ".product-card .psize"
+          source: user_content
+      visible_text_allowlist:
+        - selector: ".status-bar"
+          reason: "Fake iPhone status bar (9:41, ··· 5G), not iOS chrome"
+        - selector: ".top-right"
+          reason: "Fake live-viewer pills (red dot + 142, ··· menu); mockup decoration, not iOS labels"
+        - selector: ".top-values"
+          reason: "Illustrative price values (R$ 75 / R$ 75/item / $75/item); locale-bound currency examples, not source-bound"
+        - selector: ".host-row"
+          reason: "Mockup host row: invented avatar, fake @maria_cards handle, illustrative 'Live now' / 'Ao vivo agora' status label"
+        - selector: ".action-btn"
+          reason: "Host action button rendering template '%lld bids' (xcstrings key) with illustrative count 3 → '3 offers' / '3 ofertas'; count is example, template is source-bound via ShowSale.swift:124"
+
+    - name: screen-3
+      purpose: "Pre-Offer toggle row visible in the create-product flow for AUCTION / SUDDEN_DEATH products with quantity 1"
+      source: ios_required
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+      html_must_contain:
+        pt-br:
+          - "Ativar Pré-oferta?"
+          - "As ofertas podem ser feitos antes do início do show"
+        en:
+          - "Enable Pre-Offer?"
+          - "Offers can be placed before the show starts"
+      # PR #117 / Step 2.6: every label in the Pre-Offer toggle row is
+      # xcstrings-bound. The footer-note is a mockup-only caption describing
+      # the canPrebid gating rule (ShowSaleType.swift:73-79 — AUCTION +
+      # SUDDEN_DEATH with quantity 1), so it goes in the allowlist.
+      visible_text:
+        - selector: ".section-title"
+          source: xcstrings
+          key: "Pre-Bid"
+        - selector: ".row-title"
+          source: xcstrings
+          key: "Enable Pre-Bid?"
+        - selector: ".row-sub"
+          source: xcstrings
+          key: "Bids can be placed before the show starts"
+      visible_text_allowlist:
+        - selector: ".footer-note"
+          reason: "Mockup-only explanatory caption summarising canPrebid gating (ShowSaleType.swift:73-79: AUCTION + SUDDEN_DEATH with quantity 1); not a UI string in iOS"
+
+icons_required:
+  # Sell mode picker icons (24x24, customBlue500 tint in iOS source).
+  - icon-real-time-offer
+  - sell-mode-sudden-death
+  - sell-mode-buy_it_now
+icons_fallback_feather: false
+
+# Article documents BRL price floor (R$ 5) inside the picker mockup caption,
+# so the pt-br body must contain the R$ symbol.
+currency_required: true
+
+# Article runs ~9 H2 sections in a linear step-by-step shape (set up, run,
+# accept). Sequential reading is the intended UX; a TOC would push the
+# first screenshot below the fold. Skip the TOC check.
+toc_required: false
+
+risk_flags: []
+
+resolved_decisions: []
