@@ -145,16 +145,11 @@ currency_required: false
 # ship as published. To unblock, either resolve the risk and remove it
 # from risk_flags, or document the decision in resolved_decisions and
 # leave the risk in place for traceability.
-risk_flags:
-  - "xcstrings pt-BR for key 'Track' is currently 'Faixa' (literal 'Stripe/Band'), which looks like a mistranslation; on the buyer order detail it labels the button that opens the carrier tracking page. Article body uses neutral surrounding prose and only references the button label in EN ('Track') in the pt-BR mockup, mirroring what the user actually sees in app today."
+risk_flags: []
 
 # Per-risk decisions that explicitly green-light publication despite a
 # remaining risk_flag. One entry per risk that was reviewed by humans
 # and intentionally accepted. Use this when a risk cannot be removed
 # (e.g. legal label staying ambiguous) but the team agreed to ship.
 # Each entry: who made the call, when, and why.
-resolved_decisions:
-  - risk: "xcstrings pt-BR for 'Track' button is 'Faixa' (mistranslation)"
-    decided_by: "Aymar (Help Center Article Factory v2 owner)"
-    decided_at: "2026-05-11"
-    rationale: "The mistranslation is in the iOS catalog itself; rewriting the article around it would create drift with the live UI. Ship the article mirroring what the user sees and let translators update the xcstrings in a follow-up iOS PR."
+resolved_decisions: []

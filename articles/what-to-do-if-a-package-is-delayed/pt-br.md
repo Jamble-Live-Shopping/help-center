@@ -14,9 +14,9 @@ Voce precisa de:
 
 Toda atualizacao de envio vive dentro do pedido. Em **Compras**, toque no pedido para abrir o cartao de status. Enquanto o pacote esta a caminho, o status mostra **Em Entrega**, com uma barra de progresso e a previsao de entrega no topo (**Chegando hoje**, **Chegando amanha** ou **Estimado para** uma data).
 
-![Tela de detalhe do pedido com status Em Entrega, banner Chegando amanha e secao de rastreamento com Transportadora, Numero de rastreamento e botao Track](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/what-to-do-if-a-package-is-delayed__screen-1__pt-br__v3.png)
+![Tela de detalhe do pedido com status Em Entrega, banner Chegando amanha e secao de rastreamento com Transportadora, Numero de rastreamento e botao Faixa](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/what-to-do-if-a-package-is-delayed__screen-1__pt-br__v3.png)
 
-Logo abaixo, voce ve a **Transportadora**, o **Numero de rastreamento** (com um botao para copiar) e um botao **Track** que abre a pagina da transportadora. A lista de eventos a seguir mostra cada leitura feita pelos Correios, do mais recente para o mais antigo.
+Logo abaixo, voce ve a **Transportadora**, o **Numero de rastreamento** (com um botao para copiar) e um botao **Faixa** que abre a pagina da transportadora. A lista de eventos a seguir mostra cada leitura feita pelos Correios, do mais recente para o mais antigo.
 
 ## Quando achar que esta atrasado
 
