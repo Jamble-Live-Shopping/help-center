@@ -67,18 +67,73 @@ mockup_plan:
       review_checks:
         - labels_match_xcstrings
         - no_invented_ui_state
+      # ProductAttributeCell renders title above value (mainStackView axis=.vertical).
+      # Group 1 = Size cell, Group 2 = Color cell. Labels resolve via xcstrings
+      # ("Size", "Color"); selected values ("M", "Black"/"Preto") are runtime
+      # ProductSize.title / ProductColor.title user_content.
+      visible_text:
+        - selector: ".group:nth-of-type(1) .row-title"
+          source: xcstrings
+          key: "Size"
+        - selector: ".group:nth-of-type(1) .row-value"
+          source: user_content
+        - selector: ".group:nth-of-type(2) .row-title"
+          source: xcstrings
+          key: "Color"
+        - selector: ".group:nth-of-type(2) .row-value"
+          source: user_content
     - name: screen-2
       purpose: "Show host action sheet with Clone Past Shows Listings option highlighted (the code-faithful 'speed up multi-size listings' path)"
       source: ios_required
       review_checks:
         - labels_match_xcstrings
         - no_invented_ui_state
+      # Four action sheet labels all map verbatim to xcstrings. The purple
+      # `.action.highlight` styling on the Clone row is an editorial liberty
+      # (the article highlights this entry visually); the TEXT is verbatim
+      # xcstrings so no allowlist needed for text content.
+      visible_text:
+        - selector: ".sheet .action:nth-of-type(1)"
+          source: xcstrings
+          key: "New Quickie Listing"
+        - selector: ".sheet .action.highlight"
+          source: xcstrings
+          key: "Clone Past Shows Listings"
+        - selector: ".sheet .action.last"
+          source: xcstrings
+          key: "Create Credits Giveaway"
+        - selector: ".cancel"
+          source: xcstrings
+          key: "Cancel"
     - name: screen-3
       purpose: "Sellers products list inside show, showing three listings of the same item with different sizes (P, M, G), illustrating the 'one listing per size' rule"
       source: ios_required
       review_checks:
         - labels_match_xcstrings
         - no_invented_ui_state
+      # Row titles are product names (user_content). Row meta combines
+      # xcstrings "Size"/"Tamanho" with runtime size value + ProductColor.title
+      # — the composite render is an editorial mockup synthesis (no single iOS
+      # surface emits this exact format), classified as user_content. Prices
+      # are auto-filtered as numeric noise.
+      visible_text:
+        - selector: ".row:nth-of-type(2) .row-title"
+          source: user_content
+        - selector: ".row:nth-of-type(2) .row-meta"
+          source: user_content
+        - selector: ".row:nth-of-type(4) .row-title"
+          source: user_content
+        - selector: ".row:nth-of-type(4) .row-meta"
+          source: user_content
+        - selector: ".row:nth-of-type(6) .row-title"
+          source: user_content
+        - selector: ".row:nth-of-type(6) .row-meta"
+          source: user_content
+      visible_text_allowlist:
+        - selector: ".list-title"
+          reason: "Editorial liberty: '(3)' count suffix appended to xcstrings 'Listings'/'Listagens' label, no single iOS surface emits the composed string verbatim. Mockup adds the count to make the 'one listing per size' rule legible at a glance."
+        - selector: ".qty-pill"
+          reason: "Editorial liberty: 'QTY'/'QTD' abbreviated pill is a mockup-only visual affordance to show inventory at one unit per variant. Not in xcstrings (no abbreviated label exists) and not in Swift source."
 
 icons_required: []
 icons_fallback_feather: false
