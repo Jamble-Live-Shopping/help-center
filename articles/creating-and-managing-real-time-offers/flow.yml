@@ -90,6 +90,39 @@ mockup_plan:
           - "Buy It Now"
           - "Start at"
           - "Timer (Seconds)"
+      # PR #117 / Step 2.6: deterministic ground-truth gate. Every label in
+      # the sell-mode picker maps to an xcstrings key. The picker title +
+      # the three mode options (title + subtitle) + the two textfield labels
+      # are all source-bound. The two textfield VALUES (R$ 5,00 / $5.00 / 20)
+      # are auto-filtered as pure numeric/currency noise.
+      visible_text:
+        - selector: ".picker-title"
+          source: xcstrings
+          key: "Sell mode"
+        - selector: ".opt-selected-wrap .opt-name"
+          source: xcstrings
+          key: "Auction"
+        - selector: ".opt-selected-wrap .opt-sub"
+          source: xcstrings
+          key: "The last bidder wins at the end of the time."
+        - selector: ".field-row .field:nth-of-type(1) .field-label"
+          source: xcstrings
+          key: "Start at"
+        - selector: ".field-row .field:nth-of-type(2) .field-label"
+          source: xcstrings
+          key: "Timer (Seconds)"
+        - selector: '[aria-label="sell-mode-sudden-death"] + .opt-text .opt-name'
+          source: xcstrings
+          key: "Sudden Death"
+        - selector: '[aria-label="sell-mode-sudden-death"] + .opt-text .opt-sub'
+          source: xcstrings
+          key: "No added time, even if someone bids. "
+        - selector: '[aria-label="sell-mode-buy_it_now"] + .opt-text .opt-name'
+          source: xcstrings
+          key: "Buy It Now"
+        - selector: '[aria-label="sell-mode-buy_it_now"] + .opt-text .opt-sub'
+          source: xcstrings
+          key: "Offer a discount on an item during a limited time."
 
     - name: screen-2
       # Layout anchor (post 2026-05-11 AM + PM false-negative patches):
@@ -138,6 +171,30 @@ mockup_plan:
           - "Real-Time Sales"
           - "0:18"
           - "offers"
+      # PR #117 / Step 2.6: only "Real-Time Sales" / "Vendas em tempo real" is
+      # an xcstrings-bound label on this screen. The product card .pname / .psize
+      # are runtime user content. Everything else (status bar, viewer pills,
+      # fake host row, price/timer numerics, templated "%lld bids" button) is
+      # mockup decoration covered by the allowlist below.
+      visible_text:
+        - selector: ".top-label"
+          source: xcstrings
+          key: "Real-Time Sales"
+        - selector: ".product-card .pname"
+          source: user_content
+        - selector: ".product-card .psize"
+          source: user_content
+      visible_text_allowlist:
+        - selector: ".status-bar"
+          reason: "Fake iPhone status bar (9:41, ··· 5G), not iOS chrome"
+        - selector: ".top-right"
+          reason: "Fake live-viewer pills (red dot + 142, ··· menu); mockup decoration, not iOS labels"
+        - selector: ".top-values"
+          reason: "Illustrative price values (R$ 75 / R$ 75/item / $75/item); locale-bound currency examples, not source-bound"
+        - selector: ".host-row"
+          reason: "Mockup host row: invented avatar, fake @maria_cards handle, illustrative 'Live now' / 'Ao vivo agora' status label"
+        - selector: ".action-btn"
+          reason: "Host action button rendering template '%lld bids' (xcstrings key) with illustrative count 3 → '3 offers' / '3 ofertas'; count is example, template is source-bound via ShowSale.swift:124"
 
     - name: screen-3
       purpose: "Pre-Offer toggle row visible in the create-product flow for AUCTION / SUDDEN_DEATH products with quantity 1"
@@ -157,6 +214,23 @@ mockup_plan:
         en:
           - "Enable Pre-Offer?"
           - "Offers can be placed before the show starts"
+      # PR #117 / Step 2.6: every label in the Pre-Offer toggle row is
+      # xcstrings-bound. The footer-note is a mockup-only caption describing
+      # the canPrebid gating rule (ShowSaleType.swift:73-79 — AUCTION +
+      # SUDDEN_DEATH with quantity 1), so it goes in the allowlist.
+      visible_text:
+        - selector: ".section-title"
+          source: xcstrings
+          key: "Pre-Bid"
+        - selector: ".row-title"
+          source: xcstrings
+          key: "Enable Pre-Bid?"
+        - selector: ".row-sub"
+          source: xcstrings
+          key: "Bids can be placed before the show starts"
+      visible_text_allowlist:
+        - selector: ".footer-note"
+          reason: "Mockup-only explanatory caption summarising canPrebid gating (ShowSaleType.swift:73-79: AUCTION + SUDDEN_DEATH with quantity 1); not a UI string in iOS"
 
 icons_required:
   # Sell mode picker icons (24x24, customBlue500 tint in iOS source).
