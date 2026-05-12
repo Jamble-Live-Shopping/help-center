@@ -1,0 +1,217 @@
+# Flow contract for pre-offers-let-buyers-place-offers-before-your-show.
+# Worker batch real-2 (2026-05-11).
+#
+# See process/templates/article-flow.yml for field documentation.
+# See process/00-RUNBOOK.md for the canonical 8-phase workflow.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: both
+
+job_to_be_done: "Explain when and how a buyer can place an offer before a show starts, and how sellers see and process those pre-offers when the show goes live"
+
+source_of_truth:
+  ios_files:
+    - PRE-BID/Views/PreBidViewController.swift
+    - PRE-BID/Views/PreBidConfirmationViewController.swift
+    - PRE-BID/Views/PreBidListViewController.swift
+    - PRE-BID/Views/PreBidListPageViewController.swift
+    - PRE-BID/View Models/PreBidViewModel.swift
+    - PRE-BID/Models/PreBidSectionType.swift
+    - AUCTION/Views/Components/CalendarProductCell.swift
+    - AUCTION/Views/ProductsCalendarDayViewController.swift
+    - LIVE_SHOPPING/Host/View/Cell/ShowHostProductCell.swift
+    - LIVE_SHOPPING/Show/Model/ShowSaleType.swift
+    - PRODUCT/View Models/CreateProductViewModel.swift
+    - RESOURCES/Localizable.xcstrings
+    - RESOURCES/Assets.xcassets/icon/pre_bid_icon.imageset/pre_bid_icon.svg
+  backend_files: []
+  legal: []
+  support_context: []
+
+content_contract:
+  must_answer:
+    - "Sudden Death"
+  # Calibrated 2026-05-11 from the choose-quantities post-mortem:
+  # `Pre-Bid` is the iOS source key (banned in body) but `Pre-Offer`
+  # is the canonical user-facing EN label (allowed). The lowercase
+  # one-word "prebid" used in internal toasts is NOT user-facing.
+  forbidden_terms:
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+    - "regex:\\bPre-Bid\\b"
+  must_not_say:
+    - "Verified badges"
+    - "Jamble Prime"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: screen-1
+      purpose: "Buyer entry point: upcoming-show product card on the calendar with the Submit Offer / Enviar oferta CTA that opens the pre-offer modal"
+      source: ios_required
+      required_icons:
+        - pre_bid_icon
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      # Visible_text contract (PR #117). Locks the strings drift-patched in
+      # commit a46f66e: "A partir de" -> "Começa em" on .muted (xcstrings
+      # "Starts at "), "Starts in"/"Começa em" on .start-time prefix.
+      visible_text:
+        - selector: ".cta"
+          source: xcstrings
+          key: "Submit Bid"
+        - selector: ".price-line .muted"
+          source: xcstrings
+          key: "Starts at "
+        # .start-time is parametric (localized prefix + runtime time string).
+        # Resolved via backend-style locale_values so the prefix drift
+        # ("A partir de" -> "Começa em") is enforced bit-for-bit.
+        - selector: ".start-time"
+          source: backend
+          path: "AUCTION/Views/Components/CalendarProductCell.swift:507"
+          locale_values:
+            en: "Starts in 3h"
+            pt-br: "Começa em 3h"
+      visible_text_allowlist:
+        - selector: ".avatar"
+          reason: "Runtime user initials (mockup placeholder 'Lu')"
+        - selector: ".profile-name"
+          reason: "Runtime seller @handle (mockup placeholder 'lucas.tcg')"
+        - selector: ".card-tag"
+          reason: "Runtime countdown badge ('3h' duration)"
+        - selector: ".title"
+          reason: "Runtime product title (mockup placeholder 'Charizard Holo PSA 9')"
+    - name: screen-2
+      purpose: "Pre-offer modal where the buyer enters their max amount, sees the current highest pre-offer and the minimum next offer, and confirms via the slide-to-submit control"
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+      visible_text:
+        - selector: ".label-title"
+          source: xcstrings
+          key: "Your max bid"
+        - selector: ".label-sub"
+          source: xcstrings
+          key: "The maximum amount you'll bid for this item"
+        # .warn .badge "!" is a visual marker, not localized; get_text()
+        # concatenates badge + warn text so we resolve the full composite.
+        - selector: ".warn"
+          source: backend
+          path: "RESOURCES/Localizable.xcstrings key ' Bids are final. You can increase anytime but cannot \\ndecrease or cancel your max bid.'"
+          locale_values:
+            en: "! Offers are final. You can increase anytime but cannot decrease or cancel your max bid."
+            pt-br: "! As ofertas são finais. Você pode aumentar a qualquer momento, mas não pode diminuir ou cancelar sua oferta máximo."
+        # .starting-pill = dot bullet + localized time-prefix + runtime time.
+        - selector: ".starting-pill"
+          source: backend
+          path: "PRE-BID/Views/PreBidViewController.swift (Starts in + countdown)"
+          locale_values:
+            en: "Starts in 3h"
+            pt-br: "Começa em 3h"
+        # .min-pill carries the xcstrings 'Minimum: %@' template with R$ X
+        # / $ X substituted at runtime.
+        - selector: ".min-pill"
+          source: backend
+          path: "RESOURCES/Localizable.xcstrings key 'Minimum: %@'"
+          locale_values:
+            en: "Minimum: $13"
+            pt-br: "Mínimo: R$ 66"
+        # .slide CTA renders the handle chevron '›' alongside the localized
+        # 'Submit Offer'/'Enviar oferta' label. get_text returns both.
+        - selector: ".slide"
+          source: backend
+          path: "RESOURCES/Localizable.xcstrings key 'Submit Bid' inside slide-to-submit control"
+          locale_values:
+            en: "› Submit Offer"
+            pt-br: "› Enviar oferta"
+        # .helper = info-circle '?' + xcstrings 'How Bidding Works' label.
+        - selector: ".helper"
+          source: backend
+          path: "RESOURCES/Localizable.xcstrings key 'How Bidding Works'"
+          locale_values:
+            en: "? How make an Offer Works"
+            pt-br: "? Como funcionam as ofertas"
+      visible_text_allowlist:
+        - selector: ".prod-name"
+          reason: "Runtime product title (mockup placeholder 'Charizard Holo')"
+        - selector: ".amount"
+          reason: "Runtime offer amount typed by buyer ($15 / R$ 75 + blinking cursor)"
+        - selector: ".close"
+          reason: "Modal close glyph 'X' is a visual marker, not localized copy"
+    - name: screen-3
+      purpose: "Seller view of incoming pre-offers in the host product list during the show: starting price and live pre-offer count displayed on the product cell"
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+      # Visible_text contract (PR #117). Locks the screen-3 drifts patched
+      # in commit a46f66e:
+      #   1. Header "Selling now"/"Vendendo agora" + subtitle removed (this
+      #      screen has only ".list-title" now -> xcstrings "Listings").
+      #   2. PT-BR Sudden Death row '2 Ofertas' -> '2 Bids' to match the
+      #      live xcstrings 'Sudden Death \nStarts at %@ · %lld Bids' value
+      #      which ships untranslated in pt-BR (see resolved_decisions).
+      visible_text:
+        - selector: ".list-title"
+          source: xcstrings
+          key: "Listings"
+        # Row 1 starts-label (non-SD): localized "Starts at "/"Começa em " +
+        # runtime price + " - " separator + runtime offer count.
+        - selector: ".row:not(.idle) .starts-label:not(.sd)"
+          source: backend
+          path: "AUCTION/Views/Components/CalendarProductCell.swift:384,389 + bids count"
+          locale_values:
+            en: "Starts at $11 · 3 Offers"
+            pt-br: "Começa em R$ 50 - 3 Ofertas"
+        # SD row composite. Locale_values match the live xcstrings value
+        # for 'Sudden Death \nStarts at %@ · %lld Bids' with prices and
+        # count substituted. PT-BR ships with 'Bids' untranslated (known
+        # xcstrings PT-BR gap, see resolved_decisions[0]).
+        - selector: ".starts-label.sd"
+          source: backend
+          path: "RESOURCES/Localizable.xcstrings key 'Sudden Death \\nStarts at %@ · %lld Bids' (PT-BR untranslated Bids)"
+          locale_values:
+            en: "Sudden Death Starts at $6 · 2 Offers"
+            pt-br: "Morte súbita Começa em R$ 30 - 2 Bids"
+        # Idle row (no countdown yet): bare "Starts at"/"Começa em" with
+        # no parameter substitution -> matches xcstrings 'Starts at' verbatim.
+        - selector: ".row.idle .starts-label"
+          source: xcstrings
+          key: "Starts at"
+        # "Start"/"Iniciar" host-side start-sale CTA on each row.
+        - selector: ".start-btn"
+          source: backend
+          path: "LIVE_SHOPPING/Host/View/Cell/ShowHostProductCell.swift Start CTA"
+          locale_values:
+            en: "Start"
+            pt-br: "Iniciar"
+      visible_text_allowlist:
+        - selector: ".prod-name"
+          reason: "Runtime product title (mockup placeholders Charizard / Hot Wheels / Pikachu)"
+        - selector: ".amount"
+          reason: "Runtime current offer amount ($15 / $9 / $5 and R$ equivalents)"
+
+icons_required:
+  - pre_bid_icon
+
+icons_fallback_feather: false
+
+currency_required: true
+
+toc_required: false
+
+risk_flags: []
+resolved_decisions:
+  - "screen-3 pt-BR Sudden Death row shows '2 Bids' (literal English) because the xcstrings key 'Sudden Death \\nStarts at %@ · %lld Bids' ships with 'Bids' untranslated in pt-BR today — mockup mirrors live iOS value, not an invented label"

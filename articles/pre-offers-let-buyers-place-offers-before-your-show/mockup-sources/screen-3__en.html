@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #0C131D; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.18); border: 1px solid #162233; overflow: hidden; padding: 14px; color: #FFFFFF; }
+
+.title-block { padding: 6px 4px 12px; }
+.list-title { font-size: 13px; font-weight: 700; color: #A0A7B7; text-transform: uppercase; letter-spacing: 0.5px; line-height: 16px; }
+.list-sub { font-size: 11px; color: #6B7A92; line-height: 14px; margin-top: 4px; }
+
+.row { display: flex; align-items: center; gap: 12px; background: #162233; border-radius: 16px; padding: 12px; margin-bottom: 10px; }
+.thumb { width: 70px; height: 70px; border-radius: 12px; flex-shrink: 0; background: linear-gradient(135deg,#FFD23F 0%,#F58220 60%,#162233 100%); }
+.thumb.dark { background: linear-gradient(135deg,#F04437 0%,#8E1A1A 60%,#0C131D 100%); }
+.info { flex: 1; min-width: 0; }
+.prod-name { font-size: 15px; font-weight: 600; color: #FFFFFF; line-height: 18px; }
+.price-row { margin-top: 6px; }
+.starts-label { font-size: 11px; color: #A0A7B7; font-family: -apple-system-round, "SF Pro Rounded", system-ui, sans-serif; line-height: 14px; }
+.starts-label.sd { color: #F04437; font-weight: 600; }
+.starts-label .sep { color: #6B7A92; margin: 0 4px; }
+.starts-label .bids { color: #FFD23F; font-weight: 600; }
+.amount { font-family: -apple-system-round, "SF Pro Rounded", system-ui, sans-serif; font-size: 22px; font-weight: 700; color: #17B169; line-height: 26px; margin-top: 2px; }
+
+.start-btn { width: 64px; height: 36px; border-radius: 18px; background: #7E53F8; color: #FFFFFF; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+.row.idle .amount { color: #FFFFFF; }
+.row.idle .start-btn { background: #2E3C52; color: #BDC2CD; }
+</style>
+</head>
+<body>
+<div class="phone">
+  <div class="title-block">
+    <div class="list-title">Listings</div>
+  </div>
+
+  <div class="row">
+    <div class="thumb"></div>
+    <div class="info">
+      <div class="prod-name">Charizard Holo PSA 9</div>
+      <div class="price-row">
+        <div class="starts-label">Starts at $11 &middot; <span class="bids">3 Offers</span></div>
+        <div class="amount">$15</div>
+      </div>
+    </div>
+    <div class="start-btn">Start</div>
+  </div>
+
+  <div class="row">
+    <div class="thumb dark"></div>
+    <div class="info">
+      <div class="prod-name">Hot Wheels Redline 71</div>
+      <div class="price-row">
+        <div class="starts-label sd">Sudden Death<br><span style="color:#A0A7B7; font-weight: 500;">Starts at $6</span> &middot; <span class="bids">2 Offers</span></div>
+        <div class="amount">$9</div>
+      </div>
+    </div>
+    <div class="start-btn">Start</div>
+  </div>
+
+  <div class="row idle">
+    <div class="thumb"></div>
+    <div class="info">
+      <div class="prod-name">Pikachu Holo</div>
+      <div class="price-row">
+        <div class="starts-label">Starts at</div>
+        <div class="amount">$5</div>
+      </div>
+    </div>
+    <div class="start-btn">Start</div>
+  </div>
+</div>
+</body>
+</html>
