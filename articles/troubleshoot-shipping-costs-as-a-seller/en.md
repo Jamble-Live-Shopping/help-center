@@ -2,115 +2,78 @@
 
 ## What you'll learn
 
-This guide explains how shipping costs are calculated on Jamble, why costs might seem wrong, and what you can do about it. Understanding this helps you handle buyer questions and avoid common pricing issues.
+Use this guide when a buyer says shipping looks too high, too low, or different from another buyer's shipping cost.
 
-## How shipping costs are calculated
+## Contents
 
-Shipping costs on Jamble are **automatic**. You don't set them. Here's how they work:
+- What affects shipping cost
+- If shipping looks too high
+- If shipping looks too low
+- If different buyers see different costs
+- What you can change
+- When to contact support
 
-1. When you list a product, you assign a **shipping profile** (e.g., Light Apparel, Standard Apparel, etc.)
-2. The shipping profile determines the **package dimensions and weight** for cost calculation
-3. When a buyer purchases the item, Jamble calculates the shipping cost based on:
-   - The shipping profile (size/weight)
-   - Your shipping address (origin)
-   - The buyer's address (destination)
-   - Your shipping speed setting (Cheapest or Priority)
-   - Whether package insurance is enabled
+## What affects shipping cost
 
-The buyer sees and pays the exact shipping cost at checkout.
+You do not type the final shipping price manually in a Jamble listing. The price shown to a buyer depends on the order context.
 
-## Common shipping cost issues
+The most important seller-side inputs are:
 
-### "The buyer says shipping is too expensive"
+- The shipping profile selected on the product
+- Your sender address
+- The buyer's destination address
+- The size and weight assumptions behind the selected profile
 
-**Why it happens:**
-- The shipping profile may be larger than needed for the actual item
-- The buyer is far from your location (long-distance routes cost more)
-- Priority shipping speed is selected (faster = more expensive)
-- Package insurance is enabled (adds a small cost)
+The safest rule is simple: choose the smallest shipping profile that still fits the item after packaging.
 
-**What to do:**
-1. **Check the shipping profile.** If you assigned "Bulkier Items" to a t-shirt, the shipping cost will be much higher than necessary. Change the profile to match the actual item
-2. **Check your shipping speed setting.** If Priority is selected in your Shipping Preferences, switch to Cheapest to reduce costs
-3. **Check if insurance is enabled.** If it is and the item is low-value, disabling insurance reduces the cost slightly
-4. **Explain to the buyer** that shipping costs are based on package size, weight, and distance. You don't control the price — Correios does
+## If shipping looks too high
 
-### "The shipping cost seems too low"
+Check whether the selected shipping profile is larger than the packaged item needs.
 
-**Why it happens:**
-- The shipping profile may be smaller than the actual item
-- This is a problem because the actual shipping cost at Correios may exceed what was charged
+Examples:
 
-**What to do:**
-- Use the correct shipping profile for the item's actual size. If you consistently undersize profiles, you may have issues at the Correios counter
+- A small lightweight item should not use a bulky profile.
+- Sneakers with the original box may need more room than sneakers shipped without a box.
+- A bundle can need a larger profile than a single item.
 
-### "Different buyers see different shipping costs for the same product"
+If the product has not sold yet, edit the listing and choose the right shipping profile. If the sale already happened, contact support instead of promising the buyer a manual price change.
 
-**Why it happens:**
-This is normal. Shipping costs depend on the **buyer's location**. A buyer in the same city as you will pay much less than a buyer in a different state. There's nothing wrong — it's how distance-based shipping works.
+## If shipping looks too low
 
-### "Shipping costs changed for the same product"
+A shipping profile that is too small can create problems later because the packaged item may not match the assumptions behind the label.
 
-**Why it happens:**
-- You may have changed your shipping speed setting (Cheapest vs Priority)
-- You may have enabled or disabled package insurance
-- Correios may have updated their price tables (this happens periodically)
+Before the product sells, update the listing to a profile that matches the real packaged item. If the order has already sold and you believe the label is wrong, contact support before shipping.
 
-## Shipping profiles and their impact on cost
+## If different buyers see different costs
 
-The shipping profile is the biggest factor you control. Here's how profiles roughly correlate to cost:
+This can be expected. Shipping can change when the buyer destination changes.
 
-| Profile | Relative cost |
-|---------|--------------|
-| Card | Lowest |
-| Booster | Very low |
-| Light Accessories | Low |
-| Light Apparel | Low-medium |
-| Standard Apparel | Medium |
-| Heavier Apparel | Medium-high |
-| Bulkier Items | High |
-| Small Bundles | High |
-| Medium Bundles | Very high |
-| Large Bundles | Very high |
-| Extra-Large Bundles | Highest |
+You can explain this without making a promise: Jamble uses the listing's shipping profile and the buyer's delivery context to show shipping at checkout.
 
-**The rule is simple:** Use the smallest profile that your packaged item actually fits in. Don't oversize (buyer pays too much) or undersize (causes problems at Correios).
+## What you can change
 
-## How to change a shipping profile
+You can control:
 
-If you realize a product has the wrong shipping profile:
+- Which shipping profile you select when creating or editing the product
+- Whether the sender address in your Jamble account is complete and current
+- How accurately you package and describe the item
 
-1. Open the product listing
-2. Edit the product details
-3. Change the shipping profile to the correct one
-4. Save
+You should not promise:
 
-**Important:** You can only change the shipping profile before the item is sold. After a sale, the shipping cost is locked in at whatever profile was assigned at the time of purchase.
+- A fixed shipping price before checkout
+- A manual shipping discount
+- A post-sale shipping price change
+- A carrier adjustment without support confirmation
 
-## Important tips
+## When to contact support
 
-- **Always assign the correct shipping profile.** This is the most common cause of shipping cost issues. Take a moment to consider the actual size of the packaged item
-- **Cheapest shipping speed is recommended.** Unless your buyers specifically want faster delivery, Cheapest keeps costs down and makes your products more attractive
-- **Remember: you don't pay shipping costs.** The buyer pays. But if costs are too high, buyers may not buy — so it's in your interest to keep profiles accurate
-- **Check your settings periodically.** If you haven't looked at your Shipping Preferences in a while, review them to make sure everything is still correct
+Contact support if:
 
-## Common questions
-
-**Can I offer free shipping?**
-Currently, shipping costs are always charged to the buyer. Sellers cannot subsidize or eliminate shipping costs through the app.
-
-**Why are shipping costs to the North/Northeast higher?**
-Correios pricing is distance-based. Shipments to more remote regions naturally cost more. This is a carrier policy, not a Jamble setting.
-
-**Can I change the shipping cost after a sale?**
-No. The shipping cost is calculated and charged at the time of purchase. It cannot be modified afterward.
-
-**Does my shipping speed setting affect all my products?**
-Yes. The Cheapest/Priority setting in your Shipping Preferences applies to all your shipments. You can't set different speeds for different products.
-
-**What if Correios charges more at the counter than what was on the label?**
-If the actual package dimensions significantly differ from the shipping profile, Correios may charge a difference. This is why it's critical to use the correct shipping profile. If this happens, contact support.
+- The order already sold and the shipping cost or label looks wrong.
+- The buyer sees a shipping value that does not make sense after you checked the profile.
+- Your sender address is correct but the issue continues.
+- You are unsure which profile should apply to a specific package.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Contact support from the order or from the app chat.
