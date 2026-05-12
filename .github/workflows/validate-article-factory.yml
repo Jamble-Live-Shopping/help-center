@@ -45,7 +45,11 @@ jobs:
           python-version: '3.11'
 
       - name: Install deps
-        run: pip install pyyaml
+        # beautifulsoup4 required by validate-article-flow.py's visible_text rule
+        # (Step 2.6 / xcstrings_locale_drift gate, PR #117). Soft-degrades to a
+        # visible warn if missing, but the regression tests pin the strict
+        # behavior — so install it in CI.
+        run: pip install pyyaml beautifulsoup4
 
       - name: Factory regression tests
         run: python3 scripts/test-article-factory.py
