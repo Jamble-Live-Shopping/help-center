@@ -1,0 +1,72 @@
+article_slug: troubleshoot-label-generation-errors
+article_type: v2_rewrite
+language_pair: en_pt-br
+intercom_id: 14288145
+audience:
+  primary: seller_br
+  secondary: []
+intent:
+  job_to_be_done: Recover safely when a Jamble shipping label fails, looks wrong, or cannot be printed.
+  user_problem: Sellers need a clear path that avoids duplicate-label confusion and unsupported carrier/backend assumptions.
+  success_criteria:
+    - Seller checks sender address, shipping profile, PDF preview, and connectivity first.
+    - Seller knows when buyer-address or wrong-label issues require support.
+    - Article avoids unverified refund, carrier, and external-label claims.
+source_of_truth:
+  code:
+    ios_files:
+      - SHIPPING/Add Edit Shipping Address/Configuration/BRAddressFormConfiguration.swift
+      - SHIPPING/Add Edit Shipping Address/Views/AddEditShippingAddressInformationView.swift
+      - TRANSACTION/Sale/PDFViewController.swift
+      - SHIPPING/ShippingDocuments/ViewModel/ShippingDocumentsViewModel.swift
+      - SHIPPING/ShippingDocuments/Views/ShippingDocumentsView.swift
+    backend_files: []
+  content:
+    existing_articles:
+      - articles/troubleshoot-label-generation-errors/en.md
+      - articles/troubleshoot-label-generation-errors/pt-br.md
+risk_flags:
+  - support_escalation
+  - shipping_label_behavior
+  - backend_dependency
+resolved_decisions:
+  - risk: support_escalation
+    decided_by: Aymar batch 3A
+    decided_at: '2026-05-12'
+    rationale: Buyer-address and wrong-label cases are routed to support because the article cannot safely instruct sellers to edit buyer data or use an incorrect label.
+  - risk: shipping_label_behavior
+    decided_by: Aymar batch 3A
+    decided_at: '2026-05-12'
+    rationale: "The article limits app behavior claims to visible iOS surfaces: address fields, PDF preview, and the Print share action."
+  - risk: backend_dependency
+    decided_by: Aymar batch 3A
+    decided_at: '2026-05-12'
+    rationale: Backend label creation rules were not available locally, so refund, carrier SLA, external service, and manual tracking claims were removed.
+mockup_plan:
+  required: false
+  rationale: The article is a troubleshooting decision tree. A mockup would only be useful for a specific in-app error state, but no stable iOS error screen is present in the checked source.
+  screens: []
+validation_contract:
+  must_answer:
+    en:
+      - What should the seller check before retrying?
+      - What should the seller do if the PDF looks wrong?
+      - When should the seller contact support?
+    pt-br:
+      - O que o vendedor deve conferir antes de tentar de novo?
+      - O que o vendedor deve fazer se o PDF parecer errado?
+      - Quando o vendedor deve contatar o suporte?
+  forbidden_claims:
+    - Melhor Envio
+    - label refund will be processed
+    - generate your own Correios label
+    - add the tracking number manually
+    - wait 30 minutes
+    - label service is down
+  toc_required: true
+  currency_required: false
+audits:
+  code: audit/code-audit-14288145.md
+  content: audit/content-audit-14288145.md
+  compliance: audit/compliance-14288145.md
+status: ready_candidate
