@@ -68,6 +68,81 @@ mockup_plan:
           - "Very Good"
           - "Good"
           - "Satisfactory"
+      # visible_text contract (PR #117): nav title + Clear button resolve via
+      # xcstrings ("Condition" / "Clear"); the 5 tier titles and descriptions
+      # come from backend condition.json (server-driven, NOT in xcstrings).
+      # Rows are addressed by :nth-of-type position inside `.phone` (1=topbar,
+      # 2=topbar-divider, 3..7 = the 5 tier rows in backend `order`: NEW_WITH_TAGS,
+      # NEW_WITHOUT_TAGS, VERY_GOOD, GOOD, SATISFACTORY — matching what iOS
+      # filters to via ProductRepository.swift:432-434 + the picker mode in
+      # SelectProductAttributeViewController).
+      visible_text:
+        - selector: ".topbar .title"
+          source: xcstrings
+          key: "Condition"
+        - selector: ".topbar .clear"
+          source: xcstrings
+          key: "Clear"
+        - selector: ".phone > .row:nth-of-type(3) .row-title"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:11-15"
+          locale_values:
+            en: "New with tags"
+            pt-br: "Novo com etiquetas"
+        - selector: ".phone > .row:nth-of-type(3) .row-desc"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:14"
+          locale_values:
+            en: "Unworn and pristine, complete with original purchase tags."
+            pt-br: "Nunca usado e impecável, completo com as etiquetas originais de compra."
+        - selector: ".phone > .row:nth-of-type(4) .row-title"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:16-20"
+          locale_values:
+            en: "New without tags"
+            pt-br: "Novo sem etiquetas"
+        - selector: ".phone > .row:nth-of-type(4) .row-desc"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:19"
+          locale_values:
+            en: "Never worn, in perfect condition, but without the original tags."
+            pt-br: "Nunca usado, em perfeito estado, mas sem as etiquetas originais."
+        - selector: ".phone > .row:nth-of-type(5) .row-title"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:46-50"
+          locale_values:
+            en: "Very Good"
+            pt-br: "Muito Bom"
+        - selector: ".phone > .row:nth-of-type(5) .row-desc"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:49"
+          locale_values:
+            en: "Lightly used with minimal signs of wear, well-maintained."
+            pt-br: "Pouco usado, com sinais mínimos de desgaste, bem conservado."
+        - selector: ".phone > .row:nth-of-type(6) .row-title"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:51-55"
+          locale_values:
+            en: "Good"
+            pt-br: "Bom"
+        - selector: ".phone > .row:nth-of-type(6) .row-desc"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:54"
+          locale_values:
+            en: "Gently worn and well cared for, with any defects clearly noted."
+            pt-br: "Usado com cuidado e bem conservado, com quaisquer defeitos claramente indicados."
+        - selector: ".phone > .row:nth-of-type(7) .row-title"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:56-60"
+          locale_values:
+            en: "Satisfactory"
+            pt-br: "Satisfatório"
+        - selector: ".phone > .row:nth-of-type(7) .row-desc"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:59"
+          locale_values:
+            en: "Frequently worn with visible wear and noted defects."
+            pt-br: "Usado frequentemente, com desgaste visível e defeitos notados."
     - name: section-row
       purpose: "Condition row inside the create-product flow (sits between Color and Price), with a value chip showing the selected tier"
       source: ios_required
@@ -79,6 +154,42 @@ mockup_plan:
           - "Condição"
         en:
           - "Condition"
+      # visible_text contract (PR #117): the 5 row-titles (Brand, Size, Color,
+      # Condition, Price) resolve via xcstrings; their row-values are a mix of
+      # runtime user_content (Brand/Size/Color stand-ins for the section
+      # mockup) and backend (the Condition tier title, server-driven). Price
+      # value "$90.00" / "R$ 450,00" is pure-numeric and noise-filtered by
+      # the validator, but we declare it as user_content for clarity.
+      visible_text:
+        - selector: ".phone > .row:nth-of-type(1) .row-title"
+          source: xcstrings
+          key: "Brand"
+        - selector: ".phone > .row:nth-of-type(1) .row-value"
+          source: user_content
+        - selector: ".phone > .row:nth-of-type(2) .row-title"
+          source: xcstrings
+          key: "Size"
+        - selector: ".phone > .row:nth-of-type(2) .row-value"
+          source: user_content
+        - selector: ".phone > .row:nth-of-type(3) .row-title"
+          source: xcstrings
+          key: "Color"
+        - selector: ".phone > .row:nth-of-type(3) .row-value"
+          source: user_content
+        - selector: ".phone > .row:nth-of-type(4) .row-title"
+          source: xcstrings
+          key: "Condition"
+        - selector: ".phone > .row:nth-of-type(4) .row-value"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:46-50"
+          locale_values:
+            en: "Very Good"
+            pt-br: "Muito Bom"
+        - selector: ".phone > .row:nth-of-type(5) .row-title"
+          source: xcstrings
+          key: "Price"
+        - selector: ".phone > .row:nth-of-type(5) .row-value"
+          source: user_content
 
 icons_required: []
 icons_fallback_feather: false
