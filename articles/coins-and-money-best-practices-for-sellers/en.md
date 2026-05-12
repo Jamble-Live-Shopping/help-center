@@ -2,113 +2,110 @@
 
 ## What you'll learn
 
-This guide covers best practices for selling coins, banknotes, and numismatic items on Jamble in Brazil. You'll learn how to properly describe your items, take the right photos, and avoid common issues that lead to returns.
+This guide covers best practices for selling coins, banknotes, and numismatic items on Jamble in Brazil. You'll learn how to photograph small pieces, describe condition with vocabulary collectors recognise, disclose cleaning or replicas, and avoid the mistakes that lead to returns in this category.
 
 ## Before you start
 
 You need:
 - An approved seller account on Jamble
 - Coins or banknotes to sell with clear knowledge of their origin and condition
-- Good lighting for detailed photos
+- Good lighting and a plain, dark background for detailed photos
 
-## What you can sell
+## What fits in this category
 
-Jamble allows the sale of:
-- **Collectible coins** — Brazilian and international, historical and modern
-- **Banknotes** — old Brazilian currencies (Cruzeiro, Cruzado, etc.) and international notes
-- **Commemorative coins** — special editions from the Casa da Moeda or foreign mints
-- **Bullion coins** — gold, silver, and other precious metal coins
+Jamble accepts the sale of:
+- **Collectible coins**, Brazilian and international, historical and modern
+- **Banknotes**, old Brazilian currencies (Cruzeiro, Cruzado, Cruzeiro Novo, Cruzado Novo) and international notes
+- **Commemorative coins**, special editions from Casa da Moeda do Brasil or foreign mints
+- **Bullion coins**, gold, silver, and other precious metal pieces of numismatic investment
 
 ## What is strictly prohibited
 
-- **Counterfeit or forged coins and banknotes** — selling fake currency is illegal and will result in an immediate ban
+- **Counterfeit or forged coins and banknotes**, selling fake currency is illegal and results in an immediate ban
 - **Current legal tender sold above face value as "investment"** without clear collector context
-- **Items misrepresented as rare when they are common**
+- **Items misrepresented as rare when they are common**, misleading descriptions trigger disputes fast
 
-## Listing requirements
+## How to take photos that sell
 
-Every coins and money listing must include:
+Coins and banknotes are small items with a lot of detail. The photo decides the sale. Use a plain, dark background, top-down light without direct flash, and sharp focus on every image.
 
-1. **Photos of the actual item** — stock photos are not allowed. You must photograph the specific coin or banknote you are selling
-2. **Place of origin** — which country the coin/banknote is from (e.g., "Brasil", "Estados Unidos", "Portugal")
-3. **Year or time period** — the year minted/printed, or the era (e.g., "1922", "Período Imperial", "Década de 1970")
-4. **Condition description** — use Jamble's condition system (see below)
+![Four photos comparing good and bad practices for coin photography, dark background and focus versus flash glare and out of focus shots](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/coins-and-money-best-practices-for-sellers__screen-1__en__v3.png)
 
-## Condition guidelines
+On the left, **Do**. Plain dark background and sharp focus on the coin's obverse. Close-up of the date and mint mark to prove authenticity. On the right, **Avoid**. Direct flash glare that washes out relief details. Out-of-focus photo holding the coin in fingers, which hides scratches and wear.
 
-Use Jamble's condition levels to describe your coins and banknotes:
+### For individual coins
 
-| Condition | What it means for coins/banknotes |
-|-----------|----------------------------------|
-| **New with Tags** | Uncirculated, still in original mint packaging or sealed holder |
-| **New without Tags** | Uncirculated condition but not in original packaging |
-| **Very Good** | Very light circulation marks, nearly all original detail preserved |
-| **Good** | Some wear from circulation, main details still visible |
-| **Satisfactory** | Significant wear, some details may be faded or worn smooth |
+1. **Obverse (front)**, clear, centred, filling most of the frame
+2. **Reverse (back)**, clear, centred, same framing as the obverse
+3. **Close-up of date and mint mark**, proves authenticity and year
+4. **Edge**, especially if it has lettering, reeding, or special design
+5. **Holder or slab**, if the coin is in a graded holder, show the label clearly
+6. **Any flaws**, scratches, corrosion, cleaning marks, edge nicks
 
-### Additional details to include
+### For banknotes
 
-For a better listing, also mention (in the title or description):
-- **Denomination** — the face value (e.g., "1 Real", "500 Cruzeiros", "1 Dollar")
-- **Material/composition** — what the coin is made of (e.g., "Prata", "Cobre-Níquel", "Ouro")
-- **Mint mark** — if visible, the mint that produced the coin
-- **For graded coins** — if you have a professionally graded coin (in a slab), mention the grading company and grade
+1. **Full front**, flat, centred, no folds visible
+2. **Full back**, same framing
+3. **Close-up of the serial number**, proves note identity
+4. **Corners and edges**, where wear shows first
+5. **Any folds, tears, or stains**, describe and photograph
 
-## Photo guidelines
+**Tip:** Use a plain black or dark grey background. Avoid holding coins and banknotes in your fingers for the photo. Use a soft surface, a coin holder, or a clear flip. For small coins, get the camera as close as possible or use macro mode.
 
-Coins and banknotes require detailed, well-lit photos. Here's what to include:
+## Condition guidelines for coins and banknotes
 
-1. **Obverse (front)** — clear, well-lit photo of the front
-2. **Reverse (back)** — clear photo of the back
-3. **Edge** — for coins, show the edge (especially if it has lettering or a special design)
-4. **Close-up of details** — mint marks, dates, any notable features
-5. **Holder/slab** — if the coin is in a graded holder, show the label clearly
-6. **Scale reference** — for unusual sizes, include something for scale (a common coin, a ruler)
-7. **Any flaws** — scratches, corrosion, cleaning marks, edge nicks
+Jamble uses five condition levels. For numismatics, each level maps to a specific meaning that collectors recognise.
 
-```
-Recommended photo order:
-1. Obverse (front) — clear, centered
-2. Reverse (back) — clear, centered
-3. Close-up of date and mint mark
-4. Any flaws or notable features
-5. Holder/slab label (if graded)
-6. Edge view (if relevant)
-```
+![Condition guide with five levels for coins and banknotes, from New with Tags to Satisfactory, with swatches showing progressive wear](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/coins-and-money-best-practices-for-sellers__screen-2__en__v3.png)
 
-**Tip:** Use a dark, plain background for coins. A black or dark grey background makes details easier to see. Avoid holding coins in your fingers for the photo — use a soft surface or a coin holder.
+Each level has its typical price range. **New with Tags** means uncirculated, still in original mint packaging or sealed slab. **New without Tags** is uncirculated condition without the original packaging. **Very Good** shows light circulation marks with nearly all detail preserved. **Good** is moderate wear, main details still visible. **Satisfactory** is heavy wear, some details faded or worn smooth.
 
-## Selling coins during your show
+Be honest. Numismatic buyers open disputes fast if the piece arrives worse than described.
 
-- **Hold the coin close to the camera.** Coins are small — buyers need to see details. Use a macro lens or zoom if available
-- **Describe what you see.** Talk about the condition, the date, the mint, and any notable features. Most buyers can't see every detail on camera
+### Details to include in the title or description
+
+- **Denomination**, the face value (e.g., "1 Real", "500 Cruzeiros", "1 Dollar")
+- **Country of origin**, where the piece is from (e.g., "Brasil", "Estados Unidos", "Portugal")
+- **Year or time period**, year minted or printed, or approximate era (e.g., "1922", "Período Imperial", "Década de 1970")
+- **Material**, what the coin is made of (e.g., "Prata", "Cobre-Níquel", "Ouro", "Bronze")
+- **Mint mark**, if visible, which mint produced it
+- **Graded coin**, if you have a professionally graded coin (in a slab), mention the company and grade (e.g., "PCGS MS-65", "NGC AU-58")
+
+## Selling during your show
+
+- **Get the piece close to the camera.** Coins and banknotes are small, buyers need to see details. Use macro or zoom if available
+- **Describe what you see.** Talk about the condition, the date, the mint, and any notable feature. Most buyers can't see every detail on camera
 - **Mention the material.** "This is a silver 2000 Réis from 1924" tells the buyer exactly what they're getting
 - **Be transparent about condition.** If a coin has been cleaned, say so. Cleaned coins are worth less to collectors, and hiding it leads to returns
-- **Group similar items.** If you have multiple coins from the same series, show them together for context
+- **Group similar items.** If you have several coins from the same series or year, show them together for context
 
-## Important tips
+## Authenticity, cleaning, and replicas
 
-- **Never clean coins to make them look better.** Cleaning reduces the numismatic value. Collectors prefer original patina
-- **Disclose any cleaning or restoration.** If a coin has been polished, dipped, or otherwise altered, mention it clearly
-- **Use proper storage.** Handle coins by the edges, use gloves for valuable pieces, and store in proper coin holders
-- **Know your denominations.** Old Brazilian currencies can be confusing (Cruzeiro, Cruzeiro Novo, Cruzado, Cruzado Novo, Real). Make sure you identify the correct denomination and era
+Jamble prohibits counterfeits but accepts clearly disclosed replicas. A few important rules:
+
+- **Never clean coins to make them look better.** Cleaning reduces numismatic value. Collectors prefer original patina
+- **Disclose any cleaning or restoration.** If a coin has been polished, dipped, or otherwise altered, mention it clearly in the description
+- **Replicas and fantasy coins are allowed** when disclosed as such. The item must be physically distinguishable from authentic currency (marked "COPY" or "REPLICA", different size or material, no legal tender denomination)
+- **Use proper storage.** Handle coins by the edges, use gloves for valuable pieces, store in proper holders or flips
+
+**Know your Brazilian denominations.** Old Brazilian coins and notes can be confusing: Cruzeiro (until 1986), Cruzado (1986 to 1989), Cruzado Novo (1989 to 1990), Cruzeiro (1990 to 1993), Cruzeiro Real (1993 to 1994), Real (from 1994). Make sure you identify the era correctly, especially on listings with an unreadable date.
 
 ## Common questions
 
 **Do I need to get my coins professionally graded before selling?**
-No. Professional grading is optional. Many collectors buy raw (ungraded) coins on Jamble. Just describe the condition honestly using the condition guidelines above.
+No. Professional grading is optional. Many collectors buy raw (ungraded) coins on Jamble. Just describe the condition honestly using the guidelines above.
 
 **Can I sell international coins on Jamble?**
-Yes. Coins and banknotes from any country can be sold. Just make sure to clearly state the country of origin and denomination.
+Yes. Coins and banknotes from any country can be sold. Clearly state the country of origin and the denomination in the title or description.
 
-**How should I ship coins?**
-Use the **Card** or **Booster** shipping profile for individual coins or small lots. Wrap coins individually in soft material to prevent scratching. Use a rigid mailer or small box to prevent bending.
+**How should I ship coins and banknotes?**
+For single coins or small lots, use the **Carta** shipping profile. For larger lots, the **Booster** or **Pacotes pequenos** profile works well. Wrap coins individually in soft material to prevent scratching. For banknotes, use a rigid envelope to prevent folding.
 
 **What if a buyer claims the coin is fake?**
-Respond with any documentation or provenance you have. If you purchased the coin from a reputable source, share that information. Contact Jamble support if the dispute cannot be resolved.
+Respond with any documentation or provenance you have. If you purchased the coin from a reputable source (certified numismatic dealer, grading service), share that information. Contact Jamble support through the app chat if the dispute cannot be resolved.
 
 **How do I price collectible coins?**
-Research recent sales of similar coins on other platforms and catalogs. Key factors: rarity, condition, year, and collector demand. For common coins in good condition, Real-time offers can work well. For rare pieces, you may prefer Buy It Now at a researched price.
+Research recent sales of similar pieces on other platforms and in numismatic catalogs. Key factors: rarity, condition, year, and collector demand. For common coins in good condition, Real-time offers can work well. For rare pieces, consider Buy It Now at a researched price.
 
 ## Need help?
 

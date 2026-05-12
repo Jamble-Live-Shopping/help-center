@@ -1,0 +1,104 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.nav { padding: 14px 16px 6px; }
+.nav-title { font-size: 16px; font-weight: 600; color: #162233; text-align: center; }
+.section-title { font-size: 12px; font-weight: 600; color: #6B7A92; text-transform: uppercase; letter-spacing: 0.4px; padding: 12px 16px 6px; }
+
+.row { display: flex; align-items: flex-start; padding: 12px 16px; border-top: 1px solid #F0F1F5; gap: 12px; }
+
+.swatch { width: 56px; height: 56px; border-radius: 8px; flex-shrink: 0; background: radial-gradient(ellipse at center, #1F2A3B 0%, #0E1623 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.swatch .coin { width: 70%; aspect-ratio: 1; border-radius: 50%; position: relative; box-shadow: 0 1px 3px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(0,0,0,0.25), inset 0 1px 3px rgba(255,255,255,0.22); overflow: hidden; }
+
+/* s1: pristine mint */
+.swatch.s1 .coin { background: radial-gradient(circle at 35% 30%, #F8DD8E 0%, #DCAD41 38%, #A77A1A 78%, #714F10 100%); }
+.swatch.s1 .coin::before { content: ""; position: absolute; inset: 14%; border-radius: 50%; border: 1px dashed rgba(60,40,10,0.55); }
+
+/* s2: near-mint, faint scratch */
+.swatch.s2 .coin { background: radial-gradient(circle at 35% 30%, #F5D88B 0%, #D9A93E 38%, #A37718 78%, #6E4F0F 100%); }
+.swatch.s2 .coin::before { content: ""; position: absolute; inset: 14%; border-radius: 50%; border: 1px dashed rgba(60,40,10,0.55); }
+.swatch.s2 .coin::after { content: ""; position: absolute; top: 30%; left: 18%; width: 50%; height: 2%; background: rgba(50,30,5,0.55); border-radius: 1px; transform: rotate(-18deg); }
+
+/* s3: very good, light circulation */
+.swatch.s3 .coin { background: radial-gradient(circle at 35% 30%, #E8C77A 0%, #C49A36 38%, #8E681A 78%, #5A4010 100%); }
+.swatch.s3 .coin::before { content: ""; position: absolute; inset: 16%; border-radius: 50%; border: 1px dotted rgba(60,40,10,0.40); }
+.swatch.s3 .coin::after { content: ""; position: absolute; top: 20%; left: 14%; width: 60%; height: 2%; background: rgba(50,30,5,0.45); border-radius: 1px; transform: rotate(-12deg); box-shadow: 0 14px 0 -1px rgba(50,30,5,0.30); }
+
+/* s4: good, moderate wear */
+.swatch.s4 .coin { background: radial-gradient(circle at 35% 30%, #D8B873 0%, #B08A2E 38%, #785818 78%, #4A3408 100%); }
+.swatch.s4 .coin::before { content: ""; position: absolute; inset: 18%; border-radius: 50%; border: 1px solid rgba(60,40,10,0.25); opacity: 0.6; }
+.swatch.s4 .coin::after { content: ""; position: absolute; inset: 0; background:
+  radial-gradient(circle at 22% 78%, rgba(40,25,5,0.55) 0%, transparent 28%),
+  radial-gradient(circle at 70% 28%, rgba(40,25,5,0.45) 0%, transparent 22%);
+}
+
+/* s5: satisfactory, heavy wear, dark patina */
+.swatch.s5 .coin { background: radial-gradient(circle at 35% 30%, #B89C5B 0%, #877328 38%, #5A4112 78%, #2E1F08 100%); }
+.swatch.s5 .coin::after { content: ""; position: absolute; inset: 0; background:
+  linear-gradient(28deg, transparent 47%, rgba(0,0,0,0.50) 49%, rgba(255,255,255,0.10) 51%, transparent 53%),
+  linear-gradient(-32deg, transparent 47%, rgba(0,0,0,0.40) 49%, rgba(255,255,255,0.08) 51%, transparent 53%),
+  radial-gradient(circle at 30% 70%, rgba(20,10,2,0.55) 0%, transparent 32%);
+}
+
+.row-info { flex: 1; min-width: 0; }
+.row-head { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; flex-wrap: wrap; }
+.pill { display: inline-flex; padding: 3px 8px; font-size: 11px; font-weight: 600; border-radius: 10px; letter-spacing: 0.2px; }
+.pill-1 { background: #E8F8F0; color: #1B8A4F; }
+.pill-2 { background: #F0F4FF; color: #2D5BD7; }
+.pill-3 { background: #FFF4E0; color: #B7791F; }
+.pill-4 { background: #FFE6D6; color: #C0531C; }
+.pill-5 { background: #FBE3E3; color: #B12B2B; }
+.row-name { font-size: 14px; font-weight: 600; color: #162233; }
+.row-desc { font-size: 12px; color: #6B7A92; line-height: 16px; }
+</style></head><body><div class="phone">
+
+<div class="nav"><div class="nav-title">Guia de condição</div></div>
+<div class="section-title">Moedas e cédulas</div>
+
+<div class="row">
+<div class="swatch s1"><div class="coin"></div></div>
+<div class="row-info">
+<div class="row-head"><span class="pill pill-1">MS / Não circulada</span></div>
+<div class="row-name">Novo com etiquetas</div>
+<div class="row-desc">Em embalagem da casa da moeda ou slab lacrado. Sem desgaste.</div>
+</div>
+</div>
+
+<div class="row">
+<div class="swatch s2"><div class="coin"></div></div>
+<div class="row-info">
+<div class="row-head"><span class="pill pill-2">AU, About Uncirculated</span></div>
+<div class="row-name">Novo sem etiquetas</div>
+<div class="row-desc">Não circulada sem embalagem. Pequenas marcas de manuseio.</div>
+</div>
+</div>
+
+<div class="row">
+<div class="swatch s3"><div class="coin"></div></div>
+<div class="row-info">
+<div class="row-head"><span class="pill pill-3">XF / VF, Extra Fine</span></div>
+<div class="row-name">Muito bom</div>
+<div class="row-desc">Marcas leves de circulação. Quase todos os detalhes preservados.</div>
+</div>
+</div>
+
+<div class="row">
+<div class="swatch s4"><div class="coin"></div></div>
+<div class="row-info">
+<div class="row-head"><span class="pill pill-4">F / VG, Fine</span></div>
+<div class="row-name">Bom</div>
+<div class="row-desc">Desgaste moderado. Detalhes principais ainda visíveis.</div>
+</div>
+</div>
+
+<div class="row">
+<div class="swatch s5"><div class="coin"></div></div>
+<div class="row-info">
+<div class="row-head"><span class="pill pill-5">G / AG, Good</span></div>
+<div class="row-name">Satisfatório</div>
+<div class="row-desc">Desgaste pesado. Alguns detalhes apagados ou gastos.</div>
+</div>
+</div>
+
+</div></body></html>
