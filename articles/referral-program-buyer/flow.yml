@@ -1,0 +1,238 @@
+# Flow contract for referral-program-buyer.
+# v2 rewrite, batch-10 real-2 (2026-05-11): PR #91/#92/#103/#104 contracts.
+#
+# Money grounding decision (rule 6, brief 2026-05-11):
+# iOS surface for buyer referral is purely API-driven. ReferralView.swift
+# renders `$\(amount) pending` / `$\(amount) earned` with values pulled from
+# repository.profile.getReferralSetting() at runtime. Localizable.xcstrings
+# contains no R$ amount keys for the referral flow (confirmed by grep on
+# RESOURCES/Localizable.xcstrings, 2026-05-11). The body therefore quotes
+# NO hardcoded R$ amount, and references the amounts shown on screen so the
+# article ages without churn when ops re-tunes the reward. See
+# audit/code-audit-14975215.md for the negative-scan evidence.
+#
+# See process/templates/article-flow.yml for field documentation.
+# See process/00-RUNBOOK.md for the canonical 8-phase workflow.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: buyer_br
+
+job_to_be_done: "Help buyers understand the referral program: how the reward works, how to share an invite, how to claim once a friend buys"
+
+source_of_truth:
+  ios_files:
+    - DISCOUNT/Views/ReferralView.swift
+    - DISCOUNT/Views/ReferralViewController.swift
+    - DISCOUNT/Views/ReferralInviteListView.swift
+    - DISCOUNT/Views/ReferralInviteListViewController.swift
+    - DISCOUNT/View Models/ReferralViewModel.swift
+    - DISCOUNT/View Models/ReferralInviteListViewModel.swift
+    - DISCOUNT/Models/ReferralListType.swift
+    - SERVICE/API/Repository/Modules/Profile/Model/Response/ReferralSettingsResponse.swift
+    - SERVICE/API/Repository/Modules/Profile/Model/Response/GetReferralsResponse.swift
+    - RESOURCES/Localizable.xcstrings
+  backend_files: []
+  legal: []
+  support_context: []
+
+content_contract:
+  # must_answer is matched in BOTH pt-br.md and en.md; use language-neutral
+  # tokens (proper nouns, UI strings that are identical across both, or words
+  # that legitimately appear in both bodies).
+  must_answer:
+    - "WhatsApp"
+    - "Jamble"
+    - "Show"
+  forbidden_terms:
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+  must_not_say:
+    - "Internal payout pipeline timing"
+    - "Backend service names"
+    - "Specific Real amounts not present in xcstrings"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: buyer-overview
+      purpose: "Show the Invite Friends screen: program steps, reward section, Ongoing/Past tiles with the icon-clock pending glyph, Share Friends primary button (icon-send), I have a referral code secondary link. Mirrors DISCOUNT/Views/ReferralView.swift body."
+      source: ios_required
+      required_icons:
+        - icon-send
+        - icon-clock
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Compartilhar amigos"
+          - "Tenho um código de convite"
+          - "Referências contínuas"
+          - "Referências anteriores"
+        en:
+          - "Share Friends"
+          - "I have a referral code"
+          - "Ongoing Referrals"
+          - "Past Referrals"
+      # visible_text contract (PR #117 Step 2.6 deterministic gate).
+      # The buyer-overview screen body is API-driven through
+      # `viewModel.payload` (ReferralView.swift:78,88,94-101,131-139). The
+      # hero-title, step-titles/descs, and reward-title/desc are runtime
+      # strings populated by the backend's referral settings response and
+      # are NOT in Localizable.xcstrings. They are declared as
+      # `source: user_content` so the selector marks them covered without
+      # comparing text against an iOS-faithful constant. The two tile
+      # labels and the primary/secondary CTAs ARE iOS xcstrings (SwiftUI
+      # auto-localizes Text("...") through Localizable.xcstrings).
+      # The two tile-meta amount strings are Swift literals
+      # ($\(amount) pending / earned, NOT xcstrings, displayed verbatim in
+      # both locales per ReferralView.swift:233,267); the PT-BR mockup was
+      # patched 2026-05-12 to drop the invented "pendente"/"ganhos" gloss.
+      visible_text:
+        - selector: ".hero-title"
+          source: user_content
+        - selector: ".step-title"
+          source: user_content
+        - selector: ".step-desc"
+          source: user_content
+        - selector: ".reward-title"
+          source: user_content
+        - selector: ".reward-desc"
+          source: user_content
+        - selector: ".tile:nth-of-type(1) .tile-label"
+          source: xcstrings
+          key: "Ongoing Referrals"
+        - selector: ".tile:nth-of-type(2) .tile-label"
+          source: xcstrings
+          key: "Past Referrals"
+        - selector: ".tile:nth-of-type(1) .tile-meta span"
+          source: swift_literal
+          path: "DISCOUNT/Views/ReferralView.swift:233"
+          value: "$2 pending"
+        - selector: ".tile:nth-of-type(2) .tile-meta span"
+          source: swift_literal
+          path: "DISCOUNT/Views/ReferralView.swift:267"
+          value: "$6 earned"
+        - selector: ".cta"
+          source: xcstrings
+          key: "Share Friends"
+      visible_text_allowlist:
+        - selector: ".hero-sub"
+          reason: "Article-author illustrative hero subtitle; not in iOS, sets program context for help-center reader"
+        - selector: ".step-num"
+          reason: "Step numerals (1/2/3); SwiftUI renders these via `\\(step.step). \\(step.title)` interpolation in ReferralView.swift:97"
+        - selector: ".chev"
+          reason: "Chevron glyph (›) standing in for SF Symbol `chevron.right` per ReferralView.swift:244,277; pure UI ornament"
+        - selector: ".secondary"
+          reason: "xcstrings key 'I have a referral code' has only pt-BR localization; iOS falls back to the key literal in en, which the mockup renders verbatim"
+
+    - name: redeem-code
+      purpose: "Show the redemption entry surface a referred friend sees when they enter their referral code. Mirrors the secondary `Redeem a code` flow from xcstrings (state: translated)."
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Resgatar"
+          - "Digite seu código"
+        en:
+          - "Redeem"
+          - "Enter your code"
+      # Option B text-only anchor (rule 10e): the redeem surface in iOS is
+      # purely text + textfield + button, no glyphs. The three icon-blockers
+      # below pin the mockup to that text-only contract.
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+      # visible_text contract (PR #117 Step 2.6 deterministic gate).
+      # All three labels resolve through Localizable.xcstrings.
+      # The "×" close-glyph is allowlisted because iOS uses an
+      # icon-arrow-down asset (DiscountCodeInputViewController.swift:54)
+      # whereas the mockup substitutes a textual × marker.
+      visible_text:
+        - selector: ".nav-title"
+          source: xcstrings
+          key: "Redeem a code"
+        - selector: ".code-placeholder"
+          source: xcstrings
+          key: "Enter your code...."
+        - selector: ".cta"
+          source: xcstrings
+          key: "Redeem"
+      visible_text_allowlist:
+        - selector: ".close-btn"
+          reason: "Mockup uses '×' text stand-in for the icon-arrow-down asset close button per DiscountCodeInputViewController.swift:54"
+
+    - name: buyer-past-list
+      purpose: "Show the Past Referrals list with a completed referral (Concluído / Completed) and a missed one (Prazo perdido / Deadline Missed). Mirrors ReferralInviteListView.swift pastInviteCell. iOS does not show a clock here (clock is reserved for Ongoing). Text-only anchor."
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Referências anteriores"
+          - "Concluído"
+          - "Prazo perdido"
+        en:
+          - "Past Referrals"
+          - "Completed"
+          - "Deadline Missed"
+      # Option B text-only anchor (rule 10e): no required_icons, so the
+      # icon-blockers below pin the mockup to a text + avatar + status
+      # contract. iOS code path (ReferralInviteListView.swift:165-205)
+      # has no icon-clock in pastInviteCell.
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+      # visible_text contract (PR #117 Step 2.6 deterministic gate).
+      # nav-title + summary-label + cell-status labels resolve through
+      # Localizable.xcstrings. The summary-card brand-purple background and
+      # the "You've earned" / "Você ganhou" label both come from
+      # ReferralListType.swift:26,33 (see PR #111 patch). The cell-name,
+      # avatar initials, and cell-reward are runtime user-content. The
+      # summary-conv legend, summary-value digits, and × close-glyph are
+      # allowlisted: iOS renders "1 [coin-icon] = $1" with an inline asset
+      # the mockup glosses as 'point'/'ponto', and the close button is the
+      # icon-arrow-down asset rendered as × in the mockup.
+      visible_text:
+        - selector: ".nav-title"
+          source: xcstrings
+          key: "Past Referrals"
+        - selector: ".summary-label"
+          source: xcstrings
+          key: "You've earned"
+        - selector: ".list-cell .cell-name"
+          source: user_content
+        - selector: ".list-cell .avatar"
+          source: user_content
+        - selector: ".list-cell .status-done"
+          source: xcstrings
+          key: "Completed"
+        - selector: ".list-cell .status-missed"
+          source: xcstrings
+          key: "Deadline Missed"
+      visible_text_allowlist:
+        - selector: ".close-btn"
+          reason: "Mockup uses '×' text stand-in for the icon-arrow-down asset close button per ReferralInviteListView.swift:68"
+        - selector: ".summary-conv"
+          reason: "iOS renders '1 [coin-icon] = $1' with an inline asset (ReferralInviteListView.swift:105-117); mockup glosses the coin-icon as 'point'/'ponto' for readability"
+
+icons_required:
+  - icon-send
+  - icon-clock
+icons_fallback_feather: false
+
+# Body intentionally does NOT quote specific R$ amounts (see header note).
+# Mockups show illustrative API-driven state ($ symbol matches iOS UI source).
+currency_required: false
+
+toc_required: false
+
+risk_flags: []
+resolved_decisions: []
