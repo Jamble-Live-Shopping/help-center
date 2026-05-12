@@ -16,7 +16,7 @@ Quando os Correios não conseguem entregar e enviam o pacote de volta para o seu
 
 ![Lista de vendas mostrando a aba Devolvido com o ícone vermelho de alerta](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/what-to-do-if-a-shipment-is-returned-to-you__sales-list-returned-tab__pt-br__v3.png)
 
-Abra **Suas vendas** e toque na aba **Devolvido**. O pequeno círculo vermelho com ponto de exclamação identifica essa aba, mesmo quando você está navegando rápido entre os filtros.
+Abra **Vendas** e toque na aba **Devolvido**. O pequeno círculo vermelho com ponto de exclamação identifica essa aba, mesmo quando você está navegando rápido entre os filtros.
 
 Se houver mais de um pedido devolvido, todos aparecem aqui agrupados. Toque em qualquer um para abrir o detalhe da venda.
 

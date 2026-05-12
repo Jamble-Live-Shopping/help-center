@@ -16,7 +16,7 @@ When Correios can't deliver and ships the package back to your address, Jamble u
 
 ![Sales list showing the Returned tab with the red alert icon](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/what-to-do-if-a-shipment-is-returned-to-you__sales-list-returned-tab__en__v3.png)
 
-Open **Your sales** and tap the **Returned** tab. The small red circle with the exclamation mark identifies this tab so you can find it quickly while scanning the filter strip.
+Open **Sales** and tap the **Returned** tab. The small red circle with the exclamation mark identifies this tab so you can find it quickly while scanning the filter strip.
 
 If more than one order has been returned, they all appear here together. Tap any of them to open the sale detail.
 
