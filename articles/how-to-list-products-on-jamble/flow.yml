@@ -1,0 +1,81 @@
+article_slug: how-to-list-products-on-jamble
+article_type: v2_rewrite
+language_pair: en_pt-br
+intercom_id: 14288093
+audience:
+  primary: seller_br
+  secondary: []
+intent:
+  job_to_be_done: Help sellers create a product listing for a Jamble show using only source-backed fields and labels.
+  user_problem: The previous article had broken hierarchy, stale cross-slug images, USD pricing, and over-broad listing claims.
+  success_criteria:
+    - Seller understands the required listing fields.
+    - Seller uses source-backed Brazil pricing with the R$ 5,00 minimum in PT-BR and $5 in EN.
+    - Seller understands quantity, pre-offer eligibility, and shipping profile impact.
+    - Article has no stale mockup images from another slug.
+source_of_truth:
+  code:
+    ios_files:
+      - PRODUCT/View Models/CreateProductViewModel.swift
+      - PRODUCT/Views/CreateProductViewController.swift
+      - PRODUCT/Views/Components/SellModeDefaultCell.swift
+      - PRODUCT/Models/ProductShippingProfile.swift
+      - EXTENSIONS/Price.swift
+    backend_files: []
+  content:
+    existing_articles:
+      - articles/how-to-list-products-on-jamble/en.md
+      - articles/how-to-list-products-on-jamble/pt-br.md
+      - articles/choose-quantities-when-listing-products/flow.yml
+      - articles/buy-it-now-sell-at-a-fixed-price/flow.yml
+      - articles/pre-offers-let-buyers-place-offers-before-your-show/flow.yml
+      - articles/creating-and-managing-real-time-offers/flow.yml
+risk_flags:
+  - central_seller_workflow
+  - sale_mode_labels
+  - shipping_profile_claims
+resolved_decisions:
+  - risk: central_seller_workflow
+    decided_by: Aymar batch 3A
+    decided_at: '2026-05-12'
+    rationale: The article is central, so the rewrite removes stale images and narrows the guide to source-backed fields instead of recreating the full app screen visually.
+  - risk: sale_mode_labels
+    decided_by: Aymar batch 3A
+    decided_at: '2026-05-12'
+    rationale: "User-facing terms follow batch real-2 conventions: Real Time Offer, Oferta em tempo real, Buy It Now, Comprar agora, Pre-Offer, and Pré-oferta."
+  - risk: shipping_profile_claims
+    decided_by: Aymar batch 3A
+    decided_at: '2026-05-12'
+    rationale: Shipping guidance is limited to selecting the profile that fits the packaged item and avoids unsourced carrier/cost formulas.
+mockup_plan:
+  required: false
+  rationale: The previous images came from another slug and were removed. New iOS mockups should only be added after a dedicated Layout Proof Table pass; this PR keeps the article production-ready through source-backed text.
+  screens: []
+validation_contract:
+  must_answer:
+    en:
+      - What fields are required to save a listing?
+      - How do selling mode and price work?
+      - How do quantity and pre-offers interact?
+      - Why does shipping profile matter?
+    pt-br:
+      - Quais campos são obrigatórios para salvar uma listagem?
+      - Como modo de venda e preço funcionam?
+      - Como quantidade e pré-ofertas se relacionam?
+      - Por que o perfil de envio importa?
+  forbidden_claims:
+    - Pre-Bid
+    - Real-Time Offers
+    - Compra Direta
+    - Buy It Now products always support Flash Sale
+    - photos are required
+    - products are always listed within a show
+    - $5.00 legacy copy
+    - $5,000.00 legacy copy
+  toc_required: true
+  currency_required: true
+audits:
+  code: audit/code-audit-14288093.md
+  content: audit/content-audit-14288093.md
+  compliance: audit/compliance-14288093.md
+status: ready_candidate
