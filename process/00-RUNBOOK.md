@@ -154,11 +154,42 @@ Pour **chaque section** de l'article, classifier:
 
 ---
 
+## Phase 3a, Layout Proof Table (MANDATORY before Phase 3 HTML for any `source: ios_required` mockup)
+
+**Voir `process/16-layout-proof-table.md` pour le contrat complet.** Résumé :
+
+Avant d'écrire **une seule ligne** d'HTML pour un screen `source: ios_required`, produire un Layout Proof Table dans `_work/<slug>__layout-proof.md`. Une ligne par élément UI visible, avec :
+
+| UI element | iOS source file:line | Parent container | Sibling / order | Alignment / constraints | Size / style | HTML/CSS selector |
+
+Règles :
+- Parent container = view iOS réelle (XIB id ou nom de classe), JAMAIS "le côté droit de l'écran".
+- Alignment cite la contrainte iOS (`trailing-aligned via constraint Sjh-oJ-6bY`).
+- Size/style cite Swift config (`height = 20`, `widthAnchor = 45`, `.content.warning`).
+- HTML/CSS selector commit à l'avance la placement (parent class + flex direction).
+
+Encodage dans `flow.yml` pour chaque screen `ios_required` :
+- Commentaire `# Layout anchor:` au-dessus du screen avec source files, parents, key placements, forbidden layouts.
+- Ajouter `layout_matches_ios_source` dans `review_checks` UNE FOIS le Layout Proof Table complet.
+
+Stop conditions (STOP et report, ne pas claim `exception_free`) :
+- iOS source ambiguë ou absente pour un élément → risk_flag + negative_scan
+- Layout Proof Table avec une ligne vide
+- Sélecteur HTML qui ne matche pas le parent/alignment iOS
+- PNG rendu avec overlap / ghost text / stale state
+- Body ou alt text qui décrit un layout différent du PNG rendu
+
+Calibrated from batch real-2 false negative on `creating-and-managing-real-time-offers` screen-2 (2026-05-11) : asset matched, layout invented. icons_match_ios_source + labels_match_xcstrings ne suffisent pas pour prouver la placement.
+
+---
+
 ## Phase 3, HTML mockups (45 min, 5-10 min par mockup x 2 locales)
 
 Pour chaque mockup, créer 2 fichiers:
 - `articles/<slug>/mockup-sources/<mockup-name>__pt-br.html`
 - `articles/<slug>/mockup-sources/<mockup-name>__en.html`
+
+**Pré-requis** : Phase 3a Layout Proof Table complet pour chaque screen `ios_required` (cf. `process/16-layout-proof-table.md`). Les sélecteurs CSS doivent matcher la colonne 7 du tableau.
 
 **Contraintes HTML strictes**:
 - `<div class="phone">` racine, width 320px (ou 340px pour widget overlay)

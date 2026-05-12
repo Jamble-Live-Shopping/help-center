@@ -1300,6 +1300,229 @@ def test_source_of_truth_check_skipped_disqualifies_exception_free() -> None:
     )
 
 
+# --- visible_text / xcstrings_locale_drift gate ---
+#
+# Five tests anchored to the 2026-05-11 batch real-2 back-sweep that
+# triggered the rule. Each test loads the validator module directly and
+# calls `_validate_visible_text` with synthetic fixtures so we don't have
+# to spin up a full article dir + iOS clone.
+
+_VALIDATOR_FLOW = SCRIPTS_DIR / "validate-article-flow.py"
+
+
+def _load_validator_module():
+    """Load validate-article-flow.py as an importable module.
+
+    Must register the module in sys.modules BEFORE exec_module so the
+    @dataclass decorator on Report can resolve its own module via
+    sys.modules.get(cls.__module__).
+    """
+    name = "validate_article_flow_under_test"
+    if name in sys.modules:
+        return sys.modules[name]
+    spec = importlib.util.spec_from_file_location(name, str(_VALIDATOR_FLOW))
+    assert spec is not None and spec.loader is not None, f"could not load spec for {_VALIDATOR_FLOW}"
+    mod = importlib.util.module_from_spec(spec)
+    sys.modules[name] = mod
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def _build_visible_text_fixture(html_pt: str, html_en: str | None = None) -> tuple[Path, Path]:
+    """Build a synthetic article dir with screen-1__pt-br.html (and optionally en).
+
+    Returns (article_dir, mockup_dir).
+    """
+    article = Path(tempfile.mkdtemp(prefix="visible-text-fixture-"))
+    mockup_dir = article / "mockup-sources"
+    mockup_dir.mkdir(parents=True)
+    (mockup_dir / "screen-1__pt-br.html").write_text(html_pt, encoding="utf-8")
+    if html_en is not None:
+        (mockup_dir / "screen-1__en.html").write_text(html_en, encoding="utf-8")
+    return article, mockup_dir
+
+
+def test_visible_text_track_faixa_drift() -> None:
+    """PT-BR mockup shows 'Track' but xcstrings PT-BR for key 'Track' is 'Faixa'."""
+    mod = _load_validator_module()
+    article, mockup_dir = _build_visible_text_fixture(
+        html_pt="<html><body><div class='track-btn'>Track</div></body></html>",
+    )
+    try:
+        flow = {
+            "mockup_plan": {
+                "screens": [{
+                    "name": "screen-1",
+                    "source": "ios_required",
+                    "visible_text": [
+                        {"selector": ".track-btn", "source": "xcstrings", "key": "Track"},
+                    ],
+                }],
+            },
+        }
+        xc_data = {"Track": {"en": "Track", "pt-BR": "Faixa"}}
+        rep = mod.Report(article=str(article))
+        mod._validate_visible_text(rep, article, flow, mockup_dir, xc_data)
+        drifts = [f for f in rep.hard_fails if "xcstrings_locale_drift" in f]
+        assert len(drifts) == 1, f"expected 1 xcstrings_locale_drift; got {rep.hard_fails!r}"
+        msg = drifts[0]
+        assert "expected 'Faixa'" in msg, f"expected diagnostic to cite 'Faixa'; got {msg!r}"
+        assert "observed 'Track'" in msg, f"expected diagnostic to cite observed 'Track'; got {msg!r}"
+    finally:
+        shutil.rmtree(article, ignore_errors=True)
+
+
+def test_visible_text_pre_bid_source_key_leak() -> None:
+    """Mockup uses xcstrings SOURCE KEY 'Pre-Bid?' instead of localized value.
+
+    Source key 'Enable Pre-Bid?' resolves to 'Enable Pre-Offer?' (en) / 'Ativar Pré-oferta?' (pt-BR).
+    If the writer typed the SOURCE key 'Enable Pre-Bid?' into the PT-BR mockup, the validator
+    must catch that as a drift even though the en VALUE happens to match the key.
+    """
+    mod = _load_validator_module()
+    article, mockup_dir = _build_visible_text_fixture(
+        html_pt="<html><body><div class='toggle-title'>Enable Pre-Bid?</div></body></html>",
+        html_en="<html><body><div class='toggle-title'>Enable Pre-Offer?</div></body></html>",
+    )
+    try:
+        flow = {
+            "mockup_plan": {
+                "screens": [{
+                    "name": "screen-1",
+                    "source": "ios_required",
+                    "visible_text": [
+                        {"selector": ".toggle-title", "source": "xcstrings", "key": "Enable Pre-Bid?"},
+                    ],
+                }],
+            },
+        }
+        xc_data = {
+            "Enable Pre-Bid?": {"en": "Enable Pre-Offer?", "pt-BR": "Ativar Pré-oferta?"},
+        }
+        rep = mod.Report(article=str(article))
+        mod._validate_visible_text(rep, article, flow, mockup_dir, xc_data)
+        drifts = [f for f in rep.hard_fails if "xcstrings_locale_drift" in f]
+        # PT-BR drifted (source key leak), EN matched.
+        assert len(drifts) == 1, f"expected 1 drift on PT-BR; got {rep.hard_fails!r}"
+        assert "pt-br" in drifts[0], f"drift must be on pt-br locale; got {drifts[0]!r}"
+        assert "'Ativar Pré-oferta?'" in drifts[0]
+    finally:
+        shutil.rmtree(article, ignore_errors=True)
+
+
+def test_visible_text_invented_string_uncovered() -> None:
+    """Mockup contains visible text not declared in visible_text or allowlist.
+
+    Triggers visible_text_uncovered hard fail (this is the 'Selling now' / 'Your sales'
+    class from PR #109 and PR #115).
+    """
+    mod = _load_validator_module()
+    article, mockup_dir = _build_visible_text_fixture(
+        html_pt="""<html><body>
+            <div class='title'>Listings</div>
+            <div class='invented-banner'>Selling now</div>
+        </body></html>""",
+    )
+    try:
+        flow = {
+            "mockup_plan": {
+                "screens": [{
+                    "name": "screen-1",
+                    "source": "ios_required",
+                    "visible_text": [
+                        {"selector": ".title", "source": "xcstrings", "key": "Listings"},
+                    ],
+                }],
+            },
+        }
+        xc_data = {"Listings": {"en": "Listings", "pt-BR": "Listings"}}
+        rep = mod.Report(article=str(article))
+        mod._validate_visible_text(rep, article, flow, mockup_dir, xc_data)
+        uncovered = [f for f in rep.hard_fails if "visible_text_uncovered" in f]
+        assert len(uncovered) == 1, f"expected 1 uncovered fail; got {rep.hard_fails!r}"
+        assert "Selling now" in uncovered[0], f"expected 'Selling now' diagnostic; got {uncovered[0]!r}"
+    finally:
+        shutil.rmtree(article, ignore_errors=True)
+
+
+def test_visible_text_user_content_and_numeric_pass() -> None:
+    """Numeric placeholders + user_content selectors pass without text comparison.
+
+    Currency, time, and counts are already filtered by the noise regex. User-supplied
+    content (product names, usernames) is exempt when declared with source=user_content.
+    """
+    mod = _load_validator_module()
+    article, mockup_dir = _build_visible_text_fixture(
+        html_pt="""<html><body>
+            <div class='pname'>Charizard holo PSA 9</div>
+            <div class='price-val'>R$ 75,00</div>
+            <div class='timer'>0:18</div>
+        </body></html>""",
+    )
+    try:
+        flow = {
+            "mockup_plan": {
+                "screens": [{
+                    "name": "screen-1",
+                    "source": "ios_required",
+                    "visible_text": [
+                        {"selector": ".pname", "source": "user_content"},
+                    ],
+                    # .price-val + .timer have only numerics/currency, auto-filtered.
+                }],
+            },
+        }
+        rep = mod.Report(article=str(article))
+        mod._validate_visible_text(rep, article, flow, mockup_dir, None)
+        assert not rep.hard_fails, f"expected no fails; got {rep.hard_fails!r}"
+    finally:
+        shutil.rmtree(article, ignore_errors=True)
+
+
+def test_visible_text_backend_locale_values_pass() -> None:
+    """Backend-sourced text matches when locale_values are provided per locale."""
+    mod = _load_validator_module()
+    backend_pt = "Seu pedido não pôde ser entregue e foi devolvido ao vendedor"
+    backend_en = "Your order could not be delivered and was returned to the seller"
+    article, mockup_dir = _build_visible_text_fixture(
+        html_pt=f"<html><body><div class='banner'>{backend_pt}</div></body></html>",
+        html_en=f"<html><body><div class='banner'>{backend_en}</div></body></html>",
+    )
+    try:
+        flow = {
+            "mockup_plan": {
+                "screens": [{
+                    "name": "screen-1",
+                    "source": "ios_required",
+                    "visible_text": [
+                        {
+                            "selector": ".banner",
+                            "source": "backend",
+                            "path": "src/entities/transaction.py:631",
+                            "locale_values": {"en": backend_en, "pt-br": backend_pt},
+                        },
+                    ],
+                }],
+            },
+        }
+        rep = mod.Report(article=str(article))
+        mod._validate_visible_text(rep, article, flow, mockup_dir, None)
+        assert not rep.hard_fails, f"expected no fails for backend match; got {rep.hard_fails!r}"
+
+        # Negative case: PT-BR drift -> the validator must catch a backend drift too.
+        (mockup_dir / "screen-1__pt-br.html").write_text(
+            "<html><body><div class='banner'>Was returned</div></body></html>",
+            encoding="utf-8",
+        )
+        rep2 = mod.Report(article=str(article))
+        mod._validate_visible_text(rep2, article, flow, mockup_dir, None)
+        drifts = [f for f in rep2.hard_fails if "xcstrings_locale_drift" in f]
+        assert len(drifts) == 1, f"expected 1 backend drift; got {rep2.hard_fails!r}"
+        assert "source=backend" in drifts[0]
+    finally:
+        shutil.rmtree(article, ignore_errors=True)
+
+
 def test_validator_passes_when_path_in_negative_scan_with_risk_flag() -> None:
     """Correct encoding for "I checked this surface and it's absent": move
     the path to source_of_truth.negative_scan AND raise a matching
@@ -1397,6 +1620,11 @@ TESTS = [
     test_source_of_truth_warns_when_env_unset_with_ios_paths,
     test_source_of_truth_check_skipped_disqualifies_exception_free,
     test_unanchored_icon_review_check_warns_and_disqualifies,
+    test_visible_text_track_faixa_drift,
+    test_visible_text_pre_bid_source_key_leak,
+    test_visible_text_invented_string_uncovered,
+    test_visible_text_user_content_and_numeric_pass,
+    test_visible_text_backend_locale_values_pass,
     test_validator_passes_when_path_in_negative_scan_with_risk_flag,
 ]
 
