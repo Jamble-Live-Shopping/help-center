@@ -11,7 +11,7 @@ last_sync: 2026-04-16T00:00:00Z
 locales:
   pt-br:
     title: 'Moedas e Cédulas: Requisitos de Listagem'
-    description: ''
+    description: 'Requisitos para listar moedas e cédulas na Jamble: fotos reais, origem, ano, condição e réplicas.'
   en:
     title: 'Coins and Currency: Listing Requirements'
-    description: 'This article outlines the mandatory listing requirements for all coins, banknotes, and currency items sold on Jamble. These rules exist to protect both buyers and sellers, ensuring transparency and trust in the category.'
+    description: 'Requirements for listing coins and banknotes on Jamble, including real photos, origin, year, condition, and replicas.'
