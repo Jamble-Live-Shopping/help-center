@@ -18,6 +18,7 @@ process/workflows/article-v2.yml.
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import re
 import struct
@@ -32,6 +33,17 @@ try:
 except ImportError:
     print("ERROR: PyYAML required. pip install pyyaml", file=sys.stderr)
     sys.exit(2)
+
+# xcstrings locale resolution: xcstrings keys "pt-BR" but flow.yml + repo
+# convention is "pt-br". See _resolve_xcstrings_locale.
+_XCSTRINGS_LOCALE_MAP = {"en": "en", "pt-br": "pt-BR"}
+
+# Noise filter for visible_text_uncovered. Pure numerics, currency, time, and
+# punctuation strings are skipped automatically — only declare allowlist
+# entries for non-numeric text that has no iOS source mapping.
+_VISIBLE_TEXT_NOISE_RE = re.compile(
+    r"^[\s\d\.,:;·\-–—_/\\|\(\)\[\]\{\}\$R€¥£%]+$"
+)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 ICONS_POOL_DIR = REPO_ROOT / "assets" / "icons-ios"
@@ -178,6 +190,300 @@ def _resolve_ios_root() -> tuple[Path | None, str]:
     if default_root.is_dir():
         return default_root, "default"
     return None, ""
+
+
+def _load_xcstrings(ios_root: Path) -> dict | None:
+    """Load Localizable.xcstrings as {key: {locale: value}}.
+
+    Returns None when the file is missing or unparseable. The validator falls
+    back to skipping xcstrings checks in that case (with a soft warn) rather
+    than hard-failing on infrastructure.
+    """
+    xc_path = ios_root / "RESOURCES" / "Localizable.xcstrings"
+    if not xc_path.exists():
+        # Some checkouts have the xcstrings nested inside Jamble/RESOURCES,
+        # others inside Jamble/. Try both.
+        alt = ios_root / "Jamble" / "RESOURCES" / "Localizable.xcstrings"
+        if alt.exists():
+            xc_path = alt
+        else:
+            return None
+    try:
+        data = json.loads(xc_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return None
+    strings = data.get("strings", {})
+    out: dict[str, dict[str, str]] = {}
+    for key, entry in strings.items():
+        if not isinstance(entry, dict):
+            continue
+        localizations = entry.get("localizations", {}) or {}
+        bucket: dict[str, str] = {}
+        for loc_key, loc_val in localizations.items():
+            if not isinstance(loc_val, dict):
+                continue
+            string_unit = loc_val.get("stringUnit", {}) or {}
+            v = string_unit.get("value")
+            if isinstance(v, str):
+                bucket[loc_key] = v
+        out[key] = bucket
+    return out
+
+
+def _resolve_visible_text(
+    entry: dict, locale: str, xc_data: dict | None
+) -> tuple[str | None, str | None]:
+    """Resolve a visible_text entry to (expected_value, error_msg).
+
+    Returns (None, None) when source=user_content (the validator will
+    skip text comparison but still mark the element as covered for
+    visible_text_uncovered).
+    """
+    if not isinstance(entry, dict):
+        return None, "visible_text entry is not a mapping"
+    source = entry.get("source")
+    if source == "user_content":
+        return None, None
+    if source == "xcstrings":
+        key = entry.get("key")
+        if not key or not isinstance(key, str):
+            return None, "source=xcstrings entry missing 'key' (literal xcstrings key)"
+        if xc_data is None:
+            return (
+                None,
+                "JAMBLE_IOS_ROOT not set or Localizable.xcstrings unreadable ; "
+                "cannot resolve source=xcstrings entries",
+            )
+        keymap = xc_data.get(key)
+        if keymap is None:
+            return None, f"xcstrings key '{key}' not found in Localizable.xcstrings"
+        xc_locale = _XCSTRINGS_LOCALE_MAP.get(locale, locale)
+        val = keymap.get(xc_locale)
+        if val is None:
+            return (
+                None,
+                f"xcstrings key '{key}' has no '{xc_locale}' localization "
+                f"(found locales: {sorted(keymap.keys())})",
+            )
+        return val, None
+    if source == "swift_literal":
+        v = entry.get("value")
+        if v is None or not isinstance(v, str):
+            return None, "source=swift_literal entry missing 'value' (the literal string)"
+        return v, None
+    if source == "backend":
+        locale_values = entry.get("locale_values") or {}
+        if not isinstance(locale_values, dict):
+            return None, "source=backend entry must have locale_values as a mapping"
+        v = locale_values.get(locale)
+        if v is None or not isinstance(v, str):
+            return (
+                None,
+                f"source=backend entry missing locale_values.{locale} "
+                f"(found: {sorted(locale_values.keys())})",
+            )
+        return v, None
+    return None, f"unknown source '{source}' (expected xcstrings / swift_literal / backend / user_content)"
+
+
+def _normalize_text(s: str) -> str:
+    """Collapse internal whitespace so HTML rendering whitespace doesn't
+    create false drifts. Two-space gaps + line breaks inside an xcstrings
+    value get normalised to single spaces."""
+    return " ".join(s.split())
+
+
+def _validate_visible_text(
+    rep: "Report",
+    article_dir: Path,
+    flow: dict,
+    mockup_dir: Path,
+    xc_data: dict | None,
+) -> None:
+    """Enforce per-screen visible_text contracts (Step 2.6 hard gate).
+
+    Rules emitted:
+      xcstrings_locale_drift   — visible_text element text doesn't equal the
+                                  source's locale-resolved value (HARD).
+      visible_text_uncovered   — HTML mockup contains visible text not declared
+                                  in visible_text or visible_text_allowlist (HARD).
+      visible_text_selector_no_match — declared selector matched zero elements (HARD).
+      visible_text_resolve_error    — entry can't be resolved (HARD).
+
+    Activates only when a screen declares non-empty `visible_text`. Articles
+    that haven't adopted the contract yet keep their current validate output.
+    """
+    mockup_plan = flow.get("mockup_plan") or {}
+    if not isinstance(mockup_plan, dict):
+        return
+    screens = mockup_plan.get("screens") or []
+    if not isinstance(screens, list):
+        return
+    slug = article_dir.name
+
+    try:
+        from bs4 import BeautifulSoup  # type: ignore
+    except ImportError:
+        # Soft-degrade: emit a single visible warn so the reviewer sees that
+        # visible_text checks were skipped. Don't crash other rules.
+        for screen in screens:
+            if isinstance(screen, dict) and screen.get("visible_text"):
+                rep.warn(
+                    "visible_text_bs4_missing",
+                    "beautifulsoup4 not installed ; visible_text checks SKIPPED. "
+                    "pip install beautifulsoup4",
+                )
+                return
+        return
+
+    for screen in screens:
+        if not isinstance(screen, dict):
+            continue
+        visible_text = screen.get("visible_text") or []
+        if not visible_text:
+            continue  # screen has no contract; backward-compatible no-op
+        if not isinstance(visible_text, list):
+            rep.fail(
+                "visible_text_schema",
+                f"{slug} screen '{screen.get('name', '?')}': visible_text must be a list",
+            )
+            continue
+        allowlist = screen.get("visible_text_allowlist") or []
+        if allowlist and not isinstance(allowlist, list):
+            rep.fail(
+                "visible_text_schema",
+                f"{slug} screen '{screen.get('name', '?')}': "
+                f"visible_text_allowlist must be a list",
+            )
+            allowlist = []
+        screen_name = screen.get("name", "")
+        if not screen_name:
+            continue
+
+        for locale in ("en", "pt-br"):
+            html_path = mockup_dir / f"{screen_name}__{locale}.html"
+            if not html_path.exists():
+                continue
+            try:
+                html = html_path.read_text(encoding="utf-8")
+            except OSError:
+                continue
+            soup = BeautifulSoup(html, "html.parser")
+            for tag in soup(["style", "script"]):
+                tag.decompose()
+
+            covered: set[int] = set()
+            for entry in visible_text:
+                if not isinstance(entry, dict):
+                    rep.fail(
+                        "visible_text_schema",
+                        f"{slug} {screen_name}__{locale}.html: "
+                        f"visible_text entry must be a mapping, got {type(entry).__name__}",
+                    )
+                    continue
+                selector = entry.get("selector")
+                if not selector or not isinstance(selector, str):
+                    rep.fail(
+                        "visible_text_schema",
+                        f"{slug} {screen_name}__{locale}.html: "
+                        f"visible_text entry missing 'selector'",
+                    )
+                    continue
+                try:
+                    matches = soup.select(selector)
+                except Exception as exc:
+                    rep.fail(
+                        "visible_text_selector_invalid",
+                        f"{slug} {screen_name}__{locale}.html: "
+                        f"selector '{selector}' invalid: {exc}",
+                    )
+                    continue
+                if not matches:
+                    rep.fail(
+                        "visible_text_selector_no_match",
+                        f"{slug} {screen_name}__{locale}.html: "
+                        f"selector '{selector}' matched zero elements",
+                    )
+                    continue
+                expected, err = _resolve_visible_text(entry, locale, xc_data)
+                if err:
+                    rep.fail(
+                        "visible_text_resolve_error",
+                        f"{slug} {screen_name}__{locale}.html selector '{selector}': {err}",
+                    )
+                    continue
+                for el in matches:
+                    covered.add(id(el))
+                    if expected is None:
+                        # user_content -> selector marks covered, no text check
+                        continue
+                    observed = _normalize_text(el.get_text(separator=" ", strip=True))
+                    expected_norm = _normalize_text(expected)
+                    if observed != expected_norm:
+                        source = entry.get("source", "?")
+                        rep.fail(
+                            "xcstrings_locale_drift",
+                            f"{slug} {screen_name}__{locale}.html: "
+                            f"selector '{selector}' source={source} "
+                            f"expected '{expected_norm}' but observed '{observed}'",
+                        )
+
+            # Apply allowlist selectors to mark additional elements as covered.
+            for entry in allowlist:
+                if isinstance(entry, dict):
+                    selector = entry.get("selector")
+                elif isinstance(entry, str):
+                    selector = entry
+                else:
+                    continue
+                if not selector or not isinstance(selector, str):
+                    continue
+                try:
+                    for el in soup.select(selector):
+                        covered.add(id(el))
+                except Exception:
+                    continue
+
+            # Coverage check: any visible-text-bearing element not covered?
+            uncovered: list[tuple[str, str]] = []
+            for el in soup.find_all():
+                # Skip structural containers and the body wrapper.
+                if el.name in ("html", "head", "body", "meta", "link", "title"):
+                    continue
+                # Skip if any ancestor (or self) is covered by a declared selector.
+                if id(el) in covered or any(id(a) in covered for a in el.parents):
+                    continue
+                # Only consider elements with DIRECT text (not just inherited
+                # from children). Children with their own direct text are
+                # examined separately by the find_all walk.
+                direct_text = " ".join(
+                    s.strip() for s in el.strings if isinstance(s, str) and s.strip()
+                )
+                if not direct_text:
+                    continue
+                # Only flag the deepest text-bearing element (not parents that
+                # also see the same text via .strings).
+                has_text_bearing_child = any(
+                    c.name and c.name not in ("br", "img", "svg")
+                    and any(s.strip() for s in c.strings if isinstance(s, str))
+                    for c in el.children
+                    if hasattr(c, "name")
+                )
+                if has_text_bearing_child:
+                    continue
+                if _VISIBLE_TEXT_NOISE_RE.match(direct_text):
+                    continue
+                uncovered.append((el.name or "?", direct_text[:80]))
+
+            if uncovered:
+                short = "; ".join(f"<{t}>: '{txt}'" for t, txt in uncovered[:3])
+                more = f" (+{len(uncovered) - 3} more)" if len(uncovered) > 3 else ""
+                rep.fail(
+                    "visible_text_uncovered",
+                    f"{slug} {screen_name}__{locale}.html: "
+                    f"{len(uncovered)} visible text element(s) not declared in "
+                    f"visible_text or visible_text_allowlist: {short}{more}",
+                )
 
 
 def png_dimensions(path: Path) -> tuple[int, int] | None:
@@ -1136,6 +1442,18 @@ def validate_article(article_dir: Path) -> Report:
             f"`exception_free` is downgraded to False at the coordinator "
             f"level to prevent silent confidence inflation.",
         )
+
+    # ---- visible_text contract (Step 2.6 deterministic gate).
+    # For every ios_required screen with non-empty `visible_text`, parse the
+    # rendered HTML mockup, look up each declared element by selector, and
+    # compare its text against the source's locale-resolved value. Also
+    # fail if HTML contains visible text not covered by visible_text or
+    # visible_text_allowlist. Triggered by the 2026-05-11 Track/Faixa drift
+    # on PR #114 + 5 other PRs in batch real-2.
+    xc_data = None
+    if ios_root_path is not None:
+        xc_data = _load_xcstrings(ios_root_path)
+    _validate_visible_text(rep, article_dir, flow, mockup_dir, xc_data)
 
     return rep
 
