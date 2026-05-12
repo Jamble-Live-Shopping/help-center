@@ -4,13 +4,21 @@
 
 This article outlines the mandatory listing requirements for all coins, banknotes, and currency items sold on Jamble. These rules exist to protect both buyers and sellers, ensuring transparency and trust in the category.
 
+## Contents
+
+- Requirements for all coins and currency listings
+- Rules for replica and novelty coins
+- Failure to follow requirements
+- Quick checklist
+- Need help?
+
 ## Requirements for all coins and currency listings
 
 ### 1. Use real photos
 
 Every listing must include photos of the **actual item you are selling**. Stock photos, catalog images, or photos of a similar item are not allowed.
 
-If you are selling a coin, photograph that specific coin — not a generic image of the same type.
+If you are selling a coin, photograph that specific coin, not a generic image of the same type.
 
 ### 2. Include place of origin
 
@@ -49,7 +57,7 @@ If the coin is in a **professional grading holder (slab)**, mention the grading 
 Selling counterfeit currency is strictly prohibited. However, you may sell **replica or novelty coins** if:
 
 1. You clearly state in the listing that the item is a **replica, novelty, or non-legal tender**
-2. The item itself is clearly distinguishable from authentic currency — for example:
+2. The item itself is clearly distinguishable from authentic currency, for example:
    - It is physically marked as "COPY" or "REPLICA"
    - It has a different size, color, or material from the original
    - It omits the legal tender denomination
@@ -77,4 +85,4 @@ Before publishing a coins or currency listing, verify:
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Contact support from the app chat.
