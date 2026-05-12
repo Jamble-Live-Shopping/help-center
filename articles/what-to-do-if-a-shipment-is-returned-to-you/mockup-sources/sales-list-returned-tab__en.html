@@ -1,0 +1,75 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sales list - Returned tab (EN)</title>
+<!-- Assets.xcassets/transaction_alert_red.imageset/Vector.svg (embedded inline) -->
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+
+.nav { padding: 16px 16px 8px 16px; font-size: 26px; font-weight: 700; color: #000; font-family: -apple-system, "SF Pro Rounded", system-ui; }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; padding: 6px 12px 14px 12px; }
+.tab { display: inline-flex; align-items: center; gap: 5px; padding: 6px 10px; border-radius: 14px; font-size: 12px; font-weight: 500; white-space: nowrap; background: #F1F2F6; color: #4A4F5C; border: 1px solid #ECEDF2; }
+.tab.selected { background: #000; color: #FFF; border-color: #000; }
+.tab .icon { width: 12px; height: 12px; display: inline-block; flex-shrink: 0; }
+.tab.tab-shipped .icon, .tab.tab-completed .icon { color: #7E53F8; }
+
+.list { padding: 0 12px 14px 12px; }
+.row { display: flex; gap: 12px; padding: 12px 4px; border-bottom: 1px solid #F0F1F5; align-items: center; }
+.row:last-child { border-bottom: none; }
+.thumb { width: 56px; height: 56px; border-radius: 10px; background: linear-gradient(135deg, #FFE5B4, #FFB88C); flex-shrink: 0; }
+.thumb.dark { background: linear-gradient(135deg, #1A1F3E, #2D3563); }
+.info { flex: 1; min-width: 0; }
+.title { font-size: 14px; font-weight: 600; color: #162233; line-height: 18px; margin-bottom: 4px; }
+.meta { font-size: 12px; color: #8E93A1; line-height: 16px; }
+.pill { display: inline-block; padding: 2px 8px; border-radius: 8px; background: #FFE9E9; color: #FF3B5C; font-size: 11px; font-weight: 600; }
+</style></head><body>
+<div class="phone">
+  <div class="nav">Sales</div>
+  <div class="tabs">
+    <div class="tab">All</div>
+    <div class="tab">To Ship</div>
+    <div class="tab tab-shipped">
+      <span class="icon">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.22268 8.50755C7.32996 8.57049 7.39528 8.69017 7.39281 8.81849C7.34981 11.0514 7.35877 12.4414 7.38989 14.9998C7.39306 15.2602 7.13059 15.4323 6.90665 15.3169C4.83557 14.2499 3.45297 13.5755 1.62739 12.297C1.28498 12.0572 1.07535 11.659 1.05814 11.2293C0.936617 8.19701 1.02951 6.77863 1.16414 5.50541C1.19025 5.25853 1.45021 5.12107 1.65783 5.24287L7.22268 8.50755Z" fill="#7E53F8"/>
+          <path d="M2.0466 3.75294C1.87878 3.91284 1.90922 4.19835 2.1065 4.31615C4.30662 5.62986 5.474 6.36712 7.82748 7.65578C7.93054 7.71221 8.05547 7.70882 8.15495 7.64579C9.20469 6.98074 10.0111 6.39867 10.787 5.91442C10.892 5.8489 10.8969 5.69088 10.7961 5.61861C7.62831 3.34819 5.99414 2.68143 4.46775 2.08895C4.42495 2.07234 4.3769 2.07509 4.33594 2.09615C3.16693 2.69717 2.71084 3.12006 2.0466 3.75294Z" fill="#7E53F8"/>
+          <path d="M14.0213 4.10278C14.1501 4.04381 14.1566 3.85522 14.0317 3.78768L8.59863 0.84757C8.14109 0.599972 7.60869 0.543242 7.11627 0.702255C6.14928 1.01451 5.67608 1.21569 5.26357 1.44542C5.13811 1.51529 5.1564 1.70494 5.29066 1.75391C6.98023 2.37022 8.71006 3.107 11.4934 5.12329C11.5915 5.19438 11.7197 5.2068 11.8279 5.15394C12.6371 4.75868 13.2025 4.47783 14.0213 4.10278Z" fill="#7E53F8"/>
+          <path d="M8.91057 8.38104C8.80681 8.44488 8.74342 8.56309 8.74578 8.68867C8.79169 11.1331 8.79565 12.6445 8.77924 15.0394C8.77749 15.2936 9.02773 15.4631 9.24765 15.3533C10.2059 14.8749 12.4528 13.7067 14.3984 12.3441C14.7407 12.1043 14.9464 11.7051 14.9592 11.2754C15.0338 8.77489 14.9842 6.41212 14.9541 5.37141C14.9467 5.11388 14.6817 4.95894 14.4648 5.0824C12.5823 6.15394 11.2268 6.95624 8.91057 8.38104Z" fill="#7E53F8"/>
+        </svg>
+      </span>
+      In Delivery
+    </div>
+    <div class="tab tab-completed">
+      Completed
+    </div>
+    <div class="tab selected">
+      <span class="icon">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58182 0 0 3.58182 0 8C0 12.4182 3.58182 16 8 16C12.4182 16 16 12.4182 16 8C16 3.58182 12.4182 0 8 0Z" fill="#FD6642"/>
+          <path d="M8.04819 9.64192C8.56353 9.64192 8.83672 9.32494 8.85535 8.78609L8.94848 4.39919C8.95469 4.3358 8.95469 4.25972 8.95469 4.20901C8.95469 3.62578 8.60699 3.27711 8.0544 3.27711C7.4956 3.27711 7.1417 3.62578 7.1417 4.20901C7.1417 4.25972 7.1479 4.3358 7.1479 4.39919L7.24725 8.78609C7.25966 9.32494 7.53286 9.64192 8.04819 9.64192ZM8.04819 12.7229C8.6132 12.7229 9.06024 12.2855 9.06024 11.7276C9.06024 11.1697 8.6132 10.7323 8.04819 10.7323C7.48318 10.7323 7.03614 11.1697 7.03614 11.7276C7.03614 12.2855 7.48318 12.7229 8.04819 12.7229Z" fill="white"/>
+        </svg>
+      </span>
+      Returned
+    </div>
+    <div class="tab">Canceled</div>
+  </div>
+  <div class="list">
+    <div class="row">
+      <div class="thumb"></div>
+      <div class="info">
+        <div class="title">Charizard Holo 1999</div>
+        <div class="meta">Order number: JAM-2026-05-204918</div>
+      </div>
+      <div class="pill">Canceled</div>
+    </div>
+    <div class="row">
+      <div class="thumb dark"></div>
+      <div class="info">
+        <div class="title">Hot Wheels Treasure Hunt</div>
+        <div class="meta">Order number: JAM-2026-04-198273</div>
+      </div>
+      <div class="pill">Canceled</div>
+    </div>
+  </div>
+</div>
+</body></html>
