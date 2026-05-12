@@ -32,7 +32,8 @@ jobs:
           python-version: '3.11'
 
       - name: Install deps
-        run: pip install pyyaml
+        # beautifulsoup4 required by visible_text rule (PR #117 / Step 2.6).
+        run: pip install pyyaml beautifulsoup4
 
       - name: Validate (PR, changed articles)
         run: |
