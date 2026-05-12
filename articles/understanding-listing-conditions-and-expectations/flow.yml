@@ -1,0 +1,204 @@
+# Article flow contract for understanding-listing-conditions-and-expectations.
+# Concept article: explains the 5 condition tiers Jamble exposes today.
+# Source of truth = backend condition.json (server-driven titles + descriptions).
+
+workflow: article-v2
+mode: v2_rewrite
+audience: both
+
+job_to_be_done: "Explain how Jamble defines item condition tiers (New, Like New, Used, etc.), what buyers and sellers should expect from each tier, and how to pick the right tier when listing"
+
+source_of_truth:
+  ios_files:
+    - PRODUCT/Models/ProductCondition.swift:1-25
+    - PRODUCT/Models/Product.swift:319-324
+    - PRODUCT/Views/Components/ProductConditionCell.swift:11-137
+    - PRODUCT/Views/SelectProductAttributeViewController.swift:1-300
+    - PRODUCT/View Models/CreateProductViewModel.swift:494-548
+    - PRODUCT/View Models/CreateProductViewModel.swift:670-680
+    - PRODUCT/View Models/CreateProductViewModel.swift:175-182
+    - PRODUCT/Models/CreateProductSectionType.swift:57-58
+    - PRODUCT/Views/SwiftUI/Components/ProductInfoSection.swift:167-176
+    - SERVICE/API/Repository/Modules/Product/ProductRepository.swift:69
+    - SERVICE/API/Repository/Modules/Product/ProductRepository.swift:432-434
+  backend_files:
+    - src/routers/product.py:1242-1255
+    - src/product_attributes/configs/attributes/condition.json:1-97
+  legal: []
+  support_context: []
+
+content_contract:
+  # must_answer is a substring scan applied to BOTH pt-br.md and en.md.
+  # We use language-neutral or shared-cognate terms (5, edit) that appear
+  # in both translations. Locale-specific tier names are enforced via the
+  # screens' html_must_contain (which IS locale-specific).
+  must_answer:
+    - "5"
+    - "edit"
+  forbidden_terms:
+    - "auction"
+    - "leilao"
+    - "leilão"
+  must_not_say:
+    - "Condition is optional"
+    - "number one cause"
+    - "Products with a condition rating sell better"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: condition-picker
+      purpose: "iOS condition picker screen: nav title 'Condição', 5 tier rows (title + description + radio), selected state on 'Muito Bom'"
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Condição"
+          - "Novo com etiquetas"
+          - "Novo sem etiquetas"
+          - "Muito Bom"
+          - "Bom"
+          - "Satisfatório"
+        en:
+          - "Condition"
+          - "New with tags"
+          - "New without tags"
+          - "Very Good"
+          - "Good"
+          - "Satisfactory"
+      # visible_text contract (PR #117): nav title + Clear button resolve via
+      # xcstrings ("Condition" / "Clear"); the 5 tier titles and descriptions
+      # come from backend condition.json (server-driven, NOT in xcstrings).
+      # Rows are addressed by :nth-of-type position inside `.phone` (1=topbar,
+      # 2=topbar-divider, 3..7 = the 5 tier rows in backend `order`: NEW_WITH_TAGS,
+      # NEW_WITHOUT_TAGS, VERY_GOOD, GOOD, SATISFACTORY — matching what iOS
+      # filters to via ProductRepository.swift:432-434 + the picker mode in
+      # SelectProductAttributeViewController).
+      visible_text:
+        - selector: ".topbar .title"
+          source: xcstrings
+          key: "Condition"
+        - selector: ".topbar .clear"
+          source: xcstrings
+          key: "Clear"
+        - selector: ".phone > .row:nth-of-type(3) .row-title"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:11-15"
+          locale_values:
+            en: "New with tags"
+            pt-br: "Novo com etiquetas"
+        - selector: ".phone > .row:nth-of-type(3) .row-desc"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:14"
+          locale_values:
+            en: "Unworn and pristine, complete with original purchase tags."
+            pt-br: "Nunca usado e impecável, completo com as etiquetas originais de compra."
+        - selector: ".phone > .row:nth-of-type(4) .row-title"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:16-20"
+          locale_values:
+            en: "New without tags"
+            pt-br: "Novo sem etiquetas"
+        - selector: ".phone > .row:nth-of-type(4) .row-desc"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:19"
+          locale_values:
+            en: "Never worn, in perfect condition, but without the original tags."
+            pt-br: "Nunca usado, em perfeito estado, mas sem as etiquetas originais."
+        - selector: ".phone > .row:nth-of-type(5) .row-title"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:46-50"
+          locale_values:
+            en: "Very Good"
+            pt-br: "Muito Bom"
+        - selector: ".phone > .row:nth-of-type(5) .row-desc"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:49"
+          locale_values:
+            en: "Lightly used with minimal signs of wear, well-maintained."
+            pt-br: "Pouco usado, com sinais mínimos de desgaste, bem conservado."
+        - selector: ".phone > .row:nth-of-type(6) .row-title"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:51-55"
+          locale_values:
+            en: "Good"
+            pt-br: "Bom"
+        - selector: ".phone > .row:nth-of-type(6) .row-desc"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:54"
+          locale_values:
+            en: "Gently worn and well cared for, with any defects clearly noted."
+            pt-br: "Usado com cuidado e bem conservado, com quaisquer defeitos claramente indicados."
+        - selector: ".phone > .row:nth-of-type(7) .row-title"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:56-60"
+          locale_values:
+            en: "Satisfactory"
+            pt-br: "Satisfatório"
+        - selector: ".phone > .row:nth-of-type(7) .row-desc"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:59"
+          locale_values:
+            en: "Frequently worn with visible wear and noted defects."
+            pt-br: "Usado frequentemente, com desgaste visível e defeitos notados."
+    - name: section-row
+      purpose: "Condition row inside the create-product flow (sits between Color and Price), with a value chip showing the selected tier"
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      html_must_contain:
+        pt-br:
+          - "Condição"
+        en:
+          - "Condition"
+      # visible_text contract (PR #117): the 5 row-titles (Brand, Size, Color,
+      # Condition, Price) resolve via xcstrings; their row-values are a mix of
+      # runtime user_content (Brand/Size/Color stand-ins for the section
+      # mockup) and backend (the Condition tier title, server-driven). Price
+      # value "$90.00" / "R$ 450,00" is pure-numeric and noise-filtered by
+      # the validator, but we declare it as user_content for clarity.
+      visible_text:
+        - selector: ".phone > .row:nth-of-type(1) .row-title"
+          source: xcstrings
+          key: "Brand"
+        - selector: ".phone > .row:nth-of-type(1) .row-value"
+          source: user_content
+        - selector: ".phone > .row:nth-of-type(2) .row-title"
+          source: xcstrings
+          key: "Size"
+        - selector: ".phone > .row:nth-of-type(2) .row-value"
+          source: user_content
+        - selector: ".phone > .row:nth-of-type(3) .row-title"
+          source: xcstrings
+          key: "Color"
+        - selector: ".phone > .row:nth-of-type(3) .row-value"
+          source: user_content
+        - selector: ".phone > .row:nth-of-type(4) .row-title"
+          source: xcstrings
+          key: "Condition"
+        - selector: ".phone > .row:nth-of-type(4) .row-value"
+          source: backend
+          path: "src/product_attributes/configs/attributes/condition.json:46-50"
+          locale_values:
+            en: "Very Good"
+            pt-br: "Muito Bom"
+        - selector: ".phone > .row:nth-of-type(5) .row-title"
+          source: xcstrings
+          key: "Price"
+        - selector: ".phone > .row:nth-of-type(5) .row-value"
+          source: user_content
+
+icons_required: []
+icons_fallback_feather: false
+currency_required: false
+
+# Concept article with 10 short, linear H2 sections. The headings form a
+# self-navigating outline and a TOC would only push content below the fold
+# on mobile. Disable the TOC check.
+toc_required: false
+
+risk_flags: []
+resolved_decisions: []

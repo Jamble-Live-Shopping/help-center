@@ -1,0 +1,60 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding: 4px 0 8px; }
+
+/* Section row mirrors ProductAttributeCell.swift:64-70 (mainStackView axis=.vertical,
+   spacing=2) + :82-101 (configure + handleOptionSelection): title shrinks 17pt -> 13pt
+   regular when a value is selected, value appears BELOW title (addArrangedSubview), both
+   leading-aligned. Chevron is the only trailing-pinned element (imageView.trailingAnchor
+   = contentView.trailingAnchor - 16, :116). contentView.backgroundColor = .clear (:105),
+   so NO row highlight state (the only required-state cue is titleLabel.textColor=customRed
+   per :84, which we do not need to render here since all rows have values selected).
+   .row-stack is the LEFT flex item with align-items: flex-start (visibly leading);
+   .chev is the trailing flex item enforced by flex layout + flex-shrink:0. */
+.row { display: flex; align-items: center; padding: 12px 16px; min-height: 56px; gap: 12px; }
+.row .row-stack { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+.row .row-title { font-size: 13px; font-weight: 400; color: #4F6079; line-height: 18px; }
+.row .row-value { font-size: 17px; font-weight: 600; color: #162233; line-height: 22px; font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; }
+.row .chev { width: 14px; height: 14px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.row .chev svg { width: 8px; height: 14px; }
+.row + .row { border-top: 0.5px solid #E9EAEF; }
+</style></head><body>
+<div class="phone">
+  <div class="row">
+    <div class="row-stack">
+      <div class="row-title">Marca</div>
+      <div class="row-value">Pokémon</div>
+    </div>
+    <div class="chev"><svg viewBox="0 0 8 14" fill="none" stroke="#A0A7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 1 7 7 1 13"/></svg></div>
+  </div>
+  <div class="row">
+    <div class="row-stack">
+      <div class="row-title">Tamanho</div>
+      <div class="row-value">Único</div>
+    </div>
+    <div class="chev"><svg viewBox="0 0 8 14" fill="none" stroke="#A0A7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 1 7 7 1 13"/></svg></div>
+  </div>
+  <div class="row">
+    <div class="row-stack">
+      <div class="row-title">Cor</div>
+      <div class="row-value">Vermelho</div>
+    </div>
+    <div class="chev"><svg viewBox="0 0 8 14" fill="none" stroke="#A0A7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 1 7 7 1 13"/></svg></div>
+  </div>
+  <div class="row">
+    <div class="row-stack">
+      <div class="row-title">Condição</div>
+      <div class="row-value">Muito Bom</div>
+    </div>
+    <div class="chev"><svg viewBox="0 0 8 14" fill="none" stroke="#A0A7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 1 7 7 1 13"/></svg></div>
+  </div>
+  <div class="row">
+    <div class="row-stack">
+      <div class="row-title">Preço</div>
+      <div class="row-value">R$ 450,00</div>
+    </div>
+    <div class="chev"><svg viewBox="0 0 8 14" fill="none" stroke="#A0A7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 1 7 7 1 13"/></svg></div>
+  </div>
+</div>
+</body></html>
