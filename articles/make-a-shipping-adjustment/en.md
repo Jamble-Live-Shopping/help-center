@@ -38,10 +38,10 @@ The weight and dimensions the carrier uses come from the **shipping profile** yo
 
 When you tap generate, the system purchases a Correios label through Melhor Envio with the weight, dimensions, and address as they stand at that moment. From then on, the bundle row in the post-show dashboard shows two buttons:
 
-![Post-show dashboard with the PACKAGE 1 row, the price the seller paid for shipping, and the Open Label and Nota Fiscal buttons that appear once the label has been generated](./assets/mockups/make-a-shipping-adjustment__screen-2__en__v3.png)
+![Post-show dashboard with the PACKAGE 1 row, the price the seller paid for shipping, and the See Label and See Invoice buttons that appear once the label has been generated](./assets/mockups/make-a-shipping-adjustment__screen-2__en__v3.png)
 
-- **Open Label**: opens the purchased label PDF, with address, tracking code, and barcode
-- **Nota Fiscal**: opens the NF-e flow (add manually, extract from a file, or declare exemption)
+- **See Label**: opens the purchased label PDF, with address, tracking code, and barcode
+- **See Invoice**: opens the Nota Fiscal (NF-e) flow (add manually, extract from a file, or declare exemption)
 
 There is no in-app button to adjust the label, change the weight, change the address, or cancel the label. For any of those, open the support chat.
 

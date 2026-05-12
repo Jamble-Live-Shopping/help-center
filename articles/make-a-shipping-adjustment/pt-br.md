@@ -38,10 +38,10 @@ O peso e as dimensões usadas pela transportadora vêm do **perfil de envio** qu
 
 Quando você gera a etiqueta, o sistema compra uma etiqueta dos Correios via Melhor Envio com o peso, as dimensões e o endereço daquele momento. A partir daí, a linha do pacote no painel pós-show passa a mostrar dois botões:
 
-![Painel pós-show com a linha do PACOTE 1, valor pago pelo vendedor, e os botões Abrir etiqueta e Nota Fiscal disponíveis depois que a etiqueta foi gerada](./assets/mockups/make-a-shipping-adjustment__screen-2__pt-br__v3.png)
+![Painel pós-show com a linha do PACOTE 1, valor pago pelo vendedor, e os botões Ver Etiqueta e Ver NFe disponíveis depois que a etiqueta foi gerada](./assets/mockups/make-a-shipping-adjustment__screen-2__pt-br__v3.png)
 
-- **Abrir etiqueta**: abre o PDF da etiqueta já comprada, com endereço, código de rastreio e código de barras
-- **Nota Fiscal**: abre o fluxo de chave de NF-e (adicionar manualmente, extrair de um arquivo, ou declarar isenção)
+- **Ver Etiqueta**: abre o PDF da etiqueta já comprada, com endereço, código de rastreio e código de barras
+- **Ver NFe**: abre o fluxo de Nota Fiscal eletrônica (adicionar manualmente, extrair de um arquivo, ou declarar isenção)
 
 Não existe botão de ajustar a etiqueta, mudar o peso, trocar o endereço, ou cancelar a etiqueta no app. Para qualquer um desses casos, abra o chat do suporte.
 
