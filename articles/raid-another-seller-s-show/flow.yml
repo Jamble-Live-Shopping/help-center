@@ -46,12 +46,44 @@ mockup_plan:
         - icons_match_ios_source
         - labels_match_xcstrings
         - no_invented_ui_state
+      visible_text:
+        - selector: ".modal-title"
+          source: swift_literal
+          path: "LIVE_SHOPPING/Raid/View/RaidViewController.swift:21"
+          value: "The Jamble Raid"
+        - selector: ".accent"
+          source: xcstrings
+          key: "sending your viewers to a seller"
+        - selector: ".btn.btn-primary"
+          source: xcstrings
+          key: "Select Live Show"
+        - selector: ".btn.btn-leave"
+          source: swift_literal
+          path: "LIVE_SHOPPING/Raid/View/RaidViewController.swift:123"
+          value: "End without Raid"
+      visible_text_allowlist:
+        - selector: ".avatar-left"
+          reason: "Decorative seller-initial placeholder (single letter), not localized copy"
+        - selector: ".avatar-right"
+          reason: "Decorative unknown-target glyph ('?'), not localized copy"
     - name: screen-2
       purpose: "Select a Live chooser (RaidShowChooserViewController): grid of live show cards with one selected and Select Live Show CTA"
       source: ios_required
       review_checks:
         - labels_match_xcstrings
         - no_invented_ui_state
+      visible_text:
+        - selector: ".modal-title"
+          source: xcstrings
+          key: "Select a Live"
+        - selector: ".name"
+          source: user_content
+        - selector: ".btn-primary"
+          source: xcstrings
+          key: "Select Live Show"
+      visible_text_allowlist:
+        - selector: ".pill-live"
+          reason: "Stylistic uppercase 'LIVE' badge on show-card thumbnails (CSS-driven visual treatment, not localized via xcstrings 'Live' titlecase token)"
     - name: screen-3
       purpose: "Raid confirmed end-show panel (RaidType.ended): Success chip, large send icon, Thanks copy, End Show CTA"
       source: ios_required
@@ -60,6 +92,21 @@ mockup_plan:
         - icons_match_ios_source
         - labels_match_xcstrings
         - no_invented_ui_state
+      visible_text:
+        - selector: ".modal-title"
+          source: swift_literal
+          path: "LIVE_SHOPPING/Raid/View/RaidViewController.swift:21"
+          value: "The Jamble Raid"
+        - selector: ".chip"
+          source: swift_literal
+          path: "LIVE_SHOPPING/Raid/View/RaidViewController.swift:73"
+          value: "Success!"
+        - selector: ".desc"
+          source: xcstrings
+          key: "Thanks for supporting the community! You can now end your Show"
+        - selector: ".btn-primary"
+          source: xcstrings
+          key: "End Show"
 
 icons_required:
   - send_icon
