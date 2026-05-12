@@ -1,0 +1,205 @@
+# Generated from process/templates/article-flow.yml by scripts/init-article-flow.py
+# slug: make-a-shipping-adjustment
+#
+# Article flow contract.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+job_to_be_done: "Help sellers adjust a shipping label after creation: when adjustments are allowed, how to access the adjust flow, what costs the seller covers"
+
+# Sources of truth.
+source_of_truth:
+  ios_files:
+    - SHIPPING/Add Edit Shipping Address/Views/AddEditShippingAddressInformationView.swift
+    - SHIPPING/Add Edit Shipping Address/Configuration/BRAddressFormConfiguration.swift
+    - LIVE_SHOPPING/DashboardHost/Views/DashboardBundleView.swift
+    - LIVE_SHOPPING/DashboardHost/Models/DashboardBundle.swift
+    - LIVE_SHOPPING/DashboardHost/ViewModels/DashboardBundleViewModel.swift
+    - TRANSACTION/Sale/ChangeShippingWeightViewController.swift
+    - RESOURCES/Localizable.xcstrings
+  backend_files: []
+  legal: []
+  support_context: []
+  # Note: TRANSACTION/Sale/ChangeShippingWeightViewController.swift is
+  # listed in ios_files (the path exists) but is dead code in production:
+  # `grep -r ChangeShippingWeightViewController Jamble/` returns only its
+  # own declaration. The article documents that this surface is unreachable
+  # for sellers today, see risk_flags / resolved_decisions below and the
+  # Stale-surface section in audit/code-audit-14288137.md.
+
+# Content contract.
+content_contract:
+  must_answer:
+    - "Correios"
+    - "Melhor Envio"
+    - "Nota Fiscal"
+  forbidden_terms: []
+  must_not_say:
+    - "Do not claim sellers can self-serve a weight or label edit from the bundle row after the label is purchased; the iOS DashboardBundleView only exposes the backend-driven DashboardBundle.Action set once a label exists (See Label + See Invoice when NF added; Add Invoice / Exempt Invoice while NF not yet added)."
+
+# Mockup plan.
+mockup_plan:
+  required: true
+  screens:
+    - name: screen-1
+      purpose: "Edit Shipping Address screen, the only sender-side self-service adjustment available before label purchase."
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      # Visible text contract (PR #117). Field labels with full EN+pt-BR
+      # xcstrings coverage go through source=xcstrings. Field labels that
+      # live in xcstrings as pt-BR-only (sourceLanguage=en falls back to
+      # the key itself) go through source=backend with locale_values
+      # because the validator has no native fallback-to-key path for
+      # missing locale variants. Header title is a Swift interpolation
+      # `"\(verb) Shipping Address"` that resolves through xcstrings key
+      # `"%@ Shipping Address"`; we declare it as backend so the
+      # composite value can be encoded literally per locale.
+      visible_text:
+        - selector: ".header-title"
+          source: backend
+          path: "SHIPPING/Add Edit Shipping Address/Views/AddEditShippingAddressInformationView.swift:286 ; xcstrings key '%@ Shipping Address'"
+          locale_values:
+            en: "Edit Shipping Address"
+            pt-br: "Editar Endereço de entrega"
+        - selector: ".section-personal"
+          source: xcstrings
+          key: "Personal Information"
+        - selector: ".section-shipping"
+          source: xcstrings
+          key: "Shipping Address"
+        - selector: ".field-firstname .floating-label"
+          source: xcstrings
+          key: "First Name"
+        - selector: ".field-lastname .floating-label"
+          source: xcstrings
+          key: "Last Name"
+        - selector: ".field-phone .floating-label"
+          source: xcstrings
+          key: "Phone Number"
+        - selector: ".field-zip .floating-label"
+          source: xcstrings
+          key: "ZIP Code"
+        - selector: ".field-streetname .floating-label"
+          source: backend
+          path: "RESOURCES/Localizable.xcstrings (key 'Street Name' is pt-BR-only ; EN falls back to source language key)"
+          locale_values:
+            en: "Street Name"
+            pt-br: "Nome da rua"
+        - selector: ".field-streetnumber .floating-label"
+          source: backend
+          path: "RESOURCES/Localizable.xcstrings (key 'Street Number' is pt-BR-only ; EN falls back to source language key)"
+          locale_values:
+            en: "Street Number"
+            pt-br: "Número"
+        - selector: ".field-interior .floating-label"
+          source: backend
+          path: "RESOURCES/Localizable.xcstrings (key 'Interior/Apt' is pt-BR-only ; EN falls back to source language key)"
+          locale_values:
+            en: "Interior/Apt"
+            pt-br: "Complemento"
+        - selector: ".field-neighborhood .floating-label"
+          source: backend
+          path: "RESOURCES/Localizable.xcstrings (key 'Neighborhood' is pt-BR-only ; EN falls back to source language key)"
+          locale_values:
+            en: "Neighborhood"
+            pt-br: "Bairro"
+        - selector: ".field-city .floating-label"
+          source: xcstrings
+          key: "City"
+        - selector: ".field-state .floating-label"
+          source: xcstrings
+          key: "State Code e.g SP"
+        - selector: ".field-country .floating-label"
+          source: xcstrings
+          key: "Country"
+        - selector: ".cta"
+          source: xcstrings
+          key: "Edit"
+        # All field .value elements are runtime form data (names,
+        # CEP, addresses, phone, state code, country). Marked covered
+        # via user_content so the validator does not flag them as
+        # uncovered. The selector pattern matches every value cell.
+        - selector: ".field .value"
+          source: user_content
+      visible_text_allowlist:
+        - selector: ".back"
+          reason: "Lone chevron glyph &lsaquo; ; pure-symbol nav arrow, no xcstrings source"
+    - name: screen-2
+      purpose: "Post-show bundle row after the label is purchased: the only available actions come from DashboardBundle.Action (See Label + See Invoice when NF added). There is no self-service adjustment button."
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      # Visible text contract (PR #117). The two action buttons render
+      # `Text(action.title)` directly from backend JSON
+      # (DashboardBundle.Action.title, populated by
+      # jamble_backend/src/schemas/sale_actions.py). Item names,
+      # buyer handle, prices, package label, item count, paid-shipping
+      # phrase are runtime / composite xcstrings keys with %@ or %lld
+      # variations the validator cannot resolve ; they go through
+      # user_content (runtime data) or allowlist (composite xcstrings
+      # keys not statically resolvable).
+      visible_text:
+        - selector: ".btn-open-label"
+          source: backend
+          path: "jamble_backend/src/schemas/sale_actions.py:221-222 (action_id=open_label, title=Localized(en='See Label', pt='Ver Etiqueta'))"
+          locale_values:
+            en: "See Label"
+            pt-br: "Ver Etiqueta"
+        - selector: ".btn-open-nf"
+          source: backend
+          path: "jamble_backend/src/schemas/sale_actions.py:204-205 (action_id=open_nota_fiscal, title=Localized(en='See Invoice', pt='Ver NFe'))"
+          locale_values:
+            en: "See Invoice"
+            pt-br: "Ver NFe"
+        # Item names = product titles (runtime user-supplied catalog
+        # data). Buyer handle = runtime profile data. Marked covered
+        # via user_content so the validator skips text comparison.
+        - selector: ".item-name"
+          source: user_content
+        - selector: ".buyer-name"
+          source: user_content
+      visible_text_allowlist:
+        - selector: ".buyer-summary"
+          reason: "Composite '3 itens · R$147,00' / '3 items · $28.10' ; xcstrings plural key '%lld items' + currency interpolation, not statically resolvable"
+        - selector: ".bundle-title"
+          reason: "PACOTE %lld / PACKAGE %lld ; xcstrings key '%lld' interpolation, not statically resolvable"
+        - selector: ".bundle-count"
+          reason: "%lld itens / %lld items ; plural xcstrings key with %lld interpolation"
+        - selector: ".bundle-ship"
+          reason: "Você pagou \\$%@ / You paid \\$%@ ; xcstrings key 'You paid \\$%@' with currency interpolation"
+        - selector: ".item-price"
+          reason: "Pure currency / numeric (auto-filtered by noise regex, listed for explicit traceability)"
+        - selector: ".note"
+          reason: "Article-only explanatory caption ; not present in iOS app, intentionally added to mockup to document the article's central claim about the post-label action set"
+        - selector: ".avatar"
+          reason: "Single-letter buyer initial (M = Marina) rendered inside the avatar circle ; pure user-content derived from buyer profile, no xcstrings source"
+
+# Icons used: none. Both mockups use plain text + simple CSS chrome.
+icons_required: []
+
+icons_fallback_feather: false
+
+# Article does not quote prices in body.
+currency_required: false
+
+# Article has 8 H2 sections but the structure is linear (Case 1 / Case 2 /
+# Who pays / Best practices / FAQ / Need help) and a TOC would duplicate
+# the H2 list. Silence the soft TOC warn.
+toc_required: false
+
+# Risk flag: ChangeShippingWeightViewController.swift exists but has zero
+# call sites. Article documents this surface as not accessible in production
+# and routes weight-discrepancy cases through support. If a future engineering
+# rewire makes the screen reachable, this article must be revisited.
+risk_flags:
+  - "ChangeShippingWeightViewController.swift defined in TRANSACTION/Sale/ but has zero call sites. The Confirm Weight modal documented in the prior v1 article was unreachable in production. Article reframed around address fix before label + support route after label. Re-audit if a future PR wires the controller back in."
+
+resolved_decisions:
+  - risk: "ChangeShippingWeightViewController.swift defined in TRANSACTION/Sale/ but has zero call sites. The Confirm Weight modal documented in the prior v1 article was unreachable in production. Article reframed around address fix before label + support route after label. Re-audit if a future PR wires the controller back in."
+    decided_by: "Aymar"
+    decided_at: "2026-05-11"
+    rationale: "v2 rewrite drops the unreachable Confirm Weight surface and aligns the article with the surfaces sellers actually see today: Edit Shipping Address (pre-label) and the bundle action row (post-label). The dead controller is documented via negative_scan + this risk flag so a future re-audit can detect rewiring."

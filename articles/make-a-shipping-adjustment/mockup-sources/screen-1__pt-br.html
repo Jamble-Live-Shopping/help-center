@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding: 14px 16px 18px; }
+
+.header { position: relative; height: 36px; margin-bottom: 6px; display: flex; align-items: center; justify-content: center; }
+.back { position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; color: #162233; font-size: 20px; font-weight: 400; }
+.header-title { font-size: 17px; font-weight: 600; color: #162233; }
+
+.section-title { font-size: 16px; font-weight: 600; color: #162233; margin: 18px 0 12px; }
+
+.field { background: #F4F5F9; border-radius: 12px; padding: 10px 14px; min-height: 52px; margin-bottom: 10px; display: flex; flex-direction: column; justify-content: center; }
+.field .floating-label { font-size: 11px; color: #6B7A92; font-weight: 500; line-height: 14px; }
+.field .value { font-size: 15px; color: #162233; font-weight: 500; line-height: 20px; margin-top: 2px; }
+.field .placeholder { color: #A0A7B7; font-weight: 400; }
+
+.row { display: flex; gap: 10px; }
+.row .field { flex: 1; }
+
+.cta { background: #7E53F8; color: #FFFFFF; height: 48px; border-radius: 24px; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 600; margin-top: 18px; }
+</style></head><body>
+<div class="phone">
+  <div class="header">
+    <div class="back">&lsaquo;</div>
+    <div class="header-title">Editar Endereço de entrega</div>
+  </div>
+
+  <div class="section-title section-personal">Informações Pessoais</div>
+
+  <div class="field field-firstname">
+    <div class="floating-label">Nome</div>
+    <div class="value">Marina</div>
+  </div>
+
+  <div class="field field-lastname">
+    <div class="floating-label">Sobrenome</div>
+    <div class="value">Souza</div>
+  </div>
+
+  <div class="field field-phone">
+    <div class="floating-label">Número de Telefone</div>
+    <div class="value">(11) 9 1234-5678</div>
+  </div>
+
+  <div class="section-title section-shipping">Endereço de Entrega</div>
+
+  <div class="field field-zip">
+    <div class="floating-label">CEP</div>
+    <div class="value">01310-100</div>
+  </div>
+
+  <div class="field field-streetname">
+    <div class="floating-label">Nome da rua</div>
+    <div class="value">Avenida Paulista</div>
+  </div>
+
+  <div class="row">
+    <div class="field field-streetnumber">
+      <div class="floating-label">Número</div>
+      <div class="value">1578</div>
+    </div>
+    <div class="field field-interior">
+      <div class="floating-label">Complemento</div>
+      <div class="value">Apto 42</div>
+    </div>
+  </div>
+
+  <div class="field field-neighborhood">
+    <div class="floating-label">Bairro</div>
+    <div class="value">Bela Vista</div>
+  </div>
+
+  <div class="field field-city">
+    <div class="floating-label">Cidade</div>
+    <div class="value">São Paulo</div>
+  </div>
+
+  <div class="row">
+    <div class="field field-state">
+      <div class="floating-label">Código do estado, por exemplo, SP</div>
+      <div class="value">SP</div>
+    </div>
+    <div class="field field-country">
+      <div class="floating-label">País</div>
+      <div class="value">Brasil</div>
+    </div>
+  </div>
+
+  <div class="cta">Editar</div>
+</div>
+</body></html>

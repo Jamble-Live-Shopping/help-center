@@ -7,11 +7,11 @@ default_locale: pt-br
 
 state: published
 author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+last_sync: 2026-05-11T00:00:00Z
 locales:
   pt-br:
     title: 'Faça um Ajuste de Envio'
-    description: ''
+    description: 'O que você pode ajustar antes de gerar a etiqueta e o que fazer se algo precisar mudar depois que ela já foi comprada.'
   en:
     title: 'Make a Shipping Adjustment'
-    description: "This guide explains how to make adjustments to shipping details on an order before or after generating a label. You'll learn how to confirm or change the shipping weight and what to do if something needs to be corrected."
+    description: 'What you can adjust before generating the label and what to do if something needs to change after the label is already purchased.'
