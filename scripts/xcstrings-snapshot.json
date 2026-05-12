@@ -1,0 +1,263 @@
+{
+  "generated_at": "2026-05-12T10:07:57+00:00",
+  "key_count": 64,
+  "source": "Localizable.xcstrings",
+  "strings": {
+    "All": {
+      "en": "All",
+      "pt-BR": "Tudo"
+    },
+    "Arriving Tomorrow": {
+      "en": "Arriving Tomorrow",
+      "pt-BR": "Chegando amanhã"
+    },
+    "Auction": {
+      "en": "Real Time Offer",
+      "pt-BR": "Oferta em tempo real"
+    },
+    "Bids can be placed before the show starts": {
+      "en": "Offers can be placed before the show starts",
+      "pt-BR": "As ofertas podem ser feitos antes do início do show"
+    },
+    "Brand": {
+      "en": "Brand",
+      "pt-BR": "Marca"
+    },
+    "Buy It Now": {
+      "en": "Buy It Now",
+      "pt-BR": "Comprar agora"
+    },
+    "Cancel": {
+      "en": "Cancel",
+      "pt-BR": "Cancelar"
+    },
+    "Canceled": {
+      "en": "Canceled",
+      "pt-BR": "Cancelado"
+    },
+    "Carrier": {
+      "en": "Carrier",
+      "pt-BR": "Transportadora"
+    },
+    "City": {
+      "en": "City",
+      "pt-BR": "Cidade"
+    },
+    "Clear": {
+      "en": "Clear",
+      "pt-BR": "Limpar"
+    },
+    "Clone Past Shows Listings": {
+      "en": "Clone Past Shows Listings",
+      "pt-BR": "Clonar listagens de shows anteriores"
+    },
+    "Color": {
+      "en": "Color",
+      "pt-BR": "Cor"
+    },
+    "Completed": {
+      "en": "Completed",
+      "pt-BR": "Concluído"
+    },
+    "Condition": {
+      "en": "Condition",
+      "pt-BR": "Condição"
+    },
+    "Country": {
+      "en": "Country",
+      "pt-BR": "País"
+    },
+    "Create Credits Giveaway": {
+      "en": "Create Credits Giveaway",
+      "pt-BR": "Criar créditos de sorteios"
+    },
+    "Deadline Missed": {
+      "en": "Deadline Missed",
+      "pt-BR": "Prazo perdido"
+    },
+    "Edit": {
+      "en": "Edit",
+      "pt-BR": "Editar"
+    },
+    "Enable Pre-Bid?": {
+      "en": "Enable Pre-Offer?",
+      "pt-BR": "Ativar Pré-oferta?"
+    },
+    "End Show": {
+      "en": "End Show",
+      "pt-BR": "Fim do Show"
+    },
+    "Enter your code....": {
+      "en": "Enter your code....",
+      "pt-BR": "Digite seu código...."
+    },
+    "First Name": {
+      "en": "First Name",
+      "pt-BR": "Nome"
+    },
+    "Last Name": {
+      "en": "Last Name",
+      "pt-BR": "Sobrenome"
+    },
+    "Listings": {
+      "en": "Listings",
+      "pt-BR": "Listagens"
+    },
+    "New Quickie Listing": {
+      "en": "New Quickie Listing",
+      "pt-BR": "Nova listagem rápida"
+    },
+    "No added time, even if someone bids. ": {
+      "en": "No added time, even if someone make an offer. ",
+      "pt-BR": "Sem tempo adicional, mesmo que alguém dê uma oferta."
+    },
+    "Offer a discount on an item during a limited time.": {
+      "en": "Offer a discount on an item during a limited time.",
+      "pt-BR": "Ofereça um desconto em um item durante um período limitado."
+    },
+    "Ongoing Referrals": {
+      "en": "Ongoing Referrals",
+      "pt-BR": "Referências contínuas"
+    },
+    "Order Number": {
+      "en": "Order Number",
+      "pt-BR": "Número do pedido"
+    },
+    "Past Referrals": {
+      "en": "Past Referrals",
+      "pt-BR": "Referências anteriores"
+    },
+    "Personal Information": {
+      "en": "Personal Information",
+      "pt-BR": "Informações Pessoais"
+    },
+    "Phone Number": {
+      "en": "Phone Number",
+      "pt-BR": "Número de Telefone"
+    },
+    "Pre-Bid": {
+      "en": "Pre-Offer",
+      "pt-BR": "Pré-oferta"
+    },
+    "Price": {
+      "en": "Price",
+      "pt-BR": "Preço"
+    },
+    "Real-Time Sales": {
+      "en": "Real-Time Sales",
+      "pt-BR": "Vendas em tempo real"
+    },
+    "Received?": {
+      "en": "Received?",
+      "pt-BR": "Recebido?"
+    },
+    "Redeem": {
+      "en": "Redeem",
+      "pt-BR": "Resgatar"
+    },
+    "Redeem a code": {
+      "en": "Redeem a code",
+      "pt-BR": "Resgatar um código"
+    },
+    "Returned": {
+      "en": "Returned",
+      "pt-BR": "Devolvido"
+    },
+    "Sales": {
+      "en": "Sales",
+      "pt-BR": "Vendas"
+    },
+    "Select Live Show": {
+      "en": "Select Live Show",
+      "pt-BR": "Selecionar show ao vivo"
+    },
+    "Select a Live": {
+      "en": "Select a Live",
+      "pt-BR": "Selecione um Live"
+    },
+    "Sell mode": {
+      "en": "Sell mode",
+      "pt-BR": "Modo de venda"
+    },
+    "Share Friends": {
+      "en": "Share Friends",
+      "pt-BR": "Compartilhar amigos"
+    },
+    "Ship to": {
+      "en": "Ship to",
+      "pt-BR": "Enviar para"
+    },
+    "Shipping Address": {
+      "en": "Shipping Address",
+      "pt-BR": "Endereço de Entrega"
+    },
+    "Size": {
+      "en": "Size",
+      "pt-BR": "Tamanho"
+    },
+    "Start at": {
+      "en": "Start at",
+      "pt-BR": "Comece em"
+    },
+    "Starts at": {
+      "en": "Starts at",
+      "pt-BR": "Começa em"
+    },
+    "Starts at ": {
+      "en": "Starts at ",
+      "pt-BR": "Começa em "
+    },
+    "State Code e.g SP": {
+      "en": "State Code e.g SP",
+      "pt-BR": "Código do estado, por exemplo, SP"
+    },
+    "Submit Bid": {
+      "en": "Submit Offer",
+      "pt-BR": "Enviar oferta"
+    },
+    "Sudden Death": {
+      "en": "Sudden Death",
+      "pt-BR": "Morte súbita"
+    },
+    "Thanks for supporting the community! You can now end your Show": {
+      "en": "Thanks for supporting the community! You can now end your Show",
+      "pt-BR": "Obrigado por apoiar a comunidade! Agora você pode encerrar seu Show"
+    },
+    "The last bidder wins at the end of the time.": {
+      "en": "The last offerer wins at the end of the time.",
+      "pt-BR": "A última oferta vence ao final do tempo"
+    },
+    "The maximum amount you'll bid for this item": {
+      "en": "The maximum amount you'll offer for this item",
+      "pt-BR": "O valor máximo para o qual você fará uma oferta para esse item"
+    },
+    "Timer (Seconds)": {
+      "en": "Timer (Seconds)",
+      "pt-BR": "Duração (segundos)"
+    },
+    "Track": {
+      "en": "Track",
+      "pt-BR": "Faixa"
+    },
+    "Tracking Number": {
+      "en": "Tracking Number",
+      "pt-BR": "Número de rastreamento"
+    },
+    "You've earned": {
+      "en": "You've earned",
+      "pt-BR": "Você ganhou"
+    },
+    "Your max bid": {
+      "en": "Your max offer",
+      "pt-BR": "Sua oferta máxima"
+    },
+    "ZIP Code": {
+      "en": "ZIP Code",
+      "pt-BR": "CEP"
+    },
+    "sending your viewers to a seller": {
+      "en": "sending your viewers to a seller",
+      "pt-BR": "enviar seus espectadores para um vendedor"
+    }
+  }
+}
