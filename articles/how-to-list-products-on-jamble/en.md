@@ -33,6 +33,8 @@ When you create a product for a show, focus on the required fields first:
 3. **Price or starting price** - the app uses the local currency for Brazil and blocks starting prices below $5.
 4. **Shipping profile** - choose the profile that matches the item after packaging.
 
+![Quick listing form showing the Select a Photo row, a product title, a category row, and the description field above the disabled Add Listing button](./assets/mockups/how-to-list-products-on-jamble__listing-basics__en__v3.png)
+
 If a required field is missing, the app keeps the listing from being saved until you fill it.
 
 ## Photos and product details
@@ -60,6 +62,8 @@ Jamble supports these selling modes for show listings:
 | Sudden Death | You want an offer format with a timer and no extra-time mechanic. The price is the starting price. |
 | Buy It Now | You want a fixed price that buyers can accept immediately. |
 
+![Selling mode section with Real Time Offer selected, Start at and Timer fields visible, and Buy It Now and Sudden Death listed below](./assets/mockups/how-to-list-products-on-jamble__selling-mode-price__en__v3.png)
+
 For Real Time Offer and Sudden Death, the app validates the starting price and the timer. For Buy It Now, the price is the fixed purchase price.
 
 You can also add a retail price when it helps buyers understand the reference value. Do not use retail price as a discount promise unless you can support it.
@@ -69,6 +73,8 @@ You can also add a retail price when it helps buyers understand the reference va
 Quantity is optional and defaults to 1. For eligible selling modes, Jamble allows quantity up to 1,000 units.
 
 If quantity is greater than 1, the pre-offer toggle turns off. Use pre-offers only when the listing has one unit and the selected selling mode supports it.
+
+![Quantity section with a stepper, Enable Pre-Offer toggle, and Shipping Profile row selected below](./assets/mockups/how-to-list-products-on-jamble__quantity-shipping__en__v3.png)
 
 ## Shipping profile
 

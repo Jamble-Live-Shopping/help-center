@@ -33,6 +33,8 @@ Ao criar um produto para um show, preencha primeiro os campos obrigatórios:
 3. **Preço ou preço inicial** - o app usa R$ no Brasil e bloqueia preços iniciais abaixo de R$ 5,00.
 4. **Perfil de envio** - escolha o perfil que corresponde ao item depois de embalado.
 
+![Formulário de listagem rápida mostrando a linha Selecione uma foto, um título de produto, uma linha de categoria e o campo de descrição acima do botão Adicionar produto desativado](./assets/mockups/how-to-list-products-on-jamble__listing-basics__pt-br__v3.png)
+
 Se faltar um campo obrigatório, o app impede salvar a listagem até você preencher.
 
 ## Fotos e detalhes do produto
@@ -60,6 +62,8 @@ A Jamble aceita estes modos de venda em listagens de show:
 | Sudden Death | Você quer um formato de ofertas com cronômetro e sem mecânica de tempo extra. O preço é o preço inicial. |
 | Comprar agora | Você quer um preço fixo que compradores possam aceitar imediatamente. |
 
+![Seção de modo de venda com Oferta em tempo real selecionada, campos Comece em e Duração visíveis, e Comprar agora e Morte súbita abaixo](./assets/mockups/how-to-list-products-on-jamble__selling-mode-price__pt-br__v3.png)
+
 Em Oferta em tempo real e Sudden Death, o app valida o preço inicial e o cronômetro. Em Comprar agora, o preço é o preço fixo de compra.
 
 Você também pode adicionar um preço de varejo quando isso ajudar o comprador a entender o valor de referência. Não use preço de varejo como promessa de desconto se não puder sustentar essa informação.
@@ -69,6 +73,8 @@ Você também pode adicionar um preço de varejo quando isso ajudar o comprador 
 A quantidade é opcional e começa em 1. Em modos de venda elegíveis, a Jamble permite quantidade de até 1.000 unidades.
 
 Se a quantidade for maior que 1, o toggle de pré-oferta é desativado. Use pré-ofertas apenas quando a listagem tiver uma unidade e o modo de venda selecionado permitir.
+
+![Seção Quantidade com controle de menos e mais, toggle Ativar Pré-oferta e linha Perfil de remessa selecionada abaixo](./assets/mockups/how-to-list-products-on-jamble__quantity-shipping__pt-br__v3.png)
 
 ## Perfil de envio
 

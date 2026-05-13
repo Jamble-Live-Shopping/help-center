@@ -12,14 +12,25 @@ intent:
     - Seller understands the required listing fields.
     - Seller uses source-backed Brazil pricing with the R$ 5,00 minimum in PT-BR and $5 in EN.
     - Seller understands quantity, pre-offer eligibility, and shipping profile impact.
-    - Article has no stale mockup images from another slug.
+    - Article uses source-backed mockups for the central listing flow without reusing stale cross-slug images.
 source_of_truth:
   code:
     ios_files:
       - PRODUCT/View Models/CreateProductViewModel.swift
       - PRODUCT/Views/CreateProductViewController.swift
+      - PRODUCT/Views/Components/SelectPhotoHeaderView.swift
+      - PRODUCT/Views/Components/SelectPhotoFirstCell.swift
+      - PRODUCT/Views/Components/CreateProductTitleCell.swift
+      - PRODUCT/Views/Components/CreateProductDescriptionCell.swift
+      - PRODUCT/Views/Components/ProductAttributeCell.swift
       - PRODUCT/Views/Components/SellModeDefaultCell.swift
+      - PRODUCT/Views/Components/SellModeToogleView.swift
+      - PRODUCT/Views/Components/SellModeTextFieldView.swift
+      - PRODUCT/Views/Components/CreateProductQuantityCell.swift
+      - PRODUCT/Views/Components/PreBidToggleCell.swift
       - PRODUCT/Models/ProductShippingProfile.swift
+      - PRODUCT/Models/ProductOperationMode.swift
+      - LIVE_SHOPPING/Show/Model/ShowSaleType.swift
       - EXTENSIONS/Price.swift
     backend_files: []
   content:
@@ -37,8 +48,8 @@ risk_flags:
 resolved_decisions:
   - risk: central_seller_workflow
     decided_by: Aymar batch 3A
-    decided_at: '2026-05-12'
-    rationale: The article is central, so the rewrite removes stale images and narrows the guide to source-backed fields instead of recreating the full app screen visually.
+    decided_at: '2026-05-13'
+    rationale: The article is central, so the stale cross-slug images were replaced with three source-backed listing-flow mockups instead of leaving the article text-only.
   - risk: sale_mode_labels
     decided_by: Aymar batch 3A
     decided_at: '2026-05-12'
@@ -48,9 +59,180 @@ resolved_decisions:
     decided_at: '2026-05-12'
     rationale: Shipping guidance is limited to selecting the profile that fits the packaged item and avoids unsourced carrier/cost formulas.
 mockup_plan:
-  required: false
-  rationale: The previous images came from another slug and were removed. New iOS mockups should only be added after a dedicated Layout Proof Table pass; this PR keeps the article production-ready through source-backed text.
-  screens: []
+  required: true
+  rationale: Central seller workflow article. Mockups show the listing form, sale-mode pricing, and quantity/pre-offer/shipping sections with iOS-backed labels and layout.
+  screens:
+    - name: listing-basics
+      # Layout anchor:
+      #   files: CreateProductViewController.swift:37-68,71-166,323-377,740-767,868-877; SelectPhotoHeaderView.swift:19-57,79-104; SelectPhotoFirstCell.swift:18-31,61-87; CreateProductTitleCell.swift:28-45; CreateProductDescriptionCell.swift:23-40,52-60,118-175; ProductAttributeCell.swift:64-70,82-101,116-124.
+      #   parents: topContainerView horizontal stack above collectionView; PHOTOS section horizontal group; ProductAttributeCell mainStackView left + chevron trailing.
+      #   key placements: title left and close control trailing; photo add tile first, then selected photo cells; category selected value appears below its smaller label; description uses dashed inner background.
+      #   forbidden layouts: no stale gallery grid from another slug; no horizontal category label/value row; no invented required-photo state.
+      purpose: Show the seller where photos, title, category, and description appear in the new listing form.
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+        - layout_matches_ios_source
+      html_must_contain:
+        en:
+          - New Quickie Listing
+          - Select a Photo
+          - Title
+          - Category
+          - Description (optional)
+        pt-br:
+          - Nova listagem rápida
+          - Selecione uma foto
+          - Título
+          - Categoria
+          - Descrição (opcional)
+      visible_text:
+        - selector: ".nav-title"
+          source: xcstrings
+          key: "New Quickie Listing"
+        - selector: ".section-title-main"
+          source: xcstrings
+          key: "Select a Photo"
+        - selector: ".section-right"
+          source: xcstrings
+          key: "3 recommended"
+        - selector: ".field-label"
+          source: xcstrings
+          key: "Title"
+        - selector: ".field-value"
+          source: user_content
+        - selector: ".attr-title"
+          source: xcstrings
+          key: "Category"
+        - selector: ".attr-value"
+          source: user_content
+        - selector: ".desc-hint"
+          source: xcstrings
+          key: "Description (optional)"
+        - selector: ".desc-sub"
+          source: xcstrings
+          key: "Include size, condition, and other details to sell faster"
+      visible_text_allowlist:
+        - selector: ".footer"
+          reason: "Create button uses String(localized: \"Add Listing\"); xcstrings has pt-BR only, and EN falls back to the key per ProductOperationMode.swift:14-20."
+        - selector: ".delete-dot"
+          reason: Photo remove control is represented by an icon glyph; SelectPhotoCell uses image/button chrome, not localized copy.
+        - selector: ".photo-add"
+          reason: Plus tile uses icon-only add affordance from SelectPhotoFirstCell; the plus glyph is not user-facing localized copy.
+    - name: selling-mode-price
+      # Layout anchor:
+      #   files: CreateProductViewController.swift:404-412,833-839; SellModeDefaultCell.swift:47-59,67-147,152-227; ShowSaleType.swift:17-57.
+      #   parents: SELL_MODE collection sections render one SellModeDefaultCell per available type; each cell has topView with icon/title/subtitle/radio and selected AUCTION bottomStackView.
+      #   key placements: icon is leading 24x24, title/subtitle are middle column, radio is trailing 18x18, selected AUCTION inputs are below the row as two equal-width fields.
+      #   forbidden layouts: no picker modal; no deprecated Compra Direta/Pre-Bid labels; no invented mode ordering.
+      purpose: Show sale-mode choices and the start price/timer fields for Real Time Offer.
+      source: ios_required
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+        - layout_matches_ios_source
+      required_icons:
+        - icon-real-time-offer
+        - sell-mode-buy_it_now
+        - sell-mode-sudden-death
+      html_must_contain:
+        en:
+          - Real Time Offer
+          - Buy It Now
+          - Sudden Death
+          - Start at
+          - Timer (Seconds)
+        pt-br:
+          - Oferta em tempo real
+          - Comprar agora
+          - Morte súbita
+          - Comece em
+          - Duração (segundos)
+      visible_text:
+        - selector: ".nav-title"
+          source: xcstrings
+          key: "New Quickie Listing"
+        - selector: ".sale-auction .sale-title"
+          source: xcstrings
+          key: "Auction"
+        - selector: ".sale-auction .sale-subtitle"
+          source: xcstrings
+          key: "The last bidder wins at the end of the time."
+        - selector: ".sale-auction .mini-field:nth-child(1) .mini-label"
+          source: xcstrings
+          key: "Start at"
+        - selector: ".sale-auction .mini-field:nth-child(2) .mini-label"
+          source: xcstrings
+          key: "Timer (Seconds)"
+        - selector: ".sale-bin .sale-title"
+          source: xcstrings
+          key: "Buy It Now"
+        - selector: ".sale-bin .sale-subtitle"
+          source: xcstrings
+          key: "Offer a discount on an item during a limited time."
+        - selector: ".sale-sd .sale-title"
+          source: xcstrings
+          key: "Sudden Death"
+        - selector: ".sale-sd .sale-subtitle"
+          source: xcstrings
+          key: "No added time, even if someone bids. "
+      visible_text_allowlist:
+        - selector: ".footer"
+          reason: "Create button uses String(localized: \"Add Listing\"); xcstrings has pt-BR only, and EN falls back to the key per ProductOperationMode.swift:14-20."
+        - selector: ".sale-icon img"
+          reason: Icon alt text names source assets for validator anchoring, not user-visible localized copy.
+    - name: quantity-shipping
+      # Layout anchor:
+      #   files: CreateProductViewController.swift:378-386,396-403,774-820,854-857; CreateProductQuantityCell.swift:26-39,80-127; PreBidToggleCell.swift:31-58,67-99; ProductAttributeCell.swift:64-70,82-101,116-124; ProductShippingProfile.swift:10-43.
+      #   parents: QUANTITY cell has title top and centered minus/value/plus hStack; PRE_BID_TOGGLE has title/subtitle leading and UISwitch trailing; SHIPPING_PROFILE uses ProductAttributeCell vertical selected-label pattern.
+      #   key placements: quantity controls are centered below label; pre-offer switch is trailing; selected shipping profile value is below small label with chevron trailing.
+      #   forbidden layouts: no right-side value row for shipping profile; no unchecked pre-offer toggle when illustrating eligibility; no carrier/cost formula.
+      purpose: Show quantity, pre-offer, and shipping profile controls together.
+      source: ios_required
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+        - layout_matches_ios_source
+      html_must_contain:
+        en:
+          - Quantity
+          - Enable Pre-Offer?
+          - Offers can be placed before the show starts
+          - Shipping Profile
+        pt-br:
+          - Quantidade
+          - Ativar Pré-oferta?
+          - As ofertas podem ser feitas antes do início da live
+          - Perfil de remessa
+      visible_text:
+        - selector: ".nav-title"
+          source: xcstrings
+          key: "New Quickie Listing"
+        - selector: ".quantity-title"
+          source: xcstrings
+          key: "Quantity"
+        - selector: ".prebid-title"
+          source: xcstrings
+          key: "Enable Pre-Bid?"
+        - selector: ".prebid-subtitle"
+          source: xcstrings
+          key: "Bids can be placed before the show starts"
+        - selector: ".attr-title"
+          source: xcstrings
+          key: "Shipping Profile"
+        - selector: ".attr-value"
+          source: user_content
+      visible_text_allowlist:
+        - selector: ".footer"
+          reason: "Create button uses String(localized: \"Add Listing\"); xcstrings has pt-BR only, and EN falls back to the key per ProductOperationMode.swift:14-20."
+        - selector: ".round-btn"
+          reason: Plus/minus controls are SF Symbol buttons in iOS; mockup text glyphs are icon stand-ins, not localized copy.
+icons_required:
+  - icon-real-time-offer
+  - sell-mode-buy_it_now
+  - sell-mode-sudden-death
 validation_contract:
   must_answer:
     en:

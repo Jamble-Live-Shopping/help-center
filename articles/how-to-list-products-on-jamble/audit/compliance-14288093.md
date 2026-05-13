@@ -10,9 +10,9 @@ Intercom ID: 14288093
 | Currency | Pass — PT-BR uses R$ and EN follows the Help Center validator convention. |
 | Shipping | Pass — no carrier formula or fixed shipping price claim. |
 | Sale modes | Pass — labels avoid deprecated user-facing wording. |
-| Images | Pass — stale cross-slug mockups removed. |
+| Images | Pass — stale cross-slug mockups removed and replaced with source-backed iOS mockups. |
 | Buyer expectation | Pass — sellers are told to describe the actual product and packaging accurately. |
 
 ## Verdict
 
-Approved for Help Center publication as a central seller workflow article.
+Approved for Help Center publication as a central seller workflow article with source-backed mockups and visible_text coverage.
