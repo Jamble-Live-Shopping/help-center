@@ -1,8 +1,12 @@
 {
-  "generated_at": "2026-05-12T10:07:57+00:00",
-  "key_count": 64,
+  "generated_at": "2026-05-13T07:52:53+00:00",
+  "key_count": 72,
   "source": "Localizable.xcstrings",
   "strings": {
+    "3 recommended": {
+      "en": "3 recommended",
+      "pt-BR": "3 recomendado"
+    },
     "All": {
       "en": "All",
       "pt-BR": "Tudo"
@@ -17,7 +21,7 @@
     },
     "Bids can be placed before the show starts": {
       "en": "Offers can be placed before the show starts",
-      "pt-BR": "As ofertas podem ser feitos antes do início do show"
+      "pt-BR": "As ofertas podem ser feitas antes do início da live"
     },
     "Brand": {
       "en": "Brand",
@@ -39,6 +43,10 @@
       "en": "Carrier",
       "pt-BR": "Transportadora"
     },
+    "Category": {
+      "en": "Category",
+      "pt-BR": "Categoria"
+    },
     "City": {
       "en": "City",
       "pt-BR": "Cidade"
@@ -49,7 +57,7 @@
     },
     "Clone Past Shows Listings": {
       "en": "Clone Past Shows Listings",
-      "pt-BR": "Clonar listagens de shows anteriores"
+      "pt-BR": "Clonar listagens de lives anteriores"
     },
     "Color": {
       "en": "Color",
@@ -75,6 +83,10 @@
       "en": "Deadline Missed",
       "pt-BR": "Prazo perdido"
     },
+    "Description (optional)": {
+      "en": "Description (optional)",
+      "pt-BR": "Descrição (opcional)"
+    },
     "Edit": {
       "en": "Edit",
       "pt-BR": "Editar"
@@ -85,7 +97,7 @@
     },
     "End Show": {
       "en": "End Show",
-      "pt-BR": "Fim do Show"
+      "pt-BR": "Fim da Live"
     },
     "Enter your code....": {
       "en": "Enter your code....",
@@ -94,6 +106,10 @@
     "First Name": {
       "en": "First Name",
       "pt-BR": "Nome"
+    },
+    "Include size, condition, and other details to sell faster": {
+      "en": "Include size, condition, and other details to sell faster",
+      "pt-BR": "Inclua tamanho, condição e outros detalhes para vender mais rapidamente"
     },
     "Last Name": {
       "en": "Last Name",
@@ -143,6 +159,10 @@
       "en": "Price",
       "pt-BR": "Preço"
     },
+    "Quantity": {
+      "en": "Quantity",
+      "pt-BR": "Quantidade"
+    },
     "Real-Time Sales": {
       "en": "Real-Time Sales",
       "pt-BR": "Vendas em tempo real"
@@ -169,11 +189,15 @@
     },
     "Select Live Show": {
       "en": "Select Live Show",
-      "pt-BR": "Selecionar show ao vivo"
+      "pt-BR": "Selecionar Live"
     },
     "Select a Live": {
       "en": "Select a Live",
       "pt-BR": "Selecione um Live"
+    },
+    "Select a Photo": {
+      "en": "Select a Photo",
+      "pt-BR": "Selecione uma foto"
     },
     "Sell mode": {
       "en": "Sell mode",
@@ -190,6 +214,10 @@
     "Shipping Address": {
       "en": "Shipping Address",
       "pt-BR": "Endereço de Entrega"
+    },
+    "Shipping Profile": {
+      "en": "Shipping Profile",
+      "pt-BR": "Perfil de remessa"
     },
     "Size": {
       "en": "Size",
@@ -221,7 +249,7 @@
     },
     "Thanks for supporting the community! You can now end your Show": {
       "en": "Thanks for supporting the community! You can now end your Show",
-      "pt-BR": "Obrigado por apoiar a comunidade! Agora você pode encerrar seu Show"
+      "pt-BR": "Obrigado por apoiar a comunidade! Agora você pode encerrar sua Live"
     },
     "The last bidder wins at the end of the time.": {
       "en": "The last offerer wins at the end of the time.",
@@ -234,6 +262,10 @@
     "Timer (Seconds)": {
       "en": "Timer (Seconds)",
       "pt-BR": "Duração (segundos)"
+    },
+    "Title": {
+      "en": "Title",
+      "pt-BR": "Título"
     },
     "Track": {
       "en": "Track",
