@@ -56,11 +56,9 @@ Optional product details can include category, size, color, brand, condition, an
 
 Jamble supports these selling modes for show listings:
 
-| Mode | Use it when |
-| --- | --- |
-| Real Time Offer | You want buyers to compete with offers during the live show. The price is the starting price. |
-| Sudden Death | You want an offer format with a timer and no extra-time mechanic. The price is the starting price. |
-| Buy It Now | You want a fixed price that buyers can accept immediately. |
+- **Real Time Offer**, use it when you want buyers to compete with offers during the live show. The price is the starting price.
+- **Sudden Death**, use it when you want an offer format with a timer and no extra-time mechanic. The price is the starting price.
+- **Buy It Now**, use it when you want a fixed price that buyers can accept immediately.
 
 ![Selling mode section with Real Time Offer selected, Start at and Timer fields visible, and Buy It Now and Sudden Death listed below](./assets/mockups/how-to-list-products-on-jamble__selling-mode-price__en__v3.png)
 

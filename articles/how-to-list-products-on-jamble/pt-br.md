@@ -56,11 +56,9 @@ Detalhes opcionais podem incluir categoria, tamanho, cor, marca, condição e pr
 
 A Jamble aceita estes modos de venda em listagens de show:
 
-| Modo | Use quando |
-| --- | --- |
-| Oferta em tempo real | Você quer que compradores disputem o item com ofertas durante a live. O preço é o preço inicial. |
-| Sudden Death | Você quer um formato de ofertas com cronômetro e sem mecânica de tempo extra. O preço é o preço inicial. |
-| Comprar agora | Você quer um preço fixo que compradores possam aceitar imediatamente. |
+- **Oferta em tempo real**, use quando quiser que compradores disputem o item com ofertas durante a live. O preço é o preço inicial.
+- **Sudden Death**, use quando quiser um formato de ofertas com cronômetro e sem mecânica de tempo extra. O preço é o preço inicial.
+- **Comprar agora**, use quando quiser um preço fixo que compradores possam aceitar imediatamente.
 
 ![Seção de modo de venda com Oferta em tempo real selecionada, campos Comece em e Duração visíveis, e Comprar agora e Morte súbita abaixo](./assets/mockups/how-to-list-products-on-jamble__selling-mode-price__pt-br__v3.png)
 
