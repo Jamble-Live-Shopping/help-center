@@ -176,6 +176,14 @@ After the 6 original steps, every article should pass:
 
 - [ ] 7. No `<table>` remains that would break on mobile, either converted to `<ul>` or rendered as PNG mockup
 
+## Validator gate
+
+As of 2026-05-13, `scripts/validate-article-flow.py` enforces this as a
+hard fail named `mobile_table_forbidden` on user-facing `en.md` and
+`pt-br.md` files. The gate intentionally has no YAML allowlist: use lists
+for 2-column label/value content, or replace true 3+ column matrices with
+a PNG/mockup.
+
 ## Why not just use `<ul>` from the start?
 
 Users (and writers) perceive tables as "more official", they signal structured data. But the 2-column label/value case is inherently just a list, and lists render correctly on every viewport size. The table was a formatting preference, not a semantic requirement. The list conversion loses no information and gains universal readability.

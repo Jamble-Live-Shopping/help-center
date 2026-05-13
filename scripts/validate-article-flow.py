@@ -57,6 +57,11 @@ RDOLLAR_PATTERN = re.compile(r"R\$")
 H1_PATTERN = re.compile(r"^#\s+\S", re.MULTILINE)
 H2_PATTERN = re.compile(r"^##\s+\S", re.MULTILINE)
 PNG_REF_PATTERN = re.compile(r"!\[[^\]]*\]\([^)]*?/([a-z0-9-]+)__([a-z0-9-]+)__(pt-br|en)__v\d+\.png", re.IGNORECASE)
+RAW_HTML_TABLE_RE = re.compile(r"<table\b", re.IGNORECASE)
+MARKDOWN_TABLE_ROW_RE = re.compile(r"^\s*\|.*\|\s*$")
+MARKDOWN_TABLE_SEPARATOR_RE = re.compile(
+    r"^\s*\|\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$"
+)
 
 
 # Workflow config defaults; overridden by process/workflows/article-v2.yml when present.
@@ -602,6 +607,31 @@ def load_yaml(path: Path) -> dict[str, Any] | None:
         return None
 
 
+def _markdown_table_column_count(line: str) -> int:
+    return len([c for c in line.strip().strip("|").split("|")])
+
+
+def find_mobile_breaking_tables(body: str) -> list[tuple[int, str, int | None]]:
+    """Return user-facing tables that Intercom renders poorly on mobile.
+
+    Article markdown is later converted to Intercom article HTML. Intercom
+    accepts `<table>`, but its mobile renderer does not add horizontal scroll,
+    so 2+ column tables get clipped. See process/07-tables-mobile.md.
+    """
+    hits: list[tuple[int, str, int | None]] = []
+    lines = body.splitlines()
+    for idx, line in enumerate(lines):
+        if RAW_HTML_TABLE_RE.search(line):
+            hits.append((idx + 1, "html", None))
+        if (
+            MARKDOWN_TABLE_ROW_RE.match(line)
+            and idx + 1 < len(lines)
+            and MARKDOWN_TABLE_SEPARATOR_RE.match(lines[idx + 1])
+        ):
+            hits.append((idx + 1, "markdown", _markdown_table_column_count(line)))
+    return hits
+
+
 def validate_article(article_dir: Path) -> Report:
     slug = article_dir.name
     rep = Report(article=slug)
@@ -670,6 +700,30 @@ def validate_article(article_dir: Path) -> Report:
 
     pt_body = pt_path.read_text(encoding="utf-8") if pt_path.exists() else ""
     en_body = en_path.read_text(encoding="utf-8") if en_path.exists() else ""
+
+    # ---- rule 3b: no user-facing tables in article markdown.
+    # Intercom's mobile article renderer accepts tables but clips them without
+    # horizontal scroll. process/07-tables-mobile.md makes this a required
+    # conversion step: 2-column label/value tables become lists; genuinely
+    # tabular 3+ column content becomes a PNG/mockup. Keep this strict and
+    # YAML-free so article authors cannot silently bypass the mobile gate.
+    for label, body, path in (
+        ("pt-br", pt_body, pt_path),
+        ("en", en_body, en_path),
+    ):
+        if not body:
+            continue
+        for line_no, kind, cols in find_mobile_breaking_tables(body):
+            detail = f"{kind} table"
+            if cols is not None:
+                detail += f" ({cols} columns)"
+            rep.fail(
+                "mobile_table_forbidden",
+                f"{path.name}:{line_no} contains a user-facing {detail}. "
+                f"Intercom tables are clipped on mobile. Convert 2-col tables "
+                f"to bullet lists; convert real 3+ column matrices to PNG "
+                f"mockups. See process/07-tables-mobile.md.",
+            )
 
     # ---- rule 4: descriptions <= 140 chars per locale in metadata
     for lang, locale_meta in locales_section.items():

@@ -864,6 +864,112 @@ def test_validator_passes_with_single_h1_heading() -> None:
         shutil.rmtree(art, ignore_errors=True)
 
 
+def test_validator_fails_on_markdown_table_2col() -> None:
+    """Intercom clips article tables on mobile. 2-column label/value tables
+    must become bullet lists, not Markdown tables."""
+    art = _calibration_fixture("calib-table-2col-", intercom_id=8881128)
+    try:
+        (art / "en.md").write_text(
+            "# Single title\n\n"
+            "## Section\n\n"
+            "| Mode | Use it when |\n"
+            "| --- | --- |\n"
+            "| Buy It Now | You want a fixed price. |\n",
+            encoding="utf-8",
+        )
+        rc, out, err = _run([sys.executable, str(VALIDATOR), str(art)])
+        combined = out + err
+        assert rc == 1, f"validator must exit 1 with mobile table; got {rc}"
+        assert "mobile_table_forbidden" in combined, (
+            f"expected mobile_table_forbidden rule; got {combined!r}"
+        )
+        assert "2-col" in combined or "2 columns" in combined, (
+            f"rule message should guide list conversion; got {combined!r}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_validator_fails_on_markdown_table_3col() -> None:
+    """3+ column tables are also forbidden in article markdown; process says
+    to render real matrices as PNG/mockups instead."""
+    art = _calibration_fixture("calib-table-3col-", intercom_id=8881129)
+    try:
+        (art / "en.md").write_text(
+            "# Single title\n\n"
+            "## Section\n\n"
+            "| Status | Color | Meaning |\n"
+            "| --- | --- | --- |\n"
+            "| Paid | Green | Buyer paid. |\n",
+            encoding="utf-8",
+        )
+        rc, out, err = _run([sys.executable, str(VALIDATOR), str(art)])
+        combined = out + err
+        assert rc == 1, f"validator must exit 1 with 3-col table; got {rc}"
+        assert "mobile_table_forbidden" in combined, (
+            f"expected mobile_table_forbidden rule; got {combined!r}"
+        )
+        assert "PNG" in combined or "mockup" in combined, (
+            f"rule message should guide PNG/mockup conversion; got {combined!r}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_validator_fails_on_raw_html_table() -> None:
+    """Raw HTML tables reach Intercom as mobile-breaking tables too."""
+    art = _calibration_fixture("calib-table-html-", intercom_id=8881130)
+    try:
+        (art / "en.md").write_text(
+            "# Single title\n\n"
+            "## Section\n\n"
+            "<table><tr><td>Mode</td><td>Use it when</td></tr></table>\n",
+            encoding="utf-8",
+        )
+        rc, out, err = _run([sys.executable, str(VALIDATOR), str(art)])
+        combined = out + err
+        assert rc == 1, f"validator must exit 1 with raw HTML table; got {rc}"
+        assert "mobile_table_forbidden" in combined, (
+            f"expected mobile_table_forbidden rule; got {combined!r}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_validator_passes_on_bullet_list_table_replacement() -> None:
+    """The canonical replacement for 2-column tables is a flat bullet list."""
+    art = _calibration_fixture("calib-table-list-", intercom_id=8881131)
+    try:
+        (art / "en.md").write_text(
+            "# Single title\n\n"
+            "## Section\n\n"
+            "- **Buy It Now**, use it when you want a fixed price.\n"
+            "- **Real Time Offer**, use it when buyers should compete.\n",
+            encoding="utf-8",
+        )
+        rc, out, err = _run([sys.executable, str(VALIDATOR), str(art)])
+        combined = out + err
+        assert "mobile_table_forbidden" not in combined, (
+            f"bullet list must not trigger table gate; got {combined!r}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
+def test_validator_ignores_audit_markdown_tables() -> None:
+    """Audit files intentionally use markdown tables; the mobile gate is
+    scoped to user-facing en.md / pt-br.md only."""
+    art = _calibration_fixture("calib-table-audit-", intercom_id=8881132)
+    try:
+        rc, out, err = _run([sys.executable, str(VALIDATOR), str(art)])
+        combined = out + err
+        assert "mobile_table_forbidden" not in combined, (
+            f"audit markdown tables must be ignored by mobile gate; got {combined!r}"
+        )
+    finally:
+        shutil.rmtree(art, ignore_errors=True)
+
+
 def test_validator_fails_on_orphan_mockup_html() -> None:
     """Calibration false-negative #2: choose-quantities shipped with 3 orphan
     HTMLs in mockup-sources/ that no longer mapped to any declared screen.
@@ -1743,6 +1849,11 @@ TESTS = [
     test_runner_maps_audit_skeleton_unfilled_to_phase7,
     test_validator_fails_on_multiple_h1_headings,
     test_validator_passes_with_single_h1_heading,
+    test_validator_fails_on_markdown_table_2col,
+    test_validator_fails_on_markdown_table_3col,
+    test_validator_fails_on_raw_html_table,
+    test_validator_passes_on_bullet_list_table_replacement,
+    test_validator_ignores_audit_markdown_tables,
     test_validator_fails_on_orphan_mockup_html,
     test_validator_passes_when_orphan_in_allowlist,
     test_validator_fails_on_nonexistent_ios_path,
