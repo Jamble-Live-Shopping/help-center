@@ -1,11 +1,54 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
-.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+body {
+  font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif;
+  background: #F9FAFC;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+.phone {
+  width: 340px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 2px 20px rgba(126,83,248,0.08);
+  border: 1px solid #E9EAEF;
+  overflow: hidden;
+}
 
-.phone { padding: 20px 0 28px; }
-.tab-row { display: flex; gap: 10px; padding: 8px 16px 18px; }
-.tab { flex: 1; padding: 10px 12px; text-align: center; border-radius: 20px; background: #F3F4F8; color: #6B7A92; font-size: 14px; font-weight: 600; }
+.phone { padding: 18px 0 14px; }
+.nav-title { font-size: 26px; font-weight: 700; color: #162233; padding: 4px 18px 12px; letter-spacing: -0.4px; }
+.tab-row { display: flex; gap: 8px; padding: 0 12px 12px; overflow-x: hidden; }
+.tab { padding: 8px 14px; border-radius: 20px; background: #F3F4F8; color: #6B7A92; font-size: 13px; font-weight: 600; flex-shrink: 0; }
 .tab.active { background: #162233; color: #FFFFFF; }
-.tab-content { margin: 0 16px; padding: 40px 16px; text-align: center; background: #F9FAFC; border: 1px dashed #DADDE3; border-radius: 12px; color: #A0A7B7; font-size: 13px; line-height: 18px; }
-</style></head><body><div class="phone"><div class="tab-row"><div class="tab active">Todos</div><div class="tab">Nao lido</div><div class="tab">Compras</div><div class="tab">Vendas</div></div><div class="tab-content">Lista de conversas abaixo</div></div></body></html>
+.row { display: flex; align-items: center; padding: 12px 16px; gap: 12px; border-top: 1px solid #F1F2F5; }
+.row:first-of-type { border-top: none; }
+.avatar { width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: #FFFFFF; }
+.a1 { background: #FDB022; }
+.a2 { background: #7E53F8; }
+.a3 { background: #17B169; }
+.body { flex: 1; min-width: 0; }
+.name { font-size: 15px; font-weight: 600; color: #162233; line-height: 18px; }
+.preview { font-size: 13px; color: #6D6D80; line-height: 18px; margin-top: 3px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.unread-dot { width: 8px; height: 8px; border-radius: 50%; background: #7E53F8; flex-shrink: 0; }
+</style></head><body>
+<div class="phone">
+  <div class="nav-title">Atividade</div>
+  <div class="tab-row"><div class="tab">Todos</div><div class="tab">Não lido</div><div class="tab">Compras</div><div class="tab active">Vendas</div><div class="tab">Concluído</div></div>
+  <div class="row">
+    <div class="avatar a1">C</div>
+    <div class="body"><div class="name">Camila Alves</div><div class="preview">Oi! O Charizard ainda está disponível?</div></div>
+    <div class="unread-dot"></div>
+  </div>
+  <div class="row">
+    <div class="avatar a2">B</div>
+    <div class="body"><div class="name">Bruno Silva</div><div class="preview">Vou enviar amanhã, valeu!</div></div>
+  </div>
+  <div class="row">
+    <div class="avatar a3">L</div>
+    <div class="body"><div class="name">Lucas Rocha</div><div class="preview">Pode mandar foto do verso da carta?</div></div>
+    <div class="unread-dot"></div>
+  </div>
+</div></body></html>
