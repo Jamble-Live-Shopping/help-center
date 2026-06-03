@@ -4,13 +4,21 @@
 
 Este artigo descreve os requisitos obrigatórios de listagem para todas as moedas, cédulas e itens de numismática vendidos na Jamble. Essas regras existem para proteger tanto compradores quanto vendedores, garantindo transparência e confiança na categoria.
 
+## Conteúdo
+
+- Requisitos para todas as listagens de moedas e cédulas
+- Regras para moedas réplica e de fantasia
+- Descumprimento dos requisitos
+- Checklist rápida
+- Precisa de ajuda?
+
 ## Requisitos para todas as listagens de moedas e cédulas
 
 ### 1. Use fotos reais
 
 Toda listagem deve incluir fotos do **item real que você está vendendo**. Fotos de catálogo, imagens de banco de dados ou fotos de um item similar não são permitidas.
 
-Se você está vendendo uma moeda, fotografe essa moeda específica — não uma imagem genérica do mesmo tipo.
+Se você está vendendo uma moeda, fotografe essa moeda específica, não uma imagem genérica do mesmo tipo.
 
 ### 2. Inclua o local de origem
 
@@ -49,7 +57,7 @@ Se a moeda está em um **suporte de classificação profissional (slab)**, menci
 Vender moeda falsificada é estritamente proibido. No entanto, você pode vender **moedas réplica ou de fantasia** se:
 
 1. Você declara claramente na listagem que o item é uma **réplica, fantasia ou não tem curso legal**
-2. O item em si é claramente distinguível de moeda autêntica — por exemplo:
+2. O item em si é claramente distinguível de moeda autêntica, por exemplo:
    - Está fisicamente marcado como "CÓPIA" ou "RÉPLICA"
    - Tem tamanho, cor ou material diferente do original
    - Omite a denominação de curso legal
@@ -77,4 +85,4 @@ Antes de publicar uma listagem de moedas ou cédulas, verifique:
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Contate o suporte pelo chat do app.

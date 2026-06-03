@@ -1,0 +1,68 @@
+article_slug: coins-and-currency-listing-requirements
+article_type: v2_rewrite
+language_pair: en_pt-br
+intercom_id: 14288098
+audience:
+  primary: seller_br
+  secondary: []
+intent:
+  job_to_be_done: Understand what evidence is required before listing coins or currency on Jamble.
+  user_problem: Sellers may list collectible money without enough origin, condition, replica, or grading context for buyers to evaluate it safely.
+  success_criteria:
+    - Seller knows which coin/currency details to disclose before listing.
+    - Seller understands that photos must show the actual item, not stock images.
+    - Seller does not overclaim authenticity, grading, or value.
+source_of_truth:
+  code:
+    ios_files: []
+    backend_files: []
+  content:
+    existing_articles:
+      - articles/coins-and-currency-listing-requirements/en.md
+      - articles/coins-and-currency-listing-requirements/pt-br.md
+  policy:
+    owner: Help Center editorial policy for collectible currency listings
+    checked_at: '2026-05-12'
+risk_flags:
+  - policy_claims
+  - authenticity_claims
+  - buyer_expectation
+resolved_decisions:
+  - risk: policy_claims
+    decided_by: Aymar batch 3A
+    decided_at: '2026-05-12'
+    rationale: The article is explicitly a category policy article. The claims are constrained to listing evidence and avoid app, backend, authentication, grading, or payout promises.
+  - risk: authenticity_claims
+    decided_by: Aymar batch 3A
+    decided_at: '2026-05-12'
+    rationale: The article tells sellers not to overclaim authenticity and does not say Jamble authenticates or grades collectible currency.
+  - risk: buyer_expectation
+    decided_by: Aymar batch 3A
+    decided_at: '2026-05-12'
+    rationale: Buyer expectation guidance is the article's purpose and is grounded in real photos, condition disclosure, replica disclosure, and accurate description.
+mockup_plan:
+  required: false
+  rationale: This is a policy/content-quality article, not an app workflow. Mockups would add decoration without showing an iOS source-of-truth screen.
+  screens: []
+validation_contract:
+  must_answer:
+    en:
+      - What item details should the seller include?
+      - What should photos show?
+      - What claims should the seller avoid?
+    pt-br:
+      - Quais detalhes do item o vendedor deve incluir?
+      - O que as fotos devem mostrar?
+      - Quais afirmações o vendedor deve evitar?
+  forbidden_claims:
+    - Jamble authenticates coins
+    - Jamble grades coins
+    - guaranteed resale value
+    - guaranteed investment return
+  toc_required: false
+  currency_required: false
+audits:
+  code: audit/code-audit-14288098.md
+  content: audit/content-audit-14288098.md
+  compliance: audit/compliance-14288098.md
+status: ready_candidate
