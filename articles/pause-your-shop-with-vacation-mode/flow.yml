@@ -1,0 +1,46 @@
+# Flow contract for the vacation mode article. v2 rewrite scope.
+# See process/templates/article-flow.yml for field documentation.
+
+workflow: article-v2
+mode: v2_rewrite
+audience: seller_br
+
+job_to_be_done: "Help sellers turn vacation mode on and off so their shop pauses cleanly without breaking active orders"
+
+source_of_truth:
+  ios_files:
+    - PROFILE/ProfileSettings/ProfileSettingsV2ViewController.swift  # Vacation cell + showVacation modal
+    - RESOURCES/Localizable.xcstrings                                # pt-BR translations
+  backend_files: []
+  legal: []
+  support_context: []
+
+content_contract:
+  must_answer:
+    - "where the vacation mode toggle lives in the app"
+    - "what happens to products and orders when vacation mode is on"
+    - "how to turn vacation mode off"
+  forbidden_terms:
+    - "regex:\\bauction\\b"
+    - "regex:\\bleil[aã]o\\b"
+  must_not_say:
+    - "Internal feature flag names or implementation details"
+    - "Promised future automation behavior (e.g. auto-pause on inactivity)"
+
+mockup_plan:
+  required: true
+  screens:
+    - name: settings-vacation-cell
+      purpose: "Show the Vacation mode row inside the Sell section of seller settings"
+      source: ios_required
+    - name: vacation-modal-on
+      purpose: "Show the bottom modal that confirms turning vacation mode ON, with the exact iOS copy and Ativar / Activate button"
+      source: ios_required
+
+icons_required: []
+icons_fallback_feather: false
+
+currency_required: false
+
+risk_flags: []
+resolved_decisions: []

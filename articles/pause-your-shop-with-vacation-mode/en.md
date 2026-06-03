@@ -2,77 +2,64 @@
 
 ## What you'll learn
 
-This guide explains how to use Vacation Mode on Jamble. When you need to take a break — whether for travel, personal time, or just to catch up on shipping — Vacation Mode lets you temporarily make your products unavailable for purchase.
+How to turn **Vacation Mode** on so your products become unavailable for purchase while you are away, and how to turn it off when you are back. Works for any kind of pause: travel, shipping backlog, personal time.
 
 ## Before you start
 
-You need:
-- An approved seller account on Jamble
+You need an approved seller account on Jamble and the app installed on your phone.
 
-## How Vacation Mode works
+## Where to find Vacation Mode
 
-When you turn on Vacation Mode:
-- All your products become **unavailable for purchase**
-- Buyers cannot buy your items until you turn it back off
-- Your profile and products are still visible, but purchasing is disabled
+Open your profile, tap the settings icon, and scroll to the **Sell** section. The **Vacation mode** row sits right under the other selling options.
 
-When you turn it off, everything goes back to normal — your products become available for purchase again.
+![Settings screen with the Sell section and the Vacation mode row highlighted](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/pause-your-shop-with-vacation-mode__settings-vacation-cell__en__v3.png)
 
-## Step by step
+## What happens when you turn it on
 
-### Step 1: Open your settings
+Tap **Vacation mode**. Jamble opens a confirmation sheet with the in-app message:
 
-Go to your profile and tap **Settings** (the gear icon).
+> When turning on Vacation Mode, all your items will become unavailable for others to purchase.
 
-### Step 2: Find the Vacation Mode toggle
+![Vacation mode confirmation sheet with the warning copy and the Turn On button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/pause-your-shop-with-vacation-mode__vacation-modal-on__en__v3.png)
 
-Scroll down to the **SELL** section. You'll see **"Vacation mode"** with a toggle.
+Tap **Turn On** to confirm. From that moment:
 
-![Settings screen showing SELL section with navigation rows: My Sales, My Wallet, Shipping Preferences, and Vacation mode checkbox](./assets/mockups/pause-your-shop-with-vacation-mode__settings-sell-menu__en.png)
+- All your products become **unavailable for purchase**.
+- Buyers can still see your profile and your items, but they cannot complete a purchase.
+- Orders that were already in flight stay in flight. You still need to ship those orders on time.
 
-### Step 3: Turn on Vacation Mode
+## How to turn it off
 
-Tap **"Vacation mode"**. A confirmation screen appears:
+Go back to **Settings** > **Sell** > **Vacation mode**. The sheet now shows the off-confirmation:
 
-![Vacation Mode screen with explanation text and Turn On button](./assets/mockups/pause-your-shop-with-vacation-mode__vacation-mode-intro__en.png)
+> You are currently in Vacation Mode. Turning it off will make all your items available to purchase.
 
-Tap **"Turn On"** to activate Vacation Mode.
-
-### Step 4: Turn off Vacation Mode when you're ready
-
-When you want to start selling again, go back to Settings > SELL > Vacation mode. The screen now shows:
-
-![Vacation Mode status screen with description and Turn Off button](./assets/mockups/pause-your-shop-with-vacation-mode__vacation-mode-status__en.png)
-
-Tap **"Turn Off"** and your shop is back to normal.
+Tap **Turn Off**. Your products are available for purchase again immediately.
 
 ## Important tips
 
-- **Turn on Vacation Mode before you leave.** If you know you won't be able to ship orders for a few days, activate Vacation Mode before you go. This prevents sales that you can't fulfill on time
-- **Ship all pending orders first.** Vacation Mode stops new purchases, but it does not cancel existing orders. Make sure to ship any pending orders before or during your break
-- **There's no time limit.** You can keep Vacation Mode on for as long as you need. Turn it off whenever you're ready to sell again
-- **It takes effect immediately.** The moment you tap "Turn On", your products become unavailable. Same for turning off — products are available again instantly
+- **Ship pending orders first.** Vacation Mode blocks new purchases; it does not cancel existing orders.
+- **Turn it on before you leave.** That way you do not get orders you cannot ship in time.
+- **No time limit.** Keep it on for as long as you need.
+- **It takes effect right away.** No waiting period after you tap Turn On or Turn Off.
 
-## Common questions
+## Frequently asked questions
 
-**Can buyers still see my profile when I'm on Vacation Mode?**
-Yes. Your profile and products are still visible on Jamble. Buyers can browse your listings, but they cannot make purchases until you turn Vacation Mode off.
+**Can buyers still see my profile?**
+Yes. Your profile and products stay visible. The only difference is that purchases are blocked.
 
 **Does Vacation Mode cancel my scheduled shows?**
-No. Vacation Mode affects product purchases, not shows. If you have shows scheduled, you should cancel them separately if you won't be available to host.
+No. Vacation Mode affects product sales. If you cannot host a scheduled show, cancel the show separately.
 
-**What happens to pending orders when I turn on Vacation Mode?**
-Existing orders are not affected. You still need to ship any orders that were placed before you activated Vacation Mode. Only new purchases are blocked.
+**What about orders that were already in flight?**
+They continue. You still need to ship those orders. Vacation Mode only blocks new purchases.
 
-**Can I turn Vacation Mode on and off as often as I want?**
-Yes. There's no limit or cooldown. You can toggle it as often as needed.
+**Can I switch it on and off multiple times?**
+Yes. There is no limit and no waiting period.
 
-**Will I lose my followers or visibility if I use Vacation Mode?**
-No. Your profile, followers, and visibility are not affected. When you turn Vacation Mode off, everything is exactly as you left it.
-
-**I forgot to turn on Vacation Mode and got an order I can't ship. What should I do?**
-Contact the buyer through the app to let them know about the delay. If you can't ship within a reasonable time, you may need to cancel the order. Then turn on Vacation Mode to prevent more orders until you're ready.
+**Will I lose followers or visibility?**
+No. When you turn Vacation Mode off, your shop is exactly where you left it.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Contact us via the in-app chat or email support@jambleapp.com.
