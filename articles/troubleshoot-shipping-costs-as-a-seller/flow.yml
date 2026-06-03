@@ -1,0 +1,74 @@
+article_slug: troubleshoot-shipping-costs-as-a-seller
+article_type: v2_rewrite
+language_pair: en_pt-br
+intercom_id: 14288129
+audience:
+  primary: seller_br
+  secondary: []
+intent:
+  job_to_be_done: Help sellers diagnose shipping-cost surprises without promising manual price changes.
+  user_problem: Sellers need to answer buyer questions while staying inside the shipping profile and support surfaces Jamble actually exposes.
+  success_criteria:
+    - Seller knows the shipping profile and sender address are the main seller-controlled inputs.
+    - Seller does not promise a fixed shipping price before checkout.
+    - Seller routes sold-order or label concerns to support.
+source_of_truth:
+  code:
+    ios_files:
+      - PRODUCT/Models/ProductShippingProfile.swift
+      - PRODUCT/View Models/CreateProductViewModel.swift
+      - PRODUCT/Views/CreateProductViewController.swift
+      - PRODUCT/Views/Components/ProductShippingCell.swift
+      - SHIPPING/Add Edit Shipping Address/Configuration/BRAddressFormConfiguration.swift
+      - SHIPPING/Add Edit Shipping Address/Views/AddEditShippingAddressInformationView.swift
+    backend_files: []
+  content:
+    existing_articles:
+      - articles/troubleshoot-shipping-costs-as-a-seller/en.md
+      - articles/troubleshoot-shipping-costs-as-a-seller/pt-br.md
+risk_flags:
+  - shipping_price_claims
+  - backend_dependency
+  - buyer_expectation
+resolved_decisions:
+  - risk: shipping_price_claims
+    decided_by: Aymar batch 3A
+    decided_at: '2026-05-12'
+    rationale: The article avoids exact price, carrier table, insurance, speed, free-shipping, and post-sale-change claims that were not locally sourceable.
+  - risk: backend_dependency
+    decided_by: Aymar batch 3A
+    decided_at: '2026-05-12'
+    rationale: Backend calculation rules were unavailable locally, so the article is limited to seller-controlled inputs visible in iOS and support escalation.
+  - risk: buyer_expectation
+    decided_by: Aymar batch 3A
+    decided_at: '2026-05-12'
+    rationale: "Buyer-facing explanation is phrased conservatively: profile plus delivery context, not a guaranteed formula."
+mockup_plan:
+  required: false
+  rationale: This troubleshooting article explains shipping-profile reasoning. Reproducing the full listing form would duplicate the central listing guide; no standalone cost screen is required.
+  screens: []
+validation_contract:
+  must_answer:
+    en:
+      - What affects shipping cost?
+      - What should the seller check if shipping looks too high or too low?
+      - What should the seller avoid promising?
+    pt-br:
+      - O que afeta o custo de frete?
+      - O que o vendedor deve conferir se o frete parecer alto ou baixo?
+      - O que o vendedor deve evitar prometer?
+  forbidden_claims:
+    - free shipping
+    - Cheapest
+    - Priority
+    - package insurance
+    - Correios price table
+    - carrier policy
+    - cannot be modified afterward
+  toc_required: true
+  currency_required: false
+audits:
+  code: audit/code-audit-14288129.md
+  content: audit/content-audit-14288129.md
+  compliance: audit/compliance-14288129.md
+status: ready_candidate
