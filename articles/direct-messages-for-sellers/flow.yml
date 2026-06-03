@@ -1,69 +1,90 @@
-# Flow contract for the DM seller article. v2 rewrite scope.
-# See process/templates/article-flow.yml for field documentation.
-# See process/00-RUNBOOK.md for the canonical 8-phase workflow.
+# Flow contract for direct-messages-for-sellers. v2 rewrite scope.
+# This batch run scoped the article to what is verifiable from the
+# audited iOS surface. The deeper conversation-detail screens
+# (product-conversation header, transaction-anchored thread) need a
+# separate audit pass and are deferred to a follow-up PR.
 
 workflow: article-v2
 mode: v2_rewrite
 audience: seller_br
 
-job_to_be_done: "Ajudar vendedores a responder compradores sem perder o contexto do show ou do pedido"
+job_to_be_done: "Help sellers find buyer messages in the Activity tab and start a conversation from a buyer profile"
 
 source_of_truth:
   ios_files:
-    # Activity tab and inbox (where sellers see DMs)
-    - DISCOUNT/Views/ActivityViewController.swift
-    # DM thread view + product/transaction conversation header
-    - DM/Views/ConversationViewController.swift
-    # User profile DM CTA
-    - PROFILE/Views/UserProfileHeaderView.swift
-  backend_files:
-    # DM scope: who can message whom, when
-    - jamble_backend/src/services/conversation_service.py
+    - ACTIVITY/ActivityList/Models/ActivityListTab.swift                  # 6 tab cases + localised titles
+    - ACTIVITY/ActivityPage/Views/ActivityViewController.swift            # Activity surface + empty-state copy
+    - PROFILE/Views/ProfileHeaderViewController.swift                     # Follow + Message buttons (lines 328-360, text-only buttons, no icon)
+    - RESOURCES/Localizable.xcstrings                                     # pt-BR translations
+  backend_files: []
   legal: []
   support_context: []
 
 content_contract:
   must_answer:
-    - "where sellers find direct messages in the app"
-    - "when sellers can message buyers and vice versa"
-    - "how product and transaction conversations differ from plain DMs"
-    - "what buyers see when a seller messages them"
-    - "safety rules and what kinds of messages are not allowed"
-
+    - "where sellers find buyer messages"
+    - "what each Activity tab filter shows"
+    - "how to start a message from a buyer profile"
   forbidden_terms:
-    # Internal codenames and unreleased automations should never appear.
-    # These are deterministic strings, hard fail on grep.
     - "regex:\\bauction\\b"
     - "regex:\\bleil[aã]o\\b"
-
   must_not_say:
-    - "Internal moderation tooling and admin-only override paths"
-    - "Unreleased automation features (e.g. auto-replies, AI suggestions)"
-    - "Backend service names and database schema details"
+    - "Photo upload limits per platform (out of scope for this rewrite, defer to follow-up)"
+    - "Read-receipt behavior, archive flow internals (out of scope, defer to follow-up)"
+    - "Internal moderation tooling and admin overrides"
+    - "Backend service names or DB schema details"
 
 mockup_plan:
   required: true
   screens:
     - name: activity-tabs
-      purpose: "Show where seller sees buyer messages in the Activity tab and how filters work"
+      purpose: "Show the Activity screen with the 6 sub-tabs (Todos / Mensagens / Não lido / Compras / Vendas / Concluído) and a few message rows"
       source: ios_required
-    - name: dm-product-card
-      purpose: "Show the product-conversation header: product image, price, and thread context"
+      required_icons: []  # avatars are dynamic user data, not stable iOS assets
+      review_checks:
+        - labels_match_xcstrings
+        - no_invented_ui_state
+    - name: profile-message-cta
+      purpose: "Show a buyer profile with the Follow + Message CTAs that open a new DM"
       source: ios_required
-    - name: product-message-thread
-      purpose: "Show a full DM thread anchored to a product, illustrating buyer/seller exchange"
-      source: ios_required
-    - name: user-profile-header
-      purpose: "Show the Message CTA on a user profile, the entry point for plain DMs"
-      source: ios_required
+      # iOS Follow + Message buttons are TEXT-ONLY, no icon (verified
+      # at PROFILE/Views/ProfileHeaderViewController.swift:328-360,
+      # both buttons configure UIButton.Configuration.filled with a
+      # title and no setImage call). Inventing a CSS-drawn icon for
+      # the mockup was the bug the PR #88 gate is designed to catch.
+      required_icons: []
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+      # PR #89A deterministic HTML text contract. Locks in the iOS
+      # truth: the button labels MUST be present per locale, and the
+      # invented-icon patterns (`::before` pseudo-element, smuggled
+      # `<img>` / `<svg>` tags, leftover `icon-` classes) MUST NOT
+      # come back. Catches the exact regression that shipped in the
+      # original PR #87 mockup.
+      html_must_contain:
+        pt-br:
+          - "Seguir"
+          - "Mensagem"
+        en:
+          - "Follow"
+          - "Message"
+      html_must_not_contain:
+        - "::before"
+        - "<img"
+        - "<svg"
+        - "icon-"
 
-icons_required:
-  - live_send_message      # send action in DM composer
-  - icon-chat-star         # chat moderation reference
+icons_required: []
 icons_fallback_feather: false
 
-currency_required: false   # DM article does not document prices
+currency_required: false
 
 risk_flags:
-  - "Confirm with Aymar which buyer-to-seller DM rules are live versus planned (gating affects must_not_say scope)"
-  - "Confirm with support team whether product-conversation auto-creation behavior changed in any recent release"
+  - "Conversation-detail surfaces (product-conversation header, transaction-anchored thread, photo composer) are out of scope for this rewrite. Follow-up article needed once those iOS files are re-audited."
+resolved_decisions:
+  - risk: "Conversation-detail surfaces deferred"
+    decided_by: "Aymar"
+    decided_at: "2026-05-06"
+    rationale: "First-batch run scope-cap; the 6-tab Activity surface and the profile-level Message CTA are the user-facing entry points and are verifiable end-to-end. Detail screens get their own pass."

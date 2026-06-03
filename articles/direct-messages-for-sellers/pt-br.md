@@ -1,160 +1,67 @@
-# Mensagens Diretas para Vendedores
+# Mensagens diretas para vendedores
 
-## O que voce vai aprender
+## O que você vai aprender
 
-Este guia explica como as mensagens diretas (DMs) funcionam para vendedores na Jamble. Voce vai aprender como acessar suas mensagens, se comunicar com compradores sobre pedidos, enviar fotos e gerenciar sua caixa de entrada. As DMs sao seu principal canal de comunicacao com compradores fora dos shows ao vivo.
+Onde encontrar as mensagens dos compradores no app, o que cada filtro da aba Atividade mostra, e como começar uma conversa a partir do perfil de um comprador.
 
-## Antes de comecar
+## Antes de começar
 
-Voce precisa de:
-- Uma conta de vendedor aprovada na Jamble
+Você precisa de uma conta de vendedor aprovada na Jamble e do app instalado no seu celular.
 
-## Onde encontrar suas mensagens
+## Onde encontrar
 
-Todas as suas conversas estao na aba **Atividade** — uma das abas principais na parte inferior da tela.
+Todas as mensagens dos compradores ficam na aba **Atividade**, no menu inferior do app. É a tela onde a Jamble agrupa tudo que precisa da sua atenção: novas mensagens, vendas, compras, alertas.
 
-![Tela Atividade com abas Todos, Nao lido, Compras, Vendas e lista de conversas abaixo](./assets/mockups/direct-messages-for-sellers__activity-tabs__pt-br.png)
+![Tela Atividade com os 6 filtros (Todos / Mensagens / Não lido / Compras / Vendas / Concluído) e a lista de conversas abaixo](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/direct-messages-for-sellers__activity-tabs__pt-br__v3.png)
 
-No topo, voce vera abas de filtro para organizar suas conversas:
+## O que cada filtro mostra
 
-- ****Todos**** — Todas as conversas que voce tem
-- ****Nao lido**** — Apenas conversas com mensagens novas que voce nao leu
-- ****Compras**** — Conversas sobre itens que voce comprou de outros vendedores
-- ****Vendas**** — Conversas sobre itens que voce vendeu — essa e sua aba principal como vendedor
-- ****Arquivados**** — Conversas que voce arquivou
-Como vendedor, a aba **Vendas** e onde voce vai passar a maior parte do tempo. Ela mostra todas as conversas relacionadas as suas vendas — perguntas de compradores, confirmacoes de pedido e discussoes sobre envio.
+A aba Atividade tem 6 filtros no topo:
 
-## Tipos de conversas
+**Todos** : tudo o que entrou na sua aba Atividade, sem filtro.
 
-Nem todas as conversas sao iguais. Existem tres tipos:
+**Mensagens** : apenas as conversas privadas (mensagens diretas).
 
-### Mensagens diretas
+**Não lido** : conversas com mensagens que você ainda não abriu.
 
-Quando alguem toca em **"Mensagem"** no seu perfil, cria uma conversa simples entre voce e a outra pessoa. Nao tem produto ou pedido vinculado.
+**Compras** : conversas ligadas a itens que você comprou de outros vendedores.
 
-### Conversas de produto
+**Vendas** : conversas ligadas a itens que você vendeu. **Como vendedor, é a aba que você abre primeiro.**
 
-Quando um comprador faz uma oferta em um dos seus produtos, uma conversa e criada automaticamente com os **detalhes do produto no topo**. Voce pode discutir o produto, negociar e gerenciar ofertas dentro dessa conversa.
+**Concluído** : conversas que você arquivou.
 
-![dm-product-card exibindo imagem do produto, nome, preço R$ 45,00 e conversa entre comprador e vendedor](./assets/mockups/direct-messages-for-sellers__dm-product-card__pt-br.png)
+## Como começar uma mensagem
 
-### Conversas de transacao
+Para enviar uma mensagem para alguém que ainda não te escreveu, você abre o perfil dessa pessoa e toca em **Mensagem** ao lado de **Seguir**.
 
-Quando uma venda e concluida, uma conversa e criada (ou atualizada) com os **detalhes da transacao** — informacoes do produto, status do pedido e endereco de envio. E aqui que voce coordena o envio e responde perguntas pos-venda.
+![Perfil de um comprador com os botões Seguir e Mensagem visíveis abaixo do nome de usuário](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/direct-messages-for-sellers__profile-message-cta__pt-br__v3.png)
 
-A conversa inclui botoes de acao para confirmar pedidos, revisar detalhes e gerenciar a transacao.
+A primeira mensagem cria a conversa. Se vocês já trocaram mensagens antes, o app abre a conversa existente em vez de criar uma nova.
 
-## Como iniciar uma conversa
+## Notificações
 
-### Enviar mensagem primeiro
-
-Voce pode enviar mensagem para qualquer usuario na Jamble:
-
-1. Acesse o **perfil** da pessoa
-2. Toque no botao **"Mensagem"** (ao lado do botao "Seguir")
-3. Digite sua mensagem e envie
-
-![user-profile-header mostrando nome de usuário, contagem de seguidores e botões de ação Seguir e Mensagem](./assets/mockups/direct-messages-for-sellers__user-profile-header__pt-br.png)
-
-Se voce ja conversou com essa pessoa, abre a conversa existente. Se nao, uma nova conversa e criada quando voce envia a primeira mensagem.
-
-### Conversas automaticas
-
-Voce nem sempre precisa iniciar uma conversa. A Jamble cria conversas automaticamente quando:
-
-- Um comprador **faz uma oferta** no seu produto
-- Um comprador **conclui uma compra** de voce
-- Alguem **entra em contato** pelo seu perfil
-
-## O que voce pode enviar
-
-### Mensagens de texto
-
-Digite uma mensagem de ate **500 caracteres** e toque no botao de enviar. As mensagens sao entregues em tempo real.
-
-### Fotos
-
-Toque no **icone de camera** ao lado do campo de texto para enviar fotos:
-
-- **No iOS**: Selecione ate **6 fotos** da sua galeria
-- **No Android**: Selecione ate **10 fotos** da sua galeria, ou **tire uma foto** diretamente com a camera
-
-Fotos sao uteis para mostrar detalhes do produto, embalagem, etiquetas de envio ou responder perguntas dos compradores sobre a condicao.
-
-### O que voce nao pode enviar
-
-As DMs sao apenas para texto e fotos. Voce nao pode enviar mensagens de voz, videos, arquivos ou links com previsualizacao.
-
-## Gerenciando sua caixa de entrada
-
-### Indicadores de nao lido
-
-Quando voce tem mensagens nao lidas:
-- Um **selo** aparece na aba Atividade mostrando o numero de conversas nao lidas
-- Conversas nao lidas aparecem com um **ponto colorido** ao lado
-- Conversas nao lidas tem um **fundo levemente diferente** para se destacar
-
-### Arquivando conversas
-
-Para arquivar uma conversa que voce nao precisa no momento:
-
-1. **Pressione e segure** na conversa na lista
-2. Selecione **"Arquivar"**
-
-A conversa vai para a aba **Arquivados**. Para trazer de volta, va para a aba Arquivados, pressione e segure na conversa e selecione **"Desarquivar"**.
-
-### Apagando uma mensagem
-
-Se voce enviou uma mensagem por engano:
-
-1. **Pressione e segure** na mensagem que deseja apagar
-2. Selecione **"Apagar"**
-
-A outra pessoa vera **"Mensagem cancelada"** no lugar da sua mensagem original. Voce so pode apagar suas proprias mensagens.
-
-## Notificacoes
-
-Voce recebe uma **notificacao push** para cada nova mensagem em uma conversa privada. A notificacao mostra:
-
-- O nome do remetente
-- A previa da mensagem (ou "Acabou de te enviar uma foto" para mensagens com imagem)
-- A imagem do produto se a conversa e sobre um produto especifico
-
-Toque na notificacao para ir diretamente para aquela conversa.
-
-Se voce nao esta recebendo notificacoes, verifique se as notificacoes estao ativadas para a Jamble nas configuracoes do seu celular.
+Cada mensagem nova aparece como notificação push, desde que a categoria **Activity** esteja ativada nas suas configurações de notificações. Veja o artigo **Configurações de notificações** para detalhes.
 
 ## Dicas importantes
 
-- **Responda rapidamente as perguntas dos compradores.** Respostas rapidas constroem confianca e podem fazer a diferenca entre uma venda e um comprador perdido. Verifique sua aba Atividade regularmente
-- **Use a aba Vendas.** Ela filtra para mostrar apenas conversas sobre suas vendas, para que voce possa focar no que importa
-- **Envie fotos para responder perguntas.** Se um comprador pergunta sobre a condicao do produto, uma foto rapida vale mais que mil palavras
-- **Nao compartilhe informacoes pessoais.** Mantenha as conversas dentro da Jamble. Nao compartilhe numeros de telefone, enderecos de email ou contas de redes sociais nas DMs
-- **Verifique sua aba Arquivados de vez em quando.** Voce pode ter arquivado uma conversa que depois precisa de acompanhamento (problema de envio, pedido de devolucao)
-- **Usuarios bloqueados nao podem te enviar mensagens.** Se alguem estiver sendo inconveniente, voce pode bloquea-lo pelo perfil — ele nao podera mais te enviar mensagens
+- **Comece pela aba Vendas.** É lá que ficam as conversas dos compradores que já compraram de você (envio, dúvida pós-venda, devolução).
+- **Cheque a aba Não lido todo dia.** Respostas rápidas dos vendedores fazem diferença na nota e na chance de venda futura.
+- **Abra a aba Mensagens em segundo lugar.** Lá ficam as mensagens privadas que ainda não viraram venda (pergunta antes de comprar, lead).
+- **Mantenha a conversa dentro da Jamble.** Não compartilhe número, email ou redes sociais nas DMs.
 
 ## Perguntas frequentes
 
-**Compradores podem me enviar mensagens antes de comprar algo?**
-Sim. Qualquer pessoa pode tocar em "Mensagem" no seu perfil para iniciar uma conversa, mesmo se nunca comprou de voce.
+**Compradores podem me enviar mensagens antes de comprar?**
+Sim. Qualquer pessoa pode tocar em **Mensagem** no seu perfil para iniciar uma conversa, mesmo sem ter comprado de você ainda.
 
-**Eu recebo uma conversa para cada venda automaticamente?**
-Sim. Cada transacao concluida cria automaticamente uma conversa entre voce e o comprador, com os detalhes do produto e do pedido anexados.
+**Cada venda gera uma conversa?**
+Sim. Toda venda concluída tem uma conversa associada que você acessa pela aba Vendas.
 
-**Posso enviar mensagem para todos os meus compradores ao mesmo tempo?**
-Nao. A Jamble nao tem um recurso de mensagem em massa ou transmissao. Voce so pode enviar mensagens para compradores individualmente pelas conversas deles.
+**Como sei que tenho mensagens novas?**
+A aba Atividade mostra um contador no menu inferior, e o filtro **Não lido** isola as conversas com mensagens que você ainda não abriu.
 
-**Existe um limite de quantas mensagens posso enviar?**
-Ha um limite de velocidade para prevenir spam — voce pode enviar algumas mensagens por conversa a cada poucos segundos. A velocidade normal de conversa nunca e afetada. Se voce esta enviando mensagens muito rapido, diminua o ritmo e tente novamente.
-
-**Consigo ver se o comprador leu minha mensagem?**
-Sim. Voce pode ver quando sua ultima mensagem foi lida pela outra pessoa.
-
-**Qual a diferenca entre o chat do show e as DMs?**
-O chat do show e publico — todos no show ao vivo veem as mensagens. As DMs sao privadas — apenas voce e a outra pessoa podem ver a conversa. Use DMs para comunicacao pessoal com compradores especificos.
-
-**As DMs estao disponiveis no iOS e Android?**
-Sim. O recurso de mensagens funciona nas duas plataformas com a mesma funcionalidade.
+**E o que acontece se eu desativar a categoria Activity nas notificações?**
+Você ainda recebe as mensagens, mas só descobre quando abrir o app. As notificações push só são enviadas se a categoria **Activity** estiver ligada (ver artigo Configurações de notificações).
 
 ## Precisa de ajuda?
 
