@@ -4,6 +4,17 @@
 
 Este guia cobre as melhores práticas para vender tênis na Jamble no Brasil. Você vai aprender como descrever corretamente o estado, tirar ótimas fotos e configurar suas listagens de tênis para gerar confiança e evitar devoluções.
 
+## Conteúdo
+
+- Antes de começar
+- Autenticidade
+- Diretrizes de estado
+- Diretrizes de fotos
+- Dicas de listagem para tênis
+- Vendendo tênis durante seu show
+- Perguntas frequentes
+- Precisa de ajuda?
+
 ## Antes de começar
 
 Você precisa de:
@@ -64,19 +75,19 @@ Independente do estado, você deve mencionar qualquer um destes defeitos se pres
 
 Boas fotos são essenciais para tênis. Veja o que incluir:
 
-1. **Os dois tênis juntos** — vista frontal, mostrando o par completo
-2. **Perfil lateral** — lado esquerdo e direito de cada tênis
-3. **Solas** — mostre a parte de baixo dos dois tênis (o desgaste é visível aqui)
-4. **Traseira/calcanhar** — mostra o calcanhar e a parte de trás
-5. **Caixa e etiquetas** — se tiver, inclua uma foto do rótulo da caixa com info de tamanho
-6. **Close-up de defeitos** — se houver amarelamento, arranhão ou separação, fotografe de perto
+1. **Os dois tênis juntos**, vista frontal, mostrando o par completo
+2. **Perfil lateral**, lado esquerdo e direito de cada tênis
+3. **Solas**, mostre a parte de baixo dos dois tênis (o desgaste é visível aqui)
+4. **Traseira/calcanhar**, mostra o calcanhar e a parte de trás
+5. **Caixa e etiquetas**, se tiver, inclua uma foto do rótulo da caixa com info de tamanho
+6. **Close-up de defeitos**, se houver amarelamento, arranhão ou separação, fotografe de perto
 
 ```
 Ordem recomendada de fotos (até 10):
-1. Ambos os tênis — vista frontal
-2. Tênis esquerdo — perfil lateral
-3. Tênis direito — perfil lateral
-4. Solas — ambos os tênis
+1. Ambos os tênis, vista frontal
+2. Tênis esquerdo, perfil lateral
+3. Tênis direito, perfil lateral
+4. Solas, ambos os tênis
 5. Vista traseira/calcanhar
 6. Rótulo da caixa (se disponível)
 7-10. Close-ups de detalhes ou defeitos
@@ -128,8 +139,8 @@ Se tiver, sim. Tênis na caixa original valem mais e dão confiança aos comprad
 Responda com calma e apresente qualquer comprovante de compra que tiver. Se está confiante de que o item é autêntico, explique ao comprador. Se a disputa continuar, entre em contato com o suporte da Jamble.
 
 **Como devo precificar meus tênis?**
-Pesquise por quanto modelos similares são vendidos na Jamble e em outras plataformas. Considere o estado, raridade e demanda atual do mercado. Para modelos populares em bom estado, Ofertas em tempo real geralmente conseguem um preço melhor do que Compra Direta.
+Pesquise por quanto modelos similares são vendidos na Jamble e em outras plataformas. Considere o estado, raridade e demanda atual do mercado. Para modelos populares em bom estado, Oferta em tempo real pode ser uma opção melhor do que Comprar agora.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Contate o suporte pelo chat do app.

@@ -4,6 +4,17 @@
 
 This guide covers best practices for selling sneakers on Jamble in Brazil. You'll learn how to properly describe condition, take great photos, and set up your sneaker listings to build buyer trust and avoid returns.
 
+## Contents
+
+- Before you start
+- Authenticity
+- Condition guidelines
+- Photo guidelines
+- Listing tips for sneakers
+- Selling sneakers during your show
+- Common questions
+- Need help?
+
 ## Before you start
 
 You need:
@@ -64,19 +75,19 @@ Regardless of condition, you must mention any of these flaws if present:
 
 Good photos are critical for sneakers. Here's what to include:
 
-1. **Both shoes together** — front view, showing the full pair
-2. **Side profile** — left and right side of each shoe
-3. **Soles** — show the bottom of both shoes (wear is visible here)
-4. **Back/heel** — shows the heel and back counter
-5. **Box and tags** — if you have them, include a photo of the box label with size info
-6. **Close-up of any flaws** — if there's yellowing, a scuff, or separation, photograph it up close
+1. **Both shoes together**, front view, showing the full pair
+2. **Side profile**, left and right side of each shoe
+3. **Soles**, show the bottom of both shoes (wear is visible here)
+4. **Back/heel**, shows the heel and back counter
+5. **Box and tags**, if you have them, include a photo of the box label with size info
+6. **Close-up of any flaws**, if there's yellowing, a scuff, or separation, photograph it up close
 
 ```
 Recommended photo order (up to 10):
-1. Both shoes — front view
-2. Left shoe — side profile
-3. Right shoe — side profile
-4. Soles — both shoes
+1. Both shoes, front view
+2. Left shoe, side profile
+3. Right shoe, side profile
+4. Soles, both shoes
 5. Back/heel view
 6. Box label (if available)
 7-10. Close-ups of details or flaws
@@ -132,4 +143,4 @@ Research what similar models sell for on Jamble and other platforms. Consider th
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Contact support from the app chat.

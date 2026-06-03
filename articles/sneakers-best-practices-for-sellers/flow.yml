@@ -1,0 +1,67 @@
+article_slug: sneakers-best-practices-for-sellers
+article_type: v2_rewrite
+language_pair: en_pt-br
+intercom_id: 14288113
+audience:
+  primary: seller_br
+  secondary: []
+intent:
+  job_to_be_done: List sneakers with enough authenticity, condition, sizing, photo, and shipping context to reduce buyer surprises.
+  user_problem: Sneaker buyers need more evidence than a generic title or one photo, and sellers need clear expectations before going live.
+  success_criteria:
+    - Seller describes authenticity, condition, flaws, and size clearly.
+    - Seller knows which photos are most valuable for sneaker buyers.
+    - Seller understands how box/original packaging affects buyer expectations and shipping profile choice.
+source_of_truth:
+  code:
+    ios_files: []
+    backend_files: []
+  content:
+    existing_articles:
+      - articles/sneakers-best-practices-for-sellers/en.md
+      - articles/sneakers-best-practices-for-sellers/pt-br.md
+  policy:
+    owner: Help Center editorial policy for sneaker listings
+    checked_at: '2026-05-12'
+risk_flags:
+  - authenticity_claims
+  - category_policy
+  - buyer_expectation
+resolved_decisions:
+  - risk: authenticity_claims
+    decided_by: Aymar batch 3A
+    decided_at: '2026-05-12'
+    rationale: The article warns sellers not to list counterfeit goods and does not claim Jamble authenticates sneakers.
+  - risk: category_policy
+    decided_by: Aymar batch 3A
+    decided_at: '2026-05-12'
+    rationale: The article is category guidance for seller quality; it avoids unsupported app or backend behavior.
+  - risk: buyer_expectation
+    decided_by: Aymar batch 3A
+    decided_at: '2026-05-12'
+    rationale: Buyer-expectation guidance is limited to photos, flaws, sizing, box status, and accurate description.
+mockup_plan:
+  required: false
+  rationale: This is a category best-practices article. A mockup would be decorative unless it reproduced the full listing form, which is handled by how-to-list-products-on-jamble.
+  screens: []
+validation_contract:
+  must_answer:
+    en:
+      - How should a seller describe sneaker authenticity and condition?
+      - What photos should a seller include?
+      - What should a seller say during a live show?
+    pt-br:
+      - Como o vendedor deve descrever autenticidade e condição?
+      - Quais fotos o vendedor deve incluir?
+      - O que o vendedor deve dizer durante uma live?
+  forbidden_claims:
+    - Jamble authenticates sneakers
+    - guaranteed resale value
+    - guaranteed buyer dispute outcome
+  toc_required: false
+  currency_required: false
+audits:
+  code: audit/code-audit-14288113.md
+  content: audit/content-audit-14288113.md
+  compliance: audit/compliance-14288113.md
+status: ready_candidate
