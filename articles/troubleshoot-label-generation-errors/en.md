@@ -2,95 +2,83 @@
 
 ## What you'll learn
 
-This guide helps you fix common problems when generating shipping labels on Jamble. If a label fails to generate or something looks wrong, follow the steps here.
+Use this guide when a shipping label will not open, looks wrong, or cannot be printed from the Jamble app.
+
+## Contents
+
+- Before you start
+- First checks
+- If the label will not generate
+- If the label opens but looks wrong
+- If you cannot print or share the label
+- When to contact support
 
 ## Before you start
 
 You need:
-- An approved seller account on Jamble
-- A sale waiting for a shipping label
 
-## Common errors and how to fix them
+- A seller account on Jamble
+- A sale that is ready for shipment
+- Your shipping address saved in the app
+- A stable internet connection
 
-### Error: Label fails to generate
+## First checks
 
-**What it looks like:** You tap the button to generate a label and nothing happens, or you get an error message.
+Before trying again, check the basics:
 
-**Common causes and fixes:**
+1. Make sure your sender address is complete. In Brazil, the address form requires postal code, street, number, neighborhood, city, state, country, and your contact details.
+2. Make sure the product had the right shipping profile before it sold. The profile should match the packaged item, not only the item itself.
+3. Wait for the PDF preview to finish loading before tapping **Print**.
+4. Do not create repeated labels for the same sale while the first attempt is still unclear. If the issue persists, contact support.
 
-1. **Missing shipping address**
-   - Go to **Settings > Shipping Preferences** and make sure your shipping address is complete
-   - Your CEP, street, number, city, and state must all be filled in
-   - Try updating your CEP — the app auto-fills your address from the postal code
+## If the label will not generate
 
-2. **Invalid CEP (postal code)**
-   - Make sure your CEP is a valid 8-digit Brazilian postal code
-   - If you recently moved, update your address with the correct CEP
-   - Some remote CEPs may not be supported by certain Correios services
+The most common seller-side cause is missing or invalid shipping information.
 
-3. **Buyer address issue**
-   - If the buyer's address is incomplete or invalid, the label can't be generated
-   - Contact support — they can reach out to the buyer to fix the address
+Check:
 
-4. **Shipping profile mismatch**
-   - If the product's shipping profile doesn't match a valid Correios service for the route (origin → destination), the label may fail
-   - Check if the shipping profile assigned to the product is appropriate for its actual size and weight
+- Your postal code
+- Street name and street number
+- Neighborhood, city, and state
+- Phone number
+- Shipping profile on the sold product
 
-5. **Temporary service issue**
-   - The label system uses an external service (Melhor Envio) to generate Correios labels. If this service is temporarily unavailable, label generation will fail
-   - Wait a few minutes and try again. If it persists after 30 minutes, contact support
+If the buyer address is the issue, you cannot edit it yourself. Contact support from the order so the team can help with the buyer-side information.
 
-### Error: Label generated but looks wrong
+## If the label opens but looks wrong
 
-**What it looks like:** The label PDF opens but the information doesn't look right.
+Check whether the visible information matches the order:
 
-**What to check:**
+- Sender address
+- Buyer destination
+- Products in the order or bundle
+- PDF content before printing
 
-1. **Wrong sender address** — Your shipping address on the label should match your address in Settings. If it doesn't, update your address in **Settings > Shipping Preferences** before generating new labels
-2. **Wrong label format** — If the PDF size doesn't match your printer, change your label format in **Settings > Shipping Preferences** (Half Page, Full Page, or Thermal 4x6)
-3. **Wrong items listed** — If the content declaration lists wrong items, this may be a bundling issue. Check if the right products are grouped in the correct bundle
+If the information is wrong, stop before shipping the package and contact support. Do not hand the package to the carrier with a label you believe is incorrect.
 
-### Error: Can't print or share the label
+## If you cannot print or share the label
 
-**What it looks like:** The label opens but the Print button doesn't work or the share sheet doesn't appear.
+The label screen opens a PDF preview in the app. The **Print** button opens the sharing or printing options from your device.
 
-**What to try:**
+Try this:
 
-1. **Check your internet connection** — The label PDF needs to download. A slow or unstable connection can prevent it from loading
-2. **Wait for the PDF to fully load** — The label viewer shows a preview. Make sure the full PDF has loaded before tapping Print
-3. **Try again** — Close the label screen and reopen it. The PDF may need to re-download
-4. **Save and print from another device** — Use the share menu to send the PDF to yourself via email or save it to Files, then print from a computer
+1. Wait for the PDF preview to load.
+2. Tap **Print** again.
+3. If nothing opens, close the label screen and reopen it.
+4. Check your connection and try again.
+
+If the PDF still does not open, contact support and include a screenshot of the issue.
 
 ## When to contact support
 
 Contact support if:
-- The label keeps failing after multiple attempts and you've verified your address
-- The buyer's address seems to be the problem and you can't fix it yourself
-- A label was generated with wrong information and you need it replaced
-- You've been charged for a label that couldn't be used
-- The label generation service has been down for more than an hour
 
-## Important tips
-
-- **Check your address first.** The most common cause of label errors is an incomplete or incorrect shipping address. Verify your CEP, street, and number before anything else
-- **Don't generate multiple labels for the same bundle.** If a label fails, troubleshoot the issue before trying again. Generating duplicate labels can cause confusion
-- **Keep your app updated.** Label generation improvements are released regularly. Make sure you're running the latest version of the Jamble app
-- **Screenshot the error.** If you get an error message, take a screenshot before contacting support. It helps them diagnose the problem faster
-
-## Common questions
-
-**I was charged for a label but it didn't generate properly. Will I get a refund?**
-Contact support. If the label was purchased but couldn't be used, they can process a refund for the label cost.
-
-**Can I generate a label from a computer?**
-Currently, labels are generated from the Jamble mobile app only. You can export the PDF and print it from any device.
-
-**The label service is down. What should I do?**
-Wait and try again later. If it's been more than an hour, contact support. In the meantime, you can generate your own Correios label externally and add the tracking number to the order manually.
-
-**My CEP isn't recognized. What do I do?**
-Double-check that you're entering a valid 8-digit CEP. If your area is very new or remote, the CEP may not be in the database yet. Contact support for assistance.
+- The label keeps failing after you checked your sender address.
+- The buyer address seems incomplete or invalid.
+- The PDF opens with information that does not match the order.
+- You are unsure whether a label was already created for the sale.
+- The label cannot be opened, printed, or shared after retrying.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Contact support from the order or from the app chat.
