@@ -2,90 +2,61 @@
 
 ## What you'll learn
 
-This guide explains how to manage your push notification preferences on Jamble. You can choose exactly which notifications you want to receive, so you stay informed about what matters most without being overwhelmed.
+How to tune the push notifications Jamble sends you: where to find the settings, what each category controls, and how to re-enable notifications if iOS is blocking the app.
 
 ## Before you start
 
-- You need a Jamble account (buyer or seller)
-- Push notifications must be enabled on your device (Jamble will prompt you if they're not)
+You need a Jamble account (buyer or seller) and the app installed on your phone. Push notifications must be allowed for Jamble in **iOS Settings**. The app prompts for this permission the first time you open the notifications screen.
 
-## Step by step
+## Where to find them
 
-### Step 1: Open your notification settings
+In the app, open your profile, tap the settings icon, scroll to the **Account** section, and tap **Notifications**.
 
-From the app, tap your **profile icon** in the bottom right corner, then tap the **gear icon** to open **Settings**. Scroll to the **Account** section and tap **"Notifications"**.
+## The 4 categories
 
-![Settings screen with Account section listing Personal Information, Notifications, Edit my Profile, and Blocked profiles rows](./assets/mockups/notification-settings__settings-account__en.png)
+The screen shows 4 collapsible sections, each with a main toggle that turns the whole category on or off, and individual toggles for specific types.
 
-### Step 2: Check your device permissions
+> The section titles are shown in English even on the pt-BR locale. This reflects the current iOS surface (server-side translation is a future improvement).
 
-When you open the Notifications screen, Jamble checks if push notifications are enabled on your phone. If they're turned off, a sheet will appear asking you to enable them in your device settings. Without this, none of the toggles below will work.
+![Notifications screen with the 4 sections (Promotional, Activity, Live Shows, Transactions) and their parent toggles](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/notification-settings__notifications-list__en__v3.png)
 
-### Step 3: Manage each notification category
+**Promotional** : alerts about Jamble offers and promotions.
 
-Your notification settings are organized into **4 categories**. Each category has a **main toggle** that turns all notifications in that group on or off, and **individual toggles** for specific notification types.
+**Activity** : new followers, direct messages, likes on your content.
 
-#### Promotional
+**Live Shows** : recommended shows, shows from sellers you follow, reminders for shows you bookmarked, and bookmarked products that go live.
 
-Get early updates on special offers, discounts, and more.
+**Transactions** : updates about your purchases and sales (orders, payments, shipping status).
 
-- **Promotional alerts** — Notifications about promotions and special offers from Jamble
-#### Activity
+## If iOS is blocking
 
-Updates about your interactions with other users.
+If push permission is off in iOS, Jamble shows a sheet explaining the problem. Without iOS permission, none of the toggles in the screen above can deliver anything.
 
-- **Followers** — When someone new follows you
-- **Messages** — When you receive a direct message
-- **Likes** — When someone likes your content
-#### Live Shows
+![Sheet asking the user to turn on Jamble push notifications in iOS settings](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/notification-settings__permission-sheet__en__v3.png)
 
-Alerts about shows and products you might be interested in.
-
-- **Recommended shows** — Shows Jamble thinks you'll enjoy based on your interests
-- **Shows from people I follow** — When a seller you follow starts or schedules a show
-- **Bookmarked shows** — Reminders about shows you've saved
-- **Bookmarked product from show** — When a product you've saved appears in a live show
-#### Transactions
-
-Track your purchases and sales.
-
-- **Updates on transaction status** — Status changes on your orders (shipped, delivered, etc.)
-### Step 4: Toggle individual settings
-
-To adjust a specific notification:
-
-1. Find the category (e.g., **Live Shows**)
-2. If the category is collapsed, tap the **main toggle** to expand it
-3. Toggle individual settings **on** (purple) or **off** (grey)
-
-![Live Shows notification settings with toggles for recommended shows, followed creators, bookmarks, and products](./assets/mockups/notification-settings__live-shows-notifications__en.png)
-
-**Turning off the main toggle** disables all notifications in that category at once. Turning it back on restores them all.
+Tap **Turn On Notifications**. The app opens **iOS Settings** on the Jamble row. Enable **Allow Notifications** and return to the app. Notifications are already enabled.
 
 ## Important tips
 
-- **Keep "Transaction status" on.** As a seller, this is critical — you'll be notified when orders are confirmed, shipped, and delivered. Missing these can delay your shipping and hurt your reputation
-- **"Shows from people I follow" is great for sellers too.** Follow other sellers to stay informed about when they go live — you can learn from how they run their shows
-- **"Bookmarked product from show" is a hidden gem for buyers.** If you save a product you love, Jamble will notify you the moment it appears in a live show so you don't miss your chance
-- **Changes are saved instantly.** Every toggle you flip is saved to the server immediately — no need to tap a save button
+- **Start from each category's main toggle.** If you want to turn off a whole category, the top toggle does it.
+- **Live Shows is the category you lose the most by turning off.** Bookmarked shows reminders and bookmarked-product alerts are the notifications that move the most purchases on Jamble.
+- **Keep Transactions on.** Without it, you can miss a shipping or payment alert.
+- **If you turned everything off by mistake**, just go back to the same screen and toggle it back on. Effect is immediate.
 
-## Common questions
+## Frequently asked questions
 
-**Where do I find notification settings?**
-Go to **Settings** (gear icon on your profile) → **Account** section → **Notifications**.
+**I changed a setting and nothing arrives. What can it be?**
+First check that push permission is on in iOS (**Settings** > **Notifications** > **Jamble**). If it is off, the sheet mentioned above explains how to turn it back on.
 
-**I'm not receiving any notifications. What should I do?**
-First, check that push notifications are enabled in your phone's system settings for the Jamble app. Then check that the specific notification types you want are toggled on inside the app.
+**Why are the section titles in English on my Portuguese phone?**
+The screen renders the categories as the server sends them, and server-side translation is not done yet. The descriptions in this article are in pt-BR.
 
-**Can I turn off all notifications at once?**
-Yes. Turn off the main toggle for each of the 4 categories (Promotional, Activity, Live Shows, Transactions). All notifications will be disabled.
+**Can I get notifications by email instead of push?**
+Today, this screen only controls push notifications. Email preferences are managed separately and are not part of this article.
 
-**Will I still see in-app alerts if I turn off push notifications?**
-Yes. Push notification settings only control what gets sent to your phone's notification center. In-app activity (like messages appearing in your inbox) will still work normally.
-
-**Do notification settings sync across devices?**
-Notification preferences are tied to each device. If you use Jamble on two phones, you'll need to configure notifications on each one.
+**Will I lose notification history if I turn it all off?**
+No. You only disable future notifications. The events themselves (messages, orders, shows) keep happening in the app.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Contact us via the in-app chat or email support@jambleapp.com.
