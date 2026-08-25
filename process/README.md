@@ -2,9 +2,11 @@
 
 **Purpose**: operational guide for producing Intercom help center articles at scale, with code-faithful mobile mockups replacing ASCII boxes.
 
-**Audience**: AI agents (Claude, Haiku) and any operator running the pipeline.
+**Audience**: AI agents and human operators running the pipeline.
 
-**Status**: validated on 1 article (Sell Mode, article 14288093). Ready to scale to 67 articles / 228 ASCII boxes.
+**Status**: production process. Start with [00-RUNBOOK.md](00-RUNBOOK.md) for article work and [15-intercom-sync.md](15-intercom-sync.md) for the separate manual publication step. The dated repository baseline is in [`../HANDOVER.md`](../HANDOVER.md).
+
+> Some older numbered documents include direct Intercom API examples. Those examples are for controlled debugging and do not override the publication gate: merging never publishes, and production writes require explicit approval for one article.
 
 ---
 
@@ -26,7 +28,7 @@ The key insight that broke the deadlock: existing ASCII-to-image tools (aasvg, a
 
 ## Quick start for an AI agent
 
-Given one ASCII box from an Intercom article, produce the final published mockup by running these 6 steps in order. Each step has its own doc in this folder.
+Given one ASCII box from an Intercom article, produce the reviewed article assets by running the documented steps in order. Each step has its own file in this folder; publication remains a separate manual action.
 
 | Step | Doc | Deliverable |
 |------|-----|-------------|
@@ -87,7 +89,7 @@ Before pushing a mockup to Intercom, verify:
 ## File map of this process
 
 ```
-_work/process/
+process/
 ├── README.md                   # This file
 ├── design-system.md            # Jamble colors, fonts, buttons (from iOS code)
 ├── 01-extraction.md            # Get ASCII out of Intercom article HTML
@@ -114,4 +116,4 @@ _work/process/
 
 Process built during session 2026-04-15 to 2026-04-16 on project `2l-help-center` (formerly `2m-seller-center-refonte`). Validated on articles `14288093` (How to List Products on Jamble) and `14288094` (Choose Quantities When Listing Products). First production runs: 4 mockups on 14288093 (Settings, Pending Application, Sell Mode, Select Photos), 2 mockups on 14288094 (Quantity stepper, Pre-Bid error toast).
 
-Target migration: this `process/` folder moves to the root of `Jamble-Live-Shopping/help-center/process/` as part of the GitHub-as-source-of-truth pivot (see project ARCHITECTURE.md).
+This folder was migrated into `Jamble-Live-Shopping/help-center/process/` and is now the repository's canonical process documentation.
