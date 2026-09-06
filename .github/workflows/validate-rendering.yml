@@ -12,7 +12,7 @@ concurrency:
 
 jobs:
   rendering:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -23,6 +23,22 @@ jobs:
         run: npm ci
       - name: Audit high and critical vulnerabilities
         run: npm audit --audit-level=high
+      - name: Allow the test browser to create its sandbox
+        # Ubuntu 24.04 restricts user namespaces for downloaded browsers.
+        # Scope the exception to this executable on the disposable runner;
+        # keep Chrome's sandbox and the global AppArmor restriction enabled.
+        # https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md
+        run: |
+          CHROME_EXECUTABLE="$(node --input-type=module -e 'import puppeteer from "puppeteer"; console.log(await puppeteer.executablePath());')"
+          test -x "$CHROME_EXECUTABLE"
+          sudo tee /etc/apparmor.d/help-center-renderer > /dev/null <<EOF
+          abi <abi/4.0>,
+          include <tunables/global>
+          profile help-center-renderer "$CHROME_EXECUTABLE" flags=(unconfined) {
+            userns,
+          }
+          EOF
+          sudo apparmor_parser --replace /etc/apparmor.d/help-center-renderer
       - name: Parse article metadata and flow contracts
         run: |
           node --input-type=module <<'JS'
