@@ -28,6 +28,9 @@ help-center/
 
 ## Quick start for contributors
 
+Use Node.js 24 LTS (minimum 22.12.0), required by the mockup renderer.
+Check your installed version with `node --version` before `npm ci`.
+
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full walkthrough. In short:
 
 ```bash
