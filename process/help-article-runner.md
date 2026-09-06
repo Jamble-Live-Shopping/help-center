@@ -18,6 +18,22 @@ without re-reading the entire RUNBOOK each time:
 
 Run from the repo root.
 
+The pull request workflows run on every PR, including documentation-only
+changes, so their `validate` and `factory` checks can be required by branch
+protection. The article check still validates only changed folders containing
+`flow.yml`; a successful check does not certify the full article collection.
+
+`python3 scripts/validate-article-flow.py --changed <base_ref>` exits **2**
+with `[changed_files_unavailable]` if Git cannot compare the base revision
+with `HEAD`. This is a setup failure, not an empty successful validation.
+The GitHub workflow fetches full history so the base revision is available.
+
+After these workflows are merged, a repository administrator should require
+both `validate` and `factory` from GitHub Actions in the `main` branch rule,
+while preserving the required human review. Existing PRs based on older
+workflows need to update their branches to receive both checks. Avoid path
+filters on required workflows: GitHub leaves skipped workflows pending.
+
 | Phase           | Command                                                    | Exit      | What it prints |
 |-----------------|------------------------------------------------------------|-----------|----------------|
 | plan            | `python3 scripts/run-help-article.py articles/<slug> --phase plan`           | 0 / 2     | Identity, job, ordered artefact checklist grouped by RUNBOOK phase, risk_flags, resolved_decisions. |

@@ -9,8 +9,8 @@ Usage:
     scripts/validate-article-flow.py --all                     # validate all articles/*/flow.yml
     scripts/validate-article-flow.py --changed <base_ref>      # validate articles changed vs base ref
 
-Exit code 0 if all hard fails pass. Exit 1 with structured error report
-otherwise. Soft warns echo to stderr regardless.
+Exit code 0 if all hard fails pass, 1 for article failures, and 2 when
+changed-article discovery cannot run. Soft warns echo to stderr regardless.
 
 Source of truth: process/00-RUNBOOK.md, process/templates/article-flow.yml,
 process/workflows/article-v2.yml.
@@ -1605,14 +1605,12 @@ def find_articles(args: argparse.Namespace) -> list[Path]:
     if args.all:
         return sorted(p.parent for p in (REPO_ROOT / "articles").glob("*/flow.yml"))
     if args.changed:
-        try:
-            out = subprocess.check_output(
-                ["git", "diff", "--name-only", args.changed, "HEAD", "--", "articles/"],
-                cwd=REPO_ROOT,
-                text=True,
-            )
-        except subprocess.CalledProcessError:
-            return []
+        out = subprocess.check_output(
+            ["git", "diff", "--name-only", args.changed, "HEAD", "--", "articles/"],
+            cwd=REPO_ROOT,
+            text=True,
+            stderr=subprocess.PIPE,
+        )
         article_dirs: set[Path] = set()
         for line in out.splitlines():
             parts = line.split("/")
@@ -1642,7 +1640,17 @@ def main() -> int:
     parser.add_argument("--changed", metavar="REF", help="validate articles changed vs git ref")
     args = parser.parse_args()
 
-    articles = find_articles(args)
+    try:
+        articles = find_articles(args)
+    except (subprocess.CalledProcessError, OSError) as exc:
+        detail = exc.stderr.strip() if isinstance(exc, subprocess.CalledProcessError) else str(exc)
+        print(
+            f"ERROR [changed_files_unavailable] Cannot determine articles changed "
+            f"against {args.changed!r}: {detail}. Ensure Git and the base revision "
+            f"are available before retrying validation.",
+            file=sys.stderr,
+        )
+        return 2
     if not articles:
         print("No articles to validate (use --all, --changed <ref>, or pass article dirs)")
         return 0

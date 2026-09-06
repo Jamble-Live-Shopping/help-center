@@ -1820,7 +1820,80 @@ def test_validator_passes_when_path_in_negative_scan_with_risk_flag() -> None:
 # Test runner
 # ---------------------------------------------------------------
 
+def test_changed_articles_invalid_base_fails_closed() -> None:
+    """A missing Git revision must not produce a successful empty check."""
+    rc, out, err = _run([
+        sys.executable, str(SCRIPTS_DIR / "validate-article-flow.py"),
+        "--changed", "refs/heads/test-missing-validation-base",
+    ])
+    assert rc == 2, f"expected setup error 2, got {rc}: {out!r} {err!r}"
+    assert "changed_files_unavailable" in err, err
+    assert "No articles to validate" not in out, out
+
+
+def test_changed_articles_no_changes_passes() -> None:
+    """A successful Git comparison with no changes remains a valid no-op."""
+    rc, out, err = _run([
+        sys.executable, str(SCRIPTS_DIR / "validate-article-flow.py"),
+        "--changed", "HEAD",
+    ])
+    assert rc == 0, f"expected successful no-op, got {rc}: {out!r} {err!r}"
+    assert "No articles to validate" in out, out
+
+
+def test_changed_articles_missing_git_fails_closed() -> None:
+    with tempfile.TemporaryDirectory() as empty_path:
+        proc = subprocess.run(
+            [sys.executable, str(SCRIPTS_DIR / "validate-article-flow.py"),
+             "--changed", "HEAD"],
+            cwd=REPO_ROOT, capture_output=True, text=True,
+            env={**os.environ, "PATH": empty_path},
+        )
+    assert proc.returncode == 2, (
+        f"expected setup error 2, got {proc.returncode}: {proc.stderr!r}"
+    )
+    assert "changed_files_unavailable" in proc.stderr, proc.stderr
+    assert "Traceback" not in proc.stderr, proc.stderr
+
+
+def test_changed_articles_valid_base_checks_content() -> None:
+    """A real changed contract must still reach the article validation gate."""
+    with tempfile.TemporaryDirectory(prefix="changed-article-test-") as tmp:
+        root = Path(tmp)
+        scripts = root / "scripts"
+        scripts.mkdir()
+        validator = scripts / "validate-article-flow.py"
+        shutil.copy2(SCRIPTS_DIR / validator.name, validator)
+        git = ["git", "-c", "user.name=Test", "-c", "user.email=test@example.com"]
+        def run_git(*args: str) -> str:
+            return subprocess.check_output(
+                [*git, *args], cwd=root, text=True, stderr=subprocess.PIPE,
+            ).strip()
+        run_git("init", "--quiet")
+        run_git("add", "scripts")
+        run_git("commit", "--quiet", "-m", "Base fixture")
+        base = run_git("rev-parse", "HEAD")
+        article = root / "articles" / "changed-example"
+        article.mkdir(parents=True)
+        (article / "flow.yml").write_text("workflow: article-v2\n", encoding="utf-8")
+        run_git("add", "articles")
+        run_git("commit", "--quiet", "-m", "Add incomplete article")
+        proc = subprocess.run(
+            [sys.executable, str(validator), "--changed", base],
+            cwd=root, capture_output=True, text=True,
+        )
+    assert proc.returncode == 1, (
+        f"expected content failure 1, got {proc.returncode}: {proc.stdout!r} {proc.stderr!r}"
+    )
+    assert "changed-example" in proc.stdout, proc.stdout
+    assert "Validated 1 article(s)" in proc.stdout, proc.stdout
+
+
 TESTS = [
+    test_changed_articles_invalid_base_fails_closed,
+    test_changed_articles_no_changes_passes,
+    test_changed_articles_missing_git_fails_closed,
+    test_changed_articles_valid_base_checks_content,
     test_duplicate_priority_fails,
     test_missing_source_arrays_fails,
     test_empty_sources_with_justification_passes,
