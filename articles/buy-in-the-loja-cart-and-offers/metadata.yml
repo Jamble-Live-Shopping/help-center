@@ -1,6 +1,4 @@
-# New article. Create an empty draft in Intercom (collection "Comprar na Jamble", 11348923),
-# then put its numeric ID below before running the sync workflow.
-intercom_id: TBD
+intercom_id: 17588933
 slug: buy-in-the-loja-cart-and-offers
 collection_id: 11348923
 

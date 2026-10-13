@@ -1,6 +1,4 @@
-# New article. Create an empty draft in Intercom (collection "Pagamento", 19177938),
-# then put its numeric ID below before running the sync workflow.
-intercom_id: TBD
+intercom_id: 17588903
 slug: early-payout-recebimento-antecipado
 collection_id: 19177938
 

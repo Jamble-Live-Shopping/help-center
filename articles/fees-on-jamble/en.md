@@ -3,7 +3,7 @@
 - **Product price**, set by the seller
 - **Shipping**, calculated based on the package's weight and size and the distance to your address
 - **Payment processing fee**, a small fee that depends on how you pay. With Pix it is usually lower than with a card
-- **Installment surcharge**, only if you choose to pay in installments by card, when that option is available
+- **Installment surcharge**, only if you choose to pay in installments by card, when that option is available. See [Paying in card installments](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588992)
 
 All fees show in the order summary before you pay. Jamble does not add charges after the purchase is confirmed.
 

@@ -193,6 +193,6 @@ Yes, in the Seller Hub. Click **Criar**, then **Importar CSV**, download the tem
 
 ## Do I need to be live to sell?
 
-No. You can create listings in the **Loja** (shop), which are for sale at any time at a fixed price. In the app, tap the "+" button on your profile and choose **Criar anúncio na Loja**. In the Seller Hub, use **Criar Novo Produto** and choose **Marketplace**.
+No. You can create listings in the **Loja** (shop), which are for sale at any time at a fixed price. In the app, tap the "+" button on your profile and choose **Criar anúncio na Loja**. In the Seller Hub, use **Criar Novo Produto** and choose **Marketplace**. [See how to sell in the Loja](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588854).
 
 When someone buys from your Loja, you need to confirm the sale within 3 days. If the sale is not confirmed in time, the buyer is refunded.

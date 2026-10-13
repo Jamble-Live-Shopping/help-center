@@ -1,7 +1,5 @@
-# New article. Create an empty draft in Intercom (collection "Comprar na Jamble", 11348923),
-# then put its numeric ID below before running the sync workflow.
 # Publish on or after Oct 16 2026 (installments launch); the text works before and after.
-intercom_id: TBD
+intercom_id: 17588992
 slug: pay-in-installments-parcelamento
 collection_id: 11348923
 

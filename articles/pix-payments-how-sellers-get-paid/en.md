@@ -21,7 +21,7 @@ Average timings, after the buyer pays:
 - **Card:** up to 30 days
 - **Card with Recebimento Antecipado (early payout) on:** about 15 days, with an additional fee of about 1% on card payments
 
-The amount only becomes available to withdraw when both things happen: the payment is released **and** the order is completed. See the Recebimento Antecipado article in the [Payment collection](https://intercom.help/jamble-bb4bea116bbe/en/collections/19177938).
+The amount only becomes available to withdraw when both things happen: the payment is released **and** the order is completed. See [Recebimento Antecipado (early payout) and installments](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588903).
 
 ## What your wallet shows
 

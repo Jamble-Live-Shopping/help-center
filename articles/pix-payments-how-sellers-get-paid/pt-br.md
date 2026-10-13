@@ -21,7 +21,7 @@ Prazos médios, depois do pagamento do comprador:
 - **Cartão:** até 30 dias
 - **Cartão com Recebimento Antecipado ativado:** cerca de 15 dias, com uma taxa adicional de aproximadamente 1% sobre os pagamentos com cartão
 
-O valor só fica disponível para saque quando as duas coisas acontecem: o pagamento foi liberado **e** o pedido foi concluído. Veja [Recebimento Antecipado e parcelamento](https://intercom.help/jamble-bb4bea116bbe/pt-BR/collections/19177938-pagamento).
+O valor só fica disponível para saque quando as duas coisas acontecem: o pagamento foi liberado **e** o pedido foi concluído. Veja [Recebimento Antecipado e parcelamento](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/17588903).
 
 ## O que aparece na sua carteira
 

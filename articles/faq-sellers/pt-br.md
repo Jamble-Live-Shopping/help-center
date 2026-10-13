@@ -273,7 +273,7 @@ Sim, pelo Seller Hub. Clique em **Criar**, depois em **Importar CSV**, baixe o m
 
 ## Preciso estar ao vivo para vender?
 
-Não. Você pode criar anúncios na **Loja**, que ficam à venda a qualquer momento, com preço fixo. No app, toque no botão “+” do seu perfil e escolha **Criar anúncio na Loja**. No Seller Hub, use **Criar Novo Produto** e escolha **Marketplace**.
+Não. Você pode criar anúncios na **Loja**, que ficam à venda a qualquer momento, com preço fixo. No app, toque no botão “+” do seu perfil e escolha **Criar anúncio na Loja**. No Seller Hub, use **Criar Novo Produto** e escolha **Marketplace**. [Veja como vender na Loja](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/17588854).
 
 ​
 

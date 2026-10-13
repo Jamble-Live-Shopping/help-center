@@ -101,4 +101,4 @@ Você tem alguns minutos para concluir o pagamento, no cartão ou no Pix. Se o p
 
 ## Comprar sem live
 
-Você também pode comprar a qualquer momento na **Loja**, com preço fixo, carrinho e a opção de fazer ofertas ao vendedor. Veja [Comprar na Loja: carrinho e ofertas](https://intercom.help/jamble-bb4bea116bbe/pt-BR/collections/11348923-comprar-na-jamble).
+Você também pode comprar a qualquer momento na **Loja**, com preço fixo, carrinho e a opção de fazer ofertas ao vendedor. Veja [Comprar na Loja: carrinho e ofertas](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/17588933).

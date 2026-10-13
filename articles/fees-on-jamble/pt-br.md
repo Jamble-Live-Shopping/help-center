@@ -3,7 +3,7 @@
 - **Preço do produto**, definido pelo vendedor
 - **Frete**, calculado com base no peso e no tamanho do pacote e na distância até o seu endereço
 - **Taxa de processamento do pagamento**, uma pequena taxa que varia conforme a forma de pagamento. No Pix, ela costuma ser menor do que no cartão
-- **Acréscimo do parcelamento**, só se você escolher parcelar no cartão, quando essa opção estiver disponível
+- **Acréscimo do parcelamento**, só se você escolher parcelar no cartão, quando essa opção estiver disponível. Veja [Parcelamento no cartão](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/17588992)
 
 Todas as taxas aparecem no resumo do pedido antes de você pagar. O Jamble não adiciona cobranças depois que a compra é confirmada.
 

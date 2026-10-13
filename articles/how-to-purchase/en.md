@@ -101,4 +101,4 @@ You have a few minutes to complete the payment, by card or Pix. If the payment i
 
 ## Buying without a live
 
-You can also buy at any time in the **Loja**, at a fixed price, with a cart and the option to make the seller an offer. See the Loja article in the [Buying on Jamble collection](https://intercom.help/jamble-bb4bea116bbe/en/collections/11348923).
+You can also buy at any time in the **Loja**, at a fixed price, with a cart and the option to make the seller an offer. See [Buy in the Loja: cart and offers](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588933).
