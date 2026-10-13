@@ -1,115 +1,62 @@
 # Programa de Indicação para Compradores
 
-**Importante (a partir de 5 de maio de 2026):** se você é vendedor ativo na Jamble, ganha **R$ 100 em dinheiro** (creditado direto na conta bancária) por cada amigo comprador indicado que fizer a primeira compra em um Show. Antes era em crédito. Para compradores que indicam outros compradores, a recompensa continua sendo em crédito.
-
 ## O que você vai aprender
 
-Este guia explica como o Programa de Indicação para compradores da Jamble funciona. Você vai aprender como convidar amigos para comprar na Jamble, como você ganha um crédito quando eles fazem a primeira compra, e como acompanhar suas indicações no app.
+Como convidar amigos para comprar na Jamble, o que vocês ganham e quando a indicação conta.
 
-## Antes de começar
+## Como funciona
 
-Você precisa de:
+1. Você compartilha o seu link ou código de convite com um amigo que ainda não usa a Jamble.
+2. O seu amigo cria a conta e usa o seu código.
+3. O seu amigo ganha um cupom de frete para as primeiras compras.
+4. Quando o seu amigo faz compras dentro do prazo, você também ganha uma recompensa.
 
-- Uma conta ativa na Jamble
-- O app da Jamble instalado no seu celular
-- Um número de telefone verificado (necessário para liberar o compartilhamento)
+Os valores e as condições aparecem na tela de indicações do app, em **Indicar compradores**.
 
-## Como o programa funciona
+## Passo a passo
 
-Convide um amigo para comprar na Jamble. Quando ele criar a conta com o seu código e comprar o primeiro item em um Show, vocês dois ganham crédito.
+### Passo 1: Abra as indicações
 
-- **Você ganha um crédito** quando seu amigo faz a primeira compra em um Show
-- **Seu amigo ganha um crédito de boas-vindas** assim que resgatar o seu código de convite
-- **Os créditos podem ser usados em qualquer compra** feita em um Show da Jamble
-- **Você pode convidar quantos amigos quiser**, sem limite de indicações
+No app, abra a área de indicações e escolha **Indicar compradores**. No computador, abra **Indicações** no Seller Hub e escolha **Indicar Comprador**.
 
-O valor exato do crédito é mostrado direto na tela **Convidar amigos** e pode mudar quando a Jamble ajustar a campanha. A tela do app é sempre a fonte oficial.
+### Passo 2: Compartilhe o seu link
 
-## Abra a tela Convidar amigos
+Envie o link ou o código pelo WhatsApp, Instagram ou qualquer outro app.
 
-No seu perfil, toque em **Convidar amigos** para ver os passos do programa e o botão de compartilhar.
+### Passo 3: O seu amigo usa o código
 
-![Tela Convidar amigos mostrando os 3 passos do programa, a recompensa, e os botões Compartilhar amigos e Tenho um código de convite](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/referral-program-buyer__buyer-overview__pt-br__v3.png)
+O seu amigo precisa usar o código em até **14 dias** depois de criar a conta. Se o link não aplicar o código sozinho, ele pode tocar em **Tenho um código de convite** e digitar o código.
 
-A tela mostra o fluxo completo: **compartilhar o código**, **seu amigo resgatar e comprar**, **você receber o crédito**. Logo abaixo dos passos, você vê quanto está pendente em **Referências contínuas** e quanto já ganhou em **Referências anteriores**.
+### Passo 4: A indicação é concluída
 
-## Compartilhe seu link
+A indicação conta quando o seu amigo faz as primeiras compras dentro de 14 dias. Você acompanha tudo em **Suas Indicações**.
 
-Toque em **Compartilhar amigos** para abrir o menu de compartilhamento do celular. Você pode enviar pelo WhatsApp, Instagram, SMS ou qualquer outro app.
+## Os cupons de frete
 
-O link já contém seu código, então seu amigo não precisa digitar nada. Ele só precisa tocar no link e baixar o app.
+- O cupom do seu amigo dá desconto no **frete** das compras dele
+- Os cupons têm validade, que aparece na tela de **Cupons**
+- Veja [Cupons na Jamble](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14431863)
 
-**Dica**: o WhatsApp é o canal mais usado no Brasil. Seu amigo entra na Jamble em poucos toques.
+## Regras importantes
 
-## Como seu amigo resgata o código
-
-Se seu amigo já tem o app aberto, ele pode entrar no programa pela tela **Convidar amigos** e tocar em **Tenho um código de convite**.
-
-![Tela Resgatar um código com o campo Digite seu código e o botão Resgatar](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/referral-program-buyer__redeem-code__pt-br__v3.png)
-
-Ele digita o código no campo **Digite seu código....** e toca em **Resgatar**. Quando o código é aceito, ele vê uma confirmação **Código Resgatado** e o crédito de boas-vindas aparece na conta dele.
-
-Quando seu amigo abre o app pela primeira vez pelo seu link, o código é aplicado automaticamente, sem precisar digitar.
-
-## Quando você recebe o crédito
-
-A recompensa cai na sua conta Jamble assim que seu amigo compra o primeiro item em um Show. Antes disso, a indicação fica em **Referências contínuas** com o valor estimado e o tempo restante.
-
-## Acompanhe suas indicações
-
-Na tela **Convidar amigos**, abra **Referências contínuas** para ver os amigos que resgataram o código mas ainda não compraram, ou **Referências anteriores** para ver as indicações já concluídas.
-
-![Tela Referências anteriores mostrando o total ganho em créditos e a lista de amigos com status Concluído e Prazo perdido](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/referral-program-buyer__buyer-past-list__pt-br__v3.png)
-
-Cada amigo na lista mostra o nome dele e o status:
-
-- **dias restantes** para os amigos que ainda estão no prazo
-- **Concluído** quando seu amigo fez a primeira compra e você recebeu o crédito
-- **Prazo perdido** se seu amigo não comprou dentro do prazo
-
-## Como os créditos funcionam
-
-Os créditos de indicação são aplicados automaticamente no checkout da sua próxima compra em um Show. Eles funcionam como saldo na sua conta Jamble e cobrem qualquer parte do pedido, incluindo produto e frete.
-
-- **Os créditos só funcionam em compras feitas em Shows**, não em outras áreas do app
-- **Cada crédito tem prazo de validade**, indicado na tela da carteira
-- **Os créditos não são convertidos em dinheiro** e não podem ser sacados
-
-## Dicas importantes
-
-- **Compartilhe pelo WhatsApp** para o amigo entrar na Jamble em poucos toques
-- **Seu código é único e permanente**, baseado no seu nome de usuário. Não precisa gerar um novo a cada convite
-- **A indicação só vale para contas novas**. Quem já tem Jamble não pode resgatar um código
-- **Seu amigo precisa comprar em um Show**, não em qualquer lugar do app
-- **Lembre seu amigo** de usar o crédito antes do prazo, senão ele perde
-
-## Privacidade
-
-Quando seu amigo se cadastra com o seu código, o vendedor não vê que aquela compra veio de uma indicação sua. A indicação fica entre você, seu amigo e a Jamble.
+- **Só vale para quem ainda não tem conta na Jamble**
+- **O código precisa ser usado pelo seu amigo, no aparelho dele.** Códigos usados no seu próprio aparelho não contam
+- **Indicações falsas são canceladas,** como contas criadas só para ganhar a recompensa
 
 ## Perguntas frequentes
 
-**Onde encontro meu código de indicação?**
-Vá no seu perfil e toque em **Convidar amigos**. Seu código aparece lá. Você também pode compartilhar direto pelo botão **Compartilhar amigos**, assim seu amigo recebe o link com o código já incluído.
+**Quanto eu e meu amigo ganhamos?**
+Os valores e as condições aparecem na tela de indicações do app, em **Indicar compradores**.
 
-**Meu amigo se cadastrou mas eu não recebi o crédito. Por quê?**
-O crédito só é liberado depois que seu amigo comprar 1 item em um Show. Se ele resgatou o código mas ainda não comprou, a indicação continua em **Referências contínuas**.
+**Quanto tempo meu amigo tem para usar o código?**
+14 dias depois de criar a conta.
 
-**Quanto tempo meu amigo tem para completar a indicação?**
-O prazo aparece na tela **Referências contínuas** como **dias restantes** ao lado do nome dele. Depois desse prazo, a indicação expira e nem ele nem você recebem o crédito.
+**Meu amigo já tinha o app instalado. O link funciona?**
+Se o código não for aplicado sozinho, o seu amigo pode tocar em **Tenho um código de convite** e digitar o código.
 
-**Os créditos funcionam em qualquer compra?**
-Os créditos são aplicados em qualquer compra feita em um Show, cobrindo produto e frete juntos. Eles não funcionam fora de Shows.
-
-**Posso indicar alguém que já tem uma conta Jamble?**
-Não. Os códigos só funcionam para contas totalmente novas. Se a pessoa já tem Jamble, o código não é aceito.
-
-**Existe um limite de quantos amigos posso indicar?**
-Não há limite. Você pode convidar quantos amigos quiser e ganhar um crédito por cada um que fizer a primeira compra.
-
-**Quero indicar amigos vendedores, como faço?**
-Se seu amigo vai virar vendedor, e não só comprador, use o Programa de Indicação de Vendedores. Lá a recompensa é em dinheiro, não em crédito.
+**Onde acompanho minhas indicações?**
+Em **Suas Indicações**: pendentes, finalizadas e expiradas.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para [support@jambleapp.com](mailto:support@jambleapp.com).
+Fale com a gente pelo chat do app.
