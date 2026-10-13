@@ -8,7 +8,7 @@ With Recebimento Antecipado, you get the money from card sales faster. It also l
 - **With Recebimento Antecipado:** card payments are released in about 15 days
 - **Pix payments** do not change: they are usually released in about 1 day
 
-A sale's amount becomes available to withdraw when the payment is released and the sale is completed. See [Understand the Earnings Payout Timeline](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288155).
+A sale's amount becomes available to withdraw when the payment is released and the sale is completed. See [How you get paid](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288155).
 
 ## What it costs
 
