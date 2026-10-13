@@ -1,0 +1,18 @@
+# New article. Create an empty draft in Intercom (collection "Começando", 19177934),
+# then put its numeric ID below before running the sync workflow.
+intercom_id: TBD
+slug: seller-hub-sell-from-your-computer
+collection_id: 19177934
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+default_locale: pt-br
+
+state: published
+
+locales:
+  pt-br:
+    title: 'Seller Hub: venda pelo computador'
+    description: 'Crie produtos, faça lives, imprima etiquetas e saque seus ganhos pelo navegador, com a mesma conta do app.'
+  en:
+    title: 'Seller Hub: sell from your computer'
+    description: 'Create products, host lives, print labels and withdraw your earnings in your browser, with your app account.'
