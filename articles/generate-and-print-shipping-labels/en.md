@@ -8,34 +8,36 @@ How to generate, download and print the shipping label for an order in Jamble. T
 
 You need:
 
-- A confirmed sale (order with status **Confirmed**)
+- A confirmed sale
 - A printer (standard or thermal)
 - Address and label format configured in your shipping preferences
 
 ## How label generation works
 
-When you confirm the sale, Jamble generates the Correios label through the integrated system. The label includes:
+Once the sale is confirmed, you create the Correios label in the app or in the Seller Hub, on your computer. Sales made in a live arrive already confirmed. Loja (shop) sales need to be confirmed by you first.
+
+The label includes:
 
 - Your address (sender)
 - Buyer's address (recipient)
 - Barcode and Correios tracking number
 - Package weight and service type
 
-You don't need to access any external website. Everything happens within the app.
+You don't need to access any external website.
 
-## Step by step
+## Step by step in the app
 
-### Step 1: Open the confirmed order
+### Step 1: Open the order's package
 
-Go to the sales tab in the dashboard and tap on the order you want to ship. The order must have the status **Confirmed**.
+Open your live's dashboard or **Envios** (shipments) in the app settings, and tap the package you want to ship.
 
 ![Order card in the dashboard with the Generate Shipping Labels button](./assets/mockups/generate-and-print-shipping-labels__order-to-ship-card__en__v2.png)
 
-### Step 2: Tap "Generate Shipping Labels"
+### Step 2: Create the label
 
-The purple button at the bottom of the order triggers generation. The system calculates shipping (weight, dimensions, addresses) and issues the label in the format you chose in preferences.
+If the package shows **Adicionar NF** or **Isentar NF** (add or exempt the invoice), complete the invoice step first. Then tap **Adicionar Etiqueta** (add label). The system calculates shipping and issues the label in the format you chose in your preferences.
 
-The label is issued in a few seconds.
+The label is issued in a few seconds. You then find it under **Ver Etiqueta** (see label).
 
 ### Step 3: Check the label format
 
@@ -56,6 +58,10 @@ The label also arrives in your registered email as a backup.
 ### Step 5: Stick the label on the package and take it to Correios
 
 Print according to the format you chose, stick it well on the largest face of the package and take it to a Correios agency. The barcode must be visible, clean and wrinkle-free.
+
+## From your computer
+
+In the Seller Hub (jamble.com/seller/dashboard), open **Envios** and use **Imprimir Etiqueta** (print label) to print straight from your computer. From a live's dashboard, you can also create and print the labels for all its packages at once.
 
 ## Label formats
 
@@ -99,10 +105,13 @@ Jamble supports three formats. You set the default in **Shipping Preferences** a
 A few seconds. If it takes longer, it's the shipping system processing the request. Wait a moment and try again.
 
 **Can I generate from my phone?**
-Yes. The app generates, views and shares the PDF directly from your phone. To print, you can send the PDF to a printer app or email it to your computer.
+Yes. The app generates, views and shares the PDF directly from your phone. To print, you can send the PDF to a printer app.
+
+**Can I print from my computer?**
+Yes. Sign in to the Seller Hub, open **Envios** and use **Imprimir Etiqueta**. You don't need to email the PDF to yourself.
 
 **What if the label doesn't generate?**
-Check if your shipping preferences are complete (address, format). If everything is correct and the button doesn't work, contact support. The most common causes are address validation or temporary system instability.
+Check that your shipping preferences are complete (address, format) and that the invoice step is done. If everything is correct and the button doesn't work, contact support. The most common causes are address validation or temporary system instability.
 
 **Can I regenerate a label?**
 If the first one came out poorly printed or expired, it may be possible to regenerate it. Contact support to request a replacement label.

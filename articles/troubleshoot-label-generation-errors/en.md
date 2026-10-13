@@ -19,9 +19,9 @@ You need:
 **Common causes and fixes:**
 
 1. **Missing shipping address**
-   - Go to **Settings > Shipping Preferences** and make sure your shipping address is complete
+   - Go to **Preferências de envio** (shipping preferences) and make sure your shipping address is complete
    - Your CEP, street, number, city, and state must all be filled in
-   - Try updating your CEP — the app auto-fills your address from the postal code
+   - Try updating your CEP, the app auto-fills your address from the postal code
 
 2. **Invalid CEP (postal code)**
    - Make sure your CEP is a valid 8-digit Brazilian postal code
@@ -30,14 +30,14 @@ You need:
 
 3. **Buyer address issue**
    - If the buyer's address is incomplete or invalid, the label can't be generated
-   - Contact support — they can reach out to the buyer to fix the address
+   - Contact support, they can reach out to the buyer to fix the address
 
 4. **Shipping profile mismatch**
    - If the product's shipping profile doesn't match a valid Correios service for the route (origin → destination), the label may fail
    - Check if the shipping profile assigned to the product is appropriate for its actual size and weight
 
 5. **Temporary service issue**
-   - The label system uses an external service (Melhor Envio) to generate Correios labels. If this service is temporarily unavailable, label generation will fail
+   - The label system uses a partner service to generate Correios labels. If this service is temporarily unavailable, label generation will fail
    - Wait a few minutes and try again. If it persists after 30 minutes, contact support
 
 ### Error: Label generated but looks wrong
@@ -46,9 +46,9 @@ You need:
 
 **What to check:**
 
-1. **Wrong sender address** — Your shipping address on the label should match your address in Settings. If it doesn't, update your address in **Settings > Shipping Preferences** before generating new labels
-2. **Wrong label format** — If the PDF size doesn't match your printer, change your label format in **Settings > Shipping Preferences** (Half Page, Full Page, or Thermal 4x6)
-3. **Wrong items listed** — If the content declaration lists wrong items, this may be a bundling issue. Check if the right products are grouped in the correct bundle
+1. **Wrong sender address**: Your shipping address on the label should match the address in your shipping preferences. If it doesn't, update your address in **Preferências de envio** (shipping preferences) before generating new labels
+2. **Wrong label format**: If the PDF size doesn't match your printer, change your label format in **Preferências de envio** (shipping preferences) (Meia página, Página inteira or Térmica)
+3. **Wrong items listed**: If the content declaration lists wrong items, this may be a bundling issue. Check if the right products are grouped in the correct bundle
 
 ### Error: Can't print or share the label
 
@@ -56,10 +56,10 @@ You need:
 
 **What to try:**
 
-1. **Check your internet connection** — The label PDF needs to download. A slow or unstable connection can prevent it from loading
-2. **Wait for the PDF to fully load** — The label viewer shows a preview. Make sure the full PDF has loaded before tapping Print
-3. **Try again** — Close the label screen and reopen it. The PDF may need to re-download
-4. **Save and print from another device** — Use the share menu to send the PDF to yourself via email or save it to Files, then print from a computer
+1. **Check your internet connection**: The label PDF needs to download. A slow or unstable connection can prevent it from loading
+2. **Wait for the PDF to fully load**: The label viewer shows a preview. Make sure the full PDF has loaded before tapping Print
+3. **Try again**: Close the label screen and reopen it. The PDF may need to re-download
+4. **Save and print from another device**: Use the share menu to save the PDF to Files, or sign in to the Seller Hub on a computer and print from **Envios**, with **Imprimir Etiqueta**
 
 ## When to contact support
 
@@ -83,7 +83,7 @@ Contact support if:
 Contact support. If the label was purchased but couldn't be used, they can process a refund for the label cost.
 
 **Can I generate a label from a computer?**
-Currently, labels are generated from the Jamble mobile app only. You can export the PDF and print it from any device.
+Yes. In the Seller Hub (jamble.com/seller/dashboard), open **Envios** to create and print your labels straight from your computer.
 
 **The label service is down. What should I do?**
 Wait and try again later. If it's been more than an hour, contact support. In the meantime, you can generate your own Correios label externally and add the tracking number to the order manually.

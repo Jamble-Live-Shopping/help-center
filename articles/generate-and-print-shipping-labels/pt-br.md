@@ -8,34 +8,36 @@ Como gerar, baixar e imprimir a etiqueta de envio de um pedido na Jamble. Os for
 
 Você precisa de:
 
-- Uma venda confirmada (pedido no status **Confirmado**)
+- Uma venda confirmada
 - Uma impressora (comum ou térmica)
 - Endereço e formato de etiqueta configurados nas suas preferências de envio
 
 ## Como funciona a geração da etiqueta
 
-Ao confirmar a venda, a Jamble gera a etiqueta dos Correios pelo sistema integrado. A etiqueta inclui:
+Depois que a venda está confirmada, você gera a etiqueta dos Correios pelo app ou pelo Seller Hub, no computador. As vendas feitas em live já chegam confirmadas. As vendas da Loja precisam ser confirmadas por você antes.
+
+A etiqueta inclui:
 
 - Seu endereço (remetente)
 - Endereço do comprador (destinatário)
 - Código de barras e número de rastreamento dos Correios
 - Peso do pacote e tipo de serviço
 
-Você não precisa acessar nenhum site externo. Tudo acontece dentro do app.
+Você não precisa acessar nenhum site externo.
 
-## Passo a passo
+## Passo a passo no app
 
-### Passo 1: Abra o pedido confirmado
+### Passo 1: Abra o pacote do pedido
 
-Vá até a aba de vendas no dashboard e toque no pedido que quer enviar. O pedido precisa estar no status **Confirmado**.
+Abra o painel da sua live ou **Envios**, nas configurações do app, e toque no pacote que você quer enviar.
 
 ![Card do pedido no dashboard com o botão Gerar etiquetas de remessa](./assets/mockups/generate-and-print-shipping-labels__order-to-ship-card__pt-br__v2.png)
 
-### Passo 2: Toque em "Gerar etiquetas de remessa"
+### Passo 2: Gere a etiqueta
 
-O botão roxo no rodapé do pedido aciona a geração. O sistema calcula o frete (peso, dimensões, endereços) e emite a etiqueta no formato que você escolheu nas preferências.
+Se o pacote mostrar **Adicionar NF** ou **Isentar NF**, conclua a etapa da nota fiscal primeiro. Depois, toque em **Adicionar Etiqueta**. O sistema calcula o frete e emite a etiqueta no formato que você escolheu nas preferências.
 
-A etiqueta é emitida em alguns segundos.
+A etiqueta é emitida em alguns segundos. Depois, você a encontra em **Ver Etiqueta**.
 
 ### Passo 3: Verifique o formato da etiqueta
 
@@ -56,6 +58,10 @@ A etiqueta também chega no seu email cadastrado como backup.
 ### Passo 5: Cole a etiqueta no pacote e leve aos Correios
 
 Imprima conforme o formato escolhido, cole bem na face maior da embalagem e leve a uma agência dos Correios. O código de barras precisa estar visível, limpo e sem rugas.
+
+## Pelo computador
+
+No Seller Hub (jamble.com/seller/dashboard), abra **Envios** e use **Imprimir Etiqueta** para imprimir direto do computador. No painel de uma live, você também pode gerar e imprimir as etiquetas de todos os pacotes de uma vez.
 
 ## Formatos de etiqueta
 
@@ -99,10 +105,13 @@ A Jamble suporta três formatos. Você define o padrão em **Preferências de en
 Alguns segundos. Se demorar, é o sistema de envio processando a requisição. Aguarde um momento e tente de novo.
 
 **Posso gerar pelo celular?**
-Sim. O app gera, visualiza e compartilha o PDF direto do celular. Para imprimir, você envia o PDF para um app de impressora ou manda por email para o computador.
+Sim. O app gera, visualiza e compartilha o PDF direto do celular. Para imprimir, você pode enviar o PDF para um app de impressora.
+
+**Posso imprimir pelo computador?**
+Sim. Entre no Seller Hub, abra **Envios** e use **Imprimir Etiqueta**. Você não precisa mandar o PDF para você mesmo por email.
 
 **E se a etiqueta não gerar?**
-Confira se suas preferências de envio estão completas (endereço, formato). Se tudo estiver certo e o botão não funcionar, fale com o suporte. As causas mais comuns são validação do endereço ou instabilidade temporária do sistema.
+Confira se suas preferências de envio estão completas (endereço, formato) e se a etapa da nota fiscal foi concluída. Se tudo estiver certo e o botão não funcionar, fale com o suporte. As causas mais comuns são validação do endereço ou instabilidade temporária do sistema.
 
 **Posso regerar uma etiqueta?**
 Se a primeira saiu mal impressa ou venceu, pode ser possível regerar. Entre em contato com o suporte para pedir uma etiqueta substituta.
