@@ -156,7 +156,7 @@ Your earnings become available to withdraw when **the order is completed and the
 
 Register your bank details in your wallet. When you have an available balance, tap **Sacar** (withdraw) and follow the status in the app. The money goes to your registered bank account and usually arrives within 5 business days, depending on your bank.
 
-[Understand the payment and withdrawal steps](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288147).
+[Understand the payment and withdrawal steps](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288155).
 
 **How do I plan for getting paid?**
 Pix payments are usually released in about 1 day. Card payments can take up to 30 days, or about 15 days with Recebimento Antecipado turned on. While an amount shows as pending, it is not available to withdraw yet. You can follow everything in your wallet.

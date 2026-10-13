@@ -181,7 +181,7 @@ Não. Seu smartphone já basta. Boa iluminação ajuda, venda perto de uma janel
 A Jamble cobra uma comissão de 10% sobre cada venda. Isso cobre a plataforma, o processamento de pagamento e o suporte ao comprador.
 
 **Quando eu recebo meu pagamento?**
-Primeiro, o pedido precisa estar concluído e o pagamento liberado. Depois, você solicita o saque do saldo disponível e acompanha o processamento na carteira. [Veja as etapas de pagamento e saque](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288147-entenda-o-prazo-de-pagamento-dos-seus-ganhos).
+Primeiro, o pedido precisa estar concluído e o pagamento liberado. Depois, você solicita o saque do saldo disponível e acompanha o processamento na carteira. [Veja as etapas de pagamento e saque](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288155).
 
 **Posso vender qualquer coisa?**
 A Jamble foca em colecionáveis (Pokémon TCG, Hot Wheels, One Piece TCG, Magic, diecast, etc.). Itens ilegais, falsificados ou perigosos não são permitidos. Confira os Termos de Uso, seção 10 sobre uso aceitável.

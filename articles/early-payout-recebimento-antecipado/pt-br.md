@@ -8,7 +8,7 @@ Com o Recebimento Antecipado, você recebe mais rápido o dinheiro das vendas pa
 - **Com o Recebimento Antecipado:** pagamentos com cartão são liberados em cerca de 15 dias
 - **Pagamentos via Pix** não mudam: costumam ser liberados em cerca de 1 dia
 
-O valor de uma venda fica disponível para saque quando o pagamento é liberado e a venda é concluída. Veja [Entenda o Prazo de Pagamento dos Seus Ganhos](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288147).
+O valor de uma venda fica disponível para saque quando o pagamento é liberado e a venda é concluída. Veja [Entenda o Prazo de Pagamento dos Seus Ganhos](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288155).
 
 ## Quanto custa
 

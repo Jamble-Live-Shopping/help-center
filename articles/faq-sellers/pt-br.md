@@ -220,7 +220,7 @@ Cadastre seus dados bancários na carteira. Quando houver saldo disponível, toq
 
 ​
 
-[Entenda as etapas do pagamento e do saque](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288147-entenda-o-prazo-de-pagamento-dos-seus-ganhos).
+[Entenda as etapas do pagamento e do saque](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288155).
 
 ​
 
