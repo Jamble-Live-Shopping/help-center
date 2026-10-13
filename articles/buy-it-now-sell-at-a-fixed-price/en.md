@@ -1,108 +1,86 @@
-# Buy It Now — Sell at a Fixed Price
+# Comprar agora (buy now): sell at a fixed price
 
-## What you'll learn
+## What you will learn
 
-This guide explains how the Buy It Now sell mode works on Jamble. Buy It Now lets you sell products at a fixed price during your live show — buyers purchase instantly without competing with other buyers. You'll learn how to set it up, what buyers see, and how it combines with Flash Sales.
+This guide explains how the **Comprar agora** (buy now) sell mode works in your lives. With it, you sell products at a fixed price and the buyer buys right away, without competing with other people.
 
-## Before you start
+## How it works
 
-You need:
-- An approved seller account on Jamble
-- Products listed in a show with the **Buy It Now** sell mode selected
+1. You put the product on screen during your live.
+2. Buyers see the product with your fixed price.
+3. Whoever taps to buy gets the product at that price, plus shipping.
+4. If you have several units, the app shows how many are left.
 
-## How Buy It Now works
+There is no timer and no competition. The price you set is the price the buyer pays.
 
-When you set a product's sell mode to **Buy It Now**, it works like a regular purchase:
-
-1. You pin the product during your live show
-2. Buyers see the product with your fixed price and a **"Buy it now"** button
-3. When a buyer taps the button, they purchase instantly at that price
-4. If you have multiple units, the remaining quantity updates ("X left")
-
-There is no timer counting down and no competition between buyers. The price you set is the price the buyer pays.
+Once you have shown the product, it stays available to buy in your live while there is stock, even when you move on to the next product.
 
 ## Step by step
 
-### Step 1: Set the sell mode when listing a product
+### Step 1: Choose the sell mode
 
-When creating or editing a product for your show, choose **Buy It Now** as the sell mode.
+When creating or editing a product for your live, choose **Comprar agora** as the sell mode.
 
-![Sell Mode screen with radio button options: Real-time offers, Sudden Death, and Buy It Now selected](./assets/mockups/buy-it-now-sell-at-a-fixed-price__sell-mode-picker__en.png)
+### Step 2: Set the price
 
-### Step 2: Set your price
+Enter the fixed price. It is exactly what the buyer pays for the product, plus shipping. The minimum price is R$ 5.
 
-Enter the fixed price you want. This is exactly what the buyer will pay (plus shipping).
+You can also enter a **Preço de Varejo** (retail price, optional), shown crossed out next to your price.
 
-- Minimum: **R$ 5.00**
-- Maximum: **R$ 5,000.00**
+### Step 3: Show the product during your live
 
-You can also add a **retail price** (optional) to show buyers the original value and highlight the deal.
+During the live, open your product list and put the product on screen. Buyers can buy right away.
 
-### Step 3: Pin the product during your show
+### Step 4: Follow your sales
 
-During your live show, go to your product list and tap on the product to pin it. When a Buy It Now product is pinned, buyers see a banner at the top of the show:
+Each purchase lowers the available quantity. When all units are sold, the product shows as sold out.
 
-![Buy It Now section header with shopping cart icon and 3 left inventory status](./assets/mockups/buy-it-now-sell-at-a-fixed-price__buy-it-now-section__en.png)
+## Comprar agora with a flash sale
 
-The banner shows "Buy It Now" in purple and the remaining quantity.
+You can give a time-limited discount on a **Comprar agora** product with a **Venda relâmpago** (flash sale):
 
-### Step 4: Buyers purchase
+- The discount ranges from 10% to 90%
+- The duration ranges from 30 seconds to 10 minutes
+- Buyers see the discounted price and a timer
 
-When the product is pinned, buyers see a **"Buy it now"** button. They tap it to purchase instantly at your price. No waiting, no competition.
+See [Flash Sales](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288107).
 
-If you listed multiple units, each purchase reduces the count. When all units are sold, the product is marked as sold out.
+## When to use each mode
 
-## Buy It Now with Flash Sales
+- **Comprar agora:** for items with a clear market price and to sell several identical units quickly
+- **Oferta em tempo real** (real-time offer): for rare or popular items, when you want buyers to set the price
+- **Morte súbita** (sudden death): timed offers with no extra time, to speed up your live
 
-You can combine Buy It Now with a **Flash Sale** to offer a temporary discount. When you activate a Flash Sale on a Buy It Now product:
+Many sellers mix modes in the same live.
 
-- The banner changes to green and shows **"Flash Sale • X% OFF"**
-- A countdown timer appears
-- Buyers see the discounted price alongside the original
+## Comprar agora in a live or a Loja listing?
 
-![Flash Sale banner displaying 30% OFF discount with 2 items left in stock](./assets/mockups/buy-it-now-sell-at-a-fixed-price__flash-sale-banner__en.png)
+**Comprar agora** is for selling during your live. To sell at a fixed price at any time, without being live, create a listing in the **Loja** (shop). In the Loja, buyers can also make offers and add products to their cart.
 
-Flash Sales create urgency. They're great for moving inventory or rewarding viewers who are watching live.
+## Key tips
 
-## When to use Buy It Now vs Real-time offers
+- **Research the price.** With Comprar agora, you set the price
+- **Use quantity.** If you have 5 identical items, create one product with quantity 5
+- **Combine it with a flash sale** to create urgency
+- **Talk about the product on camera.** Buyers buy more when they hear you talk about it
 
-| | Buy It Now | Real-time offers |
-|---|---|---|
-| **Price** | Fixed — you decide | Starts low — buyers compete |
-| **Speed** | Instant purchase | Timer + competition |
-| **Best for** | Items with a clear market price | Rare or unique items, creating excitement |
-| **Buyer experience** | Simple, fast | Interactive, engaging |
-| **Pre-offers** | Not available | Available (when quantity = 1) |
+## Frequently asked questions
 
-**Tip:** Many sellers mix both modes in the same show. Use Real-time offers for exciting, unique items that will generate competition, and Buy It Now for standard-priced items that buyers want to grab quickly.
+**Can buyers negotiate the price with Comprar agora?**
+Not during the live. The buyer pays the price you set. On Loja listings, buyers can make offers.
 
-## Important tips
+**Can I change the price after creating the product?**
+Yes. You can edit the price of any product before it is sold.
 
-- **Price it right.** Unlike Real-time offers where buyers set the final price, with Buy It Now you control the price. Research what similar items sell for on Jamble to find the sweet spot
-- **Combine with Flash Sales for urgency.** A "30% OFF for the next 2 minutes" Flash Sale on a Buy It Now item can drive quick sales
-- **Quantity works great with BIN.** If you have 5 identical shirts, list them as Buy It Now with quantity 5. Each buyer gets one at your price
-- **Talk about the product.** Even though the purchase is instant, describe the item on camera. Buyers are more likely to buy when they hear you talk about it
-
-## Common questions
-
-**Can buyers negotiate the price on a Buy It Now listing?**
-No. On Jamble, Buy It Now is a fixed-price purchase. The buyer pays exactly the price you set. There is no offer or counter-offer system.
-
-**Can I change the price after listing?**
-Yes. You can edit the price of any product before it sells. Tap the listing and update the price, then tap **Save Changes**.
-
-**Can I use pre-offers with Buy It Now?**
-No. Pre-offers are only available for Real-time offers and Sudden Death sell modes. With Buy It Now, buyers purchase at the fixed price during the show.
+**Can I use pre-offers with Comprar agora?**
+No. Pre-offers are only for Oferta em tempo real and Morte súbita.
 
 **What happens when all units are sold?**
-The product is marked as sold out and disappears from the active sale view. You can unpin it and move to the next product.
+The product shows as sold out and you can move on to the next one.
 
-**Can I add a Flash Sale to any Buy It Now product?**
-Yes. Any Buy It Now product can have a Flash Sale applied during the show. You set the discount percentage and duration.
-
-**Do buyers pay shipping on Buy It Now items?**
-Yes. Shipping is calculated and added at checkout, just like any other purchase on Jamble.
+**Do buyers pay for shipping?**
+Yes. Shipping is calculated and added at checkout, like any purchase on Jamble.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Talk to us through the in-app chat.

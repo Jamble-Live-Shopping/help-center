@@ -11,8 +11,8 @@ last_sync: 2026-05-08T00:00:00Z
 
 locales:
   pt-br:
-    title: 'Compra Direta — Venda a Preço Fixo'
-    description: ''
+    title: 'Comprar agora: venda a preço fixo'
+    description: 'Venda a preço fixo durante a live, combine com Venda relâmpago e saiba quando usar a Loja.'
   en:
-    title: 'Buy It Now — Sell at a Fixed Price'
-    description: 'This guide explains how the Buy It Now sell mode works on Jamble. Buy It Now lets you sell products at a fixed price during your live show — buyers purchase instantly without competing with other buyers. You''ll learn how to set it up, what buyers see'
+    title: 'Comprar agora (buy now): sell at a fixed price'
+    description: 'Sell at a fixed price during your live, add a flash sale and know when to use the Loja.'
