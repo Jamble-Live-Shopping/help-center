@@ -1,0 +1,19 @@
+# New article. Create an empty draft in Intercom (collection "Comprar na Jamble", 11348923),
+# then put its numeric ID below before running the sync workflow.
+# Publish on or after Oct 16 2026 (installments launch); the text works before and after.
+intercom_id: TBD
+slug: pay-in-installments-parcelamento
+collection_id: 11348923
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+default_locale: pt-br
+
+state: published
+
+locales:
+  pt-br:
+    title: 'Parcelamento no cartão'
+    description: 'Como parcelar compras no cartão de crédito, quando a opção aparece e onde ver o valor total.'
+  en:
+    title: 'Paying in card installments'
+    description: 'How to pay in credit card installments, when the option shows and where to see the total.'
