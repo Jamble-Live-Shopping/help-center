@@ -2,108 +2,71 @@
 
 ## O que você vai aprender
 
-Este guia explica como criar uma listagem de produto para um show da Jamble sem adivinhar quais campos importam. Ele cobre campos obrigatórios, detalhes opcionais, regras de preço, quantidade, pré-ofertas e perfil de envio.
+Este guia explica como criar um anúncio de produto na Jamble: os campos que você preenche, os modos de venda, a quantidade e o perfil de envio.
 
-## Conteúdo
+## Onde você cria seus anúncios
 
-- Antes de começar
-- Campos obrigatórios
-- Fotos e detalhes do produto
-- Modo de venda e preço
-- Quantidade e pré-ofertas
-- Perfil de envio
-- Salvar e revisar
-- Artigos relacionados
+- **Em uma live:** abra a live agendada e adicione os produtos que você vai vender ao vivo
+- **Na Loja:** crie anúncios que ficam à venda a qualquer momento, sem live. No app, toque no **+** do seu perfil e escolha **Criar anúncio na Loja**
+- **No computador:** no Seller Hub, use **Criar** e depois **Criar Novo Produto**. Para criar muitos produtos de uma vez, use **Importar CSV**. Para reaproveitar produtos, use **Clonar de Lives Anteriores**
 
-## Antes de começar
+Veja [Seller Hub: venda pelo computador](https://intercom.help/jamble-bb4bea116bbe/pt-BR/collections/19177934-comecando) para os detalhes do computador.
 
-Você precisa de:
-
-- Uma conta de vendedor na Jamble
-- Um show onde quer vender o produto
-- Os detalhes do produto que os compradores devem ver
-- Fotos no celular, se quiser adicioná-las durante a listagem
-
-## Campos obrigatórios
-
-Ao criar um produto para um show, preencha primeiro os campos obrigatórios:
-
-1. **Título** - máximo de 60 caracteres. Use o nome do item e o detalhe que o comprador mais precisa saber, como coleção, modelo, tamanho, cor ou condição.
-2. **Modo de venda** - escolha como o produto será vendido durante o show.
-3. **Preço ou preço inicial** - o app usa R$ no Brasil e bloqueia preços iniciais abaixo de R$ 5,00.
-4. **Perfil de envio** - escolha o perfil que corresponde ao item depois de embalado.
+## Os campos do anúncio
 
 ![Formulário de listagem rápida mostrando a linha Selecione uma foto, um título de produto, uma linha de categoria e o campo de descrição acima do botão Adicionar produto desativado](./assets/mockups/how-to-list-products-on-jamble__listing-basics__pt-br__v3.png)
 
-Se faltar um campo obrigatório, o app impede salvar a listagem até você preencher.
+- **Título:** até 40 caracteres. Use o nome do item e o detalhe mais importante, como coleção, modelo ou tamanho
+- **Categoria:** obrigatória. Escolha a categoria e a subcategoria que melhor descrevem o item
+- **Condição:** as opções mudam conforme a categoria. Escolha a que descreve o item com honestidade
+- **Fotos:** mostre o item exato que você vende, com frente e verso quando fizer sentido, e qualquer defeito, lacre ou caixa
+- **Descrição:** até 120 caracteres, para detalhes que as fotos não mostram
+- **Outros detalhes:** algumas categorias pedem campos extras, como idioma, raridade, nota de avaliação, marca, tamanho ou cor. Preencha os que se aplicam
 
-## Fotos e detalhes do produto
-
-Fotos são opcionais no fluxo rápido de listagem, mas normalmente deixam a listagem mais confiável.
-
-Boas fotos mostram:
-
-- O item exato que está sendo vendido
-- Frente e verso, quando fizer sentido
-- Qualquer desgaste, defeito, lacre, etiqueta, rótulo ou caixa que o comprador deva saber
-- O item em um fundo limpo
-
-O campo de descrição é opcional e limitado a 120 caracteres. Use para detalhes que as fotos não mostram claramente, como material, caimento, condição, acessórios ausentes ou itens incluídos.
-
-Detalhes opcionais podem incluir categoria, tamanho, cor, marca, condição e preço de varejo. Preencha os campos que ajudam o comprador a entender o item; pule os campos que não se aplicam.
+Se faltar um campo obrigatório, o app avisa antes de salvar.
 
 ## Modo de venda e preço
 
-A Jamble aceita estes modos de venda em listagens de show:
+Nos produtos de uma live, você escolhe como vender:
 
-| Modo | Use quando |
-| --- | --- |
-| Oferta em tempo real | Você quer que compradores disputem o item com ofertas durante a live. O preço é o preço inicial. |
-| Sudden Death | Você quer um formato de ofertas com cronômetro e sem mecânica de tempo extra. O preço é o preço inicial. |
-| Comprar agora | Você quer um preço fixo que compradores possam aceitar imediatamente. |
+- **Oferta em tempo real:** os compradores disputam o item com ofertas. O preço é o preço inicial
+- **Morte súbita:** ofertas com cronômetro, sem tempo extra no final. O preço é o preço inicial
+- **Comprar agora:** preço fixo, o comprador compra na hora
 
 ![Seção de modo de venda com Oferta em tempo real selecionada, campos Comece em e Duração visíveis, e Comprar agora e Morte súbita abaixo](./assets/mockups/how-to-list-products-on-jamble__selling-mode-price__pt-br__v3.png)
 
-Em Oferta em tempo real e Sudden Death, o app valida o preço inicial e o cronômetro. Em Comprar agora, o preço é o preço fixo de compra.
+O preço mínimo é R$ 5. Nos anúncios da Loja, o preço é sempre fixo.
 
-Você também pode adicionar um preço de varejo quando isso ajudar o comprador a entender o valor de referência. Não use preço de varejo como promessa de desconto se não puder sustentar essa informação.
+Você também pode informar um **Preço de Varejo**, que aparece riscado ao lado do seu preço. Use só se for o preço real de referência do item.
 
-## Quantidade e pré-ofertas
+## Quantidade, lote e pré-ofertas
 
-A quantidade é opcional e começa em 1. Em modos de venda elegíveis, a Jamble permite quantidade de até 1.000 unidades.
-
-Se a quantidade for maior que 1, o toggle de pré-oferta é desativado. Use pré-ofertas apenas quando a listagem tiver uma unidade e o modo de venda selecionado permitir.
+- **Quantidade:** quantas unidades iguais você tem, de 1 a 1.000
+- **Lote:** ative quando o anúncio for um conjunto de unidades vendidas juntas, e informe as **Unidades do lote**
+- **Pré-ofertas:** só ficam disponíveis quando a quantidade é 1
 
 ![Seção Quantidade com controle de menos e mais, toggle Ativar Pré-oferta e linha Perfil de remessa selecionada abaixo](./assets/mockups/how-to-list-products-on-jamble__quantity-shipping__pt-br__v3.png)
 
 ## Perfil de envio
 
-O perfil de envio é obrigatório. Escolha com base no item embalado, não apenas no item sem embalagem.
+O perfil de envio informa o peso e o tamanho do pacote e define o frete que o comprador paga. Escolha **Automático**, **Informar peso e tamanho** ou um dos seus perfis personalizados. Pense no item já embalado. Veja [Escolher um Perfil de Envio](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288104).
 
-Exemplos:
+## Antes de salvar
 
-- Uma carta avulsa pode usar um perfil menor do que um colecionável em caixa.
-- Tênis com caixa original podem precisar de mais espaço do que tênis enviados sem caixa.
-- Um pacote com vários itens pode precisar de um perfil maior do que um item único.
+Confira:
 
-O perfil de envio influencia o frete mostrado ao comprador, então não escolha um perfil grande demais nem pequeno demais.
+- O título é específico e tem até 40 caracteres
+- A categoria e a condição estão corretas
+- O modo de venda e o preço estão como você quer
+- O perfil de envio corresponde ao item embalado
+- As fotos e a descrição mostram o produto real
 
-## Salvar e revisar
-
-Antes de salvar, confira:
-
-- O título é específico e tem até 60 caracteres.
-- O modo de venda combina com a forma como você quer vender o item.
-- O preço ou preço inicial está em R$ e é de pelo menos R$ 5,00.
-- O perfil de envio corresponde ao item embalado.
-- As fotos e a descrição representam o produto real.
-
-Depois de salvar, revise o produto na lista do show antes de entrar ao vivo. Se algo estiver errado, edite a listagem antes de vender.
+Depois de salvar, revise o produto na lista antes de entrar ao vivo. Se algo estiver errado, edite o anúncio antes de vender.
 
 ## Artigos relacionados
 
-- Escolher Quantidades ao Listar Produtos
-- Comprar Agora: Venda por Preço Fixo
-- Pré-ofertas: Permita que Compradores Façam Ofertas Antes do Show
-- Criar e Gerenciar Ofertas em Tempo Real
-- Resolver Problemas de Custo de Frete como Vendedor
+- [Definir Quantidades ao Listar Produtos](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288094)
+- [Compra Direta, Venda a Preço Fixo](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288112)
+- [Pré-ofertas](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288122)
+- [Como Funcionam as Ofertas em Tempo Real](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288115)
+- [Diretrizes de Listagem](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288106)
