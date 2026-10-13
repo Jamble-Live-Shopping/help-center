@@ -118,12 +118,17 @@ Produtos mal classificados confundem compradores e podem ser sinalizados pela pl
 A Jamble Brasil é focada em colecionáveis. As listagens devem ser produtos físicos que podem ser enviados pelos Correios. Os seguintes itens não são permitidos:
 
 - **Itens falsificados ou piratas**, itens que imitam uma marca sem serem genuínos
+- **Moedas e cédulas falsificadas**, vender dinheiro falso é crime
+- **Réplicas de produtos de marca**, como tênis, roupas ou acessórios "inspirados em" uma marca
+- **Produtos lacrados de novo**, itens abertos e lacrados outra vez como se fossem novos
 - **Produtos roubados**, itens sem direito legal de venda
 - **Itens ilegais**, qualquer coisa proibida pela lei brasileira
 - **Armas, drogas ou materiais perigosos**
 - **Itens que não correspondem à listagem**, listar uma coisa e enviar outra
 - **Listagens vazias**, sem produto real (toda listagem deve representar um item que você tem em mãos)
 - **Itens apenas digitais**, tudo vendido na Jamble deve ser físico e enviado
+
+Réplicas de outros itens, como moedas de fantasia, só podem ser vendidas se estiverem claramente identificadas como réplica no título e na descrição e não puderem ser confundidas com o original.
 
 Se não tiver certeza se um item é permitido, entre em contato com o suporte antes de listar.
 

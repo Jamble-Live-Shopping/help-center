@@ -118,12 +118,17 @@ Misclassified products confuse buyers and may be flagged by the platform.
 Jamble Brazil is focused on collectibles. Listings must be physical products that can be shipped via Correios. The following are not allowed:
 
 - **Counterfeit or fake items**, items that imitate a brand without being genuine
+- **Counterfeit coins and banknotes**, selling fake money is a crime
+- **Replicas of branded products**, such as sneakers, clothing or accessories "inspired by" a brand
+- **Resealed products**, items opened and sealed again as if they were new
 - **Stolen goods**, items you don't have the legal right to sell
 - **Illegal items**, anything prohibited by Brazilian law
 - **Weapons, drugs, or hazardous materials**
 - **Items not matching their listing**, listing one thing and shipping another
 - **Empty listings**, with no actual product (every listing must represent an item you have in hand)
 - **Digital-only items**, everything sold on Jamble must be physical and shipped
+
+Replicas of other items, such as novelty coins, can only be sold if they are clearly marked as a replica in the title and description and cannot be mistaken for the original.
 
 If you're unsure whether an item is allowed, contact support before listing it.
 
