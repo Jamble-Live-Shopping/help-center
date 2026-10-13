@@ -103,11 +103,11 @@ Sim. Se você é pessoa jurídica (CNPJ ou MEI), precisa emitir Nota Fiscal de S
 Sim, o limite é de 200 indicações. Não há limite de tempo entre as indicações.
 
 **Meu amigo não é vendedor, ele só quer comprar. Posso indicar ele?**
-Esse programa é só para vendedores. Para indicar amigos compradores, use o Programa de Indicação para Compradores, que funciona com cupons em vez de dinheiro.
+Sim! Use o **Programa de Indicação para Compradores**. A partir de 5 de maio de 2026, vendedores ganham **R$ 100 em dinheiro** (creditado direto na conta bancária) por cada amigo comprador indicado que fizer a primeira compra em um Show. Antes era em crédito.
 
 **Recebi um convite mas não consigo participar. Por quê?**
 A tela Indicar amigos só fica disponível para vendedores ativos com cadastro completo. Se você ainda não tem cadastro de vendedor aprovado, complete primeiro o seu cadastro de Live Seller.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Entre em contato pelo chat do app ou envie um email para [support@jambleapp.com](mailto:support@jambleapp.com).

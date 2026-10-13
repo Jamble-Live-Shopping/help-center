@@ -3,22 +3,14 @@ slug: bundled-shipments
 collection_id: 19177937
 
 # Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
-default_locale: pt-BR
+default_locale: pt-br
 
 state: published
 author_id: 7980507
 last_sync: 2026-04-22T00:00:00Z
 
-titles:
-  pt-BR: Envios Agrupados
-  en: Bundled Shipments
-
-descriptions:
-  pt-BR: Como a Jamble junta vários itens do mesmo comprador em um único pacote e como gerar uma etiqueta para todos.
-  en: How Jamble groups multiple items from the same buyer into one package and how to generate a single label for all of them.
-
 locales:
-  pt-BR:
+  pt-br:
     title: 'Envios Agrupados'
     description: 'Como a Jamble junta vários itens do mesmo comprador em um único pacote e como gerar uma etiqueta para todos.'
   en:

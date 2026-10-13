@@ -109,11 +109,11 @@ Se o pagamento do comprador vencedor não for processado, a venda pode ser cance
 Sim. Você pode ter vários produtos rodando simultaneamente durante o show, por exemplo, um com Oferta em tempo real e outro com Comprar agora.
 
 **Tem comissão nas vendas?**
-Sim. A Jamble cobra 14% sobre o preço final de qualquer venda, independente do modo. A comissão é descontada antes do repasse via PIX.
+Sim. A Jamble cobra 10% sobre o preço final de qualquer venda, independente do modo. A comissão é descontada antes do repasse via PIX.
 
 **Posso restringir quem pode ofertar?**
 Sim. Ao configurar a venda, você pode escolher o público-alvo: todos os compradores, apenas seus seguidores, ou apenas compradores anteriores.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Entre em contato pelo chat do app ou envie um email para [support@jambleapp.com](mailto:support@jambleapp.com).

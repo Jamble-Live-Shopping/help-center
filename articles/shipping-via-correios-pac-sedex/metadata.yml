@@ -1,18 +1,13 @@
 intercom_id: 14288134
 slug: shipping-via-correios-pac-sedex
 collection_id: 19177937
-default_locale: pt-BR
+default_locale: pt-br
 state: published
 author_id: 7980507
 last_sync: 2026-04-22T00:00:00Z
-titles:
-  pt-BR: Envio via Correios (PAC/SEDEX)
-  en: Shipping via Correios (PAC/SEDEX)
-descriptions:
-  pt-BR: Como funciona o envio via Correios na Jamble, PAC vs SEDEX, etiquetas pelo Melhor Envio, rastreamento e prazos.
-  en: How Correios shipping works on Jamble, PAC vs SEDEX, labels via Melhor Envio, tracking, and deadlines.
+
 locales:
-  pt-BR:
+  pt-br:
     title: 'Envio via Correios (PAC/SEDEX)'
     description: 'Como funciona o envio via Correios na Jamble, PAC vs SEDEX, etiquetas pelo Melhor Envio, rastreamento e prazos.'
   en:

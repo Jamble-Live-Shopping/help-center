@@ -1,18 +1,13 @@
 intercom_id: 14288124
 slug: pack-and-ship-your-order
 collection_id: 19177937
-default_locale: pt-BR
+default_locale: pt-br
 state: published
 author_id: 7980507
 last_sync: 2026-04-22T00:00:00Z
-titles:
-  pt-BR: Embale e Envie Seu Pedido
-  en: Pack and Ship Your Order
-descriptions:
-  pt-BR: Como preparar, embalar e enviar um pedido pelos Correios apos a confirmacao da venda, com prazo e rastreamento automatico.
-  en: How to prepare, pack and ship an order via Correios after confirming the sale, with deadline and automatic tracking.
+
 locales:
-  pt-BR:
+  pt-br:
     title: 'Embale e Envie Seu Pedido'
     description: 'Como preparar, embalar e enviar um pedido pelos Correios apos a confirmacao da venda, com prazo e rastreamento automatico.'
   en:

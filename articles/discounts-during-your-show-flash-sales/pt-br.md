@@ -7,6 +7,7 @@ Este guia explica como oferecer descontos durante seu show ao vivo na Jamble usa
 ## Antes de começar
 
 Você precisa de:
+
 - Uma conta de vendedor aprovada na Jamble
 - Um show ao vivo ativo
 - Produtos listados com o modo de venda **Compra Direta**
@@ -24,7 +25,7 @@ Vendas Relâmpago são uma variante da Compra Direta. Quando você inicia uma ve
 Diferenças principais:
 
 | Característica | Compra Direta | Venda Relâmpago |
-|---------------|--------------|-----------------|
+|---|---|---|
 | Preço | Preço cheio que você definiu | Preço com desconto (percentual) |
 | Cronômetro | Cronômetro padrão de venda | Cronômetro regressivo — oferta acaba quando o tempo zera |
 | Cor | Tema azul | Tema verde |
@@ -63,6 +64,7 @@ O percentual de desconto da Venda Relâmpago é configurado quando você lista o
 3. Defina o **percentual de desconto** (ex: 10%, 20%, 30%)
 
 **Limites:**
+
 - Percentual de desconto: mínimo **10%**, máximo **90%**
 - Duração do cronômetro: mínimo **5 segundos**, máximo **300 segundos** (5 minutos)
 
@@ -88,7 +90,7 @@ A venda termina quando o cronômetro zera. O produto volta ao seu inventário se
 **Posso cancelar uma Venda Relâmpago depois de iniciada?**
 Você pode encerrar a venda antecipadamente pela interface de apresentador. A Venda Relâmpago fecha e mais nenhuma compra pode ser feita.
 
-**A comissão de 14% é calculada sobre o preço com desconto ou o original?**
+**A comissão de 10% é calculada sobre o preço com desconto ou o original?**
 A comissão é calculada sobre o preço que o comprador realmente paga — o preço com desconto da Venda Relâmpago.
 
 **Posso fazer uma Venda Relâmpago no mesmo produto várias vezes?**
@@ -99,4 +101,4 @@ Sim. O banner da Venda Relâmpago mostra o preço com desconto junto com o preç
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Entre em contato pelo chat do app ou envie um email para [support@jambleapp.com](mailto:support@jambleapp.com).

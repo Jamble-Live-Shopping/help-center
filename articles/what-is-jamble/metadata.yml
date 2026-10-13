@@ -1,0 +1,18 @@
+intercom_id: 10371384
+slug: what-is-jamble
+collection_id: 11344196
+
+# Imported from live Intercom on 2026-10-13 (article previously edited only in the Intercom UI).
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+default_locale: pt-br
+
+state: published
+last_sync: 2026-08-21T09:33:33Z
+
+locales:
+  pt-br:
+    title: '1. O que é a Jamble?'
+    description: ''
+  en:
+    title: '1. What is Jamble?'
+    description: 'Here are some general information to understand what is Jamble about.'

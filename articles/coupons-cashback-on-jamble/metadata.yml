@@ -1,0 +1,18 @@
+intercom_id: 14431863
+slug: coupons-cashback-on-jamble
+collection_id: 11348923
+
+# Imported from live Intercom on 2026-10-13 (article previously edited only in the Intercom UI).
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+default_locale: pt-br
+
+state: published
+last_sync: 2026-08-21T09:34:52Z
+
+locales:
+  pt-br:
+    title: 'Cupons e Cashback na Jamble'
+    description: 'Como funcionam os cupons?'
+  en:
+    title: 'Coupons & Cashback on Jamble'
+    description: 'How do coupons work?'

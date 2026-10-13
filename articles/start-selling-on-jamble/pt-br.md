@@ -19,6 +19,7 @@ Este guia te acompanha em cada etapa para se tornar um vendedor na Jamble, desde
 ## Antes de começar
 
 Você precisa de:
+
 - Um smartphone (iPhone ou Android) com o app da Jamble instalado
 - Um CPF válido
 - Uma conta bancária que aceite PIX
@@ -31,6 +32,7 @@ Baixe a Jamble na App Store (iPhone) ou Google Play Store (Android). Abra o app 
 ![Tela de boas-vindas da Jamble com opções de cadastro por email e telefone](./assets/mockups/start-selling-on-jamble__welcome-jamble__pt-br.png)
 
 O fluxo é rápido:
+
 - Digite seu **Número de Telefone** e confirme o código que chega por SMS ou WhatsApp
 - Informe seu **E-mail** e verifique o código
 - Adicione seu **CPF** (11 dígitos, sem pontos)
@@ -60,6 +62,7 @@ Nossa equipe analisa cada inscrição e pode levar até 14 dias para dar uma res
 Depois de se inscrever, você já pode preparar seu perfil para que os compradores reconheçam sua loja.
 
 Vá em **Perfil** e adicione:
+
 - **Uma foto de perfil**, uma foto sua ou o logo da sua marca
 - **Um nome de usuário**, algo que os compradores vão lembrar (sem caracteres especiais como ?,;/+&! e sem a palavra "jamble")
 - **Uma bio curta**, uma descrição do que você vende (ex: "Pokémon TCG selados e graded PSA")
@@ -71,6 +74,7 @@ Vá em **Perfil** e adicione:
 Para receber seus ganhos, você precisa cadastrar seus dados bancários. Vá em **Perfil > Ajustes > Carteira do Vendedor** e toque em **Adicionar dados bancários**.
 
 Depois, selecione a opção que corresponde ao seu caso:
+
 - **Pessoa Física (CPF)** para pessoas físicas
 - **Pessoa Jurídica (CNPJ)** para empresas
 
@@ -87,9 +91,9 @@ Vá em **Ajustes** de vendedor para definir como você vai enviar seus produtos.
 O que você configura:
 
 - **Formato da etiqueta**, escolha o tamanho das etiquetas de envio:
-  - Meia página (8,5 x 11), funciona com impressoras comuns
-  - Página inteira (8,5 x 11)
-  - Térmica (4 x 6), se você tem impressora térmica
+   - Meia página (8,5 x 11), funciona com impressoras comuns
+   - Página inteira (8,5 x 11)
+   - Térmica (4 x 6), se você tem impressora térmica
 - **Preferências de envio**, escolha qual modalidade dos Correios você prefere: SEDEX, PAC, Mini PAC
 
 **Como o frete é cobrado:** você não define o preço do frete. Quando o comprador finaliza a compra, a Jamble calcula o custo automaticamente com base no tamanho do pacote, peso e localização do comprador. O comprador paga o frete no checkout. Você só precisa atribuir o perfil de envio certo (categoria de tamanho) a cada produto na hora de listar.
@@ -114,6 +118,7 @@ Toque no botão de criar para agendar um show ao vivo.
 ![Formulário Criar um Show com campos de título, data, hora, categoria e upload de capa](./assets/mockups/start-selling-on-jamble__create-show__pt-br.png)
 
 Dicas para preparar seu show:
+
 - **Título**, diga aos compradores o que esperar (ex: "Pokémon graded PSA 9 e 10, abertura de boosters ao vivo")
 - **Horário**, noites e fins de semana costumam trazer mais espectadores
 - **Capa do show**, uma foto que mostre claramente o que você vai vender. É a primeira coisa que os compradores veem
@@ -124,6 +129,7 @@ Dicas para preparar seu show:
 Na hora do show, abra o show agendado e toque em **Vá ao vivo**. Sua câmera liga e você está ao vivo.
 
 Durante o show, você pode:
+
 - **Iniciar uma Oferta em tempo real**, onde os compradores competem fazendo ofertas
 - **Vender com Comprar agora**, preço fixo e compra imediata
 - **Criar uma Venda relâmpago**, um desconto por tempo limitado
@@ -138,16 +144,19 @@ Assim que o show termina, você vê um painel com todas as vendas que precisam s
 Você pode abrir esse painel depois em: **Perfil > Ajustes > Shows Anteriores**
 
 Para cada pedido confirmado:
+
 1. **Gere a etiqueta de envio**, a Jamble cria a etiqueta dos Correios automaticamente
 2. **Embale o item com cuidado** e cole a etiqueta
 3. **Leve o pacote** a uma agência dos Correios
 
-Quando o comprador recebe o item, seus ganhos começam o prazo para ficarem disponíveis. Os pagamentos são processados via Pagar.me e dependem de 2 fatores:
-- **Prazo de verificação do pagamento:** cartão de crédito e débito é 30 dias, PIX é 1 dia
-- **Conclusão do pedido:** o pedido precisa ser entregue no endereço do comprador e o recebimento confirmado no app. O comprador tem 3 dias para confirmar, se não confirmar, o pedido é concluído automaticamente
+Seus ganhos ficam disponíveis quando duas condições forem atendidas: o pedido estiver concluído e o pagamento estiver liberado. O prazo de pagamento não deve ser contado apenas a partir do recebimento do produto:
 
-Depois que você inicia o saque tocando em **Sacar**, aguarde até 3 dias para a resposta do banco:
-- **Status concluído**, banco aceitou, você recebe em até 5 dias úteis
+- **Liberação do pagamento:** depende do meio de pagamento e das condições aplicáveis à sua conta. A confirmação da entrega não substitui essa etapa
+- **Conclusão do pedido:** o recebimento é confirmado no app ou o pedido é concluído automaticamente conforme as regras de confirmação
+
+Quando houver saldo disponível, toque em **Sacar** para solicitar a transferência. Acompanhe a solicitação no Histórico de pagamentos:
+
+- **Status concluído**, a transferência foi marcada como concluída; confira o crédito na conta cadastrada
 - **Status falhou**, banco rejeitou ou há erro nos dados bancários, confira o código de erro no saque
 
 ## Dicas importantes
@@ -169,10 +178,10 @@ Sim, você pode se inscrever mais uma vez (máximo de 2 inscrições no total). 
 Não. Seu smartphone já basta. Boa iluminação ajuda, venda perto de uma janela ou use uma luminária. Um suporte ou tripé para o celular facilita na hora de mostrar os produtos.
 
 **Quanto a Jamble cobra?**
-A Jamble cobra uma comissão de 14% sobre cada venda. Isso cobre a plataforma, o processamento de pagamento e o suporte ao comprador.
+A Jamble cobra uma comissão de 10% sobre cada venda. Isso cobre a plataforma, o processamento de pagamento e o suporte ao comprador.
 
 **Quando eu recebo meu pagamento?**
-Resumo: cartão de crédito e débito têm retenção de 30 dias, PIX tem retenção de 1 dia, mais até 3 dias para o processamento bancário. Detalhes no Passo 9.
+Primeiro, o pedido precisa estar concluído e o pagamento liberado. Depois, você solicita o saque do saldo disponível e acompanha o processamento na carteira. [Veja as etapas de pagamento e saque](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288147-entenda-o-prazo-de-pagamento-dos-seus-ganhos).
 
 **Posso vender qualquer coisa?**
 A Jamble foca em colecionáveis (Pokémon TCG, Hot Wheels, One Piece TCG, Magic, diecast, etc.). Itens ilegais, falsificados ou perigosos não são permitidos. Confira os Termos de Uso, seção 10 sobre uso aceitável.
@@ -182,4 +191,4 @@ O comprador paga o frete. O custo é calculado automaticamente com base no taman
 
 ## Precisa de ajuda?
 
-Fale com a gente pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app ou envie um email para [support@jambleapp.com](mailto:support@jambleapp.com).

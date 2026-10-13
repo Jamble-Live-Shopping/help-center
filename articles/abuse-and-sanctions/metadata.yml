@@ -1,0 +1,18 @@
+intercom_id: 13440884
+slug: abuse-and-sanctions
+collection_id: 18025631
+
+# Imported from live Intercom on 2026-10-13 (article previously edited only in the Intercom UI).
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+default_locale: pt-br
+
+state: published
+last_sync: 2026-08-21T09:33:41Z
+
+locales:
+  pt-br:
+    title: '5. Abusos e Sanções'
+    description: 'Medidas rigorosas são adotadas contra comportamentos abusivos'
+  en:
+    title: '5. Abuse and Sanctions'
+    description: 'Jamble punishes violated terms to protect the platform'

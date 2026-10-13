@@ -2,144 +2,144 @@
 
 ## O que você vai aprender
 
-Este guia explica como criar e agendar um show ao vivo na Jamble em quatro passos: título, tag, capa e detalhes (data, hora, repetição). Você também vai ver como editar um show já agendado e o que acontece com seus seguidores quando o show vai ao ar.
+Este guia explica como criar e agendar um show ao vivo na Jamble. Você vai aprender a definir o título do show, escolher uma categoria, adicionar uma imagem de capa, definir a data e hora, e usar as configurações de repetição para agendar shows recorrentes.
 
 ## Antes de começar
 
 Você precisa de:
 - Uma conta de vendedor aprovada na Jamble
-- Email, telefone, endereço e método de pagamento já preenchidos no perfil (a Jamble pede esses dados antes do primeiro show)
-- Uma imagem de capa pronta no rolo da câmera, ou nenhuma (você pode buscar uma foto gratuita no Unsplash dentro do próprio app)
+- Produtos listados e prontos para vender (você pode adicioná-los ao show depois)
+- Uma imagem de capa pronta (ou você pode escolher uma da biblioteca Unsplash integrada)
 
-## Onde começar
+## Passo a passo
 
-Abra seu perfil no app e toque em **Agendar um show**. Esse é o único caminho para chegar ao fluxo de criação. Se algum dado obrigatório do perfil estiver faltando, a Jamble pede para completar antes de abrir o fluxo.
+### Passo 1: Comece a criar um show
 
-## Passo 1: digite o título do show
+Toque no **botão de criar** (o ícone +) na parte inferior do app, depois selecione a opção de criar um novo show.
 
-A primeira tela é só um campo de texto centralizado. É o que os compradores vão ver quando rolarem o calendário de shows agendados.
+![Menu Criar com linhas de configurações: Novo Anúncio e Schedule a Show](./assets/mockups/schedule-a-show__criar-menu__pt-br.png)
 
-![Tela do passo 1 com placeholder Digite o título de seu show e botão Seguinte branco no rodapé](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/schedule-a-show__show-title-input__pt-br__v3.png)
+### Passo 2: Digite o título do show
 
-Toque no campo, digite o título, depois toque em **Seguinte**. Se você tentar avançar sem texto, a Jamble mostra um aviso "Sem título" pedindo que você digite alguma coisa.
+A primeira tela pede para você digitar o título do show. É isso que os compradores vão ver ao navegar nos shows agendados, então seja claro e específico.
+
+![Tela de formulário para criar um novo show ao vivo com campo de título e botão Próximo](./assets/mockups/schedule-a-show__create-live-show__pt-br.png)
 
 **Bons títulos:**
-- "Pokémon TCG, boosters e singles"
-- "Sneakers Nike e Adidas, vários tamanhos"
-- "Camisetas vintage streetwear, lote novo"
+- "Sneakers Nike e Adidas - Vários tamanhos"
+- "Camisetas vintage streetwear - Lote novo"
+- "Pokémon TCG - Boosters e singles"
 
-**Títulos vagos para evitar:**
-- "Live"
-- "Vem!"
+**Títulos ruins:**
+- "Live" (muito vago)
+- "Vem!" (não diz nada aos compradores)
 
-Quanto mais específico, mais o título trabalha a seu favor no calendário de shows.
+### Passo 3: Selecione uma tag (categoria)
 
-## Passo 2: escolha uma tag
+Escolha uma tag que melhor descreva o que você vai vender. Os compradores usam tags para encontrar shows que combinam com seus interesses.
 
-A tag é a categoria do show. Você só pode escolher **uma**, e ela define em que filtros os compradores vão te encontrar.
+![Tela Selecionar 1 Tag com grade de botões de categorias: Colecionável, Pokémon, Miniaturas, Magic, Out. TCGs, Moda Fitness, Contemporâneo, Beleza, Calçados, Luxo, Joias e Infantil](./assets/mockups/schedule-a-show__select-tag__pt-br.png)
 
-![Tela do passo 2 com 12 tags em duas colunas e Pokémon selecionada com fundo branco](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/schedule-a-show__show-tags-grid__pt-br__v3.png)
+Você só pode selecionar **uma tag por show**. Escolha a que melhor corresponde à maioria do que vai vender. Se pular essa etapa, seu show vai ser categorizado como "Colecionáveis" por padrão.
 
-Toque na tag que melhor descreve o que você vai vender. A tag selecionada fica branca, as outras escuras. Toque em **Seguinte** quando estiver pronto.
+### Passo 4: Adicione uma imagem de capa
 
-Pense na tag como o filtro principal do comprador. Se você vende Pokémon TCG na maior parte do show, escolha **Pokémon**, mesmo que tenha um ou dois itens de outra categoria.
+Escolha uma imagem de capa para seu show. É a thumbnail que os compradores vão ver no feed e no calendário de shows.
 
-## Passo 3: adicione uma imagem de capa
+Você tem duas opções:
+- **Import from library** — escolha uma foto da galeria do seu celular
+- **Unsplash** — pesquise e escolha uma foto gratuita do Unsplash
 
-A capa é a thumbnail do seu show no calendário e nos cards do feed. Você tem duas opções na mesma tela.
+Depois de selecionar uma imagem, você pode recortá-la para ajustar ao formato. Uma imagem clara e atraente dos produtos que você vai vender funciona melhor.
 
-![Tela do passo 3 com botão Importar da biblioteca, busca Unsplash e grade de fotos sugeridas](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/schedule-a-show__show-cover-options__pt-br__v3.png)
+### Passo 5: Defina a data e hora
 
-- **Importar da biblioteca**: abre o rolo da câmera. Depois de escolher, você corta a imagem em 1:1 dentro do próprio app.
-- **Unsplash**: a Jamble pré-carrega fotos relacionadas à sua tag. Você pode digitar uma busca diferente se quiser.
+Escolha quando seu show vai ao vivo. Toque em **Select your date** para abrir o seletor de data e hora.
 
-Uma foto dos produtos reais do show funciona melhor que uma imagem genérica. Os compradores decidem se vão assistir só com base na thumbnail.
+**Regras de agendamento:**
+- Você não pode agendar um show no passado
+- Deve haver pelo menos **1 hora** entre seus shows — se você já tem um show às 20:00, o próximo deve ser às 21:00 ou depois
+- Você pode agendar shows com a antecedência que quiser
 
-## Passo 4: defina data, hora e detalhes
+### Passo 6: Adicione uma descrição e notas (opcional)
 
-A última tela junta tudo o que falta: descrição, notas, data e a opção de repetir o show.
+Você pode adicionar dois tipos de texto extra:
 
-![Tela do passo 4 com seções Descrição, Notas, Data com ícone de calendário e cartão Repetições](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/schedule-a-show__show-details-form__pt-br__v3.png)
+- **Descrição** — um resumo curto do seu show. Exibido para compradores navegando no calendário
+- **Notas** — notas adicionais visíveis para sua audiência durante o show (até 200 caracteres). Ótimo para regras, anúncios ou lembretes
 
-- **DESCRIÇÃO** (opcional). Texto curto que aparece para compradores rolando o calendário. Use 1 ou 2 frases.
-- **NOTAS** (opcional, até 200 caracteres). Notas visíveis para a audiência durante o show. Boas para regras, anúncios ou lembretes do tipo "Frete grátis acima de R$ 100".
-- **DATA**. Toque em **Selecione sua data** para abrir o seletor nativo. Você não consegue escolher uma data no passado. A barra **Repetições** fica desabilitada até você escolher uma data.
-- **Repetições**. Liga o agendamento recorrente. Detalhado abaixo.
+### Passo 7: Configure shows recorrentes (opcional)
 
-Quando a data estiver definida, o cartão de repetição passa a ser interativo.
+Se você quer ir ao vivo em um horário regular, pode configurar seu show para repetir automaticamente.
 
-## Repetir o show automaticamente
+Ative a opção de repetição, depois configure:
+- **Com que frequência**: a cada X dias, semanas ou meses
+- **Quando parar**: depois de um número específico de shows (1, 3, 5 ou 10) ou em uma data específica
 
-Use **Repetições** se você vai ao vivo em um horário fixo. A Jamble cria todos os shows da série de uma vez.
+Quando você ativa a repetição, a Jamble cria múltiplos shows de uma vez. Você pode criar até **10 shows** em um único lote.
 
-Configure dois campos:
-- **A cada**: defina o intervalo (Dia, Semana ou Mês) e o número de unidades (a cada 1, 2, 3 semanas, por exemplo)
-- **Finais**: escolha o critério de parada. Pode ser uma data específica (**Na Data**) ou um número fixo de shows (**Após 1 Show**, **Após 3 Shows**, **Após 5 Shows**, **Após 10 Shows**)
+**Nota:** As configurações de repetição só podem ser definidas ao criar um show. Você não pode adicionar ou alterar configurações de repetição depois que o show é criado.
 
-A repetição **só pode ser configurada na criação**. Depois que o show é criado, o painel de repetições não aparece mais nas edições.
+### Passo 8: Crie seu show
 
-## Como criar e quem é avisado
+Quando tudo estiver pronto, toque em **Create Show** (ou **Create X shows** se estiver usando repetição). Seu show está agora agendado e visível para os compradores.
 
-Quando todos os campos obrigatórios estão preenchidos, o botão final fica disponível. Toque para confirmar. A partir desse momento:
+Seus seguidores vão ver seu próximo show no feed, e ele vai aparecer no calendário de shows.
 
-- O show entra no calendário público da Jamble
-- Seus seguidores passam a ver o show no feed e podem ativar lembretes nativos do app
-- Você pode adicionar produtos e ajustar detalhes a qualquer momento antes de ir ao vivo
+## Editando um show agendado
 
-O envio de notificações de lembrete é controlado pelo app, não por você. Os seguidores que aceitaram receber notificações da sua conta recebem um aviso quando o show está prestes a começar.
+Para editar um show que você já agendou, vá ao seu perfil e encontre o show. Toque nele para abrir a tela de edição.
 
-## Editar um show agendado
+Você pode alterar:
+- **Título** — atualizar o nome do seu show
+- **Tag** — mudar para uma categoria diferente
+- **Imagem de capa** — enviar uma nova thumbnail
+- **Data e hora** — reagendar seu show (dentro dos limites)
+- **Descrição e notas** — atualizar seus textos
 
-Para editar, abra seu perfil, encontre o show e toque para abrir a tela de edição. Você pode mudar:
-- **Título**
-- **Tag**
-- **Imagem de capa**
-- **Data e hora** (com limite, veja abaixo)
-- **Descrição** e **Notas**
+Você **não pode** alterar as configurações de repetição depois que um show é criado.
 
-Você não pode adicionar nem alterar **Repetições** depois que o show é criado. Se quiser mudar a frequência, cancele a série e crie um novo show.
+**Limite de adiamento:** Você pode reagendar um show para uma data posterior até **3 vezes**. Depois disso, a data fica travada. Adiantar um show para um horário mais cedo não conta como adiamento.
 
-### Limite de adiamento
+Quando atingir o limite, você verá:
 
-Você pode mover o horário do show **para mais tarde** no máximo **3 vezes**. Adiantar para um horário mais cedo não conta. Quando você atinge o teto, a Jamble bloqueia novas mudanças e mostra um aviso "Limite de adiamento, este Show não pode mais ser adiado".
+![postpone-limit-alert: Diálogo mostrando aviso de limite de adiamento](./assets/mockups/schedule-a-show__postpone-limit-alert__pt-br.png)
 
-Se o aviso aparecer faltando 1 adiamento (uso 2 de 3), aproveite para confirmar a data final, porque o próximo trava.
+## Cancelando um show
 
-## Cancelar um show
-
-Para cancelar, abra o show e use a opção de cancelar ou excluir. O show some do calendário e seus seguidores deixam de vê-lo.
+Se precisar cancelar um show agendado, abra-o e procure a opção de cancelar ou excluir. Seu show será removido do calendário e seus seguidores não vão mais vê-lo.
 
 ## Dicas importantes
 
-- **Agende em horários de pico.** Noites das 19:00 às 22:00 e fins de semana atraem mais compradores no Brasil
-- **Use uma capa clara.** Foto dos produtos reais do show vende melhor que imagem genérica do Unsplash
-- **Configure repetições para criar audiência.** Toda quinta às 20:00 vira hábito e seus compradores voltam
-- **Adicione produtos antes do show.** Você pode preparar a lista enquanto o show está agendado
-- **Use as Notas para regras.** "Frete grátis acima de R$ 100", "Aceito ofertas em todos os itens" são exemplos que poupam perguntas durante o show
+- **Agende nos horários de pico.** Noites (19:00-22:00) e fins de semana tendem a ter mais espectadores no Brasil
+- **Use uma imagem de capa clara.** Uma foto dos seus produtos reais funciona muito melhor do que uma imagem genérica. Os compradores decidem se vão assistir com base na thumbnail
+- **Configure shows recorrentes.** Shows regulares criam uma audiência fiel. Se você vai ao vivo toda quinta às 20:00, seus compradores vão voltar
+- **Adicione produtos antes do show.** Você pode adicionar produtos ao show depois de agendar. Quanto mais produtos prontos antes de ir ao vivo, mais fluido será seu show
+- **Use notas para sua audiência.** Adicione uma nota como "Frete grátis acima de R$100" ou "Aceito ofertas em todos os itens" para definir expectativas
 
 ## Perguntas frequentes
 
-**Posso agendar dois shows no mesmo horário?**
-Não. Cada show ocupa um único slot no seu calendário. Para shows seguidos, deixe um intervalo razoável entre eles para não sobrepor.
+**Posso agendar vários shows ao mesmo tempo?**
+Não no mesmo horário exato. Deve haver pelo menos 1 hora entre seus shows. Use a função de repetição para criar uma série de shows automaticamente.
 
 **Posso editar a data depois de agendar?**
-Sim, com o limite acima: até 3 adiamentos para um horário mais tarde. Adiantar para um horário mais cedo não consome o limite.
+Sim, mas você só pode adiar o show até 3 vezes. Adiantar para um horário mais cedo não conta nesse limite.
 
-**E se eu não entrar ao vivo no horário agendado?**
-O show fica no calendário e os compradores que aparecerem vão ver a tela de espera. Repetir esse padrão prejudica sua reputação na plataforma.
+**O que acontece se eu não entrar ao vivo no horário agendado?**
+Seu show permanece no calendário. Compradores que aparecerem vão ver que você ainda não começou. É ruim para sua reputação agendar e não aparecer, então só agende shows que você planeja fazer.
 
-**Posso adicionar produtos depois?**
-Sim. Você pode adicionar, remover e reorganizar produtos a qualquer momento antes do show ir ao vivo.
+**Posso adicionar produtos depois de agendar o show?**
+Sim. Você pode adicionar, remover ou reorganizar produtos no seu show a qualquer momento antes de ir ao vivo.
 
-**Quantas tags posso escolher por show?**
-Apenas uma. A Jamble usa essa tag como filtro principal de descoberta para o seu show.
+**Quantas tags posso escolher?**
+Uma tag por show. Escolha a que melhor representa o que você vai vender.
 
-**Posso usar um vídeo como capa?**
-Não. A capa é uma imagem estática, em proporção 1:1.
+**Posso usar um vídeo como capa em vez de uma imagem?**
+Não. Apenas imagens estáticas são suportadas como capa.
 
-**Meus seguidores são notificados quando agendo?**
-Sim. O show aparece no feed dos seus seguidores e os que aceitaram notificações recebem um lembrete antes do início.
+**Meus seguidores são notificados quando agendo um show?**
+Sim. Quando você cria um show, seus seguidores vão vê-lo no feed. Eles também podem receber uma notificação quando seu show estiver para começar.
 
 ## Precisa de ajuda?
 
-Fale com o time pelo chat do app ou envie um email para support@jambleapp.com.
+Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.

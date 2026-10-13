@@ -1,0 +1,18 @@
+intercom_id: 10373403
+slug: set-up-your-account-to-purchase
+collection_id: 11344196
+
+# Imported from live Intercom on 2026-10-13 (article previously edited only in the Intercom UI).
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+default_locale: pt-br
+
+state: published
+last_sync: 2026-08-21T09:33:34Z
+
+locales:
+  pt-br:
+    title: '3. Como configurar sua conta para comprar?'
+    description: 'Ative sua conta para poder realizar compras'
+  en:
+    title: '3. Set up your Account to Purchase'
+    description: 'You must activate your account to unlock purchasing'

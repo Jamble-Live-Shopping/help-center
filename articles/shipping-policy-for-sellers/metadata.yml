@@ -3,22 +3,14 @@ slug: shipping-policy-for-sellers
 collection_id: 19177937
 
 # Primary source = pt-BR per Language Priority Policy. EN is a 1:1 mirror (currency aside).
-default_locale: pt-BR
+default_locale: pt-br
 
 state: published
 author_id: 7980507
 last_sync: 2026-04-22T00:00:00Z
 
-titles:
-  pt-BR: Política de Envio para Vendedores
-  en: Shipping Policy for Sellers
-
-descriptions:
-  pt-BR: 'Regras de envio para vendedores Jamble: prazo de 10 dias, Correios, etiqueta gerada no app, rastreio e o que acontece se atrasar.'
-  en: 'Shipping rules for Jamble sellers: 10-day deadline, Correios, label generated in the app, tracking, and what happens if you ship late.'
-
 locales:
-  pt-BR:
+  pt-br:
     title: 'Política de Envio para Vendedores'
     description: 'Regras de envio para vendedores Jamble: prazo de 10 dias, Correios, etiqueta gerada no app, rastreio e o que acontece se atrasar.'
   en:

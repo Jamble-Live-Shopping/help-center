@@ -3,19 +3,11 @@ slug: understand-the-earnings-payout-timeline
 collection_id: 19177938
 
 # Primary source = pt-BR per Language Priority Policy. EN mirrors pt-BR, keeps R$ (Jamble operates in BR only).
-default_locale: pt-BR
+default_locale: pt-br
 
 state: published
 author_id: 7980507
 last_sync: 2026-04-21T00:00:00Z
-
-titles:
-  pt-BR: Entenda o Prazo de Pagamento dos Seus Ganhos
-  en: Understand the Earnings Payout Timeline
-
-descriptions:
-  pt-BR: Os três estados dos seus ganhos (Pendente, Disponível, Sacado) e o caminho completo da venda ao PIX no seu banco.
-  en: The three states of your earnings (Pending, Available, Withdrawn) and the full path from sale to PIX in your bank.
 
 locales:
   pt-br:
@@ -23,4 +15,4 @@ locales:
     description: 'Os três estados dos seus ganhos (Pendente, Disponível, Sacado) e o caminho completo da venda ao PIX no seu banco.'
   en:
     title: 'Understand the Earnings Payout Timeline'
-    description: "The three states of your earnings (Pending, Available, Withdrawn) and the full path from sale to PIX in your bank."
+    description: 'The three states of your earnings (Pending, Available, Withdrawn) and the full path from sale to PIX in your bank.'

@@ -3,22 +3,14 @@ slug: account-security
 collection_id: 19177934
 
 # Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
-default_locale: pt-BR
+default_locale: pt-br
 
 state: published
 author_id: 7980507
 last_sync: 2026-04-21T00:00:00Z
 
-titles:
-  pt-BR: Segurança da Conta
-  en: Account Security
-
-descriptions:
-  pt-BR: 'Como sua conta Jamble é protegida pelo número de telefone, como gerenciar seus dados e como sair ou apagar a conta.'
-  en: 'How your Jamble account is protected by phone number, how to manage your data, and how to log out or delete your account.'
-
 locales:
-  pt-BR:
+  pt-br:
     title: 'Segurança da Conta'
     description: 'Como sua conta Jamble é protegida pelo número de telefone, como gerenciar seus dados e como sair ou apagar a conta.'
   en:

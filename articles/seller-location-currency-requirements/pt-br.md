@@ -7,6 +7,7 @@ Este guia explica onde você precisa estar para vender na Jamble, qual moeda é 
 ## Antes de começar
 
 Você precisa de:
+
 - Um smartphone com o app da Jamble instalado
 - Um número de telefone brasileiro (+55)
 - Um CPF válido
@@ -51,6 +52,7 @@ Durante a configuração da sua conta de vendedor, você escolhe entre **Individ
 ![Tela de entrada de CPF com alternador Individual/Empresa e campo para digitar o número do documento fiscal](./assets/mockups/seller-location-currency-requirements__cpf-entry__pt-br.png)
 
 Você vai precisar do CPF para:
+
 - Criar sua conta
 - Fazer ofertas e comprar produtos nos shows
 - Receber saques das suas vendas
@@ -76,7 +78,7 @@ Para receber seus ganhos, você precisa de uma **conta bancária brasileira**. A
 - **Tipo de conta**, conta corrente ou conta poupança
 - **Tipo de titular**, pessoa física (CPF) ou pessoa jurídica (CNPJ)
 
-Sua conta bancária precisa estar no seu nome (correspondendo ao seu CPF ou CNPJ). Os saques são processados via **PIX** (operado pela Pagar.me) e geralmente caem em minutos.
+Sua conta bancária precisa estar no seu nome, correspondendo ao seu CPF ou CNPJ. Quando houver saldo disponível, solicite o saque na carteira e acompanhe o processamento no Histórico de pagamentos. O prazo depende da transferência para a conta cadastrada.
 
 ## Endereço de envio
 
@@ -120,4 +122,4 @@ Seu saque vai falhar. Você verá uma mensagem de erro explicando o problema (ex
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Entre em contato pelo chat do app ou envie um email para [support@jambleapp.com](mailto:support@jambleapp.com).

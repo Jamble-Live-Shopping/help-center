@@ -1,5 +1,7 @@
 # Programa de Indicação para Compradores
 
+**Importante (a partir de 5 de maio de 2026):** se você é vendedor ativo na Jamble, ganha **R$ 100 em dinheiro** (creditado direto na conta bancária) por cada amigo comprador indicado que fizer a primeira compra em um Show. Antes era em crédito. Para compradores que indicam outros compradores, a recompensa continua sendo em crédito.
+
 ## O que você vai aprender
 
 Este guia explica como o Programa de Indicação para compradores da Jamble funciona. Você vai aprender como convidar amigos para comprar na Jamble, como você ganha um crédito quando eles fazem a primeira compra, e como acompanhar suas indicações no app.
@@ -110,4 +112,4 @@ Se seu amigo vai virar vendedor, e não só comprador, use o Programa de Indica�
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Entre em contato pelo chat do app ou envie um email para [support@jambleapp.com](mailto:support@jambleapp.com).
