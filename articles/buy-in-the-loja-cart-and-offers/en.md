@@ -10,6 +10,8 @@ In the Loja (shop), you buy products at any time, at a fixed price, without join
 
 ## Buy a product
 
+![Loja product page with the price, a crossed-out retail price and the Make an Offer and Add buttons](./assets/mockups/buy-in-the-loja-cart-and-offers__product-page__en.png)
+
 1. Open the product.
 2. Tap **Adicionar** (add) to put it in your cart.
 3. Open the **Carrinho** (cart) and tap **Finalizar compra** (checkout).
@@ -18,6 +20,8 @@ In the Loja (shop), you buy products at any time, at a fixed price, without join
 The order summary shows the price, shipping and fees before you pay.
 
 ## How the cart works
+
+![Cart with two products from the same seller, the subtotal and the Checkout button](./assets/mockups/buy-in-the-loja-cart-and-offers__cart__en.png)
 
 - You can add products from different sellers to your cart
 - Checkout is done one seller at a time. Products from the same seller go together in a single order

@@ -20,6 +20,8 @@ Quando o Recebimento Antecipado está ativado, os seus compradores podem parcela
 
 ## Como ativar
 
+![Tela Minha carteira com o saldo disponível, o botão Sacar e o cartão Recebimento Antecipado com a explicação e o botão para ativar](./assets/mockups/early-payout-recebimento-antecipado__wallet-card__pt-br.png)
+
 1. Abra a sua carteira no app, ou **Carteira** no Seller Hub.
 2. Toque em **Recebimento Antecipado** e siga as instruções.
 

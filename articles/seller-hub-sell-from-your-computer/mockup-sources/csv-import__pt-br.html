@@ -1,0 +1,29 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; color: #162233; }
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
+.btn { display: flex; align-items: center; justify-content: center; gap: 8px; height: 44px; border-radius: 22px; font-size: 15px; font-weight: 600; }
+.btn-brand { background: #7E53F8; color: #FFFFFF; }
+.btn-secondary { background: #E9EAEF; color: #162233; }
+.btn-outline { background: #FFFFFF; color: #162233; border: 1px solid #DADDE3; }
+.muted { color: #6B7A92; }
+.tert { color: #A0A7B7; }
+.dlg { padding:18px; }
+.dlg h1 { font-size:18px; font-weight:600; line-height:24px; }
+.dlg .sub { font-size:13px; line-height:18px; margin:4px 0 16px; }
+.lbl { font-size:12px; font-weight:600; color:#6B7A92; margin-bottom:6px; }
+.sel { display:flex; justify-content:space-between; align-items:center; border:1px solid #DADDE3; border-radius:10px; padding:11px 12px; font-size:14px; margin-bottom:14px; }
+.zone { border:1.5px dashed #BDC2CD; border-radius:12px; background:#F9FAFC; padding:20px 12px; text-align:center; margin-bottom:12px; }
+.zone .t { font-size:15px; font-weight:600; margin-top:8px; }
+.zone .h { font-size:12px; margin-top:4px; }
+.row { display:flex; gap:10px; }
+.row .btn { flex:1; font-size:13px; height:40px; }
+.foot { margin-top:14px; }
+.btn-dis { background:#E9EAEF; color:#BDC2CD; }
+</style></head><body><div class="phone">
+<div class="dlg"><h1>Importar produtos por CSV</h1><div class="sub muted">Nada é criado antes de você revisar a prévia.</div>
+<div class="lbl">Importar para a Live</div><div class="sel"><span>Pokémon TCG, sexta 20h</span><svg width="8" height="13" viewBox="0 0 8 13" fill="none"><path d="M1.5 1.5L6.5 6.5L1.5 11.5" stroke="#A0A7B7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="zone"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 15V4M12 4L7.5 8.5M12 4L16.5 8.5" stroke="#7E53F8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 15V18C4 19.1 4.9 20 6 20H18C19.1 20 20 19.1 20 18V15" stroke="#7E53F8" stroke-width="2" stroke-linecap="round"/></svg><div class="t">Arraste seu CSV aqui</div><div class="h tert">Tamanho máximo: 2 MB · 200 linhas</div></div>
+<div class="row"><div class="btn btn-outline">Baixar Modelo XLSX</div><div class="btn btn-secondary">Subir CSV</div></div>
+<div class="foot"><div class="btn btn-dis">Importar</div></div></div>
+</div></body></html>

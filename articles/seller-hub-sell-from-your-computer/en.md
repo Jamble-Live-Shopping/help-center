@@ -20,6 +20,8 @@ If you sign in to the app with Google or Apple, you can also use **Entrar com Go
 
 ## What you find in the menu
 
+![Seller Hub in the browser, with the side menu and the Create button open showing Schedule a Live, Create New Listing, Clone from Past Lives and Import CSV](./assets/mockups/seller-hub-sell-from-your-computer__menu__en.png)
+
 - **Visão Geral** (Overview): a summary of your account and your next lives
 - **Lives**: schedule, edit and follow your lives
 - **Catálogo** (Catalog): all your products, to edit, duplicate or delete
@@ -43,6 +45,8 @@ At the top of the screen, the **Criar** (Create) button gathers the most used sh
 
 ## Import products from a spreadsheet
 
+![Import listings from a CSV window with the live chosen under Import Into Live, the drop area and the Download XLSX Template and Upload CSV buttons](./assets/mockups/seller-hub-sell-from-your-computer__csv-import__en.png)
+
 With the CSV import, you create many products at once. The products go into a scheduled live, so schedule the live first.
 
 1. Click **Criar**, then **Importar CSV**.
@@ -54,6 +58,8 @@ With the CSV import, you create many products at once. The products go into a sc
 Before any product is created, the Seller Hub shows a preview. If a row has an error, the preview points out what to fix. Each file can have up to 200 rows and 2 MB. For more products, split them into several files.
 
 ## Host your live from your computer
+
+![Start your Live? window with the Broadcast and Start without broadcasting buttons](./assets/mockups/seller-hub-sell-from-your-computer__go-live-choice__en.png)
 
 To start a live, you need a payout account and a shipping address on file. If one is missing, the Seller Hub tells you and shows where to set it up.
 

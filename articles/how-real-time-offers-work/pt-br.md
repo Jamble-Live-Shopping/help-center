@@ -24,7 +24,7 @@ Este artigo fala dos dois modos com ofertas: **Oferta em tempo real** e **Morte 
 
 Ao criar ou editar o produto, escolha **Oferta em tempo real** ou **Morte súbita** como modo de venda e preencha:
 
-![Tela Modo de venda com Oferta em tempo real selecionada, campos Preço inicial e Duração visíveis](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-real-time-offers-work__sell-mode-picker__pt-br__v2.png)
+![Tela Modo de venda com Oferta em tempo real selecionada, campos Preço inicial e Duração visíveis](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-real-time-offers-work__sell-mode-picker__pt-br__v3.png)
 
 - **Preço inicial:** o valor da primeira oferta. O mínimo é R$ 5
 - **Duração:** quanto tempo a venda dura, entre 5 e 90 segundos. O padrão é 15 segundos

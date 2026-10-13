@@ -10,6 +10,8 @@ Na Loja, você compra produtos a qualquer momento, com preço fixo, sem precisar
 
 ## Comprar um produto
 
+![Página de um produto da Loja com preço, preço de varejo riscado e os botões Fazer oferta e Adicionar](./assets/mockups/buy-in-the-loja-cart-and-offers__product-page__pt-br.png)
+
 1. Abra o produto.
 2. Toque em **Adicionar** para colocar no carrinho.
 3. Abra o **Carrinho** e toque em **Finalizar compra**.
@@ -18,6 +20,8 @@ Na Loja, você compra produtos a qualquer momento, com preço fixo, sem precisar
 O resumo do pedido mostra o preço, o frete e as taxas antes de você pagar.
 
 ## Como funciona o carrinho
+
+![Carrinho com dois produtos do mesmo vendedor, o subtotal e o botão Finalizar compra](./assets/mockups/buy-in-the-loja-cart-and-offers__cart__pt-br.png)
 
 - Você pode colocar no carrinho produtos de vendedores diferentes
 - A compra é finalizada um vendedor por vez. Os produtos do mesmo vendedor vão juntos em um único pedido

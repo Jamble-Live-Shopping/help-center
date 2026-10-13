@@ -20,6 +20,8 @@ When Recebimento Antecipado is on, your buyers can pay for eligible card purchas
 
 ## How to turn it on
 
+![My Wallet screen with the available balance, the Withdraw button and the Early Payout card with its explanation and toggle](./assets/mockups/early-payout-recebimento-antecipado__wallet-card__en.png)
+
 1. Open your wallet in the app, or **Carteira** (wallet) in the Seller Hub.
 2. Tap **Recebimento Antecipado** and follow the instructions.
 

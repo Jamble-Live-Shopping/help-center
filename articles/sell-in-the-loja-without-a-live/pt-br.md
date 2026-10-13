@@ -10,6 +10,8 @@ Na Loja, você vende seus produtos a qualquer momento, com preço fixo, sem prec
 
 ## Como criar um anúncio
 
+![Perfil do vendedor com o botão + aberto mostrando as opções Agendar uma Live e Criar anúncio na Loja](./assets/mockups/sell-in-the-loja-without-a-live__create-menu__pt-br.png)
+
 **No app:**
 
 1. Abra o seu perfil e toque no botão **+**.
@@ -38,6 +40,8 @@ Para vender várias unidades iguais, ajuste a **Quantidade**. Se o anúncio esgo
 Abra o seu perfil e vá até os seus anúncios. Abra o anúncio para editar, ou apague quando quiser tirá-lo da Loja. No Seller Hub, você faz o mesmo em **Catálogo**.
 
 ## Ofertas dos compradores
+
+![Oferta pendente nas Mensagens com o produto, o preço, o valor oferecido e os botões Recusar, Contrapor e Aceitar](./assets/mockups/sell-in-the-loja-without-a-live__offer-received__pt-br.png)
 
 Nos anúncios da Loja, o comprador pode tocar em **Fazer oferta** e propor um valor abaixo do seu preço. O app mostra o valor mínimo aceito.
 

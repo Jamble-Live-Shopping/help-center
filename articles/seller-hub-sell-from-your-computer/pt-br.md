@@ -20,6 +20,8 @@ Se você entra no app com Google ou Apple, também pode usar **Entrar com Google
 
 ## O que você encontra no menu
 
+![Seller Hub no navegador, com o menu lateral e o botão Criar aberto mostrando Agendar Live, Criar Novo Produto, Clonar de Lives Anteriores e Importar CSV](./assets/mockups/seller-hub-sell-from-your-computer__menu__pt-br.png)
+
 - **Visão Geral**: um resumo da sua conta e das suas próximas lives
 - **Lives**: agende, edite e acompanhe suas lives
 - **Catálogo**: todos os seus produtos, para editar, duplicar ou excluir
@@ -43,6 +45,8 @@ No topo da tela, o botão **Criar** reúne os atalhos mais usados:
 
 ## Importar produtos por planilha
 
+![Janela Importar produtos por CSV com a live escolhida em Importar para a Live, a área para arrastar o arquivo e os botões Baixar Modelo XLSX e Subir CSV](./assets/mockups/seller-hub-sell-from-your-computer__csv-import__pt-br.png)
+
 Com a importação por CSV, você cria muitos produtos de uma vez. Os produtos entram em uma live agendada, então agende a live antes.
 
 1. Clique em **Criar** e depois em **Importar CSV**.
@@ -54,6 +58,8 @@ Com a importação por CSV, você cria muitos produtos de uma vez. Os produtos e
 Antes de criar qualquer produto, o Seller Hub mostra uma prévia. Se alguma linha tiver erro, a prévia aponta o que corrigir. Cada arquivo pode ter até 200 linhas e 2 MB. Para mais produtos, divida em vários arquivos.
 
 ## Fazer sua live pelo computador
+
+![Janela Iniciar sua live? com os botões Transmitir e Iniciar sem transmitir](./assets/mockups/seller-hub-sell-from-your-computer__go-live-choice__pt-br.png)
 
 Para começar uma live, você precisa ter uma conta de recebimento e um endereço de envio cadastrados. Se faltar algum, o Seller Hub avisa e mostra onde configurar.
 

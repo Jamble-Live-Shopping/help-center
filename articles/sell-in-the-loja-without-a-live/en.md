@@ -10,6 +10,8 @@ In the Loja (shop), you sell your products at any time, at a fixed price, withou
 
 ## How to create a listing
 
+![Seller profile with the + button open showing Schedule a Live and Create a Store listing](./assets/mockups/sell-in-the-loja-without-a-live__create-menu__en.png)
+
 **In the app:**
 
 1. Open your profile and tap the **+** button.
@@ -38,6 +40,8 @@ To sell several identical units, set the **Quantidade**. If a listing sells out,
 Open your profile and go to your listings. Open a listing to edit it, or delete it when you want to take it out of the Loja. In the Seller Hub, you do the same under **Catálogo**.
 
 ## Offers from buyers
+
+![Pending offer in Messages with the product, the price, the offered amount and the Decline, Counter and Accept buttons](./assets/mockups/sell-in-the-loja-without-a-live__offer-received__en.png)
 
 On Loja listings, buyers can tap **Fazer oferta** (make an offer) and propose a price below yours. The app shows the minimum accepted.
 
