@@ -255,7 +255,7 @@ Acesse Perfil > Configurações > Contatar o suporte ao cliente.
 
 ## Posso vender pelo computador?
 
-Sim. Pelo **Seller Hub**, em jamble.com/seller/dashboard, você cria produtos, agenda e faz lives, confirma vendas, imprime etiquetas e saca seus ganhos, tudo pelo navegador. Você entra com o mesmo telefone da sua conta no app.
+Sim. Pelo **Seller Hub**, em jamble.com/seller/dashboard, você cria produtos, agenda e faz lives, confirma vendas, imprime etiquetas e saca seus ganhos, tudo pelo navegador. Você entra com o mesmo telefone da sua conta no app. [Veja como usar o Seller Hub](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/17588489).
 
 ​
 

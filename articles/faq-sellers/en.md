@@ -181,7 +181,7 @@ Go to Profile > Settings > Contact customer support.
 
 ## Can I sell from my computer?
 
-Yes. With the **Seller Hub**, at jamble.com/seller/dashboard, you create products, schedule and host lives, confirm sales, print labels and withdraw your earnings, all in your browser. You sign in with the same phone number as your app account.
+Yes. With the **Seller Hub**, at jamble.com/seller/dashboard, you create products, schedule and host lives, confirm sales, print labels and withdraw your earnings, all in your browser. You sign in with the same phone number as your app account. [See how to use the Seller Hub](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588489).
 
 ## Can I go live from my computer?
 

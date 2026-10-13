@@ -10,7 +10,7 @@ Este guia explica como criar um anúncio de produto na Jamble: os campos que voc
 - **Na Loja:** crie anúncios que ficam à venda a qualquer momento, sem live. No app, toque no **+** do seu perfil e escolha **Criar anúncio na Loja**
 - **No computador:** no Seller Hub, use **Criar** e depois **Criar Novo Produto**. Para criar muitos produtos de uma vez, use **Importar CSV**. Para reaproveitar produtos, use **Clonar de Lives Anteriores**
 
-Veja [Seller Hub: venda pelo computador](https://intercom.help/jamble-bb4bea116bbe/pt-BR/collections/19177934-comecando) para os detalhes do computador.
+Veja [Seller Hub: venda pelo computador](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/17588489) para os detalhes do computador.
 
 ## Os campos do anúncio
 

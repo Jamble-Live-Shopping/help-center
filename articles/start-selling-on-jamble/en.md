@@ -172,7 +172,7 @@ In most cases you get an answer quickly, but it can take up to 14 days. You are 
 Contact our support team through the in-app chat to find out the next steps.
 
 **Can I sell from my computer?**
-Yes. Once approved, sign in to the Seller Hub at jamble.com/seller/dashboard with the same phone number as your account. There you create products, host lives, print labels and withdraw your earnings.
+Yes. Once approved, sign in to the Seller Hub at jamble.com/seller/dashboard with the same phone number as your account. There you create products, host lives, print labels and withdraw your earnings. [See how to use the Seller Hub](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588489).
 
 **Do I need to go live to sell?**
 No. You can sell in the **Loja**, with listings that are for sale at any time, at a fixed price.

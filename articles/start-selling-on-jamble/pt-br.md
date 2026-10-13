@@ -172,7 +172,7 @@ Na maioria dos casos, a resposta é rápida, mas pode levar até 14 dias. Você 
 Fale com o nosso suporte pelo chat do app para saber os próximos passos.
 
 **Posso vender pelo computador?**
-Sim. Depois de aprovado, entre no Seller Hub em jamble.com/seller/dashboard com o mesmo telefone da sua conta. Lá você cria produtos, faz lives, imprime etiquetas e saca seus ganhos.
+Sim. Depois de aprovado, entre no Seller Hub em jamble.com/seller/dashboard com o mesmo telefone da sua conta. Lá você cria produtos, faz lives, imprime etiquetas e saca seus ganhos. [Veja como usar o Seller Hub](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/17588489).
 
 **Preciso fazer live para vender?**
 Não. Você pode vender na **Loja**, com anúncios que ficam à venda a qualquer momento, a preço fixo.
