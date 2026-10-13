@@ -33,11 +33,16 @@ Caso o pagamento falhe ou seja recusado, você poderá ser solicitado a atualiza
 
 ## Métodos de pagamento aceitos
 
-Você pode adicionar um ou mais métodos de pagamento à sua conta para concluir compras durante lives ou em anúncios.
+Você pode pagar suas compras, nas lives e na Loja, com:
 
-- Cartões de crédito e carteiras digitais
+- **Cartão de crédito**
+- **Pix**: o app mostra um QR Code para você pagar no app do seu banco em poucos minutos
 
-> Pagamentos via Pix e parcelamento ainda não estão disponíveis
+Ao cadastrar um cartão novo, o seu banco pode pedir uma confirmação de segurança. Em algumas compras, a opção disponível pode ser só o Pix.
+
+Quando disponível, você também pode parcelar compras no cartão de crédito. As parcelas e o acréscimo aparecem antes de você pagar.
+
+Todas as taxas aparecem no resumo do pedido antes do pagamento.
 
 ---
 
@@ -74,16 +79,26 @@ O usuário pode editar o endereço de entrega durante a live nas seguintes situa
 
 ## Enviar ofertas
 
-Após a ativação da conta, o usuário pode deslizar o botão roxo (CTA) para enviar uma oferta e comprar o item.
+Depois de ativar a conta, deslize o botão roxo para enviar uma oferta.
 
-Quando o vendedor inicia a venda, o produto fica visível para o público. Os compradores podem então:
+Quando o vendedor inicia a venda, o produto aparece para todos na live:
 
-- Deslizar para a direita para enviar uma oferta pelo preço inicial definido pelo vendedor
-- Cada nova oferta aumenta o valor em +5 / +10 / +25 / +50, de acordo com a faixa de preço atual
+- A primeira oferta é pelo preço inicial definido pelo vendedor
+- Cada nova oferta aumenta um valor mínimo, que cresce conforme o preço sobe: R$ 5 em produtos abaixo de R$ 105 e valores maiores acima disso. O botão sempre mostra o valor da próxima oferta
+- Você também pode definir uma **Oferta máxima**: o app oferta por você automaticamente até esse limite
 
-Sempre que um usuário envia uma oferta:
+## O cronômetro
 
-- O valor do lance é incrementado automaticamente
-- 5 segundos são adicionados ao cronômetro (exceto nos formatos Morte Súbita e Comprar Agora)
+- **Oferta em tempo real:** se uma oferta chega nos últimos segundos, o cronômetro volta para alguns segundos, para dar chance aos outros compradores
+- **Morte súbita:** o cronômetro não muda. Quando chega a zero, a venda acaba
+- **Comprar agora:** não há disputa. Quem comprar primeiro leva, pelo preço fixo
 
-O vencedor é o usuário que enviou a maior e mais recente oferta antes do término do tempo.
+Vence quem tiver a maior oferta quando o tempo acabar. Se duas ofertas tiverem o mesmo valor, vale a que chegou primeiro.
+
+## Depois de ganhar
+
+Você tem alguns minutos para concluir o pagamento, no cartão ou no Pix. Se o pagamento não for concluído a tempo, a compra é cancelada.
+
+## Comprar sem live
+
+Você também pode comprar a qualquer momento na **Loja**, com preço fixo, carrinho e a opção de fazer ofertas ao vendedor. Veja [Comprar na Loja: carrinho e ofertas](https://intercom.help/jamble-bb4bea116bbe/pt-BR/collections/11348923-comprar-na-jamble).
