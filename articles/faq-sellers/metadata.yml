@@ -14,5 +14,5 @@ locales:
     title: 'FAQ Vendedores'
     description: 'Perguntas frequentes dos nossos vendedores 🏷️'
   en:
-    title: 'FAQ Sellers'
-    description: 'Questions by our Sellers'
+    title: 'Seller FAQ'
+    description: 'Questions from our sellers'

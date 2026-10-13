@@ -11,6 +11,7 @@ Se você abriu esta página pelo formulário de inscrição, pode consultar o gu
 - [3. O que preciso preparar?](#preparar-primeira-live)
 - [4. Da inscrição à primeira live](#inscricao-ate-primeira-live)
 - [5. Vendi. Como envio e recebo?](#enviar-e-receber)
+- [6. Posso vender pelo computador ou sem fazer live?](#computador-e-loja)
 
 ---
 
@@ -52,11 +53,11 @@ A comissão padrão da Jamble é de **10% sobre o preço do produto vendido**. O
 
 ​
 
-Alguns vendedores podem ter condições promocionais, como 0% de comissão por tempo limitado. Confira as condições aplicáveis à sua conta e [veja o detalhamento das taxas](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288149-taxas-e-comissoes-da-jamble).
+A taxa de processamento do pagamento é paga pelo comprador e não sai dos seus ganhos. [Veja o detalhamento das taxas](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288149-taxas-e-comissoes-da-jamble).
 
 ​
 
-**Para calcular seu lucro:** os R$ 90,00 do exemplo são o ganho após a comissão padrão. Considere também o custo do produto e da embalagem. Se houver uma condição promocional ou um serviço opcional, como antecipação de recebíveis, consulte as condições aplicáveis à sua carteira antes de aderir.
+**Para calcular seu lucro:** os R$ 90,00 do exemplo são o ganho após a comissão padrão. Considere também o custo do produto e da embalagem. Se você ativar um serviço opcional, como o Recebimento Antecipado, confira a taxa mostrada na carteira antes de aderir.
 
 ---
 
@@ -64,7 +65,7 @@ Alguns vendedores podem ter condições promocionais, como 0% de comissão por t
 
 # 3. O que preciso preparar?
 
-- **Celular e internet:** use um smartphone com o app atualizado, conexão estável e bateria ou carregador por perto.
+- **Celular ou computador e internet:** use o app atualizado no celular, ou o Seller Hub no computador, com uma conexão estável e bateria ou carregador por perto.
 - **Imagem e som:** escolha um lugar iluminado e silencioso. Um suporte para o celular ajuda; equipamento profissional não é necessário.
 - **Produtos:** separe o que realmente está disponível, confira o estado e prepare fotos, descrição e preço. Uma pequena seleção, por exemplo 5 a 10 produtos, pode servir para aprender o formato. Isso é uma sugestão de preparação, não um mínimo obrigatório de inscrição.
 - **Envio:** tenha embalagens adequadas e acesso a uma impressora para as etiquetas. Uma impressora comum funciona; a térmica é opcional.
@@ -85,7 +86,7 @@ Sim. Depois de criar uma live, use o modo de prática para conhecer os controles
 
 ## Como me tornar vendedor no Jamble?
 
-Para começar a vender, acesse seu perfil e selecione “Candidatar-se para vender ao vivo” ou vá até as configurações e escolha “Candidatar-se para fazer live”.  
+Para começar a vender, acesse seu perfil no app e toque em “Candidate-se para vender ao vivo”.  
 Você precisará preencher uma inscrição rápida e, após a aprovação e o cadastro dos seus dados bancários, poderá criar uma live.
 
 ​
@@ -111,11 +112,15 @@ Fale com o suporte antes de continuar. Preencha documentos e dados bancários ap
 
 ## Como agendar uma live?
 
-Se você ainda não tiver nenhuma live criada, vá até o seu perfil e toque em “Agendar uma live”.
+Se você ainda não tiver nenhuma live criada, vá até o seu perfil e toque em “Agendar uma Live”.
 
 ​
 
-Se você já tiver lives criadas e quiser adicionar outra, vá ao seu perfil, toque no botão “+” e selecione “Agendar uma live”.
+Se você já tiver lives criadas e quiser adicionar outra, vá ao seu perfil, toque no botão “+” e selecione “Agendar uma Live”.
+
+​
+
+No computador, use o botão **Criar** e depois **Agendar Live** no Seller Hub.
 
 ​
 
@@ -129,17 +134,18 @@ Dicas para uma live atrativa:
 
 ## Como cadastrar produtos na minha live?
 
-Ao criar sua live, você pode adicionar produtos facilmente usando o “Envio rápido”:
+Abra a sua live e adicione os produtos. Para cada produto, você informa:
 
-- Toque em “Envio rápido”
-- Selecione 1 imagem
-- Escolha um título
-- Adicione uma descrição precisa
-- Selecione o tipo de venda (oferta em tempo real, morte súbita ou sorteio)
-- Defina o preço inicial (se aplicável)
-- Defina o tempo da oferta (se aplicável)
-- Escolha o formato de envio (pacote leve ou pesado)
-- Toque em Adicionar produto
+- Fotos, título e uma descrição precisa
+- A categoria e a condição do item
+- O tipo de venda: oferta em tempo real, morte súbita ou comprar agora
+- O preço inicial ou o preço fixo
+- O tempo da venda, quando houver
+- O perfil de envio, com o peso e o tamanho do pacote
+
+​
+
+No computador, o Seller Hub também permite criar vários produtos de uma vez com uma planilha (**Importar CSV**) e reaproveitar produtos de lives anteriores (**Clonar de Lives Anteriores**). [Veja como listar produtos](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288093-como-listar-produtos-na-jamble).
 
 ​
 
@@ -153,11 +159,11 @@ Quando o vendedor inicia a venda, os compradores enviam ofertas até o cronômet
 
 ​
 
-Quando o tempo termina, a maior oferta vence e o Jamble cobra automaticamente o cartão do comprador para criar a transação.
+Quando o tempo termina, a maior oferta vence e o comprador conclui o pagamento, no Pix ou no cartão.
 
 ​
 
-Não inicie a próxima venda antes da confirmação do pagamento. Caso o pagamento falhe, será necessário iniciar a venda novamente.
+Se o pagamento não for concluído, a venda é cancelada e você pode colocar o produto à venda de novo.
 
 ​
 
@@ -189,14 +195,14 @@ Vários itens podem ser enviados na mesma caixa, dependendo do peso total.
 
 Os vendedores são responsáveis por:
 
-- Confirmar a venda
+- Confirmar as vendas da Loja (as vendas feitas em live já chegam confirmadas)
 - Selecionar a preferência de nota fiscal
 - Gerar a etiqueta de envio
-- Postar os itens em até 10 dias após confirmar a venda, conforme a política de envio. Acompanhe também o prazo mostrado no pedido
+- Postar os itens dentro do prazo. Você tem até 20 dias depois que a venda é confirmada, e o prazo exato aparece no pedido, em **Prazo de envio**
 
-1. Confirme a venda e confira os itens de cada pedido.
+1. Confira os itens de cada pedido. Se for uma venda da Loja, confirme a venda primeiro.
 2. Preencha as informações fiscais solicitadas no app, conforme o seu cadastro.
-3. Gere a etiqueta, imprima e embale os produtos com proteção adequada.
+3. Gere a etiqueta, imprima e embale os produtos com proteção adequada. Você pode imprimir pelo app ou direto do computador, no Seller Hub.
 4. Cole a etiqueta de forma legível e leve o pacote a uma agência dos Correios.
 5. Guarde o comprovante de postagem e acompanhe o rastreio no app.
 
@@ -210,7 +216,7 @@ Seus ganhos ficam disponíveis para saque quando **o pedido estiver concluído e
 
 ​
 
-Cadastre seus dados bancários na carteira. Quando houver saldo disponível, toque em **Sacar** e acompanhe o status no aplicativo. A transferência é uma etapa posterior à liberação do saldo; o prazo depende do processamento do pagamento e do saque.
+Cadastre seus dados bancários na carteira. Quando houver saldo disponível, toque em **Sacar** e acompanhe o status no aplicativo. O valor vai para a conta bancária cadastrada e costuma chegar em até 5 dias úteis, dependendo do seu banco.
 
 ​
 
@@ -219,7 +225,7 @@ Cadastre seus dados bancários na carteira. Quando houver saldo disponível, toq
 ​
 
 **Como me planejo para receber?**
-Pagamentos por PIX e cartão podem ter prazos de liberação diferentes. Verifique as condições da sua carteira antes de contar com o valor para repor estoque. Enquanto aparecer como pendente, ele ainda não está disponível para saque. Se você precisar confirmar o prazo aplicável à sua conta, consulte o suporte no app.
+Pagamentos por Pix costumam ser liberados em cerca de 1 dia. Pagamentos com cartão podem levar até 30 dias, ou cerca de 15 dias com o Recebimento Antecipado ativado. Enquanto o valor aparecer como pendente, ele ainda não está disponível para saque. Acompanhe tudo na sua carteira.
 
 ​
 
@@ -240,3 +246,35 @@ Para uma resolução mais rápida, forneça sempre descrições precisas e fotos
 ## Como entro em contato com o suporte do Jamble?
 
 Acesse Perfil > Configurações > Contatar o suporte ao cliente.
+
+---
+
+​
+
+# 6. Posso vender pelo computador ou sem fazer live?
+
+## Posso vender pelo computador?
+
+Sim. Pelo **Seller Hub**, em jamble.com/seller/dashboard, você cria produtos, agenda e faz lives, confirma vendas, imprime etiquetas e saca seus ganhos, tudo pelo navegador. Você entra com o mesmo telefone da sua conta no app.
+
+​
+
+## Posso fazer live pelo computador?
+
+Sim. Na página da sua live no Seller Hub, clique em **Iniciar Live** e escolha **Transmitir** para usar a câmera do computador. Se você usa o OBS Studio, siga o guia **Transmitir com OBS** no Seller Hub. Você também pode transmitir pelo celular e usar o computador como controle remoto.
+
+​
+
+## Posso importar meus produtos por planilha?
+
+Sim, pelo Seller Hub. Clique em **Criar**, depois em **Importar CSV**, baixe o modelo, preencha e envie o arquivo. Os produtos entram em uma live agendada. Cada arquivo pode ter até 200 linhas.
+
+​
+
+## Preciso estar ao vivo para vender?
+
+Não. Você pode criar anúncios na **Loja**, que ficam à venda a qualquer momento, com preço fixo. No app, toque no botão “+” do seu perfil e escolha **Criar anúncio na Loja**. No Seller Hub, use **Criar Novo Produto** e escolha **Marketplace**.
+
+​
+
+Quando alguém compra na Loja, você precisa confirmar a venda em até 3 dias. Se a venda não for confirmada nesse prazo, o comprador é reembolsado.
