@@ -30,7 +30,7 @@ The section shows three fields to fill in when the **Flash sale** toggle is on.
 
 - **Price.** The full price of the product. The discount is calculated from here.
 - **Discount (%).** The percentage off. You can set any value between 10 and 90 percent. On a $200.00 product with a 30 percent discount, the buyer pays $140.00.
-- **Timer (Seconds).** How long the Flash Sale lasts. Minimum **30 seconds**, maximum **300 seconds** (5 minutes). The default is 60 seconds.
+- **Timer (Seconds).** How long the Flash Sale lasts. Minimum **30 seconds**, maximum **600 seconds** (10 minutes). The default is 60 seconds.
 
 Save the listing. The Flash Sale is configured and ready to be activated during your show.
 
@@ -113,7 +113,7 @@ No. The Flash Sale product stays pinned until it ends. Wait for it to end, then 
 There's a brief grace period. If a buyer initiated a purchase just before the timer ended, the payment can still process.
 
 **How long can a Flash Sale last?**
-Minimum 30 seconds, maximum 5 minutes (300 seconds). The default is 60 seconds.
+Minimum 30 seconds, maximum 10 minutes (600 seconds). The default is 60 seconds.
 
 **Can I change the discount percentage during a Flash Sale?**
 No. The discount and timer are set when you create the listing. To change them, edit the listing before starting.
