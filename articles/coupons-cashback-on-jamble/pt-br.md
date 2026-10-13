@@ -1,35 +1,33 @@
 **Como funcionam os cupons?**
 
-\- Aplicados automaticamente no valor do frete durante a compra - Nenhuma ação necessária, o desconto é aplicado direto no checkout
-
-\- Válidos em todos os shows
+- Os cupons dão desconto no **frete** da sua compra
+- O desconto é aplicado automaticamente no checkout, sem nenhuma ação sua
+- Alguns cupons valem só para compras em lives e outros só para compras na Loja
+- Os cupons têm uma data de validade
 
 **Onde vejo meus cupons?**
 
-Acesse a modal no canto superior esquerdo da tela inicial. Lá você encontra: - Saldo total de cupons
+Abra a tela de **Cupons** no app. Lá você encontra:
 
-\- Cupons ativos e datas de expiração
+- Seu saldo de cupons
+- Os cupons ativos e as datas de validade
+- O **Histórico de Cupons**, com os cupons usados e expirados
 
-\- Cupons expirados
+**Como ganho cupons?**
 
-\- Acesso ao programa de indicação e resgate
+- **Indicação:** quando você indica um amigo pelo programa de indicação. Válido por 30 dias
+- **Batalha:** quando o seu time vence uma batalha durante uma live. Válido por 7 dias
+- **Boas-vindas:** quando você cria sua conta. Válido por 6 horas
+- **Suporte:** quando a nossa equipe de suporte concede um cupom para você
 
-**Tipos de cupons**
+**E o cashback?**
 
-![Tabela com os tipos de cupom, como ganhar cada um e a expiração](./assets/mockups/coupons-cashback-on-jamble__coupon-types__pt-br.png)
+O cashback foi encerrado em 1º de julho de 2026. Compras feitas a partir dessa data não geram cashback.
 
-**Como funciona o Cashback?**
+**Gemas são cupons?**
 
-\- Crédito de **5%** sobre suas compras completadas no mês, até **R$500**
-
-\- O valor é adicionado ao seu saldo de cupons no mês seguinte
-
-\- Exemplo: R$1.000 em compras completadas em março = R$50 em cupons em abril - Aplicado no frete, como os demais cupons
-
-\- Expira no final do mês em que é concedido (~30 dias)
-
-\- O percentual e o valor máximo podem ser alterados pela Jamble a qualquer moment
+Não. As gemas são outra recompensa do app e não dão desconto no frete.
 
 **E se meu pedido for reembolsado?**
 
-\- Os cupons utilizados na compra são devolvidos ao seu saldo
+Os cupons usados na compra voltam para o seu saldo.

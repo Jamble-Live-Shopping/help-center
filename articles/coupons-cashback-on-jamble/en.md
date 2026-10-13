@@ -1,37 +1,33 @@
-\- Automatically applied to shipping fees during purchase — No action needed, the   discount is applied directly at checkout
+**How do coupons work?**
 
-\- Valid on all shows
+- Coupons give you a discount on the **shipping** of your purchase
+- The discount is applied automatically at checkout, with nothing for you to do
+- Some coupons only work for purchases in lives and others only for purchases in the Loja (shop)
+- Coupons have an expiration date
 
-**Where can I see my coupons?**
+**Where do I see my coupons?**
 
-Access the modal in the top left corner of the homepage. There you can find:
+Open the **Cupons** (coupons) screen in the app. There you find:
 
-\- Total coupon balance
+- Your coupon balance
+- Your active coupons and their expiration dates
+- The **Histórico de Cupons** (coupon history), with used and expired coupons
 
-\- Active coupons and expiration dates
+**How do I earn coupons?**
 
-\- Expired coupons
+- **Referral:** when you refer a friend through the referral program. Valid for 30 days
+- **Battle:** when your team wins a battle during a live. Valid for 7 days
+- **Welcome:** when you create your account. Valid for 6 hours
+- **Support:** when our support team grants you a coupon
 
-\- Access to the referral program and redeem
+**What about cashback?**
 
-**Types of coupons**
+Cashback ended on July 1, 2026. Purchases made from that date on do not earn cashback.
 
-![Table of coupon types, how to earn each one and when they expire](./assets/mockups/coupons-cashback-on-jamble__coupon-types__en.png)
+**Are gems coupons?**
 
-**How does Cashback work?**
-
-\- Credit of **5%  o**n your completed orders in the month, up to **R$500**
-
-\- The amount is added to your coupon balance the following month
-
-\- Example: R$1,000 in completed orders in March = R$50 in coupons in April
-
-\- Applied to shipping, like all other coupons
-
-\- Expires at the end of the month it is granted (~30 days)
-
-\- The percentage and maximum amount may be changed by Jamble at any tim
+No. Gems are a different reward in the app and do not give a shipping discount.
 
 **What if my order is refunded?**
 
-\- Coupons used in the purchase are returned to your balance
+The coupons used on the purchase go back to your balance.

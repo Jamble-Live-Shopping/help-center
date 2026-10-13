@@ -1,23 +1,20 @@
 ## Taxas que você pode encontrar como comprador
 
-- Preço do produto, definido pelo vendedor
-- Frete, calculado com base no método de envio e no peso total
-- Taxa de processamento: 2,9% + R$1,50 sobre o valor total da transação
-- Conversão de moeda internacional, quando aplicável, conforme o banco do usuário
+- **Preço do produto**, definido pelo vendedor
+- **Frete**, calculado com base no peso e no tamanho do pacote e na distância até o seu endereço
+- **Taxa de processamento do pagamento**, uma pequena taxa que varia conforme a forma de pagamento. No Pix, ela costuma ser menor do que no cartão
+- **Acréscimo do parcelamento**, só se você escolher parcelar no cartão, quando essa opção estiver disponível
 
-Todas as taxas aplicáveis são exibidas de forma clara ao clicar em “ver detalhes do preço” durante o envio de ofertas ao vivo.
+Todas as taxas aparecem no resumo do pedido antes de você pagar. O Jamble não adiciona cobranças depois que a compra é confirmada.
 
-O Jamble não adiciona cobranças ocultas após a confirmação da compra.
+## Como o frete é calculado
 
-## Cálculo do frete
+O frete depende do peso e do tamanho do pacote e da distância entre o vendedor e você.
 
-Os custos de frete no Jamble são calculados com base no peso total da caixa, e não no peso de cada item individualmente.
+Quando você compra mais de um item do mesmo vendedor na mesma live, os itens vão no mesmo pacote. Cada item a mais custa só a diferença no frete do pacote, e não um frete inteiro.
 
-À medida que a caixa fica mais pesada, novas faixas de peso são adicionadas de forma cumulativa às anteriores, aumentando o valor final do frete.
+Na Loja, cada finalização de compra com um vendedor forma um envio.
 
-| Peso total da caixa | Como o preço é calculado | Preço final do frete |
-|---|---|---|
-| Até 0,45 kg | Base price | R$12.00 |
-| 0,46 – 2,27 kg | R$12.00 + R$6.60 | R$18.60 |
-| 2,28 – 4,54 kg | R$18.60 + R$11.40 | R$30.00 |
-| 4,55 – 9,07 kg | R$30.00 + R$12.00 | R$42.00 |
+## Cupons de frete
+
+Se você tiver cupons, eles são aplicados automaticamente no valor do frete durante a compra. Veja [Cupons na Jamble](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14431863).

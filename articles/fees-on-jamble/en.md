@@ -1,24 +1,20 @@
-## Fees you may encounter as a buyer
+## Fees you may see as a buyer
 
-- Product price set by the seller
-- Shipping fees, based on shipping method and weight
-- Processing Fees: 2.9% + R$1.50 of total transaction
-- International currency exchange depending on user bank
+- **Product price**, set by the seller
+- **Shipping**, calculated based on the package's weight and size and the distance to your address
+- **Payment processing fee**, a small fee that depends on how you pay. With Pix it is usually lower than with a card
+- **Installment surcharge**, only if you choose to pay in installments by card, when that option is available
 
-All applicable fees are displayed clearly by clicking on “see price details” while sending offers Live.
+All fees show in the order summary before you pay. Jamble does not add charges after the purchase is confirmed.
 
-Jamble does not add hidden charges after confirmation.
+## How shipping is calculated
 
-### Shipping Fees Calculations
+Shipping depends on the package's weight and size and the distance between the seller and you.
 
-Shipping costs on Jamble are based on the total weight of the box, not on each item individually.  
-​
+When you buy more than one item from the same seller in the same live, the items go in the same package. Each extra item only costs the difference in the package's shipping, not a full shipping fee.
 
-As the box gets heavier, additional weight tiers are added on top of the previous ones.
+In the Loja (shop), each checkout with a seller makes one shipment.
 
-| Total box weight | How the price is calculated | Final shipping price |
-|---|---|---|
-| Up to 1.00 lb | Base price | R$12.00 |
-| 1.01 – 5.00 lbs | R$12.00 + R$6.60 | R$18.60 |
-| 5.01 – 10.00 lbs | R$18.60 + R$11.40 | R$30.00 |
-| 10.01 – 20.00 lbs | R$30.00 + R$12.00 | R$42.00 |
+## Shipping coupons
+
+If you have coupons, they are applied automatically to the shipping amount at checkout. See [Coupons on Jamble](https://intercom.help/jamble-bb4bea116bbe/en/articles/14431863).
