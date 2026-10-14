@@ -20,10 +20,6 @@ Open the **Cupons** (coupons) screen in the app. There you find:
 - **Welcome:** when you create your account. Valid for 6 hours
 - **Support:** when our support team grants you a coupon
 
-**What about cashback?**
-
-Cashback ended on July 1, 2026. Purchases made from that date on do not earn cashback.
-
 **Are gems coupons?**
 
 No. Gems are a different reward in the app and do not give a shipping discount.

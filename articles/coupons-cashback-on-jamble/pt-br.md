@@ -20,10 +20,6 @@ Abra a tela de **Cupons** no app. Lá você encontra:
 - **Boas-vindas:** quando você cria sua conta. Válido por 6 horas
 - **Suporte:** quando a nossa equipe de suporte concede um cupom para você
 
-**E o cashback?**
-
-O cashback foi encerrado em 1º de julho de 2026. Compras feitas a partir dessa data não geram cashback.
-
 **Gemas são cupons?**
 
 Não. As gemas são outra recompensa do app e não dão desconto no frete.
