@@ -5,7 +5,7 @@ collection_id: 19177934
 # Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
 default_locale: pt-br
 
-state: draft
+state: published
 
 locales:
   pt-br:
