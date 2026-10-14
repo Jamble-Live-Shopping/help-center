@@ -1,50 +1,38 @@
-Jamble is a mobile application, available on iOS and Android, that operates as a live shopping marketplace where buyers and sellers connect through real-time live shows.
+# What is Jamble?
 
-On Jamble, sellers host live sessions to sell products. Buyers can join these shows, send offers, and complete purchases directly within the App while engaging with the seller and the community.
+Jamble is a live shopping app, available on iOS and Android. Sellers host lives to show and sell products, and buyers watch, chat and buy in real time. You can also buy anytime in the **Loja** (shop), without a live.
 
-Jamble brings together:
+## What you will learn
 
-- Live video shopping
-- Real-time product interactions
-- Secure in-app payments
-- Direct shipping from sellers to buyers
+- How Jamble works for buyers
+- How Jamble works for sellers
+- How Jamble keeps purchases safe
 
-Jamble is designed to make online shopping more interactive, transparent, and community-driven.
+## For buyers
 
-## How does it work?
+- **Watch lives:** find live and upcoming lives on the home page and join with one tap
+- **Buy in lives:** send offers or use **Comprar Agora** (Buy now), depending on the sale type the seller chose
+- **Buy in the Loja:** fixed-price products, a cart and the option to make an offer to the seller
+- **Pay in the app:** by credit card or Pix. All fees show in the order summary before you pay
+- **Track your order:** the status and tracking show in **Minhas compras** (My purchases)
 
-Jamble connects independent sellers and buyers through real-time video experiences.
+To start buying, you need a CPF, a shipping address and a payment method. See [How to purchase?](https://intercom.help/jamble-bb4bea116bbe/en/articles/10870621) and [Buy in the Loja: cart and offers](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588933).
 
-**For buyers**
+## For sellers
 
-- Discover current or upcoming Live shows in the app
-- Join a live show to watch products being presented
-- Activate your account to be able to send offers:
-   - add a valid CPF
-   - add your detailed shipping address
-   - add a valid payment method
-- Send offers on products presented during the show
-   - latest (higher) offer before timer ends win the product
-- Follow transaction until delivery
-- Complete transactions received
-- Contact customer support through your settings
+- **Apply:** on your profile, tap **Candidate-se para vender ao vivo** (Apply to sell live). You get a notification when you are approved
+- **Sell live and in the Loja:** schedule lives and create fixed-price listings
+- **Ship your orders:** create the shipping label in the app or in the Seller Hub and drop off the package
+- **Get your earnings:** your sales go to your wallet and you withdraw them to your bank account
 
-**For sellers**
+To learn more, see [Start Selling on Jamble](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288077) and [Seller Hub: sell from your computer](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588489).
 
-- Create and set up a seller account
-   - apply to be a Live seller
-   - get approved
-   - register your bank details
-   - assist to your onboarding session with our training team
-- Schedule a live show
-- List items you plan to sell to your show
-- Start product sales and receive real time offers
-- Ship sold items to buyers
-- Track your sales performance
-- Receive payouts once transaction are completed by the buyer
+## Safe purchases
 
-Jamble acts as a platform facilitator:
+- Payments are made inside the app, and your card details are not shared with the seller
+- The status of each order is updated in the app, from payment to delivery
+- If something goes wrong with an order, Jamble support helps you
 
-- Payments are processed securely in-app
-- Order statuses are tracked
-- Contact customer support through your settings
+## Need help?
+
+Talk to us through the in-app chat.

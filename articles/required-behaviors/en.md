@@ -1,35 +1,46 @@
-Live shows on Jamble must be conducted in a respectful, transparent, and lawful manner.
+# Required behaviors
+
+Lives and sales on Jamble must take place in a respectful, transparent and lawful way. These are the rules everyone must follow.
+
+## What you'll learn
+
+- The rules of conduct for all users
+- The responsibilities of sellers
+- The responsibilities of buyers
 
 ## General conduct
 
-All users participating in live shows (buyers, sellers, guests) must:
+All users, whether buyers, sellers or guests in a live, must:
 
 - Act in good faith
 - Communicate respectfully
-- Follow Jamble’s Terms of Use
-- Comply with applicable laws and regulations
+- Keep purchases, payments and conversations inside Jamble
+- Follow Jamble's [Terms of Use](https://www.jamble.com/terms)
+- Respect the law
 
-Harassment, intimidation, misleading statements, or disruptive behavior are strictly prohibited and may lead to account restrictions.
+Harassment, intimidation, misleading information or behavior that disrupts lives are prohibited and may lead to account restrictions.
 
 ## Seller responsibilities
 
-Sellers are responsible for:
-
-- Clearly presenting products
-- Accurately describing condition, authenticity, and availability
-- Reacting to audience comments in the Live
-- Honoring all confirmed purchases
-   - avoid abuse by cancelling orders after the Live
-- Completing shipping within the recommended timeframe
+- Present products clearly
+- Accurately describe the condition, authenticity and availability of items
+- Interact appropriately with audience comments during the live
+- Honor all confirmed sales and avoid cancellations
+- Only open live the items the buyer allowed to be opened
+- Confirm Loja (shop) sales within the time shown in the app
+- Ship orders within the time shown on the order, under **Prazo de envio** (shipping deadline)
 
 ## Buyer responsibilities
 
-Buyers are responsible for:
+- Only make offers with a real intention to buy
+- Complete the payment right after winning a sale
+- Keep your payment details and shipping address correct
+- Respect the live rules shared by the seller
+- Answer, when the app asks, whether you allow the item to be opened live
+- Report the user or contact support if you have a problem with another user
 
-- Sending offers with the intent to complete the purchase
-- Ensuring payment and shipping information is accurate
-- Respecting show rules communicated by the seller
-- Choosing preferences when sending offer to sealed products
-- Reporting a user or contacting the support for any conflicts with another user
+Anyone who does not meet these responsibilities may face restrictions or sanctions on their account.
 
-Failure to meet these responsibilities may result in restrictions or sanctions.
+## Need help?
+
+Talk to us through the in-app chat.

@@ -2,103 +2,84 @@
 
 ## What you'll learn
 
-This guide explains what happens when a package you shipped is sent back to you because Correios could not deliver it. You'll learn how the order looks in the app, why this happens, and what to expect from the buyer's refund.
+What happens when Correios cannot deliver and the parcel comes back to you: how to know it is coming back, what the order shows, what happens to the buyer and how to avoid new returns.
 
 ## Before you start
 
 You need:
-- An approved seller account on Jamble
-- A package that was returned to your address by Correios
+- An approved Jamble seller account
+- An order whose parcel Correios could not deliver
 
-## How to know the package was returned
+## How to know the parcel is coming back
 
-When Correios can't deliver and ships the package back to your address, Jamble updates the order status automatically. You'll see the order appear in a dedicated tab in your sales list.
+When Correios reports that the parcel will come back, you get a notification saying the sale could not be delivered and is being returned to you. The parcel keeps its tracking until it gets back.
 
-![Sales list showing the Returned tab with the red alert icon](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/what-to-do-if-a-shipment-is-returned-to-you__sales-list-returned-tab__en__v3.png)
+To find these orders:
 
-Open **Sales** and tap the **Returned** tab. The small red circle with the exclamation mark identifies this tab so you can find it quickly while scanning the filter strip.
+- In **Envios** (Shipments), in the app settings or in the Seller Hub, the parcel shows as **Devolvido** (Returned) when the return is complete
+- In **Minhas vendas** (My sales), use the **Devolvido** filter
 
-If more than one order has been returned, they all appear here together. Tap any of them to open the sale detail.
+## What the order shows
 
-## Why packages come back
+When the return is complete, the sale detail shows **Cancelado** (Canceled), with the message **Seu item não pôde ser entregue e foi devolvido a você** (Your item could not be delivered and was returned to you).
 
-Correios may return a package to the sender for several reasons:
+![Sale detail with Canceled status and the message Your item could not be delivered and was returned to you](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/what-to-do-if-a-shipment-is-returned-to-you__sale-detail-returned-status__en__v3.png)
 
-- **Wrong or incomplete address**, the street number is missing, the CEP is wrong or the address does not exist
-- **Recipient absent**, Correios attempted delivery several times and nobody was there
-- **Package not picked up at the agency**, the buyer was notified to collect it but never went within the deadline
-- **Package refused**, the buyer refused the delivery at the door
-- **Address inaccessible**, restricted-access area Correios does not cover
+The order number is still shown, so you know which parcel belongs to which sale. Because the sale was canceled, its amount does not go into your wallet.
 
-The cause does not change how Jamble handles the order. What it changes is the chance of arranging a new shipment with the buyer outside the app, which we cover further down.
+## Why parcels come back
 
-## What the order shows in the app
+The most common reasons are:
 
-When the parcel reaches you back and the status changes to returned, the sale detail shows the red status bar and the system message explaining what happened.
+- **Wrong or incomplete address**, such as a missing number or a wrong CEP (postal code)
+- **Nobody to receive it** during the delivery attempts
+- **Parcel not picked up** at the Correios agency in time
+- **Delivery refused** by the recipient
 
-![Sale detail with Canceled status and Returned to you description](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/what-to-do-if-a-shipment-is-returned-to-you__sale-detail-returned-status__en__v3.png)
-
-The **Canceled** label appears at the top of the status card, the progress bar turns fully red, and the description is the system message **Your item could not be delivered and was returned to you**.
-
-The order number is still visible just below the status card, so you can match the package to the right sale in your records.
-
-Since the order is closed, the **Cancel Sale** button is no longer shown. There's nothing to cancel, the system already considers the order finalized.
+The order is handled the same way on Jamble in every case.
 
 ## What happens to the buyer
 
-The buyer's refund is automatic. As soon as the order status flips to returned, Jamble triggers the refund on the payment method used at checkout. You don't have to open a ticket for that.
+The buyer's refund is automatic. You do not need to open a ticket. The buyer sees the order as **Cancelado**, with a notice that the order was returned to the seller and that they will get a refund.
 
-![Buyer screen showing Canceled and the 5 business days refund message](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/what-to-do-if-a-shipment-is-returned-to-you__buyer-refund-status-after-return__en__v3.png)
+![Buyer screen with Canceled status and the refund to payment method message](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/what-to-do-if-a-shipment-is-returned-to-you__buyer-refund-status-after-return__en__v3.png)
 
-The buyer sees the same **Canceled** label on their side, with the description **Your order could not be delivered and was returned to the seller. You'll receive a refund on your payment method within 5 business days**.
+The amount goes back to the same payment method used for the purchase, within 5 business days, depending on the bank or card.
 
-The text states 5 business days because that's the SLA defined in our backend for this type of cancellation. PIX usually settles before then, credit-card refunds can go up to the deadline.
+## If the buyer still wants the item
 
-## Arranging a reship outside the app
+There is no button to reship the same order, because it was already canceled and refunded. If the buyer still wants the item, they can buy it again, in your Loja or in your next live, with the right address. This way the sale has a Jamble label, tracking and Jamble support.
 
-There's no reship button inside the app once an order has been returned. The order is closed and the buyer has been refunded. If you and the buyer still want the sale to happen, you have two options:
+## How to avoid returns
 
-- **Create a new sale**, the buyer comes back to your profile or your next show and buys the same item again with the corrected address
-- **Arrange outside the app**, you agree directly and ship on your own, without going through Jamble
-
-The first option is the recommended one because it keeps the sale inside the system with a Jamble label, tracking, and the protection of the return policy.
-
-## How to reduce returns going forward
-
-Most returns are preventable. The most effective steps:
-
-- **Generate labels and ship fast**, the sooner the package leaves, the more likely the buyer is still at the address and expecting it
-- **Double-check your own sender address**, if it's wrong, Correios may send the package back to somewhere that isn't yours
-- **Pack for the trip**, badly damaged packages can be flagged by Correios and turned back before reaching the recipient
-- **Drop off during business hours**, leaving a package at the agency late in the day can delay entry into the Correios system by a full day
-- **Stay in touch with the buyer**, if they answer quickly about address and delivery times, the carrier is more likely to find someone home
+- **Drop it off right after the sale.** The sooner the parcel leaves, the more likely the buyer is waiting for it
+- **Check the buyer's address** on the label before sticking it
+- **Let the buyer know** when tracking shows **Falha na entrega** (Delivery failed) or that the parcel is waiting for pickup at the agency
+- **Pack well.** See [Packaging guidelines](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288140)
 
 ## Important tips
 
-- **Don't ignore the returned package**, even with no app action, open the sale detail to confirm the status is what you expected and that the tracking number matches
-- **Document with photos**, if the package arrived damaged, take photos before opening, useful for any insurance claim or later dispute
-- **Don't reuse the old label**, it's already been processed by Correios, any new shipment needs a new label
+- **Check the parcel when it arrives.** See whether the item is intact and whether the parcel belongs to the right sale
+- **Take photos** if the parcel comes back damaged, before opening it
+- **Do not reuse the old label.** Any new shipment needs a new sale and a new label
 
-## Common questions
+## Frequently asked questions
 
-**Will I be penalized if a package is returned?**
-Not automatically. Returns caused by the buyer's address mistake are not held against you. But if you ship late frequently and that drives returns, it can affect your seller reputation.
+**Do I need to cancel the sale?**
+No. When the return is complete, the sale is canceled automatically and the buyer is refunded.
 
-**Can the buyer ask for the package to be reshipped?**
-Not through the app button. Since the order has been closed and refunded, the official path is for the buyer to buy again. You can coordinate that through the in-app chat.
+**Can the buyer ask me to reship?**
+Not in the app. Because the order was canceled and refunded, the way forward is for the buyer to buy again.
 
-**How long does the refund take?**
-Up to 5 business days from the moment the status flips to returned. PIX settles faster, credit-card can take close to the limit.
+**How long does the buyer's refund take?**
+Within 5 business days after the order is canceled, depending on the bank or card.
 
-**What if the package comes back damaged?**
-Document the damage with photos before opening. If the shipment was insured with the carrier, file the claim directly with them. For any questions about the sale, contact support.
+**What if the parcel comes back damaged?**
+Take photos before opening it and contact support in the app chat.
 
-**How long does the return trip take?**
-The Correios return route usually takes as long as the original delivery. It can be a few days or a few weeks depending on the distance between you and the original destination.
-
-**What if the buyer's address was correct but it was returned anyway?**
-This happens when no one was home during delivery attempts and the buyer didn't pick up at the agency within the deadline. The app behavior is the same, order closed and refund automatic.
+**How long does the parcel take to come back?**
+It depends on the distance and the Correios route. You can follow it in the parcel's tracking.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Talk to us in the app chat.

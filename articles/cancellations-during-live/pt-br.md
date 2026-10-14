@@ -1,21 +1,3 @@
-## Cancelamentos por parte do comprador
+# Cancelamentos durante a live
 
-Após a confirmação de uma oferta:
-
-- A compra se torna vinculante
-- Cancelamentos não são permitidos, salvo se o vendedor concordar antes do envio
-
-## Cancelamentos por parte do vendedor
-
-Os vendedores não podem cancelar uma compra confirmada porque:
-
-- O resultado foi desfavorável
-- O valor do produto superou as expectativas
-
-Cancelamentos não autorizados podem resultar em penalidades.
-
-Cancelamentos só são permitidos quando:
-
-- Exigidos por lei
-- O produto não puder ser entregue
-- Explicitamente autorizados pelo Jamble
+Este conteúdo agora faz parte de [Cancelamentos](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/10374371).

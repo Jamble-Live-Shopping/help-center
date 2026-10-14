@@ -1,103 +1,81 @@
 # Edit Your Seller Profile
 
-## What you'll learn
+## What you will learn
 
-How to keep your seller profile updated on Jamble. Your profile is the first thing buyers see in your store and in your shows. A clear photo, a memorable username, and a specific bio help build trust and attract more viewers.
+How to keep your public profile up to date on Jamble, in the app or in the Seller Hub. Your profile is the first thing buyers see in your lives and in your Loja (Shop). A clear photo, a name that is easy to remember and a specific bio help build trust.
 
 ## Before you start
 
 You need:
+
 - An active Jamble account
-- The Jamble app installed on your phone
+- The Jamble app installed on your phone, or access to the Seller Hub on a computer if you are an approved seller
 
-## What is your public profile
+## What is part of your public profile
 
-Your public profile has four elements, all editable on the **My Profile** screen:
+You can edit four things:
 
-- **Profile photo** - the circular image displayed in your show, in search results, and on your profile
-- **Username** - your unique identifier on Jamble, in the format @yourusername
-- **Name** - the name displayed on your profile and during shows (can be different from your username)
-- **Bio** - a short description that tells buyers what you sell
+- **Photo:** the round image shown on your profile, in your lives and in search
+- **Name:** the name shown on your profile and in your lives
+- **Username:** your unique identifier on Jamble, in the format @yourname
+- **Bio:** a short description of what you sell
 
-![Seller profile with photo, name, username, and bio, with edit icon over the photo](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/edit-your-seller-profile__profile-view__en.png)
+## Edit in the app
 
-## Step 1: Open the profile editor
+1. Open **Ajustes** (Settings) and tap **Editar meu perfil** (Edit my profile) (you can also open editing straight from your profile)
+2. The **Meu perfil** (My profile) screen opens
+3. Tap the photo to choose a new image from your gallery
+4. Update **Nome** (Name), **Nome de usuário** (Username) and **Bio**
+5. Tap **Salvar** (Save)
 
-Go to your profile and tap the **pencil icon** over your photo. This opens the **My Profile** screen, where you can edit everything at once.
+If the username is already taken, the app shows the **Já utilizado** (Already taken) alert. Tap **Escolherei outro** (I will choose another one) and try a variation.
 
-## Step 2: Change your photo
+## Edit in the Seller Hub
 
-Tap the photo (or **Change photo**) to swap the image. You can:
-- Choose a photo from your phone's gallery
-- Crop the image in circular format
+On a computer, log in to the Seller Hub at jamble.com/seller/dashboard and open **Meu Perfil** (My Profile). There you change the photo (**Trocar foto**, Change photo), the **Nome**, the **Nome de usuário** and the **Bio**, see a preview of how your profile looks, and tap **Salvar**. Changes apply in the app and on the website. [See how to use the Seller Hub](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588489).
 
-Use a photo of yourself or your brand logo. Avoid the default gray image: shows with a recognizable photo attract more viewers.
+## Rules for each field
 
-## Step 3: Update your username
+The app and the Seller Hub tell you when something cannot be saved. The main rules are:
 
-Your **Username** (@yourusername) is unique on Jamble and appears on your profile, in shows, and on your referral links.
+- **Username:** 3 to 15 characters, letters, numbers and _ only. Some names are not allowed, for example names that use the word jamble. It can only be changed every 14 days
+- **Name:** up to 20 characters. It can only be changed every 7 days
+- **Bio:** up to 200 characters. Bios with contacts outside the app or inappropriate content may not be accepted
+- **Photo:** use a JPG, PNG or WEBP image. In the Seller Hub, the image must be smaller than 5 MB
 
-Rules:
-- **3 to 15 characters**
-- Letters only (a-z), numbers (0-9), and underscores (_)
-- No special characters and no word **jamble**
-- Must be available. If someone is already using it, you'll see **"Invalid username! Please try other..."**
-- **You can only change your username once every 14 days**
+## Bio examples
 
-Tip: keep your username stable. Changing it often confuses your returning buyers.
+- "Sealed Pokémon TCG and graded cards | SP"
+- "Hot Wheels and Mini GT for collectors"
+- "One Piece and Lorcana, lives every night"
+- "Rare Funko Pop! and action figures"
 
-## Step 4: Update your name
+Say what you sell and what makes your shop special, in one or two sentences.
 
-Your **Name** is the name displayed on your profile and during shows. It can be different from your username. For example: username **@sneakerking**, name **Joao | Sneakers SP**.
+## Important tips
 
-- Maximum **20 characters**
-- Can be changed once every **7 days**
-
-## Step 5: Write your bio
-
-Your bio is a short description that tells the buyer what you sell and what makes your store special.
-
-- Maximum **200 characters**
-- One or two sentences is ideal
-- Be concrete and specific
-
-Good examples:
-- "Vintage and imported streetwear | SP"
-- "Original sneakers at fair prices"
-- "TCG collectibles | Pokemon, Magic, Yu-Gi-Oh!"
-
-![My Profile form with Username, Name, and Bio fields, Save button at the bottom](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/edit-your-seller-profile__profile-edit-form__en.png)
-
-## Step 6: Save
-
-Tap **Save** at the bottom of the screen. The button only becomes active after you make at least one change. This prevents accidental saves.
-
-Done. Your changes now appear on your public profile and in your next shows.
-
-## Quick tips
-
-- **Photo matters.** Shows with a recognizable seller attract more viewers. Don't stick with the default photo
-- **Stable username.** Change it sparingly so you don't lose those already following your store
-- **Bio sells you.** Think of it like a one-line pitch: what you sell and what makes you different
-- **Review before saving.** Username locks for 14 days, name for 7 days
+- **The photo matters.** Use a photo of yourself or your shop logo. A profile without a photo builds less trust
+- **Keep your username stable.** Changing it often confuses people who already buy from you, and a change is only allowed every 14 days
+- **Review before saving.** Name and username are locked for a while after a change
+- **Do not put a phone number, WhatsApp or links in your bio.** Purchases and conversations happen inside Jamble
 
 ## Frequently asked questions
 
-**Can I change my username anytime?**
-You can change it once every 14 days. If you try before that, the app blocks the change.
+**Can I change my username at any time?**
+No. The username can only be changed every 14 days. If you try earlier, the app tells you.
 
-**Why did I get "Invalid username! Please try other..."?**
-It means someone is already using that name. Try a variation: add a number, an underscore, or a regional detail.
+**Why was my username not accepted?**
+It may already be taken, contain characters that are not allowed, or be outside the allowed length. Try a variation with numbers or _.
 
-**Is there a character limit on the bio?**
-Yes, **200 characters**. Keep it short: one or two sentences is ideal.
+**Is there a character limit for the bio?**
+Yes, up to 200 characters.
 
-**Can I have no profile photo?**
-Technically yes, but we don't recommend it. A profile without a photo builds less trust and generates fewer views in your shows.
+**Where do I edit my email, phone number or CPF?**
+These details are in **Ajustes** > **Informações Pessoais** (Personal Information). They are private and do not appear on your public profile.
 
-**Where do I edit my email, phone, or CPF?**
-Those details are on another screen, in **Settings > Personal Information**. Your public profile (photo, username, name, bio) and personal information (email, phone, CPF) are separate. Buyers only see your public profile.
+**Do changes made in the Seller Hub show in the app?**
+Yes. Your profile is the same in the app and on the website.
 
 ## Need help?
 
-Contact us through the in-app chat or email support@jambleapp.com.
+Talk to us through the app chat.

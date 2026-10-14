@@ -59,7 +59,7 @@ When the timer reaches zero:
 
 - The highest offer wins
 - The winning buyer has a few minutes to complete the payment, by Pix or card
-- The sale shows in your sales list, already confirmed
+- The sale shows in your sales list. After the live ends, you confirm the sales on the live dashboard, with **Confirmar Vendas** (Confirm sales), within the time shown there
 
 If the payment is not completed in time, the sale is cancelled and you can put the product up for sale again. If nobody makes an offer, the product stays unsold and can be started again later.
 

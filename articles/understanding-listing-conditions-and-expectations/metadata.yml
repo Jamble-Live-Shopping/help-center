@@ -11,8 +11,8 @@ last_sync: 2026-05-11T00:00:00Z
 
 locales:
   pt-br:
-    title: 'Entendendo as condições de listagem'
-    description: 'As cinco condições disponíveis no anúncio, o que cada uma significa, e como escolher a condição certa para o seu item.'
+    title: 'Entendendo as Condições do Anúncio'
+    description: 'As condições mudam conforme a categoria. Veja as opções de cada categoria, o que significam e como escolher.'
   en:
-    title: 'Understanding listing conditions'
-    description: 'The five conditions available when listing, what each one means, and how to pick the right one for your item.'
+    title: 'Understanding Listing Conditions'
+    description: 'Conditions change with the category. See the options for each category, what they mean and how to choose.'

@@ -2,17 +2,17 @@ intercom_id: 13440864
 slug: cancellations-during-live
 collection_id: 18025631
 
-# Imported from live Intercom on 2026-10-13 (article previously edited only in the Intercom UI).
-# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+# Retired in wave 2 (Oct 2026): merged into cancellations.
+# Kept only so the sync can unpublish it (state: draft) in both locales.
+# Do not edit or republish. Delete this folder once Intercom shows it as draft.
 default_locale: pt-br
 
-state: published
-last_sync: 2026-08-21T09:33:39Z
+state: draft
 
 locales:
   pt-br:
     title: '3. Cancelamentos durante a live'
-    description: 'Os cancelamentos durante ou após uma live são estritamente regulados'
+    description: 'Conteúdo movido para outro artigo.'
   en:
     title: '3. Cancellations during Live'
-    description: 'Cancellations during or after a live show are strictly regulated.'
+    description: 'Content moved to another article.'

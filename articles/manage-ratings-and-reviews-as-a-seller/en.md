@@ -2,119 +2,102 @@
 
 ## What you'll learn
 
-This guide explains how the rating system works on Jamble, how buyers rate their experience with you, where your rating shows up in the app, and how to keep a strong reputation so you can sell more.
-
-## Before you start
-
-You need:
-- An approved seller account on Jamble
-- At least one completed transaction (buyers can only rate after they receive their order)
+This guide explains how buyers rate you on Jamble, where your rating appears, how to keep a good reputation, and what to do if you receive an abusive review.
 
 ## How ratings work
 
-After a buyer receives their order and confirms delivery, they are prompted to leave a rating. The rating reflects the overall transaction, product quality, shipping speed, accuracy of the listing, and communication.
+Each rating is tied to a sale, not to a live. Once the order is completed, the buyer can rate the purchase with up to 5 stars and, if they want, write a comment.
 
-Ratings are tied to individual transactions, not to shows. Each completed order gives the buyer one opportunity to rate you with up to 5 stars and a written comment.
+If the buyer does not rate, a rating may be recorded automatically after a few days. The deadline to rate is shown on the order itself.
 
-## Where your rating shows up
-
-Your overall rating is visible on your **profile page**, in the **Ratings & Reviews** tab. Anyone visiting your profile, buyers, other sellers, and viewers, can see your average rating and the comments you have received.
-
-![Ratings & Reviews tab on the seller profile showing 4.9 out of 5 with 127 Reviews and two buyer reviews with stars and text](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/manage-ratings-and-reviews-as-a-seller__profile-rating-summary__en__v2.png)
-
-The screen shows two highlighted numbers, **the average rating** (1 to 5) and **the total number of Reviews** received. Below that, the list of individual reviews with the buyer's name, the date, the stars, and the written comment.
-
-Your rating is the average of every review you have received. The more transactions you complete, the more stable your average becomes over time.
+You can also rate your buyers. On the sale screen, once the order is completed, a button to rate the buyer appears.
 
 ## How a buyer rates you
 
-When confirming delivery of an order, the buyer taps **Rate** inside the purchase screen. A sheet opens with 5 purple stars and a comment field.
+1. When the order is completed, the buyer opens the purchase in the app and taps the rate button (**Avaliar Vendedor** (Rate Seller) on iPhone, **Avaliar** (Rate) on Android)
+2. They tap the stars to choose a rating
+3. If they want, they write a comment in the **Como foi seu produto?** (How was your product?) field
+4. They tap **Enviar** (Send)
 
 ![Rating sheet titled Write a feedback with five purple stars, the prompt Tap a Star to Rate, and a How was your product field](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/manage-ratings-and-reviews-as-a-seller__rate-transaction-sheet__en__v2.png)
 
-The buyer taps the stars to set the rating, writes a short comment about the experience, and finishes by tapping **Send**. The review appears on your profile right away.
+Once sent, the rating is recorded and the buyer cannot change it.
 
-The comment field is optional, but most buyers write something. Positive comments become social proof for future buyers who visit your profile.
+## Where your rating appears
 
-## What buyers rate
+Your average rating and number of reviews appear on your profile. People who visit your profile find the **Avaliações** (Reviews) tab, with buyers' ratings and comments.
 
-When leaving a rating, the buyer evaluates the whole experience. The factors that weigh most are:
+To see your own reviews, open your profile and tap your rating. The **Classificações e Avaliações** (Ratings & Reviews) screen shows your average (out of 5) and the list of reviews you received.
 
-- **Product accuracy**, did the item match the description, photos, and stated condition
-- **Shipping speed**, was the package shipped quickly after the sale
-- **Packaging quality**, did the item arrive well protected and undamaged
-- **Communication**, did you respond quickly when the buyer had questions
+Your rating is the average of all your reviews. The more completed sales you have, the more stable it becomes.
+
+## What matters in a rating
+
+The buyer rates the whole experience. What counts most:
+
+- **Item as described**: correct condition, photos and description
+- **Fast shipping**: the package posted soon after the sale
+- **Good packaging**: the item arrives protected and undamaged
+- **Communication**: quick answers when the buyer has questions
 
 ## How to keep a high rating
 
 ### Be accurate in your listings
 
-The most common cause of low ratings is a gap between what the buyer expected and what they received.
+- **Describe the condition honestly.** If the item has a flaw, say so in the description and show it in the photo
+- **Show the real item.** Photograph the product you will ship
+- **Check measurements and details** before listing
 
-- **Describe the condition honestly.** If there is a flaw, mention it in the description AND show it in a photo
-- **Use accurate measurements and sizes.** Double-check labels and measure when needed
-- **Show the actual item.** Don't use stock photos, photograph the real product you are shipping
+### Ship fast
 
-### Ship quickly
-
-Speed matters. Buyers expect their item shortly after they pay.
-
-- **Generate the shipping label as early as possible** after the show
-- **Drop the package off at a Correios agency within 1 or 2 days**
-- **Don't batch orders.** Ship each one as it comes in
+- **Create the label as soon as you can** after the sale
+- **Post the package within the shipping deadline** shown on the order
+- **Don't let orders pile up.** Ship each one as it comes in
 
 ### Pack with care
 
-A poorly packed item that arrives damaged turns into a return and a bad rating, every time.
+- Use packaging that fits the item
+- Protect delicate items, such as cards, with bubble wrap or rigid protectors
+- Seal the package well so it does not open in transit
 
-- Use packaging that fits the size and fragility of the item
-- Add protection (bubble wrap, top loaders) for delicate items like cards
-- Seal the package so it doesn't open in transit
+### Let buyers know when something changes
 
-### Communicate when needed
+If there is a delay or a problem, message the buyer before they have to ask. A quick explanation makes a big difference.
 
-If there is a delay or an issue with an order, message the buyer before they complain. A quick note explaining the situation makes a big difference in the final rating.
+## How to handle an abusive review
 
-## How to report an unfair review
+You cannot delete reviews. Reviews based on a real experience, even negative ones, stay on your profile.
 
-You can't delete individual ratings on your own. Legitimate ratings, even negative ones, are permanent. But if a rating violates Jamble's policies (offensive content, clear fraud, retaliation), you can report it.
+If a review contains offensive or abusive content, contact support through the in-app chat and tell us which review it is. Only Jamble support can remove a review, after looking into the case.
 
-To report, open the buyer's profile, tap the menu (three dots in the top right), and choose **Report**.
-
-![Profile options menu with Report in blue, Block in red, and Cancel below](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/manage-ratings-and-reviews-as-a-seller__report-profile-options__en__v2.png)
-
-The **Report** option opens a form where you describe the reason for the report. The **Block** option prevents the buyer from interacting with you again (joining shows, sending messages, buying). Cancel closes the menu.
-
-The support team reviews the report and removes the rating if it breaks the policies. Ratings based on real experience, even negative ones, are not removed.
+If the buyer's behavior is also a problem, you can open their profile, tap the menu and choose **Denunciar** (Report) or **Bloquear** (Block).
 
 ## Important tips
 
-- **Every transaction matters.** A low rating when you have few reviews drags your average down a lot. Consistency is key
-- **First ratings weigh more.** New sellers without history have to nail the first few sales to build a reputation
-- **Ratings are permanent.** Focus on preventing bad ratings (fast shipping, careful packaging, honest description) rather than trying to fix them after
-- **Quality over quantity.** It's better to sell fewer items with excellent service than many items with sloppy fulfillment
-- **Reply quickly to messages.** A buyer who feels heard rarely leaves a low rating, even when something goes wrong
+- **Every sale counts.** When you have few reviews, a low rating weighs more on your average
+- **Prevent rather than fix.** Fast shipping, careful packaging and honest descriptions avoid bad ratings
+- **Reply quickly.** A buyer who feels heard rarely leaves a low rating, even when something goes wrong
 
-## Common questions
+## Frequently asked questions
 
-**When does a buyer rate me?**
-The buyer is prompted to rate right after confirming delivery of the order. They can also rate later from their order history.
+**When can the buyer rate me?**
+After the order is completed. The rate button appears on the purchase screen.
 
-**Can I see individual ratings or just the average?**
-Your profile shows the average rating and the total number of reviews on top. Each individual review appears below, with the buyer's name, stars, date, and written comment.
+**What happens if the buyer does not rate?**
+A rating may be recorded automatically after a few days. The deadline is shown on the order.
 
-**Can the buyer change a rating after sending it?**
-No. As soon as the buyer taps **Send**, the rating is recorded and stays permanent on your profile.
+**Can the buyer change the rating after sending it?**
+No. Once sent, the rating is recorded.
 
-**Does my rating affect my ability to sell?**
-Your rating doesn't stop you from selling, but it heavily affects buyer trust. Sellers with consistently low ratings tend to get fewer viewers in their shows and fewer sales.
+**Can I ask to remove a negative review?**
+Reviews based on a real experience are not removed. If the review is offensive or abusive, contact support through the in-app chat.
 
-**How can I recover from a low rating?**
-Focus on delivering great experiences in your next transactions. As you accumulate positive reviews, your average gradually goes up. There is no shortcut, consistent quality is the only path.
+**Can I rate my buyers?**
+Yes. On the completed sale screen, tap the button to rate the buyer.
 
-**Can buyers leave written comments?**
-Yes. Along with the stars, the buyer can write a comment in the **How was your product?** field. Those comments show up in the **Ratings & Reviews** tab on your profile.
+**Does my rating stop me from selling?**
+No, but it influences buyers' trust. A good rating helps bring more people to your lives.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Talk to us through the in-app chat.

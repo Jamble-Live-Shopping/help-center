@@ -1,130 +1,99 @@
-# Batalhas, Competição por Times no Seu Show
+# Batalhas na sua live
 
 ## O que você vai aprender
 
-Este guia explica como as Batalhas funcionam na Jamble. Uma Batalha é uma competição ao vivo que acontece dentro do seu próprio show, sua audiência se divide em dois times (Vermelho e Azul) e ganha pontos fazendo ofertas e enviando gemas. O time vencedor ganha recompensas, e você ganha uma audiência mais engajada.
+Este guia explica como funcionam as Batalhas na Jamble. Uma Batalha é uma competição por times que acontece dentro da sua própria live: sua audiência se divide em dois times, que ganham pontos comprando e enviando gemas. Os melhores jogadores do time vencedor ganham cupons de frete, e a sua live ganha mais energia e mais vendas.
 
 ## Antes de começar
 
 Você precisa de:
 - Uma conta de vendedor aprovada na Jamble
-- Um show ao vivo ativo (Batalhas são iniciadas durante um show)
-- Produtos prontos para vender durante a batalha
+- Uma live no ar. A Batalha só começa com a live em andamento, não no modo de prática
+- Produtos prontos para vender durante a Batalha
 
-## O que é uma Batalha?
+## Uma Batalha por semana
 
-Uma Batalha é uma competição com tempo que acontece durante seu show ao vivo. Veja como funciona:
+Você tem uma Batalha por semana. O próprio app mostra quando ela está disponível, no menu da live:
+- **Batalha pronta**: sua Batalha da semana está liberada. Comece a live para iniciar
+- **Iniciar Batalha**: com a live no ar, toque para começar
+- **Próxima batalha** com o tempo restante: você já fez a Batalha da semana. O app mostra quando ela volta
 
-1. **Você inicia uma Batalha** durante seu show
-2. **Sua audiência se divide em dois times**: Vermelho e Azul
-3. **Espectadores ganham pontos** fazendo ofertas nos seus produtos e enviando gemas
-4. **Quando o tempo acaba**, o time com mais pontos ganha
-5. **Vencedores do time ganhador** recebem recompensas (créditos que podem usar em compras futuras)
+## Como funciona
 
-Batalhas são feitas para aumentar o engajamento e as vendas. Quando sua audiência está competindo, eles fazem mais ofertas e ficam mais tempo no seu show.
+1. **Você inicia a Batalha** pelo menu da live e escolhe a duração
+2. **Os espectadores entram em um time.** Ao comprar ou enviar gemas pela primeira vez, cada um entra no time vermelho ou no azul, escolhido automaticamente pela Jamble
+3. **Os times ganham pontos** com as compras pagas e as gemas enviadas durante a Batalha
+4. **Quando o tempo acaba**, o time com mais pontos vence. Se os pontos empatarem, a Batalha termina empatada
+5. **Os melhores jogadores do time vencedor** recebem cupons de frete
 
-## Como os pontos funcionam
-
-Espectadores ganham pontos para seu time de duas formas:
-
-- **Fazer ofertas em produtos**, 15 pontos para cada R$ gasto
-- **Enviar gemas (emojis)**, 1 ponto para cada gema enviada
-
-Quanto mais sua audiência compra e interage, mais pontos o time deles ganha.
+As regras de pontos e as recompensas aparecem no próprio app, em **Exibir regras de batalha** e em **Como ganhar pontos?**.
 
 ## Passo a passo
 
-### Passo 1: Inicie uma Batalha durante seu show
+### Passo 1: inicie a Batalha
 
-Enquanto estiver ao vivo, abra a opção de Batalha nos controles do show. Aparece um seletor pedindo a **duração da batalha**.
+Com a live no ar, abra o menu da live e toque em **Iniciar Batalha**. Escolha uma das durações que o app oferece.
 
-![Alerta Escolha a duração da batalha com botões 30m, 1h, 1h 30, 2h e Cancelar](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/battles-team-competition-in-your-show__battle-duration-picker__pt-br__v2.png)
+Escolha uma duração que combine com o tempo que você ainda vai vender. O app avisa: não termine antes do tempo, ou os espectadores podem não receber as recompensas.
 
-Escolha uma duração que corresponda ao tempo que você planeja continuar vendendo. As durações disponíveis e o valor das recompensas dependem do **nível da sua batalha** (veja a seção Recompensas e níveis de batalha mais abaixo).
+### Passo 2: sua audiência entra nos times
 
-### Passo 2: Sua audiência entra nos times
+Quando a Batalha começa, os espectadores veem a tela de boas-vindas e podem abrir as regras.
 
-Assim que a Batalha começa, uma tela de boas-vindas aparece para cada espectador, anunciando o time **Vermelho** ou **Azul** ao qual ele foi designado.
+![Tela Bem-vindo à batalha com o time do espectador, a pontuação e o botão Exibir regras de batalha](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/battles-team-competition-in-your-show__battle-welcome__pt-br__v2.png)
 
-![Tela de boas-vindas Bem-vindo à batalha em fundo escuro com avatar do espectador, indicador da equipe Vermelha e botão Exibir regras de batalha](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/battles-team-competition-in-your-show__battle-welcome__pt-br__v2.png)
+Durante a Batalha, uma barra na live mostra os pontos de cada time em tempo real. Os espectadores também podem ver a classificação e quanto cada um pode ganhar.
 
-Logo depois, uma barra de progresso aparece sobreposta ao show, mostrando a pontuação de cada time em tempo real, o cronômetro e um atalho para a classificação.
+### Passo 3: continue vendendo
 
-![Barra de progresso da batalha sobreposta ao show com pontuação Vermelho 1.250 e Azul 980, cronômetro 45:30 e botão Ver classificação](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/battles-team-competition-in-your-show__battle-progress-bar__pt-br__v2.png)
+Siga a live normalmente: fixe produtos, inicie vendas e converse com o chat. Cada compra paga e cada gema enviada contam pontos para o time de quem comprou ou enviou.
 
-A barra cria urgência, quando um time fica para trás, os espectadores daquele time se esforçam mais.
+### Passo 4: a Batalha termina
 
-### Passo 3: Continue vendendo durante a Batalha
+Quando o tempo acaba, a Batalha termina e o time vencedor é anunciado. Cada espectador vê o resultado e a sua posição. Quem ganhou recompensa toca em **Reivindicar** para pegar o cupom.
 
-Continue seu show normalmente, fixe produtos, inicie vendas, interaja com sua audiência. Cada compra e cada gema enviada durante a Batalha conta para a pontuação dos times.
+Para encerrar a live com uma Batalha em andamento, encerre a Batalha primeiro, no menu da live, em **Encerrar Batalha**.
 
-A Batalha roda junto com seu show. Você não precisa fazer nada especial, apenas continue vendendo e engajando sua audiência.
+## Recompensas
 
-### Passo 4: A Batalha termina
+- As recompensas são **cupons de frete**, para usar em compras nas lives
+- Só os melhores colocados do time vencedor recebem. A tela da Batalha mostra quanto cada posição pode ganhar
+- O espectador precisa estar na live quando a Batalha termina para receber a recompensa
+- A validade aparece no próprio cupom
 
-Quando o tempo acaba, a Batalha termina automaticamente. O time vencedor é anunciado e os melhores jogadores do time vencedor recebem recompensas.
-
-![Tela de fim de batalha em fundo escuro com Equipe vermelha venceu, pódio com top 3 jogadores marina_pkmn, lucas_tcg e rafa.diecast e botão Reivindicar R$ 25](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/battles-team-competition-in-your-show__battle-ended__pt-br__v2.png)
-
-Cada espectador vê qual time ganhou, os top participantes, sua própria posição e a recompensa que pode reivindicar.
-
-## Recompensas e níveis de batalha
-
-Os melhores jogadores do time vencedor recebem **créditos** (créditos de loja que podem usar em compras futuras). Os créditos expiram **7 dias** depois de concedidos. O valor da recompensa distribuída no seu show depende do **nível da sua batalha**.
-
-### Os 3 níveis
-
-Cada vendedor tem um nível de batalha. Quanto mais alto o nível, maior a recompensa que sua batalha distribui aos espectadores vencedores.
-
-- **Bronze**, R$ 25 de recompensa, padrão para todos os vendedores ativos
-- **Silver**, R$ 50 de recompensa, suas 3 melhores lives nos últimos 14 dias têm em média 600+ espectadores e 12h+ de tempo assistido por live
-- **Gold**, R$ 200 de recompensa, suas 5 melhores lives nos últimos 14 dias têm em média 1.400+ espectadores e 40h+ de tempo assistido por live
-
-### Como seu nível é calculado
-
-Seu nível é recalculado automaticamente todos os dias com base nas suas **melhores lives dos últimos 14 dias**. Apenas as lives que duraram **30 minutos ou mais** são contadas, então um problema técnico ou uma live curta de promoção não derruba seu nível.
-
-Você não precisa fazer nada de especial. Quanto mais consistente for o desempenho das suas melhores lives, mais alto seu nível e maior a recompensa que sua batalha oferece à sua audiência.
-
-Participantes de primeira vez em Batalhas também recebem um pequeno bônus só por participar.
+O valor das recompensas e as durações disponíveis aparecem no app na hora de iniciar a Batalha.
 
 ## Dicas importantes
 
-- **Não encerre a Batalha antes do tempo.** Se você parar a Batalha antes do cronômetro zerar, os espectadores não receberão suas recompensas. Escolha uma duração com a qual possa se comprometer
-- **Batalhas funcionam melhor em shows longos.** Se está planejando um show curto (menos de 30 minutos), uma Batalha pode não ser a melhor opção
-- **Continue vendendo ativamente durante a Batalha.** Quanto mais produtos colocar à venda, mais oportunidades sua audiência tem de ganhar pontos. Isso significa mais engajamento e mais vendas para você
-- **Batalhas aumentam as gemas.** Como gemas contam como pontos, espectadores enviam mais gemas (emojis) durante uma Batalha. Isso adiciona diversão e energia ao seu show
-- **Observe a barra de progresso.** O placar ao vivo cria urgência. Quando um time está atrás, os espectadores daquele time se esforçam mais, fazendo mais ofertas e enviando mais gemas
+- **Não encerre a Batalha antes do tempo.** Escolha uma duração que você consiga cumprir
+- **Prefira lives longas.** A Batalha rende mais quando você tem bastante tempo de venda pela frente
+- **Continue colocando produtos à venda.** Mais vendas significam mais chances de pontos para a audiência
+- **Lembre o chat de ficar até o fim.** Só quem está na live no final recebe a recompensa
+- **Anuncie a Batalha com antecedência.** Avise seus seguidores que a live vai ter Batalha
 
 ## Perguntas frequentes
 
-**Preciso de um número mínimo de espectadores para iniciar uma Batalha?**
-Não. Você pode iniciar uma Batalha a qualquer momento do seu show ao vivo, independente de quantos espectadores tenha. Porém, Batalhas são mais divertidas com uma audiência maior.
+**Preciso de um número mínimo de espectadores?**
+Não. Você pode iniciar a Batalha com qualquer número de espectadores, mas ela fica mais divertida com mais gente.
 
-**Quantas Batalhas posso fazer por show?**
-Uma Batalha por show. Você também só pode iniciar uma Batalha por dia.
+**Quantas Batalhas posso fazer?**
+Uma por semana. O menu da live mostra quando a próxima fica disponível.
 
-**Posso escolher para qual time meus espectadores vão?**
-Não. Os espectadores são designados automaticamente. A distribuição é aleatória e equilibrada.
+**Posso escolher o time dos espectadores?**
+Não. A Jamble escolhe o time automaticamente. O espectador fica no mesmo time até o fim da Batalha.
 
-**O que acontece se eu encerrar meu show com uma Batalha ativa?**
-Encerrar seu show também encerra a Batalha. Se o cronômetro ainda não expirou, a Batalha pode terminar prematuramente e as recompensas podem não ser distribuídas. Termine a Batalha primeiro, depois encerre seu show.
+**O que conta pontos?**
+Compras pagas e gemas enviadas durante a Batalha. As regras completas aparecem no app, em **Como ganhar pontos?**.
 
-**Os espectadores podem trocar de time?**
-Não. Uma vez designado a um time, o espectador fica nele por toda a Batalha.
+**O que acontece se o espectador sair antes do fim?**
+Ele não recebe a recompensa, mesmo que o time dele vença.
 
-**Eu (vendedor) ganho alguma coisa com a Batalha?**
-Batalhas não dão um bônus direto a você, mas geram significativamente mais engajamento e vendas durante seu show. Mais ofertas, mais gemas, mais compradores ativos.
+**Eu ganho algo com a Batalha?**
+A Batalha não dá prêmio ao vendedor, mas costuma trazer mais compras, mais gemas e uma audiência mais animada.
 
-**Os espectadores precisam ficar até o final para ganhar recompensas?**
-Sim. Os espectadores precisam estar online quando a Batalha termina para receber suas recompensas. Se saírem antes, perdem, mesmo que o time deles ganhe.
-
-**Qual a diferença entre uma Batalha e um Raid?**
-Uma Batalha é uma competição dentro do SEU show, sua audiência se divide em dois times e compete. Um Raid é quando você redireciona sua audiência para o show de OUTRO vendedor quando o seu termina.
-
-**Como faço para subir de nível (Bronze, Silver, Gold)?**
-Continue fazendo lives consistentes e de qualidade. Seu nível é recalculado automaticamente com base nas suas melhores lives dos últimos 14 dias, e apenas lives de 30 minutos ou mais são contadas. Quanto mais espectadores você atrai e quanto mais tempo eles ficam, mais alto seu nível e maior a recompensa da sua batalha.
+**Qual a diferença entre Batalha e raid?**
+A Batalha é uma competição dentro da sua live. O raid envia seus espectadores para a live de outro vendedor quando você encerra a sua. Veja [Fazer um raid na live de outro vendedor](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288118).
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app.

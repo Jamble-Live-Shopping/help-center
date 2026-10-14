@@ -1,107 +1,95 @@
-# Pack and Ship Your Order
+# Pack and ship your order
 
 ## What you'll learn
 
-How to prepare and ship an order after a buyer purchases your product: pack the item, print the label, drop it off at Correios, and track the delivery. The goal is to go from sale to "Shipped" safely and on time.
+The full path of an order after the sale: generating the label, packing, dropping off with Correios and following the delivery until the order is completed.
 
 ## Before you start
 
 You need:
-- A confirmed sale (status **Confirmed** on the order screen)
-- Your shipping preferences configured (see **Edit your shipping preferences**)
-- A printer (thermal or standard) for the label
-- Appropriate packaging material for the product (box or padded envelope, tape, internal protection)
+- A confirmed sale. For live sales, tap **Confirmar Vendas** (Confirm sales) on the live dashboard after the live ends. Loja sales need to be confirmed by you one by one
+- Your shipping settings ready. See [Shipping settings](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288082)
+- A regular or thermal printer
+- Packaging material that fits the item
 
-## Your deadline
+## Your shipping deadline
 
-After confirming the sale, you have **3 business days** to drop the package at Correios. This deadline is fixed and appears at the top of the order screen.
+The deadline to ship is usually about 10 days after the sale is confirmed. In exceptional situations, such as a Correios strike, it can be extended to up to 20 days. The exact deadline always appears in the order, under **Prazo de envio** (Shipping deadline).
 
-![Deadline banner with warning Ship the parcel quickly, shipping deadline in 2 days and deadline date Apr 24, 2026](./assets/mockups/pack-and-ship-your-order__shipping-deadline__en__v2.png)
+If the deadline passes, the order shows **Envio atrasado** (Shipping overdue). You can still ship, but do it as soon as possible: after a few days, the sale is canceled and the buyer is refunded automatically.
 
-If the package isn't posted within the window, the sale can be canceled automatically and the buyer is refunded. The sooner you ship, the better your seller reputation.
+## Step 1: Find the parcel
 
-## Step 1: Open the order and generate the label
+You see all your parcels in **Envios** (Shipments), in the app settings (**Vender** section), or in **Envios** in the Seller Hub. You can also open your live's dashboard.
 
-In the app, go to **Settings** and tap **My Sales**. Open the order that is **Confirmed**.
+Each parcel shows the status of what is left to do, for example **Etiqueta pendente** (Label required) or **Pronto para enviar** (Ready to ship). In the Loja, if you see **Revisar vendas pendentes** (Review pending sales), confirm the sale first, within the time shown in the app.
 
-On the order screen you see the buyer, the product, the amount, and a status card with the **Generate shipping label** button. Tap the button to create the label.
+## Step 2: Generate the label
 
-![Order details screen with Confirmed status, progress bar, and purple Generate shipping label button](./assets/mockups/pack-and-ship-your-order__order-detail-ready-to-ship__en__v2.png)
+1. If the parcel shows **Adicionar NF** (Add invoice) or **Isentar NF** (Exempt invoice), complete the invoice step
+2. Tap **Adicionar Etiqueta** (Add label)
+3. When the label is ready, open it with **Ver Etiqueta** (See label)
 
-The label is calculated by Jamble's system based on the product's shipping profile and the buyer's address. You don't need to visit the Correios website or create anything manually. Details in **Generate and print shipping labels**.
+In the Seller Hub, use **Imprimir Etiqueta** (Print label). The full step by step is in [Generate and print shipping labels](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288141). If you see an error, see [Troubleshoot label generation errors](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288145).
 
-## Step 2: Pack the item carefully
+## Step 3: Pack the item
 
-Before sticking on the label, pack the item properly. Five minutes here prevents hours of disputes later.
+- Use a box or envelope of the right size, without too much empty space
+- Protect fragile items with bubble wrap or crumpled paper
+- Cards and collectibles go in a sleeve and toploader before packing
+- Close every opening with wide tape
 
-- Right-size box or padded envelope. Package too wide and the item moves around; too tight and it breaks in the creases
-- Internal protection for fragile items: bubble wrap, crumpled kraft paper, packing peanuts
-- Letters and collectibles in toploader + sleeve before going in the box
-- Strong packing tape, sealing all openings
+If the buyer bought several items in the same live, they all go together in the same parcel, with one label. See [Bundled shipments](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288138).
 
-For category-specific tips, see **Packaging guidelines**.
+More tips in [Packaging guidelines](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288140).
 
-## Step 3: Print and affix the label
+## Step 4: Print and stick the label
 
-Print the label in the format you configured in your preferences:
+Print in the format you chose in your preferences and stick the label on the largest flat side of the parcel. Do not put tape over the barcode and do not write on the label.
 
-- **Half page (PDF)**: prints on A4 sheet, you cut and tape it on
-- **Full page (PDF)**: prints on A4 sheet, fold and tape it on
-- **Thermal 4×6**: comes ready from the thermal printer, just peel and apply
+## Step 5: Take it to Correios
 
-Affix the label on a flat surface of the package, with no creases and no tape over the barcode. The Correios scanner needs to read the barcode.
+Take the parcel to a Correios agency or drop-off point. To find one near you, open the parcel in **Envios** and look at **Ponto de entrega mais próximo** (Closest drop-off point), with the **Ver no mapa** (See on map) option. In the Seller Hub, use **Encontrar um ponto de postagem** (Find a drop-off point).
 
-## Step 4: Take it to Correios
+Keep the drop-off receipt until the order is completed.
 
-Any Correios branch accepts it. Hand it over at the counter, the attendant scans the label and gives you a proof of mailing.
+## Step 6: Follow the delivery
 
-**Keep the receipt until the order is completed.** If the buyer claims they didn't receive it, this paper is your proof of shipment.
+When Correios registers the parcel, the order moves to **Enviado** (Shipped) and tracking appears for you and the buyer. In **Envios**, the most common statuses are:
 
-## Step 5: Track the shipment
+- **Pronto para enviar** (Ready to ship): the label was generated and the parcel still needs to be dropped off
+- **Enviado** (Shipped): the parcel is on its way
+- **Entregue** (Delivered): the parcel reached the buyer
+- **Falha na entrega** (Delivery failed): Correios could not deliver. Check the tracking for the next steps
+- **Devolvido** (Returned): the parcel came back to you. See [What to do if a shipment is returned to you](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288132)
 
-As soon as Correios scans the label, the order status changes to **Shipped** and Jamble pulls the tracking automatically. You and the buyer see the code on the order screen.
+Sometimes tracking stops updating after the first scan. Open the parcel in **Envios** and tap **Atualizar rastreio** (Refresh tracking; on Android, **Atualizar**). If it is still stuck, contact support. See also [What to do if a package is delayed](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288128).
 
-![Order screen with Shipped status, In delivery on the purple bar and tracking code OQ451782034BR](./assets/mockups/pack-and-ship-your-order__mark-as-shipped__en__v2.png)
+## Step 7: Order completion
 
-Statuses you'll see during delivery:
-
-- **Pre-transit**: label created, package not yet scanned
-- **In transit**: package on the way
-- **Delivered**: arrived at address
-- **Returned**: Correios is returning it to you
-
-If tracking doesn't update after 5 business days, see **What to do if a package is delayed**.
-
-## Step 6: Wait for buyer confirmation
-
-After delivery, the buyer has **3 days** to confirm the contents. If they don't do anything, the order is completed automatically and payment goes to your wallet.
-
-The amount becomes available for withdrawal after completion. The timeline for your bank account withdrawal depends on your payout cycle, see **Understand the earnings payout timeline**.
+After delivery, the buyer can confirm they received it. If they do not confirm, the order is completed automatically a few days after delivery. Once the order is completed, the amount moves on to your wallet. Learn more in [How you get paid](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288155).
 
 ## Best practices
 
-- **Pack before generating the label.** If the package ended up larger or heavier than the profile expected, you adjust the weight before paying for the label and avoid freight adjustment later
-- **Photo of packed parcel.** Some sellers take a photo of the closed package with the label visible. It becomes extra proof in case of dispute
-- **Avoid weekends.** Correios branches near holidays get crowded. Take the package on Monday or Tuesday so tracking starts early
-- **Don't write by hand on the label.** Any marking can block automatic barcode reading
+- **Generate the label right after the sale.** Do not leave it for the last day of the deadline
+- **Take a photo of the closed parcel** with the label visible. It helps if any question comes up later
+- **Check the buyer's address** on the label before sticking it
+- **If you cannot ship,** use **Cancelar venda** (Cancel sale) in the order instead of letting the deadline pass. The buyer is refunded to the same payment method. Frequent cancellations can restrict your account
 
 ## Frequently asked questions
 
-**What if the actual weight is different from the shipping profile?**
-Adjust the weight on the order screen before generating the label. The system recalculates the shipping with the correct value. If you already generated the wrong label, see **Change or fix your shipping label**.
+**What if the real parcel is bigger or heavier than what the product says?**
+Contact support before generating the label. See [Make a shipping adjustment](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288137).
 
-**Can I use a different carrier instead of Correios?**
-On Jamble Brasil the official integration is with Correios (PAC and SEDEX). If you need to use another carrier, contact support before posting.
+**Can I use another carrier?**
+No. All Jamble labels are Correios labels.
 
-**Does the buyer see my address?**
-No. The buyer sees the return address only as city and state, never the full address.
+**Can I use a label I bought myself?**
+No. Always use the label generated by Jamble. It is what connects the tracking to the order.
 
-**Can I edit the label after printing?**
-If the package hasn't been posted yet, yes. Open the order, cancel the current label, and generate a new one. Details in **Change or fix your shipping label**.
-
-**What if the package is returned to me?**
-When Correios returns the package (incomplete address, not picked up, etc.), the order status changes and you see the reason on screen. See **What to do if a shipment is returned to you**.
+**I made a mistake on the label. Can I generate another one?**
+Not in the app. Contact support before dropping it off. See [Make a shipping adjustment](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288137).
 
 ## Need help?
 
-Chat with the team in the app or email support@jambleapp.com.
+Talk to us in the app chat.

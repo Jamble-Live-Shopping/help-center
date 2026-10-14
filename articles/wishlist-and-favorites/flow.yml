@@ -1,109 +1,63 @@
 # Flow contract for wishlist-and-favorites.
-# v2 rewrite, rerun-2 (2026-05-08): PR #92 rule 10e anchoring + PR #91
-# heading_hierarchy / mockup_orphan_html / source_of_truth_path_missing
-# contracts. Rule 10e canary: `product-bookmark-cta` is the screen that
-# triggered PR #92 (false negative on a flag glyph instead of the real
-# `bookmark_heart_white_icon` heart asset).
-#
+# Wave 2 rewrite (2026-10-14) against production (iOS 5.10.1, Android v5.10.0,
+# backend origin/main). Covers saved lives (iOS Ajustes > Lives salvas,
+# Android profile tab Salvos), saved products (iOS profile tab Favoritos),
+# pre-offers (profile tab Ofertas), saved searches and the Lives salvas
+# notification. The three previous mockups were removed: they showed a heart
+# icon that is not the 5.10.1 save icon (bookmark), a "Lista de desejos" title
+# that does not exist, and iOS-only tabs presented as universal.
 # See process/templates/article-flow.yml for field documentation.
-# See process/00-RUNBOOK.md for the canonical 8-phase workflow.
 
 workflow: article-v2
 mode: v2_rewrite
 audience: buyer_br
 
-job_to_be_done: "Help buyers track items they like and get notified when they go on sale or come back to a show"
+job_to_be_done: "Help buyers save lives, products and searches, find what they saved, follow their pre-offers and get notified when a saved live starts"
 
 source_of_truth:
   ios_files:
-    - WISHLIST/Views/WishlistPageViewController.swift
-    - WISHLIST/Models/WishlistPage.swift
-    - WISHLIST/ViewModels/WishlistPageViewModel.swift
-    - PROFILE/View Models/ProfileBottomViewModel.swift
-    - PRODUCT/View Models/ProductViewModel.swift
-    - PRODUCT/Views/SwiftUI/Components/ProductStickyActionSection.swift
-    - PRODUCT/Views/SwiftUI/Components/ProductPhotosSection.swift
-    - PRODUCT/Views/SwiftUI/Components/ProductSocialActionsSection.swift
+    - WISHLIST/Models/WishlistPage.swift  # own-profile tabs Bookmarks (pt Favoritos) / Bids (pt Ofertas)
+    - WISHLIST/ViewModels/WishlistPageViewModel.swift  # Favoritos = bookmarked products, Ofertas = active pre-offer products
+    - PROFILE/View Models/ProfileBottomViewModel.swift  # wishlist tabs only on own profile
+    - PROFILE/ProfileSettings/ProfileSettingsV2ViewController.swift  # Bookmarked shows (pt Lives salvas) settings entry, Notifications entry
+    - BOOKMARKS/Views/BookmarkShowsViewController.swift  # saved lives screen
+    - PRODUCT/Views/SwiftUI/Components/ProductPhotosSection.swift  # bookmark icon on product photo
     - RESOURCES/Localizable.xcstrings
-    - RESOURCES/Assets.xcassets/bookmark_heart_white_icon.imageset/bookmark_heart_white_icon.svg
-  backend_files: []
+  backend_files:
+    - src/services/notification_service.py  # Lives section toggles incl. Lives salvas
+    - src/routers/product.py  # save_search / get_saved_searches
   legal: []
-  support_context: []
+  support_context:
+    - "Android v5.10.0: profile_tab_bookmarks=Salvos renders BookmarkedShowsScreen (saved lives); prebid_tab_title=Ofertas renders MyOffersScreen; product_detail_action_bookmark=Salvar Item; bookmark_show_save_cta=Salvar"
 
 content_contract:
   must_answer:
-    - "favoritos"
-    - "ofertas"
-    - "bookmark"
-    - "notifica"
+    - "Lives salvas"
+    - "Favoritos"
+    - "Ofertas"
+    - "Salvos"
   forbidden_terms:
     - "regex:\\bauction\\b"
     - "regex:\\bleil[aã]o\\b"
+    - "Programas marcados"
+    - "coração"
   must_not_say:
     - "Internal notification scheduling implementation"
     - "Backend service names"
+    - "Claims about what sellers can or cannot see about who saved a product (not verified)"
 
+# No mockups remain after the wave 2 rewrite (see header comment). No new
+# mockups are created in this wave.
 mockup_plan:
-  required: true
-  screens:
-    - name: product-bookmark-cta
-      purpose: "Show the heart bookmark icon on a product photo and the tap-to-save instruction. Canary screen for PR #92 rule 10e: the iOS asset is a heart, not a flag/bookmark glyph."
-      source: ios_required
-      required_icons:
-        - bookmark_heart_white_icon
-      review_checks:
-        - icons_match_ios_source
-        - labels_match_xcstrings
-        - no_invented_ui_state
-      html_must_contain:
-        pt-br:
-          - "ícone de coração"
-        en:
-          - "heart icon"
+  required: false
+  screens: []
 
-    - name: wishlist-tabs
-      purpose: "Show the Wishlist screen with the Favoritos / Ofertas tabs (xcstrings: Bookmarks->Favoritos, Bids->Offers/Ofertas) and saved cards with the heart fill"
-      source: ios_required
-      required_icons:
-        - bookmark_heart_white_icon
-      review_checks:
-        - icons_match_ios_source
-        - labels_match_xcstrings
-        - no_invented_ui_state
-      html_must_contain:
-        pt-br:
-          - "Favoritos"
-          - "Ofertas"
-        en:
-          - "Bookmarks"
-          - "Offers"
-
-    - name: wishlist-empty-state
-      purpose: "Show the empty Wishlist state with the 'Start Exploring Deals' / 'Comece a explorar as ofertas' message and the heart illustration"
-      source: ios_required
-      required_icons:
-        - bookmark_heart_white_icon
-      review_checks:
-        - icons_match_ios_source
-        - labels_match_xcstrings
-        - no_invented_ui_state
-      html_must_contain:
-        pt-br:
-          - "Comece a explorar as ofertas"
-          - "Favoritos"
-          - "Ofertas"
-        en:
-          - "Start Exploring Deals"
-          - "Bookmarks"
-          - "Offers"
-
-icons_required:
-  - bookmark_heart_white_icon
+icons_required: []
 icons_fallback_feather: false
 
-currency_required: false  # mockups show prices on product cards but the body does not document price mechanics
+currency_required: false
 
-toc_required: false  # 10 H2s but the article reads top-down; a TOC would add noise without helping the buyer find a deeper section.
+toc_required: false  # 7 short H2 sections read top-down
 
 risk_flags: []
 resolved_decisions: []

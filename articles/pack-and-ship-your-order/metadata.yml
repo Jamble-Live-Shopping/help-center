@@ -9,7 +9,7 @@ last_sync: 2026-04-22T00:00:00Z
 locales:
   pt-br:
     title: 'Embale e Envie Seu Pedido'
-    description: 'Como preparar, embalar e enviar um pedido pelos Correios apos a confirmacao da venda, com prazo e rastreamento automatico.'
+    description: 'Gere a etiqueta, embale, poste nos Correios e acompanhe a entrega até a conclusão do pedido, dentro do prazo de envio.'
   en:
     title: 'Pack and Ship Your Order'
-    description: 'How to prepare, pack and ship an order via Correios after confirming the sale, with deadline and automatic tracking.'
+    description: 'Generate the label, pack, drop off with Correios and follow the delivery until the order is completed, within the deadline.'

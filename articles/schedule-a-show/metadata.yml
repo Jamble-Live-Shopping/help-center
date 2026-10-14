@@ -10,8 +10,8 @@ author_id: 7980507
 last_sync: 2026-05-08T00:00:00Z
 locales:
   pt-br:
-    title: 'Agendar um Show'
-    description: 'Aprenda a criar e agendar um show ao vivo em quatro passos: titulo, tag, capa e detalhes (data, hora, repeticao).'
+    title: 'Agendar uma live'
+    description: 'Como agendar uma live: capa, título, categoria, data e hora, repetição e notas fixadas. Veja também como editar, adiar ou excluir.'
   en:
-    title: 'Schedule a Show'
-    description: "Learn how to create and schedule a live show in four steps: title, tag, cover, and details (date, time, repeat)."
+    title: 'Schedule a live'
+    description: "How to schedule a live: cover, title, category, date and time, repeat, and pinned notes. Also how to edit, postpone, or delete it."

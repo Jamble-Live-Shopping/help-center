@@ -2,17 +2,17 @@ intercom_id: 10374367
 slug: tracking-your-order
 collection_id: 11348923
 
-# Imported from live Intercom on 2026-10-13 (article previously edited only in the Intercom UI).
-# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+# Retired in wave 2 (Oct 2026): merged into status-explained.
+# Kept only so the sync can unpublish it (state: draft) in both locales.
+# Do not edit or republish. Delete this folder once Intercom shows it as draft.
 default_locale: pt-br
 
-state: published
-last_sync: 2026-08-21T09:33:37Z
+state: draft
 
 locales:
   pt-br:
     title: '3. Acompanhamento do Pedido'
-    description: 'Quando minha encomenda será entregue?'
+    description: 'Conteúdo movido para outro artigo.'
   en:
     title: '3. Tracking Your Order'
-    description: 'When will my order be delivered?'
+    description: 'Content moved to another article.'

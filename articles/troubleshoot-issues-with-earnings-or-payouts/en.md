@@ -1,105 +1,87 @@
-# Troubleshoot Issues with Earnings or Payouts
+# Troubleshoot issues with earnings or payouts
 
-## What you'll learn
+## What you will learn
 
-This guide helps you resolve the most common issues with your earnings and payouts on Jamble. If money from a sale hasn't appeared, a payout is stuck, or the amount doesn't match what you expected, start here before contacting support.
+This guide helps you solve the most common issues with your earnings and withdrawals on Jamble: money stuck in **Vendas pendentes** (pending sales), an inactive **Sacar** (withdraw) button, a failed withdrawal, a refused registration and a change from CPF to CNPJ.
+
+To understand the path of your money from start to finish, see [How you get paid](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288155).
 
 ## Before you start
 
-You need:
-- An approved seller account on Jamble
-- Access to your **My Wallet** (Profile > Settings > My Wallet)
-- Your bank details registered through Pagar.me (Jamble's payment partner)
+Open **Ajustes** (settings) and tap **Minha carteira** (my wallet). On a computer, open **Carteira** (wallet) in the [Seller Hub](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588489).
 
-## Issue 1: My payout didn't appear in my bank account
+## Issue 1: My money is in Vendas pendentes
 
-After you request a payout, it goes through three stages: **Processing** (being processed), **Completed** (finished), and then it can take a few more business days to appear in your bank statement.
+The amount from a sale only moves to **Disponível para saque** (available to withdraw) when both things happen:
 
-**How to check the status:**
-1. Open **My Wallet** in **Settings**
-2. Tap the clock icon in the top right corner to open **Payouts History**
-3. See the status of your most recent payout
-
-![Payouts History showing three payouts with status Completed, Processing and Failed](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/troubleshoot-issues-with-earnings-or-payouts__payouts-status-badges__en.png)
-
-**What each status means:**
-- **Processing**: the payout was requested and is on its way to your bank. It normally takes up to 5 business days depending on your bank
-- **Completed**: Jamble sent the money. If it hasn't arrived in your statement yet, wait another 1 to 2 business days and check with your bank
-- **Failed**: something prevented the transfer. See Issue 4 below
-
-**Still not showing up after 5 business days with Completed status?** Contact support and provide the payout ID (visible in **Payouts History**).
-
-## Issue 2: My earnings are stuck on Pending for a long time
-
-Earnings only become **Available to Withdraw** after an order is **completed**. An order is completed when:
-1. You confirm the order
-2. You ship the product
-3. The buyer receives and confirms receipt (or 3 days pass after delivery without the buyer opening a dispute)
-
-While any of these steps haven't happened, the amount stays on **Pending** in your wallet.
+1. **The payment is released.** With Pix, this takes about 1 day. With a card, up to 30 days, or about 15 days if you turned on [Recebimento Antecipado (early payout)](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588903).
+2. **The order is completed.** The buyer confirms receipt or, if they do not, the order is completed automatically a few days after delivery.
 
 **What to do:**
-1. Go to **My Sales** and check the status of each order
-2. Confirm pending orders as soon as possible
-3. Ship the products and add the tracking code
-4. Wait for the buyer to confirm receipt
 
-If an order was already delivered more than 3 days ago and still shows Pending, there may be an issue with the tracking. In that case, contact support.
+- Tap **Saiba Mais** (learn more) in **Vendas pendentes** to open **Sobre vendas pendentes** (about pending sales) and see the timing
+- Ship your orders as soon as possible. The sooner the package is delivered, the sooner the order is completed
+- If a package's tracking stopped updating, refresh the shipment in **Envios** (shipments). If it is still stuck, contact support
 
-## Issue 3: The amount that arrived is less than I expected
+## Issue 2: The Sacar button is inactive
 
-Jamble retains a service fee on each completed sale, already deducted before the amount is added to your available balance. The amount you see in **Available to Withdraw** is already the net amount.
+The **Sacar** button is inactive in these cases:
 
-**How to check the calculation for an order:**
-1. Open **My Sales**
-2. Tap the order in question
-3. See the breakdown: sale amount, service fee, and net amount credited
+- **Your Disponível para saque balance is below the minimum** shown in the wallet
+- **You withdrew a short time ago.** After a withdrawal, you need to wait a little before making another one. The app shows when you can withdraw again
+- **A verification is missing.** If the wallet shows a notice asking you to verify your identity and bank details, tap the button shown and follow the instructions to the end
+- **Your payout account is not active yet.** Finish the registration from the wallet. See [Set Up and Start a Payout](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288148)
 
-**Other reasons the amount might be less than expected:**
-- Shipping cost is paid by the buyer and is not part of your earnings
-- Canceled or refunded orders don't go into your available balance
-- Orders still on **Pending** appear separately and can't be withdrawn yet
+## Issue 3: My withdrawal failed
 
-If the order breakdown doesn't match what you expected anyway, note the order ID and contact support.
+In **Histórico de saques** (payout history), a withdrawal with the **Falhou** (failed) status shows the reason right below, for example invalid bank details or a closed account.
 
-## Issue 4: Error when starting a payout
+**What to do:**
 
-Some errors appear when you tap **Withdraw**. The most common ones are related to your bank details or your registration with Pagar.me.
+1. Read the reason shown on the withdrawal
+2. In **Dados bancários** (bank details), tap **Atualizar** (update) and check the bank, branch, account and that it is in your name (or in your company's CNPJ)
+3. Request a new withdrawal
 
-![Error modal informing that the payout cannot be started and suggesting to check bank details](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/troubleshoot-issues-with-earnings-or-payouts__withdraw-error-modal__en.png)
+If the withdrawal keeps failing with the correct details, contact support and share the withdrawal number.
 
-**Quick checklist:**
+## Issue 4: My withdrawal has not arrived
 
-**1. Is your Pagar.me registration complete?**
-If you see a message asking to "verify your identity and bank details," your registration hasn't been finished yet. Tap the indicated button and follow the registration flow (Individual or Empresa, depending on your case).
+A withdrawal usually arrives within 5 business days, depending on your bank.
 
-**2. Are your bank details correct?**
-- Open **My Wallet**
-- In the **Bank Details** section (below the balance card), tap **Update**
-- Check:
-    - The account is in your name (or in your company's CNPJ, if registered as Empresa)
-    - Account number and bank code are correct
-    - Account type is correct (checking or savings)
+- Check the status in **Histórico de saques**
+- If it is **Criado** (created) or **Pendente** (pending), tap **Não recebeu ainda?** (didn't receive yet?) and then **Atualizar** (refresh) to see the latest status
+- If it has taken longer than that, contact support and share the withdrawal number
 
-![Bank Details section with Update button to correct bank information](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/troubleshoot-issues-with-earnings-or-payouts__bank-details-update__en.png)
+## Issue 5: My registration was refused
 
-**3. Is the amount above the minimum?**
-The payout only becomes available when your balance exceeds the minimum amount shown on the **Withdraw** button itself.
+If your payout account was refused, you cannot fix this on your own in the app. Contact support to continue with the registration.
 
-**4. Did you already payout in the last 24 hours?**
-You can only payout once per day. If you just withdrew, wait for the interval and try again the next day.
+## Issue 6: I want to change from CPF to CNPJ
+
+In the wallet, tap **Atualizar** and choose **Mudar de entidade (CPF/CNPJ)** (change entity). The change is reviewed by Jamble.
+
+While the change is being finalized, withdrawals may be paused. Afterwards, the wallet may show the **Conta atual** (current account) and the **Conta anterior** (previous account). The previous account's balance is released as the payments settle, and you can withdraw it separately.
+
+## Issue 7: The amount is lower than I expected
+
+- Jamble's commission is deducted before the amount reaches your wallet, so the wallet already shows what you receive. See [Jamble Seller Fees and Commissions](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288149)
+- Shipping is paid by the buyer and is not part of your earnings
+- Cancelled or refunded sales do not reach the wallet
+- Sales still in **Vendas pendentes** go into a later withdrawal
+
+To see each sale, open **Ajustes** > **Minhas vendas** (my sales).
 
 ## When to contact support
 
 Contact support if:
-- A **Completed** payout didn't appear in your bank after 5 business days
-- A payout shows as **Failed** even with correct bank details
-- An order calculation doesn't match the breakdown in **My Sales**
-- The Pagar.me registration form won't load or freezes
-- A delivered order still shows **Pending** after more than 3 days
 
-When opening a ticket, send:
-- Your Jamble username
-- Payout ID (from **Payouts History**) or order ID (from **My Sales**), as applicable
-- A description of what you expected to see and what happened
-- A screenshot of the error message, if there is one
+- A withdrawal has not arrived after 5 business days
+- A withdrawal keeps failing with the correct bank details
+- Your payout account registration was refused or does not load
+- The tracking of a delivered order is stuck and the amount is still in **Vendas pendentes**
+
+Share your username, the withdrawal or order number and, if you have one, a screenshot of the message.
+
+## Need help?
+
+Talk to us through the in-app chat.

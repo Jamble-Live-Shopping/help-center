@@ -14,7 +14,7 @@ You need:
 
 ## How label generation works
 
-Once the sale is confirmed, you create the Correios label in the app or in the Seller Hub, on your computer. Sales made in a live arrive already confirmed. Loja (shop) sales need to be confirmed by you first.
+Once the sale is confirmed, you create the Correios label in the app or in the Seller Hub, on your computer. For live sales, tap **Confirmar Vendas** (Confirm sales) on the live dashboard after the live ends. Loja (shop) sales are confirmed one by one, in **Revisar vendas pendentes** (Review pending sales).
 
 The label includes:
 

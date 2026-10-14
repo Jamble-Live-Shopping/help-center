@@ -1,54 +1,38 @@
-Jamble é um aplicativo móvel, disponível para iOS e Android, que funciona como um marketplace de live shopping onde compradores e vendedores se conectam por meio de transmissões ao vivo em tempo real.
+# O que é a Jamble?
 
-Na Jamble, vendedores realizam lives para vender produtos. Os compradores podem participar dessas transmissões, enviar ofertas e concluir compras diretamente no aplicativo, interagindo com o vendedor e com a comunidade.
+A Jamble é um app de compras ao vivo, disponível para iOS e Android. Vendedores fazem lives para mostrar e vender produtos, e compradores assistem, conversam no chat e compram em tempo real. Você também pode comprar a qualquer momento na **Loja**, sem precisar de uma live.
 
-A Jamble reúne:
+## O que você vai aprender
 
-- Compras por vídeo ao vivo
-- Interações com produtos em tempo real
-- Pagamentos seguros dentro do aplicativo
-- Envio direto dos produtos dos vendedores para os compradores
-
-A Jamble foi criada para tornar as compras online mais interativas, transparentes e baseadas na comunidade.
-
----
-
-## Como funciona?
-
-A Jamble funciona como um marketplace que conecta vendedores independentes e compradores por meio de experiências em vídeo ao vivo.
+- Como a Jamble funciona para quem compra
+- Como a Jamble funciona para quem vende
+- Como a Jamble protege as compras
 
 ## Para compradores
 
-- Descubra lives em andamento ou programadas no aplicativo
-- Entre em uma live para assistir à apresentação dos produtos
-- Ative sua conta para poder enviar ofertas:
-   - adicione um CPF válido
-   - informe um endereço de entrega completo
-   - adicione um método de pagamento válido
-- Envie ofertas nos produtos apresentados durante a live
-   - a última (maior) oferta antes do fim do tempo definido garante o produto
-- Acompanhe o pedido até a entrega
-- Conclua as transações recebidas
-- Entre em contato com o suporte ao cliente pelas configurações do app
+- **Assista às lives:** encontre lives ao vivo e programadas na página inicial e entre com um toque
+- **Compre nas lives:** envie ofertas ou use **Comprar Agora**, conforme o tipo de venda escolhido pelo vendedor
+- **Compre na Loja:** produtos com preço fixo, carrinho e a opção de fazer uma oferta ao vendedor
+- **Pague no app:** com cartão de crédito ou Pix. Todas as taxas aparecem no resumo do pedido antes de você pagar
+- **Acompanhe o pedido:** o status e o rastreio aparecem em **Minhas compras**
+
+Para começar a comprar, você precisa de CPF, endereço de entrega e uma forma de pagamento. Veja [Como Comprar?](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/10870621) e [Comprar na Loja: carrinho e ofertas](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/17588933).
 
 ## Para vendedores
 
-- Crie e configure sua conta de vendedor:
-   - candidate-se para ser um vendedor de lives
-   - tenha sua conta aprovada
-   - cadastre seus dados bancários
-   - participe da sessão de onboarding com nossa equipe de treinamento
-- Programe uma live
-- Cadastre os produtos que serão vendidos na live
-- Inicie as vendas e receba ofertas em tempo real
-- Envie os produtos vendidos aos compradores
-- Acompanhe o desempenho das suas vendas
-- Receba os repasses após a conclusão da transação pelo comprador
+- **Candidate-se:** no seu perfil, toque em **Candidate-se para vender ao vivo**. Você recebe um aviso quando for aprovado
+- **Venda ao vivo e na Loja:** programe lives e crie anúncios com preço fixo
+- **Envie os pedidos:** crie a etiqueta de envio no app ou no Seller Hub e poste o pacote
+- **Receba seus ganhos:** o valor das vendas fica na sua carteira e você faz o saque para a sua conta bancária
 
----
+Para saber mais, veja [Comece a Vender na Jamble](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288077) e [Seller Hub: venda pelo computador](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/17588489).
 
-A Jamble atua como facilitadora da plataforma:
+## Compras seguras
 
-- Os pagamentos são processados com segurança dentro do aplicativo
-- O status dos pedidos é acompanhado em tempo real
-- O suporte ao cliente pode ser acessado pelas configurações do app
+- Os pagamentos são feitos dentro do app, e os dados do seu cartão não são compartilhados com o vendedor
+- O status de cada pedido é atualizado no app, do pagamento até a entrega
+- Se algo der errado com um pedido, o suporte da Jamble ajuda você
+
+## Precisa de ajuda?
+
+Fale com a gente pelo chat do app.

@@ -1,82 +1,71 @@
-# 1. How do I create an account?
+# FAQ Buyers
 
-To create an account on Jamble, simply download the app from the App Store or Google Play Store, then sign up using your phone number.
+Quick answers to the most common questions from buyers on Jamble. Each answer leads to the full article.
 
-# 2. What is a Live Show?
+## How do I create an account?
 
-A live show on Jamble is a real-time selling experience where sellers showcase products through a live video stream, allowing buyers to send offers instantly. The goal of live selling is to help sellers move inventory efficiently while giving buyers access to exclusive deals, real-time product insights, and direct interaction with the seller.
+Download the app from the App Store or Google Play and sign in with your phone number, Google or Apple. You must be 18 or older. See [How to create an Account?](https://intercom.help/jamble-bb4bea116bbe/en/articles/10371402).
 
-# 3. How do I send an offer?
+## What do I need to buy?
 
-During a live show, once seller starts the sale you have 5s to 1min to send offers, the highest get the item. For any extra offer sends in the limited time frame, it adds +5s or +10s to the timer.
+A CPF, a shipping address and a payment method. See [How to purchase?](https://intercom.help/jamble-bb4bea116bbe/en/articles/10870621).
 
-Buyers can send offers by sliding to the right on the main purple button, it will add +R$5 or R$50 depending the current price. Buyers can send higher offer amount by clicking on "+" to custom the increase amount.
+## What is a live?
 
-# 4. Where do I see my order?
+It is a live stream where the seller shows products and you can chat, make offers and buy on the spot. See [How to join a live?](https://intercom.help/jamble-bb4bea116bbe/en/articles/10373431).
 
-To purchase on the app, your payment must succeed after placing the highest offer before timer ends.
+## How do I make an offer in a live?
 
-Once your payment is succeeded, you will see it in:
+When the sale of a product starts, swipe the button to send your offer. The button always shows the amount of the next offer. You can also set an **Oferta máxima** (Maximum offer). See [How to purchase?](https://intercom.help/jamble-bb4bea116bbe/en/articles/10870621).
 
-- in Activity Tab, top right as "Pending Transactions" until it's confirmed by the seller
-- in "Activity tab" in filter "purchase"
-- in your Profile "My purchases"
-- in your settings "My Purchases"
+## Can I buy without being in a live?
 
-# 5. What payment methods are accepted?
+Yes. In the **Loja** (shop), you can buy anytime, at a fixed price, with a cart and the option to make an offer to the seller. See [Buy in the Loja: cart and offers](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588933).
 
-Jamble accepts PIX and credit/debit cards, processed via Pagar.me.
+## Which payment methods are accepted?
 
-# 6. Can I cancel my order?
+Credit card and Pix. When available, you can pay by card in installments. Fees show in the order summary before you pay. See [Fees on Jamble](https://intercom.help/jamble-bb4bea116bbe/en/articles/10374313).
 
-Orders cannot be canceled as offers are final. If you have an issue with an order, you can contact the seller or Jamble support for assistance.
+## Where do I see my order?
 
-# 7. What happens if I send an offer but I don't have money on my card?
+On your profile, under **Minhas compras** (My purchases). There you see the status and the tracking. See [Order status and tracking](https://intercom.help/jamble-bb4bea116bbe/en/articles/10374343).
 
-Failing to pay result in purchase disabled from the show. Always ensure you have funds available before purchasing.
+## How does shipping work?
 
-# 8. How does shipping work?
+Shipping is calculated automatically and shows before you pay. Products from the same seller bought in the same live are shipped together in one package. See [Fees on Jamble](https://intercom.help/jamble-bb4bea116bbe/en/articles/10374313).
 
-The shipping cost depend on your item weight available as "see more" from the product card displayed in show while the seller starts the sale.
+## Can I cancel my order?
 
-Costs vary based on package size and destination.  
-​
+In the Loja, you can cancel while the seller has not confirmed the sale. Purchases made in lives cannot be canceled in the app: contact the seller or support. See [Cancellations](https://intercom.help/jamble-bb4bea116bbe/en/articles/10374371).
 
-Jamble is not accountable on delay or issues related to the shipping.
+## I received a product with a problem. What do I do?
 
-# 9. Can I return an item?
+Contact support as soon as possible, with photos or videos of the package and the product. See [Returns & Refunds](https://intercom.help/jamble-bb4bea116bbe/en/articles/10374377).
 
-Jamble does not offer returns unless seller:
+## When do I get my refund?
 
-- agrees and pay for the return label
-- disagrees to pay for a return label but agree for a refund
-   - contact Jamble Customer Support for a refund.
+The refund goes back to the same payment method, within 5 business days, depending on your bank or card. See [Returns & Refunds](https://intercom.help/jamble-bb4bea116bbe/en/articles/10374377).
 
-If seller disagrees, contact Jamble Support and share all evidences.
+## My payment did not go through. What happens?
 
-# 10. How do I report a problem with my order?
+If you win a product and do not pay in time, the purchase is canceled. After a few payment problems, your purchases may be paused for a while. The app tells you until when. If you have questions, contact support.
 
-If you have an issue with your order, go to your settings > contact support > select "Issue with Transaction," and choose the affected order.
+## How do I use a coupon?
 
-Please describe the problem and add pictures (if relevant) or ticket will be closed within 24h.
+Coupons give a discount on shipping and are applied automatically at checkout. To redeem a code, go to **Ajustes** (Settings) > **Resgatar um código** (Redeem a code). See [Coupons on Jamble](https://intercom.help/jamble-bb4bea116bbe/en/articles/14431863).
 
-# 11. How do I redeem a promo code?
+## How do I invite friends?
 
-To apply a discount, you must redeem a code by
+In the app, open **Indicar compradores** (Invite buyers) and share your link or invite code. The amounts and conditions show on that screen. See [Buyer Referral Program](https://intercom.help/jamble-bb4bea116bbe/en/articles/14975215).
 
-- in your setting as "redeem a code"
-- from your balance (coins icon in home page)
+## What are gems for?
 
-Note that major discount are not cumulative unless specified.
+You earn gems by watching lives and use them to send stickers, support the seller and add points for your team in battles. Gems are not coupons.
 
-Referral code must be redeemed:
+## I entered the wrong address. What now?
 
-- within 2 days after account creation
-- without making a purchase previously
-- not be redeemed in another account on the same device before
+Contact the seller and support as soon as possible, ideally before the package is shipped.
 
-# 12. Wrong address on my order
+## Need help?
 
-If you entered the wrong address after purchasing on Jamble, contact the seller immediately to update the shipping label or reach out to Jamble Support.
-
-Buyers are responsible for the shipping address they register. Lost order due to incorrect shipping address are not accountable for refunds.
+Talk to us through the in-app chat.

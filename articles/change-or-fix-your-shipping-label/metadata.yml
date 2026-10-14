@@ -2,17 +2,17 @@ intercom_id: 14288144
 slug: change-or-fix-your-shipping-label
 collection_id: 19177937
 
-# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+# Retired in wave 2 (Oct 2026): merged into make-a-shipping-adjustment.
+# Kept only so the sync can unpublish it (state: draft) in both locales.
+# Do not edit or republish. Delete this folder once Intercom shows it as draft.
 default_locale: pt-br
 
-state: published
-author_id: 7980507
-last_sync: 2026-04-16T00:00:00Z
+state: draft
 
 locales:
   pt-br:
     title: 'Alterar ou Corrigir Sua Etiqueta de Envio'
-    description: ''
+    description: 'Conteúdo movido para outro artigo.'
   en:
     title: 'Change or Fix Your Shipping Label'
-    description: 'This guide explains what to do if you need to change or fix a shipping label on Jamble — whether the address is wrong, you need to regenerate it, or you want to add your own external tracking number.'
+    description: 'Content moved to another article.'

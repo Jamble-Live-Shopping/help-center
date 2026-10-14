@@ -3,93 +3,89 @@
 ## In this guide
 
 - What you'll learn
-- The three home tabs
-- The Deals tab
-- The Explore tab
-- The Follow tab
+- Where buyers find you
+- The lives tab
+- The Loja tab
 - How search works
 - Saved searches
-- Personalized recommendations
-- Common questions
+- Followers and notifications
+- How to be found more easily
+- Frequently asked questions
 - Need help?
 
 ## What you'll learn
 
-This guide explains how to find shows, products and sellers on Jamble. You will learn what each home tab shows, how to use search to find what you're looking for, and how to save a search so you hear about new matching items.
+This guide explains how buyers find lives, products and sellers on Jamble, and what you can do so your lives and listings are found more easily.
 
-## The three home tabs
+## Where buyers find you
 
-When you open Jamble, you find three tabs at the top of the screen.
+The bottom bar of the app has five tabs: the lives tab (**Ao vivo** (Live) on iPhone, **Live** on Android), **Loja** (Shop), **Atividade** (Activity), **Ganhos** (Rewards) and **Perfil** (Profile).
 
-![The three Jamble home tabs: Deals, Explore and Follow](./assets/mockups/how-discoverability-works-on-jamble__screen-1__en__v3.png)
+Buyers discover sellers mainly in three places:
 
-Each tab shows a different type of content. Tap a tab to switch.
+- **The lives tab**, with lives happening now and lives coming up
+- **The Loja (Shop) tab**, with fixed-price listings
+- **Search**, for people who already know what they want
 
-## The Deals tab
+## The lives tab
 
-The **Deals** tab shows products from shows that are happening now or starting soon. This is where you browse items you can buy.
+At the top of the lives tab there are a few sections to browse. The first one is **Para Você** (For You), with lives picked based on what each person usually watches and buys. When lives are happening, an **Ao Vivo** (Live) section also appears. The other sections are categories, which can change depending on the lives of the moment.
 
-## The Explore tab
+That's why two buyers can see different lives on the same screen. This is normal: the content is personalized for each person.
 
-The **Explore** tab shows live and upcoming shows. This is the main way to discover new sellers.
+## The Loja tab
 
-At the top of the Explore tab, there are subcategories that change throughout the day. Which subcategories appear depends on the shows that are active right now, so the list you see can be different from the list another buyer sees.
-
-## The Follow tab
-
-The **Follow** tab shows live and upcoming shows from the sellers you already follow. When you don't follow anyone yet, the tab also suggests sellers with the line "You may be interested by these sellers".
-
-If you have no followed sellers yet, the tab shows the message "There is nothing here yet" with an "Explore Lives" button that takes you straight to the Explore tab.
+The **Loja** (Shop) tab shows fixed-price listings, which can be bought at any time without waiting for a live. The listings you create in the Loja appear in this tab and also in product search results.
 
 ## How search works
 
-When you tap into search, two sub-tabs appear at the top: **Members** and **Shows**.
+The search field is at the top of the lives tab. When searching, the buyer picks one of three tabs:
 
-![Search screen with the two tabs Members and Shows](./assets/mockups/how-discoverability-works-on-jamble__screen-2__en__v3.png)
+- **Lives**: finds lives by title
+- **Produtos** (Products): finds products, including Loja listings
+- **Membros** (Members): finds sellers and other users by name
 
-- **Members** searches for sellers and other users by name
-- **Shows** searches for shows by title or content
-
-To look for products, open a show or a category and use the available filters. You can filter by **Category**, **Brands**, **Color**, **Condition**, **Size**, **Price** and **Sale Type**. Results can be sorted by **Relevance**, **Newest**, **Oldest**, **Priciest** or **Cheapest**.
+In the **Produtos** (Products) tab, results can be refined with the available filters.
 
 ## Saved searches
 
-After running a search, Jamble may offer you the option to save it.
+In the **Produtos** (Products) tab of search, buyers can save a search to come back to it later with one tap, without typing everything again. Saved searches appear on the search screen, in the saved searches list.
 
-![Screen offering to save the search so you stay updated on what you're looking for](./assets/mockups/how-discoverability-works-on-jamble__screen-3__en__v3.png)
+Saving a search is useful for anyone who always looks for a brand, a collection or a type of product.
 
-The screen reads: "Save this Search to stay updated on what you're looking for without searching again. Jamble works best this way!"
+## Followers and notifications
 
-You have two options:
+When a buyer follows you, they can get a notification when you go live or schedule a live, if the **Lives de quem eu sigo** (Shows from people I follow) notification is on. Buyers can also save a scheduled live to get a reminder when it starts.
 
-- **Save this Search** keeps the search so you can come back to it later
-- **I'll do later** closes the sheet without saving
+The more followers you have, the more people hear about your lives.
 
-Saving searches is useful when you are looking for a specific brand, size or type of product and want to revisit the results without re-running the search every time.
+## How to be found more easily
 
-## Personalized recommendations
+- **Take care of your cover.** Use a sharp, well-lit image that shows what you will sell
+- **Write a clear title.** Say what the live will have, such as the collection, brand or type of product. This helps people searching for lives
+- **Pick the right category.** This way your live shows up for people browsing that category
+- **Go live regularly.** A fixed schedule helps your followers build the habit of watching
+- **Schedule your lives in advance.** This way buyers can save the live and get a reminder
+- **Share your lives.** Use the **Compartilhar** (Share) button to post the link on your social media and send it to your contacts
+- **List in the Loja.** Your listings stay visible all the time, even when you are not live
 
-Jamble adapts the home content to your activity in the app. The more you use Jamble, the more the content across the three tabs reflects what you tend to browse and watch.
+## Frequently asked questions
 
-This means two people opening Jamble at the same time can see different shows and products in the same tab. That's normal. It's how the app personalizes your experience.
+**Why do the sections of the lives tab change?**
+Category sections depend on the lives available at the moment. The **Ao Vivo** (Live) section appears when lives are happening.
 
-## Common questions
+**Is the content the same for everyone?**
+No. The **Para Você** (For You) section is personalized based on each person's activity in the app. That's why two buyers can see different lives.
 
-**Why do the Explore subcategories change?**
-Explore subcategories depend on shows that are active right now. If no one is currently streaming a category, it does not appear. When a seller starts a show in that category, it can come back.
+**Do my Loja listings appear in search?**
+Yes. They appear in the **Loja** (Shop) tab and in the results of the **Produtos** (Products) search tab.
 
-**Why is my Follow tab empty?**
-The Follow tab only shows shows from sellers you already follow. If you don't follow anyone yet, or if none of the sellers you follow currently have a live or upcoming show, the tab shows the message "There is nothing here yet" with an "Explore Lives" button.
-
-**Can I search products directly from the main search bar?**
-The main search has two tabs: **Members** and **Shows**. To find specific products, use the filters inside a show or a category. The available filters are Category, Brands, Color, Condition, Size, Price and Sale Type.
+**How does a buyer find my profile?**
+Through the **Membros** (Members) search tab, by your username, or by tapping your name in a live or on a listing.
 
 **How do I go back to a search I saved?**
-Saved searches stay available on the search screen. When you open search again, Jamble remembers the searches you saved so you can come back to them with one tap.
-
-**Is the home content the same for everyone?**
-No. Content is personalized to your activity in the app. That is why two buyers can see different shows and products in the same tab at the same time.
+Open search. Your saved searches appear on the search screen, in the **Produtos** (Products) tab.
 
 ## Need help?
 
-Reach out through the app chat or email support@jambleapp.com.
+Talk to us through the in-app chat.

@@ -11,8 +11,8 @@ last_sync: 2026-04-16T00:00:00Z
 
 locales:
   pt-br:
-    title: 'Batalhas, Competição por Times no Seu Show'
-    description: 'Como as Batalhas funcionam na Jamble: níveis Bronze/Silver/Gold, recompensas, como pontos são ganhos e como seu nível é calculado.'
+    title: 'Batalhas na sua live'
+    description: 'Como funciona a Batalha da semana na sua live: times, pontos com compras e gemas e cupons de frete para o time vencedor.'
   en:
-    title: 'Battles, Team Competition in Your Show'
-    description: 'How Battles work on Jamble: Bronze/Silver/Gold tiers, rewards, how points are earned, and how your tier is calculated.'
+    title: 'Battles in your live'
+    description: 'How the weekly Battle works in your live: teams, points from purchases and gems, and shipping coupons for the winning team.'

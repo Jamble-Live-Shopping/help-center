@@ -2,17 +2,17 @@ intercom_id: 14288079
 slug: seller-location-currency-requirements
 collection_id: 19177934
 
-# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+# Retired in wave 2 (Oct 2026): merged into start-selling-on-jamble.
+# Kept only so the sync can unpublish it (state: draft) in both locales.
+# Do not edit or republish. Delete this folder once Intercom shows it as draft.
 default_locale: pt-br
 
-state: published
-author_id: 7980507
-last_sync: 2026-04-21T00:00:00Z
+state: draft
 
 locales:
   pt-br:
     title: 'Requisitos de Localização e Moeda para Vendedores'
-    description: 'Onde você precisa estar, qual moeda é usada (R$) e quais documentos (CPF) são necessários para vender na Jamble.'
+    description: 'Conteúdo movido para outro artigo.'
   en:
     title: 'Seller Location and Currency Requirements'
-    description: 'Where you need to be located, which currency is used (R$), and which documents (CPF) you need to sell on Jamble.'
+    description: 'Content moved to another article.'

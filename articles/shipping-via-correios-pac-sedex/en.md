@@ -2,158 +2,90 @@
 
 ## What you'll learn
 
-This guide explains how shipping works on Jamble for Brazilian sellers. You'll learn about the carriers available, how shipping costs are calculated, how labels are generated, and what to expect throughout the shipping process.
+How Correios shipping works on Jamble: which services exist, how the service for each order is chosen, how shipping is calculated and what happens from the label to the delivery.
 
 ## Before you start
 
-- You need an approved seller account on Jamble
-- You need a registered shipping address in your settings
-- You need at least one completed sale to ship
+- You need an approved Jamble seller account
+- Your shipping address and preferences need to be set up. See [Shipping settings](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288082)
 
 ## How shipping works on Jamble
 
-When a buyer purchases a product during your live show, Jamble handles the shipping logistics for you. Here's the flow:
+1. **The sale happens**, in a live or in the Loja
+2. **The buyer pays for shipping** at checkout, calculated automatically
+3. **You generate the Correios label** through Jamble, in the app or in the Seller Hub
+4. **You pack and drop off** the parcel at a Correios agency or drop-off point
+5. **Tracking appears** for you and the buyer
 
-1. **Sale happens** during your show
-2. **Jamble calculates** the shipping cost based on the item's weight/size and the distance between your address and the buyer's address
-3. **A shipping label** is generated automatically
-4. **You pack and ship** the item using the label provided
-5. **Tracking updates** are sent to both you and the buyer
+You do not need to buy a label elsewhere or negotiate prices with Correios. All Jamble labels are Correios labels.
 
-You don't need to go to a Correios counter to negotiate prices or buy labels. Jamble does this through **Melhor Envio**, a shipping platform that connects directly with carriers to get the best rates.
+## The Correios services
 
-## Carriers available
+- **Mini**: the cheapest, for small and light items. It is usually slower, with simpler tracking
+- **PAC**: standard delivery, with a lower cost
+- **SEDEX**: faster delivery. It is always on, because it is the only service available on every route
 
-Jamble currently uses two carriers in Brazil:
+In **Preferências de envio** (Shipping preferences), you choose whether you accept Mini and PAC. SEDEX cannot be turned off.
 
-| Carrier | Service | Speed | Best for |
-|---------|---------|-------|----------|
-| **Correios** | PAC | Standard (longer) | Cost-effective shipping for most items |
-| **Correios** | SEDEX | Priority (faster) | Urgent or time-sensitive deliveries |
-| **Loggi** | Standard | Varies by region | Alternative carrier, available in some areas |
+## How the service for each order is chosen
 
-When a label is generated, Jamble automatically selects between **two tiers**:
+Two things define the service:
 
-- **Cheapest**: typically PAC (standard Correios), lower cost, longer delivery time
-- **Priority**: typically SEDEX (express Correios), faster delivery, higher cost
+- **The services you accept** in your preferences
+- **The buyer's delivery preference**: **Mais barato** (Cheapest) or **Premium**, which they set in their own settings
 
-The buyer sees both options with estimated delivery dates and prices before completing their purchase.
+With **Mais barato**, Jamble uses the cheapest service available for that parcel among the ones you accept. With **Premium**, Jamble gives priority to SEDEX. The service also depends on the parcel: Mini, for example, only works for small and light items and does not cover every route.
 
-![Shipping method screen with PAC (Cheapest, R$ 15.00) selected and SEDEX (Priority, R$ 25.00) available](./assets/mockups/shipping-via-correios-pac-sedex__correios-method-picker__en__v2.png)
+## How shipping is calculated
 
-## How shipping costs are calculated
+Shipping is calculated automatically. It depends on:
 
-Shipping costs are calculated using **real CEP-to-CEP quotes**, meaning the exact distance between your postal code and the buyer's postal code. This is done through Melhor Envio's API.
+- **The weight and size of the parcel**, based on what is on the product
+- **The distance** between your shipping address and the buyer's address
+- **The service used**, according to the services you accept and the buyer's preference
 
-The cost depends on:
+When the buyer gets several of your items, each extra item only adds the difference in shipping. See [Bundled shipments](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288138).
 
-- **Weight of the item**, determined by the shipping profile you chose when listing the product
-- **Package dimensions**, standard sizes based on the shipping profile
-- **Distance**, from your shipping address to the buyer's address
+The buyer pays for shipping at checkout. Jamble's commission is calculated on the product price, without shipping.
 
-The buyer pays the shipping cost at checkout. You are not charged for shipping unless you opt to cover it.
+## Label and drop-off
 
-## Shipping profiles and weight
+You generate the label from the parcel, with **Adicionar Etiqueta** (Add label), and open it with **Ver Etiqueta** (See label). In the Seller Hub, use **Imprimir Etiqueta** (Print label). The step by step is in [Generate and print shipping labels](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288141).
 
-When you list a product, you choose a **shipping profile** that represents its approximate weight. These profiles determine the shipping cost:
+To drop it off, take the parcel to a Correios agency or drop-off point. In **Envios** (Shipments), each parcel shows the **Ponto de entrega mais próximo** (Closest drop-off point), with the **Ver no mapa** (See on map) option. In the Seller Hub, use **Encontrar um ponto de postagem** (Find a drop-off point).
 
-| Profile | Weight range |
-|---------|-------------|
-| Card | Up to ~23g |
-| Booster | ~23g to 45g |
-| Light Accessories | ~45g to 180g |
-| Light Apparel | ~180g to 320g |
-| Standard Apparel | ~320g to 680g |
-| Heavier Apparel | ~680g to 1.36kg |
-| Bulkier Items | ~1.36kg to 2.27kg |
-| Small Bundles | ~2.27kg to 3.18kg |
-| Medium Bundles | ~3.18kg to 4.54kg |
-| Large Bundles | ~4.54kg to 6.80kg |
-| Extra-Large Bundles | ~6.80kg to 9.07kg |
+## Tracking
 
-**Choose accurately.** If you pick a profile that's too light, the package may be rejected or charged extra at the post office. If it's too heavy, the buyer pays more than necessary.
+When Correios registers the parcel, tracking appears in the order for you and the buyer. In **Envios**, you follow the status of each parcel, such as **Enviado** (Shipped), **Entregue** (Delivered), **Falha na entrega** (Delivery failed) or **Devolvido** (Returned).
 
-## Shipping labels
+If tracking stops updating, open the parcel in **Envios** and tap **Atualizar rastreio** (Refresh tracking; on Android, **Atualizar**). If it is still stuck, contact support.
 
-### Label formats
-
-You can generate your shipping label in three formats:
-
-| Format | Best for |
-|--------|----------|
-| **Half page PDF** | Standard home printer (print on half an A4 sheet) |
-| **Thermal PDF (4x6)** | Thermal label printer (if you have one) |
-| **Full page PDF** | Full A4 sheet (one label per page) |
-
-### How to generate a label
-
-After a sale is completed:
-
-1. Go to **Settings** → **My Sales**
-2. Find the order you need to ship
-3. Tap to open the order details
-4. The shipping label will be available for download or printing
-
-Jamble generates the label automatically with all the carrier information, tracking number, and addresses pre-filled.
-
-![Sale details screen with "Ship the parcel quickly" reminder, order card, and Download shipping label button](./assets/mockups/shipping-via-correios-pac-sedex__drop-off-reminder__en__v2.png)
-
-### Packing and dropping off
-
-Once you have your label:
-
-1. **Pack the item securely**, use appropriate packaging for the item type
-2. **Attach the label**, print it and tape it firmly to the outside of the package
-3. **Drop it off** at a Correios agency or authorized drop-off point
-
-You can find the nearest Correios agency using the Correios website or app.
-
-## Tracking your shipment
-
-Once the package is scanned by the carrier, tracking updates are available for both you and the buyer. Tracking statuses include:
-
-| Status | What it means |
-|--------|-------------|
-| **Pre-transit** | Label created, package not yet scanned |
-| **In transit** | Package is on its way |
-| **Delivered** | Package delivered to the buyer |
-| **Returned** | Package sent back to you |
-
-Both you and the buyer receive push notifications for tracking updates (if the **"Updates on transaction status"** notification is enabled).
-
-![Tracking screen with Correios SEDEX, tracking number BR123456789BR and a timeline showing Label created, Dropped off at Correios, In transit, and Delivered](./assets/mockups/shipping-via-correios-pac-sedex__correios-tracking__en__v2.png)
+Delivery time depends on the service and the distance. Long routes and more remote areas usually take longer.
 
 ## Important tips
 
-- **Ship promptly.** Buyers expect fast shipping. Try to drop off your packages within 1 to 2 business days after the sale
-- **Check the weight before listing.** If you're unsure about a product's weight, use a kitchen scale. Picking the wrong shipping profile causes problems for you and the buyer
-- **Keep your shipping address updated.** Your label is generated from the address in your settings. If you move, update it immediately in **Settings** → **Shipping Preferences**
-- **Save your tracking number.** If a buyer contacts you about shipping, you'll need the tracking number. It's available in your sales history
-- **Pack carefully.** Damaged items lead to returns and bad reviews. Use bubble wrap or padding for fragile items
+- **Ship quickly.** The exact deadline to ship appears in the order, under **Prazo de envio** (Shipping deadline). The sooner you drop it off, the sooner the buyer receives it
+- **Enter the right weight and size on the product.** This keeps shipping fair and avoids problems at drop-off
+- **Keep your default address up to date.** It is the sender address on the label
+- **Keep Mini and PAC on** if your items allow it. More options usually make shipping cheaper for the buyer
 
-## Common questions
+## Frequently asked questions
 
 **Who pays for shipping?**
-The buyer pays the shipping cost at checkout. The cost is calculated based on the item's weight/size and the distance between you and the buyer.
+The buyer, at checkout.
 
-**Can I offer free shipping?**
-This depends on show-level settings. Some promotions or features may allow free shipping for buyers. Contact support for details on current options.
+**Can I use another carrier or a label I bought myself?**
+No. Always use the Correios label generated by Jamble. It is what connects the tracking to the order.
 
-**What if the package is rejected at the post office?**
-This usually happens when the package exceeds the weight or dimensions of the shipping profile. Repack the item or contact support to adjust the label.
+**Can I choose the service for each order?**
+Not order by order. In your preferences you set which services you accept, and Jamble picks among them based on the parcel and the buyer's preference.
 
-**How long does PAC take vs SEDEX?**
-PAC (standard) typically takes 5 to 15 business days depending on distance. SEDEX (priority) takes 1 to 5 business days. Delivery times vary by region.
+**What if the agency refuses the parcel?**
+Check that the packaging is well closed and that the parcel matches the product's weight and size. If it does not match, contact support before trying again. See [Make a shipping adjustment](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288137).
 
-**What if the buyer gives the wrong address?**
-If the package is returned to you because of a wrong address, contact support. They'll help coordinate with the buyer to get the correct address.
-
-**Can I use my own shipping labels from Correios?**
-Jamble generates labels through Melhor Envio. Using your own labels is not recommended as it bypasses tracking integration.
-
-**What happens if the package is lost?**
-Contact Jamble support. Shipping through Melhor Envio includes tracking, and lost packages are handled through the platform's claims process.
+**What if the parcel is lost or comes back to me?**
+Contact support in the app chat. If the parcel comes back, see [What to do if a shipment is returned to you](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288132).
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Talk to us in the app chat.

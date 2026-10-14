@@ -11,8 +11,8 @@ last_sync: 2026-08-21T09:33:42Z
 
 locales:
   pt-br:
-    title: '2. Prevenção a Fraudes e Gestão de Risco'
-    description: ''
+    title: '2. Prevenção a fraudes e segurança dos pagamentos'
+    description: 'Como o Jamble protege os pagamentos, o que significam avisos como Compras pausadas e o que fazer.'
   en:
-    title: '2. Fraud Prevention & Risk Management'
-    description: ''
+    title: '2. Fraud prevention and payment security'
+    description: 'How Jamble protects payments, what notices like Compras pausadas mean and what to do.'

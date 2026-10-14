@@ -26,7 +26,7 @@ Jamble shipments go through **Correios**, with the label created in the app or i
 
 The shipping deadline is usually about 10 days after the sale is confirmed. In exceptional situations, such as a Correios strike, it can be extended to up to 20 days. The exact deadline always shows on the order, under **Prazo de envio**. Ship as soon as you can, without waiting for the last day.
 
-- **Live sales** arrive already confirmed, so the deadline starts at the time of the sale
+- **Live sales** need to be confirmed by you on the live dashboard, with **Confirmar Vendas** (Confirm sales), after the live ends. The shipping deadline starts when you confirm, not at the time of purchase
 - **Loja (shop) sales** need to be confirmed by you within the time shown in the app. The shipping deadline starts when you confirm
 
 ## What happens if you are late

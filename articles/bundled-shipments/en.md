@@ -2,90 +2,75 @@
 
 ## What you'll learn
 
-This guide explains what bundled shipments are in Jamble, how the system automatically groups orders from the same buyer, and how you generate a single label to send everything together.
+How Jamble groups several items from the same buyer into one parcel, how this makes shipping cheaper and how to generate the parcel's label.
 
 ## Before you start
 
 You need:
-- A completed show where the same buyer purchased more than one of your items
-- Your shipping settings ready
+- A sale where the same buyer got more than one item from you
+- Your shipping settings ready. See [Shipping settings](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288082)
 
-## What is a bundled shipment
+## What a bundled shipment is
 
-When the same buyer purchases multiple items from you within the same show, Jamble groups those items into a **single package**, called a bundle. You send all items in one box, with one label.
+When the same buyer buys several of your items, Jamble groups them into one **parcel**. You ship everything in one box, with one label.
 
-**Why this exists:**
-- For you, it's one package to prepare instead of many, one trip to Correios
-- For the buyer, it's one shipping fee instead of one per item
+- For you: one parcel to prepare and one trip to Correios
+- For the buyer: lower shipping than paying for each item separately
 
-In your show's orders screen you'll see the buyer at the top with the total items and amount, and below it the **PACKAGE 1** with everything they purchased.
+## How bundling works
 
-![Seller's orders screen showing buyer @marina_cards with 3 items for $147.00 and PACKAGE 1 containing three cards with Purchase label and Add invoice buttons](./assets/mockups/bundled-shipments__bundle-orders-view__en__v2.png)
+Bundling is automatic. You do not need to do anything.
 
-## How grouping works
+- **In a live:** the items the same buyer gets from you in the same live go into the same parcel
+- **In different lives:** each live creates its own parcels
+- **In the Loja:** each purchase completed at checkout with you becomes one shipment. If there are many or large items, the app can split this shipment into a few parcels, each with its own label
+- **Different buyers:** each buyer has their own parcel
 
-Grouping is **automatic**. You don't need to create anything. The system applies a simple rule:
-
-- Same buyer, same show, all items go to the same package
-- Same buyer, different shows, separate packages
-- Different buyers in the same show, one package per buyer
-
-If an item in the package is canceled later, it's removed from the package and the others stay together. Shipping is recalculated automatically.
+If a sale in the parcel is canceled, it leaves the parcel and the buyer is refunded for it. The other items stay together.
 
 ## How shipping is calculated
 
-When items become a package, the shipping cost is calculated based on the **shipping profile** of each item. Jamble combines weight and dimensions to arrive at a single shipping value, which is what the buyer pays at checkout.
+The first item pays the normal shipping. **Each extra item only adds the difference** it brings to the parcel. That is why getting several items from the same seller is cheaper than buying each one separately.
 
-This almost always costs less for the buyer than paying shipping on each item separately. That's why the app shows the buyer, during the show, a banner saying **Buy more, save on shipping fees**.
-
-![Buyer's show screen with banner Buy more, save on shipping fees and products listed](./assets/mockups/bundled-shipments__buy-more-save__en__v2.png)
-
-You don't see the final shipping value before the buyer confirms. During the show, an estimate appears next to the package (Est. Ship. $8.50 in the example). After the label is generated, the actual value appears.
+The amount depends on the weight and size of each item, the distance to the buyer and the Correios service used. The buyer sees the shipping cost before paying.
 
 ## Generating the label
 
-When it's time to ship, you generate **one label per package**, not one per item. The **Purchase label** button is on each package in your orders screen.
+You generate **one label per parcel**, not one per item.
 
-The label that comes out has the buyer's address and lists all orders going in that package. You print it once, stick it on the box, and you're done.
+1. Open **Envios** (Shipments), in the app settings, or your live's dashboard
+2. Tap the buyer's parcel. It shows all the sales that go together
+3. Complete the invoice step, if you see **Adicionar NF** (Add invoice) or **Isentar NF** (Exempt invoice)
+4. Tap **Adicionar Etiqueta** (Add label) and then open it with **Ver Etiqueta** (See label)
 
-![Label for PACKAGE 1 with the buyer's address and the three orders listed below, with Open label PDF button](./assets/mockups/bundled-shipments__bundle-label__en__v2.png)
+In the live dashboard, you can also generate the labels for all parcels at once. In the Seller Hub, use **Envios** and **Imprimir Etiqueta** (Print label). See [Generate and print shipping labels](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288141).
 
-**Golden rule:** all items in the package go together in one box. If you send them in separate boxes, the single label doesn't work for both and the buyer can't track properly.
-
-## Add invoice
-
-Each package can request an **invoice**. If you need one, the **Add invoice** button appears on the package and you manage it from there. If you're exempt, you have the option to generate a self-declaration.
-
-If you continue without an invoice, you handle the labels on your own. This action is irreversible.
+**Golden rule:** all items in the parcel go together in the same box, with the parcel's label.
 
 ## Important tips
 
-- **You don't create the packages.** The system groups items automatically whenever the same buyer purchases more than one item in the same show
-- **One label per package.** Print once, stick on the box, send everything together
-- **Pack everything in the same box.** Since the label is unique, items need to ship in the same physical package
-- **Check the size.** The system calculates a package size based on the combined items. If your box doesn't fit within the assigned dimensions, switch to a larger one
-- **More items per buyer is better for both sides.** Bundled shipping is cheaper than individual shipping, so encouraging the buyer to purchase more items saves them money
+- **You do not build the parcels.** Jamble groups them on its own
+- **One label per parcel.** Print it once, stick it on the box and ship everything together
+- **Choose a box that fits everything** with protection between the items
+- **Encourage the buyer to get more items.** Shipping for extra items is only the difference
 
 ## Frequently asked questions
 
-**Can I split or reorganize a package manually?**
-No. Packages are created and managed by the system based on the same buyer and same show rule. You can't split a package into two or move items between packages.
+**Can I split or merge parcels manually?**
+No. Parcels are built automatically.
 
-**What if the buyer cancels an item in the package?**
-The canceled item is removed from the package. The others stay together and shipping is recalculated for the new weight.
+**What if a sale in the parcel is canceled?**
+It leaves the parcel and the buyer is refunded for it. The other items stay together.
 
-**Do I generate one label or several for the package?**
-Just one. All items in the package are sent together in one box, with a single label.
+**Do I generate one label or several?**
+One per parcel. All items in the parcel go together.
 
-**What if the items don't fit in one box?**
-Contact support. The team can help you reorganize the shipment into two physical packages.
+**What if the items do not fit in one box?**
+Contact support before generating the label.
 
-**Does grouping change when I receive payment?**
-No. Each item's payment follows the normal flow. When the buyer confirms receipt (or 3 days pass), the amount for all items in the package is released.
-
-**Can items from different shows be grouped?**
-No. Packages only combine items from the same show. If the buyer purchases items in two different shows, those are two shipments.
+**Can items from different lives go together?**
+No. Each live creates its own parcels.
 
 ## Need help?
 
-Contact us via the app chat or email support@jambleapp.com.
+Talk to us in the app chat.

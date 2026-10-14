@@ -2,17 +2,17 @@ intercom_id: 14288116
 slug: show-management-for-sellers
 collection_id: 19177936
 
-# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
+# Retired in wave 2 (Oct 2026): merged into livestream-tools-everything-you-can-do-while-hosting.
+# Kept only so the sync can unpublish it (state: draft) in both locales.
+# Do not edit or republish. Delete this folder once Intercom shows it as draft.
 default_locale: pt-br
 
-state: published
-author_id: 7980507
-last_sync: 2026-04-27T00:00:00Z
+state: draft
 
 locales:
   pt-br:
     title: 'Gerenciamento do Show para Vendedores'
-    description: 'Gerencie seu show na Jamble do agendamento ao pós-show: prévia, edição, modo de prática, ao vivo, raid e encerramento.'
+    description: 'Conteúdo movido para outro artigo.'
   en:
     title: 'Show Management for Sellers'
-    description: 'Manage your Jamble show from scheduling to post-show: preview, edit, practice mode, live host controls, raid, and ending.'
+    description: 'Content moved to another article.'

@@ -1,104 +1,103 @@
 # Definir Quantidades ao Listar Produtos
 
-## O que voce vai aprender
+## O que você vai aprender
 
-Defina quantas unidades identicas voce tem por anuncio, de 1 a 1.000. Veja como a quantidade se comporta durante o show e por que Pré-oferta so funciona quando a quantidade e igual a 1.
+Como dizer quantas unidades idênticas você tem em um anúncio, como vender várias unidades juntas em um **Lote**, como a quantidade funciona nas lives e na Loja, e por que as pré-ofertas só aparecem quando a quantidade é 1.
 
-## Antes de comecar
+## Antes de começar
 
-Voce precisa de:
+Você precisa de:
 
 - Uma conta de vendedor aprovada na Jamble
-- Um show criado com produtos para adicionar
+- Uma live agendada ou um anúncio na Loja para adicionar produtos
 
-## Como as quantidades funcionam
+## Quantidade e Lote: qual é a diferença?
 
-Uma quantidade e o numero de unidades identicas que voce vende em um unico anuncio. Em vez de criar 10 anuncios separados para 10 camisetas iguais, voce cria um anuncio com quantidade 10.
+- **Quantidade** é quantas unidades iguais você tem para vender naquele anúncio. Em vez de criar 10 anúncios para 10 boosters iguais, você cria um anúncio com quantidade 10. Cada compra leva uma unidade (ou mais, quando o comprador pode escolher)
+- **Lote** é quando várias unidades iguais são vendidas juntas, como um único item. Por exemplo, "lote com 3 boosters": quem compra leva as 3 unidades de uma vez, pelo preço do lote
 
-Durante o seu show, ao fixar o produto:
-
-- Os compradores veem quantas unidades restam (por exemplo, "3 restantes")
-- Cada compra reduz a contagem em uma unidade
-- Quando a ultima unidade e vendida, o produto e marcado como esgotado
+Você pode usar os dois juntos. Por exemplo, quantidade 5 de um lote com 3 boosters quer dizer que você tem 5 lotes para vender.
 
 ## Definir a quantidade
 
-Ao criar ou editar um produto, role ate o campo **Quantidade**. Por padrao, o valor e 1.
+Ao criar ou editar um produto, no app ou no Seller Hub, procure o campo **Quantidade**. O valor começa em 1.
 
-![Campo Quantidade no formulario do produto, com botoes de menos e mais ao redor do valor 1](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/choose-quantities-when-listing-products__screen-1__pt-br__v3.png)
+Toque em **+** para aumentar, em **−** para diminuir, ou digite o número. A quantidade mínima é 1. Existe um limite máximo por anúncio: quando você chega nele, o botão **+** fica desativado. Salve o produto para confirmar.
 
-Toque em **+** para aumentar, **-** para diminuir, ou digite o numero direto. O minimo e 1 e o maximo e **1.000** por anuncio, em todos os modos de venda (Oferta em tempo real, Morte súbita, Comprar agora). Salve o produto para confirmar.
+## Vender em Lote
 
-## Pré-oferta e quantidade
+Logo abaixo da quantidade fica a opção **Lote**, com a descrição "Várias unidades idênticas vendidas como um único anúncio".
 
-Se voce ativar **Pré-oferta** em um produto, a quantidade precisa ser **1**. Pré-oferta nao funciona quando o anuncio tem mais de uma unidade.
+1. Ative **Lote**
+2. O campo **Unidades do lote** aparece. Ele começa em 2
+3. Ajuste quantas unidades vão em cada lote
+4. Coloque no preço o valor do lote inteiro
 
-![Celula Pré-oferta com toggle ligado e celula Quantidade com valor 2, configuracao que dispara o erro](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/choose-quantities-when-listing-products__screen-2__pt-br__v3.png)
+O frete é calculado considerando todas as unidades do lote, então o comprador paga o frete certo para o pacote.
 
-Se tentar ligar Pré-oferta com quantidade maior que 1, a Jamble bloqueia a acao e mostra esta mensagem:
+## Pré-ofertas e quantidade
 
-![Toast de erro com o texto Opa, aconteceu alguma coisa! Voce nao pode usar o servico de pre-oferta se tiver mais de uma unidade.](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/choose-quantities-when-listing-products__screen-3__pt-br__v3.png)
+As pré-ofertas deixam os compradores fazerem ofertas antes da live começar. A opção **Ativar pré-ofertas** só aparece quando:
 
-O toggle volta para desligado. Para usar Pré-oferta, defina a quantidade de volta para 1 e tente de novo.
+- O produto está em uma live
+- O tipo de venda é **Ofertas em Tempo Real** ou **Morte Súbita**
+- A quantidade é **1**
 
-## Como as quantidades funcionam durante um show
+Se você aumentar a quantidade para mais de 1, a opção **Ativar pré-ofertas** some do formulário. Volte a quantidade para 1 para ela aparecer de novo.
 
-Quando voce fixa um produto com varias unidades durante o show ao vivo, o comportamento depende do modo de venda.
+## Como a quantidade funciona nas lives
 
-**Comprar agora**
+Quando você fixa um produto com várias unidades, o comprador vê quantas restam, por exemplo "3 restantes". O comportamento depende do tipo de venda:
 
-- Os compradores veem o preco e o botao **Comprar agora**
-- Cada comprador que tocar nele compra uma unidade
-- O banner mostra a contagem restante: "3 restantes", "2 restantes", e assim por diante
-- Quando a ultima unidade e comprada, o produto fica esgotado
+**Comprar Agora**
 
-**Oferta em tempo real e Morte súbita**
+- Cada comprador toca para comprar pelo preço fixo
+- No checkout, o comprador pode escolher mais de uma unidade, até o limite mostrado no app
+- A contagem de unidades restantes cai a cada compra
 
-- A primeira unidade vai para a maior oferta quando o cronometro acaba
-- A proxima unidade comeca automaticamente
-- Isso continua ate todas as unidades serem vendidas, ou voce parar a venda
+**Ofertas em Tempo Real e Morte Súbita**
+
+- Cada venda vale para uma unidade, e quem ganha leva essa unidade
+- Depois de cada venda, a contagem de unidades restantes é atualizada, e você pode iniciar a venda da próxima unidade
+
+Quando a última unidade é vendida, o produto fica esgotado.
+
+## Como a quantidade funciona na Loja
+
+Na Loja, o comprador pode escolher quantas unidades quer no carrinho, até o limite mostrado no app e até acabar o seu estoque. Cada compra reduz a quantidade disponível.
 
 ## Dicas importantes
 
-- **Use quantidades apenas para itens identicos.** Todas as unidades compartilham titulo, fotos, descricao e preco. Se os itens forem diferentes (tamanhos, cores, condicoes), crie anuncios separados.
-- **Quantidades economizam tempo.** Um anuncio com quantidade 20 substitui 20 anuncios individuais para 20 adesivos identicos.
-- **Edite antes da primeira venda.** Se perceber que tem mais ou menos unidades, atualize a quantidade antes que a primeira unidade seja vendida.
-- **Fique de olho na contagem na live.** Quando o estoque ficar baixo, anuncie no ar para criar urgencia.
+- **Use quantidade só para itens idênticos.** Todas as unidades têm o mesmo título, fotos, descrição, condição e preço. Se os itens forem diferentes, crie anúncios separados
+- **Use Lote para vender itens juntos.** Se você quer que o comprador leve várias unidades de uma vez, ative **Lote** em vez de aumentar só a quantidade
+- **Mantenha o estoque certo.** Se você tiver mais ou menos unidades, edite a quantidade antes da próxima venda
+- **Avise na live quando o estoque estiver acabando.** Isso cria urgência
 
 ## Perguntas frequentes
 
-**Qual a quantidade maxima que posso definir?**
+**Qual é a quantidade máxima que posso colocar?**
+Existe um limite por anúncio. Quando você chega nele, o botão **+** fica desativado.
 
-1.000 unidades por anuncio, em Oferta em tempo real, Morte súbita e Comprar agora.
+**Posso mudar a quantidade depois de criar o anúncio?**
+Sim. Edite o produto, mude o número e salve, enquanto ainda houver unidades disponíveis.
 
-**Posso mudar a quantidade depois de criar o anuncio?**
+**O comprador pode comprar mais de uma unidade de uma vez?**
+Sim, em **Comprar Agora** nas lives e na Loja, até o limite mostrado no app. Em **Ofertas em Tempo Real** e **Morte Súbita**, cada venda vale para uma unidade.
 
-Sim. Atualize a qualquer momento antes de todas as unidades serem vendidas. Toque no anuncio, mude o numero e salve.
+**Por que não vejo a opção de pré-ofertas?**
+Ela só aparece para produtos de live em **Ofertas em Tempo Real** ou **Morte Súbita** com quantidade 1.
 
-**O que acontece se eu definir a quantidade como 1?**
+**A quantidade muda o preço?**
+Não. Cada unidade é vendida pelo preço do anúncio. Em um **Lote**, o preço vale para o lote inteiro.
 
-O produto funciona como item unico. Um comprador o leva e ele e marcado como vendido. Quantidade igual a 1 tambem libera **Pré-oferta** em Oferta em tempo real e Morte súbita.
-
-**Compradores podem comprar mais de uma unidade de uma vez?**
-
-Durante um show, cada compra cobre uma unidade. Um comprador que quiser duas unidades compra em duas rodadas.
-
-**E se o estoque acabar durante o show?**
-
-Quando a ultima unidade e vendida, o produto e marcado como esgotado automaticamente. Voce pode desfixar e seguir para o proximo produto.
-
-**A quantidade afeta o preco?**
-
-Nao. Cada unidade e vendida pelo mesmo preco. Em Comprar agora, todo comprador paga o mesmo valor fixo. Em Oferta em tempo real e Morte súbita, cada unidade tem sua propria rodada.
+**O que acontece quando o estoque acaba?**
+O produto fica esgotado automaticamente. Na live, você pode passar para o próximo produto.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app.
 
----
+## Veja também
 
-## Veja tambem
-
-- [Como Listar Produtos na Jamble](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288093-como-listar-produtos-na-jamble)
-- [Variantes para Vendedores, Tamanhos e Cores](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288105-variantes-para-vendedores-tamanhos-e-cores)
-- [Clonar Itens](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288110-clonar-itens)
+- [Como Listar Produtos na Jamble](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288093)
+- [Clonar Itens](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288110)

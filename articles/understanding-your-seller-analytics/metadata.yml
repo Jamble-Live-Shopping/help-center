@@ -11,7 +11,7 @@ last_sync: 2026-05-08T00:00:00Z
 locales:
   pt-br:
     title: 'Entendendo seus dados de vendedor'
-    description: 'Entenda onde ver seu desempenho na Jamble: o resumo pos-show, o painel ao vivo e a carteira. E o que ainda nao existe no app.'
+    description: 'Onde ver seu desempenho: vendas em tempo real, o painel Sua Live, o resumo enviado após cada live, a Seller Hub e a carteira.'
   en:
     title: 'Understanding Your Seller Data'
-    description: "See where your performance lives on Jamble: the post-show summary, the live overlay, and the wallet. And what the app does not have yet."
+    description: 'Where to see your performance: real-time sales, the Sua Live dashboard, the summary sent after each live, the Seller Hub and the wallet.'

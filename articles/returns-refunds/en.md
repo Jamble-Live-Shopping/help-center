@@ -1,74 +1,77 @@
-Jamble applies strict refund and return rules to ensure fairness, transparency, and abuse prevention, in accordance with Brazilian consumer law.
+# Returns & Refunds
 
-## Responsibility after shipment
+See how payments work on Jamble, when you get a refund and what to do if there is a problem with your order.
 
-Once a seller ships an order, responsibility for delivery is transferred to the shipping carrier. Jamble does not provide shipping insurance and is not responsible for carrier-related delivery issues.
+## What you will learn
 
-## Orders marked as delivered
+- How payments work
+- When you get a refund
+- What to do if there is a problem with the product or the delivery
+- How and when the refund arrives
 
-When an order is marked as **Delivered** by the carrier:
+## How payments work
 
-- Jamble does not process refunds, even if the buyer claims non-receipt
-- Delivery confirmation provided by the carrier is considered final
+- You pay inside the app, by credit card or Pix
+- Jamble receives the payment and only releases the money to the seller after the order is completed
+- Your card details are not shared with the seller
 
-## Stalled tracking (30+ days)
+## When you get a refund
 
-If shipment tracking has not updated for more than 30 days after dispatch:
+- When you cancel a Loja (shop) purchase before the seller confirms it
+- When the seller cancels the sale
+- When the purchase is canceled automatically, for example if the seller does not ship within the deadline
+- When support reviews a problem with the order and decides on a refund
 
-- Users may be eligible for a refund if the refund amount is less than 20% of their total monthly purchases
-- Refunds exceeding this threshold are not guaranteed
+See more in [Cancellations](https://intercom.help/jamble-bb4bea116bbe/en/articles/10374371).
 
-## Address errors and returned packages
+## Problem with the product
 
-If an order is not delivered due to:
+If the product arrived damaged, different from the listing, incomplete, or if you have doubts about its authenticity:
 
-- An incorrect or incomplete address provided by the buyer
-- Failure to collect the package
-- Delivery refusal
+1. Contact support as soon as possible after you receive the product.
+2. Go to **Ajustes** (Settings) > **Contate o suporte** (Contact support) > **Ajuda com pedidos** (Help with orders) and pick the order.
+3. Tell us what happened and send photos or videos of the package and the product.
 
-The package may be returned to the seller. In such cases:
+Our team reviews the case and may ask you and the seller for information. If a return is needed, support explains how to do it.
 
-- Refund eligibility is limited
-- Shipping fees may not be refundable
-- Jamble is not responsible for lost returned packages
+## Withdraw from a purchase after you receive it
 
-## Claims of fake or counterfeit items
+If you received the product and want to withdraw from the purchase, contact support. Your request is reviewed according to the [Terms of Use](https://www.jamble.com/terms).
 
-If a buyer alleges that an item is fake, counterfeit, or not authentic, Jamble may request additional documentation from both parties.
+## Problem with the delivery
 
-1. If the seller provides valid and verifiable proof of authenticity (such as a purchase receipt or invoice), the item will be considered authentic and no refund will be issued.
-2. If the seller fails to provide satisfactory proof within the timeframe specified by Jamble, the item may be deemed non-authentic. In this case, the seller is responsible for the return shipping, and a refund may be issued.
-3. Jamble reserves the right to make the final determination regarding authenticity and dispute resolution.
+Contact support if:
 
-## Timeframe to report an issue
+- Tracking does not update for a long time
+- The order shows as **Entregue** (Delivered), but you did not receive it
+- The package goes back to the seller
 
-Buyers must contact Jamble Support within **48 hours** of receiving an order.
+If you notice that the shipping address is wrong, contact the seller and support as soon as possible, ideally before the package is shipped.
 
-The order status must not be **Completed** at the time of reporting.
+## How the refund arrives
 
-Requests submitted outside this timeframe may be denied.
+- The refund goes back to the same payment method used for the purchase
+- It usually takes up to 5 business days, depending on your bank or card
+- On a credit card, the amount shows as a reversal on your statement, according to your bank
+- If you used a coupon for the purchase, it goes back to your balance
 
----
+## Key tips
 
-## Refund method
+- Check the product as soon as it arrives and, if there is a problem, contact support before you confirm the order
+- Keep the packaging and take photos of the package and the product if something looks wrong
+- Check your address before you pay
 
-- Eligible refunds are issued to the payment method used when purchase was made
-   - payment method
-   - coupon on the app
-- Once refunds are issued, they can take up to 30 days to be visible on user bank account. Jamble is not responsible of the delay.
+## Frequently asked questions
 
-## Refund monitoring and abuse prevention
+**My refund has not shown up yet. What do I do?**
+Check the statement of the account or card used for the purchase. The timing depends on your bank. If it takes longer, contact support.
 
-Jamble actively monitors refund activity. Refund requests may be denied if:
+**Can I get the refund to a different payment method?**
+The refund always goes back to the payment method used for the purchase.
 
-- The buyer has already received refunds totaling more than 20% of their cumulative purchase volume
-- The refund pattern indicates abusive or fraudulent behavior
+**Can the seller pay me back directly?**
+Payments and refunds are always made through the app, for your safety. Do not make payments outside Jamble.
 
-## Refunds based on order status
+## Need help?
 
-Refunds are processed according to the order status:
-
-1. If the order status is **Delivered**, only the product price may be refunded
-2. If the order status is **Not Delivered**, the total amount paid (including shipping) may be refunded
-
-Refund decisions are final once processed.
+Talk to us through the in-app chat.

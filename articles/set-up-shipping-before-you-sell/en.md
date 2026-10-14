@@ -1,109 +1,110 @@
-# Set Up Shipping Before You Sell
+# Shipping settings
 
 ## What you'll learn
 
-This guide walks you through setting up your shipping preferences on Jamble before you start selling. You'll learn how to register your shipping address, pick your label format, and understand how shipping costs are calculated for your buyers.
+How to get everything ready to ship before your first sale: the address your parcels leave from, the Correios services you accept, the label format and the shipping profiles of your products. You will also see how to change these settings later, in the app or in the Seller Hub.
 
 ## Before you start
 
 You need:
-- An approved seller account on Jamble
-- Your full address with CEP (Brazilian postal code)
-- To know which printer you'll use (regular or thermal)
+- An approved Jamble seller account
+- The address you will ship from, with its CEP (postal code)
+- To know whether you will print on a regular printer or on a thermal printer
 
-## Step by step
+## Step 1: Add your shipping address
 
-### Step 1: Open your Shipping Preferences
+Your shipping address is where your parcels leave from. It goes on the label as the sender and is used to calculate the shipping the buyer pays.
 
-Go to your profile, tap **Settings**. Under the **Sell** section, tap **Shipping Preferences**.
+1. In the app, open **Ajustes** (Settings; on Android, **Configurações**)
+2. Tap **Endereços de remessa** (Shipping addresses; on Android, **Endereços de Entrega**)
+3. Add your address. When you type the CEP, the app helps fill in the street, neighborhood, city and state. Complete the number and, if needed, the complement
+4. Mark the address as default with **Definir como padrão** (Set as default)
 
-![Settings screen with the Sell section showing the Shipping Preferences row highlighted](./assets/mockups/set-up-shipping-before-you-sell__settings-menu__en.png)
+The address marked **Padrão** (Default) is the one used on your labels. If you have more than one address, check which one is the default before generating labels.
 
-This opens the screen where you configure everything shipping-related.
+**Moved?** Add the new address and set it as default. The change applies to your next labels. Labels already generated keep the old address.
 
-### Step 2: Register your shipping address
+## Step 2: Open your shipping preferences
 
-This address is where your packages ship from. It's also used to calculate the shipping cost buyers see at checkout.
+In **Ajustes**, in the **Vender** (Sell) section, tap **Preferências de envio** (Shipping preferences). On this screen you choose the Correios services and the label format. After changing what you want, tap **Salvar** (Save).
 
-Fill in:
-- **CEP**: when you type the CEP, the app auto-fills street, neighborhood, city, and state
-- **Number**: your house or building number
-- **Apartment** (optional): apartment, suite, or reference
+### Correios services
 
-![Shipping Address form with CEP 01310-100 filled in and street, number, neighborhood, city, and state fields completed](./assets/mockups/set-up-shipping-before-you-sell__shipping-address-form__en.png)
+All Jamble labels are Correios labels. Under **Serviços de transporte** (Carrier services), you choose which services you accept:
 
-**Why this matters:** your address determines which Correios agency is closest for drop-offs and affects the shipping cost buyers see.
+- **Correios Mini**: the cheapest, for small and light items. It is usually slower, with simpler tracking. The weight limit is shown in the option's description
+- **Correios PAC**: standard delivery, with a lower cost for the buyer
+- **Correios Sedex**: always on, because it is the only service available on every route. You cannot uncheck it
 
-### Step 3: Pick your label format
+You can turn Mini and PAC on or off. Keeping both on gives more options and usually makes shipping cheaper for the buyer. When the label is generated, Jamble picks an available service among the ones you accepted.
 
-Jamble generates a shipping label for every order. You choose the format that works with your printer.
+As the app notes on this screen, your choice of services applies to your next labels, including those of existing orders.
 
-You have three options:
-- **Half-page PDF**: the default. Works with any regular printer. Prints on half an A4 sheet.
-- **Full-page PDF**: uses a full A4 sheet. Good if you prefer larger, easier-to-read labels.
-- **4x6 thermal label**: for sellers with a thermal label printer (Zebra or similar). Peel-and-stick, no cutting needed.
+### Label format
 
-![Label Format picker with three options: Half-page PDF selected, Full-page PDF, and 4x6 Thermal Label](./assets/mockups/set-up-shipping-before-you-sell__label-format-picker__en.png)
+Under **Tipo de arquivo da etiqueta** (Label file type), choose the format that fits your printer:
 
-**If you're not sure:** start with Half-page PDF. It works with any printer and is the most common choice.
+- **Meia página** (Half page): best for regular printers. This is the default
+- **Página inteira** (Full page): one label per page
+- **Térmica** (Thermal): for thermal label printers
 
-### Step 4: Understand how shipping costs work
+If you are not sure, start with **Meia página**. The chosen format applies to your next labels. A label that was already generated does not change format.
 
-Something many new sellers ask: **you don't set shipping prices yourself.** Here's how it works:
+## Step 3: Set the weight and size of your products
 
-1. When you list a product, you assign a **shipping profile** (a size/weight category, for example "Light Apparel" or "Regular Apparel")
-2. When a buyer checks out, Jamble calculates the shipping cost automatically based on:
-   - The shipping profile (package size and weight)
-   - Your address (where the package ships from)
-   - The buyer's address (where the package ships to)
-3. **The buyer pays the shipping cost** at checkout, on top of the product price
+The shipping cost of each product depends on the weight and size of the parcel. When you create a product, you choose how to provide this:
 
-You never pay for shipping out of your earnings. The buyer always covers it.
+- **Automático** (Automatic): Jamble estimates the weight and size from the item type
+- **Informar peso e tamanho** (Enter weight and size): you pick the weight and size ranges of the parcel
+- One of your shipping profiles: a template with the real weight and measurements, which you reuse across several products
 
-### Step 5: Understand shipping profiles
+To create profiles, open **Ajustes** and tap **Meus Perfis de Envio** (My shipping profiles). See the step by step in [Choose a shipping profile](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288104).
 
-When listing products, you'll pick the profile that matches your package size and weight. Available profiles:
+The closer to the real parcel, the fairer the shipping cost for the buyer and the fewer problems you have at drop-off.
 
-| Profile | Best for | Example items |
-|---------|----------|---------------|
-| XS | Trading cards, flat items | Pokémon cards, stickers |
-| S | Card packs, small accessories | Booster packs, earrings, bracelets |
-| M | T-shirts, light clothing | Tees, tank tops, light blouses |
-| L | Regular clothing, shoes | Shirts, dresses, sneakers |
-| XL | Jackets, coats, large bundles | Heavy coats, large lots |
+## On your computer
 
-**Pick the profile that matches your item's actual size and weight.** If the profile is too small, the package can cost more than expected and trigger adjustments. If it's too big, the buyer overpays, which can discourage purchases.
+In the Seller Hub (jamble.com/seller/dashboard), open **Envios** (Shipping). There you find:
+
+- **Endereços** (Addresses): your shipping addresses and which one is the default
+- **Perfis de Envio** (Shipping profiles): create, edit and delete profiles
+- **Preferências de Envio** (Shipping preferences): Correios services and label format
+
+What you change on your computer also applies in the app. Learn more in [Seller Hub: sell from your computer](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588489).
+
+## How shipping works for you
+
+- **You do not set the shipping price.** Jamble calculates it automatically from the weight and size of the parcel, the distance between you and the buyer, and the services available
+- **The buyer pays for shipping** at checkout. Jamble's commission is calculated on the product price, without shipping
+- **You generate the label through Jamble** and take the parcel to a Correios agency or drop-off point
 
 ## Important tips
 
-- **Set up shipping BEFORE your first show.** If you sell without shipping configured, you won't be able to generate labels and your orders will be delayed.
-- **Your CEP auto-fills your address.** Just type the CEP. You only need to add the number and, optionally, the complement.
-- **Start with Half-page PDF** if you're unsure. You can switch to thermal labels later as your volume grows.
-- **All shipments go through Correios.** After generating a label, drop the package at the nearest Correios agency.
+- **Set everything up before your first live.** Without a default address, you cannot generate labels
+- **Check your default address before generating labels.** The label uses the default address at the moment it is generated
+- **Weigh and measure your products already packed.** This avoids wrong shipping costs and problems at the agency
+- **Test the label format** on your first print, before printing many at once
 
-## Common questions
-
-**Do I set the shipping price for my products?**
-No. Jamble calculates shipping automatically based on the shipping profile, your address, and the buyer's address. The buyer sees the exact cost at checkout.
-
-**Who pays for shipping?**
-The buyer always pays. The cost is added to the product price at checkout. Your earnings are never reduced by shipping.
+## Frequently asked questions
 
 **Can I use a carrier other than Correios?**
-Currently, all Jamble shipments go through Correios. The system picks the most affordable option for each order.
+No. All Jamble labels are Correios labels.
 
-**What if I pick the wrong shipping profile for a product?**
-You can change the profile on any product before it sells. If you realize after a sale that the profile was wrong, contact support: they can help adjust the label.
+**Why can't I uncheck Sedex?**
+Sedex is always on because it is the only service that covers every route. This way, every order always has at least one shipping option.
+
+**Who chooses between cheaper or faster delivery?**
+The buyer. They set their delivery preference in their own settings. Jamble uses that preference together with the services you accept.
+
+**Does changing my settings affect labels I already generated?**
+No. Labels already generated stay as they are. Changes apply to your next labels.
 
 **Do I need a thermal printer?**
-No. A regular printer works fine with Half-page or Full-page PDF. Thermal printers are faster and more convenient for high-volume sellers, but they're not required.
+No. A regular printer works well with **Meia página** or **Página inteira**. A thermal printer is more practical if you ship a lot.
 
-**How do I generate a shipping label after a sale?**
-After the purchase, go to your orders. Each order has an option to generate a shipping label. It's created automatically: you just print it and attach it to the package.
-
-**Where do I drop off my packages?**
-Take your labeled packages to any Correios agency. You can find the closest one on the Correios website or app.
+**How do I generate the label after a sale?**
+See the step by step in [Generate and print shipping labels](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288141).
 
 ## Need help?
 
-Reach out through the app chat or email support@jambleapp.com.
+Talk to us in the app chat.

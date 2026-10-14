@@ -2,115 +2,90 @@
 
 ## What you'll learn
 
-This guide explains how shipping costs are calculated on Jamble, why costs might seem wrong, and what you can do about it. Understanding this helps you handle buyer questions and avoid common pricing issues.
+How shipping is calculated on Jamble, why it sometimes looks high, low or different between buyers, and what you can do to keep shipping fair.
 
-## How shipping costs are calculated
+## How shipping is calculated
 
-Shipping costs on Jamble are **automatic**. You don't set them. Here's how they work:
+You do not set the shipping cost. Jamble calculates it automatically based on:
 
-1. When you list a product, you assign a **shipping profile** (e.g., Light Apparel, Standard Apparel, etc.)
-2. The shipping profile determines the **package dimensions and weight** for cost calculation
-3. When a buyer purchases the item, Jamble calculates the shipping cost based on:
-   - The shipping profile (size/weight)
-   - Your shipping address (origin)
-   - The buyer's address (destination)
-   - Your shipping speed setting (Cheapest or Priority)
-   - Whether package insurance is enabled
+- **The weight and size of the parcel**, from what is on the product (**Automático** (Automatic), **Informar peso e tamanho** (Enter weight and size) or one of your shipping profiles)
+- **The distance** between your shipping address and the buyer's address
+- **The Correios services** you accept (Mini, PAC, and SEDEX, which is always on)
+- **The buyer's delivery preference**: **Mais barato** (Cheapest) or **Premium**
+- **How many items the buyer gets** from you. Each extra item only adds the difference in shipping
 
-The buyer sees and pays the exact shipping cost at checkout.
+The buyer sees the shipping cost before paying and pays it at checkout. Jamble's commission is calculated on the product price, without shipping.
 
-## Common shipping cost issues
+## Common issues
 
-### "The buyer says shipping is too expensive"
+### "The buyer thinks shipping is expensive"
 
-**Why it happens:**
-- The shipping profile may be larger than needed for the actual item
-- The buyer is far from your location (long-distance routes cost more)
-- Priority shipping speed is selected (faster = more expensive)
-- Package insurance is enabled (adds a small cost)
+**Why it can happen:**
+- The weight or size on the product is bigger than the real parcel
+- The buyer is far from you. Long routes cost more
+- The buyer chose **Premium** delivery, which gives priority to SEDEX
+- You turned off Mini or PAC in your preferences, and only a more expensive service was left
 
 **What to do:**
-1. **Check the shipping profile.** If you assigned "Bulkier Items" to a t-shirt, the shipping cost will be much higher than necessary. Change the profile to match the actual item
-2. **Check your shipping speed setting.** If Priority is selected in your Shipping Preferences, switch to Cheapest to reduce costs
-3. **Check if insurance is enabled.** If it is and the item is low-value, disabling insurance reduces the cost slightly
-4. **Explain to the buyer** that shipping costs are based on package size, weight, and distance. You don't control the price — Correios does
+1. **Review the product's weight and size.** Use the real parcel, already packed
+2. **Review your Preferências de envio** (Shipping preferences). If your items allow it, keep Mini and PAC on
+3. **Encourage buying several items.** In the same live, shipping for extra items is only the difference
+4. **Explain to the buyer** that shipping depends on weight, size, distance and service
 
-### "The shipping cost seems too low"
+### "Shipping looks too cheap"
 
-**Why it happens:**
-- The shipping profile may be smaller than the actual item
-- This is a problem because the actual shipping cost at Correios may exceed what was charged
+**Why it can happen:**
+- The weight or size on the product is smaller than the real parcel
 
 **What to do:**
-- Use the correct shipping profile for the item's actual size. If you consistently undersize profiles, you may have issues at the Correios counter
+- Fix the product before selling it again. If the real parcel does not match the label, Correios can refuse it at drop-off and the shipment can be delayed. For a sale that already happened, contact support before generating the label
 
 ### "Different buyers see different shipping costs for the same product"
 
-**Why it happens:**
-This is normal. Shipping costs depend on the **buyer's location**. A buyer in the same city as you will pay much less than a buyer in a different state. There's nothing wrong — it's how distance-based shipping works.
+This is normal. Shipping depends on the distance to each buyer, each buyer's delivery preference and how many items each one gets.
 
-### "Shipping costs changed for the same product"
+### "Shipping changed for the same product"
 
-**Why it happens:**
-- You may have changed your shipping speed setting (Cheapest vs Priority)
-- You may have enabled or disabled package insurance
-- Correios may have updated their price tables (this happens periodically)
+**Why it can happen:**
+- You changed the product's weight, size or shipping profile
+- You changed the accepted services in your Preferências de envio
+- You changed the default address you ship from
+- The buyer already has other items of yours in the same live, so shipping for the new item is only the difference
 
-## Shipping profiles and their impact on cost
+## How to fix a product's weight and size
 
-The shipping profile is the biggest factor you control. Here's how profiles roughly correlate to cost:
+1. Open the product and tap to edit it
+2. In the shipping field, choose **Automático**, **Informar peso e tamanho** or one of your shipping profiles
+3. Save
 
-| Profile | Relative cost |
-|---------|--------------|
-| Card | Lowest |
-| Booster | Very low |
-| Light Accessories | Low |
-| Light Apparel | Low-medium |
-| Standard Apparel | Medium |
-| Heavier Apparel | Medium-high |
-| Bulkier Items | High |
-| Small Bundles | High |
-| Medium Bundles | Very high |
-| Large Bundles | Very high |
-| Extra-Large Bundles | Highest |
+The change applies to your next sales. Sales already made keep the shipping the buyer paid.
 
-**The rule is simple:** Use the smallest profile that your packaged item actually fits in. Don't oversize (buyer pays too much) or undersize (causes problems at Correios).
-
-## How to change a shipping profile
-
-If you realize a product has the wrong shipping profile:
-
-1. Open the product listing
-2. Edit the product details
-3. Change the shipping profile to the correct one
-4. Save
-
-**Important:** You can only change the shipping profile before the item is sold. After a sale, the shipping cost is locked in at whatever profile was assigned at the time of purchase.
+If you edit a shipping profile, the products that use it also use the new measurements for their next sales. See [Choose a shipping profile](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288104).
 
 ## Important tips
 
-- **Always assign the correct shipping profile.** This is the most common cause of shipping cost issues. Take a moment to consider the actual size of the packaged item
-- **Cheapest shipping speed is recommended.** Unless your buyers specifically want faster delivery, Cheapest keeps costs down and makes your products more attractive
-- **Remember: you don't pay shipping costs.** The buyer pays. But if costs are too high, buyers may not buy — so it's in your interest to keep profiles accurate
-- **Check your settings periodically.** If you haven't looked at your Shipping Preferences in a while, review them to make sure everything is still correct
+- **Weigh and measure the packed parcel.** It is the most common cause of wrong shipping costs
+- **Use shipping profiles** for items you sell often. This keeps the measurements right on every product
+- **Keep Mini and PAC on** if your items allow it
+- **Review your settings from time to time.** See [Shipping settings](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288082)
 
-## Common questions
+## Frequently asked questions
 
-**Can I offer free shipping?**
-Currently, shipping costs are always charged to the buyer. Sellers cannot subsidize or eliminate shipping costs through the app.
+**Can I set the shipping price?**
+No. Shipping is calculated automatically.
 
-**Why are shipping costs to the North/Northeast higher?**
-Correios pricing is distance-based. Shipments to more remote regions naturally cost more. This is a carrier policy, not a Jamble setting.
+**Can I change shipping after the sale?**
+No. The buyer pays for shipping at the time of purchase, and that amount does not change afterwards.
 
-**Can I change the shipping cost after a sale?**
-No. The shipping cost is calculated and charged at the time of purchase. It cannot be modified afterward.
+**Why is shipping to some regions more expensive?**
+Shipping depends on distance. Shipping to more distant regions usually costs more.
 
-**Does my shipping speed setting affect all my products?**
-Yes. The Cheapest/Priority setting in your Shipping Preferences applies to all your shipments. You can't set different speeds for different products.
+**Can I choose the service for each order?**
+Not order by order. You set which services you accept, and Jamble picks among them based on the parcel and the buyer's preference.
 
-**What if Correios charges more at the counter than what was on the label?**
-If the actual package dimensions significantly differ from the shipping profile, Correios may charge a difference. This is why it's critical to use the correct shipping profile. If this happens, contact support.
+**What if the real parcel does not match what is on the label?**
+Contact support before dropping it off. See [Make a shipping adjustment](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288137).
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Talk to us in the app chat.

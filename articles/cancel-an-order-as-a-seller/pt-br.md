@@ -1,114 +1,113 @@
-# Cancelar um Pedido como Vendedor
+# Confirmar, recusar ou cancelar uma venda
 
 ## O que você vai aprender
 
-Este guia mostra como cancelar um pedido como vendedor na Jamble, em que fases isso é possível e o que acontece com o comprador depois.
+Este guia explica como confirmar as vendas da live e da Loja, como recusar uma venda da Loja, como cancelar uma venda já confirmada e o que acontece com o comprador em cada caso.
 
-## Antes de começar
+## Vendas da live e vendas da Loja
 
-Você precisa de:
-- Uma conta de vendedor aprovada com pedidos ativos
+- **Vendas da live:** depois que a live termina, você confirma as vendas no painel da live, tocando em **Confirmar Vendas**. Se as vendas não forem confirmadas dentro do tempo mostrado no painel, elas são canceladas e os compradores são reembolsados.
+- **Vendas da Loja:** precisam ser confirmadas ou recusadas por você dentro do prazo mostrado no app. Se você não responder a tempo, a venda é cancelada e o comprador é reembolsado.
 
-## As duas formas de cancelar
+## Confirmar ou cancelar as vendas da live
 
-Existem duas formas de cancelar uma venda, dependendo do status do pedido.
+Depois que a live termina, as vendas precisam da sua confirmação antes do envio. Não é possível confirmar enquanto a live ainda está no ar.
 
-1. **Antes de confirmar** (status Created): toque em **Reject** para recusar o pedido.
-2. **Depois de confirmar** (status Confirmed, In Delivery ou Delivered): toque em **Cancel Sale**.
+1. Quando a live terminar, toque em **Meu painel de controle** para abrir o painel **Sua Live**. Você também encontra esse painel depois, na aba **Lives Passadas** do seu perfil, ou no Seller Hub, na live que já terminou.
+2. Confira as vendas e toque em **Confirmar Vendas**.
+3. Depois de confirmar, você já pode comprar as etiquetas e emitir a nota fiscal.
 
-Nos dois casos, o comprador recebe o reembolso automaticamente via PIX e o produto volta para o seu inventário.
+Se você não puder honrar as vendas, toque em **Cancelar Vendas**. As vendas que ainda não foram confirmadas são canceladas e os compradores são reembolsados.
 
-## Passo 1: Abra suas vendas
+Você tem alguns dias depois do fim da live para confirmar, e o tempo restante aparece no painel. Se você não confirmar a tempo, as vendas não confirmadas são canceladas automaticamente e os compradores são reembolsados. O prazo de envio só começa quando você confirma as vendas.
 
-No app, vá em **Configurações** e toque em **My Sales**.
+## Confirmar ou recusar vendas da Loja
 
-![Seção Vender das configurações com Minhas Vendas destacada, Minha Carteira, Preferências de Envio e Modo Férias](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cancel-an-order-as-a-seller__settings-seller-menu__pt-br.png)
+1. Abra **Ajustes** e toque em **Envios**. No computador, abra **Envios** no Seller Hub.
+2. No pacote com vendas novas, toque em **Revisar vendas pendentes**.
+3. Para cada venda, toque em **Confirmar** ou **Recusar**.
 
-Você vê a lista dos seus pedidos recentes. Toque no pedido que quer cancelar para abrir a tela de detalhes.
+Depois que todas as vendas do pacote são confirmadas, você pode gerar a etiqueta e enviar. Se você recusar uma venda, o comprador é reembolsado. Essa ação não pode ser desfeita.
 
-## Passo 2: Identifique o status
+Você também pode abrir a venda em **Ajustes** > **Minhas vendas** e usar os botões **Confirmar** ou **Recusar** no fim da tela.
 
-Na tela de detalhes, olhe o cartão de status no topo. O status diz qual caminho você deve seguir.
+Enquanto você ainda não confirmou, o comprador pode cancelar o pedido da Loja pelo app. Nesse caso, a venda some das suas vendas pendentes e o comprador é reembolsado.
 
-- Status **Created**: o pagamento está autorizado mas você ainda não confirmou. Use **Reject**.
-- Status **Confirmed**, **In Delivery** ou **Delivered**: você já confirmou a venda. Use **Cancel Sale**.
+## Cancelar uma venda já confirmada
 
-## Opção A: Rejeitar antes de confirmar
+Se você não puder enviar um item, cancele a venda o quanto antes.
 
-Se o pedido está em **Created**, você vê dois botões no rodapé: **Reject** (cinza) e **Confirm** (escuro). Toque em **Reject** para recusar.
+### Passo 1: Abra a venda
 
-O pedido fecha imediatamente. O comprador recebe o reembolso e o produto volta ao seu inventário. Esse é o caminho mais limpo, porque evita qualquer preparo de envio.
+Abra **Ajustes** > **Minhas vendas** e toque na venda que você quer cancelar.
 
-## Opção B: Cancelar depois de confirmar
+### Passo 2: Toque em Cancelar venda
 
-Se o pedido já está confirmado, abra a tela de detalhes. O botão **Cancel Sale** aparece em vermelho no canto superior direito do cartão de status.
+O botão **Cancelar venda** aparece no fim da tela de detalhes da venda.
 
-![Cartão de status Confirmado com o botão Cancelar venda em vermelho no canto superior direito](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cancel-an-order-as-a-seller__sale-detail-cancel-button__pt-br.png)
+### Passo 3: Escolha o motivo
 
-Toque em **Cancel Sale**. A próxima tela pergunta **O que te levou a cancelar?** e pede que você escolha um motivo entre cinco opções.
+O app pergunta **O que te levou a cancelar?**. Escolha um dos motivos e toque em **Enviar**:
 
-![Tela de seleção do motivo de cancelamento com opção Não foi possível enviar o item marcada e botão Enviar roxo](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cancel-an-order-as-a-seller__cancellation-reason-picker__pt-br.png)
+- **Não foi possível enviar o item**
+- **Item perdido**
+- **Item danificado**
+- **O comprador solicitou o cancelamento**
+- **Outras razões**
 
-Os cinco motivos são:
-- **Unable to ship the item** (não foi possível enviar)
-- **Item lost** (item perdido)
-- **Item damaged** (item danificado)
-- **Buyer requested cancellation** (comprador solicitou o cancelamento)
-- **Other reasons** (outras razões)
+![Tela O que te levou a cancelar com a lista de motivos, Não foi possível enviar o item selecionado e o botão Enviar](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cancel-an-order-as-a-seller__cancellation-reason-picker__pt-br.png)
 
-Selecione o motivo que mais se aproxima e toque em **Submit**.
+### Passo 4: Confirme
 
-## Passo 3: Confirme o cancelamento
+Uma janela **Cancelar esta venda** pede a confirmação. Toque em **Cancelar venda** para confirmar, ou em **Não cancele** para voltar.
 
-Uma janela final pede a confirmação. Ela lembra que cancelamentos abusivos ou repetidos podem levar a restrições temporárias ou suspensão da conta.
+![Janela Cancelar esta venda com o aviso sobre cancelamentos repetidos e os botões Não cancele e Cancelar venda](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cancel-an-order-as-a-seller__cancel-sale-confirmation__pt-br.png)
 
-![Janela de confirmação Cancelar esta venda com os botões Não cancele em azul e Cancelar venda em vermelho](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cancel-an-order-as-a-seller__cancel-sale-confirmation__pt-br.png)
+Se o pacote já foi postado, o cancelamento pelo app pode não estar disponível. Nesse caso, fale com o suporte.
 
-Toque em **Cancel Sale** para confirmar, ou em **Don't Cancel** para voltar. A equipe de suporte revisa o pedido em até 2 horas.
+## O que acontece depois de um cancelamento
 
-## O que acontece depois
+- **O comprador é reembolsado** na mesma forma de pagamento usada na compra. O valor costuma voltar em até 5 dias úteis, dependendo do banco ou do cartão.
+- **O valor da venda não entra na sua carteira.**
+- **A venda aparece como cancelada** em **Minhas vendas**.
 
-Quando o cancelamento é processado:
-- **O comprador recebe o reembolso total via PIX.** O retorno é automático e cai na mesma chave usada no pagamento.
-- **Você perde a venda.** O dinheiro não entra na sua carteira e a transação aparece como cancelada no histórico.
-- **O produto volta ao inventário.** Você pode listar de novo em um próximo show ou deixar disponível no perfil.
+## Cancelamento automático por atraso no envio
 
-## Quando posso cancelar
+O prazo para enviar costuma ser de cerca de 10 dias depois que a venda é confirmada. Em situações excepcionais, como uma greve dos Correios, ele pode ser estendido para até 20 dias. O prazo exato aparece sempre no pedido, em Prazo de envio.
 
-Você pode cancelar um pedido enquanto o comprador ainda não confirmou o recebimento. A tabela abaixo resume os status em que o botão fica visível.
+Se o prazo passar, o pedido mostra **Envio atrasado**. Se o item continuar sem ser postado alguns dias depois, a venda é cancelada e o comprador é reembolsado automaticamente.
 
-- **Created**: sim, use **Reject**.
-- **Confirmed**: sim, use **Cancel Sale**.
-- **In Delivery**: sim, use **Cancel Sale** (precisa de 50 vendas concluídas).
-- **Delivered**: sim, use **Cancel Sale** (precisa de 50 vendas concluídas).
-- **Completed**: não, a transação está fechada.
+## Dicas importantes
 
-Quando o pedido chega em **Completed**, ele sai do seu controle no app. Se houver um problema depois disso, abra um chamado com o suporte.
-
-## Boas práticas
-
-- **Cancele só quando for necessário.** Motivos válidos: produto perdido, avaria descoberta depois da venda, erro na listagem.
-- **Não cancele para evitar envio.** Cancelamentos repetidos afetam sua reputação e podem bloquear recursos da conta.
-- **Aja rápido.** Quanto antes você cancelar, mais cedo o comprador recebe o reembolso.
-- **Rejeitar vale mais que cancelar.** Se você já sabe que não vai enviar, use **Reject** antes de confirmar. Isso evita passos extras para o comprador.
+- **Confirme as vendas da live logo depois de encerrar.** O tempo restante aparece no painel da live
+- **Responda rápido às vendas da Loja.** Confirme ou recuse dentro do prazo mostrado no app
+- **Recuse em vez de confirmar e cancelar depois.** Se você já sabe que não vai enviar, recuse a venda da Loja logo
+- **Cancele só quando for necessário.** Cancelamentos frequentes podem levar a restrições na sua conta
+- **Fique de olho no Prazo de envio.** Envie antes do prazo para evitar o cancelamento automático
 
 ## Perguntas frequentes
 
-**Posso cancelar um pedido depois de já ter confirmado?**
-Sim, basta abrir o pedido e tocar em **Cancel Sale**. O reembolso é automático.
+**Preciso confirmar as vendas da live?**
+Sim. Depois que a live termina, toque em **Confirmar Vendas** no painel da live, dentro do tempo mostrado ali. Só depois disso você pode comprar as etiquetas. Se você não confirmar a tempo, as vendas são canceladas e os compradores são reembolsados.
+
+**Posso confirmar as vendas durante a live?**
+Não. A confirmação só fica disponível depois que a live termina.
+
+**O que acontece se eu não confirmar uma venda da Loja?**
+A venda é cancelada quando o prazo mostrado no app termina, e o comprador é reembolsado.
+
+**O comprador pode cancelar?**
+Sim, em pedidos da Loja, enquanto você ainda não confirmou a venda. Compras feitas na live não podem ser canceladas pelo comprador no app.
 
 **Cancelar prejudica minha conta?**
-Cancelamentos pontuais por motivos legítimos são normais. Cancelamentos frequentes afetam seu status de vendedor e podem gerar restrições.
+Um cancelamento pontual por um motivo real é normal. Cancelamentos frequentes podem levar a restrições na conta.
 
-**Em quanto tempo o comprador recebe o reembolso?**
-O reembolso é processado assim que você confirma o cancelamento. Como o pagamento é PIX, o valor costuma voltar em minutos.
+**Para onde vai o reembolso do comprador?**
+Sempre para a mesma forma de pagamento usada na compra, em até 5 dias úteis, dependendo do banco ou do cartão.
 
-**O comprador também pode cancelar?**
-Sim, enquanto o pedido está em **Created**. Ele vê o botão **Cancel Order** e um diálogo com **Yes, I cancel** ou **No, back**. Se o comprador cancelar, você é notificado e o produto volta ao inventário.
-
-**Posso cancelar só parte do pedido?**
-Não. Cada item é um pedido separado na Jamble, então você cancela um item de cada vez.
+**Posso cancelar só um item de um pacote?**
+Sim. Cada item é uma venda separada, então você cancela uma venda de cada vez.
 
 ## Precisa de ajuda?
 
-Fale com o time pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app.

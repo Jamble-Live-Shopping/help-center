@@ -48,9 +48,8 @@ mockup_plan:
         - no_invented_ui_state
       visible_text:
         - selector: ".modal-title"
-          source: swift_literal
-          path: "LIVE_SHOPPING/Raid/View/RaidViewController.swift:21"
-          value: "The Jamble Raid"
+          source: xcstrings
+          key: "The Jamble Raid"
         - selector: ".accent"
           source: xcstrings
           key: "sending your viewers to a seller"
@@ -58,9 +57,8 @@ mockup_plan:
           source: xcstrings
           key: "Select Live Show"
         - selector: ".btn.btn-leave"
-          source: swift_literal
-          path: "LIVE_SHOPPING/Raid/View/RaidViewController.swift:123"
-          value: "End without Raid"
+          source: xcstrings
+          key: "End without Raid"
       visible_text_allowlist:
         - selector: ".avatar-left"
           reason: "Decorative seller-initial placeholder (single letter), not localized copy"
@@ -94,13 +92,11 @@ mockup_plan:
         - no_invented_ui_state
       visible_text:
         - selector: ".modal-title"
-          source: swift_literal
-          path: "LIVE_SHOPPING/Raid/View/RaidViewController.swift:21"
-          value: "The Jamble Raid"
+          source: xcstrings
+          key: "The Jamble Raid"
         - selector: ".chip"
-          source: swift_literal
-          path: "LIVE_SHOPPING/Raid/View/RaidViewController.swift:73"
-          value: "Success!"
+          source: xcstrings
+          key: "Success!"
         - selector: ".desc"
           source: xcstrings
           key: "Thanks for supporting the community! You can now end your Show"

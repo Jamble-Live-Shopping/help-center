@@ -1,120 +1,96 @@
-# Practice Mode - Test Your Show Before Going Live
+# Practice Mode: Test Your Live Before Going Live
 
-## What you'll learn
+## What you will learn
 
-This guide explains how to use Practice mode on Jamble. Practice mode lets you test your camera, microphone, and the hosting interface before your real show starts, without any audience watching. It's the best way to get comfortable before going live for the first time.
+This guide explains how to use practice mode to test your camera, your microphone and the seller screen before your live starts, with nobody watching. On iPhone it is called **Modo de prática** (Practice mode). On Android, **Modo Teste** (Test mode).
 
 ## Before you start
 
 You need:
+
 - An approved seller account on Jamble
-- A scheduled show (create a show first)
-- Your seller setup complete: shipping address and payment info (PIX/bank account)
-- Products added to your show (optional, but recommended for a full test)
+- A scheduled live that has not started yet
+- Your seller setup complete: email, address and payout account
+- Products added to the live (optional, but recommended for a full test)
 
-## How Practice mode works
+## How practice mode works
 
-Select your scheduled show and open it. You'll see two buttons:
+When you open a scheduled live that has not started yet, two buttons appear:
 
-- **Practice mode**: starts a private test session (no one can see you)
-- **Go Live**: starts your real show (viewers can join)
+- **Iniciar Live** (Go live): starts your real live, and buyers can join
+- **Modo de prática** (iPhone) or **Modo Teste** (Android): opens a private session just for you
 
-Practice mode is completely private. No followers are notified, no buyers can join, and nothing you do during practice affects your real show. When you stop practicing (or go live), everything is reset automatically.
+In practice mode, nobody watches, nobody can buy and no follower is notified. The sales you start are test sales only and do not become purchases.
 
 ## Step by step
 
-### Step 1: Enter your scheduled show
+### Step 1: Open your scheduled live
 
-Open the Jamble app and go to the show you've scheduled. Tap on it to enter the host screen.
+Open the app and go to the live you scheduled. You see the countdown to the live time and the two buttons.
 
-You'll see a countdown to your show's start time, along with two buttons at the bottom:
+### Step 2: Enter practice mode
 
-![Show countdown screen with Practice mode and Go Live buttons](./assets/mockups/practice-mode-test-your-show-before-going-live__show-countdown-ready__en.png)
+Tap **Modo de prática** (iPhone) or **Modo Teste** (Android). On Android, confirm with **Iniciar** (Start) in the **Iniciar Modo Teste?** (Start test mode?) alert.
 
-### Step 2: Tap "Practice mode"
+If any information is missing from your setup, the app shows what needs to be completed (on iPhone, the **Live prática** (Practice live) screen with **Conclua para começar a praticar** (Complete to start practicing)). Complete the details and try again.
 
-Tap the **Practice mode** button.
+If everything is set, your camera turns on and you see yourself as buyers will see you.
 
-If your seller setup is incomplete (missing email, shipping address, or payment info), you'll see a screen asking you to complete your setup first. Fix the missing info, then come back.
+### Step 3: Test the seller screen
 
-If everything is set up, your camera activates immediately. You'll see yourself on screen, just like your buyers would during a real show.
+In practice mode you can:
 
-### Step 3: Test the hosting interface
+- **Check the camera:** light, angle and background
+- **Test the microphone:** make sure the sound is good
+- **See the product list** of your live
+- **Pin products** as you would in the live
+- **Start test sales** in the Real-time offers, Comprar Agora (Buy now) and Morte Súbita (Sudden death) modes, to get used to the buttons
 
-While in Practice mode, you can:
+While practice mode is on, some actions are blocked, such as deleting or reordering listings. The app tells you when you need to leave practice first.
 
-- **See your camera feed**: check your lighting, angle, and background
-- **Test your microphone**: make sure your audio works
-- **Browse your product list**: see the products attached to your show
-- **Pin products**: practice pinning items to showcase them, just like during a real show
-- **Start sales on your products**: practice the flow of starting a real-time offer or a Buy It Now. These are practice sales only, no real purchases can happen
+### Step 4: Leave practice mode
 
-This is your chance to get familiar with the buttons and layout of the hosting screen without any pressure.
+- **On iPhone:** tap **Pare de praticar** (Stop practice)
+- **On Android:** open the live menu and tap **Encerrar Modo Teste** (End test mode)
 
-### Step 4: Stop practice when you're ready
+When you leave, test sales are discarded and your products stay ready for the real live.
 
-When you're done practicing, you have two options:
+### Step 5: Go live
 
-- Tap the **Stop practice** button that appears on the screen
-- Or tap the **back button** to exit
+When you are ready, tap **Iniciar Live**. A confirmation appears:
 
-![Practice mode camera preview with the Stop practice button](./assets/mockups/practice-mode-test-your-show-before-going-live__practice-mode-camera__en.png)
+- **On iPhone:** **Comece sua live** (Start your live). Tap **Sim, comece** (Yes, start)
+- **On Android:** **Iniciar sua live?** (Start your live?). Tap **Iniciar** (Start)
 
-When you stop practice, everything resets. All practice sales are removed, and your products go back to their original state, ready for your real show.
-
-### Step 5: Go Live when you're ready
-
-After practicing (or skipping practice), tap **Go Live** to start your real show.
-
-A confirmation message appears:
-
-!["Start your Show" alert dialog with Later and Yes, start buttons](./assets/mockups/practice-mode-test-your-show-before-going-live__start-show-confirmation__en.png)
-
-Tap **Yes, start** to go live. Your followers will be notified and buyers can now join your show.
-
-## What happens during Practice mode (and what doesn't)
-
-- **Your camera and microphone turn on**: no viewers can see you
-- **You can browse and pin products**: no buyers can join
-- **You can start practice sales**: no real purchases can be made
-- **You see the full hosting interface**: no notifications are sent to your followers
-
-Everything that happens in Practice mode stays in Practice mode. It's completely separate from your real show.
+From then on, people can join your live.
 
 ## Important tips
 
-- **Complete your seller setup first.** Practice mode requires the same setup as going live: shipping address, payment info, and email. If anything is missing, you'll be asked to complete it before you can practice
-- **Use practice to check your lighting and sound.** The most common issue for new sellers is bad lighting or audio. Practice mode lets you fix these before your real audience is watching
-- **There's no time limit.** You can practice for as long as you want. Take your time to explore the interface
-- **Everything resets when you stop.** You don't need to worry about undoing anything: all practice sales and data are automatically removed when you stop practicing or go live
-- **You can practice before every show.** Practice mode isn't just for your first show. Use it anytime you want to double-check your setup before going live
+- **Complete your setup first.** Practice mode asks for almost the same details as the real live
+- **Test light and sound.** These are the most common problems for new sellers
+- **Practice before every live, if you want.** Practice mode is not only for the first time
+- **Do not leave practice open without using it.** A session that stays idle or offline for a long time may end automatically
 
-## Common questions
+## Frequently asked questions
 
 **Do I need to practice before going live?**
-No. Practice mode is optional. You can skip it and tap Go Live directly. But if it's your first show, we strongly recommend trying Practice mode first, even for just a minute.
+No, it is optional. But if it is your first live, it is worth testing for a few minutes.
 
-**Can anyone see me during Practice mode?**
-No. Practice mode is completely private. No audience, no notifications, no one watching. It's just you and the app.
+**Can anyone see me during practice?**
+No. The session is private and no follower is notified.
 
-**Can buyers purchase my products during Practice mode?**
-No. Any sales started during practice are marked as practice only. If a buyer somehow tried to make a purchase, it would be blocked. Your real products are safe.
+**Can buyers buy my products during practice?**
+No. Sales started in practice are test sales only.
 
-**Does Practice mode use my real products?**
-Yes. You practice with the actual products attached to your show. This lets you test the real flow: pinning products, starting sales, and navigating your product list. But nothing is sold or modified permanently.
+**Does practice use my real products?**
+Yes, you practice with the products in your live, but nothing is sold.
 
-**What happens to my practice data when I go live?**
-It's completely erased. When you tap Go Live, all practice sales and data are removed. Your show starts fresh, as if practice never happened.
+**Can I go back to practice mode after going live?**
+No. Practice is only available before the live starts.
 
-**Is there a time limit for Practice mode?**
-No. You can practice as long as you want. When you're ready, stop practice and go live.
-
-**Can I go back to Practice mode after going live?**
-No. Once your show is live, you can't switch back to Practice mode. Practice is only available before the show starts.
-
-**I don't see the Practice mode button. What should I do?**
-Make sure you're on the host screen of a scheduled show that hasn't started yet. The Practice mode button only appears before the show begins. If you still don't see it, try updating the Jamble app to the latest version.
+**I do not see the practice mode button. What do I do?**
+Make sure you opened a scheduled live that has not started yet. If it still does not appear, update the app to the latest version.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Talk to us through the app chat.

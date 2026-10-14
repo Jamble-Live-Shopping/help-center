@@ -1,90 +1,86 @@
-# Seller Statements - View Your Payout History
+# View your earnings and payout history
 
 ## What you will learn
 
-This guide explains how to access and understand your financial history on Jamble. You will learn how to open the Payouts History screen, read each payout entry, and open a specific payout to see the orders included in it.
+This guide shows how to read your wallet on Jamble, follow each withdrawal in **Histórico de saques** (payout history) and see which sales are part of a withdrawal.
 
 ## Before you start
 
 You need:
+
 - An approved seller account on Jamble
-- At least one payout completed (to have history to view)
+- Your payout account registered in the wallet
 
-## Step by step
+## Step 1: Open your wallet
 
-### Step 1: Open your wallet
+In the app, open **Ajustes** (settings) and tap **Minha carteira** (my wallet). On a computer, open **Carteira** (wallet) in the Seller Hub.
 
-Go to your profile, then tap **Settings** and then **My Wallet**.
+## Step 2: Understand each part of the wallet
 
-### Step 2: Open Payouts History
+- **Disponível para saque** (available to withdraw): the amount you can withdraw now. Tap **Sacar** (withdraw) to send this amount to your bank account
+- **Dados bancários** (bank details): the account that receives your withdrawals. Tap **Atualizar** (update) to correct your details
+- **Vendas pendentes** (pending sales): payments not released yet and sales still in progress. Tap **Saiba Mais** (learn more) to open **Sobre vendas pendentes** (about pending sales) and see the timing
+- **Recebimento Antecipado** (early payout): when it appears, this is the option to receive card payments sooner. See [Recebimento Antecipado (early payout)](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588903)
+- **Histórico de saques:** the list of all your withdrawals, at the bottom of the screen
 
-In the top-right corner of the wallet screen, tap the **clock icon** (next to the help button). This opens the **Payouts History** screen.
+If you changed from CPF to CNPJ, the wallet may show the **Conta atual** (current account) and the **Conta anterior** (previous account), each with its own balance.
 
-![My Wallet screen with the help and history icons in the top-right corner](./assets/mockups/seller-statements-view-your-payout-history__wallet-header__en__v2.png)
+## Step 3: Follow your withdrawals
 
-### Step 3: Review your payouts
+In **Histórico de saques**, the most recent withdrawals appear first. Each withdrawal shows:
 
-The Payouts History screen shows all your withdrawal records, with the most recent at the top.
+- The withdrawal number
+- The amount
+- The status
+- The date
 
-![Payouts History list with four entries: three Completed in green and one Failed in red](./assets/mockups/seller-statements-view-your-payout-history__payouts-history__en__v2.png)
+If a withdrawal fails, the reason appears right below the status.
 
-Each payout entry shows four pieces of information:
+Scroll the list to see older withdrawals. Pull the screen down to refresh.
 
-- **Payout ID**: a unique reference number for this withdrawal
-- **Amount**: the R$ value that was (or attempted to be) transferred
-- **Status**: the current state (Created, Processing, Pending, Completed, Failed, Canceled)
-- **Date**: when you requested the withdrawal
+## Step 4: See the details of a withdrawal
 
-### Step 4: Tap a payout to see the details
+Tap a withdrawal to open **Detalhes do saque** (payout details). The screen shows each sale included in that withdrawal, with the buyer, the product, the order number, the amount and the date.
 
-Tap any entry in the list to open the **Payout Details** screen. It shows the payout ID at the top and the list of orders that make up that payment, with buyer, product, order number, and amount.
+Use this screen to check exactly which sales went into each withdrawal.
 
-![Payout Details screen with two orders: one Pokemon TCG product and one Diecast, both with status and R$ amount](./assets/mockups/seller-statements-view-your-payout-history__payout-details__en__v2.png)
+## Withdrawal statuses
 
-### Step 5: Scroll for older records
+- **Criado** (created): the request was received
+- **Pendente** (pending): the transfer is being processed
+- **Concluído** (completed): the money was sent to your bank account
+- **Falhou** (failed): the transfer was not completed. See the reason on the withdrawal
+- **Cancelado** (cancelled): the withdrawal was cancelled
 
-Scroll down in the payouts list to load more entries. You can also **pull down to refresh** the screen and see the latest updates.
-
-## Understanding your statements
-
-### Status colors
-
-- **Purple** (Created, Processing, Pending): your payout is in progress
-- **Green** (Completed): money has been deposited in your bank
-- **Red** (Failed, Canceled): something went wrong or the payout was stopped
-
-### Reading your history
-
-Your Payouts History is your record of every withdrawal you made. Use it to:
-- **Verify deposits**: match Completed payouts against your bank statements
-- **Track pending withdrawals**: see if a recent withdrawal is still processing
-- **Identify problems**: spot Failed payouts that need attention
-- **Keep records**: maintain a history of your earnings on Jamble
+If a withdrawal is **Criado** or **Pendente** and the money has not arrived yet, tap **Não recebeu ainda?** (didn't receive yet?) and then **Atualizar** (refresh) to see the latest status.
 
 ## Important tips
 
-- **Check Payouts History after every withdrawal.** Get in the habit of verifying that your withdrawals reach Completed status
-- **Save your payout IDs.** If you ever need to contact support about a specific withdrawal, having the payout ID makes it much faster to resolve
-- **Failed payouts need action.** If you see a Failed status, go back to your wallet, check your bank details, and request a new withdrawal
-- **Your wallet balance is separate from payout history.** The wallet shows your current available balance. Payouts History shows the record of all past withdrawals
+- **Check the history after each withdrawal.** Make sure it reaches **Concluído**
+- **Keep the withdrawal number.** If you need to contact support, it helps solve things faster
+- **Balance and history are different things.** The wallet shows what you can withdraw now. The history shows the withdrawals you already made
+- **The amount usually arrives within 5 business days**, depending on your bank
 
-## Common questions
+## Frequently asked questions
 
-**Can I export my payout history?**
-Currently, the payout history is only viewable in the app. For tax or accounting purposes, you can take screenshots or note down the details manually.
+**Where do I see how much I earned?**
+In **Minha carteira**. The amount you can already withdraw appears in **Disponível para saque** and sales in progress are in **Vendas pendentes**.
 
-**How far back does the history go?**
-Your entire payout history since you started selling on Jamble is available. Scroll down to load older records.
+**Why is the withdrawal amount not what I expected?**
+A withdrawal sends the whole **Disponível para saque** balance at the time of the request. Sales still in **Vendas pendentes** go into a later withdrawal, once they become available.
 
-**Can I see which orders make up a payout?**
-Yes. Tap any payout in the list to open Payout Details, which shows every order included in that payment (buyer, product, order number, and amount).
+**Can I see which sales are part of a withdrawal?**
+Yes. Tap the withdrawal in **Histórico de saques** to open **Detalhes do saque**.
 
-**Why do I see a Failed payout?**
-A payout fails when the PIX transfer to your bank could not be completed, usually because of incorrect bank details. Check and update your bank information, then request a new withdrawal.
+**My withdrawal has been Pendente for a few days. Is that normal?**
+Yes. A withdrawal usually arrives within 5 business days, depending on your bank. If it takes longer, contact support.
 
-**The amount does not match what I expected. Why?**
-Payouts transfer your entire available wallet balance at the time of the request. If some orders were still pending when you withdrew, those earnings were not included. They will be available in your next payout after the orders complete.
+**What do I do if a withdrawal fails?**
+Check the reason shown on the withdrawal, review your **Dados bancários** and request a new withdrawal. If the problem continues, see [Troubleshoot issues with earnings or payouts](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288151).
+
+**Can I see my earnings per live?**
+The wallet shows the total. To see each sale, open **Ajustes** > **Minhas vendas** (my sales).
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Talk to us through the in-app chat.

@@ -11,8 +11,8 @@ last_sync: 2026-08-21T09:33:42Z
 
 locales:
   pt-br:
-    title: '7. Bots e Moderação'
-    description: 'O Jamble realiza moderação automática e manual para garantir a integridade da plataforma'
+    title: '7. Bots e moderação'
+    description: 'O que não é permitido nas lives, como funciona o filtro automático de conteúdo e a moderação da equipe.'
   en:
-    title: '7. Bot and Moderations'
-    description: 'Jamble moderates content automatically and manually to ensure platform integrity'
+    title: '7. Bots and moderation'
+    description: 'What is not allowed in lives, how the automatic content filter works and how the team moderates.'

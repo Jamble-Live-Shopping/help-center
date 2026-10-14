@@ -1,93 +1,97 @@
-# Usar dois dispositivos durante o show
+# Usar dois dispositivos durante a live
 
-## O que voce vai aprender
+## O que você vai aprender
 
-Este guia explica como usar um segundo celular durante um show ao vivo na Jamble. Um celular transmite o video. O outro vira um controle remoto que mostra os produtos, o chat e as ferramentas de venda. Assim voce nao precisa fazer tudo numa tela so e mantem o foco na camera.
+Este guia mostra como usar um segundo aparelho durante a sua live. Um aparelho transmite o vídeo. O outro vira um controle remoto, com os produtos, o chat e as ferramentas de venda. Assim você não precisa fazer tudo em uma tela só e mantém o foco na câmera. O segundo aparelho pode ser outro celular ou o seu computador, pelo Seller Hub.
 
-## Antes de comecar
+## Antes de começar
 
-Voce vai precisar de:
-
+Você vai precisar de:
 - Uma conta de vendedor aprovada na Jamble
-- Dois iPhones com o app Jamble instalado
-- Sua conta logada nos dois iPhones
-- Os dois aparelhos com internet estavel
+- Dois aparelhos com a mesma conta Jamble: dois celulares com o app, ou um celular e um computador com o Seller Hub
+- Internet estável nos dois aparelhos
 
 ## Como funciona
 
-Quando voce abre o mesmo show ao vivo no segundo celular logado na mesma conta, o app pergunta o que voce quer fazer com esse aparelho. Voce escolhe entre transmitir deste novo celular ou usa-lo como controle remoto.
+Quando você abre a mesma live em um segundo aparelho, o app pergunta o que você quer fazer com ele: usar como controle remoto ou passar a transmitir dele.
 
-Apenas um celular transmite video por vez. O outro celular fica em modo controle remoto: a camera fica desligada nesse aparelho, mas voce continua vendo o show e tem acesso aos controles.
+Só um aparelho transmite vídeo por vez. O outro fica como controle remoto: a câmera dele fica desligada, mas você continua vendo a live e usando os controles.
 
-## Passo a passo
+## Passo a passo no celular
 
-### Passo 1: Comece o show no celular principal
+### Passo 1: comece a live no aparelho principal
 
-Inicie o show normalmente no celular que vai ser sua camera. Esse e o aparelho que transmite o video para os espectadores.
+Inicie a live normalmente no celular que vai ser a sua câmera.
 
-### Passo 2: Abra o mesmo show no segundo celular
+### Passo 2: abra a mesma live no segundo celular
 
-No segundo celular, abra o app e entre no mesmo show ao vivo. Como voce ja esta transmitindo do celular principal, a Jamble mostra um cartao com o titulo *Controle remoto* e dois botoes:
+No segundo celular, abra o app com a mesma conta e entre na mesma live. Aparece uma escolha:
 
-![Cartao Controle remoto com os botoes Use como um controle remoto e Transmissao ao vivo a partir deste dispositivo](./assets/mockups/use-two-devices-while-hosting__remote-control-picker__pt-br__v3.png)
+![Cartão Controle remoto com os botões Use como um controle remoto e Transmissão ao vivo a partir deste dispositivo](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/use-two-devices-while-hosting__remote-control-picker__pt-br__v3.png)
 
-Os dois botoes sao:
+No iPhone, o cartão **Controle remoto** mostra:
+- **Use como um controle remoto**: este celular vira o controle da live, com a câmera desligada
+- **Transmissão ao vivo a partir deste dispositivo**: a transmissão passa para este celular
 
-- *Use como um controle remoto*: o segundo celular vira um painel de controle do show. A camera fica desligada nesse celular.
-- *Transmissao ao vivo a partir deste dispositivo*: a transmissao de video troca para esse celular. O celular principal vira automaticamente o controle remoto.
+No Android, o aviso **Outro dispositivo está transmitindo** mostra:
+- **Ficar como controle remoto**: este celular vira o controle da live
+- **Assumir transmissão**: a transmissão passa para este celular
 
-### Passo 3: Use o segundo celular como controle remoto
+### Passo 3: use o controle remoto
 
-Toque em *Use como um controle remoto*. O segundo celular abre a interface do show com a camera desligada e um indicador no canto superior direito que sinaliza o modo controle remoto.
-
-![Modo controle remoto com o indicador no canto superior direito do show ao vivo](./assets/mockups/use-two-devices-while-hosting__close-remote-button__pt-br__v3.png)
-
-A partir dai, no celular controle voce pode:
-
-- Ler e responder o chat sem tirar o rosto da camera principal
+No controle remoto, você vê a live e tem os mesmos controles da tela da live:
+- Ler e responder o chat sem tirar os olhos da câmera
 - Fixar produtos e organizar a fila
-- Iniciar e gerenciar vendas (Compra Direta, Vendas Relampago, ofertas em tempo real)
-- Acompanhar o valor das ofertas e o status da venda
-- Bloquear ou silenciar usuarios no chat
+- Iniciar e acompanhar as vendas
+- Usar o menu da live
 
-Quando quiser sair do modo controle remoto neste celular, toque no indicador no canto superior direito.
+No iPhone, um botão de controle remoto aparece no canto superior direito. Toque nele para sair do modo controle remoto neste celular.
 
-### Passo 4: Trocar a transmissao para o outro celular (opcional)
+![Botão de controle remoto no canto superior direito da live](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/use-two-devices-while-hosting__close-remote-button__pt-br__v3.png)
 
-Se voce quiser trocar qual celular esta na camera, abra o cartao *Controle remoto* novamente no celular que voce quer usar como camera e toque em *Transmissao ao vivo a partir deste dispositivo*. A transmissao de video troca de aparelho na hora, e o celular que estava transmitindo vira automaticamente o controle remoto.
+No Android, para sair, abra o menu da live e toque em **Fechar Live**. A live continua no ar no aparelho que está transmitindo.
 
-Isso ajuda quando o celular principal esta com a bateria baixa ou quando voce quer mudar o angulo da camera no meio do show.
+### Passo 4: trocar a transmissão de aparelho (opcional)
 
-## O que acontece se o celular principal cair
+Para passar a câmera para o outro aparelho, escolha **Transmissão ao vivo a partir deste dispositivo** (no Android, **Assumir transmissão**) no aparelho que vai transmitir. O vídeo troca de aparelho na hora e o anterior vira controle remoto.
 
-Se o celular que esta transmitindo perder a conexao (bateria descarregada, app fechado, Wi-Fi ruim), o celular controle remoto mostra um aviso escuro com o texto *Aguarde* seguido de *Seu dispositivo principal parece estar off-line* e um indicador girando enquanto o app tenta restabelecer a transmissao:
+Isso ajuda quando a bateria do celular principal está acabando ou quando você quer mudar o ângulo da câmera.
 
-![Aviso Aguarde com a frase Seu dispositivo principal parece estar off-line e um indicador girando](./assets/mockups/use-two-devices-while-hosting__host-offline-overlay__pt-br__v3.png)
+## Usar o computador como controle remoto
 
-Enquanto esse aviso aparece, voce pode trocar a transmissao para o celular controle remoto. Abra de novo o cartao *Controle remoto* nesse celular e toque em *Transmissao ao vivo a partir deste dispositivo*. O show continua sem precisar parar.
+Você também pode controlar a live pelo computador, no Seller Hub. Abra a página da sua live no navegador enquanto o celular transmite: o computador fica como controle remoto, com produtos, vendas e chat em uma tela maior. Se quiser, o computador também pode assumir a transmissão.
 
-## Dicas praticas
+Veja como acessar e usar o Seller Hub em [Seller Hub: venda pelo computador](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/17588489).
 
-- *Use a melhor camera como aparelho principal.* O celular que transmite deve ser aquele com camera melhor e conexao mais estavel.
-- *Deixe o celular controle por perto.* Em uma mesa ou suporte do seu lado, para alcancar o chat e os produtos sem virar a camera.
-- *Os dois aparelhos precisam estar logados na mesma conta.* Esse recurso nao funciona com contas diferentes. Para convidar outro vendedor, use co-host.
-- *Troque de aparelho se a bateria estiver acabando.* Em vez de parar o show para carregar, transfira a transmissao para o segundo celular.
-- *Dois dispositivos nao e o mesmo que co-host.* Dois dispositivos = uma pessoa com dois aparelhos. Co-host = dois vendedores diferentes no mesmo show. Para convidar outro vendedor existe a opcao co-host.
+## Se o aparelho principal cair
+
+Se o aparelho que está transmitindo perder a conexão (bateria, app fechado, internet ruim), o controle remoto mostra o aviso **Aguarde** com a frase **Seu dispositivo principal parece estar off-line**.
+
+![Aviso Aguarde com a frase Seu dispositivo principal parece estar off-line](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/use-two-devices-while-hosting__host-offline-overlay__pt-br__v3.png)
+
+Você pode esperar o aparelho principal voltar ou passar a transmissão para o controle remoto e seguir com a live. Se ninguém transmitir por muito tempo, a live pode ser encerrada automaticamente.
+
+## Dicas práticas
+
+- **Use a melhor câmera para transmitir.** O aparelho principal deve ter a melhor câmera e a conexão mais estável
+- **Deixe o controle por perto.** Em uma mesa ou suporte ao seu lado, para alcançar o chat e os produtos
+- **Use a mesma conta nos dois.** Para chamar outra pessoa para a sua transmissão, use o Live Duo
+- **Troque de aparelho se a bateria acabar.** Em vez de parar a live, passe a transmissão para o outro aparelho
 
 ## Perguntas frequentes
 
-*Posso conectar mais de dois aparelhos?*
-Voce pode ter mais de um celular conectado, mas apenas um transmite video por vez. Os outros funcionam como controles remotos.
+**Posso conectar mais de dois aparelhos?**
+Você pode abrir a live em mais de um aparelho, mas só um transmite vídeo por vez. Os outros funcionam como controle remoto.
 
-*O celular controle remoto consome muita bateria?*
-Menos do que o celular que transmite, ja que a camera fica desligada. Mas ele continua conectado ao show, entao gasta alguma bateria.
+**Os espectadores percebem que estou usando dois aparelhos?**
+Não. Eles só veem o vídeo do aparelho que está transmitindo.
 
-*Os espectadores percebem que estou usando dois celulares?*
-Nao. Os espectadores so veem o video do celular que esta transmitindo no momento. A troca de aparelho nao aparece para eles.
+**Fechar o controle remoto encerra a live?**
+Não. A live continua no aparelho que transmite. Para encerrar a live, use **Encerrar Live** no menu.
 
-*E se eu fechar o app sem querer no celular principal?*
-O show fica em estado de espera enquanto o sistema aguarda a reconexao. Voce pode reabrir o show no mesmo celular, ou trocar a transmissao para o celular controle remoto e continuar de onde parou.
+**Isso é a mesma coisa que o Live Duo?**
+Não. Dois aparelhos é uma pessoa usando dois aparelhos. O Live Duo coloca outra pessoa na sua transmissão. Veja [Convidar um co-host (Live Duo)](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288117).
 
 ## Precisa de ajuda?
 
-Fale com a gente pelo chat dentro do app ou pelo email support@jambleapp.com.
+Fale com a gente pelo chat do app.

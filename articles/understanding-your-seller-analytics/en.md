@@ -1,121 +1,107 @@
 # Understanding Your Seller Data
 
+## In this guide
+
+- What you'll learn
+- Where to see your numbers
+- During the live: Vendas em tempo real
+- After the live: the Sua Live dashboard
+- The summary you get by message
+- In the Seller Hub
+- In the wallet
+- Important tips
+- Frequently asked questions
+- Need help?
+
 ## What you'll learn
 
-This guide explains where your seller performance lives on Jamble today. You'll learn how to read the post-show summary, the live overlay during a show, and the financial data in your wallet. The guide also tells you what the app does not show yet, so you don't waste time looking for a screen that doesn't exist.
+This guide shows where to follow your performance as a seller on Jamble: during the live, right after it, in the summary you get by message, in the Seller Hub and in the wallet.
 
-## What exists today
+## Where to see your numbers
 
-Jamble gives you three places to track your seller performance:
+- **Vendas em tempo real** (Real-Time Sales), on the live screen, while you are live
+- **Sua Live** (Your Live), the dashboard of each live, with the sales summary
+- **Resumo do seu show** (Your show summary), a message sent after each live, with audience, performance and sales
+- **Seller Hub**, on your computer, with your lives and sales
+- **Minha carteira** (My Wallet), with the money available to withdraw and your pending sales
 
-1. Post-show summary, shown automatically when you end a show
-2. Live overlay in the corner of the screen while you're hosting
-3. Wallet, with balance and withdraw button
+## During the live: Vendas em tempo real
 
-Three separate screens. There is no single dashboard that brings everything together, and it's worth saying that up front so you know where to look for each thing.
+While you are live, the screen shows the **Vendas em tempo real** (Real-Time Sales) box. It updates by itself with every sale.
 
-## What the app does not have yet
+![Real-Time Sales box in the top left corner during a live, with the total sold and the average price per item](./assets/mockups/understanding-your-seller-analytics__live-realtime-sales__en__v3.png)
 
-Before going further, set expectations. Today, the Jamble seller app does not offer:
+The box shows:
 
-- Historical charts or week-over-week trends
-- Exporting your sales to CSV or a spreadsheet
-- Top-products ranking across all your shows
-- Audience demographics (age, region, gender)
-- A conversion rate calculated by the app
-- A single dashboard pulling all the above together
+- The total sold in the live so far
+- The average price per item sold
 
-When you need any of those numbers, the path today is to open each past show summary and compare yourself. Jamble may add these features in the future, but they are not in the app now.
+It helps you feel the pace of the live without leaving the camera.
 
-## Post-show summary
+## After the live: the Sua Live dashboard
 
-When you end a show, the summary appears automatically. At the top, you'll see the SUMMARY card with four key numbers.
+Each live has a dashboard called **Sua Live** (Your Live). On iPhone, when you end the live, tap **Meu painel de controle** (My Dashboard) to open it. You can also open the dashboard later, from your past lives on your profile.
 
-![Post-show summary card with SUMMARY header and four tiles (TOTAL, AFTER FEES, SOLD, BUYERS) in English](./assets/mockups/understanding-your-seller-analytics__post-show-summary__en__v3.png)
+At the top, the **RESUMO** (Summary) section shows four numbers:
 
-### The four SUMMARY numbers
+- **TOTAL**: the sum of the prices of the products sold in the live
+- **PÓS TAXAS** (After fees; **APÓS TAXAS** on Android): the amount after Jamble's commission. The standard commission is 10% of the product price, shipping not included
+- **VENDIDOS** (Sold): how many products were sold
+- **COMPRADORES** (Buyers): how many different people bought
 
-- **TOTAL**: gross revenue from all sales during the show, summing the full price each buyer paid
-- **AFTER FEES**: net amount after Jamble's standard 10% fee. Important: this number does **not** include the product cost, shipping out of your pocket, packaging, taxes, or any refunds. It's the amount Jamble sends to you, nothing beyond that
-- **SOLD**: number of products sold in the show
-- **BUYERS**: number of unique buyers (one person who bought three items counts as 1 buyer)
+Below the summary, you see the list of the live's sales, with each buyer and each item.
 
-### Why the labels render in English
+The amount after fees does not yet take out your own costs, such as the cost of the product, packaging and taxes.
 
-You'll notice the **RESUMO** header is localized in pt-BR, but the four tile labels (TOTAL, AFTER FEES, SOLD, BUYERS) render in English even on a pt-BR device. It's a translation backlog item: those four labels are not yet localized. The content of the numbers is yours, from your show, in your show's currency.
+## The summary you get by message
 
-### What to look at on the summary
+After each live, you get a message in the app called **Resumo do seu show** (Your show summary). It sits in your messages, in the **Atividade** (Activity) tab.
 
-- Compare TOTAL and AFTER FEES to see how much Jamble's fee takes (10% of TOTAL, with the standard commission)
-- Compare SOLD and BUYERS: if SOLD is much bigger than BUYERS, you're moving multiple items per buyer, a healthy basket signal
-- Scroll below the summary card to see the list of confirmed sales and the items that did not sell
+The summary includes:
 
-## Live overlay during your show
+- **Audience**: unique viewers, how many watched for more than one minute, how many came back, the average number of people watching at the same time and the average watch time
+- **Performance**: items shown, items sold and the conversion rate
+- **Sales**: total revenue, average ticket per item and per customer, number of buyers and of people who made offers
+- **Your buyers**: your top buyers and who bought from you for the first time
+- **Comparison**: how the live did compared with your previous lives
 
-While you're hosting, the top-left corner shows a small panel called **Real-Time Sales**. It updates by itself every time a sale closes.
+## In the Seller Hub
 
-![Real-Time Sales overlay in the top-left during a live, showing running total and average price per item](./assets/mockups/understanding-your-seller-analytics__live-realtime-sales__en__v3.png)
+The Seller Hub is the computer version of your seller tools, at [jamble.com/seller/dashboard](https://jamble.com/seller/dashboard). You sign in with the same phone number as in the app.
 
-The live overlay shows:
+- **Visão Geral** (Overview): your upcoming lives and the shipments that need attention
+- **Lives**: your scheduled, past and archived lives. Open a live to see its dashboard, with the total, the amount after fees, the sales and the buyers
+- **Vendas** (Sales): the list of your sales
 
-- Running total of confirmed sales so far in the show
-- Average price per item sold (the smaller line just below)
+Learn more in [Seller Hub](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588489).
 
-It's useful to feel the pulse of the show without leaving the camera. If the number stops climbing for several minutes, that's a direct signal it's time to switch products or engage the chat more.
+## In the wallet
 
-## Wallet
+To see your money, open your profile, tap the gear icon and choose **Minha carteira** (My Wallet). In the Seller Hub, use **Carteira** (Wallet).
 
-To see your accumulated financial data and request a withdrawal:
+The wallet shows the amount **Disponível para saque** (Available to withdraw) and your **Vendas pendentes** (Pending sales), which are still to be released. To understand when money becomes available and how to withdraw, see [How you receive your earnings](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288155).
 
-1. Go to your profile
-2. Open **Settings**
-3. Tap **My Wallet** in the SELL section
+## Important tips
 
-![My Wallet screen showing available balance $1,250.00 and Withdraw button](./assets/mockups/understanding-your-seller-analytics__wallet-summary__en__v3.png)
+- **Use the summary to compare lives.** The comparison part shows whether the live did better or worse than the previous ones
+- **Look at audience and sales together.** Many viewers and few sales can mean it's worth changing the products or the pace of the live
+- **See who bought for the first time.** A thank-you message helps bring that buyer back
+- **Remember your costs.** The amount after fees is the starting point, not the final result
 
-The wallet screen shows:
+## Frequently asked questions
 
-- **Available balance**: how much you can withdraw right now via PIX
-- **Withdraw** button: requests a payout to your bank account
+**When do I get the Resumo do seu show?**
+After the live ends. It arrives as a message in the app.
 
-The wallet does not show charts or weekly history. It shows the current balance and the withdraw action. The history of past withdrawals lives on a separate screen under Settings.
+**Is the PÓS TAXAS amount what I keep?**
+It is the amount after Jamble's commission. To know your final result, take out your costs, such as product, packaging and taxes.
 
-## How to use these three places together
+**Can I see the dashboard of an old live?**
+Yes. Open the live from your past lives on your profile, or from the **Lives** page of the Seller Hub.
 
-Because there is no single dashboard, the practical routine is:
-
-- During the show: watch the live overlay for the rhythm
-- Right after you end: read the post-show SUMMARY and write down the four numbers if you want to compare across shows
-- When you want to withdraw: open the wallet
-
-If you want to compare two shows back-to-back, open a past show from your profile to see its summary again. The numbers stay saved.
-
-## Tips
-
-- AFTER FEES is the starting point of your financial math, not the final number. From it, subtract product cost, shipping you pay, packaging, and taxes to land on your real result
-- If BUYERS climbs show after show and SOLD does not keep up, try selling bundles in the same show so each buyer takes more than one item
-- Keep a personal spreadsheet of the four SUMMARY numbers per show until the app builds its own history. Five minutes per show gives you the trend the app does not yet calculate
-
-## Common questions
-
-**Is there a dashboard with charts or weekly trends?**
-No. Jamble does not have that screen today. Data lives per show (post-show summary) and aggregated financially (wallet). For trends, you need to compare manually.
-
-**Can I export my sales to a spreadsheet?**
-No. There is no export feature in the app today.
-
-**Does the app show my conversion rate?**
-Not directly. You can estimate it by comparing the viewer count during the live (top-right of the host screen) with the BUYERS number on the post-show summary.
-
-**Is AFTER FEES what I actually keep at the end?**
-No. AFTER FEES is the **net amount after Jamble's standard 10% fee**, before any of your other costs. To land on your real result, subtract product cost, shipping you pay, packaging, taxes, and any refunds.
-
-**Why do TOTAL, AFTER FEES, SOLD, and BUYERS render in English on the pt-BR app?**
-It's a translation backlog item in the app. The numbers themselves are yours, in your show's currency. Only the labels are still in English.
-
-**When does the post-show summary become available?**
-Immediately after you end the show. It appears automatically, and you can reopen it later by tapping the past show from your profile.
+**Where do I see how much I can withdraw?**
+In the wallet: **Minha carteira** (My Wallet) in the app or **Carteira** (Wallet) in the Seller Hub.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Talk to us through the in-app chat.

@@ -11,8 +11,8 @@ last_sync: 2026-04-21T00:00:00Z
 
 locales:
   pt-br:
-    title: 'Extratos do Seller - Veja Seu Histórico de Saques'
-    description: 'Veja seu histórico completo de saques, acompanhe status (Completed, Failed, Pending) e abra cada pagamento para detalhes por pedido.'
+    title: 'Ver seus ganhos e o histórico de saques'
+    description: 'Entenda cada parte da carteira, acompanhe o status de cada saque e veja quais vendas fazem parte dele.'
   en:
-    title: 'Seller Statements - View Your Payout History'
-    description: 'See your complete payout history, track statuses (Completed, Failed, Pending) and open each payout for per-order details.'
+    title: 'View your earnings and payout history'
+    description: 'Understand each part of your wallet, follow the status of each withdrawal and see which sales are part of it.'

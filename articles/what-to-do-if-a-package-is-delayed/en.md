@@ -1,79 +1,80 @@
-# What to do if a package is delayed
+# What to Do If a Package Is Delayed
 
 ## What you'll learn
 
-Where to follow the delivery of your order, what each status on the screen means, when to message the seller, and when Jamble refunds you automatically.
+What to do when a shipment is late: if you have not dropped it off yet and the deadline is running out, or if the parcel is already with Correios and tracking stopped. At the end, a quick part for buyers.
 
 ## Before you start
 
 You need:
-- An order the seller has confirmed (status **Confirmed**, **In Delivery**, or similar)
-- Access to the **Purchases** tab in the app
+- An approved Jamble seller account
+- The order in **Envios** (Shipments), in the app settings, or in **Envios** in the Seller Hub
 
-## Track delivery from the order itself
+## If you have not dropped it off yet
 
-Every shipping update lives inside the order. From **Purchases**, tap the order to open the status card. While the package is on the way, the status reads **In Delivery**, with a progress bar and the delivery estimate at the top (**Arriving Today**, **Arriving Tomorrow**, or **Estimated for** a date).
+The deadline to ship is usually about 10 days after the sale is confirmed. In exceptional situations, such as a Correios strike, it can be extended to up to 20 days. The exact deadline always appears in the order, under **Prazo de envio** (Shipping deadline).
 
-![Order detail with In Delivery status, Arriving Tomorrow banner and tracking section showing Carrier, Tracking Number and Track button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/what-to-do-if-a-package-is-delayed__screen-1__en__v3.png)
+If the deadline passes:
 
-Just below, you see the **Carrier**, the **Tracking Number** (with a copy button) and a **Track** button that opens the carrier's tracking page. The events list underneath shows every scan from Correios, newest first.
+- The parcel shows as **Envio atrasado** (Shipping overdue) in **Envios**
+- The order tells you until when you can still ship before it is canceled
+- If you do not drop it off in time, the sale is canceled and the buyer is refunded automatically
 
-## When to think it is delayed
+**What to do:**
+1. Generate the label and drop off the parcel as soon as possible. See [Pack and ship your order](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288124)
+2. Let the buyer know in the chat that the parcel is on its way
+3. If you cannot ship, use **Cancelar venda** (Cancel sale) in the order. The buyer is refunded to the same payment method. Frequent cancellations can restrict your account
 
-A shipment can look delayed in a few situations:
-- The estimate shown at the top of the card has passed and the package has not arrived
-- Tracking events have not updated for several days
-- The most recent scan shows the package sitting at a Correios distribution center
+## If the parcel is already with Correios
 
-Before doing anything, read the most recent event in the list. Phrases like "Object forwarded" or "In transit" mean the package is still in the network, even without daily updates. Long routes between states or to remote areas tend to have larger gaps between scans.
+### Check the tracking
 
-## When to message the seller
+Open the parcel in **Envios** and check its status and tracking. Long routes and more remote areas usually have longer gaps between updates, even when the parcel is moving normally.
 
-If tracking still looks normal but you want a heads-up, the fastest path is to open the seller's profile from the order itself. Tap the seller's row at the top of the screen and use the direct-message button to send a DM. Keep it specific, for example: "Hi, the package has been sitting in [city] since [date]. Any update from the carrier?" The seller can open a Correios claim on their side, since they shipped it.
+### If tracking stopped
 
-If the package has not left the seller's hands yet, you do not need to chase by chat: the app handles it for you. Jamble gives the seller **10 days after confirmation** to ship. If the deadline passes, the status changes automatically and the order description explains the next step.
+Sometimes tracking stops updating after the first scan, even though the parcel is on its way.
 
-## When Jamble refunds you automatically
+1. Open the parcel in **Envios** and tap **Atualizar rastreio** (Refresh tracking; on Android, **Atualizar**)
+2. Check again after a while
+3. If tracking is still stuck, contact support in the app chat
 
-In two situations you do not need to do anything to get refunded:
+### If you see Falha na entrega
 
-- **The seller does not ship within 10 days.** The status moves into a shipping-delay state, the card shows the message _"The seller didn't ship your order on time. They have [time] to send it, or you'll be refunded automatically"_, and, if the seller still does not ship, the order is canceled and the amount returns to your payment method.
-- **The package is returned to sender.** If Correios returns the package to the seller (invalid address, nobody to receive it, etc.), the status flips to **Canceled** with the message _"Your order could not be delivered and was returned to the seller. You'll receive a refund on your payment method within 5 business days"_.
+**Falha na entrega** (Delivery failed) means Correios could not deliver. Check the next step in the tracking. Often the parcel is available for pickup at a Correios agency for a while. Let the buyer know in the chat so they can pick it up before it comes back to you.
 
-![Order detail with Canceled status in red, red progress bar and message about refund within 5 business days](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/what-to-do-if-a-package-is-delayed__screen-2__en__v3.png)
+If the parcel comes back, see [What to do if a shipment is returned to you](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288132).
 
-In both cases, the refund hits the same card or Pix used at checkout, **within 5 business days** of the cancellation.
+## When to contact support
 
-## When to open a support ticket
+Contact support in the app chat if:
+- Tracking is still stuck even after **Atualizar rastreio**
+- Tracking shows delivered, but the buyer says they did not receive it
+- Tracking shows the parcel as damaged, lost or held
 
-Open a ticket if:
-- The last Correios event is more than 7 days old and the seller is not responding
-- Tracking reads "delivered" but you did not receive the package
-- The package was flagged damaged, lost, or held for inspection
-- You were already refunded but the amount did not appear on your payment method after 5 business days
+## For buyers
 
-If a ticket exists for this order, a **Your Support Ticket** banner appears at the top of the order, with an **Open Ticket** button to jump back into the conversation with support.
+If you bought something and the parcel is taking long:
 
-## Common questions
+- Follow the delivery in **Minhas compras** (My purchases), in the order. Tracking appears there
+- If the seller does not ship within the deadline, the order is canceled and you are refunded automatically
+- If you have a question, send the seller a message in the chat
+- If tracking stops for a long time or shows delivered when you did not receive it, contact support in the app chat
 
-**Who handles shipping: Jamble or the seller?**
-The seller is the one who posts the package, using a label generated by Jamble. Correios is the carrier. Jamble follows everything through tracking and acts automatically when a deadline is missed or the package is returned.
+## Frequently asked questions
 
-**How long does a delivery normally take?**
-It depends on the route and the service. PAC can take 5 to 15 business days depending on origin and destination. SEDEX is typically 1 to 5 business days. Remote areas take longer.
+**Who is responsible for shipping?**
+You drop off the parcel with the label generated by Jamble, and Correios delivers it. Jamble follows the tracking and cancels automatically when the shipping deadline passes.
 
-**Tracking says "delivered" but I did not receive it. What now?**
-Check with the building reception, neighbors, and the nearest Correios agency first. If the package does not surface, open a ticket from the order itself and support investigates with the carrier.
+**Can I still ship after the deadline?**
+Yes, as long as the sale has not been canceled. The order shows until when. Ship as soon as possible.
 
-**Can I cancel and refund myself while the package is in transit?**
-Not directly. Once the seller confirms the sale, the **Cancel Order** button leaves the card. Send the seller a DM asking for a cancellation, or open a support ticket if they do not respond.
+**How long does delivery usually take?**
+It depends on the Correios service and the distance. Long routes and more remote areas take longer.
 
-**Do I pay any fee for the delay?**
-No. Correios delays are not on the buyer and do not generate any extra charge. When a refund happens, the full amount is returned, including shipping.
-
-**Can I track the package outside the app?**
-Yes. You can use the tracking number on the Correios site (rastreamento.correios.com.br). It is the same number that appears on the order card, with a copy button next to it.
+**Can the buyer track outside the app?**
+Yes. The tracking code shown in the order also works on the Correios website.
 
 ## Need help?
 
-Reach out through the app chat or email support@jambleapp.com.
+Talk to us in the app chat.

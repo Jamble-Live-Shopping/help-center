@@ -84,3 +84,19 @@ Three screens declare review_checks per rule 10c:
 ## Verdict
 
 ALL CLAIMS MATCH. Zero MISMATCH. Article shippable on the code-audit gate.
+
+## Wave 2 re-audit (2026-10-14)
+
+Sources: iOS tag 5.10.1, Android tag v5.10.0, jamble_backend origin/main (291e133b5), Jamble-Website origin/main.
+
+| Claim | Evidence |
+|---|---|
+| Seller sale detail after return: Cancelado + "Seu item não pôde ser entregue e foi devolvido a você" | `jamble_backend/src/entities/transaction.py` status match (delivery_returned -> Cancelado) and `(TransactionStatus.delivery_returned, False)` description |
+| Buyer sees Cancelado + refund within 5 business days | `jamble_backend/src/entities/transaction.py` `(TransactionStatus.delivery_returned, True)` description |
+| Seller notified when the return starts | `jamble_backend/src/services/transaction_service.py` `refresh_transaction_pending_status` sends the pending-status notification for delivery_returned; text in `notification_service.py` ("Sua venda não pôde ser entregue e está sendo devolvida para você.") |
+| Return is triggered by the carrier RETURNED tracking event | `jamble_backend/src/services/shipping_service.py` tracking update branch attaching pending status delivery_returned |
+| Full refund on a returned parcel | `jamble_backend/src/services/payment_service.py` expected refund amount = captured amount when status is delivery_returned |
+| Envios status Devolvido | `jamble_backend/src/entities/bundle.py` `BUNDLE_STATUS_TITLES` |
+| Minhas vendas filter Devolvido | iOS 5.10.1 `TRANSACTION/Models/TransactionFilter.swift` `.returned` ("Returned" = "Devolvido") |
+
+Removed in wave 2: the sales-list-returned-tab mockup (tab order and labels no longer match 5.10.1), the "combine off the app" resend option (off-platform arrangements are not supported), the insurance mention, and the unverified "returns do not count against you" claim.

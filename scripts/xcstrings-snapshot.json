@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-05-13T07:52:53+00:00",
-  "key_count": 72,
+  "key_count": 75,
   "source": "Localizable.xcstrings",
   "strings": {
     "3 recommended": {
@@ -97,7 +97,7 @@
     },
     "End Show": {
       "en": "End Show",
-      "pt-BR": "Fim da Live"
+      "pt-BR": "Encerrar Live"
     },
     "Enter your code....": {
       "en": "Enter your code....",
@@ -193,7 +193,7 @@
     },
     "Select a Live": {
       "en": "Select a Live",
-      "pt-BR": "Selecione um Live"
+      "pt-BR": "Selecione uma Live"
     },
     "Select a Photo": {
       "en": "Select a Photo",
@@ -290,6 +290,18 @@
     "sending your viewers to a seller": {
       "en": "sending your viewers to a seller",
       "pt-BR": "enviar seus espectadores para um vendedor"
+    },
+    "The Jamble Raid": {
+      "en": "The Jamble Raid",
+      "pt-BR": "O Raid do Jamble"
+    },
+    "End without Raid": {
+      "en": "End without Raid",
+      "pt-BR": "Encerrar sem Raid"
+    },
+    "Success!": {
+      "en": "Success!",
+      "pt-BR": "Sucesso!"
     }
   }
 }

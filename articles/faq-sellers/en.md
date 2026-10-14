@@ -137,12 +137,12 @@ Several items can go in the same box, depending on the total weight.
 
 Sellers are responsible for:
 
-- Confirming Loja (shop) sales (sales made in a live arrive already confirmed)
+- Confirming the sales. Live sales are confirmed on the live dashboard, with **Confirmar Vendas** (Confirm sales), after the live ends. Loja (shop) sales are confirmed one by one, in **Revisar vendas pendentes** (Review pending sales)
 - Choosing the invoice (nota fiscal) preference
 - Creating the shipping label
 - Posting the items on time. The deadline is usually about 10 days after confirmation, and can go up to 20 days in exceptional situations, such as a Correios strike. The exact deadline shows on the order, under **Prazo de envio**
 
-1. Check the items in each order. If it is a Loja sale, confirm the sale first.
+1. Check the items in each order and confirm the sales first, within the time shown in the app.
 2. Fill in the tax information requested in the app, according to your registration.
 3. Create the label, print it and pack the products with proper protection. You can print from the app or straight from your computer, in the Seller Hub.
 4. Stick the label where it is easy to read and take the package to a Correios post office.

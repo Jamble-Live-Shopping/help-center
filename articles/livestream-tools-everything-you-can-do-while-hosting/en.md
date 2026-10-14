@@ -1,189 +1,146 @@
-# Livestream Tools, Everything You Can Do While Hosting
+# Live tools
 
 ## What you'll learn
 
-This guide covers all the tools available to you while hosting a live show on Jamble. You'll learn what each button does, where to find it on screen, and how to use the tools effectively during your show.
+This guide brings together everything you can do in your live, from the moment you open the live screen to the sales dashboard after you end: practice mode, products, sales, the live menu, ending the live, and the **Sua Live** (Your live) dashboard. Features with their own article (Live Duo, raid, two devices, battles, and moderation) are summarized here with a link to the full guide.
 
 ## Before you start
 
 You need:
 - An approved seller account on Jamble
-- A scheduled show with products added
-- Your seller setup complete (shipping, payment, email)
+- A scheduled live. See [Schedule a live](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288114)
+- Products added to the live, ideally before you start
 
-## Screen layout overview
+## Before you go live
 
-When you're hosting a live show, your screen is organized into six areas you'll use the whole time.
+Open your scheduled live from your profile. On the live screen you see the countdown to the scheduled time and two buttons:
 
-![Host screen with six numbered areas: real-time sales, camera, timer, chat, sale bar, bottom bar](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/livestream-tools-everything-you-can-do-while-hosting__screen-overview__en__v2.png)
+- **Modo de prática** (Practice mode; on Android, **Modo Teste**): tests the camera, audio, and products with no one watching. To leave, use **Encerrar Modo Teste** (Stop practice) in the live menu
+- **Iniciar Live** (Go live): opens the **Comece sua live** (Start your live) confirmation. Tap **Sim, comece** (Yes, start) to go live or **Mais tarde** (Later) to wait
 
-Area **1 Real-Time Sales** shows your revenue summary. The **2 Camera** controls the broadcast and the Live Duo invite. The **3 Timer** appears when a sale is running. The **4 Chat** shows messages from your audience. The **5 Sale bar** shows the active product and the Start button. The **6 Bottom bar** has the message input, the shop icon, and the add-products button.
+If the time passes and you haven't started, the countdown warns that it's your last chance to join or postpone. If the live never starts, you can pick a new date on the live screen with **Atrasado? Reviva esta Live** (Late? Revive this live).
 
-Each of these areas has its own tools. Let's go through them.
+## The live screen
 
-## Camera controls
+During the live, you see:
+- **Vendas em tempo real** (Real-time sales): a summary of what you've sold in the live, with the total and the average value per item
+- **Viewer count**: how many people are watching. Tap it to see the list
+- **Camera**: switch between the front and back camera to show your face or the products up close
+- **Chat**: messages from the audience. You can reply and mention someone with **@**
+- **Featured product**: the item on sale on screen, with the sale button
 
-### Flip the camera
+The **Notas fixadas** (Pinned notes) you wrote when scheduling are pinned in the chat for viewers. They can't be edited during the live.
 
-Tap the **camera icon** on the right side of the screen to switch between your front and back camera. Use this when you want to switch from showing your face to showing a product up close, or vice versa.
+## Products
 
-There are no zoom, flash, or beauty filter controls built into the app. If you need better lighting, adjust your physical setup before going live.
+### Open the product list
 
-## Product list
+![Listings screen with search, the Upcoming, Unsold and Sold tabs, and products with the Start button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/livestream-tools-everything-you-can-do-while-hosting__product-list-tabs__en__v2.png)
 
-### Open the product manager
+Tap the shop icon to open **Listagens** (Listings). Products sit in three tabs:
+- **Próximos** (Upcoming): not sold yet
+- **Não vendido** (Unsold): went through a sale with no buyer
+- **Vendido** (Sold): already sold in this live
 
-Tap the **shop icon** at the bottom of the screen to open your product manager. You'll see three tabs: **Upcoming**, **Unsold** and **Sold**.
+You can look for a product with **Pesquisar uma listagem** (Search for a listing) and drag items to change the order.
 
-![Product manager with Upcoming, Unsold, Sold tabs and Pin and Start buttons for each item](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/livestream-tools-everything-you-can-do-while-hosting__product-list-tabs__en__v2.png)
+### Add products during the live
 
-The **Upcoming** tab lists products that haven't been sold yet. **Unsold** lists products that went through a sale but received no offers. **Sold** lists products already sold during the show.
+![Menu with the options New Quickie Listing, Clone Past Shows Listings and Cancel](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/livestream-tools-everything-you-can-do-while-hosting__add-products-sheet__en__v3.png)
 
-For each product you can:
-- **Pin**, tap to display the product to your audience. Only one product can be pinned at a time
-- **Start**, starts a sale on the pinned product, with a countdown timer
-- **Edit**, tap the settings gear to edit the details or delete it
-- **Rerun**, for unsold or sold items, tap to run the sale again
+Tap the **+** button and choose:
+- **Nova listagem rápida** (New quick listing): creates a product without leaving the live
+- **Clonar listagens de lives anteriores** (Clone listings from past lives): brings products from a past live
 
-You can also drag and drop products to reorder them in your queue.
-
-### Add products during a live show
-
-Tap the **plus (+) button** at the bottom of the screen to create or clone products without leaving the live.
-
-![Action sheet with the options New Quickie Listing and Clone Past Shows Listings](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/livestream-tools-everything-you-can-do-while-hosting__add-products-sheet__en__v2.png)
-
-The **New Quickie Listing** option creates a new product without leaving the show. **Clone Past Shows Listings** imports products from one of your past shows. Tap **Cancel** to go back.
-
-### Product requests
-
-When viewers are interested in a product, they can raise their hand to request it. You'll see a **hand icon** with a badge showing how many requests you have. Tap it to see which products your audience wants to see next, this helps you prioritize what to sell.
-
-## Running sales
+## Sales
 
 ### Start a sale
 
-To start a sale on a product:
+In the product list, use **Fixar** (Pin) to feature the item and **Iniciar** (Start) to begin the sale. How it sells depends on the mode chosen on the product:
+- **Ofertas em Tempo Real** (Real-time offers): buyers make offers until time runs out. See [Real-time offers](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288115)
+- **Morte Súbita** (Sudden death): like real-time offers, but the time is never extended
+- **Comprar Agora** (Buy it now): fixed price, whoever taps first buys. See [Buy it now](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288112)
+- **Venda relâmpago** (Flash sale): a Buy it now item with a discount for a short time. See [Flash sales](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288107)
 
-1. Open your product list with the shop icon
-2. Tap **Pin** on the product you want to sell, the product appears on screen for your audience
-3. Tap **Start**, the sale begins with a countdown timer
+Buyers can also leave offers before the sale starts. See [Pre-offers](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288122).
 
-The sale bar appears at the bottom of your screen showing the active product, the current highest offer (for real-time offers), and action buttons.
+### One sale on screen at a time
 
-### Sale action button
+Only one sale is featured on screen at a time. While an offers sale is running, wait for it to end before pinning the next item.
 
-The main action button on the sale bar changes depending on the sale status:
-- **Ready to start**, shows **Start** (varies by sale type)
-- **Sale running**, shows the number of offers or items sold
-- **Finishing**, shows **Finishing...**
-- **Ended**, shows **Run Again** if stock remains, or **Next item**
+A **Comprar Agora** (Buy it now) item with stock stays available to buy even after you feature another product. That way you can leave fixed-price items on sale while you present the next one.
 
-### Real-time sales display
+### After the sale
 
-At the top-left of your screen, you'll see a **real-time sales summary** showing:
-- Total number of sales completed
-- Total revenue so far
-- Average price per item
+When the sale ends, the product moves to **Vendido** (Sold) or **Não vendido** (Unsold). If there is stock left, or if the item didn't sell, use **Reprisar** (Rerun) to run the sale again.
 
-This summary updates live as sales are completed during your show.
+If the winning buyer doesn't pay in time, the sale is cancelled and you can rerun the item.
 
-## Chat
+If a sale looks stuck on **Finalizando...** (Finishing...), open the live menu and tap **Está preso? Desbloqueie!** (Stuck? Unlock!).
 
-### Send messages
+## Live menu
 
-Use the **chat input** at the bottom of the screen to type messages to your audience. You can:
-- Type a message and send it
-- **Mention (@)** a viewer by tapping the @ button and selecting their name
-- Use **quick message chips** when starting your show, pre-written messages to kick off the conversation
+Tap the live menu to see the options. They change depending on the moment of the live:
+- **Encerrar Live** (End live): ends the broadcast
+- **Configurações da Live** (Live settings): audio settings, such as noise reduction, and camera settings
+- **Iniciar Batalha**, **Batalha pronta**, or **Próxima batalha** (Start battle, Battle ready, or Next battle): shows when you can run your battle
+- **Está preso? Desbloqueie!** (Stuck? Unlock!): shows while a sale is running and unlocks a stuck sale
+- **Compartilhar** (Share): sends the live link
+- **Como receber?** (How to get paid?): explains how you get paid for your sales
+- **Central de Ajuda** (Help Center) and **Reportar um bug** (Report a bug)
 
-### Show notes (pinned messages)
+## Features with their own guide
 
-If you added notes to your show during creation, they automatically appear as a **pinned message** in the chat when viewers join. The notes display for a few seconds and then auto-dismiss. Viewers can also tap the **Notes button** to re-read them anytime during the show.
+- **Live Duo**: invite someone to appear in your broadcast. See [Invite a co-host (Live Duo)](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288117)
+- **Raid**: when you end, send your viewers to another seller's live. See [Raid another seller's live](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288118)
+- **Two devices**: use a second phone, or your computer through the Seller Hub, as a remote control. See [Use two devices during your live](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288120)
+- **Battles**: a team competition inside your live. See [Battles in your live](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288121)
+- **Chat and moderation**: delete messages, block viewers, and choose moderators. See [Chat and moderation in your live](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288119)
 
-## Show settings menu
+## End the live
 
-### Open the menu
+Open the live menu and tap **Encerrar Live** (End live). If a battle is running, end the battle first.
 
-Tap the **three dots (...)** menu at the top-right of your screen to access all show settings.
+Before closing, the app offers the option to raid. You can pick a live or end without a raid.
 
-![Settings menu with End Show, Start Battle, How will I get paid, Audio Settings, Stuck Unlock, Help Center options](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/livestream-tools-everything-you-can-do-while-hosting__show-settings-menu__en__v2.png)
+The live can also end automatically if the broadcast stays offline for a long time or runs for too long. If your internet drops, get back to the live as soon as you can.
 
-The available options are:
-- **End Show**, stops your live show
-- **Start Battle! / End Battle**, starts or ends a battle with another seller (if battles are enabled)
-- **How will I get paid?**, opens a guide explaining the payment process
-- **Audio Settings**, adjusts your audio input and output
-- **Stuck? Unlock!**, emergency button if a sale gets stuck in **Finishing...** state
-- **Any question, Bug or Feedback?**, opens a direct channel with support
-- **Help Center**, opens the Jamble help center
+Once ended, a live can't be restarted. To sell again, schedule a new live.
 
-Tap **Cancel** to close the menu without doing anything.
+## After the live: the Sua Live dashboard
 
-### End your show
+When you end, the **Obrigado por sua live** (Thanks for your live) screen shows the **Meu painel de controle** (My dashboard) button. It opens the **Sua Live** (Your live) dashboard, which you can also find later by opening the ended live from your profile.
 
-When you're ready to finish, tap **...** then **End Show**.
-
-Before the show fully ends, you'll be given the option to **raid** another seller's show, this sends your remaining audience to that seller's live show. You can skip this and simply end.
-
-After ending, a post-show overlay appears with a link to your **dashboard** where you can see your show's performance summary.
-
-## Co-host (Live Duo)
-
-You can invite another user to appear on your stream as a guest:
-
-1. During your live show, tap the **camera with (+) icon** on the right side of the screen
-2. Search for the user you want to invite
-3. They accept the invitation and their video appears as a small picture-in-picture overlay on your stream
-
-To remove a guest, tap their profile picture on the right side and confirm **Remove [name] From Live Duo?**.
-
-## Using two devices
-
-You can use a second device to control your show while the first device handles the camera:
-
-1. Open the same show on a second device while it's live
-2. You'll see a prompt **Remote Control** with two options:
-   - **Use as a remote**, the second device becomes a remote control. You can manage products, chat and sales without touching the broadcasting device
-   - **Livestream from this device**, the second device takes over the camera broadcast
-
-The remote device shows the same chat, products and sale controls as the main device, but without broadcasting video.
-
-## Edit your show
-
-Before your show starts, or after it ends, you'll see an **edit button** (pencil icon) on screen. Tap it to:
-- **Edit**, opens the show editor to change title, description, notes, date or thumbnail
-- **Delete**, permanently removes the show
-- **Late? Revive this Show**, if your show ended without starting (you missed the scheduled time), you can pick a new date and time. This option is available for up to 5 days after the original date
+The dashboard shows the live summary (total sold, value after fees, items sold, and buyers) and the sales grouped by buyer. From there you prepare shipments and create the label for each package. If any sale still needs your confirmation, the dashboard shows **Confirmar Vendas** (Confirm sales) and the deadline to confirm.
 
 ## Important tips
 
-- **Keep your product queue organized.** Drag products into the order you plan to sell them. Smooth transitions between products keep your audience engaged
-- **Watch the product requests.** If multiple viewers are requesting the same product, consider selling it next, it means there's demand
-- **Use the chat.** Greet viewers by name, answer questions, and build excitement before starting a sale. Engaged audiences place more offers
-- **Don't panic if a sale gets stuck.** Use the **Stuck? Unlock!** option in the settings menu to resolve it
-- **Consider raiding when you end.** Sending your audience to another seller builds community and they'll return the favor
+- **Practice before your first live.** A few minutes in practice mode help you learn the buttons
+- **Organize your product queue.** Keep items in the order you'll sell them so you don't lose pace
+- **Talk to the chat.** Greet people as they arrive and answer questions before starting each sale
+- **Use a stable connection.** A bad connection can drop the broadcast
+- **Mix fixed price and offers.** Leave Buy it now items on sale while you present offer items
 
-## Common questions
+## Frequently asked questions
 
-**Can I mute my microphone during a show?**
-There is no mute button in the current interface. If you need to temporarily stop audio, you can briefly cover your microphone or step away.
+**Can I add products while the live is running?**
+Yes. Tap **+** and create a **Nova listagem rápida** (New quick listing) or clone products from a past live.
 
-**How do I switch between my front and back camera?**
-Tap the camera icon on the right side of your screen. Each tap switches between front and back.
+**Can I run two offer sales at the same time?**
+No. Only one sale is featured at a time. **Comprar Agora** (Buy it now) items with stock stay available while you present another product.
 
-**Can I add products while I'm live?**
-Yes. Tap the (+) button at the bottom to create a new quick listing or clone products from a past show.
+**What happens if my internet drops?**
+The live keeps going for a while, waiting for you to come back. If the broadcast stays offline for a long time, the live ends automatically.
 
-**What happens if my internet disconnects during a show?**
-The show pauses momentarily. If you reconnect quickly, the show continues. If the connection is lost for too long, the show may end automatically.
+**Can I edit the title or notes during the live?**
+No. This information can only be changed before the live starts.
 
-**Can I have a guest appear on my show?**
-Yes. Tap the camera with (+) icon on the right side to invite someone for a Live Duo. Their video appears as a small overlay on your stream.
+**Where do I see what I sold?**
+In the **Sua Live** (Your live) dashboard, through the **Meu painel de controle** (My dashboard) button when you end, or by opening the ended live from your profile.
 
-**What does Raid mean at the end of a show?**
-When you end your show, you can choose to send your remaining viewers to another seller's live show. This is called a raid. It helps the community and builds goodwill between sellers.
+**Can I restart a live I ended?**
+No. Schedule a new live.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Talk to us through the in-app chat.

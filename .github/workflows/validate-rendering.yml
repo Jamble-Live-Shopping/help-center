@@ -64,10 +64,10 @@ jobs:
           mkdir -p "$RUNNER_TEMP/mockup-smoke"
           for locale in pt-br en; do
             node scripts/shot-retina.mjs \
-              "$GITHUB_WORKSPACE/articles/make-a-shipping-adjustment/mockup-sources/screen-1__${locale}.html" \
+              "$GITHUB_WORKSPACE/articles/what-to-do-if-a-shipment-is-returned-to-you/mockup-sources/sale-detail-returned-status__${locale}.html" \
               "$RUNNER_TEMP/mockup-smoke/${locale}.png"
             node scripts/md-to-html.js \
-              "articles/make-a-shipping-adjustment/${locale}.md" \
+              "articles/what-to-do-if-a-shipment-is-returned-to-you/${locale}.md" \
               > "$RUNNER_TEMP/mockup-smoke/${locale}.html"
           done
       - name: Check rendered outputs
