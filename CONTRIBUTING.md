@@ -7,21 +7,23 @@ Every change goes through a pull request. No direct pushes to `main`. Intercom i
 ```bash
 git clone https://github.com/Jamble-Live-Shopping/help-center.git
 cd help-center
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-dev.txt
 npm ci
 ```
 
-For local sync testing (optional):
-```bash
-export INTERCOM_TOKEN="<your Intercom Personal Access Token>"
-```
+You do not need an Intercom token to edit or validate content. Production publication is a separate maintainer action.
 
 ## Edit an existing article
 
-1. Find the article in `articles/<slug>/`. Slug matches the Intercom URL slug.
-2. Edit `pt-br.md` (primary source) first. Then mirror changes to `en.md`.
-3. Update `metadata.yml` if the title or description changed.
-4. Open a PR. Fill the PR template. Request review from a teammate (or Aymar by default).
-5. On merge, the GitHub Action syncs the changes to Intercom in under a minute.
+1. Create a branch from current `origin/main` before editing: `git switch -c content/<short-topic> origin/main`.
+2. Find the article in `articles/<slug>/`. Slug matches the Intercom URL slug.
+3. Edit `pt-br.md` (primary source) first. Then mirror changes to `en.md`.
+4. Update `metadata.yml`, `flow.yml`, mockups, and audits when the change affects them.
+5. Run `python scripts/run-help-article.py articles/<slug> --phase validate` when the article has a flow contract.
+6. Open a PR, fill the template, and request review from a maintainer.
+7. Merge after approval. This does **not** publish to Intercom.
 
 ## Add a new article
 
@@ -83,15 +85,23 @@ The PR author runs the compliance gate before requesting review. Reviewers check
 
 ## Emergency rollback
 
-If a merge pushes a bad article to Intercom:
+If a bad change was merged but not manually published, revert it through a pull request; Intercom is unchanged.
+
+If the change was published, create a revert on a new branch:
 
 ```bash
+git switch -c revert/<short-topic> origin/main
 git revert <commit-sha>
-git push origin main
+git push -u origin HEAD
+gh pr create --fill
 ```
 
-The Action re-runs on the revert commit and restores the previous body. No manual Intercom edit needed.
+After the revert PR is reviewed and merged, obtain explicit release approval and manually sync the affected slug again. A revert does not publish automatically.
+
+## Publication
+
+Merging and publishing are intentionally separate. Only a release owner may run the manual workflow, one approved slug at a time with `confirm=yes`. See [process/15-intercom-sync.md](./process/15-intercom-sync.md).
 
 ## Questions
 
-Ping Aymar on Slack, or open an issue in this repo.
+Open an issue in this repository or ask a current maintainer.

@@ -307,7 +307,7 @@ For each backend feature mentioned in the article :
 
 ```bash
 # 1. Backend grep for active endpoints
-grep -ri "<feature_keywords>" /Users/aymardumoulin/Projects/jamble_backend/
+grep -ri "<feature_keywords>" "${JAMBLE_BACKEND_ROOT:?Set JAMBLE_BACKEND_ROOT to the local backend clone}"
 
 # 2. Cross-corpus check : la feature est-elle mentionnée comme "vivante" ailleurs ?
 grep -rln -iE "<feature_keywords>" articles/
