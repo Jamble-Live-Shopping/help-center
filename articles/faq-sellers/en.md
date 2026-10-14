@@ -86,7 +86,7 @@ If you have not created any live yet, go to your profile and tap "Agendar uma Li
 
 If you already have lives and want to add another, go to your profile, tap the "+" button and select "Agendar uma Live".
 
-On a computer, use the **Criar** button, then **Agendar Live**, in the Seller Hub.
+On a computer, use the **+** button, then **Agendar Live**, in the Seller Hub.
 
 Tips for an attractive live:
 
@@ -189,7 +189,7 @@ Yes. On your live's page in the Seller Hub, click **Iniciar Live** and choose **
 
 ## Can I import my products from a spreadsheet?
 
-Yes, in the Seller Hub. Click **Criar**, then **Importar CSV**, download the template, fill it in and upload the file. The products go into a scheduled live. Each file can have up to 200 rows.
+Yes, in the Seller Hub. Click the **+**, then **Importar CSV**, download the template, fill it in and upload the file. The products go into a scheduled live. Each file can have up to 200 rows.
 
 ## Do I need to be live to sell?
 

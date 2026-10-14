@@ -8,7 +8,7 @@ This guide explains how to create a product listing on Jamble: the fields you fi
 
 - **In a live:** open your scheduled live and add the products you will sell live
 - **In the Loja (shop):** create listings that are for sale at any time, without a live. In the app, tap the **+** on your profile and choose **Criar anúncio na Loja**
-- **On a computer:** in the Seller Hub, use **Criar**, then **Criar Novo Produto**. To create many products at once, use **Importar CSV**. To reuse products, use **Clonar de Lives Anteriores**
+- **On a computer:** in the Seller Hub, use the **+**, then **Criar Novo Produto**. To create many products at once, use **Importar CSV**. To reuse products, use **Clonar de Lives Anteriores**
 
 See [Seller Hub: sell from your computer](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588489) for the computer details.
 

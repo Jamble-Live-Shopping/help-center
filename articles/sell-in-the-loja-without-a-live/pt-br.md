@@ -20,7 +20,7 @@ Na Loja, você vende seus produtos a qualquer momento, com preço fixo, sem prec
 
 **No computador (Seller Hub):**
 
-1. Clique em **Criar** e depois em **Criar Novo Produto**.
+1. Clique no **+** e depois em **Criar Novo Produto**.
 2. Em **Onde você quer vender?**, escolha **Marketplace**.
 3. Preencha o anúncio e salve.
 

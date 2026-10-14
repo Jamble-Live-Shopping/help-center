@@ -128,7 +128,6 @@ Based on how discoverability works, here are the most effective things you can d
 
 - **There's no paid promotion on Jamble.** You can't pay to appear higher in the feed. Visibility is earned through engagement, sales, and bookmarks
 - **Category tags only appear when there are shows in that category.** If no one is streaming shoes right now, the "Shoes" tab won't show up. This means niche categories can be less crowded
-- **New buyers see a slightly different feed.** Jamble prioritizes giveaways and affordable items for brand new users to help them discover the platform
 - **Followers see your shows first.** Your followers always see your shows in their Follow tab, regardless of ranking. Building followers is the most reliable way to get viewers
 
 ## Common questions

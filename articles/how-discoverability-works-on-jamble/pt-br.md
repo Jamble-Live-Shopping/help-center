@@ -128,7 +128,6 @@ Baseado em como a descoberta funciona, aqui estao as coisas mais eficazes que vo
 
 - **Nao existe promocao paga na Jamble.** Voce nao pode pagar para aparecer mais alto no feed. A visibilidade e conquistada atraves de engajamento, vendas e salvos
 - **Tags de categoria so aparecem quando ha shows naquela categoria.** Se ninguem esta transmitindo calcados agora, a aba "Calcados" nao vai aparecer. Isso significa que categorias de nicho podem ter menos concorrencia
-- **Compradores novos veem um feed um pouco diferente.** A Jamble prioriza sorteios e itens acessiveis para usuarios novos para ajuda-los a descobrir a plataforma
 - **Seguidores veem seus shows primeiro.** Seus seguidores sempre veem seus shows na aba Seguindo, independente do ranking. Construir seguidores e a forma mais confiavel de conseguir espectadores
 
 ## Perguntas frequentes

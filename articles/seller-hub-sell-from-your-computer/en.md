@@ -20,7 +20,7 @@ If you sign in to the app with Google or Apple, you can also use **Entrar com Go
 
 ## What you find in the menu
 
-![Seller Hub in the browser, with the side menu and the Create button open showing Schedule a Live, Create New Listing, Clone from Past Lives and Import CSV](./assets/mockups/seller-hub-sell-from-your-computer__menu__en.png)
+![Seller Hub in the browser, with the + button open showing Schedule a Live, Create New Listing, Clone from Past Lives and Import CSV](./assets/mockups/seller-hub-sell-from-your-computer__menu__en.png)
 
 - **Visão Geral** (Overview): a summary of your account and your next lives
 - **Lives**: schedule, edit and follow your lives
@@ -34,9 +34,9 @@ If you sign in to the app with Google or Apple, you can also use **Entrar com Go
 
 **Mensagens** (Messages) is the icon at the top of the screen.
 
-## The Criar button
+## The + button
 
-At the top of the screen, the **Criar** (Create) button gathers the most used shortcuts:
+At the top of the screen, the **+** button gathers the most used shortcuts:
 
 - **Agendar Live**: create a new live
 - **Criar Novo Produto**: choose **Marketplace** to sell anytime, without a live, or add the product to a live
@@ -49,7 +49,7 @@ At the top of the screen, the **Criar** (Create) button gathers the most used sh
 
 With the CSV import, you create many products at once. The products go into a scheduled live, so schedule the live first.
 
-1. Click **Criar**, then **Importar CSV**.
+1. Click the **+**, then **Importar CSV**.
 2. Click **Baixar Modelo XLSX** (download the template) and open it in Excel or another spreadsheet program.
 3. Pick the tab for your products' category and fill in one row per product.
 4. Save the file as **CSV**.
@@ -59,11 +59,11 @@ Before any product is created, the Seller Hub shows a preview. If a row has an e
 
 ## Host your live from your computer
 
-![Start your Live? window with the Broadcast and Start without broadcasting buttons](./assets/mockups/seller-hub-sell-from-your-computer__go-live-choice__en.png)
+![Live waiting room in the Seller Hub with Live starts in 4m 59s and the Go Live and Test camera and sound buttons](./assets/mockups/seller-hub-sell-from-your-computer__waiting-room__en.png)
 
 To start a live, you need a payout account and a shipping address on file. If one is missing, the Seller Hub tells you and shows where to set it up.
 
-On your live's page, click **Iniciar Live** (start live) and choose:
+On your live's page, you see how long until it starts. Use **Testar câmera e som** (test camera and sound) to check everything first, without going live. When it is time, click **Iniciar Live** (go live) and choose:
 
 - **Transmitir**: the live starts with your computer's camera and microphone
 - **Iniciar sem transmitir**: the live starts and you stream from another device, like your phone

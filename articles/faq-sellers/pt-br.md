@@ -120,7 +120,7 @@ Se você já tiver lives criadas e quiser adicionar outra, vá ao seu perfil, to
 
 ​
 
-No computador, use o botão **Criar** e depois **Agendar Live** no Seller Hub.
+No computador, use o botão **+** e depois **Agendar Live** no Seller Hub.
 
 ​
 
@@ -267,7 +267,7 @@ Sim. Na página da sua live no Seller Hub, clique em **Iniciar Live** e escolha 
 
 ## Posso importar meus produtos por planilha?
 
-Sim, pelo Seller Hub. Clique em **Criar**, depois em **Importar CSV**, baixe o modelo, preencha e envie o arquivo. Os produtos entram em uma live agendada. Cada arquivo pode ter até 200 linhas.
+Sim, pelo Seller Hub. Clique no **+**, depois em **Importar CSV**, baixe o modelo, preencha e envie o arquivo. Os produtos entram em uma live agendada. Cada arquivo pode ter até 200 linhas.
 
 ​
 

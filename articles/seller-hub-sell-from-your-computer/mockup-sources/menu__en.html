@@ -1,32 +1,17 @@
 <!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; color: #162233; }
-.phone { width: 340px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
-.btn { display: flex; align-items: center; justify-content: center; gap: 8px; height: 44px; border-radius: 22px; font-size: 15px; font-weight: 600; }
-.btn-brand { background: #7E53F8; color: #FFFFFF; }
-.btn-secondary { background: #E9EAEF; color: #162233; }
-.btn-outline { background: #FFFFFF; color: #162233; border: 1px solid #DADDE3; }
-.muted { color: #6B7A92; }
-.tert { color: #A0A7B7; }
-.bar { display:flex; align-items:center; gap:8px; padding:10px 14px; background:#F0F0F3; border-bottom:1px solid #E0E1E6; }
-.dots span { display:inline-block; width:8px; height:8px; border-radius:50%; background:#CDCED6; margin-right:4px; }
-.url { flex:1; background:#FFFFFF; border-radius:8px; padding:5px 10px; font-size:11px; color:#60646C; }
-.hdr { display:flex; align-items:center; justify-content:space-between; padding:12px 14px; border-bottom:1px solid #E8E8EC; }
-.mark { font-size:16px; font-weight:700; letter-spacing:-0.01em; }
-.mark b { color:#7E53F8; }
-.create { position:relative; }
-.create .btn { height:32px; padding:0 12px; font-size:13px; border-radius:16px; }
-.drop { position:absolute; right:0; top:38px; width:208px; background:#FFFFFF; border:1px solid #E0E1E6; border-radius:12px; box-shadow:0 8px 24px rgba(28,32,36,0.12); padding:6px; z-index:2; }
-.drop div { padding:9px 10px; font-size:13px; border-radius:8px; }
-.drop div:first-child { background:rgba(126,83,248,0.08); color:#6326DB; font-weight:600; }
-.body { display:flex; min-height:300px; }
-.side { width:150px; padding:10px 8px; border-right:1px solid #E8E8EC; background:#FCFCFD; }
-.side div { padding:8px 10px; font-size:13px; border-radius:8px; color:#60646C; margin-bottom:2px; }
-.side div.on { background:#E0E1E6; color:#1C2024; font-weight:600; }
-.main { flex:1; padding:14px 12px; }
-.ph { height:12px; border-radius:6px; background:#F0F0F3; margin-bottom:10px; }
+body { font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; color: #1C2024; }
+.phone { width: 350px; background: #FCFCFD; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E8E8EC; overflow: hidden; position: relative; }
+.top { display:flex; align-items:center; justify-content:flex-end; gap:18px; padding:14px 16px; border-bottom:1px solid #E8E8EC; background:#FCFCFD; }
+.ib { position:relative; display:flex; }
+.ib.on { width:36px; height:36px; border-radius:50%; background:#E8E8EC; align-items:center; justify-content:center; }
+.bd { position:absolute; right:-7px; bottom:-6px; background:#D92C20; color:#FFFFFF; font-size:10px; font-weight:700; border-radius:9px; padding:1px 5px; border:2px solid #FCFCFD; }
+.av { width:32px; height:32px; border-radius:50%; background:linear-gradient(135deg,#C7D2FE,#7E53F8); }
+.menu { position:absolute; right:92px; top:62px; width:248px; background:#FCFCFD; border:1px solid #E0E1E6; border-radius:22px; box-shadow:0 10px 30px rgba(28,32,36,0.12); padding:8px 0; z-index:2; }
+.menu div { display:flex; align-items:center; gap:14px; padding:12px 18px; font-size:15px; }
+.bg { padding:16px; height:260px; }
+.card { border:1px solid #E0E1E6; border-radius:18px; height:100%; background:#FFFFFF; }
 </style></head><body><div class="phone">
-<div class="bar"><div class="dots"><span></span><span></span><span></span></div><div class="url">jamble.com/seller/dashboard</div></div>
-<div class="hdr"><div class="mark">Seller <b>Hub</b></div><div class="create"><div class="btn btn-brand"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1.5V12.5M1.5 7H12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Create</div><div class="drop"><div>Schedule a Live</div><div>Create New Listing</div><div>Clone from Past Lives</div><div>Import CSV</div></div></div></div>
-<div class="body"><div class="side"><div class=on>Overview</div><div>Lives</div><div>Catalog</div><div>Sales</div><div>Shipments</div><div>Invoices</div><div>Wallet</div><div>Referrals</div></div><div class="main"><div class="ph" style="width:70%"></div><div class="ph" style="width:90%"></div><div class="ph" style="width:55%"></div></div></div>
+<div class="top"><div class="ib on"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M11 3V19M3 11H19" stroke="#1C2024" stroke-width="2.4" stroke-linecap="round"/></svg></div><div class="ib"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 4H20C21.1 4 22 4.9 22 6V16C22 17.1 21.1 18 20 18H9L4.5 21.5V18H4C2.9 18 2 17.1 2 16V6C2 4.9 2.9 4 4 4Z" fill="#1C2024"/><path d="M12 14.2L8.6 11C7.6 10 7.8 8.4 9 7.9C9.8 7.5 10.8 7.8 11.3 8.5L12 9.3L12.7 8.5C13.2 7.8 14.2 7.5 15 7.9C16.2 8.4 16.4 10 15.4 11Z" fill="#FFFFFF"/></svg><span class="bd">12</span></div><div class="ib"><svg width="22" height="22" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1" fill="#1C2024"/><rect x="4.5" y="12" width="15" height="9" rx="1.2" fill="#1C2024"/><path d="M12 8V21" stroke="#FFFFFF" stroke-width="1.6"/><path d="M12 8C10 4 6.5 4.5 7.5 7.2C8 8 12 8 12 8ZM12 8C14 4 17.5 4.5 16.5 7.2C16 8 12 8 12 8Z" fill="#1C2024"/></svg></div><div class="av"></div></div>
+<div class="menu"><div><svg width="22" height="22" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3.5" fill="#1C2024"/><path d="M8 3V6M16 3V6" stroke="#1C2024" stroke-width="2.2" stroke-linecap="round"/><path d="M10.2 10.2L15 13L10.2 15.8Z" fill="#FFFFFF"/></svg>Schedule a Live</div><div><svg width="22" height="22" viewBox="0 0 24 24"><path d="M3 12.2V4.5C3 3.7 3.7 3 4.5 3H12.2C12.6 3 13 3.2 13.3 3.4L20.6 10.7C21.2 11.3 21.2 12.3 20.6 12.9L12.9 20.6C12.3 21.2 11.3 21.2 10.7 20.6L3.4 13.3C3.2 13 3 12.6 3 12.2Z" fill="#1C2024"/><circle cx="8" cy="8" r="1.7" fill="#FFFFFF"/></svg>Create New Listing</div><div><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="8" y="8" width="13" height="13" rx="2.5" stroke="#1C2024" stroke-width="2"/><path d="M16 5V5.5C16 4.1 14.9 3 13.5 3H5.5C4.1 3 3 4.1 3 5.5V13.5C3 14.9 4.1 16 5.5 16H5" stroke="#1C2024" stroke-width="2" stroke-linecap="round"/></svg>Clone from Past Lives</div><div><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 15V4M12 4L7.5 8.5M12 4L16.5 8.5" stroke="#1C2024" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 14V18C4 19.1 4.9 20 6 20H18C19.1 20 20 19.1 20 18V14" stroke="#1C2024" stroke-width="2.2" stroke-linecap="round"/></svg>Import CSV</div></div><div class="bg"><div class="card"></div></div>
 </div></body></html>

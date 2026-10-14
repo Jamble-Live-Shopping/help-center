@@ -20,7 +20,7 @@ In the Loja (shop), you sell your products at any time, at a fixed price, withou
 
 **On a computer (Seller Hub):**
 
-1. Click **Criar**, then **Criar Novo Produto**.
+1. Click the **+**, then **Criar Novo Produto**.
 2. Under **Onde você quer vender?** (where do you want to sell), choose **Marketplace**.
 3. Fill in the listing and save.
 

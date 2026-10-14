@@ -13,7 +13,7 @@ A Pre-Offer lets a buyer place an offer on a product before the show goes live. 
 
 ## When a Pre-Offer is available
 
-A Pre-Offer is only available on products that will be sold in **Real Time Offer** or **Sudden Death** mode, with a quantity of **1**. Modes like **Buy It Now** (fixed price) and **Giveaway** do not accept Pre-Offers, and listings with more than one unit of the same item do not either.
+A Pre-Offer is only available on products that will be sold in **Real Time Offer** or **Sudden Death** mode, with a quantity of **1**. **Buy Now** (fixed price) does not accept Pre-Offers, and listings with more than one unit of the same item do not either.
 
 On the buyer side, Pre-Offers appear on the product cards inside upcoming shows: when browsing the calendar of scheduled shows, every eligible product shows a **Submit Offer** button under the listing.
 

@@ -20,7 +20,7 @@ Se você entra no app com Google ou Apple, também pode usar **Entrar com Google
 
 ## O que você encontra no menu
 
-![Seller Hub no navegador, com o menu lateral e o botão Criar aberto mostrando Agendar Live, Criar Novo Produto, Clonar de Lives Anteriores e Importar CSV](./assets/mockups/seller-hub-sell-from-your-computer__menu__pt-br.png)
+![Seller Hub no navegador, com o botão + aberto mostrando Agendar Live, Criar Novo Produto, Clonar de Lives Anteriores e Importar CSV](./assets/mockups/seller-hub-sell-from-your-computer__menu__pt-br.png)
 
 - **Visão Geral**: um resumo da sua conta e das suas próximas lives
 - **Lives**: agende, edite e acompanhe suas lives
@@ -34,9 +34,9 @@ Se você entra no app com Google ou Apple, também pode usar **Entrar com Google
 
 As **Mensagens** ficam no ícone no topo da tela.
 
-## O botão Criar
+## O botão +
 
-No topo da tela, o botão **Criar** reúne os atalhos mais usados:
+No topo da tela, o botão **+** reúne os atalhos mais usados:
 
 - **Agendar Live**: crie uma nova live
 - **Criar Novo Produto**: escolha **Marketplace** para vender a qualquer momento, sem live, ou adicione o produto a uma live
@@ -49,7 +49,7 @@ No topo da tela, o botão **Criar** reúne os atalhos mais usados:
 
 Com a importação por CSV, você cria muitos produtos de uma vez. Os produtos entram em uma live agendada, então agende a live antes.
 
-1. Clique em **Criar** e depois em **Importar CSV**.
+1. Clique no **+** e depois em **Importar CSV**.
 2. Clique em **Baixar Modelo XLSX** e abra o modelo no Excel ou em outro programa de planilhas.
 3. Escolha a aba da categoria dos seus produtos e preencha uma linha por produto.
 4. Salve o arquivo no formato **CSV**.
@@ -59,11 +59,11 @@ Antes de criar qualquer produto, o Seller Hub mostra uma prévia. Se alguma linh
 
 ## Fazer sua live pelo computador
 
-![Janela Iniciar sua live? com os botões Transmitir e Iniciar sem transmitir](./assets/mockups/seller-hub-sell-from-your-computer__go-live-choice__pt-br.png)
+![Sala de espera da live no Seller Hub com Live começa em 4m 59s e os botões Iniciar Live e Testar câmera e som](./assets/mockups/seller-hub-sell-from-your-computer__waiting-room__pt-br.png)
 
 Para começar uma live, você precisa ter uma conta de recebimento e um endereço de envio cadastrados. Se faltar algum, o Seller Hub avisa e mostra onde configurar.
 
-Na página da sua live, clique em **Iniciar Live** e escolha:
+Na página da sua live, você vê quanto tempo falta para começar. Use **Testar câmera e som** para conferir tudo antes, sem entrar no ar. Na hora, clique em **Iniciar Live** e escolha:
 
 - **Transmitir**: a live começa com a câmera e o microfone do computador
 - **Iniciar sem transmitir**: a live começa e você transmite de outro aparelho, como o celular

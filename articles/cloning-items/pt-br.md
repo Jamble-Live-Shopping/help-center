@@ -111,7 +111,6 @@ O clone é um **produto novo** no seu show. Você pode editar qualquer campo no 
 ## Regras e limitações
 
 - **Você não pode clonar o mesmo produto duas vezes** no mesmo show. Se um produto já foi clonado para o seu show atual, ele aparece acinzentado com **(Added)** e não pode ser selecionado novamente
-- **Produtos de sorteio não podem ser clonados.** Se um produto foi configurado como sorteio, ele não aparecerá na seleção de clonagem
 - **Você pode selecionar de vários shows.** Ao usar Clonar de Shows, você pode navegar por diferentes shows e selecionar produtos de cada um antes de importar todos de uma vez
 - **Importar da Loja só está disponível durante um show ao vivo.** Se quiser trazer produtos da loja para um show antes de ir ao vivo, use Clonar de Shows (se esses produtos também existem em outro show)
 - **Edições em um clone são independentes.** Mudar o preço, título ou qualquer detalhe em um produto clonado não afeta o original

@@ -39,7 +39,7 @@ Cenario: voce tem um Nike Air Max nos tamanhos 40, 41 e 42, todos na cor preta.
 
 Voce precisa de 3 anuncios. Para nao perder tempo digitando os mesmos detalhes tres vezes, use **Clonar listagens de shows anteriores** a partir do menu de adicionar produto no show.
 
-![Menu de adicionar produto no show com a opcao Clonar listagens de shows anteriores visivel](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/variants-for-sellers-sizes-and-colors__screen-2__pt-br__v3.png)
+![Menu de adicionar produto no show com a opção Clonar listagens de lives anteriores visível](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/variants-for-sellers-sizes-and-colors__screen-2__pt-br__v4.png)
 
 Fluxo recomendado:
 

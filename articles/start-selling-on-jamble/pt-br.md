@@ -110,7 +110,7 @@ Você também pode vender sem fazer live: crie anúncios na **Loja**, que ficam 
 
 ## Passo 7: Agende seu primeiro show {#passo-7}
 
-No seu perfil, toque em **Agendar uma Live**. No computador, use **Criar** e depois **Agendar Live** no Seller Hub.
+No seu perfil, toque em **Agendar uma Live**. No computador, use o **+** e depois **Agendar Live** no Seller Hub.
 
 ![Formulário Criar um Show com campos de título, data, hora, categoria e upload de capa](./assets/mockups/start-selling-on-jamble__create-show__pt-br.png)
 

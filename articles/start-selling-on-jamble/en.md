@@ -110,7 +110,7 @@ You can also sell without going live: create listings in the **Loja** (shop), wh
 
 ## Step 7: Schedule your first show {#passo-7}
 
-On your profile, tap **Agendar uma Live** (schedule a live). On a computer, use **Criar**, then **Agendar Live**, in the Seller Hub.
+On your profile, tap **Agendar uma Live** (schedule a live). On a computer, use the **+**, then **Agendar Live**, in the Seller Hub.
 
 ![Create a Show form with fields for title, date, time, category, and cover upload](./assets/mockups/start-selling-on-jamble__create-show__en.png)
 
