@@ -43,10 +43,19 @@ html = html.replace(/<img\s+([^>]*?)src="([^"]+)"([^>]*)>/g, (_, pre, src, post)
   return `<img ${pre}src="${newSrc}"${post}>`.replace(/\s+/g, ' ').replace(' >', '>');
 });
 
-// 2. Add stable IDs to h1/h2/h3 based on text content
+// 2. Add stable IDs to h1/h2/h3 based on text content.
+//    A trailing "{#anchor}" on a heading is stripped from the visible text and
+//    recorded, so in-page links written as (#anchor) point at the h_ id.
+const anchors = {};
 html = html.replace(/<(h[123])>([^<]+)<\/\1>/g, (_, tag, text) => {
-  return `<${tag} id="${stableId(text.trim())}">${text}</${tag}>`;
+  let label = text.trim();
+  const m = label.match(/^(.*?)\s*\{#([A-Za-z0-9_-]+)\}$/);
+  if (m) label = m[1];
+  const id = stableId(label);
+  if (m) anchors[m[2]] = id;
+  return `<${tag} id="${id}">${label}</${tag}>`;
 });
+html = html.replace(/href="#([A-Za-z0-9_-]+)"/g, (all, a) => (anchors[a] ? `href="#${anchors[a]}"` : all));
 
 // 3. Strip class attributes that marked sometimes adds (defensive)
 html = html.replace(/\s+class="[^"]*"/g, '');
