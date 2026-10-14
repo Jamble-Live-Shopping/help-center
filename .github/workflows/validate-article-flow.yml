@@ -1,17 +1,13 @@
 name: Validate article flow
 
-# PR-only changed-articles validation. Push-to-main / --all is intentionally
-# OMITTED until the pilot direct-messages-for-sellers article has been
-# rewritten and passes the validator (today it fails 19 hard checks by
-# design). Re-enable push:main with --all only after pilot DM passes, or
-# after we add an explicit enforcement: advisory|strict mode to flow.yml.
+# Run on every PR so the validate check can be required before merging.
+# Only changed articles with flow contracts are validated; the full legacy
+# baseline remains a separate maintenance task.
 on:
   pull_request:
-    paths:
-      - 'articles/**'
-      - 'process/templates/article-flow.yml'
-      - 'scripts/validate-article-flow.py'
-      - '.github/workflows/validate-article-flow.yml'
+
+permissions:
+  contents: read
 
 concurrency:
   group: validate-article-flow-${{ github.ref }}
@@ -24,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -36,9 +32,10 @@ jobs:
         run: pip install pyyaml beautifulsoup4
 
       - name: Validate (PR, changed articles)
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
           set -euo pipefail
-          BASE_SHA="${{ github.event.pull_request.base.sha }}"
           python scripts/validate-article-flow.py --changed "$BASE_SHA"
 
       - name: Summary
@@ -48,4 +45,4 @@ jobs:
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "Mode: PR (changed articles only)" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "push:main --all is disabled until the pilot DM article passes the validator." >> "$GITHUB_STEP_SUMMARY"
+          echo "Articles without flow.yml are outside this contract check." >> "$GITHUB_STEP_SUMMARY"

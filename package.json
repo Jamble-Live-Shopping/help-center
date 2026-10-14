@@ -9,11 +9,11 @@
     "sync-one": "bash scripts/sync-one.sh"
   },
   "dependencies": {
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.3.2",
     "marked": "^12.0.0",
-    "puppeteer": "^24.42.0"
+    "puppeteer": "^25.10.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22.12.0"
   }
 }

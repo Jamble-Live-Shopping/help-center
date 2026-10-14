@@ -1,32 +1,13 @@
 name: Validate article factory
 
-# Smoke tests for the Help Center Article Factory: golden replay, batch
-# validator, flow initializer, and YAML output parseability. Triggers
-# only when factory paths change to keep regular content PRs fast.
+# Run on every PR so the factory check can be required before merging.
+# Covers the validator, batch coordinator, historical replay, and initializer.
 
 on:
   pull_request:
-    paths:
-      - 'process/golden-flows/**'
-      - 'process/batches/**'
-      - 'process/workflows/**'
-      - 'process/templates/article-flow.yml'
-      - 'process/help-article-runner.md'
-      - 'scripts/replay-golden-articles.py'
-      - 'scripts/validate-article-batch.py'
-      - 'scripts/init-article-flow.py'
-      - 'scripts/validate-article-flow.py'
-      - 'scripts/test-article-factory.py'
-      - 'scripts/run-help-article.py'
-      - 'scripts/run-help-article-batch.py'
-      - 'scripts/render-reviewer-pack.py'
-      - 'scripts/test-batch-coordinator.py'
-      - 'scripts/generate-sample-reviewer-pack.py'
-      - 'tests/fixtures/batch-coordinator/**'
-      - 'tests/fixtures/batch-10-gates/**'
-      - 'process/14-batch-coordinator.md'
-      - '_work/sample-batch/**'
-      - '.github/workflows/validate-article-factory.yml'
+
+permissions:
+  contents: read
 
 concurrency:
   group: validate-article-factory-${{ github.ref }}

@@ -1,0 +1,87 @@
+name: Validate rendering and dependencies
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-rendering-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  rendering:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Audit high and critical vulnerabilities
+        run: npm audit --audit-level=high
+      - name: Allow the test browser to create its sandbox
+        # Ubuntu 24.04 restricts user namespaces for downloaded browsers.
+        # Scope the exception to this executable on the disposable runner;
+        # keep Chrome's sandbox and the global AppArmor restriction enabled.
+        # https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md
+        run: |
+          CHROME_EXECUTABLE="$(node --input-type=module -e 'import puppeteer from "puppeteer"; console.log(await puppeteer.executablePath());')"
+          test -x "$CHROME_EXECUTABLE"
+          sudo tee /etc/apparmor.d/help-center-renderer > /dev/null <<EOF
+          abi <abi/4.0>,
+          include <tunables/global>
+          profile help-center-renderer "$CHROME_EXECUTABLE" flags=(unconfined) {
+            userns,
+          }
+          EOF
+          sudo apparmor_parser --replace /etc/apparmor.d/help-center-renderer
+      - name: Parse article metadata and flow contracts
+        run: |
+          node --input-type=module <<'JS'
+          import { readdirSync, readFileSync, existsSync } from 'node:fs';
+          import yaml from 'js-yaml';
+          let count = 0;
+          for (const entry of readdirSync('articles', { withFileTypes: true })) {
+            if (!entry.isDirectory()) continue;
+            for (const name of ['metadata.yml', 'flow.yml']) {
+              const path = `articles/${entry.name}/${name}`;
+              if (!existsSync(path)) continue;
+              const value = yaml.load(readFileSync(path, 'utf8'));
+              if (!value || typeof value !== 'object' || Array.isArray(value)) {
+                throw new Error(`Expected YAML mapping in ${path}`);
+              }
+              count++;
+            }
+          }
+          console.log(`Parsed ${count} article YAML files`);
+          JS
+      - name: Render both locales at device scale factor 3
+        run: |
+          mkdir -p "$RUNNER_TEMP/mockup-smoke"
+          for locale in pt-br en; do
+            node scripts/shot-retina.mjs \
+              "$GITHUB_WORKSPACE/articles/make-a-shipping-adjustment/mockup-sources/screen-1__${locale}.html" \
+              "$RUNNER_TEMP/mockup-smoke/${locale}.png"
+            node scripts/md-to-html.js \
+              "articles/make-a-shipping-adjustment/${locale}.md" \
+              > "$RUNNER_TEMP/mockup-smoke/${locale}.html"
+          done
+      - name: Check rendered outputs
+        run: |
+          python3 - <<'PY'
+          import os, struct
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP']) / 'mockup-smoke'
+          for locale in ['pt-br', 'en']:
+              png = (root / f'{locale}.png').read_bytes()
+              assert png[:8] == b'\x89PNG\r\n\x1a\n', f'{locale}: invalid PNG'
+              width, height = struct.unpack('>II', png[16:24])
+              assert width >= 900 and height > 0, (locale, width, height)
+              html = (root / f'{locale}.html').read_text()
+              assert '<h1 id="h_' in html and '<img ' in html, f'{locale}: conversion failed'
+              print(f'{locale}: valid {width}x{height} PNG and article HTML')
+          PY
