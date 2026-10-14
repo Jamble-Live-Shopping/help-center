@@ -6,6 +6,7 @@ This guide takes you through each step to become a seller on Jamble, from downlo
 
 ## Jump to a step
 
+- [Seller Hub: sell from your computer](#seller-hub)
 - [Step 1: Download the app and create your account](#passo-1)
 - [Step 2: Apply to sell live](#passo-2)
 - [Step 3: Build a profile buyers trust](#passo-3)
@@ -26,6 +27,21 @@ You need:
 - A Brazilian bank account in your name (CPF) or in your company's name (CNPJ)
 - An address in Brazil for shipping
 - Products you want to sell (collectibles like Pokémon TCG, Hot Wheels, One Piece TCG, Magic)
+
+## Sell from your computer with the Seller Hub {#seller-hub}
+
+The **Seller Hub** is the seller area on your computer, built for sellers who want to sell more and stay organized. Once approved, sign in at jamble.com/seller/dashboard with the same account you use in the app.
+
+In the Seller Hub you can:
+
+- Create many products at once with a spreadsheet (**Importar CSV**)
+- Schedule and run your lives from your computer, testing your camera and sound before you start
+- Confirm the sales of each live and follow your orders
+- Print labels and organize your shipments in **Envios**
+- Set up addresses and shipping profiles
+- Track your wallet and withdraw your earnings
+
+Everything stays in sync with the app, so you can start on your phone and continue on your computer. [See how to use the Seller Hub](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588489).
 
 ## Step 1: Download the app and create your account {#passo-1}
 

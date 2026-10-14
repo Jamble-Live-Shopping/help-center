@@ -6,6 +6,7 @@ Este guia te acompanha em cada etapa para se tornar um vendedor na Jamble, desde
 
 ## Pule para um passo
 
+- [Seller Hub: venda pelo computador](#seller-hub)
 - [Passo 1: Baixe o app e crie sua conta](#passo-1)
 - [Passo 2: Candidate-se para vender ao vivo](#passo-2)
 - [Passo 3: Monte um perfil que gera confiança](#passo-3)
@@ -26,6 +27,21 @@ Você precisa de:
 - Uma conta bancária brasileira no seu nome (CPF) ou no nome da sua empresa (CNPJ)
 - Um endereço no Brasil para os envios
 - Produtos que você quer vender (colecionáveis como Pokémon TCG, Hot Wheels, One Piece TCG, Magic)
+
+## Venda pelo computador com o Seller Hub {#seller-hub}
+
+O **Seller Hub** é a área do vendedor no computador, feita para quem quer vender mais e com mais organização. Depois de aprovado, entre em jamble.com/seller/dashboard com a mesma conta do app.
+
+No Seller Hub você pode:
+
+- Criar vários produtos de uma vez com uma planilha (**Importar CSV**)
+- Agendar e fazer suas lives pelo computador, testando câmera e som antes de começar
+- Confirmar as vendas de cada live e acompanhar os pedidos
+- Imprimir as etiquetas e organizar seus envios em **Envios**
+- Configurar endereços e perfis de envio
+- Acompanhar sua carteira e sacar seus ganhos
+
+Tudo fica sincronizado com o app, então você pode começar no celular e continuar no computador. [Veja como usar o Seller Hub](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/17588489).
 
 ## Passo 1: Baixe o app e crie sua conta {#passo-1}
 
