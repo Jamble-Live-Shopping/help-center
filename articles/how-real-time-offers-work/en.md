@@ -24,7 +24,7 @@ This article covers the two modes with offers: **Oferta em tempo real** and **Mo
 
 When creating or editing the product, choose **Oferta em tempo real** or **Morte súbita** as the sell mode and fill in:
 
-![Sell mode screen with Real-time offers selected, Starting price and Duration fields visible](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-real-time-offers-work__sell-mode-picker__en__v2.png)
+![Sell mode screen with Real-time offers selected, Starting price and Duration fields visible](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-real-time-offers-work__sell-mode-picker__en__v3.png)
 
 - **Starting price:** the amount of the first offer. The minimum is R$ 5
 - **Duration:** how long the sale lasts, between 5 and 90 seconds. The default is 15 seconds
