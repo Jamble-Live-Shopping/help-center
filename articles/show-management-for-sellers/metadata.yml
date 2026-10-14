@@ -1,0 +1,18 @@
+intercom_id: 14288116
+slug: show-management-for-sellers
+collection_id: 19177936
+
+# Retired in wave 2 (Oct 2026): merged into livestream-tools-everything-you-can-do-while-hosting.
+# Kept only so the sync can unpublish it (state: draft) in both locales.
+# Do not edit or republish. Delete this folder once Intercom shows it as draft.
+default_locale: pt-br
+
+state: draft
+
+locales:
+  pt-br:
+    title: 'Gerenciamento do Show para Vendedores'
+    description: 'Conteúdo movido para outro artigo.'
+  en:
+    title: 'Show Management for Sellers'
+    description: 'Content moved to another article.'

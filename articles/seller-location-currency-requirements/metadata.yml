@@ -1,0 +1,18 @@
+intercom_id: 14288079
+slug: seller-location-currency-requirements
+collection_id: 19177934
+
+# Retired in wave 2 (Oct 2026): merged into start-selling-on-jamble.
+# Kept only so the sync can unpublish it (state: draft) in both locales.
+# Do not edit or republish. Delete this folder once Intercom shows it as draft.
+default_locale: pt-br
+
+state: draft
+
+locales:
+  pt-br:
+    title: 'Requisitos de Localização e Moeda para Vendedores'
+    description: 'Conteúdo movido para outro artigo.'
+  en:
+    title: 'Seller Location and Currency Requirements'
+    description: 'Content moved to another article.'

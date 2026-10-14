@@ -1,0 +1,18 @@
+intercom_id: 14288165
+slug: running-simultaneous-sales-during-your-show
+collection_id: 19177939
+
+# Retired in wave 2 (Oct 2026): merged into livestream-tools-everything-you-can-do-while-hosting.
+# Kept only so the sync can unpublish it (state: draft) in both locales.
+# Do not edit or republish. Delete this folder once Intercom shows it as draft.
+default_locale: pt-br
+
+state: draft
+
+locales:
+  pt-br:
+    title: 'Executando Vendas Simultâneas Durante Seu Show'
+    description: 'Conteúdo movido para outro artigo.'
+  en:
+    title: 'Running Simultaneous Sales During Your Show'
+    description: 'Content moved to another article.'

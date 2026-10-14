@@ -1,0 +1,18 @@
+intercom_id: 14288126
+slug: how-order-cancellations-work
+collection_id: 19177937
+
+# Retired in wave 2 (Oct 2026): merged into cancel-an-order-as-a-seller, cancellations.
+# Kept only so the sync can unpublish it (state: draft) in both locales.
+# Do not edit or republish. Delete this folder once Intercom shows it as draft.
+default_locale: pt-br
+
+state: draft
+
+locales:
+  pt-br:
+    title: 'Como funcionam os cancelamentos de pedidos'
+    description: 'Conteúdo movido para outro artigo.'
+  en:
+    title: 'How order cancellations work'
+    description: 'Content moved to another article.'

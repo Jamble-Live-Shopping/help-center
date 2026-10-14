@@ -1,0 +1,18 @@
+intercom_id: 14288162
+slug: add-and-edit-show-notes
+collection_id: 19177939
+
+# Retired in wave 2 (Oct 2026): merged into schedule-a-show.
+# Kept only so the sync can unpublish it (state: draft) in both locales.
+# Do not edit or republish. Delete this folder once Intercom shows it as draft.
+default_locale: pt-br
+
+state: draft
+
+locales:
+  pt-br:
+    title: 'Adicionar e Editar Notas do Show'
+    description: 'Conteúdo movido para outro artigo.'
+  en:
+    title: 'Add and Edit Show Notes'
+    description: 'Content moved to another article.'

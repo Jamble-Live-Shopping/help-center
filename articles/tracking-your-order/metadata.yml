@@ -1,0 +1,18 @@
+intercom_id: 10374367
+slug: tracking-your-order
+collection_id: 11348923
+
+# Retired in wave 2 (Oct 2026): merged into status-explained.
+# Kept only so the sync can unpublish it (state: draft) in both locales.
+# Do not edit or republish. Delete this folder once Intercom shows it as draft.
+default_locale: pt-br
+
+state: draft
+
+locales:
+  pt-br:
+    title: '3. Acompanhamento do Pedido'
+    description: 'Conteúdo movido para outro artigo.'
+  en:
+    title: '3. Tracking Your Order'
+    description: 'Content moved to another article.'
