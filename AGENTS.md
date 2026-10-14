@@ -26,7 +26,7 @@ If two process documents disagree, the more specific numbered document wins. Not
 - Never add an `on: push` trigger to `.github/workflows/sync-intercom.yml`.
 - Never run `scripts/sync-one.sh`, call the Intercom write API, or dispatch the sync workflow unless the human release owner explicitly authorizes publication of one exact article slug in the current task.
 - An authorized publication is one slug per workflow run, from `main`, with `confirm=yes`. A broad instruction such as “ship everything” is not sufficiently scoped.
-- Vaimiti is the release authorizer (handed over by Aymar on 2026-10-14). Only the release authorizer can approve a production publish, one exact article slug at a time. Any future change of release authorizer must be recorded here explicitly.
+- Vaimiti and Aymar are both release authorizers (decided 2026-10-14). Either one can approve a production publish, one exact article slug at a time. Any future change of release authorizers must be recorded here explicitly.
 - If code evidence contradicts an article, a feature appears missing, a localized label cannot be verified, or an active risk has no recorded decision, stop and report the evidence. Do not invent a fallback.
 
 ## Content contract

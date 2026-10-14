@@ -133,7 +133,7 @@ The complete timeless version is in [`AGENTS.md`](./AGENTS.md); detailed rules a
 
 ## Publishing one approved article
 
-Publication changes production content. Since 2026-10-14, Vaimiti is both the repository maintainer and the release authorizer (handed over by Aymar). Publication requires her approval for the exact slug.
+Publication changes production content. Since 2026-10-14, Vaimiti is the repository maintainer, and Vaimiti and Aymar are both release authorizers. Publication requires the approval of one of them for the exact slug.
 
 In GitHub:
 
@@ -168,7 +168,7 @@ Do not direct-push a revert to protected `main`, and do not assume the revert pu
 - [ ] Confirm Vaimiti can create branches, open pull requests, and view Actions.
 - [ ] Confirm Vaimiti can read and clone `Jamble-Live-Shopping/Jamble-iOS`, which is required to verify live UI behavior.
 - [ ] Decide and record who may approve content pull requests.
-- [x] Decide whether production-publish authorization remains with Aymar or transfers to Vaimiti. Decided 2026-10-14: it transfers to Vaimiti.
+- [x] Decide whether production-publish authorization remains with Aymar or transfers to Vaimiti. Decided 2026-10-14: Vaimiti and Aymar are both release authorizers.
 - [ ] Confirm who performs the post-publish EN + pt-BR live check.
 - [ ] Do not send the Intercom token in Slack, email, a document, or a local `.env` file. Keep it only as a GitHub Actions secret.
 
