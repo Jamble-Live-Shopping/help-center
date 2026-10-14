@@ -11,8 +11,8 @@ last_sync: 2026-08-21T09:33:34Z
 
 locales:
   pt-br:
-    title: '3. Como configurar sua conta para comprar?'
+    title: 'Como configurar sua conta para comprar?'
     description: 'Ative sua conta para poder realizar compras'
   en:
-    title: '3. Set up your Account to Purchase'
+    title: 'Set up your Account to Purchase'
     description: 'You must activate your account to unlock purchasing'

@@ -13,7 +13,7 @@ If you opened this page from the application form, you can read the guide and th
 
 ---
 
-# 1. Can I sell on Jamble?
+# 1. Can I sell on Jamble? {#quem-pode-vender}
 
 You can sell as an **individual (CPF)** or as a **business (CNPJ/MEI)**. Choose the registration that matches your situation.
 
@@ -31,7 +31,7 @@ You can start without your own audience and learn the format. Followers help you
 
 ---
 
-# 2. How much does it cost and how much do I receive?
+# 2. How much does it cost and how much do I receive? {#custos-e-ganhos}
 
 ## What are the fees for selling on Jamble?
 
@@ -45,7 +45,7 @@ The payment processing fee is paid by the buyer and does not come out of your ea
 
 ---
 
-# 3. What do I need to prepare?
+# 3. What do I need to prepare? {#preparar-primeira-live}
 
 - **Phone or computer and internet:** use the updated app on your phone, or the Seller Hub on your computer, with a stable connection and a battery or charger nearby.
 - **Image and sound:** pick a bright, quiet spot. A phone stand helps; you do not need professional equipment.
@@ -60,7 +60,7 @@ Yes. Once you create a live, use practice mode to learn the controls before you 
 
 ---
 
-# 4. From applying to your first live
+# 4. From applying to your first live {#inscricao-ate-primeira-live}
 
 ## How do I become a seller on Jamble?
 
@@ -125,7 +125,7 @@ If the payment is not completed, the sale is cancelled and you can put the produ
 
 ---
 
-# 5. I made a sale. How do I ship and get paid?
+# 5. I made a sale. How do I ship and get paid? {#enviar-e-receber}
 
 After the sale, you prepare and post the order. Jamble gives you the tools to create the label, follow the delivery and check your earnings.
 
@@ -177,7 +177,7 @@ Go to Profile > Settings > Contact customer support.
 
 ---
 
-# 6. Can I sell from my computer or without going live?
+# 6. Can I sell from my computer or without going live? {#computador-e-loja}
 
 ## Can I sell from my computer?
 

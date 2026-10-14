@@ -17,7 +17,7 @@ Se você abriu esta página pelo formulário de inscrição, pode consultar o gu
 
 ​
 
-# 1. Posso vender na Jamble?
+# 1. Posso vender na Jamble? {#quem-pode-vender}
 
 Você pode vender como **pessoa física (CPF)** ou como **pessoa jurídica (CNPJ/MEI)**. Escolha o cadastro que corresponde à sua situação.
 
@@ -41,7 +41,7 @@ Você pode começar sem uma audiência própria e aprender o formato. Ter seguid
 
 ​
 
-# 2. Quanto custa e quanto eu recebo?
+# 2. Quanto custa e quanto eu recebo? {#custos-e-ganhos}
 
 ## Quais são as taxas para vender no Jamble?
 
@@ -63,7 +63,7 @@ A taxa de processamento do pagamento é paga pelo comprador e não sai dos seus 
 
 ​
 
-# 3. O que preciso preparar?
+# 3. O que preciso preparar? {#preparar-primeira-live}
 
 - **Celular ou computador e internet:** use o app atualizado no celular, ou o Seller Hub no computador, com uma conexão estável e bateria ou carregador por perto.
 - **Imagem e som:** escolha um lugar iluminado e silencioso. Um suporte para o celular ajuda; equipamento profissional não é necessário.
@@ -82,7 +82,7 @@ Sim. Depois de criar uma live, use o modo de prática para conhecer os controles
 
 ​
 
-# 4. Da inscrição à primeira live
+# 4. Da inscrição à primeira live {#inscricao-ate-primeira-live}
 
 ## Como me tornar vendedor no Jamble?
 
@@ -177,7 +177,7 @@ Se o pagamento não for concluído, a venda é cancelada e você pode colocar o 
 
 ​
 
-# 5. Vendi. Como envio e recebo?
+# 5. Vendi. Como envio e recebo? {#enviar-e-receber}
 
 Depois da venda, você cuida da preparação e postagem do pedido. A Jamble fornece as ferramentas para gerar a etiqueta, acompanhar a entrega e consultar seus ganhos.
 
@@ -251,7 +251,7 @@ Acesse Perfil > Configurações > Contatar o suporte ao cliente.
 
 ​
 
-# 6. Posso vender pelo computador ou sem fazer live?
+# 6. Posso vender pelo computador ou sem fazer live? {#computador-e-loja}
 
 ## Posso vender pelo computador?
 
