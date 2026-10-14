@@ -42,9 +42,9 @@ Le caller doit donner au worker:
 Si > 1 worker tourne en parallèle sur le repo, **chaque worker DOIT créer un git worktree depuis le démarrage**. Sans ça, les workers se piétinent sur le main worktree (branch HEAD shifts, untracked files clobbered, linter reverts).
 
 ```bash
-cd "/Users/aymardumoulin/Projects/Jamble Coworker/help-center"
-git fetch origin main
-git worktree add /tmp/wt-<slug>-<task> origin/main
+HELP_CENTER_ROOT="$(git rev-parse --show-toplevel)"
+git -C "$HELP_CENTER_ROOT" fetch origin main
+git -C "$HELP_CENTER_ROOT" worktree add /tmp/wt-<slug>-<task> origin/main
 cd /tmp/wt-<slug>-<task>
 git checkout -b <feature-branch>
 # ... toutes les phases suivantes tournent dans ce worktree ...
@@ -54,7 +54,7 @@ git checkout -b <feature-branch>
 
 ```bash
 cd /
-git -C "/Users/aymardumoulin/Projects/Jamble Coworker/help-center" worktree remove /tmp/wt-<slug>-<task> --force
+git -C "$HELP_CENTER_ROOT" worktree remove /tmp/wt-<slug>-<task> --force
 ```
 
 **Quand worktree obligatoire vs optionnel** :
@@ -69,11 +69,16 @@ git -C "/Users/aymardumoulin/Projects/Jamble Coworker/help-center" worktree remo
 
 ## Phase 1, Audit code iOS (BLOQUANT, max 30 min)
 
-1. **Cloner** `Jamble-iOS` mentalement: `/Users/aymardumoulin/Projects/Jamble-iOS`
+1. **Cloner** `Jamble-iOS`, puis pointer `JAMBLE_IOS_ROOT` vers son dossier `Jamble/`:
+   ```bash
+   git clone https://github.com/Jamble-Live-Shopping/Jamble-iOS.git ../Jamble-iOS
+   export JAMBLE_IOS_ROOT="$(cd ../Jamble-iOS/Jamble && pwd)"
+   test -d "$JAMBLE_IOS_ROOT/RESOURCES" || { echo "Invalid JAMBLE_IOS_ROOT"; exit 1; }
+   ```
 2. **Localiser** les Swift files qui rendent les écrans décrits dans l'article:
    ```bash
    gh search code "<distinctive phrase>" --repo Jamble-Live-Shopping/Jamble-iOS --limit 5
-   grep -rln "<feature>" /Users/aymardumoulin/Projects/Jamble-iOS/Jamble --include="*.swift"
+   grep -rln "<feature>" "$JAMBLE_IOS_ROOT" --include="*.swift"
    ```
 3. **Lire** chaque Swift file et extraire:
    - Toutes les `String(localized: "...")` → titres, sous-titres, labels boutons, alerts
@@ -87,18 +92,18 @@ Pour chaque `UIImage(named: "X")` trouvé dans le Swift code, extraire l'asset d
 
 ```bash
 # 1. Lister assets potentiels
-ls /Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/ | grep -i "<feature>"
+ls "$JAMBLE_IOS_ROOT/RESOURCES/Assets.xcassets/" | grep -i "<feature>"
 
 # 2. Pour chaque imageset, identifier le format
-ls /Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/<name>.imageset/
+ls "$JAMBLE_IOS_ROOT/RESOURCES/Assets.xcassets/<name>.imageset/"
 
 # 3. Copier dans assets/icons-ios/ selon le format
 # SVG : copier tel quel
-cp /Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/<name>.imageset/<name>.svg \
+cp "$JAMBLE_IOS_ROOT/RESOURCES/Assets.xcassets/<name>.imageset/<name>.svg" \
    assets/icons-ios/<name>.svg
 
 # PNG : copier tel quel
-cp /Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/<name>.imageset/<file>.png \
+cp "$JAMBLE_IOS_ROOT/RESOURCES/Assets.xcassets/<name>.imageset/<file>.png" \
    assets/icons-ios/<name>.png
 
 # PDF : tenter conversion. PDFs iOS sont des templates rendered avec tint runtime.
@@ -115,8 +120,8 @@ cp /Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/<na
 4. **Pull pt-BR** pour chaque string EN via `Localizable.xcstrings`:
    ```bash
    python3 -c "
-   import json
-   d=json.load(open('/Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Localizable.xcstrings'))
+   import json, os
+   d=json.load(open(os.path.join(os.environ['JAMBLE_IOS_ROOT'], 'RESOURCES', 'Localizable.xcstrings')))
    for k in ['<string1>', '<string2>']:
        loc=d['strings'].get(k,{}).get('localizations',{})
        pt=loc.get('pt-BR',{}).get('stringUnit',{}).get('value')
@@ -364,7 +369,7 @@ Tableau "Article claim → iOS source → Verdict (MATCH / MISMATCH)". Zero MISM
 
 ```bash
 # 1. Backend grep pour endpoints actifs
-grep -ri "<feature>" /Users/aymardumoulin/Projects/jamble_backend/
+grep -ri "<feature>" "${JAMBLE_BACKEND_ROOT:?Set JAMBLE_BACKEND_ROOT to the local backend clone}"
 
 # 2. Si doute sur le statut produit, FLAG à Aymar avant ship (pas après)
 
@@ -385,7 +390,7 @@ Cas connus deprecated (à ne JAMAIS mentionner) :
 
 ---
 
-## Phase 8, PR + sync (10 min)
+## Phase 8, PR + review (10 min)
 
 ```bash
 git checkout -b update/<slug>-v2-revamp
@@ -394,13 +399,15 @@ git rm assets/mockups/<slug>__*.png  # (les v1 si elles existent encore)
 git commit -m "<slug> v2 revamp: <one-line summary>"
 git push -u origin update/<slug>-v2-revamp
 gh pr create --title "..." --body "..."  # body avec compliance checklist
-gh pr merge <PR> --squash --delete-branch --admin
-gh run watch <run_id> --exit-status
 ```
 
-**Vérifier après sync**:
+STOP après ouverture de la PR. Un reviewer humain doit approuver, et la protection de `main` ne doit jamais être contournée avec `--admin`.
+
+**Le merge ne publie pas.** Après merge, la publication reste une action séparée. Un release owner doit donner un GO explicite pour un slug exact, puis suivre [15-intercom-sync.md](15-intercom-sync.md). Sans ce GO, Phase 8 se termine au merge.
+
+**Si la publication a été autorisée et exécutée**, vérifier ensuite:
 - Article live sur Intercom (URL pt-BR + EN)
-- 4 mockups visibles
+- Tous les mockups visibles
 - Mobile: ouvrir l'URL Intercom sur iPhone, scroll complet sans horizontal scroll, images chargent < 3s
 
 ---
@@ -417,7 +424,8 @@ gh run watch <run_id> --exit-status
 - [ ] Phase 5: zero ASCII box résiduelle
 - [ ] Phase 6: metadata.yml description ≤140, title sans em-dash
 - [ ] Phase 7: 3 audit files créés, ALL PASS
-- [ ] Phase 8: PR mergée, sync action OK, article live sur Intercom
+- [ ] Phase 8: PR approuvée et mergée sans contourner la protection de `main`
+- [ ] Publication, si explicitement autorisée: run manuel Phase 15 OK, article EN + pt-BR vérifié live
 
 **Échec d'un seul item = pas de ship.** Restart de la phase concernée.
 
@@ -450,13 +458,14 @@ gh run watch <run_id> --exit-status
 Si N articles en parallèle:
 - 1 worker = 1 article = 1 PR
 - Chaque worker travaille sur sa propre branche `update/<slug>-v2-revamp`
-- Chaque worker push + merge sa PR indépendamment
+- Chaque worker push + ouvre sa PR; le merge attend la review humaine requise
 - Si 2 workers touchent le même fichier (ex: process/templates/), serialiser
 
 **Coordinateur** (caller du batch):
 - Distribue les slugs aux workers (1 par worker)
-- Récupère les URLs Intercom finales
+- Récupère les URLs des PRs et leur statut de validation
 - Vérifie qu'aucun mockup n'a été créé en double avec des noms différents
+- Ne publie aucun article sans un GO release distinct, explicite et article-scoped
 
 ---
 
@@ -469,9 +478,9 @@ python3 -c "print(open('FILE').read().count(chr(0x2014)))"
 # Render PNG DPR3
 node scripts/shot-retina.mjs ABS_PATH_HTML ABS_PATH_PNG
 
-# Sync 1 article manuellement
-INTERCOM_TOKEN=$(cat ~/.intercom_token) bash scripts/sync-one.sh articles/<slug>
+# Publication production: lire le runbook et attendre un GO explicite pour un slug
+sed -n '1,180p' process/15-intercom-sync.md
 
 # Pull pt-BR depuis xcstrings
-python3 -c "import json; d=json.load(open('/Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Localizable.xcstrings')); print(d['strings'].get('STRING',{}).get('localizations',{}).get('pt-BR',{}).get('stringUnit',{}).get('value'))"
+python3 -c "import json,os; d=json.load(open(os.path.join(os.environ['JAMBLE_IOS_ROOT'],'RESOURCES','Localizable.xcstrings'))); print(d['strings'].get('STRING',{}).get('localizations',{}).get('pt-BR',{}).get('stringUnit',{}).get('value'))"
 ```

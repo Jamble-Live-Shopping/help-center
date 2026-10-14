@@ -49,8 +49,8 @@ From each Swift file you open, pull:
 
 ```bash
 python3 -c "
-import json
-d=json.load(open('/Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Localizable.xcstrings'))
+import json, os
+d=json.load(open(os.path.join(os.environ['JAMBLE_IOS_ROOT'], 'RESOURCES', 'Localizable.xcstrings')))
 for k in ['My Wallet','Withdraw','Bank Details','Payouts History','Update','Pending','Completed','Processing','Failed']:
     loc=d['strings'].get(k,{}).get('localizations',{})
     pt=loc.get('pt-BR',{}).get('stringUnit',{}).get('value')
@@ -82,18 +82,18 @@ For every `UIImage(named: "X")` reference in the Swift file, extract the asset i
 
 ```bash
 # 1. List assets matching the feature
-ls /Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/ | grep -i "<feature>"
+ls "$JAMBLE_IOS_ROOT/RESOURCES/Assets.xcassets/" | grep -i "<feature>"
 
 # 2. For each imageset, identify the format
-ls /Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/<name>.imageset/
+ls "$JAMBLE_IOS_ROOT/RESOURCES/Assets.xcassets/<name>.imageset/"
 
 # 3. Copy into assets/icons-ios/ (the help-center repo's pool, shared cross-articles)
 # SVG (best for HTML embedding):
-cp /Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/<name>.imageset/<name>.svg \
+cp "$JAMBLE_IOS_ROOT/RESOURCES/Assets.xcassets/<name>.imageset/<name>.svg" \
    assets/icons-ios/<name>.svg
 
 # PNG:
-cp /Users/aymardumoulin/Projects/Jamble-iOS/Jamble/RESOURCES/Assets.xcassets/<name>.imageset/*.png \
+cp "$JAMBLE_IOS_ROOT/RESOURCES/Assets.xcassets/<name>.imageset/"*.png \
    assets/icons-ios/<name>.png
 
 # PDF: iOS template assets, rendered with tint at runtime. sips/qlmanage/pdftoppm
