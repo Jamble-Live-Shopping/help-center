@@ -21,7 +21,8 @@ content_contract:
   must_answer:
     - "what a battle is and how it differs from a regular show"
     - "how to start a battle and pick a duration"
-    - "how the progress bar and scoring work"
+    - "the weekly battle window shown in the live menu"
+    - "how teams and scoring work"
     - "what happens when the battle ends"
   forbidden_terms:
     - "regex:\\bauction\\b"
@@ -32,18 +33,14 @@ content_contract:
 
 mockup_plan:
   required: true
+  # Wave 2 (2026-10-14): battle-duration-picker, battle-progress-bar and
+  # battle-ended were removed from the article. They showed tier-based
+  # durations/reward amounts (only some sellers) and progress-bar text that
+  # the iOS 5.10.1 bar does not have. battle-welcome still matches
+  # ShowBattleWelcomeView.swift.
   screens:
     - name: battle-welcome
       purpose: "Show the welcome / start screen for a battle"
-      source: ios_required
-    - name: battle-duration-picker
-      purpose: "Show the duration picker the host taps before starting"
-      source: ios_required
-    - name: battle-progress-bar
-      purpose: "Show the live progress bar with team scores"
-      source: ios_required
-    - name: battle-ended
-      purpose: "Show the end-of-battle screen revealing the winner"
       source: ios_required
 
 icons_required: []

@@ -12,7 +12,7 @@ last_sync: 2026-05-11T00:00:00Z
 locales:
   pt-br:
     title: 'O que fazer se um pacote estiver atrasado'
-    description: 'Onde acompanhar o envio, quando falar com o vendedor e em que casos a Jamble reembolsa voce automaticamente.'
+    description: 'Prazo de envio estourado ou rastreio parado: o que conferir em Envios, como atualizar o rastreio e quando falar com o suporte.'
   en:
     title: 'What to Do If a Package Is Delayed'
-    description: 'Where to track shipping, when to message the seller, and the cases where Jamble refunds you automatically.'
+    description: 'Missed shipping deadline or stuck tracking: what to check in Envios, how to refresh tracking and when to contact support.'

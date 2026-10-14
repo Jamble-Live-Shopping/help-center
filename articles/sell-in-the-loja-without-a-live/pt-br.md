@@ -73,5 +73,5 @@ Não. Os anúncios da Loja ficam à venda o tempo todo, mesmo quando você não 
 **O comprador pode cancelar a compra?**
 Sim, enquanto você ainda não confirmou a venda. Depois da confirmação, o pedido segue para o envio.
 
-**Por que preciso confirmar as vendas da Loja e as da live não?**
-Na live, a venda acontece na hora, com você presente. Na Loja, a compra pode acontecer a qualquer momento, então você confirma que o produto está disponível antes de enviar.
+**As vendas da live também precisam de confirmação?**
+Sim, mas de outro jeito. As vendas da live são confirmadas todas juntas no painel da live, em **Confirmar Vendas**, depois que a live termina. Na Loja, a compra pode acontecer a qualquer momento, então você confirma ou recusa cada venda separadamente.

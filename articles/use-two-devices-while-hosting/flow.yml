@@ -1,6 +1,6 @@
 # Flow contract for use-two-devices-while-hosting.
 # Batch real-1-rerun-2 (PR #92, rule 10e calibration). v2 rewrite.
-# Source: iOS Jamble code (CloseRemoteButton + ShowAudienceVC + ShowHostVC + ShostHostV2VC).
+# Source: iOS Jamble code (CloseRemoteButton + ShowAudienceVC + ShowHostVC).
 #
 # See process/templates/article-flow.yml for field documentation.
 # See process/00-RUNBOOK.md for the canonical 8-phase workflow.
@@ -15,7 +15,6 @@ source_of_truth:
   ios_files:
     - LIVE_SHOPPING/Audience/View/ShowAudienceViewController.swift
     - LIVE_SHOPPING/Host/View/ShowHostViewController.swift
-    - LIVE_SHOPPING/HostV2/ShostHostV2ViewController.swift
     - UTILS/COMPONENTS/Buttons/CloseRemoteButton.swift
     - RESOURCES/Localizable.xcstrings
   backend_files: []
@@ -24,16 +23,15 @@ source_of_truth:
 
 content_contract:
   must_answer:
-    - "remote control mode"
-    - "offline jamble overlay"
-    - "iphones video camera while hosting"
+    - "Controle remoto"
+    - "Assumir transmissão"
+    - "Seller Hub"
   forbidden_terms:
     - "regex:\\bauction\\b"
     - "regex:\\bleil[aã]o\\b"
     - "Close Remote"
     - "Fechar Controle Remoto"
   must_not_say:
-    - "Android-specific UI states (no Android source audited in this article)"
     - "Invented button labels for the Close Remote control (it is icon-only)"
 
 mockup_plan:

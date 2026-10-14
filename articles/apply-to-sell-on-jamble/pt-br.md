@@ -1,90 +1,88 @@
-# Solicitar para Vender na Jamble
+# Candidatar-se para Vender na Jamble
 
 ## O que você vai aprender
 
-Este guia explica como se inscrever para se tornar vendedor na Jamble, quais informações você precisa e o que esperar depois de enviar sua inscrição.
+Este guia explica como se candidatar para vender ao vivo na Jamble, o que esperar depois de enviar sua candidatura e o que fazer logo depois de ser aprovado.
 
 ## Antes de começar
 
 Você precisa de:
+
 - O app da Jamble instalado no celular
-- Uma conta na Jamble (conta de comprador já serve)
-- Estar no Brasil com um número de telefone brasileiro (+55)
-- Ter 18 anos ou mais
-- Fotos dos produtos que você quer vender (cartas Pokémon, Hot Wheels, colecionáveis)
+- Uma conta na Jamble (a sua conta de comprador já serve)
+- Morar no Brasil e ter um número de celular brasileiro (+55)
+- Ter 18 anos ou mais e um CPF válido
 
-## Encontre a inscrição no app
+## Onde encontrar a candidatura
 
-Existem três caminhos no app, todos abrem a mesma inscrição:
+A candidatura é feita pelo app:
 
-- **No seu perfil:** toque no botão **Inscreva-se como vendedor Live** ao lado das suas informações
-- **Nas configurações:** abra Configurações e toque em **Inscreva-se para entrar no ar** na seção IMPORTANTE
-- **Assistindo um show:** toque no menu e selecione **Inscreva-se para entrar no ar**
+- **No iPhone:** no seu perfil, toque em **Começar a Vender**. Você também encontra a opção em **Ajustes**, em **Inscreva-se para entrar no ar**
+- **No Android:** no seu perfil, toque em **Torne-se um Vendedor**
 
-![Configurações com seção IMPORTANTE e opção Inscreva-se para entrar no ar](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/apply-to-sell-on-jamble__configuracoes-menu__pt-br__v2.png)
+Os dois caminhos abrem o mesmo formulário. A candidatura não pode ser feita pelo Seller Hub no computador.
 
-## Preencha o formulário de inscrição
+## Preencha o formulário
 
-O formulário abre dentro do app e leva cerca de **5 minutos** para completar. Você passa por algumas páginas:
+O formulário abre dentro do app e leva poucos minutos. Ele pede, entre outras coisas:
 
-**Página 1: Diretrizes e verificação de idade**
-- Leia e confirme que você entende as Diretrizes da Comunidade da Jamble
-- Confirme que você tem 18 anos ou mais
+- Seus dados de contato
+- O que você quer vender (por exemplo, "cartas Pokémon TCG graduadas" ou "Hot Wheels Treasure Hunt")
+- Suas redes sociais, se tiver
 
-**Páginas seguintes:**
-- **Seu nome e informações de contato**
-- **O que você vende:** descreva os produtos (ex: "cartas Pokémon TCG graduadas PSA" ou "Hot Wheels Treasure Hunt e RLC")
-- **Suas redes sociais:** Instagram ou outros perfis onde você já vende ou mostra produtos
+Seja específico e use informações verdadeiras. Isso ajuda na análise.
 
-Seja o mais específico possível. A equipe analisa cada inscrição pessoalmente, e dados claros aceleram a aprovação. Enviar informações pessoais erradas ou fotos aleatórias leva à rejeição.
+## Aguarde a resposta
 
-## Aguarde a análise
+Na maioria dos casos, a resposta é rápida, mas pode levar até 14 dias. Você recebe um aviso quando a candidatura for aprovada.
 
-Depois de enviar, sua inscrição é analisada pela equipe da Jamble. Nossa equipe pode levar até **14 dias** para dar uma decisão final.
+Enquanto a candidatura está em análise, no iPhone a opção em **Ajustes** aparece como **Vendedor ao vivo: inscrição em análise**. Se você tentar se candidatar de novo, o app mostra o aviso **Inscrição pendente**. Toque em **Ok, vou aguardar!** para fechar, ou em **Entre em contato** para falar com a gente.
 
-Enquanto sua inscrição está em análise, por favor não se inscreva novamente nem entre em contato com o suporte sobre o status. Se você tentar abrir uma nova inscrição, o app mostra esta mensagem:
+## E se eu não for aprovado?
 
-![Alerta Aplicativo pendente com botões Entre em contato e Ok, vou aguardar!](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/apply-to-sell-on-jamble__pending-application__pt-br__v2.png)
+A Jamble não envia o motivo quando uma candidatura não é aprovada. Se você não recebeu a aprovação depois de 14 dias, fale com a gente pelo chat do app para saber os próximos passos.
 
-Para qualquer outra dúvida enquanto espera, toque em **Entre em contato** no alerta ou abra o chat do app.
+## Depois da aprovação: prepare sua conta
 
-## Seja aprovado e comece a vender
+Quando sua candidatura é aprovada, sua conta ganha as ferramentas de vendedor. Antes da primeira live, complete estes passos:
 
-Quando sua inscrição for aprovada, você recebe uma notificação no app, um email e um SMS. Sua conta vira uma conta de vendedor e você ganha acesso a todas as ferramentas de vendedor.
+1. **Cadastre sua conta de recebimento.** Em **Ajustes** > **Minha carteira**, escolha CPF ou CNPJ e informe seus dados bancários. Seus ganhos são sacados por transferência bancária para essa conta e costumam chegar em até 5 dias úteis, dependendo do banco
+2. **Adicione seu endereço.** Ele é usado para os envios e é obrigatório para ir ao vivo
+3. **Configure seus envios.** Em **Ajustes** > **Preferências de envio**, escolha os serviços dos Correios que você oferece
+4. **Agende sua primeira live** e adicione seus produtos
 
-**O que fazer logo depois da aprovação:**
-1. Adicionar seus dados bancários para receber pagamentos via PIX
-2. Adicionar seu endereço de envio para poder ir ao vivo
-3. Agendar sua primeira Live
-4. Listar produtos na sua Live
+Se faltar alguma informação quando você tentar iniciar uma live ou o modo de prática, o app mostra o que precisa ser completado.
 
-## Dicas para aumentar a chance de aprovação
+## Use também o Seller Hub
 
-- **Você tem no máximo 2 inscrições.** Se a primeira for recusada, você pode se inscrever mais uma vez. Melhore a inscrição com base no feedback antes de reenviar
-- **Seja específico sobre o que você vende.** "Colecionáveis" é vago. "Cartas Pokémon TCG seladas e graduadas PSA 9-10" mostra que você conhece o nicho
-- **Inclua boas fotos dos produtos.** Fotos claras e bem iluminadas de produtos reais que você tem no estoque tornam a inscrição muito mais forte
-- **Configure pagamento e envio logo depois da aprovação.** O erro mais comum de vendedor novo é ir ao vivo sem os dados bancários e endereço prontos. Isso atrasa seus ganhos
+Depois de aprovado, você também pode vender pelo computador no Seller Hub, em jamble.com/seller/dashboard. Entre com o mesmo telefone (ou a mesma conta Google ou Apple) que você usa no app. Lá você cria produtos, agenda e faz lives, imprime etiquetas e acompanha sua carteira. [Veja como usar o Seller Hub](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/17588489).
+
+## Dicas importantes
+
+- **Seja específico sobre o que você vende.** "Colecionáveis" é vago. "Pokémon TCG selado e cartas graduadas" mostra que você conhece o seu nicho
+- **Use dados verdadeiros.** Nome, contato e redes sociais reais ajudam na análise
+- **Prepare pagamento e envio logo depois da aprovação.** Sem conta de recebimento e endereço, você não consegue fazer sua primeira live
 
 ## Perguntas frequentes
 
 **Quanto tempo leva a análise?**
-Até 14 dias. Você será notificado via app, email e SMS quando sua inscrição for aprovada.
+Na maioria dos casos, a resposta é rápida, mas pode levar até 14 dias. Você recebe um aviso quando for aprovado.
 
-**E se minha inscrição for recusada?**
-Você pode se inscrever mais uma vez (máximo de 2 inscrições no total). Aproveite para melhorar: fotos melhores, descrição mais clara do nicho, presença ativa nas redes sociais.
+**Por que minha candidatura não foi aprovada?**
+A Jamble não envia o motivo. Fale com a gente pelo chat do app para saber os próximos passos.
 
-**Posso me inscrever de fora do Brasil?**
-Não. A Jamble opera exclusivamente no Brasil. Você precisa estar no Brasil com um número de telefone brasileiro.
+**Posso me candidatar de fora do Brasil?**
+Não. A Jamble funciona no Brasil, e você precisa de um número de celular brasileiro.
 
-**Preciso ter produtos listados antes de me inscrever?**
-Não, mas precisa das fotos dos produtos que planeja vender. A equipe quer ver que tipo de itens você vai oferecer.
+**Posso me candidatar pelo computador?**
+Não. A candidatura é feita pelo app. Depois de aprovado, você pode usar o Seller Hub no computador.
 
 **Existe idade mínima para vender?**
 Sim, 18 anos ou mais.
 
-**Posso acelerar minha inscrição?**
-Não. Contatar o suporte não acelera a decisão. Complete a inscrição com informações detalhadas e fotos claras para que a análise seja mais rápida.
+**Como eu recebo meus ganhos?**
+Depois que o pedido é concluído e o pagamento é liberado, o valor fica disponível na sua carteira. Você faz o saque por transferência bancária para a conta cadastrada. [Veja como você recebe seus ganhos](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288155).
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app.

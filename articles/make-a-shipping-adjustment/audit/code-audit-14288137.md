@@ -75,3 +75,20 @@ Strings cross-referenced with `Jamble/RESOURCES/Localizable.xcstrings`.
 ## Open MISMATCH count: 0
 
 All article claims verified against Swift source. One risk flag carried as `resolved_decision` in flow.yml (the dead `ChangeShippingWeightViewController.swift` must trigger a re-audit if any future PR wires it back into a coordinator).
+
+## Wave 2 re-audit (2026-10-14)
+
+Sources: iOS tag 5.10.1, Android tag v5.10.0, jamble_backend origin/main (291e133b5), Jamble-Website origin/main. The absorbed article change-or-fix-your-shipping-label (14288144) was merged into this one.
+
+| Claim | Evidence |
+|---|---|
+| Bundle actions are Adicionar NF / Isentar NF / Ver NFe / Adicionar Etiqueta / Ver Etiqueta, no edit or cancel label action | `jamble_backend/src/schemas/sale_actions.py:226,232,240,249,257` |
+| Live dashboard can resend labels by email (Reenviar Etiquetas de Envio) | `jamble_backend/src/schemas/sale_actions.py:458` |
+| Label uses the seller's default (preferred) address at purchase time | `jamble_backend/src/services/shipping_service.py:979,1658` (`get_preferred_address`) |
+| Preferências de envio sections (Serviços de transporte, Tipo de arquivo da etiqueta) and the "próximas etiquetas" alert | `jamble_backend/src/schemas/shipping_settings.py:48,60,107` |
+| Address entry points: Ajustes > Endereços de remessa (iOS), Endereços de Entrega (Android), Seller Hub Envios > Endereços; "Definir como padrão" | iOS `PROFILE/ProfileSettings/ProfileSettingsV2ViewController.swift:39`, xcstrings `Shipping addresses`, `Set as default`; Android `features/settings/.../values-pt/strings.xml` `button_shipping_addresses`; Website `src/lib/i18n/messages/console.ts` `shippingAddresses`, `shipping.ts` `setAsDefault` |
+| External tracking entry is unreachable | iOS 5.10.1 `ShippingDocumentsViewController(type: .nfe, ...)` is the only instantiation (`LIVE_SHOPPING/DashboardHost/DasboardHostCoordinator.swift:66`, `PROFILE/ProfileSettings/Shipments/ShipmentsCoordinator.swift:37`) |
+| Weight change screen still dead | `TRANSACTION/Sale/ChangeShippingWeightViewController.swift` has no call site in 5.10.1 (only its declaration and pbxproj) |
+| Seller can cancel with Cancelar venda | xcstrings `Cancel Sale` = `Cancelar venda` |
+
+Mockups screen-1 and screen-2 were removed: screen-1 header and state field labels no longer match 5.10.1 ("Editar Endereço de Entrega", "Código do Estado (ex. SP)"), screen-2 showed a "$" amount in pt-BR.

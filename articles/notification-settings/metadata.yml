@@ -12,7 +12,7 @@ last_sync: 2026-04-16T00:00:00Z
 locales:
   pt-br:
     title: 'Configurações de Notificações'
-    description: ''
+    description: 'Escolha quais notificações da Jamble você recebe: promoções, atividade, lives e transações, ajustadas em cada celular.'
   en:
     title: 'Notification Settings'
-    description: 'This guide explains how to manage your push notification preferences on Jamble. You can choose exactly which notifications you want to receive, so you stay informed about what matters most without being overwhelmed.'
+    description: 'Choose which Jamble notifications you get: promotions, activity, lives and transactions, set on each phone.'

@@ -59,7 +59,7 @@ Quando o cronômetro chega a zero:
 
 - A oferta mais alta vence
 - O comprador vencedor tem alguns minutos para concluir o pagamento, no Pix ou no cartão
-- A venda aparece na sua lista de vendas, já confirmada
+- A venda aparece na sua lista de vendas. Depois que a live termina, você confirma as vendas no painel da live, em **Confirmar Vendas**, dentro do tempo mostrado ali
 
 Se o pagamento não for concluído a tempo, a venda é cancelada e você pode colocar o produto à venda de novo. Se ninguém ofertar, o produto fica sem vender e pode ser iniciado de novo depois.
 

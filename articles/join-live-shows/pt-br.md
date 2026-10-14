@@ -1,40 +1,52 @@
-## Como entrar em uma live:
+# Como entrar em uma live?
 
-- Abra o aplicativo Jamble
-- Na página inicial:
-   - Veja as lives em andamento no topo da tela
-      - identificação **“Ao vivo”** com o número de espectadores quando a live já começou
-   - Role a tela para ver as próximas lives
-      - indicação de dia e horário informando quando a live começará
-- Toque na capa da live para entrar
-- Assista à transmissão ao vivo e interaja em tempo real pelo chat
+As lives são o coração da Jamble. Nelas, o vendedor mostra os produtos ao vivo e você pode conversar, fazer ofertas e comprar na hora.
 
----
+## O que você vai aprender
 
-## Durante uma live, você pode:
+- Como encontrar e entrar em uma live
+- O que você pode fazer durante a live
+- Como funcionam as compras na live
 
-- Enviar ofertas quando as vendas dos produtos começarem
-- Ver as confirmações de compra de outros usuários
-   - a maior oferta enviada antes do fim do tempo definido garante o produto
-   - para ofertas do tipo **“compre agora”**, não há contagem de tempo: vale a ordem de chegada
-- Enviar mensagens no chat para conversar com outros espectadores e com o vendedor
-- Acessar a loja para visualizar os próximos produtos listados para venda
-- Reagir usando as interações do app, acessíveis pelo ícone de **Gems** no canto inferior direito
-- Ativar legendas da live
+## Como entrar em uma live
+
+1. Abra o app Jamble.
+2. Na página inicial, veja as lives que estão acontecendo agora, com a indicação **Ao vivo**.
+3. Role a tela para ver as próximas lives, com o dia e o horário de início.
+4. Toque na capa da live para entrar.
+
+Você também pode usar a busca para encontrar um vendedor e entrar na live pela página dele.
+
+## Durante a live, você pode
+
+- Conversar com o vendedor e com outros compradores pelo chat
+- Ver os produtos que vão ser vendidos na live
+- Fazer ofertas ou comprar quando a venda de um produto começar
+- Enviar stickers usando gems, para apoiar o vendedor
+- Participar das batalhas, quando o vendedor fizer uma, comprando ou enviando gems para o seu time
 - Compartilhar a live com amigos
-- Resgatar um código
-- Acessar a Central de Ajuda
-- Reportar um problema técnico
-- Participar de batalhas, comprar produtos e enviar stickers para ganhar pontos
-- Coletar recompensas (quando aplicável)
-- Gerenciar métodos de pagamento e endereços de entrega em **“dados de cobrança”**
+- Denunciar um problema na live
 
----
+## Como funcionam as compras na live
 
-## Informações importantes:
+O vendedor escolhe o tipo de venda de cada produto:
 
-- As ofertas e compras são finais para garantir uma experiência justa para todos os participantes
-- Para produtos de **pack opening**, o comprador pode escolher suas preferências:
-   - **abrir o pack** → não há cancelamentos nem reembolsos
-   - **não abrir o pack** → cancelamentos e reembolsos podem ser aplicáveis, dependendo do contexto
-- Algumas lives podem ter condições específicas, que serão informadas pelo vendedor durante a transmissão
+- **Ofertas em Tempo Real:** os compradores enviam ofertas até o tempo acabar. Se uma oferta chega nos últimos segundos, o cronômetro volta para alguns segundos
+- **Morte Súbita:** funciona como as ofertas em tempo real, mas o cronômetro não muda. Quando chega a zero, a venda acaba
+- **Comprar Agora:** preço fixo. Quem comprar primeiro leva
+
+Vence quem tiver a maior oferta quando o tempo acabar. Depois de ganhar, você tem alguns minutos para pagar, no cartão ou no Pix. Veja todos os detalhes em [Como Comprar?](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/10870621).
+
+## Itens que podem ser abertos na live
+
+Em produtos como pacotes de cartas, o app pergunta, depois do pagamento, se você permite que o vendedor abra o item na live. O app mostra o que muda quando o item é aberto antes de você escolher. Se você não responder, o item fica lacrado e é enviado assim.
+
+## Dicas importantes
+
+- Para fazer ofertas, sua conta precisa estar pronta para comprar, com CPF, endereço e forma de pagamento. Veja [Como configurar sua conta para comprar?](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/10373403)
+- Uma oferta enviada é um compromisso de compra. Se você ganhar, faça o pagamento a tempo
+- Alguns vendedores informam condições específicas durante a live. Fique atento ao que o vendedor diz e às informações do produto
+
+## Precisa de ajuda?
+
+Fale com a gente pelo chat do app.

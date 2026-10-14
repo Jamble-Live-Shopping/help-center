@@ -2,102 +2,80 @@
 
 ## O que você vai aprender
 
-Como manter seu perfil público de vendedor atualizado na Jamble. Seu perfil é a primeira coisa que compradores veem na sua loja e nos seus shows. Uma foto clara, um nome de usuário memorável e uma bio específica ajudam a gerar confiança e atrair mais espectadores.
+Como manter seu perfil público atualizado na Jamble, pelo app ou pelo Seller Hub. Seu perfil é a primeira coisa que os compradores veem nas suas lives e na sua Loja. Uma foto clara, um nome fácil de lembrar e uma bio específica ajudam a gerar confiança.
 
 ## Antes de começar
 
 Você precisa de:
+
 - Uma conta Jamble ativa
-- O app da Jamble instalado no seu celular
+- O app da Jamble instalado no celular, ou acesso ao Seller Hub no computador se você é vendedor aprovado
 
-## O que é o seu perfil público
+## O que faz parte do seu perfil público
 
-O seu perfil público tem quatro elementos, todos editáveis na tela **Meu perfil**:
+Você pode editar quatro informações:
 
-- **Foto do perfil** - a imagem circular exibida no seu show, nos resultados de busca e no seu perfil
-- **Nome de usuário** - seu identificador único na Jamble, no formato @seunomeusuario
-- **Nome** - o nome exibido no seu perfil e durante os shows (pode ser diferente do nome de usuário)
-- **Bio** - uma descrição curta que conta aos compradores o que você vende
+- **Foto:** a imagem redonda que aparece no seu perfil, nas suas lives e nas buscas
+- **Nome:** o nome exibido no seu perfil e nas suas lives
+- **Nome de usuário:** seu identificador único na Jamble, no formato @seunome
+- **Bio:** uma descrição curta do que você vende
 
-![Perfil do vendedor com foto, nome, nome de usuário e bio, com o ícone de editar sobre a foto](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/edit-your-seller-profile__profile-view__pt-br.png)
+## Editar pelo app
 
-## Passo 1: Abrir o editor de perfil
+1. Abra **Ajustes** e toque em **Editar meu perfil** (você também pode abrir a edição direto pelo seu perfil)
+2. A tela **Meu perfil** abre
+3. Toque na foto para escolher uma nova imagem da galeria
+4. Atualize **Nome**, **Nome de usuário** e **Bio**
+5. Toque em **Salvar**
 
-Vá até seu perfil e toque no **ícone de lápis** sobre a foto. Isso abre a tela **Meu perfil**, onde você pode editar tudo de uma vez.
+Se o nome de usuário já estiver em uso, o app mostra o aviso **Já utilizado**. Toque em **Escolherei outro** e tente uma variação.
 
-## Passo 2: Mudar sua foto
+## Editar pelo Seller Hub
 
-Toque na foto (ou em **Mudar foto**) para trocar a imagem. Você pode:
-- Escolher uma foto da galeria do celular
-- Recortar a imagem no formato circular
+No computador, entre no Seller Hub em jamble.com/seller/dashboard e abra **Meu Perfil**. Lá você troca a foto (**Trocar foto**), o **Nome**, o **Nome de usuário** e a **Bio**, vê uma prévia de como seu perfil aparece e toca em **Salvar**. As mudanças valem no app e no site. [Veja como usar o Seller Hub](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/17588489).
 
-Use uma foto sua ou o logo da sua marca. Evite a imagem padrão cinza: shows com foto reconhecível atraem mais espectadores.
+## Regras para cada campo
 
-## Passo 3: Atualizar seu nome de usuário
+O app e o Seller Hub avisam quando algo não pode ser salvo. As regras principais são:
 
-Seu **nome de usuário** (@seunomeusuario) é único na Jamble e aparece no seu perfil, nos shows e nos seus links de indicação.
+- **Nome de usuário:** de 3 a 15 caracteres, só letras, números e _. Alguns nomes não são permitidos, por exemplo os que usam a palavra jamble. Ele só pode ser alterado a cada 14 dias
+- **Nome:** até 20 caracteres. Ele só pode ser alterado a cada 7 dias
+- **Bio:** até 200 caracteres. Bios com contatos de fora do app ou conteúdo impróprio podem não ser aceitas
+- **Foto:** use uma imagem em JPG, PNG ou WEBP. No Seller Hub, a imagem precisa ter menos de 5 MB
 
-Regras:
-- **3 a 15 caracteres**
-- Apenas letras (a-z), números (0-9) e underscores (_)
-- Sem caracteres especiais e sem a palavra **jamble**
-- Deve estar livre. Se alguém já estiver usando, você verá **"Nome de usuário inválido! Por favor, tente outro..."**
-- **Você só pode mudar o nome de usuário uma vez a cada 14 dias**
+## Exemplos de bio
 
-Dica: mantenha o nome de usuário estável. Mudar com frequência confunde seus compradores recorrentes.
+- "Pokémon TCG selado e cartas graduadas | SP"
+- "Hot Wheels e Mini GT para colecionadores"
+- "One Piece e Lorcana, lives toda noite"
+- "Funko Pop! e action figures raros"
 
-## Passo 4: Atualizar seu nome
+Diga o que você vende e o que torna sua loja especial, em uma ou duas frases.
 
-Seu **Nome** é o nome exibido no perfil e durante os shows. Pode ser diferente do nome de usuário. Por exemplo: nome de usuário **@sneakerking**, nome **João | Sneakers SP**.
+## Dicas importantes
 
-- Máximo de **20 caracteres**
-- Pode ser alterado uma vez a cada **7 dias**
-
-## Passo 5: Escrever sua bio
-
-Sua bio é uma descrição curta que diz ao comprador o que você vende e o que torna sua loja especial.
-
-- Máximo de **200 caracteres**
-- Uma ou duas frases é o ideal
-- Seja concreto e específico
-
-Bons exemplos:
-- "Streetwear vintage e importados | SP"
-- "Tênis originais com preço justo"
-- "Colecionáveis TCG | Pokémon, Magic, Yu-Gi-Oh!"
-
-![Formulário Meu perfil com campos Nome de usuário, Nome e Bio, botão Salvar na parte inferior](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/edit-your-seller-profile__profile-edit-form__pt-br.png)
-
-## Passo 6: Salvar
-
-Toque em **Salvar** na parte inferior da tela. O botão só fica ativo depois que você faz pelo menos uma alteração. Isso evita salvamentos acidentais.
-
-Pronto. Suas mudanças já aparecem no seu perfil público e nos próximos shows.
-
-## Dicas rápidas
-
-- **Foto importa.** Shows com vendedor reconhecível atraem mais espectadores. Não fique com a foto padrão
-- **Nome de usuário estável.** Troque com moderação para não perder quem já segue sua loja
-- **Bio vende você.** Pense como uma apresentação de uma linha: o que você vende e o que faz diferente
-- **Revise antes de salvar.** Nome de usuário trava por 14 dias, nome por 7 dias
+- **A foto importa.** Use uma foto sua ou o logo da sua loja. Um perfil sem foto passa menos confiança
+- **Mantenha o nome de usuário estável.** Trocar com frequência confunde quem já compra com você, e a troca só é liberada a cada 14 dias
+- **Revise antes de salvar.** Nome e nome de usuário ficam travados por um tempo depois da mudança
+- **Não coloque telefone, WhatsApp ou links na bio.** Compras e conversas acontecem dentro da Jamble
 
 ## Perguntas frequentes
 
 **Posso mudar meu nome de usuário a qualquer momento?**
-Pode mudar uma vez a cada 14 dias. Se tentar antes disso, o app bloqueia a alteração.
+Não. O nome de usuário só pode ser alterado a cada 14 dias. Se tentar antes, o app avisa.
 
-**Por que recebi "Nome de usuário inválido! Por favor, tente outro..."?**
-Significa que alguém já está usando esse nome. Tente uma variação: adicione um número, um underscore ou um detalhe regional.
+**Por que meu nome de usuário não foi aceito?**
+Ele pode já estar em uso, ter caracteres não permitidos ou estar fora do tamanho permitido. Tente uma variação com números ou _.
 
 **Tem limite de caracteres na bio?**
-Sim, **200 caracteres**. Mantenha curto: uma ou duas frases é o ideal.
+Sim, até 200 caracteres.
 
-**Posso ficar sem foto de perfil?**
-Tecnicamente sim, mas não recomendamos. Perfil sem foto passa menos confiança e gera menos visualizações nos seus shows.
+**Onde edito meu e-mail, telefone ou CPF?**
+Esses dados ficam em **Ajustes** > **Informações Pessoais**. Eles são privados e não aparecem no seu perfil público.
 
-**Onde edito meu email, telefone ou CPF?**
-Esses dados ficam em outra tela, em **Ajustes > Informações Pessoais**. O perfil público (foto, nome de usuário, nome, bio) e as informações pessoais (email, telefone, CPF) são separados. Compradores só veem o perfil público.
+**As mudanças feitas no Seller Hub aparecem no app?**
+Sim. O perfil é o mesmo no app e no site.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app.

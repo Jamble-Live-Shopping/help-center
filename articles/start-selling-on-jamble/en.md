@@ -21,8 +21,10 @@ This guide takes you through each step to become a seller on Jamble, from downlo
 You need:
 
 - A smartphone (iPhone or Android) with the Jamble app installed. Once approved, you can also use a computer, with the Seller Hub
-- A valid CPF
-- A bank account in your name or in your company's name
+- To live in Brazil and have a Brazilian mobile number (+55). Jamble only operates in Brazil, and all buyers are in Brazil too
+- To be 18 or older and have a valid CPF
+- A Brazilian bank account in your name (CPF) or in your company's name (CNPJ)
+- An address in Brazil for shipping
 - Products you want to sell (collectibles like Pokémon TCG, Hot Wheels, One Piece TCG, Magic)
 
 ## Step 1: Download the app and create your account {#passo-1}
@@ -41,7 +43,7 @@ That's it, your buyer account is created. Now you need to apply to sell live.
 
 ## Step 2: Apply to sell live {#passo-2}
 
-On your profile, tap **Candidate-se para vender ao vivo** (apply to sell live) to open the form. It takes about 5 minutes and asks for:
+On your profile, tap **Começar a Vender** (Start selling, on iPhone) or **Torne-se um Vendedor** (Become a seller, on Android) to open the form. It takes about 5 minutes and asks for:
 
 - Your name and contact details
 - What you sell (Pokémon TCG, Hot Wheels, One Piece TCG, etc.)
@@ -71,6 +73,8 @@ Then choose the registration type:
 - **CNPJ**, if you sell as a company
 
 You will enter your personal and bank details (bank, branch, account number and type). You may be asked for an identity verification. If so, follow the on-screen instructions.
+
+The bank account must be Brazilian and in the same name as your registration: your name if you use a CPF, or the company's name if you use a CNPJ. Details that do not match make the withdrawal fail.
 
 **Important:** check all the information before saving. If you need to switch between CPF and CNPJ later, use **Mudar de entidade (CPF/CNPJ)** in your wallet.
 
@@ -136,7 +140,7 @@ You do not need to show your face. Many sellers point the camera only at the pro
 
 ## Step 9: Ship your orders and withdraw your earnings {#passo-9}
 
-Sales made in a live arrive already confirmed. As soon as the live ends, you see a dashboard with all the packages to ship. You also find your packages under **Envios** (shipments), in the app and in the Seller Hub. **Loja** sales need to be confirmed by you within the time shown in the app.
+As soon as the live ends, tap **Meu painel de controle** (My dashboard) to see the live dashboard, with all the sales and packages. Confirm the sales with **Confirmar Vendas** (Confirm sales) within the time shown on the dashboard. Only then can you buy the labels. If you do not confirm in time, the sales are cancelled and the buyers are refunded. You also find your packages under **Envios** (shipments), in the app and in the Seller Hub. **Loja** sales need to be confirmed by you within the time shown in the app.
 
 The shipping deadline is usually about 10 days after the sale is confirmed. In exceptional situations, such as a Correios strike, it can be extended to up to 20 days. The exact deadline always shows on the order, under **Prazo de envio**.
 
@@ -179,6 +183,12 @@ No. You can sell in the **Loja**, with listings that are for sale at any time, a
 
 **Do I need special equipment?**
 No. Your smartphone is enough. Good lighting helps, so sell near a window or use a lamp. A phone stand or tripod makes it easier to show your products.
+
+**Can I sell from outside Brazil?**
+No. Jamble only operates in Brazil. You need a Brazilian mobile number, a CPF, a Brazilian bank account and an address in Brazil.
+
+**In which currency do I sell and get paid?**
+In Brazilian reais. Prices, shipping, earnings and withdrawals are always in reais.
 
 **How much does Jamble charge?**
 Jamble's standard commission is 10% of the price of the product sold. The payment processing fee is paid by the buyer.

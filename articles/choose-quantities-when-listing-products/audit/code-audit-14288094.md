@@ -1,5 +1,23 @@
 # Code audit, article 14288094 (Choose Quantities When Listing Products)
 
+## 2026-10-14 wave 2 rewrite (supersedes the tables below)
+
+Sources: iOS tag `5.10.1`, Android tag `v5.10.0`, `jamble_backend` origin/main (291e133b5), Jamble-Website origin/main. The product form is now server-driven on all clients (`get_product_edition_fields`), so the old `CreateProductQuantityCell` / pre-bid error toast rows below are historical.
+
+| Claim in article | Code says | Source file | Status |
+|---|---|---|---|
+| Field **Quantidade**, starts at 1, min 1, a max exists and disables **+** | `key="available_count"`, `title=Localized(en="Quantity", pt="Quantidade")`, `min_value=1`, `max_value=1000`; `+` button `.disabled(quantity >= range.upperBound)`; no text shows the max | jamble_backend `src/services/product_service.py` (get_product_edition_fields, available_count field); iOS `PRODUCT/Views/SwiftUI/Components/CreateProductQuantitySectionView.swift` | MATCH (number kept out of the article, code-only value) |
+| **Lote** toggle with description "Várias unidades idênticas vendidas como um único anúncio" | `key="is_bundle"`, `title=Localized(en="Bundle", pt="Lote")`, description pt as quoted | `src/services/product_service.py` | MATCH |
+| **Unidades do lote** appears when Lote is on, starts at 2 | `bundle_count` field only if `selection.get("is_bundle")`, default 2, `min_value=2` | `src/services/product_service.py` | MATCH |
+| Shipping counts every bundle unit | comment + `resolve_item_units` unfolds bundle_count x quantity | `src/entities/item_spec.py` (resolve_item_units) | MATCH (stated generally) |
+| **Ativar pré-ofertas** only for live products, Ofertas em Tempo Real / Morte Súbita, quantity 1; disappears when quantity > 1 | `is_prebid_enabled` only kept when `show` and type in `[auction, sudden_death]` and `available_count <= 1`, else popped; title `pt="Ativar pré-ofertas"` | `src/services/product_service.py` | MATCH |
+| Multi-unit purchase only for live Comprar Agora and Loja | `quantity_count > 1 and not (product.is_show_buy_it_now or (not product.is_show))` raises | `src/utils/purchase_intent_manager.py` (perform_product_availability_checks) | MATCH |
+| Buyer picks quantity at checkout / in cart, up to a limit shown | `quantity_rule` (min/max/is_editable); iOS stepper when `rule.max > rule.min`; cart row stepper | `src/schemas/cart.py`, `src/entities/purchase_intent.py`; iOS `LIVE_SHOPPING/Checkout/View/ShowCheckoutView.swift`, `CART/Views/CartItemRow.swift` | MATCH (limit value not stated) |
+| Timed sales: one unit per sale, seller starts the next one | no auto restart found; stock decremented per purchase (`product.available_count -= item.quantity`) | `src/services/purchase_intent_service.py` | MATCH (old "next unit starts automatically" claim removed) |
+| "3 restantes" | xcstrings `%lld left` -> pt-BR `%lld restantes` | iOS `RESOURCES/Localizable.xcstrings` | MATCH |
+
+Mockups removed: screen-1 (old stepper layout), screen-2/3 (pre-offer conflict + error toast that the server-driven form no longer shows).
+
 Last checked: 2026-05-11. Auditor: pipeline worker (batch real-1-rerun-2).
 
 ## 2026-05-11 patch summary (PR #96 review correction)

@@ -75,22 +75,19 @@ expected_fails:
     reason: "the unified settings-menu pair HTMLs do not exist yet (same legacy naming asymmetry)"
     removal_path: "Generate the settings-menu pt-br + en HTML mockup-sources in the cleanup PR"
   - rule: mockup_declared_not_in_pt
-    count: 1
-    contains: "settings-menu"
-    reason: "pt-br.md still embeds the legacy configuracoes-menu PNG, not the unified settings-menu name declared in this flow"
-    removal_path: "Update pt-br.md image link to settings-menu after the cleanup PR ships the unified pair"
-  - rule: mockup_declared_not_in_en
-    count: 1
-    contains: "settings-menu"
-    reason: "en.md still embeds settings-apply-to-sell PNG, not settings-menu"
-    removal_path: "Update en.md image link to settings-menu after the cleanup PR ships the unified pair"
-  - rule: mockup_referenced_not_declared
     count: 2
     contains:
-      - "configuracoes-menu"
-      - "settings-apply-to-sell"
-    reason: "pt-br.md references legacy 'configuracoes-menu' and en.md references legacy 'settings-apply-to-sell'; the unified flow declares only settings-menu"
-    removal_path: "Cleanup PR replaces both legacy embeds with the unified settings-menu pair"
+      - "pending-application"
+      - "settings-menu"
+    reason: "wave 2 (Oct 2026) removed both stale screenshots from pt-br.md; neither declared screen is embedded until the unified pair is rendered"
+    removal_path: "Update pt-br.md image link to settings-menu after the cleanup PR ships the unified pair"
+  - rule: mockup_declared_not_in_en
+    count: 2
+    contains:
+      - "pending-application"
+      - "settings-menu"
+    reason: "wave 2 (Oct 2026) removed both stale screenshots from en.md; neither declared screen is embedded until the unified pair is rendered"
+    removal_path: "Update en.md image link to settings-menu after the cleanup PR ships the unified pair"
   - rule: content_audit_missing_stale_feature
     count: 1
     contains: "stale-feature audit"

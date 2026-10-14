@@ -21,8 +21,10 @@ Este guia te acompanha em cada etapa para se tornar um vendedor na Jamble, desde
 Você precisa de:
 
 - Um smartphone (iPhone ou Android) com o app da Jamble instalado. Depois de aprovado, você também pode usar o computador, pelo Seller Hub
-- Um CPF válido
-- Uma conta bancária no seu nome ou no nome da sua empresa
+- Morar no Brasil e ter um número de celular brasileiro (+55). A Jamble funciona só no Brasil, e todos os compradores também estão no Brasil
+- Ter 18 anos ou mais e um CPF válido
+- Uma conta bancária brasileira no seu nome (CPF) ou no nome da sua empresa (CNPJ)
+- Um endereço no Brasil para os envios
 - Produtos que você quer vender (colecionáveis como Pokémon TCG, Hot Wheels, One Piece TCG, Magic)
 
 ## Passo 1: Baixe o app e crie sua conta {#passo-1}
@@ -41,7 +43,7 @@ Pronto, sua conta de comprador está criada. Agora você precisa pedir acesso co
 
 ## Passo 2: Candidate-se para vender ao vivo {#passo-2}
 
-No seu perfil, toque em **Candidate-se para vender ao vivo** para abrir o formulário. Ele leva cerca de 5 minutos e pergunta:
+No seu perfil, toque em **Começar a Vender** (no iPhone) ou **Torne-se um Vendedor** (no Android) para abrir o formulário. Ele leva cerca de 5 minutos e pergunta:
 
 - Seu nome e informações de contato
 - O que você vende (Pokémon TCG, Hot Wheels, One Piece TCG, etc.)
@@ -71,6 +73,8 @@ Depois, escolha o tipo de cadastro:
 - **CNPJ**, se você vende como empresa
 
 Você vai informar seus dados pessoais e bancários (banco, agência, número e tipo de conta). Pode ser pedida uma verificação de identidade. Nesse caso, siga as instruções na tela.
+
+A conta bancária precisa ser brasileira e estar no mesmo nome do cadastro: no seu nome, se você usa CPF, ou no nome da empresa, se você usa CNPJ. Dados que não batem fazem o saque falhar.
 
 **Importante:** confira todas as informações antes de salvar. Se precisar trocar entre CPF e CNPJ depois, use **Mudar de entidade (CPF/CNPJ)** na carteira.
 
@@ -136,7 +140,7 @@ Você não precisa mostrar o rosto. Muitos vendedores apontam a câmera só para
 
 ## Passo 9: Envie os pedidos e saque seus ganhos {#passo-9}
 
-As vendas feitas em live já chegam confirmadas. Assim que a live termina, você vê um painel com todos os pacotes para enviar. Você também encontra seus pacotes em **Envios**, no app e no Seller Hub. As vendas da **Loja** precisam ser confirmadas por você dentro do prazo mostrado no app.
+Assim que a live termina, toque em **Meu painel de controle** para ver o painel da live, com todas as vendas e pacotes. Confirme as vendas em **Confirmar Vendas** dentro do tempo mostrado no painel. Só depois disso você pode comprar as etiquetas. Se você não confirmar a tempo, as vendas são canceladas e os compradores são reembolsados. Você também encontra seus pacotes em **Envios**, no app e no Seller Hub. As vendas da **Loja** precisam ser confirmadas por você dentro do prazo mostrado no app.
 
 O prazo para enviar costuma ser de cerca de 10 dias depois que a venda é confirmada. Em situações excepcionais, como uma greve dos Correios, ele pode ser estendido para até 20 dias. O prazo exato aparece sempre no pedido, em **Prazo de envio**.
 
@@ -179,6 +183,12 @@ Não. Você pode vender na **Loja**, com anúncios que ficam à venda a qualquer
 
 **Preciso de equipamento especial?**
 Não. Seu smartphone já basta. Boa iluminação ajuda, venda perto de uma janela ou use uma luminária. Um suporte ou tripé para o celular facilita na hora de mostrar os produtos.
+
+**Posso vender de fora do Brasil?**
+Não. A Jamble funciona só no Brasil. Você precisa de um número de celular brasileiro, CPF, conta bancária brasileira e endereço no Brasil.
+
+**Em qual moeda eu vendo e recebo?**
+Em reais (R$). Preços, frete, ganhos e saques são sempre em R$.
 
 **Quanto a Jamble cobra?**
 A comissão padrão da Jamble é de 10% sobre o preço do produto vendido. A taxa de processamento do pagamento é paga pelo comprador.

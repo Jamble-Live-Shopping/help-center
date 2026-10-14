@@ -1,189 +1,146 @@
-# Ferramentas de Live, Tudo o Que Você Pode Fazer Enquanto Apresenta
+# Ferramentas da live
 
 ## O que você vai aprender
 
-Este guia cobre todas as ferramentas disponíveis para você enquanto apresenta um show ao vivo na Jamble. Você vai aprender o que cada botão faz, onde encontrá-lo na tela e como usar as ferramentas de forma eficaz durante seu show.
+Este guia reúne tudo o que você pode fazer na sua live, do momento em que abre a tela da live até o painel de vendas depois de encerrar: modo de prática, produtos, vendas, menu da live, encerramento e o painel **Sua Live**. Os recursos com artigo próprio (Live Duo, raid, dois dispositivos, batalhas e moderação) aparecem aqui em resumo, com o link para o guia completo.
 
 ## Antes de começar
 
 Você precisa de:
 - Uma conta de vendedor aprovada na Jamble
-- Um show agendado com produtos adicionados
-- Sua configuração de vendedor completa (envio, pagamento, email)
+- Uma live agendada. Veja [Agendar uma live](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288114)
+- Produtos adicionados à live, de preferência antes de começar
 
-## Visão geral da tela
+## Antes de entrar ao vivo
 
-Quando você está apresentando um show ao vivo, sua tela é organizada em seis áreas que você vai usar o tempo todo.
+Abra sua live agendada no seu perfil. Na tela da live você vê a contagem até o horário marcado e dois botões:
 
-![Tela do host com seis áreas numeradas: vendas em tempo real, câmera, timer, chat, barra de venda, barra inferior](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/livestream-tools-everything-you-can-do-while-hosting__screen-overview__pt-br__v2.png)
+- **Modo de prática** (no Android, **Modo Teste**): testa câmera, áudio e produtos sem ninguém ver. Para sair, use **Encerrar Modo Teste** no menu da live
+- **Iniciar Live**: abre a confirmação **Comece sua live**. Toque em **Sim, comece** para entrar ao vivo ou em **Mais tarde** para esperar
 
-A área **1 Vendas em tempo real** mostra o resumo do faturamento. A **2 Câmera** controla a transmissão e o convite Live Duo. O **3 Timer** aparece quando uma venda está rodando. O **4 Chat** mostra as mensagens da audiência. A **5 Barra de venda** mostra o produto ativo e o botão Iniciar. A **6 Barra inferior** tem o input de mensagem, o ícone da loja e o botão para adicionar produtos.
+Se o horário passar e você ainda não começou, a contagem avisa que é a última chance de entrar ou adiar. Se a live não chegar a começar, você pode escolher uma nova data na tela da live, em **Atrasado? Reviva esta Live**.
 
-Cada uma dessas áreas tem suas próprias ferramentas. Vamos passar por todas.
+## A tela da live
 
-## Controles de câmera
+Durante a live, você vê:
+- **Vendas em tempo real**: o resumo do que você já vendeu na live, com o total e o valor médio por item
+- **Contador de espectadores**: quantas pessoas estão assistindo. Toque para ver a lista
+- **Câmera**: alterne entre a câmera frontal e a traseira para mostrar seu rosto ou os produtos de perto
+- **Chat**: as mensagens da audiência. Você pode responder e mencionar alguém com **@**
+- **Produto em destaque**: o item que está à venda na tela, com o botão da venda
 
-### Virar a câmera
+As **Notas fixadas** que você escreveu ao agendar aparecem fixadas no chat para os espectadores. Durante a live elas não podem ser editadas.
 
-Toque no **ícone de câmera** no lado direito da tela para alternar entre a câmera frontal e traseira. Use quando quiser trocar de mostrar seu rosto para mostrar um produto de perto, ou vice-versa.
+## Produtos
 
-Não há controles de zoom, flash ou filtro de beleza no app. Se precisar de melhor iluminação, ajuste sua configuração física antes de ir ao vivo.
+### Abrir a lista de produtos
 
-## Lista de produtos
+![Tela Listagens com busca, abas Próximos, Não vendido e Vendido e produtos com o botão Iniciar](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/livestream-tools-everything-you-can-do-while-hosting__product-list-tabs__pt-br__v2.png)
 
-### Abrir o gerenciador de produtos
+Toque no ícone da loja para abrir **Listagens**. Os produtos ficam em três abas:
+- **Próximos**: ainda não vendidos
+- **Não vendido**: passaram por uma venda sem comprador
+- **Vendido**: já vendidos nesta live
 
-Toque no **ícone da loja** na parte inferior da tela para abrir seu gerenciador de produtos. Você verá três abas: **Próximos**, **Não vendido** e **Vendido**.
+Você pode buscar um produto em **Pesquisar uma listagem** e arrastar os itens para mudar a ordem.
 
-![Gerenciador de produtos com abas Próximos, Não vendido, Vendido e botões Fixar e Iniciar para cada item](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/livestream-tools-everything-you-can-do-while-hosting__product-list-tabs__pt-br__v2.png)
+### Adicionar produtos durante a live
 
-A aba **Próximos** lista os produtos que ainda não foram vendidos. **Não vendido** lista os produtos que passaram por uma venda mas não receberam ofertas. **Vendido** lista os produtos já vendidos durante o show.
+![Menu com as opções Nova listagem rápida, Clonar listagens de lives anteriores e Cancelar](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/livestream-tools-everything-you-can-do-while-hosting__add-products-sheet__pt-br__v3.png)
 
-Para cada produto você pode:
-- **Fixar**, toca para exibir o produto para a audiência. Apenas um produto pode estar fixado por vez
-- **Iniciar**, começa a venda do produto fixado, com timer de contagem regressiva
-- **Editar**, toca no ícone de engrenagem para editar os detalhes ou apagar
-- **Rerun**, para itens não vendidos ou já vendidos, toca para rodar a venda novamente
+Toque no botão **+** e escolha:
+- **Nova listagem rápida**: cria um produto sem sair da live
+- **Clonar listagens de lives anteriores**: traz produtos de uma live passada
 
-Você também pode arrastar e soltar produtos para reordená-los na sua fila.
-
-### Adicionar produtos durante o show
-
-Toque no **botão de adicionar (+)** na parte inferior da tela para criar ou clonar produtos sem sair da live.
-
-![Action sheet com as opções Nova listagem rápida e Clonar listagens de shows anteriores](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/livestream-tools-everything-you-can-do-while-hosting__add-products-sheet__pt-br__v2.png)
-
-A opção **Nova listagem rápida** cria um novo produto sem sair do show. **Clonar listagens de shows anteriores** importa produtos de um dos seus shows passados. Toque em **Cancelar** para voltar.
-
-### Pedidos de produtos
-
-Quando espectadores se interessam por um produto, podem levantar a mão para solicitá-lo. Você verá um **ícone de mão** com um badge mostrando quantos pedidos tem. Toque para ver quais produtos sua audiência quer ver, isso ajuda a priorizar o que vender em seguida.
-
-## Executando vendas
+## Vendas
 
 ### Iniciar uma venda
 
-Para iniciar uma venda de um produto:
+Na lista de produtos, use **Fixar** para colocar o item em destaque e **Iniciar** para começar a venda. O jeito de vender depende do modo escolhido no produto:
+- **Ofertas em Tempo Real**: os compradores fazem ofertas até o tempo acabar. Veja [Ofertas em tempo real](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288115)
+- **Morte Súbita**: igual às ofertas em tempo real, mas o tempo nunca é estendido
+- **Comprar Agora**: preço fixo, quem tocar primeiro compra. Veja [Comprar Agora](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288112)
+- **Venda relâmpago**: um item de Comprar Agora com desconto por pouco tempo. Veja [Vendas relâmpago](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288107)
 
-1. Abra sua lista de produtos pelo ícone da loja
-2. Toque em **Fixar** no produto que quer vender, o produto aparece na tela para sua audiência
-3. Toque em **Iniciar**, a venda começa com um timer de contagem regressiva
+Os compradores também podem deixar ofertas antes de a venda começar. Veja [Pré-ofertas](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288122).
 
-A barra de venda aparece na parte inferior mostrando o produto ativo, a oferta mais alta atual (para ofertas em tempo real) e botões de ação.
+### Uma venda na tela por vez
 
-### Botão de ação da venda
+Só uma venda fica em destaque na tela de cada vez. Enquanto uma venda de ofertas está rodando, espere ela terminar antes de fixar o próximo item.
 
-O botão principal na barra de venda muda dependendo do status da venda:
-- **Pronto para iniciar**, mostra **Iniciar** (varia por tipo de venda)
-- **Venda ativa**, mostra o número de ofertas ou itens vendidos
-- **Finalizando**, mostra **Acabamento...**
-- **Encerrada**, mostra **Reiniciar** se ainda tem estoque, ou **Próximo item**
+Um item de **Comprar Agora** com estoque continua disponível para compra mesmo depois que você coloca outro produto em destaque. Assim você pode deixar itens de preço fixo à venda enquanto apresenta o próximo.
 
-### Vendas em tempo real
+### Depois da venda
 
-No canto superior esquerdo da tela, você verá um **resumo de vendas em tempo real** com:
-- Total de vendas completadas
-- Receita total até agora (em R$)
-- Preço médio por item
+Quando a venda termina, o produto vai para **Vendido** ou **Não vendido**. Se ainda houver estoque, ou se o item não vendeu, use **Reprisar** para rodar a venda de novo.
 
-Esse resumo atualiza ao vivo conforme as vendas são completadas durante seu show.
+Se o comprador vencedor não pagar a tempo, a venda é cancelada e você pode reprisar o item.
 
-## Chat
+Se uma venda parecer travada em **Finalizando...**, abra o menu da live e toque em **Está preso? Desbloqueie!**.
 
-### Enviar mensagens
+## Menu da live
 
-Use a **entrada de chat** na parte inferior da tela para digitar mensagens para sua audiência. Você pode:
-- Digitar uma mensagem e enviar
-- **Mencionar (@)** um espectador tocando no botão @ e selecionando o nome
-- Usar **chips de mensagem rápida** ao começar seu show, mensagens pré-escritas para iniciar a conversa
+Toque no menu da live para ver as opções. Elas mudam conforme o momento da live:
+- **Encerrar Live**: termina a transmissão
+- **Configurações da Live**: ajustes de áudio, como a redução de ruído, e de câmera
+- **Iniciar Batalha**, **Batalha pronta** ou **Próxima batalha**: mostra quando você pode fazer sua batalha
+- **Está preso? Desbloqueie!**: aparece quando há uma venda em andamento e destrava uma venda parada
+- **Compartilhar**: envia o link da live
+- **Como receber?**: explica como você recebe pelas vendas
+- **Central de Ajuda** e **Reportar um bug**
 
-### Notas do show (mensagens fixadas)
+## Recursos com guia próprio
 
-Se você adicionou notas ao seu show durante a criação, elas aparecem automaticamente como uma **mensagem fixada** no chat quando os espectadores entram. As notas ficam visíveis por alguns segundos e depois desaparecem. Espectadores podem tocar no **botão Notas** para relê-las a qualquer momento durante o show.
+- **Live Duo**: convide alguém para aparecer na sua transmissão. Veja [Convidar um co-host (Live Duo)](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288117)
+- **Raid**: ao encerrar, envie seus espectadores para a live de outro vendedor. Veja [Fazer um raid na live de outro vendedor](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288118)
+- **Dois dispositivos**: use um segundo celular, ou o computador pelo Seller Hub, como controle remoto. Veja [Usar dois dispositivos durante a live](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288120)
+- **Batalhas**: uma competição por times dentro da sua live. Veja [Batalhas na sua live](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288121)
+- **Chat e moderação**: excluir mensagens, bloquear espectadores e escolher moderadores. Veja [Chat e moderação na sua live](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288119)
 
-## Menu de configurações do show
+## Encerrar a live
 
-### Abrir o menu
+Abra o menu da live e toque em **Encerrar Live**. Se uma batalha estiver em andamento, encerre a batalha primeiro.
 
-Toque no **menu de três pontos (...)** no canto superior direito da tela para acessar todas as configurações do show.
+Antes de fechar, o app oferece a opção de fazer um raid. Você pode escolher uma live ou encerrar sem raid.
 
-![Menu de configurações com opções Fim do Show, Comece a batalha, Como serei pago, Configurações de áudio, Está preso? Desbloqueie, Central de ajuda](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/livestream-tools-everything-you-can-do-while-hosting__show-settings-menu__pt-br__v2.png)
+A live também pode ser encerrada automaticamente se a transmissão ficar sem conexão por muito tempo ou se durar tempo demais. Se sua internet cair, volte para a live o quanto antes.
 
-As opções disponíveis são:
-- **Fim do Show**, encerra seu show ao vivo
-- **Comece a batalha! / Fim da batalha**, inicia ou encerra uma batalha com outro vendedor (se batalhas estiverem ativadas)
-- **Como serei pago?**, abre um guia explicando o processo de pagamento
-- **Configurações de áudio**, ajusta entrada e saída de som
-- **Está preso? Desbloqueie!**, botão de emergência se uma venda travar no estado **Acabamento...**
-- **Alguma dúvida, bug ou feedback?**, abre o canal direto com o suporte
-- **Central de ajuda**, abre a central de ajuda da Jamble
+Depois de encerrada, uma live não pode ser reiniciada. Para vender de novo, agende uma nova live.
 
-Toque em **Cancelar** para fechar o menu sem fazer nada.
+## Depois da live: o painel Sua Live
 
-### Encerrar seu show
+Ao encerrar, a tela **Obrigado por sua live** mostra o botão **Meu painel de controle**. Ele abre o painel **Sua Live**, que você também encontra depois ao abrir a live encerrada no seu perfil.
 
-Quando estiver pronto para finalizar, toque em **...** e depois em **Fim do Show**.
-
-Antes do show encerrar completamente, você terá a opção de fazer um **raid** no show de outro vendedor, isso envia sua audiência restante para o show ao vivo daquele vendedor. Você pode pular e simplesmente encerrar.
-
-Após encerrar, uma tela aparece com um link para seu **dashboard** onde você pode ver o resumo de desempenho do show.
-
-## Co-host (Live Duo)
-
-Você pode convidar outro usuário para aparecer na sua transmissão como convidado:
-
-1. Durante seu show ao vivo, toque no **ícone de câmera com (+)** no lado direito da tela
-2. Busque o usuário que quer convidar
-3. Ele aceita o convite e o vídeo dele aparece como uma pequena sobreposição picture-in-picture na sua transmissão
-
-Para remover um convidado, toque na foto de perfil dele no lado direito e confirme **Remove [nome] From Live Duo?**.
-
-## Usar dois dispositivos
-
-Você pode usar um segundo dispositivo para controlar seu show enquanto o primeiro cuida da câmera:
-
-1. Abra o mesmo show em um segundo dispositivo enquanto está ao vivo
-2. Você verá um pop-up **Controle remoto** com duas opções:
-   - **Use como um controle remoto**, o segundo dispositivo se torna um controle remoto. Você pode gerenciar produtos, chat e vendas sem tocar no dispositivo que transmite
-   - **Transmissão ao vivo a partir deste dispositivo**, o segundo dispositivo assume a transmissão de câmera
-
-O dispositivo remoto mostra o mesmo chat, produtos e controles de venda do dispositivo principal, mas sem transmitir vídeo.
-
-## Editar seu show
-
-Antes do show começar, ou depois de encerrar, você verá um **botão de edição** (ícone de lápis) na tela. Toque para:
-- **Editar**, abre o editor de show para mudar título, descrição, notas, data ou thumbnail
-- **Apagar**, remove permanentemente o show
-- **Atrasado? Reviva este Show**, se seu show encerrou sem começar (você perdeu o horário agendado), pode escolher nova data e hora. Esta opção fica disponível por até 5 dias após a data original
+No painel você vê o resumo da live (total vendido, valor depois das taxas, itens vendidos e compradores) e as vendas organizadas por comprador. Dali você prepara os envios e cria as etiquetas de cada pacote. Se alguma venda ainda precisar da sua confirmação, o painel mostra **Confirmar Vendas** e o prazo para confirmar.
 
 ## Dicas importantes
 
-- **Mantenha sua fila de produtos organizada.** Arraste os produtos na ordem que planeja vender. Transições suaves entre produtos mantêm sua audiência engajada
-- **Fique de olho nos pedidos de produtos.** Se vários espectadores estão solicitando o mesmo produto, considere vendê-lo em seguida, significa que há demanda
-- **Use o chat.** Cumprimente espectadores pelo nome, responda perguntas e gere expectativa antes de iniciar uma venda. Audiências engajadas fazem mais ofertas
-- **Não entre em pânico se uma venda travar.** Use a opção **Está preso? Desbloqueie!** no menu de configurações para resolver
-- **Considere fazer raid ao encerrar.** Enviar sua audiência para outro vendedor constrói comunidade e eles vão retribuir
+- **Pratique antes da primeira live.** Alguns minutos no modo de prática ajudam a conhecer os botões
+- **Organize a fila de produtos.** Deixe os itens na ordem em que vai vender para não perder ritmo
+- **Converse com o chat.** Cumprimente quem chega e responda às perguntas antes de iniciar cada venda
+- **Use internet estável.** Uma conexão ruim pode derrubar a transmissão
+- **Combine preço fixo e ofertas.** Deixe itens de Comprar Agora à venda enquanto apresenta os itens de ofertas
 
 ## Perguntas frequentes
 
-**Posso mutar meu microfone durante o show?**
-Não há um botão de mute na interface atual. Se precisar parar o áudio temporariamente, pode cobrir brevemente o microfone ou se afastar.
+**Posso adicionar produtos com a live em andamento?**
+Sim. Toque em **+** e crie uma **Nova listagem rápida** ou clone produtos de uma live anterior.
 
-**Como troco entre câmera frontal e traseira?**
-Toque no ícone de câmera no lado direito da tela. Cada toque alterna entre frente e trás.
+**Posso rodar duas vendas de ofertas ao mesmo tempo?**
+Não. Só uma venda fica em destaque por vez. Itens de **Comprar Agora** com estoque continuam disponíveis enquanto você apresenta outro produto.
 
-**Posso adicionar produtos enquanto estou ao vivo?**
-Sim. Toque no botão (+) na parte inferior para criar uma listagem rápida nova ou clonar produtos de um show anterior.
+**O que acontece se minha internet cair?**
+A live continua por um tempo esperando você voltar. Se a transmissão ficar sem conexão por muito tempo, a live é encerrada automaticamente.
 
-**O que acontece se minha internet cair durante o show?**
-O show pausa momentaneamente. Se você reconectar rápido, o show continua. Se a conexão for perdida por muito tempo, o show pode encerrar automaticamente.
+**Posso editar o título ou as notas durante a live?**
+Não. Essas informações só podem ser alteradas antes de a live começar.
 
-**Posso ter um convidado no meu show?**
-Sim. Toque no ícone de câmera com (+) no lado direito para convidar alguém para um Live Duo. O vídeo dele aparece como uma pequena sobreposição na sua transmissão.
+**Onde vejo o que vendi?**
+No painel **Sua Live**, pelo botão **Meu painel de controle** ao encerrar ou abrindo a live encerrada no seu perfil.
 
-**O que significa Raid no final de um show?**
-Quando você encerra seu show, pode escolher enviar seus espectadores restantes para o show ao vivo de outro vendedor. Isso se chama raid. Ajuda a comunidade e constrói relações entre vendedores.
+**Posso reiniciar uma live que encerrei?**
+Não. Agende uma nova live.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app.

@@ -2,92 +2,81 @@
 
 ## What you'll learn
 
-This guide explains how the Jamble rewards system works, how buyers earn and spend **Gems** during your shows, and how the monthly **Seller Ranking** rewards top sellers.
+This guide explains what **gems** are, how buyers earn and use gems in your lives, and how the **Ranking Mensal de Vendedores** (Monthly Seller Leaderboard) works.
 
-## Before you start
+## What gems are
 
-You need:
-- An approved seller account on Jamble
-- An understanding of how live shows work
+Gems are Jamble's way for buyers to show support. They have no cash value, they are not coupons and they do not turn into discounts. Buyers use them to send animated emojis during lives and show support to sellers.
 
-## How the rewards system works
+As a seller, you don't need to do anything to take part. It all happens automatically during your lives.
 
-Jamble has a rewards system that benefits both buyers and sellers at the same time:
+## How buyers earn gems
 
-1. **Buyers earn Gems** by watching shows and completing challenges
-2. **Buyers spend Gems** to send emojis during your live shows
-3. **Sellers earn ranking points** when buyers send Gems on their show
-4. **Top-ranked sellers** get more visibility on the platform
+Buyers earn gems by using the app. Everything is in the **Ganhos** (Rewards) tab:
 
-As a seller, you don't need to do anything special to participate. It happens automatically during your shows. Understanding the system helps you encourage your audience to engage.
+- **Watching lives**: in the **Assista e ganhe** (Watch & Earn) section, the app tracks the time watched during the day. Buyers just convert that time into gems before midnight
+- **Completing challenges**: the tab shows challenges and other actions that give gems, such as inviting friends
 
-## How buyers earn Gems
+The ways to earn gems can change over time. The available options always appear in the **Ganhos** (Rewards) tab.
 
-The Gems flow starts on the **Rewards** screen, inside the app. Buyers accumulate Gems for free by watching shows and completing challenges.
+## How buyers use gems in your live
 
-![Rewards screen with Watch and Earn and Get Free Gems button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/rewards-gems-and-seller-ranking__gems-watch-earn__en__v2.png)
-
-The **Watch & Earn** progress bar shows how much time was watched today. Tapping **Get Free Gems** converts that time into Gems before midnight. **Challenges** are short tasks, like watching 3 shows this week or inviting a friend, that reward extra Gems.
-
-Buyers can also purchase Gems, but the system is designed to give Gems to the people active on the platform. The more they engage, the more Gems they accumulate.
-
-## How buyers spend Gems on your show
-
-During your live show, buyers tap the emoji drawer and pick an emoji to send. Each emoji costs the buyer a certain amount of Gems.
+During the live, the buyer opens the emoji menu, picks an emoji and sends it. Each emoji uses a number of gems, shown in the menu itself.
 
 When a buyer sends an emoji:
 
-- An animated emoji appears on screen for everyone to see
-- The buyer shows support for you as the seller
-- The Gems spent are converted into **ranking points for you**
+- The animation appears on screen for everyone to see
+- The buyer shows support for you
+- The gems you receive count toward your position in the seller ranking
 
-The more emojis your audience sends, the more points you accumulate over the month.
+Gems also count in battles. To learn how battles work, see the [Battles](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288121) article.
 
-## Seller Ranking
+## Monthly Seller Leaderboard
 
-Jamble maintains a **monthly Seller Ranking** accessible from your profile. It compares you to other active sellers of the month.
+Jamble has a **Ranking Mensal de Vendedores** (Monthly Seller Leaderboard) that compares sellers over the month. Your position appears as a badge on your profile, and the ranking can also be opened during the live, from the ranking button on screen.
 
-![Seller Ranking with point rules and a leaderboard list](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/rewards-gems-and-seller-ranking__seller-ranking__en__v2.png)
+Your score comes from two things:
 
-At the top, the purple card lists **the two rules** that earn points: **gem support received** (emojis sent by your audience) and **sales completed** during the month. Below that, the leaderboard ranks sellers by **Score**, with your **You** row highlighted at the bottom.
+- **Sales**: the value of purchases made with you
+- **Gems received**: the emojis your audience sends you
 
-The ranking resets at the beginning of each month, so every seller starts fresh.
+The ranking screen shows the current scoring rules, the list of sellers by **Pontuação** (Score) and your position. When there are rewards for the top sellers, they also appear on that screen.
 
-### Where top-ranked sellers show up
+The ranking restarts every month, so everyone starts the month from zero.
 
-Climbing the ranking increases your visibility on the platform. Top sellers:
-
-- Show up more often in recommendations and search
-- Build reputation with buyers who check the leaderboard
+The seller ranking is separate from battles. Each has its own rules and scoring.
 
 ## How to climb the ranking
 
-1. **Host shows regularly.** Consistency matters more than one big show. Regular shows keep you in the ranking
-2. **Engage your audience.** Buyers who enjoy your show send more emojis (Gems) to support you
-3. **Sell quality products.** Sales volume is part of the ranking formula. More sales means more points
-4. **Build a loyal following.** Repeat viewers who know your show send more emoji support
-5. **Deliver great experiences.** Ship fast, be honest about condition, and communicate well
+1. **Go live regularly.** Consistency counts more than one big isolated live
+2. **Engage your audience.** Talk with the chat, thank people for emojis and keep the energy up
+3. **Sell well.** Your sales count for points, so offer products your audience is looking for
+4. **Build a loyal audience.** People who keep coming back to your lives tend to support you more
+5. **Deliver a good experience.** Fast shipping and honest descriptions bring buyers back
 
 ## Important tips
 
-- **You don't need to spend money.** The ranking runs on buyer activity and your sales performance. There's nothing you need to purchase
-- **Emojis are an engagement signal.** If your audience sends a lot of emojis, it means they're enjoying the show. Thank them and keep the energy up
-- **Monthly reset means fresh opportunities.** Even if you had a slow month, next month starts fresh. Stay consistent
+- **You don't need to spend anything.** The ranking depends on your sales and your audience's support
+- **Emojis show engagement.** If your audience sends lots of emojis, it means they are enjoying the live
+- **Every month is a new chance.** Even after a slow month, the next one starts from zero
 
-## Common questions
+## Frequently asked questions
 
-**Do I earn money from Gems or emojis?**
-The Gems and emoji system contributes to your ranking and visibility, not directly to your revenue. Your income comes from product sales. But a higher ranking means more visibility, which tends to bring more buyers to your shows.
+**Do I earn money from gems?**
+No. Gems have no cash value. They count for the ranking and for battles. Your income comes from your sales.
 
-**Can I buy Gems as a seller?**
-The Gems system is designed for buyers. As a seller, your focus is on hosting great shows and selling products. The ranking points come from buyer engagement with your content.
+**Are gems coupons?**
+No. Gems are for sending emojis in lives. Coupons give a shipping discount and are a different thing.
 
-**How often does the ranking update?**
-The ranking is monthly. Your position updates throughout the month based on accumulated points, and resets on the first day of the following month.
+**How often does the ranking change?**
+Your position updates during the month as you earn points, and the ranking restarts at the beginning of the next month.
 
-**Which actions count toward the ranking?**
-Two things: **gem support** sent to you by your audience during shows (emojis) and **sales completed** during the month. Both feed the same score.
+**What counts for the ranking?**
+Your sales and the gems your audience sends you. The scoring rules appear on the ranking screen.
+
+**Is the ranking the same as battles?**
+No. Battles happen inside a live and have their own rules. The seller ranking adds up the whole month.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Talk to us through the in-app chat.

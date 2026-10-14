@@ -1,5 +1,28 @@
 # Code audit, intercom_id=14288101
 
+## 2026-10-14 wave 2 rewrite (supersedes the tables below)
+
+Sources: jamble_backend origin/main (291e133b5), iOS tag `5.10.1`, Android tag `v5.10.0`. The create/edit form and its pickers are server-driven (`get_product_edition_fields` / `get_product_edition_field_values` in `src/services/product_service.py`). The old claim "five conditions, same for every category" is false on main.
+
+| Claim in article | Code says | Source file | Status |
+|---|---|---|---|
+| Condition is required and its options depend on the category | every leaf config declares `"condition": {"required": true, "values": [...]}`; picker values come from `get_attributes_for_category(category, ...)` | `src/product_attributes/configs/categories/*.json`, `src/services/product_service.py` (get_product_edition_field_values) | MATCH |
+| Choose Categoria first, then Condição appears | category field `order=8`, classification attributes resolved only for a leaf category | `src/services/product_service.py` | MATCH |
+| TCG (Pokémon, Magic, Yu-Gi-Oh!, One Piece, Lorcana, Outros TCG): Novo, Mint, Quase Mint, Pouco Usado, Muito Usado, Danificado | `NEW, MINT, NEAR_MINT, LIGHT_PLAYED, HEAVILY_PLAYED, DAMAGED` | `categories/pokemon_cards.json` (+ magic_the_gathering, yu_gi_oh_cards, one_piece_cards, lorcana, other_tcg) | MATCH |
+| Cards Esportivos: same 6 as TCG | same list | `categories/soccer_cards.json` ... `other_sports_cards.json` | MATCH |
+| Carros Miniatura: Novo, Mint, Quase Mint, Danificado | `NEW, MINT, NEAR_MINT, DAMAGED` | `categories/hot_wheels.json` (+ all diecast leaves) | MATCH |
+| Figurinhas and Bonecos: Mint, Quase Mint, Bom, Danificado | `MINT, NEAR_MINT, GOOD, DAMAGED` | `categories/stickers.json`, `funko_pop.json`, `action_figures.json`, `other_figures.json` | MATCH |
+| Video Games: Novo, Mint, Quase Mint, Bom, Danificado | `NEW, MINT, NEAR_MINT, GOOD, DAMAGED` | `categories/games.json`, `consoles.json`, `other_video_games.json` | MATCH |
+| Quadrinhos & Mangá: 8 values | `MINT, NEAR_MINT, VERY_FINE, FINE, VERY_GOOD, GOOD, FAIR, POOR` | `categories/manga.json`, `comic_books.json`, `other_comics_manga.json` | MATCH |
+| Moedas: 7 values | `UNCIRCULATED, ABOUT_UNCIRCULATED, EXTREMELY_FINE, VERY_FINE, FINE, GOOD, POOR` | `categories/coins.json` | MATCH |
+| Brechó and Artigos Esportivos: Novo com/sem etiquetas, Muito Bom, Bom, Razoável, Danificado | `NEW_WITH_TAGS, NEW_WITHOUT_TAGS, VERY_GOOD, GOOD, FAIR, DAMAGED` | `categories/clothing.json` (+ footwear, handbags, fashion_accessories, other_fashion, soccer_goods, other_sporting_goods) | MATCH |
+| Outros: 7 values | `NEW, NEW_WITH_TAGS, NEW_WITHOUT_TAGS, VERY_GOOD, GOOD, FAIR, DAMAGED` | `categories/others.json` | MATCH |
+| Titles and descriptions quoted in "O que cada condição quer dizer" | `values.<ID>.title.pt/en` and `description.pt/en` | `src/product_attributes/configs/attributes/condition.json` | MATCH (verbatim, EN descriptions verbatim minus hyphen in "well-maintained") |
+| Category names | `values.<ID>.title.pt/en` | `src/product_attributes/configs/attributes/category.json`, `tree.json` | MATCH |
+| Edit before sale via Editar | edit refused once `product.is_sold` (`ErrorCodes.product_sold_out`) | `src/services/product_service.py` (get_product_edition_fields) | MATCH |
+
+Mockups removed: `condition-picker` (5 fixed tiers, matches no category) and `section-row` (old Cor/Preço row order).
+
 slug: `understanding-listing-conditions-and-expectations`
 audited_at: 2026-05-11
 jamble_ios_root: `/Users/aymardumoulin/Projects/Jamble-iOS/Jamble`

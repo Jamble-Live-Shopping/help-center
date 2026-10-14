@@ -87,3 +87,16 @@ No real iOS image asset is on the surfaces depicted (status text, step bar, even
 ## Verdict
 
 ALL CLAIMS MATCH. Zero MISMATCH. Article shippable on the code-audit gate.
+
+## Wave 2 re-audit (2026-10-14)
+
+Sources: iOS tag 5.10.1, Android tag v5.10.0, jamble_backend origin/main (291e133b5), Jamble-Website origin/main. Article rewritten in the seller voice with a short buyer section.
+
+| Claim | Evidence |
+|---|---|
+| Parcel statuses Envio atrasado, Enviado, Entregue, Falha na entrega, Devolvido | `jamble_backend/src/entities/bundle.py` `BUNDLE_STATUS_TITLES` |
+| Seller is told to ship by a date or the sale is canceled | `jamble_backend/src/entities/transaction.py` `(TransactionStatus.ship_timeout, False)` description |
+| Buyer is refunded automatically if the seller does not ship | `jamble_backend/src/entities/transaction.py` `(TransactionStatus.ship_timeout, True)` description |
+| Deadline is computed server side and shown in the order | `jamble_backend/src/services/transaction_service.py` `attach_transaction_pending_status` ; public wording fixed by the wave-2 brief |
+| Refresh tracking action | iOS `PROFILE/ProfileSettings/Shipments/Detail/Sections/ShipmentStatusCard.swift:35` ("Refresh tracking" = "Atualizar rastreio"), Android `shipment_action_refresh` = "Atualizar" |
+| Buyer may need to pick up the parcel at a Correios agency after a failed delivery | `jamble_backend/src/services/notification_service.py` pickup notification text |

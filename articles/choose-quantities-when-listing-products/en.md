@@ -1,104 +1,103 @@
 # Choose Quantities When Listing Products
 
-## What you'll learn
+## What you will learn
 
-Set how many identical units you have per listing, from 1 up to 1,000. Learn how quantity behaves during a show, and why Pre-Offer only works when the quantity is 1.
+How to say how many identical units you have in a listing, how to sell several units together as a **Lote** (Bundle), how quantity works in lives and in the Loja (Shop), and why pre-offers only appear when the quantity is 1.
 
 ## Before you start
 
 You need:
 
 - An approved seller account on Jamble
-- A show created with products to add
+- A scheduled live or a Loja listing to add products to
 
-## How quantities work
+## Quantity and Bundle: what is the difference?
 
-A quantity is the number of identical units you sell in a single listing. Instead of creating 10 separate listings for 10 identical t-shirts, you create one listing with a quantity of 10.
+- **Quantidade** (Quantity) is how many identical units you have for sale in that listing. Instead of creating 10 listings for 10 identical boosters, you create one listing with quantity 10. Each purchase takes one unit (or more, when the buyer can choose)
+- **Lote** (Bundle) is when several identical units are sold together, as a single item. For example, "bundle of 3 boosters": whoever buys gets the 3 units at once, for the bundle price
 
-During your show, when you pin the product:
-
-- Buyers see how many units are left (for example, "3 left")
-- Each purchase reduces the count by one
-- When the last unit is sold, the product is marked sold out
+You can use both together. For example, quantity 5 of a bundle of 3 boosters means you have 5 bundles for sale.
 
 ## Set the quantity
 
-When creating or editing a product, scroll to the **Quantity** field. The default value is 1.
+When you create or edit a product, in the app or in the Seller Hub, look for the **Quantidade** field. The value starts at 1.
 
-![Quantity field on the product form, with minus and plus buttons around a value of 1](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/choose-quantities-when-listing-products__screen-1__en__v3.png)
+Tap **+** to increase, **−** to decrease, or type the number. The minimum quantity is 1. There is a maximum per listing: when you reach it, the **+** button is disabled. Save the product to confirm.
 
-Tap **+** to increase, **-** to decrease, or type the number directly. The minimum is 1 and the maximum is **1,000** per listing, across all sell modes (Real Time Offer, Sudden Death, Buy It Now). Save the product to confirm.
+## Sell as a Bundle
 
-## Pre-Offer and quantity
+Right below the quantity is the **Lote** option, with the description "Várias unidades idênticas vendidas como um único anúncio" (Several identical units sold as one listing).
 
-If you enable **Pre-Offer** on a product, the quantity must be **1**. Pre-Offer is not available when the listing has more than one unit.
+1. Turn on **Lote**
+2. The **Unidades do lote** (Bundle units) field appears. It starts at 2
+3. Set how many units go in each bundle
+4. Set the price for the whole bundle
 
-![Pre-Offer cell with the toggle on and the Quantity cell set to 2, the configuration that triggers the error](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/choose-quantities-when-listing-products__screen-2__en__v3.png)
+Shipping is calculated with all the units in the bundle, so the buyer pays the right shipping for the package.
 
-If you try to turn on Pre-Offer with a quantity higher than 1, Jamble blocks the action and shows this error:
+## Pre-offers and quantity
 
-![Error toast saying Oops, something happened! You can not use prebid if you have more than one quantity](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/choose-quantities-when-listing-products__screen-3__en__v3.png)
+Pre-offers let buyers make offers before the live starts. The **Ativar pré-ofertas** (Enable pre-offers) option only appears when:
 
-The toggle snaps back to off. To use Pre-Offer, set the quantity back to 1 and try again.
+- The product is in a live
+- The sale type is **Ofertas em Tempo Real** (Real-time offers) or **Morte Súbita** (Sudden death)
+- The quantity is **1**
 
-## What happens during a show
+If you raise the quantity above 1, the **Ativar pré-ofertas** option disappears from the form. Set the quantity back to 1 to make it appear again.
 
-When you pin a product with multiple units during your live show, the behavior depends on the sell mode.
+## How quantity works in lives
 
-**Buy It Now**
+When you pin a product with several units, buyers see how many are left, for example "3 restantes" (3 left). The behavior depends on the sale type:
 
-- Buyers see the price and a **Buy it now** button
-- Each buyer who taps it purchases one unit
-- The banner shows the remaining count: "3 left", "2 left", and so on
-- When the last unit is purchased, the product is sold out
+**Comprar Agora (Buy now)**
 
-**Real Time Offer and Sudden Death**
+- Each buyer taps to buy at the fixed price
+- At checkout, the buyer can choose more than one unit, up to the limit shown in the app
+- The count of remaining units drops with each purchase
 
-- The first unit goes to the highest offer when the timer ends
-- The next unit starts automatically
-- This continues until all units are sold, or you stop the sale
+**Real-time offers and Sudden death**
+
+- Each sale is for one unit, and the winner takes that unit
+- After each sale, the count of remaining units is updated, and you can start the sale for the next unit
+
+When the last unit is sold, the product is sold out.
+
+## How quantity works in the Loja
+
+In the Loja, buyers can choose how many units they want in the cart, up to the limit shown in the app and until your stock runs out. Each purchase reduces the available quantity.
 
 ## Important tips
 
-- **Use quantities for identical items only.** All units share the same title, photos, description, and price. If items differ (sizes, colors, conditions), create separate listings.
-- **Quantities save time.** One listing with quantity 20 replaces 20 individual listings for 20 identical stickers.
-- **Edit before the first unit sells.** If you realize you have more or fewer units, update the quantity before the first sale.
-- **Watch the count on camera.** When stock runs low, announce it on air to create urgency.
+- **Use quantity only for identical items.** All units share the same title, photos, description, condition and price. If the items are different, create separate listings
+- **Use a Bundle to sell items together.** If you want the buyer to take several units at once, turn on **Lote** instead of only raising the quantity
+- **Keep your stock right.** If you have more or fewer units, edit the quantity before the next sale
+- **Tell your live when stock is running low.** This creates urgency
 
-## Common questions
+## Frequently asked questions
 
-**What's the maximum quantity I can set?**
+**What is the maximum quantity I can set?**
+There is a limit per listing. When you reach it, the **+** button is disabled.
 
-1,000 units per listing, for Real Time Offer, Sudden Death, and Buy It Now.
+**Can I change the quantity after creating the listing?**
+Yes. Edit the product, change the number and save, while there are still units available.
 
-**Can I change the quantity after creating a listing?**
+**Can a buyer buy more than one unit at once?**
+Yes, with **Comprar Agora** in lives and in the Loja, up to the limit shown in the app. With **Ofertas em Tempo Real** and **Morte Súbita**, each sale is for one unit.
 
-Yes. Update it at any time before all units are sold. Tap the listing, change the number, and save.
+**Why do I not see the pre-offers option?**
+It only appears for live products in **Ofertas em Tempo Real** or **Morte Súbita** with quantity 1.
 
-**What happens if I set quantity to 1?**
+**Does quantity change the price?**
+No. Each unit is sold at the listing price. In a **Lote**, the price is for the whole bundle.
 
-The product works as a single item. One buyer purchases it, and it is sold. A quantity of 1 also unlocks **Pre-Offer** on Real Time Offer and Sudden Death.
-
-**Can buyers purchase more than one unit at a time?**
-
-During a show, each purchase covers one unit. A buyer who wants two units buys them in two rounds.
-
-**What if I run out of stock during a show?**
-
-When the last unit is sold, the product is automatically marked sold out. You can unpin it and move to the next product.
-
-**Does quantity affect the price?**
-
-No. Each unit sells at the same price. For Buy It Now, every buyer pays the same fixed price. For Real Time Offer and Sudden Death, each unit runs its own round.
+**What happens when stock runs out?**
+The product is automatically marked as sold out. In a live, you can move on to the next product.
 
 ## Need help?
 
-Reach out via the in-app chat or email support@jambleapp.com.
-
----
+Talk to us through the app chat.
 
 ## See also
 
-- [How to List Products on Jamble](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288093-how-to-list-products-on-jamble)
-- [Variants for Sellers, Sizes and Colors](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288105-variants-for-sellers-sizes-and-colors)
-- [Cloning Items](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288110-cloning-items)
+- [How to List Products on Jamble](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288093)
+- [Cloning Items](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288110)

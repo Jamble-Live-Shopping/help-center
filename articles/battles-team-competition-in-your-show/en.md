@@ -1,130 +1,99 @@
-# Battles, Team Competition in Your Show
+# Battles in your live
 
 ## What you'll learn
 
-This guide explains how Battles work on Jamble. A Battle is a live competition that happens inside your own show, your audience splits into two teams (Red and Blue) and earns points by placing offers and sending gems. The winning team gets rewards, and you get a more engaged audience.
+This guide explains how Battles work on Jamble. A Battle is a team competition that happens inside your own live: your audience splits into two teams, which earn points by buying and sending gems. The top players on the winning team get shipping coupons, and your live gets more energy and more sales.
 
 ## Before you start
 
 You need:
 - An approved seller account on Jamble
-- An active live show (Battles are started during a show)
-- Products ready to sell during the battle
+- A live on air. A Battle only starts while the live is running, not in practice mode
+- Products ready to sell during the Battle
 
-## What is a Battle?
+## One Battle per week
 
-A Battle is a timed competition that happens during your live show. Here's how it works:
+You have one Battle per week. The app itself shows when it's available, in the live menu:
+- **Batalha pronta** (Battle ready): your weekly Battle is unlocked. Start the live to begin it
+- **Iniciar Batalha** (Start battle): with the live on air, tap to begin
+- **Próxima batalha** (Next battle) with the time left: you already had this week's Battle. The app shows when it comes back
 
-1. **You start a Battle** during your show
-2. **Your audience splits into two teams**: Red and Blue
-3. **Viewers earn points** by placing offers on your products and by sending gems
-4. **When the timer ends**, the team with the most points wins
-5. **Winners on the winning team** get rewards (credits they can use on future purchases)
+## How it works
 
-Battles are designed to boost engagement and sales. When your audience is competing, they place more offers and stay longer in your show.
+1. **You start the Battle** from the live menu and pick the duration
+2. **Viewers join a team.** The first time they buy or send gems, each one joins the red or the blue team, chosen automatically by Jamble
+3. **Teams earn points** from paid purchases and gems sent during the Battle
+4. **When time runs out**, the team with more points wins. If points are tied, the Battle ends in a draw
+5. **The top players on the winning team** get shipping coupons
 
-## How points work
-
-Viewers earn points for their team in two ways:
-
-- **Place offers on products**, 15 points for every $ spent
-- **Send gems (emojis)**, 1 point for every gem sent
-
-The more your audience buys and interacts, the more points their team earns.
+The point rules and rewards show in the app itself, under **Exibir regras de batalha** (Show battle rules) and **Como ganhar pontos?** (How to earn points?).
 
 ## Step by step
 
-### Step 1: Start a Battle during your show
+### Step 1: start the Battle
 
-While you're live, open the Battle option from the show controls. A picker appears asking for the **battle duration**.
+With the live on air, open the live menu and tap **Iniciar Batalha** (Start battle). Pick one of the durations the app offers.
 
-![Pick a battle duration alert with options 30m, 1h, 1h 30, 2h and Cancel](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/battles-team-competition-in-your-show__battle-duration-picker__en__v2.png)
+Choose a duration that matches the time you'll keep selling. The app warns you: don't end before time is up, or viewers may not get their rewards.
 
-Choose a duration that matches how long you plan to keep selling. Available durations and reward amounts depend on your **battle tier** (see Rewards and battle tiers below).
+### Step 2: your audience joins the teams
 
-### Step 2: Your audience joins teams
+When the Battle starts, viewers see the welcome screen and can open the rules.
 
-As soon as the Battle starts, a welcome screen appears for each viewer, announcing the **Red** or **Blue** team they were assigned to.
+![Welcome to the battle screen with the viewer's team, their score, and the Show battle rules button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/battles-team-competition-in-your-show__battle-welcome__en__v2.png)
 
-![Welcome to the Battle screen on dark background with viewer avatar, Red team indicator and View battle rules button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/battles-team-competition-in-your-show__battle-welcome__en__v2.png)
+During the Battle, a bar in the live shows each team's points in real time. Viewers can also see the ranking and how much each of them can win.
 
-Right after, a progress bar overlays the show, showing each team's score in real time, the timer and a shortcut to the leaderboard.
+### Step 3: keep selling
 
-![Battle progress bar overlay with Red 1,250 and Blue 980 scores, 45:30 timer and See Ranking button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/battles-team-competition-in-your-show__battle-progress-bar__en__v2.png)
+Run the live as usual: pin products, start sales, and talk to the chat. Every paid purchase and every gem sent counts points for the team of the person who bought or sent it.
 
-The bar creates urgency, when one team falls behind, viewers on that team try harder.
+### Step 4: the Battle ends
 
-### Step 3: Keep selling during the Battle
+When time runs out, the Battle ends and the winning team is announced. Each viewer sees the result and their position. Those who won a reward tap **Reivindicar** (Claim) to get the coupon.
 
-Continue your show normally, pin products, start sales, interact with your audience. Every purchase and every gem sent during the Battle counts toward the team scores.
+To end the live while a Battle is running, end the Battle first, from the live menu, with **Encerrar Batalha** (End battle).
 
-The Battle runs alongside your show. You don't need to do anything special, just keep selling and engaging your audience.
+## Rewards
 
-### Step 4: Battle ends
+- Rewards are **shipping coupons**, to use on purchases in lives
+- Only the top-ranked players on the winning team get one. The Battle screen shows how much each position can win
+- The viewer must be in the live when the Battle ends to get the reward
+- The expiry date shows on the coupon itself
 
-When the timer runs out, the Battle ends automatically. The winning team is announced and the top players on the winning team receive rewards.
-
-![Battle ended screen on dark background with Red team wins, top 3 podium marina_pkmn, lucas_tcg and rafa.diecast and Claim $25 button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/battles-team-competition-in-your-show__battle-ended__en__v2.png)
-
-Each viewer sees which team won, the top participants, their own ranking and the reward they can claim.
-
-## Rewards and battle tiers
-
-The top players on the winning team receive **credits** (store credits they can use on future purchases). Credits expire **7 days** after being awarded. The reward amount distributed in your show depends on your **battle tier**.
-
-### The 3 tiers
-
-Every seller has a battle tier. The higher your tier, the larger the reward your battle distributes to the winning viewers.
-
-- **Bronze**, $25 reward, default for all active sellers
-- **Silver**, $50 reward, your 3 best lives in the last 14 days average 600+ viewers and 12h+ of watch time per live
-- **Gold**, $200 reward, your 5 best lives in the last 14 days average 1,400+ viewers and 40h+ of watch time per live
-
-### How your tier is calculated
-
-Your tier is recalculated automatically every day based on your **best lives in the last 14 days**. Only lives that lasted **30 minutes or more** are counted, so a technical issue or a short promo live won't break your tier.
-
-You don't need to do anything special. The more consistent your best lives perform, the higher your tier and the bigger the reward your battle offers your audience.
-
-First-time Battle participants also receive a small bonus just for joining.
+The reward amounts and the durations available show in the app when you start the Battle.
 
 ## Important tips
 
-- **Don't end the Battle early.** If you stop the Battle before the timer runs out, viewers won't receive their rewards. Choose a duration you can commit to
-- **Battles work best during long shows.** If you're planning a short show (under 30 minutes), a Battle might not be the best fit
-- **Keep selling actively during the Battle.** The more products you put up for sale, the more opportunities your audience has to earn points. This means more engagement and more sales for you
-- **Battles boost gems.** Since gems count as points, viewers send more gems (emojis) during a Battle. This adds to the fun and energy of your show
-- **Watch the progress bar.** The live score display creates urgency. When one team is falling behind, viewers on that team try harder, placing more offers and sending more gems
+- **Don't end the Battle early.** Pick a duration you can stick to
+- **Prefer long lives.** A Battle works best when you have plenty of selling time ahead
+- **Keep putting products on sale.** More sales mean more chances for your audience to score
+- **Remind the chat to stay until the end.** Only people in the live at the end get the reward
+- **Announce the Battle in advance.** Tell your followers the live will have a Battle
 
-## Common questions
+## Frequently asked questions
 
-**Do I need a minimum number of viewers to start a Battle?**
-No. You can start a Battle at any point during your live show, regardless of how many viewers you have. However, Battles are more engaging with a larger audience.
+**Do I need a minimum number of viewers?**
+No. You can start a Battle with any number of viewers, but it's more fun with more people.
 
-**How many Battles can I run per show?**
-One Battle per show. You can also only start one Battle per day.
+**How many Battles can I run?**
+One per week. The live menu shows when the next one is available.
 
-**Can I choose which team my viewers go to?**
-No. Viewers are assigned to teams automatically. The assignment is random and balanced.
+**Can I choose the viewers' team?**
+No. Jamble chooses the team automatically. The viewer stays on the same team until the Battle ends.
 
-**What happens if I end my show while a Battle is active?**
-Ending your show will also end the Battle. If the Battle timer hasn't expired yet, the Battle may end prematurely and rewards may not be distributed. Finish the Battle first, then end your show.
+**What earns points?**
+Paid purchases and gems sent during the Battle. The full rules show in the app, under **Como ganhar pontos?** (How to earn points?).
 
-**Can viewers switch teams?**
-No. Once assigned to a team, viewers stay on that team for the entire Battle.
+**What happens if a viewer leaves before the end?**
+They don't get the reward, even if their team wins.
 
-**Do I (the seller) earn anything from the Battle?**
-Battles don't give you a direct bonus, but they drive significantly more engagement and sales during your show. More offers, more gems, more active buyers.
+**Do I get anything from the Battle?**
+The Battle doesn't give the seller a prize, but it usually brings more purchases, more gems, and a livelier audience.
 
-**Do viewers need to stay until the end to get rewards?**
-Yes. Viewers must be online when the Battle ends to receive their rewards. If they leave early, they miss out, even if their team wins.
-
-**What's the difference between a Battle and a Raid?**
-A Battle is a competition within YOUR show, your audience splits into two teams and competes. A Raid is when you redirect your audience to ANOTHER seller's show when yours ends.
-
-**How do I move up tiers (Bronze, Silver, Gold)?**
-Keep going live consistently with quality shows. Your tier is recalculated automatically based on your best lives in the last 14 days, and only lives 30 minutes or longer are counted. The more viewers you bring in and the longer they stay, the higher your tier and the bigger your battle reward.
+**What's the difference between a Battle and a raid?**
+A Battle is a competition inside your live. A raid sends your viewers to another seller's live when you end yours. See [Raid another seller's live](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288118).
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Talk to us through the in-app chat.

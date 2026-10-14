@@ -87,6 +87,20 @@ Quando o vendedor inicia a venda, o produto aparece para todos na live:
 - Cada nova oferta aumenta um valor mínimo, que cresce conforme o preço sobe. O botão sempre mostra o valor da próxima oferta
 - Você também pode definir uma **Oferta máxima**: o app oferta por você automaticamente até esse limite
 
+## Oferta máxima
+
+Com a **Oferta máxima**, você define o valor mais alto que aceita pagar e o app faz as ofertas por você.
+
+- O app só oferta o necessário para você continuar na frente. Você nunca paga mais do que o seu máximo, e pode pagar menos
+- Se outra pessoa definir uma Oferta máxima mais alta, o app avisa e você pode aumentar a sua
+- Se duas Ofertas máximas tiverem o mesmo valor, vale a que chegou primeiro
+
+Exemplo: a oferta atual é R$ 10 e você define uma Oferta máxima de R$ 20. Se ninguém mais ofertar, você ganha por R$ 10. Se outra pessoa ofertar R$ 15, o app cobre automaticamente com a próxima oferta e você continua na frente. Se alguém passar de R$ 20, você perde a frente, a menos que aumente o seu máximo.
+
+## Pré-oferta
+
+Em alguns produtos de lives agendadas, o vendedor permite fazer uma **Pré-oferta** antes de a live começar. Você escolhe o seu valor máximo e, quando a venda desse produto começa, a sua Pré-oferta funciona como uma Oferta máxima. Você só paga se ganhar a venda.
+
 ## O cronômetro
 
 - **Oferta em tempo real:** se uma oferta chega nos últimos segundos, o cronômetro volta para alguns segundos, para dar chance aos outros compradores

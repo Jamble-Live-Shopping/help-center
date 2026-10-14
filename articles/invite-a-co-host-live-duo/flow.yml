@@ -4,7 +4,7 @@
 workflow: article-v2
 mode: v2_rewrite
 audience: seller_br
-job_to_be_done: "Help sellers run a duo show by inviting a co-host before or during a live"
+job_to_be_done: "Help sellers bring a guest into their live with Live Duo (iOS, Android, web) and remove them"
 
 source_of_truth:
   ios_files:
@@ -22,9 +22,7 @@ source_of_truth:
 
 content_contract:
   must_answer:
-    - "invite for a duo bottom sheet"
-    - "guest live duo accept"
-    - "remove guest from live duo"
+    - "Live Duo"
   forbidden_terms:
     - "5 minutes"
     - "5-minute"
@@ -35,7 +33,7 @@ content_contract:
   must_not_say:
     - "Co-host can sell products"
     - "Multiple guests at the same time"
-    - "Live Duo is on Android"
+    - "Live Duo is iPhone only (it ships on iOS, Android and web)"
 
 mockup_plan:
   required: true
@@ -69,7 +67,7 @@ mockup_plan:
         pt-br:
           - "Live Duo"
           - "Aceitar e participar"
-          - "Nao participe"
+          - "Não participe"
         en:
           - "Live Duo"
           - "Accept and Join"

@@ -1,114 +1,113 @@
-# Cancel an Order as a Seller
+# Confirm, decline or cancel a sale
 
-## What you'll learn
+## What you will learn
 
-This guide shows how to cancel an order as a seller on Jamble, in which phases it's possible, and what happens to the buyer afterward.
+This guide explains how to confirm your live and Loja sales, how to decline a Loja sale, how to cancel a sale you already confirmed and what happens to the buyer in each case.
 
-## Before you start
+## Live sales and Loja sales
 
-You need:
-- An approved seller account with active orders
+- **Live sales:** after the live ends, you confirm the sales on the live dashboard by tapping **Confirmar Vendas** (Confirm sales). If the sales are not confirmed within the time shown on the dashboard, they are cancelled and the buyers are refunded.
+- **Loja sales:** you must confirm or decline them within the time shown in the app. If you do not answer in time, the sale is cancelled and the buyer is refunded.
 
-## The two ways to cancel
+## Confirm or cancel your live sales
 
-There are two ways to cancel a sale, depending on the order status.
+After the live ends, the sales need your confirmation before shipping. You cannot confirm while the live is still on air.
 
-1. **Before confirming** (status Created): tap **Reject** to refuse the order.
-2. **After confirming** (status Confirmed, In Delivery, or Delivered): tap **Cancel Sale**.
+1. When the live ends, tap **Meu painel de controle** (My dashboard) to open the **Sua Live** (Your live) dashboard. You can also find this dashboard later, in the **Lives Passadas** (Past lives) tab of your profile, or in the Seller Hub, under the live that has ended.
+2. Check the sales and tap **Confirmar Vendas** (Confirm sales).
+3. Once confirmed, you can buy the shipping labels and issue the nota fiscal (invoice).
 
-In both cases, the buyer receives a refund automatically via PIX and the product goes back to your inventory.
+If you cannot honor the sales, tap **Cancelar Vendas** (Cancel sales). The sales that are not confirmed yet are cancelled and the buyers are refunded.
 
-## Step 1: Open your sales
+You have a few days after the live ends to confirm, and the time left shows on the dashboard. If you do not confirm in time, the unconfirmed sales are cancelled automatically and the buyers are refunded. The shipping deadline only starts when you confirm the sales.
 
-In the app, go to **Settings** and tap **My Sales**.
+## Confirm or decline Loja sales
 
-![Settings seller menu section with My Sales highlighted, My Wallet, Shipping Preferences, and Vacation mode](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cancel-an-order-as-a-seller__settings-seller-menu__en.png)
+1. Open **Ajustes** (settings) and tap **Envios** (shipments). On a computer, open **Envios** in the Seller Hub.
+2. On the package with new sales, tap **Revisar vendas pendentes** (review pending sales).
+3. For each sale, tap **Confirmar** (confirm) or **Recusar** (decline).
 
-You see a list of your recent orders. Tap the order you want to cancel to open the details screen.
+Once every sale in the package is confirmed, you can create the label and ship. If you decline a sale, the buyer is refunded. This action cannot be undone.
 
-## Step 2: Identify the status
+You can also open the sale in **Ajustes** > **Minhas vendas** (my sales) and use the **Confirmar** or **Recusar** buttons at the bottom of the screen.
 
-On the details screen, look at the status card at the top. The status tells you which path to follow.
+As long as you have not confirmed yet, the buyer can cancel the Loja order in the app. In that case, the sale disappears from your pending sales and the buyer is refunded.
 
-- Status **Created**: payment is authorized but you haven't confirmed yet. Use **Reject**.
-- Status **Confirmed**, **In Delivery**, or **Delivered**: you've already confirmed the sale. Use **Cancel Sale**.
+## Cancel a sale you already confirmed
 
-## Option A: Reject before confirming
+If you cannot ship an item, cancel the sale as soon as possible.
 
-If the order is in **Created**, you see two buttons at the bottom: **Reject** (gray) and **Confirm** (dark). Tap **Reject** to refuse.
+### Step 1: Open the sale
 
-The order closes immediately. The buyer receives the refund and the product goes back to your inventory. This is the cleanest path because it avoids any shipping prep.
+Open **Ajustes** > **Minhas vendas** and tap the sale you want to cancel.
 
-## Option B: Cancel after confirming
+### Step 2: Tap Cancelar venda
 
-If the order is already confirmed, open the details screen. The **Cancel Sale** button appears in red in the top right corner of the status card.
+The **Cancelar venda** (cancel sale) button appears at the bottom of the sale details screen.
 
-![Confirmed status card with Cancel Sale button in red in the top right corner](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cancel-an-order-as-a-seller__sale-detail-cancel-button__en.png)
+### Step 3: Choose the reason
 
-Tap **Cancel Sale**. The next screen asks **What's making you cancel?** and prompts you to choose a reason from five options.
+The app asks **O que te levou a cancelar?** (what's making you cancel?). Choose one of the reasons and tap **Enviar** (submit):
 
-![Cancellation reason selection screen with Unable to ship the item option selected and purple Submit button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cancel-an-order-as-a-seller__cancellation-reason-picker__en.png)
+- **Não foi possível enviar o item** (unable to ship the item)
+- **Item perdido** (item lost)
+- **Item danificado** (item damaged)
+- **O comprador solicitou o cancelamento** (buyer requested cancellation)
+- **Outras razões** (other reasons)
 
-The five reasons are:
-- **Unable to ship the item**
-- **Item lost**
-- **Item damaged**
-- **Buyer requested cancellation**
-- **Other reasons**
+![What's making you cancel screen with the list of reasons, Unable to ship the item selected and the Submit button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cancel-an-order-as-a-seller__cancellation-reason-picker__en.png)
 
-Select the reason that best applies and tap **Submit**.
+### Step 4: Confirm
 
-## Step 3: Confirm the cancellation
+A **Cancelar esta venda** (cancel this sale) window asks you to confirm. Tap **Cancelar venda** to confirm, or **Não cancele** (don't cancel) to go back.
 
-A final window asks for confirmation. It reminds you that abusive or repeated cancellations can lead to temporary restrictions or account suspension.
+![Cancel this sale window with the warning about repeated cancellations and the Don't Cancel and Cancel Sale buttons](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cancel-an-order-as-a-seller__cancel-sale-confirmation__en.png)
 
-![Cancel this sale confirmation window with Don't Cancel button in blue and Cancel Sale button in red](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cancel-an-order-as-a-seller__cancel-sale-confirmation__en.png)
+If the package has already been dropped off, cancelling in the app may not be available. In that case, contact support.
 
-Tap **Cancel Sale** to confirm, or **Don't Cancel** to go back. The support team reviews the order within 2 hours.
+## What happens after a cancellation
 
-## What happens next
+- **The buyer is refunded** to the same payment method used for the purchase. The amount usually comes back within 5 business days, depending on the bank or card.
+- **The sale amount does not reach your wallet.**
+- **The sale shows as cancelled** in **Minhas vendas**.
 
-When the cancellation is processed:
-- **The buyer receives the full refund via PIX.** The return is automatic and goes to the same key used for payment.
-- **You lose the sale.** The money doesn't go into your wallet and the transaction appears as canceled in your history.
-- **The product goes back to your inventory.** You can list it again in an upcoming show or leave it available on your profile.
+## Automatic cancellation for late shipping
 
-## When can I cancel
+The shipping deadline is usually about 10 days after the sale is confirmed. In exceptional situations, such as a Correios strike, it can be extended to up to 20 days. The exact deadline always appears on the order, under Prazo de envio (shipping deadline).
 
-You can cancel an order while the buyer hasn't confirmed receipt yet. The table below sums up the statuses where the button is visible.
+If the deadline passes, the order shows **Envio atrasado** (shipping overdue). If the item is still not dropped off a few days later, the sale is cancelled and the buyer is refunded automatically.
 
-- **Created**: yes, use **Reject**.
-- **Confirmed**: yes, use **Cancel Sale**.
-- **In Delivery**: yes, use **Cancel Sale** (requires 50 completed sales).
-- **Delivered**: yes, use **Cancel Sale** (requires 50 completed sales).
-- **Completed**: no, the transaction is closed.
+## Important tips
 
-When the order reaches **Completed**, it's out of your control in the app. If there's a problem after that, open a support ticket.
-
-## Best practices
-
-- **Cancel only when necessary.** Valid reasons: product lost, damage discovered after the sale, error in listing.
-- **Don't cancel to avoid shipping.** Repeated cancellations affect your reputation and can block account features.
-- **Act fast.** The sooner you cancel, the sooner the buyer gets the refund.
-- **Rejecting is better than canceling.** If you already know you won't ship, use **Reject** before confirming. This avoids extra steps for the buyer.
+- **Confirm your live sales right after you end the live.** The time left shows on the live dashboard
+- **Answer Loja sales quickly.** Confirm or decline within the time shown in the app
+- **Decline instead of confirming and cancelling later.** If you already know you will not ship, decline the Loja sale right away
+- **Cancel only when necessary.** Frequent cancellations can lead to restrictions on your account
+- **Keep an eye on Prazo de envio.** Ship before the deadline to avoid the automatic cancellation
 
 ## Frequently asked questions
 
-**Can I cancel an order after I've already confirmed it?**
-Yes, just open the order and tap **Cancel Sale**. The refund is automatic.
+**Do I need to confirm live sales?**
+Yes. After the live ends, tap **Confirmar Vendas** (Confirm sales) on the live dashboard, within the time shown there. Only then can you buy the labels. If you do not confirm in time, the sales are cancelled and the buyers are refunded.
 
-**Does canceling harm my account?**
-Occasional cancellations for legitimate reasons are normal. Frequent cancellations affect your seller status and may trigger restrictions.
+**Can I confirm sales during the live?**
+No. Confirmation only becomes available after the live ends.
 
-**How long does it take for the buyer to get the refund?**
-The refund is processed as soon as you confirm the cancellation. Since payment is PIX, the amount usually returns in minutes.
+**What happens if I do not confirm a Loja sale?**
+The sale is cancelled when the time shown in the app runs out, and the buyer is refunded.
 
-**Can the buyer also cancel?**
-Yes, while the order is in **Created**. They see the **Cancel Order** button and a dialog with **Yes, I cancel** or **No, back**. If the buyer cancels, you're notified and the product goes back to your inventory.
+**Can the buyer cancel?**
+Yes, for Loja orders, as long as you have not confirmed the sale yet. Purchases made in a live cannot be cancelled by the buyer in the app.
 
-**Can I cancel just part of the order?**
-No. Each item is a separate order on Jamble, so you cancel one item at a time.
+**Does cancelling hurt my account?**
+An occasional cancellation for a real reason is normal. Frequent cancellations can lead to restrictions on the account.
+
+**Where does the buyer's refund go?**
+Always to the same payment method used for the purchase, within 5 business days, depending on the bank or card.
+
+**Can I cancel just one item from a package?**
+Yes. Each item is a separate sale, so you cancel one sale at a time.
 
 ## Need help?
 
-Talk to the team via the in-app chat or email support@jambleapp.com.
+Talk to us through the in-app chat.

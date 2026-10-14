@@ -1,105 +1,87 @@
-# Resolver Problemas de Pagamento ou Saque
+# Resolver problemas com ganhos e saques
 
 ## O que você vai aprender
 
-Este guia ajuda a resolver os problemas mais comuns com seus ganhos e saques na Jamble. Se o dinheiro de uma venda não apareceu, o saque está parado ou o valor não bate com o esperado, comece aqui antes de falar com o suporte.
+Este guia ajuda a resolver os problemas mais comuns com seus ganhos e saques na Jamble: dinheiro parado em **Vendas pendentes**, botão **Sacar** inativo, saque que falhou, cadastro recusado e troca de CPF para CNPJ.
+
+Para entender o caminho do dinheiro do começo ao fim, veja [Como você recebe seus ganhos](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288155).
 
 ## Antes de começar
 
-Você precisa de:
-- Uma conta de vendedor aprovada na Jamble
-- Acesso ao seu **My Wallet** (Perfil > Settings > My Wallet)
-- Seus dados bancários cadastrados via Pagar.me (parceiro de pagamentos da Jamble)
+Abra **Ajustes** e toque em **Minha carteira**. No computador, abra **Carteira** no [Seller Hub](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/17588489).
 
-## Problema 1: Meu saque não apareceu na conta bancária
+## Problema 1: Meu dinheiro está em Vendas pendentes
 
-Depois de solicitar um saque, ele passa por três etapas: **Processing** (em processamento), **Completed** (concluído) e, no seu banco, pode levar mais alguns dias úteis para aparecer no extrato.
+O valor de uma venda só passa para **Disponível para saque** quando as duas coisas acontecem:
 
-**Como verificar o status:**
-1. Abra **My Wallet** em **Settings**
-2. Toque no ícone de relógio no canto superior direito para abrir **Payouts History**
-3. Veja o status do saque mais recente
-
-![Payouts History mostrando tres saques com status Completed, Processing e Failed](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/troubleshoot-issues-with-earnings-or-payouts__payouts-status-badges__pt-br__v2.png)
-
-**O que cada status significa:**
-- **Processing**: o saque foi solicitado e está a caminho do seu banco. Normalmente leva até 5 dias úteis dependendo do banco
-- **Completed**: a Jamble enviou o dinheiro. Se ainda não caiu no seu extrato, aguarde mais 1 a 2 dias úteis e confira com o seu banco
-- **Failed**: algo impediu a transferência. Veja o Problema 4 abaixo
-
-**Ainda não aparece depois de 5 dias úteis com status Completed?** Entre em contato com o suporte informando o ID do saque (visível em **Payouts History**).
-
-## Problema 2: Meus ganhos continuam em Pending há muito tempo
-
-Ganhos só ficam **Available to Withdraw** (disponíveis para saque) depois que o pedido é **concluído**. Um pedido é concluído quando:
-1. Você confirma o pedido
-2. Você envia o produto
-3. O comprador recebe e confirma o recebimento (ou passam 3 dias após a entrega sem o comprador abrir um problema)
-
-Enquanto um desses passos não acontece, o valor fica em **Pending** na sua carteira.
+1. **O pagamento foi liberado.** Com Pix, isso leva cerca de 1 dia. Com cartão, até 30 dias, ou cerca de 15 dias se você ativou o [Recebimento Antecipado](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/17588903).
+2. **O pedido foi concluído.** O comprador confirma o recebimento ou, se não confirmar, o pedido é concluído automaticamente alguns dias depois da entrega.
 
 **O que fazer:**
-1. Vá em **My Sales** e confira o status de cada pedido
-2. Confirme pedidos pendentes o quanto antes
-3. Envie os produtos e adicione o código de rastreio
-4. Aguarde o comprador confirmar o recebimento
 
-Se um pedido já foi entregue há mais de 3 dias e continua em Pending, pode haver um problema com o rastreio. Nesse caso, fale com o suporte.
+- Toque em **Saiba Mais** em **Vendas pendentes** para abrir **Sobre vendas pendentes** e ver os prazos
+- Envie seus pedidos o quanto antes. Quanto antes o pacote é entregue, antes o pedido é concluído
+- Se o rastreio de um pacote parou de atualizar, atualize o envio em **Envios**. Se continuar parado, fale com o suporte
 
-## Problema 3: O valor que caiu é menor do que eu esperava
+## Problema 2: O botão Sacar está inativo
 
-A Jamble retém uma taxa de serviço sobre cada venda concluída, já descontada antes do valor ser adicionado ao seu saldo disponível. O valor que você vê em **Available to Withdraw** já é o valor líquido.
+O botão **Sacar** fica inativo nestes casos:
 
-**Como conferir o cálculo de um pedido:**
-1. Abra **My Sales**
-2. Toque no pedido em questão
-3. Veja o detalhamento: valor de venda, taxa de serviço e valor líquido creditado
+- **Seu saldo em Disponível para saque está abaixo do valor mínimo** mostrado na carteira
+- **Você sacou há pouco tempo.** Depois de um saque, é preciso aguardar um pouco antes de fazer outro. O app mostra quando você poderá sacar de novo
+- **Falta uma verificação.** Se a carteira mostra um aviso pedindo para verificar sua identidade e seus dados bancários, toque no botão indicado e siga as instruções até o fim
+- **Sua conta de recebimento ainda não está ativa.** Conclua o cadastro pela carteira. Veja [Configurar e Iniciar um Saque](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288148)
 
-**Outras razões para o valor ser menor do que o esperado:**
-- O custo de frete é pago pelo comprador e não faz parte dos seus ganhos
-- Pedidos cancelados ou reembolsados não entram no saldo disponível
-- Pedidos ainda em **Pending** aparecem separadamente e ainda não podem ser sacados
+## Problema 3: Meu saque falhou
 
-Se o detalhamento do pedido não bate com o esperado mesmo assim, registre o ID do pedido e fale com o suporte.
+No **Histórico de saques**, um saque com status **Falhou** mostra o motivo logo abaixo, por exemplo dados bancários inválidos ou conta encerrada.
 
-## Problema 4: Erro ao iniciar o saque
+**O que fazer:**
 
-Alguns erros aparecem no momento em que você toca em **Withdraw**. Os mais comuns são relacionados aos dados bancários ou ao seu cadastro na Pagar.me.
+1. Leia o motivo mostrado no saque
+2. Em **Dados bancários**, toque em **Atualizar** e confira o banco, a agência, a conta e se ela está no seu nome (ou no CNPJ da sua empresa)
+3. Peça um novo saque
 
-![Modal de erro informando que o saque nao pode ser iniciado e sugerindo verificar os dados bancarios](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/troubleshoot-issues-with-earnings-or-payouts__withdraw-error-modal__pt-br__v2.png)
+Se o saque continuar falhando com os dados corretos, fale com o suporte e informe o número do saque.
 
-**Checklist rápido:**
+## Problema 4: Meu saque não chegou
 
-**1. Seu cadastro na Pagar.me está completo?**
-Se você vê uma mensagem pedindo para "verificar sua identidade e seus dados bancários", seu cadastro ainda não foi finalizado. Toque no botão indicado e siga o fluxo de cadastro (Individual ou Empresa, dependendo do seu caso).
+O saque costuma chegar em até 5 dias úteis, dependendo do seu banco.
 
-**2. Seus dados bancários estão corretos?**
-- Abra **My Wallet**
-- Na seção **Bank Details** (embaixo do cartão de saldo), toque em **Update**
-- Confira:
-    - A conta está no seu nome (ou no CNPJ da sua empresa, se cadastrado como Empresa)
-    - Número da conta e código da agência corretos
-    - Tipo de conta correto (corrente ou poupança)
+- Confira o status no **Histórico de saques**
+- Se ele está como **Criado** ou **Pendente**, toque em **Não recebeu ainda?** e depois em **Atualizar** para ver o status mais recente
+- Se passou desse prazo, fale com o suporte e informe o número do saque
 
-![Secao Bank Details com botao Update para corrigir os dados bancarios](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/troubleshoot-issues-with-earnings-or-payouts__bank-details-update__pt-br__v2.png)
+## Problema 5: Meu cadastro foi recusado
 
-**3. O valor está acima do mínimo?**
-O saque só fica disponível quando seu saldo passa do valor mínimo informado no próprio botão **Withdraw**.
+Se a sua conta de recebimento foi recusada, você não consegue resolver isso sozinho pelo app. Fale com o suporte para continuar com o cadastro.
 
-**4. Você já sacou nas últimas 24 horas?**
-Só é possível sacar uma vez por dia. Se acabou de sacar, aguarde o intervalo e tente de novo no dia seguinte.
+## Problema 6: Quero trocar de CPF para CNPJ
 
-## Quando entrar em contato com o suporte
+Na carteira, toque em **Atualizar** e escolha **Mudar de entidade (CPF/CNPJ)**. A mudança passa por análise da Jamble.
+
+Enquanto a mudança é finalizada, os saques podem ficar pausados. Depois, a carteira pode mostrar a **Conta atual** e a **Conta anterior**. O saldo da conta anterior é liberado conforme os pagamentos são liquidados, e você pode sacá-lo separadamente.
+
+## Problema 7: O valor é menor do que eu esperava
+
+- A comissão da Jamble é descontada antes de o valor entrar na carteira, então a carteira já mostra o valor que você recebe. Veja [Taxas e Comissões da Jamble](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288149)
+- O frete é pago pelo comprador e não faz parte dos seus ganhos
+- Vendas canceladas ou reembolsadas não entram na carteira
+- Vendas que ainda estão em **Vendas pendentes** entram em um próximo saque
+
+Para ver cada venda, abra **Ajustes** > **Minhas vendas**.
+
+## Quando falar com o suporte
 
 Fale com o suporte se:
-- Um saque **Completed** não apareceu no banco depois de 5 dias úteis
-- Um saque aparece como **Failed** mesmo com os dados bancários corretos
-- O cálculo de um pedido não bate com o detalhamento em **My Sales**
-- O formulário de cadastro da Pagar.me não carrega ou trava
-- Um pedido entregue continua em **Pending** há mais de 3 dias
 
-Ao abrir um ticket, envie:
-- Seu nome de usuário na Jamble
-- ID do saque (de **Payouts History**) ou ID do pedido (de **My Sales**), conforme o caso
-- Uma descrição do que esperava ver e do que aconteceu
-- Uma captura de tela da mensagem de erro, se houver
+- Um saque não chegou depois de 5 dias úteis
+- Um saque continua falhando com os dados bancários corretos
+- O cadastro da sua conta de recebimento foi recusado ou não carrega
+- O rastreio de um pedido entregue está parado e o valor continua em **Vendas pendentes**
+
+Informe o seu nome de usuário, o número do saque ou do pedido e, se tiver, uma captura de tela da mensagem.
+
+## Precisa de ajuda?
+
+Fale com a gente pelo chat do app.

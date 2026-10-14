@@ -7,8 +7,8 @@ author_id: 7980507
 
 locales:
   pt-br:
-    title: 'Configure o Envio Antes de Vender'
-    description: ''
+    title: 'Configurações de envio'
+    description: 'Endereço de envio, serviços dos Correios, formato da etiqueta e perfis de envio, no app ou no Seller Hub.'
   en:
-    title: 'Set Up Shipping Before You Sell'
-    description: 'Set up your address, label format, and shipping profiles before your first Jamble show.'
+    title: 'Shipping settings'
+    description: 'Shipping address, Correios services, label format and shipping profiles, in the app or in the Seller Hub.'

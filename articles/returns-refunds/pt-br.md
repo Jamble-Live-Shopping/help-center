@@ -1,81 +1,77 @@
-## Política de reembolso e devoluções
+# Devoluções e Reembolsos
 
-O Jamble aplica regras rigorosas de reembolso e devolução para garantir justiça, transparência e prevenção de abusos, em conformidade com a legislação brasileira de defesa do consumidor.
+Veja como funcionam os pagamentos na Jamble, quando você recebe um reembolso e o que fazer se houver um problema com o seu pedido.
 
-## Responsabilidade após o envio
+## O que você vai aprender
 
-Após o envio do pedido pelo vendedor, a responsabilidade pela entrega é transferida para a transportadora.  
-O Jamble não oferece seguro de envio e não se responsabiliza por problemas de entrega relacionados à transportadora.
+- Como os pagamentos funcionam
+- Quando você recebe um reembolso
+- O que fazer se houver um problema com o produto ou a entrega
+- Como e quando o reembolso chega
 
-## Pedidos marcados como entregues
+## Como os pagamentos funcionam
 
-Quando um pedido é marcado como **Entregue** pela transportadora:
+- Você paga dentro do app, no cartão de crédito ou no Pix
+- A Jamble recebe o pagamento e só libera o valor para o vendedor depois que o pedido é concluído
+- Os dados do seu cartão não são compartilhados com o vendedor
 
-- O Jamble **não processa reembolsos**, mesmo que o comprador alegue não ter recebido o pedido
-- A confirmação de entrega fornecida pela transportadora é considerada **definitiva**
+## Quando você recebe um reembolso
 
-## Rastreamento sem atualização (30+ dias)
+- Quando você cancela uma compra da Loja antes de o vendedor confirmar
+- Quando o vendedor cancela a venda
+- Quando a compra é cancelada automaticamente, por exemplo, se o vendedor não envia dentro do prazo
+- Quando o suporte analisa um problema com o pedido e decide pelo reembolso
 
-Se o rastreamento do envio não apresentar atualizações por mais de 30 dias após a postagem:
+Veja mais em [Cancelamentos](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/10374371).
 
-- Usuários podem ser elegíveis a reembolso caso o valor solicitado seja inferior a 20% do total de compras do mês
-- Reembolsos que excedam esse limite não são garantidos
+## Problema com o produto
 
-## Erros de endereço e encomendas devolvidas
+Se o produto chegou danificado, diferente do anunciado, incompleto, ou se você tiver dúvidas sobre a autenticidade:
 
-Se um pedido não for entregue devido a:
+1. Fale com o suporte o quanto antes depois de receber o produto.
+2. Vá em **Ajustes** > **Contate o suporte** > **Ajuda com pedidos** e escolha o pedido.
+3. Conte o que aconteceu e envie fotos ou vídeos do pacote e do produto.
 
-- Endereço incorreto ou incompleto informado pelo comprador
-- Não retirada da encomenda
-- Recusa da entrega
+O nosso time analisa o caso e pode pedir informações a você e ao vendedor. Se uma devolução for necessária, o suporte explica como fazer.
 
-A encomenda poderá ser devolvida ao vendedor. Nesses casos:
+## Desistir da compra depois de receber
 
-- A elegibilidade a reembolso é limitada
-- As taxas de envio podem não ser reembolsáveis
-- O Jamble não se responsabiliza por encomendas devolvidas e posteriormente extraviadas
+Se você recebeu o produto e quer desistir da compra, fale com o suporte. O seu pedido é analisado de acordo com os [Termos de Uso](https://www.jamble.com/terms).
 
-## Alegações de itens falsos ou não autênticos
+## Problema com a entrega
 
-Caso o comprador alegue que um item é falso, contrafeito ou não autêntico, o Jamble poderá solicitar documentação adicional de ambas as partes.
+Fale com o suporte se:
 
-- Se o vendedor fornecer provas válidas e verificáveis de autenticidade (como nota fiscal ou comprovante de compra), o item será considerado autêntico e nenhum reembolso será concedido
-- Se o vendedor não apresentar provas satisfatórias dentro do prazo estipulado pelo Jamble, o item poderá ser considerado não autêntico. Nesse caso, o vendedor será responsável pelo frete de devolução e um reembolso poderá ser concedido
+- O rastreio ficar muito tempo sem atualizar
+- O pedido aparecer como **Entregue**, mas você não recebeu
+- O pacote voltar para o vendedor
 
-O Jamble se reserva o direito de tomar a decisão final sobre autenticidade e resolução de disputas.
+Se você perceber que o endereço de entrega está errado, fale com o vendedor e com o suporte o quanto antes, de preferência antes de o pacote ser enviado.
 
-## Prazo para reportar um problema
+## Como o reembolso chega
 
-O comprador deve entrar em contato com o Suporte do Jamble em até 48 horas após o recebimento do pedido.
+- O reembolso volta para a mesma forma de pagamento usada na compra
+- Costuma levar até 5 dias úteis, dependendo do banco ou cartão
+- No cartão de crédito, o valor aparece como estorno na fatura, conforme o seu banco
+- Se você usou um cupom na compra, ele volta para o seu saldo
 
-- O status do pedido não pode estar como Concluído no momento da solicitação
-- Solicitações enviadas fora desse prazo podem ser recusadas
+## Dicas importantes
 
----
+- Confira o produto assim que ele chegar e, se houver algum problema, fale com o suporte antes de confirmar o pedido
+- Guarde a embalagem e tire fotos do pacote e do produto se algo parecer errado
+- Confira o seu endereço antes de pagar
 
-## **Método de reembolso**
+## Perguntas frequentes
 
-Os reembolsos elegíveis são emitidos para o mesmo método de pagamento utilizado na compra.
+**O reembolso ainda não apareceu. O que faço?**
+Confira o extrato ou a fatura do cartão usado na compra. O prazo depende do seu banco. Se passar do prazo, fale com o suporte.
 
-Métodos de reembolso:
+**Posso receber o reembolso em outra forma de pagamento?**
+O reembolso volta sempre para a forma de pagamento usada na compra.
 
-- Método de pagamento utilizado na compra
-- Cupom no aplicativo
+**O vendedor pode me devolver o dinheiro diretamente?**
+Pagamentos e reembolsos são feitos sempre pelo app, para a sua segurança. Não faça pagamentos fora da Jamble.
 
-Após a emissão do reembolso, pode levar até 30 dias para que o valor apareça na conta bancária do usuário. A Jamble não é responsável por eventuais atrasos nesse processo.
+## Precisa de ajuda?
 
-## Monitoramento de reembolsos e prevenção de abusos
-
-O Jamble monitora ativamente a atividade de reembolsos. Solicitações podem ser recusadas caso:
-
-- O comprador já tenha recebido reembolsos que somem mais de 20% do volume total de compras
-- O padrão de solicitações indique comportamento abusivo ou fraudulento
-
-## Reembolsos de acordo com o status do pedido
-
-Os reembolsos são processados conforme o status do pedido:
-
-- Pedido Entregue: apenas o valor do produto poderá ser reembolsado
-- Pedido Não Entregue: o valor total pago (incluindo o frete) poderá ser reembolsado
-
-As decisões de reembolso são finais após o processamento.
+Fale com a gente pelo chat do app.

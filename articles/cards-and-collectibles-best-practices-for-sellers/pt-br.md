@@ -1,166 +1,160 @@
-# Cards e Colecionáveis, Melhores Práticas para Vendedores
+# Cards e Colecionáveis: Boas Práticas para Vendedores
 
 ## O que você vai aprender
 
-Este guia cobre as melhores práticas para vender trading cards, figuras colecionáveis e itens relacionados na Jamble no Brasil. Você vai aprender como descrever a condição com precisão, tirar fotos que vendem, configurar suas listagens e usar Pack Opening para boosters lacrados.
+Este guia reúne boas práticas para vender cartas, figurinhas, carrinhos e bonecos colecionáveis na Jamble. Você vai ver quais campos o anúncio pede em cada categoria, como escolher a condição certa, como tirar fotos que vendem e como funciona a **Abertura ao Vivo** de produtos lacrados.
 
 ## Antes de começar
 
 Você precisa de:
+
 - Uma conta de vendedor aprovada na Jamble
-- Cards ou colecionáveis para vender com conhecimento claro da condição
-- Boa iluminação e um fundo escuro liso para fotos
+- Os itens em mãos, para conferir a condição de cada um
+- Boa luz e um fundo liso para as fotos
 
-## Como uma listagem completa fica
+## As categorias de colecionáveis
 
-Uma listagem bem feita coloca tudo o que o comprador precisa em poucos campos. Veja um exemplo real preenchido para uma Charizard VMAX, Shining Fates.
+Ao criar um produto, você escolhe a **Categoria**. Para colecionáveis, as principais são:
 
-![Tela Novo produto preenchida com Charizard VMAX, Shining Fates, NM, categoria Pokémon TCG, condição Novo sem etiquetas, perfil Carta, R$ 450,00](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cards-and-collectibles-best-practices-for-sellers__sample-listing__pt-br__v2.png)
+- **TCG:** Cartas de Pokémon, Magic: The Gathering, Cartas de Yu-Gi-Oh!, Cartas de One Piece, Cartas de Lorcana e Outros TCG
+- **Cards Esportivos:** Cards de Futebol, Basquete, Futebol Americano, Beisebol, Hockey, Corrida, Luta e Outros Cards Esportivos
+- **Figurinhas:** figurinhas avulsas, pacotinhos, caixas e álbuns
+- **Carros Miniatura:** Hot Wheels, Matchbox, Maisto, Burago, Greenlight, Mini GT, Tarmac Works, Kyosho e Outros Diecast
+- **Bonecos:** Funko Pop!, Action Figures e Outros Bonecos
 
-O **Título** inclui nome da card, set e condição abreviada (NM). A **Categoria** é Trading Cards Pokémon TCG. A **Condição** é Novo sem etiquetas com nota de detalhe. O **Perfil de remessa** é **Carta** para uma única card em toploader. O **Preço inicial** é R$ 450,00.
+Escolha sempre a categoria mais específica. Os campos e as condições do anúncio mudam conforme a categoria.
 
-Use esta estrutura como modelo para qualquer card valiosa. Quanto mais específico o título, mais fácil o comprador encontra você na busca.
+## Os campos de cada categoria
 
-## O que entra nesta categoria
+Depois de escolher a categoria, o app mostra os campos daquela categoria. Os principais são:
 
-- **Trading Card Games (TCG)**, Pokémon, Magic: The Gathering, Yu-Gi-Oh!, One Piece e mais
-- **Produtos lacrados**, booster packs, booster boxes, starter decks, bundles
-- **Figuras colecionáveis**, Funko Pop!, action figures, model kits
-- **Carrinhos colecionáveis**, Hot Wheels, Matchbox, Mini GT, Majorette
-- **Outros colecionáveis**, figurinhas, álbuns, pins, edições limitadas
+**TCG**
+- **Condição** e **Tipo** (obrigatórios). O Tipo diz se é uma Carta Individual ou um produto lacrado, como Booster Pack, Booster Box, Elite Trainer Box ou Tin
+- **Idioma**
+- **Raridade** (em Pokémon e Lorcana, para cartas individuais)
+- **Serviço de Classificação** e **Nota**, para cartas graduadas (PSA, Beckett, CGC ou SGC)
 
-## Diretrizes de condição para cards
+**Cards Esportivos**
+- **Condição** e **Tipo** (obrigatórios), por exemplo Carta Individual, Booster Pack, Hobby Box ou Blaster Box
+- **Marca**, **Idioma** e **Autografado**
+- **Serviço de Classificação** e **Nota**, para cards graduados
 
-Cards exigem padrões de condição específicos. A Jamble usa cinco níveis. Veja cada um traduzido para o vocabulário do mercado de TCG (Mint, NM, LP, MP, HP).
+**Figurinhas**
+- **Condição** (obrigatória)
+- **Formato**, por exemplo Figurinha Avulsa, Pacotinho (Lacrado), Caixa (Lacrada) ou Álbum Completo
+- **Coleção**
 
-![Guia de condição com cinco níveis para cards de TCG, do PSA 10 Mint ao HP Heavily Played](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cards-and-collectibles-best-practices-for-sellers__condition-guide__pt-br__v2.png)
+**Carros Miniatura**
+- **Condição** e **Escala** (obrigatórias), por exemplo 1:64 ou 1:43
 
-Cada nível tem sua faixa de preço típica. **Novo com etiquetas** equivale a Mint ou PSA 10. **Novo sem etiquetas** é Near Mint. **Muito bom** é Light Play, ainda jogável. **Bom** é Moderately Played. **Satisfatório** é Heavily Played, com vincos ou rasgos.
+**Bonecos**
+- **Condição** (obrigatória)
+- Em Funko Pop!: **Formato**, **Coleção**, **Variante Chase** e **Exclusivo**
+- Em Action Figures: **Coleção** e **Escala** (obrigatória)
 
-Seja honesto. Compradores de TCG abrem disputa rápido se a card chegar pior do que descrita.
+Quanto mais campos você preencher, mais fácil fica para o comprador encontrar o seu item na busca e confiar no anúncio.
 
-### Tipos de imperfeições em cards
+## Escolha a condição certa
 
-Ao descrever a condição, esteja atento a estas imperfeições comuns:
+As opções de **Condição** dependem da categoria:
 
-- **Desgaste nas bordas**, perda de cor ou material ao longo das bordas e cantos
-- **Arranhões**, marcas na superfície da card por manuseio
-- **Arranhões superficiais**, grupos de arranhões leves ou opacidade na superfície
-- **Desgaste superficial**, perda de material mostrando camadas internas através da imagem
-- **Dobras e vincos**, linhas ou saliências de dobra ou pressão
-- **Defeitos de impressão**, cortes errados, centralização incorreta, borramento de tinta. Em alguns casos, ADICIONAM valor para colecionadores
+- **TCG e Cards Esportivos:** Novo, Mint, Quase Mint, Pouco Usado, Muito Usado, Danificado
+- **Carros Miniatura:** Novo, Mint, Quase Mint, Danificado
+- **Figurinhas e Bonecos:** Mint, Quase Mint, Bom, Danificado
 
-## Diretrizes de condição para figuras e caixas
+Cada opção mostra uma descrição no app. Algumas dicas:
 
-Para figuras Funko Pop, action figures e itens encaixotados, a condição da caixa pesa tanto quanto a condição do item. Use os mesmos cinco níveis adaptados:
+- **Produto lacrado:** use **Novo** em TCG, Cards Esportivos e Carros Miniatura
+- **Carta avulsa sem marcas:** **Mint** ou **Quase Mint**
+- **Bordas brancas, riscos ou vincos:** **Pouco Usado** ou **Muito Usado**
+- **Caixa ou blister amassado:** a embalagem conta. Escolha um nível abaixo e mostre o defeito nas fotos
 
-- **Novo com etiquetas**, caixa e item perfeitos. Sem amassados, rasgos ou marcas. Cantos perfeitos
-- **Novo sem etiquetas**, caixa pode ter 1 ou 2 imperfeições mínimas (pequeno amassado, rasgo mínimo) mas o item dentro está perfeito
-- **Muito bom**, caixa mostra alguns sinais de uso mas o item dentro está ótimo. Leve desgaste de prateleira
-- **Bom**, caixa tem danos visíveis (amassados, rasgos, amassamento) mas o item dentro está intacto
-- **Satisfatório**, caixa severamente danificada (rasgada, amassada, dano solar) mas o item dentro ainda é funcional
+Na dúvida, escolha um nível abaixo. [Veja todas as condições por categoria](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288101).
 
-**Para colecionadores "fora da caixa" (OOB):** se está vendendo a figura sem a caixa original, mencione claramente no título e na descrição.
+## Fotos que vendem
 
-## Como tirar fotos que vendem
+![Quatro fotos comparando o que fazer e o que evitar: fundo escuro com foco nítido e verso com toploader visível, contra reflexo de flash em carta foil e foto desfocada](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cards-and-collectibles-best-practices-for-sellers__photo-checklist__pt-br__v2.png)
 
-A foto é o que decide a venda. Use um fundo escuro liso, luz vinda de cima e foco nítido em cada imagem.
+Use um fundo liso, luz suave vinda de cima e foco nítido. Evite o flash em cartas holográficas ou foil, porque o reflexo esconde o desenho.
 
-![Quatro fotos comparando boas práticas e práticas a evitar, fundo escuro com foco contra reflexo de flash e foco desfocado](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cards-and-collectibles-best-practices-for-sellers__photo-checklist__pt-br__v2.png)
+**Cartas avulsas**
+1. Frente da carta, inteira e em foco
+2. Verso da carta
+3. Close dos defeitos: bordas, riscos, vincos
+4. A carta na sleeve ou no toploader
+5. Em cartas graduadas, a etiqueta com a nota
 
-À esquerda, **Faça**. Fundo escuro liso e foco nítido na frente da card. Verso da card e toploader visíveis para provar a proteção. À direita, **Evite**. Reflexo de flash em cards holográficas ou foil que apaga o desenho. Foto desfocada e desencaixada que esconde o estado real.
+**Produtos lacrados (boosters, boxes, pacotinhos)**
+1. Frente e verso da embalagem
+2. O lacre ou o plástico, para mostrar que não foi aberto
+3. Qualquer dano na embalagem
 
-### Para cards individuais
+**Carrinhos e bonecos na caixa**
+1. Frente da caixa ou do blister
+2. Lados, verso e cantos
+3. Qualquer dano: amassados, rasgos, desbotamento
+4. O item fora da caixa, se você vende sem embalagem (diga isso no título)
 
-1. **Frente da card**, bem iluminada, em foco, mostrando toda a face
-2. **Verso da card**, mostra o estado do verso e autenticidade
-3. **Close-up de defeitos**, desgaste nas bordas, arranhões, dobras
-4. **Card na sleeve ou toploader**, mostra como está armazenada e protegida
-5. **Múltiplas cards**, se vendendo um lote, mostre todas dispostas
+## Abertura ao Vivo
 
-### Para produtos lacrados (boosters, boxes)
+Nos produtos da sua live, você pode ativar **Abertura ao Vivo**: "Este item lacrado será aberto durante o show assim que for comprado". A opção aparece nos itens lacrados, como booster packs, boxes e outros produtos selados de TCG, e também nas outras categorias de colecionáveis.
 
-1. **Frente da embalagem**, mostre o produto completo
-2. **Verso**, mostra detalhes do produto e info do set
-3. **Lacre e plástico**, prove que o produto está lacrado e não aberto
-4. **Qualquer dano na embalagem**, amassados, rasgos ou problemas no plástico
+Como funciona:
 
-### Para figuras colecionáveis
+1. Ao criar o produto da live, ative **Abertura ao Vivo**
+2. Depois de pagar, o comprador escolhe se quer que você abra o item na live (**Abrir**) ou se prefere receber lacrado (**Manter lacrado**)
+3. Se o comprador não responder, o item fica lacrado
+4. Na sua lista de vendidos, cada compra mostra a escolha do comprador, como **Aberto** ou **Lacrado**
 
-1. **Frente da caixa**, vista completa mostrando a figura e a arte
-2. **Lados e verso**, mostra o estado da caixa de todos os ângulos
-3. **Close-up dos cantos**, caixas são julgadas pelos cantos
-4. **Qualquer dano**, amassados, rasgos, desbotamento solar, resíduo de adesivo
-5. **A figura em si**, se visível pela janela da caixa, ou se OOB
+Só abra o item quando o comprador escolher **Abrir**. Se ele escolher abrir, você abre na câmera e envia o que saiu do pacote. Se escolher manter lacrado, envie o produto fechado.
 
-## Pack Opening, abrir boosters durante o show
+Dicas para uma boa abertura:
 
-A Jamble suporta **Abertura do pacote**, um modo especial para itens colecionáveis como booster packs. Você abre o pacote ao vivo durante seu show, e os compradores veem o que tem dentro em tempo real.
+- **Crie expectativa.** Não tenha pressa para revelar as cartas
+- **Mostre cada carta para a câmera.** Segure firme e perto, para todos lerem o nome e verem a arte
+- **Fale o nome do comprador.** Ele está acompanhando a abertura da compra dele
 
-Para ativar, abra a tela de criação de produto, role até a seção **Abertura do pacote** e ligue o toggle.
+## Na live
 
-![Toggle Abertura do pacote ativado com subtítulo Abra os pacotes durante a live e descrição sobre boosters de Pokémon](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cards-and-collectibles-best-practices-for-sellers__pack-opening-toggle__pt-br__v2.png)
+- **Diga o que está mostrando.** Nem todo mundo é especialista. Fale o nome da carta, a coleção, a raridade e a condição
+- **Organize a ordem.** Comece com itens de menor valor e guarde os melhores para o meio ou o fim da live
+- **Use Ofertas em Tempo Real para itens raros.** A disputa entre compradores costuma valorizar cartas muito procuradas. Para itens comuns em volume, **Comprar Agora** é mais rápido
 
-O toggle **Abertura do pacote** transforma o produto em um booster aberto ao vivo. O comprador recebe as cards que sairem do pacote, não o pacote em si.
+## Título e envio
 
-Pack Opening é um dos formatos mais empolgantes da Jamble. Dicas para uma ótima abertura:
+**Título:** inclua o nome, a coleção e o detalhe que importa.
+- **Bom:** "Charizard VMAX, Shining Fates, Quase Mint"
+- **Ruim:** "Carta rara de Pokémon"
 
-- **Crie suspense.** Não apresse a abertura dos pacotes. Deixe sua audiência aproveitar a revelação
-- **Reaja de forma genuína.** Sua empolgação com as pulls é contagiante
-- **Mostre as cards para a câmera.** Segure firme e perto para que os compradores possam ler o nome e ver a arte
-- **Use o perfil de envio correto.** Cards individuais usam o perfil **Carta**. Pacotes lacrados usam **Booster**
-
-## Vendendo cards individuais e figuras
-
-- **Descreva o que está mostrando.** Nem todo mundo assistindo é especialista. Nomeie a card, o set, a raridade
-- **Mencione a condição claramente.** "Esta está Near Mint, leve desgaste na borda superior direita"
-- **Agrupe cards por valor.** Comece com itens de menor valor para aquecer a audiência, guarde os melhores para depois
-- **Use Ofertas em tempo real para itens raros.** Uma Charizard PSA 10 vai conseguir mais através de competição do que com preço fixo
-
-## Dicas de listagem
-
-### Título
-
-Inclua o nome da card, o set e detalhes importantes.
-
-- **Bom:** "Charizard VMAX, Shining Fates, NM"
-- **Ruim:** "Card rara de Pokémon"
-
-### Perfis de envio
-
-- **Cards individuais ou pequenos lotes**, perfil **Carta**
-- **Booster packs ou lotes de cards**, perfil **Booster**
-- **Booster boxes**, **Pacotes pequenos** ou **Pacotes médios**
-- **Figuras Funko Pop**, **Itens volumosos** (na caixa) ou **Roupas padrão** (OOB)
+**Perfil de envio:** escolha **Automático** para o app calcular peso e tamanho pelo tipo de item, **Informar peso e tamanho** para escolher as faixas você mesmo, ou um perfil de envio que você criou.
 
 ## Dicas importantes
 
-- **Use sleeves e toploaders.** Sempre proteja cards em sleeves durante armazenamento e envio. Os compradores esperam que as cards cheguem protegidas
-- **Envie com cuidado.** Embale cards em "sanduíche" de papelão ou mailer rígido. Nunca envie cards em envelopes comuns sem proteção
-- **Declare qualquer modificação.** Cards autografadas, arte alterada ou cards reclassificadas devem ser claramente descritas
-- **Conheça seu mercado.** Colecionadores brasileiros são apaixonados por Pokémon, One Piece e Yu-Gi-Oh!. Saiba o que está em tendência no mercado local
-- **Autenticidade de produtos lacrados.** Certifique-se de que produtos lacrados são de distribuidores autorizados. Produtos violados ou relacrados são proibidos
+- **Proteja as cartas.** Use sleeve e toploader e embale entre papelão firme. Nunca envie cartas soltas em envelope comum
+- **Declare qualquer modificação.** Cartas autografadas, alteradas ou com arte personalizada precisam estar claras no anúncio
+- **Venda só produto original.** Produtos falsificados, violados ou relacrados não são permitidos
+- **Abra só com a escolha do comprador.** Na Abertura ao Vivo, siga sempre a opção que o comprador escolheu
 
 ## Perguntas frequentes
 
-**Preciso classificar minhas cards antes de vender?**
-Não. Muitos colecionadores compram cards "raw" (não classificadas) na Jamble. Apenas descreva a condição com precisão. Cards classificadas (PSA, BGS, CGC) geralmente vendem por mais, mas a classificação é opcional.
+**Preciso graduar minhas cartas antes de vender?**
+Não. Muitos compradores procuram cartas não graduadas. Descreva a condição com cuidado. Se a carta for graduada, preencha **Serviço de Classificação** e **Nota**.
 
-**Posso vender cards de qualquer TCG?**
-Sim. Pokémon, Magic, Yu-Gi-Oh!, One Piece e outros TCGs são bem-vindos na Jamble. Selecione a categoria apropriada ao listar.
+**Posso vender cartas de qualquer TCG?**
+Sim. Pokémon, Magic, Yu-Gi-Oh!, One Piece, Lorcana e outros TCGs são bem-vindos. Se o seu jogo não estiver na lista, use **Outros TCG**.
 
-**Como devo enviar cards individuais?**
-Coloque a card em uma penny sleeve, depois em um toploader ou suporte rígido. Embale o toploader em um pedaço de papelão para proteção extra. Use o perfil de envio **Carta**.
+**Qual condição uso para um booster lacrado?**
+Use **Novo**.
 
-**Qual é o melhor modo de venda para cards raras?**
-Para cards valiosas ou procuradas, **Ofertas em tempo real** geralmente consegue o melhor preço. A competição entre compradores eleva o preço. Para commons em volume ou itens padrão, **Buy It Now** é mais eficiente.
+**O comprador pode escolher não abrir o produto?**
+Sim. Depois de pagar, ele escolhe **Abrir** ou **Manter lacrado**. Se não responder, o item fica lacrado.
 
-**Posso vender booster packs abertos?**
-Não. Uma vez que o booster pack é aberto, você vende as cards individuais de dentro, não o pacote vazio. Produtos lacrados devem estar genuinamente lacrados e não abertos.
+**Posso vender um booster que já foi aberto?**
+Não como lacrado. Depois de aberto, venda as cartas que saíram do pacote.
 
-**Como funciona o Pack Opening durante um show?**
-Ative o toggle **Abertura do pacote** ao configurar o produto. Durante o show, você abre o pacote na câmera e o conteúdo vai para o comprador. É um dos formatos mais populares da Jamble.
+**Como envio cartas avulsas?**
+Coloque a carta em uma sleeve e depois em um toploader, e proteja com papelão. Na hora de criar o produto, use **Automático** no perfil de envio ou informe peso e tamanho.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app.

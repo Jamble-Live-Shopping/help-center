@@ -2,92 +2,81 @@
 
 ## O que você vai aprender
 
-Este guia explica como o sistema de recompensas da Jamble funciona, como compradores ganham e usam **gemas** durante seus shows, e como a **Classificação de Vendedores** mensal recompensa quem fica no topo.
+Este guia explica o que são as **gemas**, como os compradores ganham e usam gemas nas suas lives, e como funciona o **Ranking Mensal de Vendedores**.
 
-## Antes de começar
+## O que são as gemas
 
-Você precisa de:
-- Uma conta de vendedor aprovada na Jamble
-- Entender como funcionam os shows ao vivo
+As gemas são a moeda de apoio da Jamble. Elas não têm valor em dinheiro, não são cupons e não viram desconto. Elas servem para os compradores enviarem emojis animados durante as lives e mostrarem apoio aos vendedores.
 
-## Como o sistema de recompensas funciona
+Como vendedor, você não precisa fazer nada para participar. Tudo acontece automaticamente durante suas lives.
 
-A Jamble tem um sistema de recompensas que beneficia compradores e vendedores ao mesmo tempo:
+## Como os compradores ganham gemas
 
-1. **Compradores ganham gemas** assistindo shows e completando desafios
-2. **Compradores usam gemas** para enviar emojis durante seus shows ao vivo
-3. **Vendedores ganham pontos de classificação** quando compradores enviam gemas no seu show
-4. **Os vendedores no topo da classificação** ganham mais visibilidade na plataforma
+Os compradores ganham gemas usando o app. Tudo fica na aba **Ganhos**:
 
-Como vendedor, você não precisa fazer nada especial para participar. Acontece automaticamente durante seus shows. Entender o sistema te ajuda a engajar sua audiência.
+- **Assistindo lives**: na seção **Assista e ganhe**, o app acompanha o tempo assistido no dia. É só converter esse tempo em gemas antes da meia-noite
+- **Completando desafios**: a aba mostra desafios e outras ações que dão gemas, como convidar amigos
 
-## Como compradores ganham gemas
+As formas de ganhar gemas podem mudar com o tempo. As opções disponíveis aparecem sempre na aba **Ganhos**.
 
-A pedagogia das gemas começa na tela de **Recompensas**, dentro do app. Compradores acumulam gemas gratuitamente assistindo shows e completando desafios.
+## Como os compradores usam gemas na sua live
 
-![Tela de Recompensas com Assista e ganhe e botão Obter gemas grátis](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/rewards-gems-and-seller-ranking__gems-watch-earn__pt-br__v2.png)
-
-A barra de progresso de **Assista e ganhe** mostra o tempo assistido no dia. Ao tocar em **Obter gemas grátis**, o tempo é convertido em gemas antes da meia noite. Os **Desafios** são tarefas curtas, como assistir 3 shows na semana ou convidar um amigo, que recompensam mais gemas.
-
-Compradores também podem comprar gemas, mas o foco do sistema é dar para quem participa da plataforma. Quanto mais ativos, mais gemas acumulam.
-
-## Como compradores usam gemas no seu show
-
-Durante seu show ao vivo, compradores tocam no menu de emojis e escolhem um emoji para enviar. Cada emoji custa uma certa quantidade de gemas do comprador.
+Durante a live, o comprador abre o menu de emojis, escolhe um emoji e envia. Cada emoji usa uma quantidade de gemas, mostrada no próprio menu.
 
 Quando um comprador envia um emoji:
 
-- Um emoji animado aparece na tela para todos verem
-- O comprador demonstra apoio a você como vendedor
-- As gemas usadas se transformam em **pontos de classificação para você**
+- A animação aparece na tela para todo mundo ver
+- O comprador mostra apoio a você
+- As gemas recebidas contam para a sua posição no ranking de vendedores
 
-Quanto mais emojis sua audiência mandar, mais pontos você acumula no mês.
+As gemas também contam nas batalhas. Para saber como as batalhas funcionam, veja o artigo [Batalhas](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288121).
 
-## Classificação de Vendedores
+## Ranking Mensal de Vendedores
 
-A Jamble mantém uma **Classificação de Vendedores mensal** acessível a partir do seu perfil. Ela compara você com outros vendedores ativos do mês.
+A Jamble tem um **Ranking Mensal de Vendedores** que compara os vendedores ao longo do mês. Sua posição aparece em um selo no seu perfil, e o ranking também pode ser aberto durante a live, pelo botão de ranking na tela.
 
-![Classificação de Vendedores com regras de pontos e leaderboard](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/rewards-gems-and-seller-ranking__seller-ranking__pt-br__v2.png)
+Sua pontuação vem de duas coisas:
 
-No topo, o card roxo mostra **as duas regras** que geram pontos: **apoio em gemas recebido** (emojis enviados pela sua audiência) e **vendas concluídas** durante o mês. Em seguida, a leaderboard lista os vendedores em ordem de **Pontuação**, com sua linha **Você** destacada na parte de baixo.
+- **Vendas**: o valor das compras feitas com você
+- **Gemas recebidas**: os emojis que sua audiência envia para você
 
-A classificação reseta no início de cada mês, então cada vendedor começa o mês do zero.
+A tela do ranking mostra as regras de pontuação atuais, a lista de vendedores por **Pontuação** e a sua posição. Quando houver recompensas para quem fica no topo, elas também aparecem nessa tela.
 
-### Onde vendedores bem classificados aparecem
+O ranking recomeça a cada mês, então todo mundo começa o mês do zero.
 
-Subir na classificação aumenta sua visibilidade na plataforma. Vendedores no topo:
+O ranking de vendedores é separado das batalhas. Cada um tem suas próprias regras e pontuação.
 
-- Aparecem mais nas recomendações e na busca
-- Constroem reputação com compradores que conferem o ranking
+## Como subir no ranking
 
-## Como subir na classificação
-
-1. **Faça shows com regularidade.** Consistência importa mais do que um show grande isolado. Shows regulares te mantêm na classificação
-2. **Engaje sua audiência.** Compradores que curtem seu show enviam mais emojis (gemas) para te apoiar
-3. **Venda produtos com qualidade.** Volume de vendas faz parte da fórmula da classificação. Mais vendas, mais pontos
-4. **Construa uma audiência fiel.** Espectadores recorrentes que conhecem seu show enviam mais apoio em emojis
-5. **Entregue uma boa experiência.** Envie rápido, seja honesto sobre o estado do produto e comunique bem
+1. **Faça lives com regularidade.** Constância conta mais do que uma live grande isolada
+2. **Engaje sua audiência.** Converse com o chat, agradeça os emojis e mantenha a energia
+3. **Venda bem.** Suas vendas contam pontos, então tenha produtos que sua audiência procura
+4. **Construa uma audiência fiel.** Quem volta sempre às suas lives costuma apoiar mais
+5. **Entregue uma boa experiência.** Envio rápido e descrição honesta trazem compradores de volta
 
 ## Dicas importantes
 
-- **Você não precisa gastar dinheiro.** A classificação roda com a atividade dos compradores e seu desempenho de vendas. Não há nada que você precise comprar
-- **Emojis são sinal de engajamento.** Se sua audiência envia muitos emojis, é sinal de que estão curtindo. Agradeça e mantenha a energia
-- **Reset mensal significa novas oportunidades.** Mesmo que tenha tido um mês fraco, o próximo começa do zero. Mantenha a consistência
+- **Você não precisa gastar nada.** O ranking depende das suas vendas e do apoio da sua audiência
+- **Emojis mostram engajamento.** Se sua audiência envia muitos emojis, é sinal de que está gostando da live
+- **Todo mês é uma nova chance.** Mesmo depois de um mês fraco, o próximo começa do zero
 
 ## Perguntas frequentes
 
-**Eu ganho dinheiro com as gemas ou com os emojis?**
-O sistema de gemas e emojis contribui para sua classificação e visibilidade, não diretamente para sua receita. Sua renda vem das vendas de produtos. Mas classificação mais alta significa mais visibilidade, o que tende a trazer mais compradores aos seus shows.
+**Eu ganho dinheiro com as gemas?**
+Não. As gemas não têm valor em dinheiro. Elas contam para o ranking e para as batalhas. Sua renda vem das suas vendas.
 
-**Posso comprar gemas como vendedor?**
-O sistema de gemas é pensado para os compradores. Como vendedor, seu foco é fazer ótimos shows e vender produtos. Os pontos de classificação vêm do engajamento dos compradores com o seu conteúdo.
+**As gemas são cupons?**
+Não. Gemas servem para enviar emojis nas lives. Cupons dão desconto no frete e são outra coisa.
 
-**Com que frequência a classificação atualiza?**
-A classificação é mensal. Sua posição atualiza ao longo do mês com base nos pontos acumulados, e reseta no primeiro dia do mês seguinte.
+**Com que frequência o ranking muda?**
+Sua posição é atualizada ao longo do mês conforme você soma pontos, e o ranking recomeça no início do mês seguinte.
 
-**Quais ações contam para a classificação?**
-Duas coisas: o **apoio em gemas** que sua audiência te envia durante os shows (emojis) e suas **vendas concluídas** no mês. Os dois somam pontos no mesmo placar.
+**O que conta para o ranking?**
+Suas vendas e as gemas que sua audiência envia para você. As regras de pontuação aparecem na tela do ranking.
+
+**O ranking é a mesma coisa que as batalhas?**
+Não. As batalhas acontecem dentro de uma live e têm regras próprias. O ranking de vendedores soma o mês inteiro.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app.

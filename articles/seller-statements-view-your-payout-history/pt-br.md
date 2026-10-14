@@ -1,90 +1,86 @@
-# Extratos do Seller - Veja Seu Histórico de Saques
+# Ver seus ganhos e o histórico de saques
 
 ## O que você vai aprender
 
-Este guia explica como acessar e entender seu histórico financeiro na Jamble. Você vai aprender a abrir a tela Payouts History, ler cada entrada de saque e abrir um saque específico para ver os pedidos incluídos nele.
+Este guia mostra como ler a sua carteira na Jamble, acompanhar cada saque no **Histórico de saques** e ver quais vendas fazem parte de um saque.
 
 ## Antes de começar
 
 Você precisa de:
+
 - Uma conta de vendedor aprovada na Jamble
-- Pelo menos um saque concluído (para ter histórico a visualizar)
+- Sua conta de recebimento cadastrada na carteira
 
-## Passo a passo
+## Passo 1: Abra sua carteira
 
-### Passo 1: Abra sua carteira
+No app, abra **Ajustes** e toque em **Minha carteira**. No computador, abra **Carteira** no Seller Hub.
 
-Vá ao seu perfil, depois toque em **Settings** e depois em **My Wallet**.
+## Passo 2: Entenda cada parte da carteira
 
-### Passo 2: Abra o Payouts History
+- **Disponível para saque:** o valor que você pode sacar agora. Toque em **Sacar** para enviar esse valor para a sua conta bancária
+- **Dados bancários:** a conta que recebe os seus saques. Toque em **Atualizar** para corrigir seus dados
+- **Vendas pendentes:** pagamentos que ainda não foram liberados e vendas que ainda estão em andamento. Toque em **Saiba Mais** para abrir **Sobre vendas pendentes** e ver os prazos
+- **Recebimento Antecipado:** quando aparece, é a opção para receber mais cedo os pagamentos com cartão. Veja [Recebimento Antecipado](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/17588903)
+- **Histórico de saques:** a lista de todos os seus saques, no fim da tela
 
-No canto superior direito da tela da carteira, toque no **ícone de relógio** (ao lado do botão de ajuda). Isso abre a tela **Payouts History**.
+Se você mudou de CPF para CNPJ, a carteira pode mostrar a **Conta atual** e a **Conta anterior**, cada uma com o seu saldo.
 
-![Tela My Wallet com os ícones de ajuda e histórico no canto superior direito](./assets/mockups/seller-statements-view-your-payout-history__wallet-header__pt-br__v2.png)
+## Passo 3: Acompanhe seus saques
 
-### Passo 3: Revise seus saques
+No **Histórico de saques**, os saques mais recentes aparecem primeiro. Cada saque mostra:
 
-A tela Payouts History mostra todos os seus registros de saques, com os mais recentes no topo.
+- O número do saque
+- O valor
+- O status
+- A data
 
-![Lista Payouts History com quatro entradas: três Completed em verde e uma Failed em vermelho](./assets/mockups/seller-statements-view-your-payout-history__payouts-history__pt-br__v2.png)
+Se um saque falhar, o motivo aparece logo abaixo do status.
 
-Cada entrada de saque mostra quatro informações:
+Role a lista para ver saques mais antigos. Puxe a tela para baixo para atualizar.
 
-- **ID do saque**: um número de referência único para este saque
-- **Valor**: o valor em R$ que foi (ou tentou ser) transferido
-- **Status**: o estado atual (Created, Processing, Pending, Completed, Failed, Canceled)
-- **Data**: quando você solicitou o saque
+## Passo 4: Veja os detalhes de um saque
 
-### Passo 4: Toque em um saque para ver os detalhes
+Toque em um saque para abrir **Detalhes do saque**. A tela mostra cada venda incluída naquele saque, com o comprador, o produto, o número do pedido, o valor e a data.
 
-Toque em qualquer entrada da lista para abrir a tela **Payout Details**. Ela mostra o ID do saque no topo e a lista de pedidos que compõem aquele pagamento, com comprador, produto, número do pedido e valor.
+Use essa tela para conferir exatamente quais vendas entraram em cada saque.
 
-![Tela Payout Details com dois pedidos: um produto Pokemon TCG e um Diecast, ambos com status e valor em R$](./assets/mockups/seller-statements-view-your-payout-history__payout-details__pt-br__v2.png)
+## Status dos saques
 
-### Passo 5: Role para ver registros antigos
+- **Criado:** a solicitação foi recebida
+- **Pendente:** a transferência está sendo processada
+- **Concluído:** o dinheiro foi enviado para a sua conta bancária
+- **Falhou:** a transferência não foi concluída. Veja o motivo no saque
+- **Cancelado:** o saque foi cancelado
 
-Role para baixo na lista de saques para carregar mais entradas. Você também pode **puxar para baixo para atualizar** a tela e ver as últimas atualizações.
-
-## Entendendo seus extratos
-
-### Cores dos status
-
-- **Roxo** (Created, Processing, Pending): seu saque está em andamento
-- **Verde** (Completed): o dinheiro foi depositado no seu banco
-- **Vermelho** (Failed, Canceled): algo deu errado ou o saque foi interrompido
-
-### Lendo seu histórico
-
-Seu Payouts History é o registro de cada saque que você fez. Use-o para:
-- **Verificar depósitos**: confira saques Completed com seus extratos bancários
-- **Acompanhar saques pendentes**: veja se um saque recente ainda está sendo processado
-- **Identificar problemas**: detecte saques Failed que precisam de atenção
-- **Manter registros**: mantenha um histórico dos seus ganhos na Jamble
+Se um saque está como **Criado** ou **Pendente** e o dinheiro ainda não chegou, toque em **Não recebeu ainda?** e depois em **Atualizar** para ver o status mais recente.
 
 ## Dicas importantes
 
-- **Verifique o Payouts History após cada saque.** Crie o hábito de conferir se seus saques atingem o status Completed
-- **Guarde seus IDs de saque.** Se precisar contatar o suporte sobre um saque específico, ter o ID torna a resolução muito mais rápida
-- **Saques falhados precisam de ação.** Se vir um status Failed, volte à sua carteira, verifique seus dados bancários e solicite um novo saque
-- **Seu saldo na carteira é separado do histórico de saques.** A carteira mostra seu saldo disponível atual. O Payouts History mostra o registro de todos os saques passados
+- **Confira o histórico depois de cada saque.** Veja se ele chega em **Concluído**
+- **Guarde o número do saque.** Se precisar falar com o suporte, ele ajuda a resolver mais rápido
+- **Saldo e histórico são coisas diferentes.** A carteira mostra o que você pode sacar agora. O histórico mostra os saques que você já fez
+- **O valor costuma chegar em até 5 dias úteis**, dependendo do seu banco
 
 ## Perguntas frequentes
 
-**Posso exportar meu histórico de saques?**
-No momento, o histórico de saques só pode ser visualizado no app. Para fins fiscais ou contábeis, você pode tirar screenshots ou anotar os detalhes manualmente.
+**Onde vejo quanto ganhei?**
+Em **Minha carteira**. O valor que você já pode sacar aparece em **Disponível para saque** e as vendas em andamento ficam em **Vendas pendentes**.
 
-**Até onde vai o histórico?**
-Todo o seu histórico de saques desde que você começou a vender na Jamble está disponível. Role para baixo para carregar registros mais antigos.
+**Por que o valor do saque não é o que eu esperava?**
+O saque envia todo o saldo de **Disponível para saque** no momento do pedido. As vendas que ainda estavam em **Vendas pendentes** entram em um próximo saque, quando ficarem disponíveis.
 
-**Posso ver quais pedidos compõem um saque?**
-Sim. Toque em qualquer saque na lista para abrir Payout Details, que mostra cada pedido incluído naquele pagamento (comprador, produto, número do pedido e valor).
+**Posso ver quais vendas fazem parte de um saque?**
+Sim. Toque no saque no **Histórico de saques** para abrir **Detalhes do saque**.
 
-**Por que vejo um saque Failed?**
-Um saque falha quando a transferência PIX para seu banco não pôde ser concluída, geralmente por dados bancários incorretos. Verifique e atualize suas informações bancárias, depois solicite um novo saque.
+**Meu saque está Pendente há alguns dias. É normal?**
+Sim. O saque costuma chegar em até 5 dias úteis, dependendo do seu banco. Se passar disso, fale com o suporte.
 
-**O valor não corresponde ao que eu esperava. Por quê?**
-Saques transferem todo o seu saldo disponível na carteira no momento da solicitação. Se alguns pedidos ainda estavam pendentes quando você sacou, esses ganhos não foram incluídos. Eles estarão disponíveis no seu próximo saque depois que os pedidos forem concluídos.
+**O que faço se um saque falhar?**
+Veja o motivo mostrado no saque, confira seus **Dados bancários** e peça um novo saque. Se o problema continuar, veja [Resolver problemas com ganhos e saques](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288151).
+
+**Posso ver meus ganhos por live?**
+A carteira mostra o total. Para ver cada venda, abra **Ajustes** > **Minhas vendas**.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app.

@@ -195,12 +195,12 @@ Vários itens podem ser enviados na mesma caixa, dependendo do peso total.
 
 Os vendedores são responsáveis por:
 
-- Confirmar as vendas da Loja (as vendas feitas em live já chegam confirmadas)
+- Confirmar as vendas. As vendas da live são confirmadas no painel da live, em **Confirmar Vendas**, depois que a live termina. As vendas da Loja são confirmadas uma a uma, em **Revisar vendas pendentes**
 - Selecionar a preferência de nota fiscal
 - Gerar a etiqueta de envio
 - Postar os itens dentro do prazo. Ele costuma ser de cerca de 10 dias depois da confirmação, e pode chegar a até 20 dias em situações excepcionais, como uma greve dos Correios. O prazo exato aparece no pedido, em **Prazo de envio**
 
-1. Confira os itens de cada pedido. Se for uma venda da Loja, confirme a venda primeiro.
+1. Confira os itens de cada pedido e confirme as vendas primeiro, dentro do tempo mostrado no app.
 2. Preencha as informações fiscais solicitadas no app, conforme o seu cadastro.
 3. Gere a etiqueta, imprima e embale os produtos com proteção adequada. Você pode imprimir pelo app ou direto do computador, no Seller Hub.
 4. Cole a etiqueta de forma legível e leve o pacote a uma agência dos Correios.

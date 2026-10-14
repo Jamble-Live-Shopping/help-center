@@ -1,90 +1,88 @@
 # Apply to Sell on Jamble
 
-## What you'll learn
+## What you will learn
 
-This guide explains how to sign up to become a seller on Jamble, what information you need, and what to expect after submitting your application.
+This guide explains how to apply to sell live on Jamble, what to expect after you send your application, and what to do right after you are approved.
 
 ## Before you start
 
 You need:
+
 - The Jamble app installed on your phone
-- A Jamble account (a buyer account works fine)
-- To be in Brazil with a Brazilian phone number (+55)
-- To be 18 years old or older
-- Photos of the products you want to sell (Pokémon cards, Hot Wheels, collectibles)
+- A Jamble account (your buyer account works)
+- To live in Brazil and have a Brazilian mobile number (+55)
+- To be 18 or older and have a valid CPF
 
-## Find the application in the app
+## Where to find the application
 
-There are three paths in the app, and they all open the same application:
+You apply through the app:
 
-- **On your profile:** tap the **Apply to Sell Live** button next to your information
-- **In settings:** open Settings and tap **Apply to go Live** in the IMPORTANT section
-- **Watching a show:** tap the menu and select **Apply to go Live**
+- **On iPhone:** on your profile, tap **Começar a Vender** (Start selling). You also find the option in **Ajustes** (Settings), under **Inscreva-se para entrar no ar** (Apply to go live)
+- **On Android:** on your profile, tap **Torne-se um Vendedor** (Become a seller)
 
-![Settings with IMPORTANT section and Apply to go Live option](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/apply-to-sell-on-jamble__settings-apply-to-sell__en__v2.png)
+Both paths open the same form. You cannot apply through the Seller Hub on a computer.
 
-## Fill out the application form
+## Fill out the form
 
-The form opens inside the app and takes about **5 minutes** to complete. You go through a few pages:
+The form opens inside the app and takes a few minutes. Among other things, it asks for:
 
-**Page 1: Guidelines and age verification**
-- Read and confirm that you understand Jamble's Community Guidelines
-- Confirm that you're 18 years old or older
+- Your contact details
+- What you want to sell (for example, "graded Pokémon TCG cards" or "Hot Wheels Treasure Hunt")
+- Your social media, if you have any
 
-**Following pages:**
-- **Your name and contact information**
-- **What you sell:** describe the products (ex: "graded PSA Pokémon TCG cards" or "Hot Wheels Treasure Hunt and RLC")
-- **Your social media:** Instagram or other profiles where you already sell or show products
+Be specific and use true information. This helps the review.
 
-Be as specific as possible. The team reviews each application personally, and clear information speeds up approval. Sending wrong personal information or random photos leads to rejection.
+## Wait for the answer
 
-## Wait for review
+In most cases the answer is quick, but it can take up to 14 days. You get a notice when your application is approved.
 
-After you submit, your application is reviewed by the Jamble team. Our team may take up to **14 days** to give you a final decision.
+While your application is under review, on iPhone the option in **Ajustes** shows **Vendedor ao vivo: inscrição em análise** (Live seller: application in review). If you try to apply again, the app shows the **Inscrição pendente** (Pending application) alert. Tap **Ok, vou aguardar!** (Ok, I will wait!) to close it, or **Entre em contato** (Reach out) to talk to us.
 
-While your application is under review, please don't apply again or contact support about the status. If you try to open a new application, the app shows this message:
+## What if I am not approved?
 
-![Pending Application alert with Reach out and Ok I will wait! buttons](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/apply-to-sell-on-jamble__pending-application__en__v2.png)
+Jamble does not send a reason when an application is not approved. If you have not been approved after 14 days, talk to us through the app chat to learn the next steps.
 
-For any other questions while you wait, tap **Reach out** on the alert or open the app chat.
+## After approval: set up your account
 
-## Get approved and start selling
+When your application is approved, your account gets the seller tools. Before your first live, complete these steps:
 
-When your application is approved, you get a notification in the app, an email, and an SMS. Your account becomes a seller account and you get access to all seller tools.
+1. **Register your payout account.** In **Ajustes** > **Minha carteira** (My wallet), choose CPF or CNPJ and enter your bank details. Your earnings are withdrawn by bank transfer to this account and usually arrive within 5 business days, depending on the bank
+2. **Add your address.** It is used for shipping and is required to go live
+3. **Set up your shipping.** In **Ajustes** > **Preferências de envio** (Shipping preferences), choose the Correios services you offer
+4. **Schedule your first live** and add your products
 
-**What to do right after approval:**
-1. Add your bank details to receive payments via PIX
-2. Add your shipping address so you can go live
-3. Schedule your first Live
-4. List products in your Live
+If something is missing when you try to start a live or practice mode, the app shows what needs to be completed.
 
-## Tips to increase your chances of approval
+## Use the Seller Hub too
 
-- **You have a maximum of 2 applications.** If the first one is rejected, you can apply one more time. Improve your application based on feedback before resubmitting
-- **Be specific about what you sell.** "Collectibles" is vague. "Sealed and graded Pokémon TCG cards PSA 9-10" shows you know your niche
-- **Include good photos of your products.** Clear, well-lit photos of real products you have in stock make your application much stronger
-- **Set up payment and shipping right after approval.** The most common mistake new sellers make is going live without bank details and address ready. This delays your earnings
+Once approved, you can also sell from a computer in the Seller Hub, at jamble.com/seller/dashboard. Log in with the same phone number (or the same Google or Apple account) you use in the app. There you create products, schedule and run lives, print labels and follow your wallet. [See how to use the Seller Hub](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588489).
+
+## Important tips
+
+- **Be specific about what you sell.** "Collectibles" is vague. "Sealed Pokémon TCG and graded cards" shows you know your niche
+- **Use true information.** A real name, contact details and social media help the review
+- **Set up payment and shipping right after approval.** Without a payout account and an address, you cannot run your first live
 
 ## Frequently asked questions
 
 **How long does the review take?**
-Up to 14 days. You'll be notified via app, email, and SMS when your application is approved.
+In most cases the answer is quick, but it can take up to 14 days. You get a notice when you are approved.
 
-**What if my application is rejected?**
-You can apply one more time (maximum of 2 applications total). Take the opportunity to improve: better photos, clearer description of your niche, active presence on social media.
+**Why was my application not approved?**
+Jamble does not send the reason. Talk to us through the app chat to learn the next steps.
 
 **Can I apply from outside Brazil?**
-No. Jamble operates exclusively in Brazil. You need to be in Brazil with a Brazilian phone number.
+No. Jamble operates in Brazil, and you need a Brazilian mobile number.
 
-**Do I need to have products listed before I apply?**
-No, but you need photos of the products you plan to sell. The team wants to see what kind of items you'll be offering.
+**Can I apply from a computer?**
+No. You apply through the app. Once approved, you can use the Seller Hub on a computer.
 
 **Is there a minimum age to sell?**
-Yes, 18 years old or older.
+Yes, 18 or older.
 
-**Can I speed up my application?**
-No. Contacting support doesn't speed up the decision. Complete your application with detailed information and clear photos so the review is faster.
+**How do I receive my earnings?**
+Once the order is completed and the payment is released, the amount becomes available in your wallet. You withdraw it by bank transfer to your registered account. [See how you receive your earnings](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288155).
 
 ## Need help?
 
-Reach out through the app chat or email support@jambleapp.com.
+Talk to us through the app chat.

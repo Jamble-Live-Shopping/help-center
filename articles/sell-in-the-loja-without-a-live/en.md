@@ -73,5 +73,5 @@ No. Loja listings are for sale all the time, even when you are not live.
 **Can the buyer cancel the purchase?**
 Yes, as long as you have not confirmed the sale yet. After you confirm, the order moves on to shipping.
 
-**Why do I confirm Loja sales but not live sales?**
-In a live, the sale happens right away, with you there. In the Loja, a purchase can happen at any time, so you confirm the product is available before shipping.
+**Do live sales need confirmation too?**
+Yes, but in a different way. Live sales are confirmed all together on the live dashboard, with **Confirmar Vendas** (Confirm sales), after the live ends. In the Loja, a purchase can happen at any time, so you confirm or decline each sale separately.

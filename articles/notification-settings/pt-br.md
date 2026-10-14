@@ -2,90 +2,68 @@
 
 ## O que você vai aprender
 
-Este guia explica como gerenciar suas preferências de notificações push na Jamble. Você pode escolher exatamente quais notificações quer receber, para ficar informado sobre o que importa sem ser sobrecarregado.
+Este guia explica como escolher quais notificações você recebe da Jamble no seu celular, para ficar por dentro do que importa sem receber alertas demais.
 
 ## Antes de começar
 
 - Você precisa de uma conta na Jamble (comprador ou vendedor)
-- As notificações push devem estar habilitadas no seu dispositivo (a Jamble vai pedir para ativar se não estiverem)
+- As notificações da Jamble precisam estar permitidas nos ajustes do seu celular. Se estiverem desligadas, o app mostra um aviso pedindo para ativá-las
 
 ## Passo a passo
 
 ### Passo 1: Abra as configurações de notificações
 
-No app, toque no **ícone do seu perfil** no canto inferior direito, depois toque no **ícone de engrenagem** para abrir **Settings**. Role até a seção **Account** e toque em **"Notifications"**.
+No app, abra seu **perfil** e toque no **ícone de engrenagem** para abrir os ajustes. Na seção **Conta**, toque em **Notificações**.
 
-![Tela de Configurações mostrando a seção Conta com itens de menu: Informações Pessoais, Notificações, Editar meu Perfil e Perfis Bloqueados](./assets/mockups/notification-settings__settings-account-menu__pt-br.png)
+### Passo 2: Escolha o que quer receber
 
-### Passo 2: Verifique as permissões do dispositivo
+As notificações são organizadas em quatro seções. Cada seção tem um botão principal que liga ou desliga tudo daquela seção, e botões separados para cada tipo de notificação.
 
-Quando você abre a tela de Notifications, a Jamble verifica se as notificações push estão habilitadas no seu celular. Se estiverem desativadas, uma tela vai aparecer pedindo para ativá-las nas configurações do dispositivo. Sem isso, nenhum dos controles abaixo vai funcionar.
+**Promoções**
+- **Alertas promocionais**: novidades sobre ofertas, descontos e muito mais
 
-### Passo 3: Gerencie cada categoria de notificação
+**Atividade**
+- **Novos seguidores**: quando alguém começa a seguir você
+- **Mensagens**: quando você recebe uma mensagem
 
-Suas configurações de notificação são organizadas em **4 categorias**. Cada categoria tem um **botão principal** que liga ou desliga todas as notificações daquele grupo, e **botões individuais** para tipos específicos de notificação.
+**Lives**
+- **Lives recomendadas**: lives que podem te interessar
+- **Lives de quem eu sigo**: quando um vendedor que você segue entra ao vivo ou agenda uma live
+- **Lives salvas**: lembretes sobre as lives e os itens que você salvou
 
-#### Promotional
+**Transações**
+- **Atualizações sobre o status das transações**: mudanças nos seus pedidos e vendas, como confirmação, envio e entrega
 
-Receba novidades sobre ofertas especiais, descontos e muito mais.
+### Passo 3: Ligue ou desligue
 
-- **Promotional alerts** — Notificações sobre promoções e ofertas especiais da Jamble
-#### Activity
+Toque no botão de cada notificação para ligar ou desligar. Ao desligar o botão principal de uma seção, todas as notificações daquela seção são desativadas de uma vez.
 
-Atualizações sobre suas interações com outros usuários.
-
-- **Followers** — Quando alguém novo começa a te seguir
-- **Messages** — Quando você recebe uma mensagem direta
-- **Likes** — Quando alguém curte seu conteúdo
-#### Live Shows
-
-Alertas sobre shows e produtos que podem te interessar.
-
-- **Recommended shows** — Shows que a Jamble acha que você vai gostar com base nos seus interesses
-- **Shows from people I follow** — Quando um vendedor que você segue inicia ou agenda um show
-- **Bookmarked shows** — Lembretes sobre shows que você salvou
-- **Bookmarked product from show** — Quando um produto que você salvou aparece em um show ao vivo
-#### Transactions
-
-Acompanhe suas compras e vendas.
-
-- **Updates on transaction status** — Mudanças de status nos seus pedidos (enviado, entregue, etc.)
-### Passo 4: Ajuste configurações individuais
-
-Para ajustar uma notificação específica:
-
-1. Encontre a categoria (ex: **Live Shows**)
-2. Se a categoria estiver recolhida, toque no **botão principal** para expandir
-3. Ative (roxo) ou desative (cinza) cada configuração individual
-
-![Configurações de notificações Live Shows com alternadores para shows recomendados, criadores seguidos, shows marcados e produtos marcados](./assets/mockups/notification-settings__live-shows-notifications__pt-br.png)
-
-**Desligar o botão principal** desativa todas as notificações daquela categoria de uma vez. Ligar novamente restaura todas.
+As mudanças são salvas na hora. Não é preciso tocar em nenhum botão para salvar.
 
 ## Dicas importantes
 
-- **Mantenha "Transaction status" ligado.** Como vendedor, isso é essencial — você será notificado quando pedidos forem confirmados, enviados e entregues. Perder essas notificações pode atrasar seus envios e prejudicar sua reputação
-- **"Shows from people I follow" é ótimo para vendedores também.** Siga outros vendedores para saber quando eles entram ao vivo — você pode aprender com a forma como eles conduzem seus shows
-- **"Bookmarked product from show" é uma joia escondida para compradores.** Se você salvar um produto que gostou, a Jamble vai te notificar no momento em que ele aparecer em um show ao vivo, para você não perder a oportunidade
-- **As alterações são salvas instantaneamente.** Cada botão que você muda é salvo no servidor imediatamente — não precisa tocar em um botão de salvar
+- **Vendedor, mantenha Transações ligada.** Assim você fica sabendo de cada venda e de cada mudança nos pedidos, e não perde prazos de envio
+- **Ative Lives de quem eu sigo.** Você fica sabendo quando seus vendedores favoritos entram ao vivo
+- **Ative Lives salvas.** Quando você salva uma live, a Jamble pode te avisar quando ela começar
+- **As configurações valem para cada celular.** Se você usa a Jamble em mais de um aparelho, ajuste as notificações em cada um
 
 ## Perguntas frequentes
 
 **Onde encontro as configurações de notificação?**
-Vá para **Settings** (ícone de engrenagem no seu perfil) → seção **Account** → **Notifications**.
+No seu perfil, toque no ícone de engrenagem e, na seção **Conta**, toque em **Notificações**.
 
-**Não estou recebendo nenhuma notificação. O que fazer?**
-Primeiro, verifique se as notificações push estão habilitadas nas configurações do sistema do seu celular para o app Jamble. Depois, confira se os tipos específicos de notificação que você quer estão ativados dentro do app.
+**Não estou recebendo notificações. O que fazer?**
+Primeiro, confira se as notificações da Jamble estão permitidas nos ajustes do seu celular. Depois, confira no app se as notificações que você quer estão ligadas.
 
 **Posso desligar todas as notificações de uma vez?**
-Sim. Desligue o botão principal de cada uma das 4 categorias (Promotional, Activity, Live Shows, Transactions). Todas as notificações serão desativadas.
+Sim. Desligue o botão principal de cada uma das quatro seções.
 
-**Ainda vou ver alertas dentro do app se desligar as notificações push?**
-Sim. As configurações de notificação push controlam apenas o que é enviado para a central de notificações do seu celular. A atividade dentro do app (como mensagens aparecendo na sua caixa de entrada) continua funcionando normalmente.
+**Se eu desligar as notificações, ainda vejo as novidades no app?**
+Sim. Essas configurações controlam só os alertas enviados para o seu celular. Suas mensagens, pedidos e atividades continuam aparecendo normalmente dentro do app.
 
-**As configurações de notificação sincronizam entre dispositivos?**
-As preferências de notificação são vinculadas a cada dispositivo. Se você usa a Jamble em dois celulares, precisará configurar as notificações em cada um separadamente.
+**As configurações valem para todos os meus aparelhos?**
+Não. As preferências ficam salvas em cada celular. Se você usa a Jamble em dois aparelhos, configure cada um.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app.

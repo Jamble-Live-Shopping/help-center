@@ -87,6 +87,20 @@ When the seller starts the sale, the product shows to everyone in the live:
 - Each new offer goes up by a minimum amount, which grows as the price goes up. The button always shows the next offer amount
 - You can also set an **Oferta máxima** (max offer): the app makes offers for you automatically up to that limit
 
+## Max offer
+
+With the **Oferta máxima** (max offer), you set the highest amount you are willing to pay and the app makes offers for you.
+
+- The app only offers what is needed to keep you in the lead. You never pay more than your maximum, and you may pay less
+- If someone else sets a higher max offer, the app lets you know and you can increase yours
+- If two max offers have the same amount, the one that came in first wins
+
+Example: the current offer is $10 and you set a max offer of $20. If nobody else makes an offer, you win at $10. If someone else offers $15, the app automatically covers it with the next offer and you stay in the lead. If someone goes above $20, you lose the lead, unless you increase your maximum.
+
+## Pre-offer
+
+For some products in scheduled lives, the seller allows a **Pré-oferta** (pre-offer) before the live starts. You choose your maximum amount and, when the sale of that product starts, your pre-offer works as a max offer. You only pay if you win the sale.
+
 ## The timer
 
 - **Oferta em tempo real** (real-time offer): if an offer comes in during the last seconds, the timer goes back to a few seconds, to give other buyers a chance

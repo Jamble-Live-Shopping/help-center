@@ -8,8 +8,8 @@ last_sync: 2026-04-21T00:00:00Z
 
 locales:
   pt-br:
-    title: 'Modo de Prática — Teste Seu Show Antes de Ir ao Vivo'
-    description: ''
+    title: 'Modo de Prática: Teste Sua Live Antes de Ir ao Vivo'
+    description: 'Teste câmera, som e vendas em uma sessão privada antes da live. No Android, a opção se chama Modo Teste.'
   en:
-    title: 'Practice Mode - Test Your Show Before Going Live'
-    description: 'Test your camera, microphone, and show flow without an audience. Practice mode is private and resets before your real show.'
+    title: 'Practice Mode: Test Your Live Before Going Live'
+    description: 'Test your camera, sound and sales in a private session before your live. On Android it is called Modo Teste.'

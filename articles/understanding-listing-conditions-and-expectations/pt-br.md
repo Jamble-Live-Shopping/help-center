@@ -1,106 +1,163 @@
-# Entendendo as condições de listagem
+# Entendendo as Condições do Anúncio
 
 ## O que você vai aprender
 
-Quando você cria um anúncio, a Jamble pede a **condição** do item. Este guia explica as cinco condições disponíveis hoje, o que cada uma significa, e como escolher a condição certa.
+Quando você cria um anúncio, a Jamble pede a **Condição** do item. As opções mudam conforme a categoria: uma carta Pokémon não é avaliada como uma roupa ou uma moeda. Este guia mostra as condições de cada categoria, o que cada uma quer dizer e como escolher a certa.
 
 ## Antes de começar
 
-Você só precisa do item em mãos. A condição é parte do fluxo padrão de listagem na Jamble: o campo aparece entre **Cor** e **Preço**, e você escolhe uma das cinco opções.
+Tenha o item em mãos e boa luz para conferir cada detalhe. A condição é obrigatória em todas as categorias.
 
-## Onde a condição aparece no anúncio
+## Onde escolher a condição
 
-Ao criar um anúncio, o app mostra uma linha **Condição** na lista de informações do produto. Tocar nessa linha abre uma tela com as cinco condições disponíveis.
+1. Ao criar ou editar um produto, no app ou no Seller Hub, escolha primeiro a **Categoria**
+2. Depois disso, o campo **Condição** aparece com as opções daquela categoria
+3. Toque em **Condição** e escolha a opção que descreve o item. Cada opção mostra uma descrição curta, que o comprador também vê
 
-![Linha Condição no fluxo de criação de anúncio, posicionada entre Cor e Preço](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/understanding-listing-conditions-and-expectations__section-row__pt-br__v3.png)
+Se você trocar a categoria, escolha a condição de novo, porque as opções podem mudar.
 
-A linha **Condição** mostra a condição selecionada empilhada abaixo do título da linha, igual aos outros atributos da lista. Toque na linha para abrir a tela de seleção.
+## Condições por categoria
 
-## As cinco condições disponíveis
+**TCG (Cartas de Pokémon, Magic: The Gathering, Yu-Gi-Oh!, One Piece, Lorcana e Outros TCG)**
+- Novo
+- Mint
+- Quase Mint
+- Pouco Usado
+- Muito Usado
+- Danificado
 
-A tela **Condição** lista exatamente cinco opções, na ordem em que aparecem no app. Cada opção tem um título e uma descrição curta.
+**Cards Esportivos (Futebol, Basquete, Futebol Americano, Beisebol, Hockey, Corrida, Luta e outros)**
+- Novo
+- Mint
+- Quase Mint
+- Pouco Usado
+- Muito Usado
+- Danificado
 
-![Tela de seleção de condição com cinco opções: Novo com etiquetas, Novo sem etiquetas, Muito Bom, Bom, Satisfatório](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/understanding-listing-conditions-and-expectations__condition-picker__pt-br__v3.png)
+**Carros Miniatura (Hot Wheels, Matchbox, Mini GT, Maisto, Burago, Greenlight, Tarmac Works, Kyosho e outros)**
+- Novo
+- Mint
+- Quase Mint
+- Danificado
 
-Toque na opção que melhor descreve o item e confirme. A descrição abaixo de cada título é o texto exato que o comprador também vai ver quando consultar o anúncio.
+**Figurinhas**
+- Mint
+- Quase Mint
+- Bom
+- Danificado
 
-### Novo com etiquetas
+**Bonecos (Funko Pop!, Action Figures e Outros Bonecos)**
+- Mint
+- Quase Mint
+- Bom
+- Danificado
 
-**Nunca usado e impecável, completo com as etiquetas originais de compra.**
+**Video Games (Jogos, Consoles e outros)**
+- Novo
+- Mint
+- Quase Mint
+- Bom
+- Danificado
 
-Use quando o item nunca foi usado e ainda tem as etiquetas originais presas. Se você tirou as etiquetas mas nunca usou o item, use **Novo sem etiquetas**.
+**Quadrinhos & Mangá**
+- Mint
+- Quase Mint
+- Muito Bem Conservado
+- Bem Conservado
+- Muito Bom
+- Bom
+- Razoável
+- Ruim
 
-### Novo sem etiquetas
+**Moedas**
+- Flor de Cunho
+- Soberba
+- Muito Bem Conservada
+- Muito Bem Conservado
+- Bem Conservado
+- Bom
+- Ruim
 
-**Nunca usado, em perfeito estado, mas sem as etiquetas originais.**
+**Brechó (Roupas, Calçados, Bolsas, Acessórios e Outras Peças) e Artigos Esportivos**
+- Novo com etiquetas
+- Novo sem etiquetas
+- Muito Bom
+- Bom
+- Razoável
+- Danificado
 
-Use quando o item nunca foi usado mas as etiquetas não estão mais presas. Se chegou sem etiquetas direto da loja, ainda assim use esta opção: o comprador precisa saber.
+**Outros**
+- Novo
+- Novo com etiquetas
+- Novo sem etiquetas
+- Muito Bom
+- Bom
+- Razoável
+- Danificado
 
-### Muito Bom
+## O que cada condição quer dizer
 
-**Pouco usado, com sinais mínimos de desgaste, bem conservado.**
+Estas são as descrições que aparecem no app:
 
-Use quando o item já foi usado mas continua quase impecável. Sem manchas, sem rasgos, sem defeitos visíveis no olhar normal.
-
-### Bom
-
-**Usado com cuidado e bem conservado, com quaisquer defeitos claramente indicados.**
-
-Use quando há sinais leves de uso (pequenos arranhões, leve desbotamento, leve bolinha em tecido). Sem defeitos graves. Liste cada defeito visível na descrição ou mostre nas fotos.
-
-### Satisfatório
-
-**Usado frequentemente, com desgaste visível e defeitos notados.**
-
-Use quando o desgaste é evidente. Pode haver pequenas manchas, marcas, áreas mais gastas. Fotografe cada defeito de perto e descreva tudo no texto do anúncio.
+- **Novo:** item novo, nunca usado
+- **Novo com etiquetas:** nunca usado e impecável, completo com as etiquetas originais de compra
+- **Novo sem etiquetas:** nunca usado, em perfeito estado, mas sem as etiquetas originais
+- **Mint:** condição impecável, sem sinais de desgaste ou danos
+- **Quase Mint:** condição quase perfeita, com apenas sinais muito leves de desgaste
+- **Pouco Usado:** mostra alguns sinais de desgaste, mas ainda em boas condições no geral
+- **Muito Usado:** desgaste significativo, com danos ou defeitos visíveis
+- **Muito Bem Conservado:** pouco desgaste, ótima aparência, pequenas imperfeições de superfície
+- **Bem Conservado:** desgaste moderado com sinais visíveis de uso
+- **Muito Bom:** pouco usado, com sinais mínimos de desgaste, bem conservado
+- **Bom:** usado com cuidado e bem conservado, com quaisquer defeitos claramente indicados
+- **Razoável:** desgaste acentuado, mas ainda completo
+- **Ruim:** desgaste severo, grandes defeitos, mas identificável
+- **Danificado:** muito desgastado ou danificado, com defeitos graves que afetam a usabilidade
+- **Flor de Cunho** (moedas): nunca circulou, com brilho de cunhagem completo
+- **Soberba** (moedas): leve desgaste apenas nos pontos mais altos
+- **Muito Bem Conservada** (moedas): leve desgaste nos pontos altos, detalhes nítidos
 
 ## Como escolher a condição certa
 
-Siga uma regra simples: **na dúvida, escolha um nível abaixo**. É melhor o comprador receber um item ligeiramente melhor do que esperava do que ligeiramente pior.
+Siga uma regra simples: **na dúvida, escolha um nível abaixo**. É melhor o comprador receber um item um pouco melhor do que esperava do que um pouco pior.
 
-- Use **Novo com etiquetas** apenas se as etiquetas ainda estão presas
-- Use **Novo sem etiquetas** se nunca usou mas as etiquetas saíram
-- Use **Muito Bom** se o item foi pouco usado e está quase impecável
-- Use **Bom** se há sinais leves de uso mas sem defeitos graves
-- Use **Satisfatório** se há desgaste visível ou pequenos defeitos
+- **Produto lacrado de fábrica:** use **Novo** quando a categoria tiver essa opção. Em categorias sem **Novo**, como Bonecos e Figurinhas, use **Mint** só se a embalagem também estiver perfeita
+- **Cartas avulsas:** **Mint** e **Quase Mint** são para cartas sem marcas aparentes. Bordas brancas, riscos ou vincos pedem **Pouco Usado** ou **Muito Usado**
+- **Carros e bonecos na caixa:** a condição da caixa conta. Amassados, rasgos ou blister solto devem aparecer nas fotos e na descrição
+- **Roupas e calçados:** use **Novo com etiquetas** só se as etiquetas ainda estiverem presas
 
 ## O que escrever na descrição
 
-A condição é apenas o título. A **descrição** do anúncio (até 120 caracteres) e as **fotos** preenchem os detalhes. Quanto mais baixa a condição, mais detalhes você deve dar:
+A condição é só o resumo. A **descrição** e as **fotos** completam os detalhes. Quanto mais baixa a condição, mais detalhes você deve dar:
 
-- **Novo com etiquetas** e **Novo sem etiquetas**: confirme que nunca foi usado, mostre as etiquetas (ou sua ausência) em foto
-- **Muito Bom**: aponte qualquer pequena imperfeição que impede o item de ser "novo"
-- **Bom**: descreva onde está o desgaste e que tipo (arranhão, leve mancha, bolinha)
-- **Satisfatório**: liste cada defeito visível, fotografe de perto cada um
+- Mostre o item de frente e de verso
+- Fotografe de perto cada defeito: riscos, bordas gastas, amassados, manchas
+- Para cartas graduadas, mostre a nota e o serviço de classificação na foto e preencha os campos do anúncio quando a categoria tiver essa opção
 
-## Editando a condição depois de listar
+## Editar a condição depois de listar
 
-Você pode mudar a condição de um anúncio antes de ele ser vendido. Abra o anúncio e use o botão **Editar** para voltar ao formulário.
+Você pode mudar a condição enquanto o produto ainda não foi vendido. Abra o produto, toque em **Editar** e salve a nova condição.
 
 ## Dicas importantes
 
-- **Seja preciso.** O comprador toma a decisão de compra olhando suas fotos e a condição que você escolheu. Se o item chegar diferente, ele pode pedir suporte
-- **Mostre os defeitos.** Se há mancha, arranhão ou rasgo, fotografe. Transparência diminui dúvidas e devoluções
-- **Use a descrição como complemento.** As descrições oficiais de cada condição são curtas. Sua descrição do anúncio preenche os detalhes que as fotos não capturam (toque do material, cheiro, desgaste interno)
-- **Mesmas opções para todas as categorias.** Sejam tênis, bolsas, cartas colecionáveis ou acessórios, as mesmas cinco condições se aplicam
+- **Seja preciso.** O comprador decide olhando as fotos e a condição que você escolheu. Se o item chegar diferente, ele pode pedir ajuda ao suporte
+- **Mostre os defeitos.** Transparência evita dúvidas e problemas depois da venda
+- **Confira a categoria.** A condição certa depende da categoria certa
 
 ## Perguntas frequentes
 
-**Quantas condições existem?**
-Cinco: Novo com etiquetas, Novo sem etiquetas, Muito Bom, Bom, Satisfatório. A lista aparece sempre na mesma ordem na tela de seleção.
+**Por que as opções de condição mudaram?**
+As condições dependem da categoria. Ao trocar a categoria, as opções mudam.
 
 **Posso mudar a condição depois de listar?**
-Sim, enquanto o anúncio não foi vendido. Abra o anúncio, toque em **Editar** e volte ao formulário.
+Sim, enquanto o produto não foi vendido. Abra o produto, toque em **Editar** e salve.
+
+**Qual condição uso para um booster lacrado?**
+Use **Novo**, que existe nas categorias de TCG e Cards Esportivos.
 
 **O que acontece se o comprador disser que a condição não corresponde?**
-O comprador pode entrar em contato com o suporte. Quanto mais precisas forem a sua condição, a descrição e as fotos, mais fácil resolver qualquer dúvida.
-
-**Comprei um item online e chegou sem etiquetas. Liste como o quê?**
-Liste como **Novo sem etiquetas**, mesmo que nunca tenha usado. O comprador precisa saber que as etiquetas não estão presas.
-
-**Existe uma condição para itens lacrados de fábrica?**
-Use **Novo com etiquetas**. A descrição oficial inclui "nunca usado e impecável, completo com as etiquetas originais de compra", que cobre embalagem lacrada de fábrica.
+O comprador pode falar com o suporte. Quanto mais precisas forem a condição, a descrição e as fotos, mais fácil é resolver.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app.

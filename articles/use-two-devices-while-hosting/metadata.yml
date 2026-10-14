@@ -10,8 +10,8 @@ author_id: 7980507
 last_sync: 2026-05-08T00:00:00Z
 locales:
   pt-br:
-    title: 'Usar dois dispositivos durante o show'
-    description: 'Use um segundo celular como controle remoto do seu show ao vivo, ou troque a transmissao entre os dois dispositivos.'
+    title: 'Usar dois dispositivos durante a live'
+    description: 'Use um segundo celular ou o computador como controle remoto da sua live, ou troque a transmissão entre os aparelhos.'
   en:
-    title: 'Use two devices while hosting'
-    description: 'Turn a second phone into a remote control for your live show, or hand off the broadcast between the two devices when needed.'
+    title: 'Use two devices during your live'
+    description: 'Use a second phone or your computer as a remote control for your live, or switch the broadcast between devices.'

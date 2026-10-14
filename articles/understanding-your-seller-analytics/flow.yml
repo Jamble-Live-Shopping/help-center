@@ -1,18 +1,12 @@
 # Flow contract for understanding-your-seller-analytics.
-# v2 rewrite, batch 10 rerun-2 (post PR #91 + #92, 2026-05-08).
-#
-# This article is a "feature-may-not-exist" case: iOS has NO dedicated seller
-# analytics surface. The article is honest about that gap and walks the seller
-# through the three real surfaces they DO have. Encoded via:
-#   - source_of_truth.ios_files: only paths that exist
-#   - source_of_truth.negative_scan: SELLER/Analytics/ + SELLER/Stats/
-#   - risk_flags: matching feature-may-not-exist entry
-#   - resolved_decisions: green-lights publication because the article's whole
-#     job is to surface the gap honestly
-#
-# Each screen with review_checks: [icons_match_ios_source] is anchored via
-# Option B (html_must_not_contain: ["<img", "<svg", "icon-"]) because the
-# three mockups are intentionally text-only iOS surfaces.
+# Wave 2 rewrite (2026-10-14) against production (iOS 5.10.1, Android v5.10.0,
+# backend origin/main, Website origin/main). The article now covers five real
+# surfaces: the Vendas em tempo real overlay, the per-live dashboard (Sua Live,
+# RESUMO tiles, now translated in pt-BR), the "Resumo do seu show" DM sent
+# after every live, the Seller Hub (Visão Geral / Lives / Vendas) and the
+# wallet. The previous "what the app does not have yet" section was removed
+# (no statements about missing features), so the old feature-may-not-exist
+# risk and negative scan no longer apply.
 
 workflow: article-v2
 mode: v2_rewrite
@@ -20,37 +14,33 @@ audience: seller_br
 
 intercom_id: 14288160
 
-job_to_be_done: "Help sellers read their analytics dashboard: views, conversion, top items, audience, and what to act on"
+job_to_be_done: "Show sellers where to read their performance: live overlay, per-live dashboard, post-live summary message, Seller Hub and wallet"
 
 source_of_truth:
   ios_files:
-    - LIVE_SHOPPING/DashboardHost/Views/ShowHostDashboardView.swift  # post-show summary card 4 tiles, lines 123-156
-    - LIVE_SHOPPING/Host/View/ShowHostViewController.swift           # Real-Time Sales overlay, lines 754-797
-    - PROFILE/ProfileSettings/Wallet/View/SellerWalletView.swift     # wallet financial only
-    - RESOURCES/Localizable.xcstrings                                # pt-BR translations (RESUMO, Vendas em tempo real, Minha carteira, Sacar)
-  backend_files: []
+    - LIVE_SHOPPING/Host/View/ShowHostViewController.swift  # Real-Time Sales overlay (~754-797), My Dashboard button (69)
+    - LIVE_SHOPPING/DashboardHost/Views/ShowHostDashboardView.swift  # SUMMARY + TOTAL / AFTER FEES / SOLD / BUYERS (123-145)
+    - LIVE_SHOPPING/DashboardHost/Views/ShowHostDashboardViewController.swift  # title "Your Show" (pt Sua Live)
+    - PROFILE/ProfileSettings/ProfileSettingsV2ViewController.swift  # My Wallet entry
+    - RESOURCES/Localizable.xcstrings  # RESUMO, PÓS TAXAS, VENDIDOS, COMPRADORES, Sua Live, Meu painel de controle, Vendas em tempo real, Minha carteira
+  backend_files:
+    - src/services/message_service.py  # send_show_summary_message / get_show_summary_message_content ("Resumo do seu show")
+    - src/services/show_service.py  # summary DM sent at end of every live
+    - src/schemas/sale_actions.py  # server dashboard stats TOTAL / APÓS TAXAS / VENDIDOS / COMPRADORES (Android)
   legal: []
-  support_context: []
-  # Negative scan: paths the writer verified are absent in Jamble-iOS but ARE
-  # relevant to the article's central claim. Each entry has a matching
-  # risk_flags entry below.
-  negative_scan:
-    - SELLER/Analytics/
-    - SELLER/Stats/
+  support_context:
+    - "Website origin/main src/lib/i18n/messages/console.ts (Visão Geral, Lives, Vendas, Carteira) and dashboard.ts (Painel da live, Pós taxas)"
 
 content_contract:
   must_answer:
-    - "RESUMO SUMMARY"
-    - "AFTER FEES Jamble"
-    - "Real-Time Sales"
-    - "Jamble@jambleapp.com support"
+    - "Vendas em tempo real"
+    - "RESUMO"
+    - "Resumo do seu show"
+    - "Seller Hub"
   forbidden_terms:
     - "regex:\\bauction\\b"
     - "regex:\\bleil[aã]o\\b"
-    # Aymar editorial: AFTER FEES is NOT lucro / profit / real take / real
-    # profit. Use "valor liquido depois da taxa Jamble" / "net amount after
-    # Jamble's fee" instead. The article must not mislead a seller into
-    # thinking this number is their profit.
+    # Aymar editorial: the after-fees number is NOT profit.
     - "regex:\\blucro\\b"
     - "regex:\\bprofit\\b"
     - "regex:\\breal take\\b"
@@ -58,38 +48,12 @@ content_contract:
   must_not_say:
     - "Implementation detail of the dashboard view model"
     - "Backend service names"
-    - "Invented analytics surfaces (charts, weekly graphs, exports, top-items breakdowns, audience demographics, conversion-rate widgets)"
+    - "Promises about future analytics features (charts, exports, demographics)"
+    - "Individual commission rates other than the standard 10%"
 
 mockup_plan:
   required: true
   screens:
-    - name: post-show-summary
-      purpose: "Show the post-show summary card with 4 tiles (TOTAL, AFTER FEES, SOLD, BUYERS) under the localized RESUMO / SUMMARY header. The 4 tile labels are English even on a pt-BR device."
-      source: ios_required
-      review_checks:
-        - icons_match_ios_source
-        - labels_match_xcstrings
-        - no_invented_ui_state
-      # Option B (text-only anchor): the summary card is text + numbers
-      # only. No glyphs in the iOS source either. All three icon-blockers
-      # are present so rule 10e fires green.
-      html_must_not_contain:
-        - "<img"
-        - "<svg"
-        - "icon-"
-      html_must_contain:
-        pt-br:
-          - "RESUMO"
-          - "TOTAL"
-          - "AFTER FEES"
-          - "SOLD"
-          - "BUYERS"
-        en:
-          - "SUMMARY"
-          - "TOTAL"
-          - "AFTER FEES"
-          - "SOLD"
-          - "BUYERS"
     - name: live-realtime-sales
       purpose: "Show the live-show Real-Time Sales overlay top-left: title + running total + price-per-item caption."
       source: ios_required
@@ -97,10 +61,7 @@ mockup_plan:
         - icons_match_ios_source
         - labels_match_xcstrings
         - no_invented_ui_state
-      # Option B (text-only anchor): the overlay is text + numbers only on
-      # iOS. The audience/viewer-count badge and other top-right chrome
-      # are NOT included in this mockup; this mockup focuses on the
-      # text-only Real-Time Sales container only.
+      # Option B (text-only anchor): the overlay is text + numbers only on iOS.
       html_must_not_contain:
         - "<img"
         - "<svg"
@@ -110,42 +71,16 @@ mockup_plan:
           - "Vendas em tempo real"
         en:
           - "Real-Time Sales"
-    - name: wallet-summary
-      purpose: "Show the wallet view: title bar + Available balance / Saldo disponível caption + R$ amount + Sacar / Withdraw button."
-      source: ios_required
-      review_checks:
-        - icons_match_ios_source
-        - labels_match_xcstrings
-        - no_invented_ui_state
-      # Option B (text-only anchor): rerun-1 found this screen had an
-      # unanchored icons_match_ios_source. The wallet mockup is
-      # intentionally text-only, no clock icon, no chevron, no SVG.
-      html_must_not_contain:
-        - "<img"
-        - "<svg"
-        - "icon-"
-      html_must_contain:
-        pt-br:
-          - "Minha carteira"
-          - "Saldo dispon"
-          - "Sacar"
-        en:
-          - "My Wallet"
-          - "Available balance"
-          - "Withdraw"
+    # post-show-summary (English tile labels, now translated in the app) and
+    # wallet-summary (old "Saldo disponivel" / "Sacar" wording) were removed
+    # in the wave 2 rewrite because they no longer match the app.
 
 icons_required: []
 icons_fallback_feather: false
 
-# pt-br body documents the wallet R$ amount example, so currency_required is
-# true to enforce the R$ presence in pt-br.md.
-currency_required: true
+currency_required: false
 
-risk_flags:
-  - "feature-may-not-exist: iOS has NO dedicated seller analytics surface (no SELLER/Analytics/, no SELLER/Stats/, no charts, no exports, no top-items breakdown, no audience demographics, no conversion-rate display). The article is intentionally honest about the gap."
+toc_required: true
 
-resolved_decisions:
-  - risk: "feature-may-not-exist: iOS has NO dedicated seller analytics surface (no SELLER/Analytics/, no SELLER/Stats/, no charts, no exports, no top-items breakdown, no audience demographics, no conversion-rate display). The article is intentionally honest about the gap."
-    decided_by: "Aymar"
-    decided_at: "2026-05-08"
-    rationale: "The article's whole job is to surface this gap honestly. Sellers asking 'where are my analytics?' deserve a clear answer (post-show summary + wallet + live overlay; nothing else exists today) instead of an article that papers over the absence. Negative scan documents the verified absence; risk stays in flow.yml for traceability when the analytics surface ships."
+risk_flags: []
+resolved_decisions: []

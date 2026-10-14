@@ -1,51 +1,83 @@
+# Denúncia e bloqueio de usuários
+
+O Jamble oferece ferramentas para você se proteger e ajudar a manter a comunidade segura e respeitosa. Você pode denunciar quem não respeita as regras e bloquear quem você não quer mais por perto.
+
+## O que você vai aprender
+
+- Onde encontrar as opções de denúncia e bloqueio
+- Como denunciar um usuário e o que acontece depois
+- O que o bloqueio faz e o que ele não faz
+- O que significa ser bloqueado de uma live ou ver **Acesso restrito**
+
+## Onde encontrar as opções
+
+Toque no perfil de um usuário ou em uma mensagem dele no chat de uma live. Um menu se abre com opções como **Ver perfil**, **Denunciar** e **Bloquear**.
+
+Você também pode denunciar um produto pelo menu da página do produto.
+
 ## Denunciar um usuário
 
-- Os usuários podem denunciar compradores ou vendedores quando identificarem comportamentos que violem as regras ou os padrões de comunidade do Jamble.
-- As denúncias devem ser baseadas em fatos reais, como assédio, fraude, abuso ou violação das regras da plataforma.
-- Todas as denúncias são analisadas com cuidado pela equipe do Jamble.
+1. Abra o menu do usuário, como explicado acima.
+2. Toque em **Denunciar**.
+3. Escolha um motivo: **Fraude ou Golpe**, **Assédio**, **Spam**, **Conteúdo inadequado**, **Conta falsa** ou **Outros motivos** (nesse caso, descreva o que aconteceu).
+4. Envie a denúncia.
 
-## O que acontece após uma denúncia
+Quando a denúncia é enviada, o app mostra **Denúncia enviada com sucesso**.
 
-- As denúncias são analisadas pela equipe do Jamble
-- Informações adicionais, capturas de tela ou gravações podem ser solicitadas para concluir a análise
-- Caso uma violação seja confirmada, o Jamble poderá tomar as medidas adequadas de acordo com a gravidade, a recorrência e o contexto geral
+Denuncie situações reais, como assédio, ameaças, golpes, pedidos de pagamento fora do app ou outras violações das regras do Jamble.
 
-As possíveis medidas incluem avisos, restrições de funcionalidades, suspensão ou remoção permanente da conta.
+## O que acontece depois de uma denúncia
 
-Nem todas as denúncias resultam em ação, especialmente quando não há evidências suficientes ou quando nenhuma violação das regras é identificada.
+- A equipe do Jamble analisa cada denúncia
+- Podemos pedir mais informações, como capturas de tela ou gravações
+- Se uma violação for confirmada, o Jamble pode aplicar medidas de acordo com a gravidade e a recorrência, como avisos, restrição de funções, suspensão ou encerramento da conta
 
----
+Nem toda denúncia resulta em uma medida, por exemplo quando não há provas suficientes ou quando nenhuma regra foi violada.
 
-## Bloquear outro usuário
+## Bloquear um usuário
 
-Os usuários podem bloquear outros usuários a qualquer momento para:
+Toque em **Bloquear** no menu do usuário para impedir que essa pessoa interaja com você, por exemplo enviando mensagens.
 
-- Impedir interações diretas, incluindo mensagens no chat e interações durante lives
+Se você é vendedor e bloqueia alguém enquanto está ao vivo, essa pessoa também é removida da sua live.
 
 O bloqueio não:
 
-- Cancela pedidos existentes ou já confirmados
-- Afeta transações ou entregas em andamento
+- Cancela pedidos já feitos ou confirmados
+- Interrompe envios ou entregas em andamento
 
-O bloqueio tem como objetivo evitar interações futuras, e não resolver disputas.
+O bloqueio serve para evitar novas interações, e não para resolver um problema com um pedido. Para isso, fale com o suporte.
 
----
+**Desbloquear:** vá em **Ajustes > Perfis bloqueados** para ver as contas que você bloqueou e desbloquear quem quiser.
 
-## Adicionar um moderador à live
+## Bloqueado de uma live
 
-Como vendedor, você pode selecionar um moderador para ajudar você a:
+O vendedor e os moderadores da live podem usar **Bloquear do show**. A pessoa bloqueada é removida da live na hora e vê a mensagem **Você foi bloqueado desta live**. O vendedor pode desfazer com **Desbloquear do show**.
 
-- Apagar mensagens do chat durante a live
-- Bloquear usuários da audiência
+## Acesso restrito
 
----
+Se você ganhou uma venda em uma live e não concluiu o pagamento, o botão de ofertas daquela live mostra **Acesso restrito**. Você pode continuar assistindo, mas não consegue fazer novas ofertas nessa live.
 
-## Limites das ferramentas de proteção
+## Para vendedores: moderadores
 
-Para proteger a integridade da plataforma:
+Como vendedor, você pode escolher moderadores de confiança para ajudar no chat e na audiência das suas lives. Veja como em [Ferramentas de chat e moderação durante seu show](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288119).
 
-- O uso abusivo ou indevido das ferramentas de denúncia não é permitido
-- O envio de denúncias falsas, enganosas ou repetitivas pode resultar em penalidades
-- O Jamble pode restringir o acesso à função de denúncia ou a outras funcionalidades em casos de abuso
+## Uso correto das ferramentas
 
-Essas ferramentas são criadas para proteger os usuários e não devem ser utilizadas de forma inadequada.
+- Não é permitido usar as ferramentas de denúncia de forma abusiva
+- Denúncias falsas, enganosas ou repetidas podem levar a medidas na conta
+- O Jamble pode limitar o acesso à denúncia ou a outras funções em caso de abuso
+
+## Perguntas frequentes
+
+**A pessoa fica sabendo que eu denunciei?**
+Não. Como o app informa na tela de denúncia, a sua denúncia é anônima.
+
+**Bloquear alguém cancela a minha compra com essa pessoa?**
+Não. Os pedidos continuam normalmente. Se você tiver um problema com um pedido, fale com o suporte.
+
+**Fui bloqueado de uma live. Posso voltar?**
+Só se o vendedor desfizer o bloqueio. Se você acha que foi um engano, fale com o vendedor ou com o suporte.
+
+## Precisa de ajuda?
+
+Fale com a gente pelo chat do app.

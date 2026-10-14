@@ -7,7 +7,7 @@
 workflow: article-v2
 mode: v2_rewrite
 audience: seller_br
-job_to_be_done: "Help sellers handle a shipment returned to them: how to know it's returned, how to repackage and reship, refund flow if the buyer cancels"
+job_to_be_done: "Help sellers handle a shipment returned to them: how to know it is coming back, what the order shows (Cancelado, Devolvido in Envios), the automatic buyer refund, and that a new purchase is the only way to resend"
 
 source_of_truth:
   ios_files:
@@ -16,7 +16,6 @@ source_of_truth:
     - TRANSACTION/Models/TransactionFilter.swift:151-164
     - TRANSACTION/Sale/SaleViewController.swift:903-998
     - TRANSACTION/Sale/SaleViewController.swift:1076-1170
-    - RESOURCES/Assets.xcassets/transaction_alert_red.imageset/Vector.svg
     - RESOURCES/Localizable.xcstrings
   backend_files:
     - jamble_backend/src/entities/transaction.py:30-72
@@ -35,11 +34,21 @@ content_contract:
   forbidden_terms:
     - "auction"
     - "leilão"
+    - "Melhor Envio"
+    - "seguro"
+    - "insurance"
+    - "fora do app"
 
   must_not_say:
     - "Do not invent a self-service reship flow inside the app. iOS has no reship affordance after DELIVERY_RETURNED."
     - "Do not claim the buyer must cancel to be refunded. Refund is automatic once the parcel reaches the seller."
+    - "Do not suggest arranging a resend outside the app; the only path is a new purchase."
+    - "Do not mention package insurance; Jamble labels have none."
 
+# Wave 2 (2026-10-14): the sales-list-returned-tab screen was removed (tab
+# order and labels no longer match iOS 5.10.1: Para Enviar, Aguardando
+# Confirmação, Sob investigação). The two order-detail screens still match the
+# backend strings in jamble_backend/src/entities/transaction.py.
 mockup_plan:
   required: true
   screens:
@@ -102,95 +111,7 @@ mockup_plan:
         - selector: ".ship-addr"
           reason: "Runtime transaction id (JAM-YYYY-MM-NNNNNN), already covered by user_content entry"
 
-    # Screen 2: Sales-list filter tabs with the "Devolvido" / "Returned"
-    # tab visible. Real iOS asset: transaction_alert_red.imageset (red
-    # circle with "!" inside, .alwaysOriginal renderingMode).
-    # iOS source: TransactionFilter.swift:64-65 (label), :142-148 (icon
-    # state), :160 (asset name).
-    - name: sales-list-returned-tab
-      purpose: "Show the Sales list filter strip where the seller finds returned shipments (Returned / Devolvido tab)"
-      source: ios_required
-      review_checks:
-        - icons_match_ios_source
-        - labels_match_xcstrings
-        - no_invented_ui_state
-      html_must_contain:
-        pt-br:
-          - "Devolvido"
-          - "Concluído"
-          - "Cancelado"
-        en:
-          - "Returned"
-          - "Completed"
-          - "Canceled"
-      # Icon anchor (rule 10e Option A): the "Returned" filter pill uses
-      # the iOS asset `transaction_alert_red` (Assets.xcassets/
-      # transaction_alert_red.imageset/Vector.svg). Embedded inline so
-      # `<svg` appears in the HTML.
-      required_icons:
-        - transaction_alert_red
-      # Deterministic visible_text contract (PR #117, Step 2.6 ground-truth).
-      # Nav title + 6 filter pills resolve through xcstrings (Sales /
-      # TransactionFilter labels). For "To Ship" and "In Delivery" the
-      # xcstrings file only ships the pt-BR localization (en uses the key
-      # as the source literal via sourceLanguage:en) ; declared as backend
-      # so the validator can compare both locales. Row pills resolve through
-      # backend transaction.py:418 ("Canceled" / "Cancelado" for
-      # delivery_returned, since TransactionV3Cell.swift:197 reads
-      # action ?? status and action=None for DELIVERY_RETURNED). Row title
-      # and meta line are runtime data (product titles + interpolated
-      # "Order number: %@" with the runtime id).
-      visible_text:
-        - selector: ".nav"
-          source: xcstrings
-          key: "Sales"
-        - selector: ".tabs > .tab:nth-of-type(1)"
-          source: xcstrings
-          key: "All"
-        - selector: ".tabs > .tab:nth-of-type(2)"
-          source: backend
-          path: "Jamble/TRANSACTION/Models/TransactionFilter.swift:60"
-          locale_values:
-            en: "To Ship"
-            pt-br: "Para envio"
-        - selector: ".tab.tab-shipped"
-          source: backend
-          path: "Jamble/TRANSACTION/Models/TransactionFilter.swift:63"
-          locale_values:
-            en: "In Delivery"
-            pt-br: "Em entrega"
-        - selector: ".tab.tab-completed"
-          source: xcstrings
-          key: "Completed"
-        - selector: ".tab.selected"
-          source: xcstrings
-          key: "Returned"
-        - selector: ".tabs > .tab:nth-of-type(6)"
-          source: xcstrings
-          key: "Canceled"
-        - selector: ".row .title"
-          source: user_content
-        - selector: ".row .meta"
-          source: user_content
-        - selector: ".row .pill"
-          source: backend
-          path: "jamble_backend/src/entities/transaction.py:412-418"
-          locale_values:
-            en: "Canceled"
-            pt-br: "Cancelado"
-      visible_text_allowlist:
-        - selector: ".row .title"
-          reason: "User-supplied product title (Charizard Holo 1999, Hot Wheels Treasure Hunt), runtime data"
-        - selector: ".row .meta"
-          reason: "Runtime interpolation of xcstrings 'Order number: %@' with the JAM-... id, full line cannot be matched as literal"
-
-    # Screen 3: buyer-side order detail after delivery_returned. Shows
-    # the refund-timing description verbatim from backend transaction.py:
-    # 629-633. Justification: the article (seller-focused) must clarify
-    # the refund flow the buyer sees, so the seller can answer buyer
-    # questions about timing.
-    # Backend source: transaction.py:412-418 (status="Canceled"),
-    # 629-633 (buyer description with 5 business days).
+    # Screen 2: buyer order detail after the return (refund notice).
     - name: buyer-refund-status-after-return
       purpose: "Show the buyer's order-detail card after the shipment was returned, communicating the automatic refund within 5 business days"
       source: ios_required
@@ -237,8 +158,7 @@ mockup_plan:
         - selector: ".ship-addr"
           reason: "Runtime transaction id (JAM-YYYY-MM-NNNNNN), already covered by user_content entry"
 
-icons_required:
-  - transaction_alert_red
+icons_required: []
 icons_fallback_feather: false
 
 currency_required: false

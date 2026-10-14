@@ -3,93 +3,89 @@
 ## Neste guia
 
 - O que você vai aprender
-- As três abas do início
-- A aba Ofertas
-- A aba Explore
-- A aba Seguir
+- Onde os compradores encontram você
+- A aba de lives
+- A aba Loja
 - Como funciona a busca
-- Pesquisas salvas
-- Recomendações personalizadas
+- Buscas salvas
+- Seguidores e notificações
+- Como ser encontrado com mais facilidade
 - Perguntas frequentes
 - Precisa de ajuda?
 
 ## O que você vai aprender
 
-Este guia explica como encontrar shows, produtos e vendedores na Jamble. Você vai aprender o que aparece em cada aba do início, como usar a busca para achar o que procura, e como salvar uma pesquisa para ficar sabendo quando aparecer algo novo.
+Este guia explica como os compradores encontram lives, produtos e vendedores na Jamble, e o que você pode fazer para que suas lives e seus anúncios sejam encontrados com mais facilidade.
 
-## As três abas do início
+## Onde os compradores encontram você
 
-Quando você abre a Jamble, encontra três abas no topo da tela.
+A barra de baixo do app tem cinco abas: a aba de lives (**Ao vivo** no iPhone, **Live** no Android), **Loja**, **Atividade**, **Ganhos** e **Perfil**.
 
-![As três abas do início da Jamble: Ofertas, Explore e Seguir](./assets/mockups/how-discoverability-works-on-jamble__screen-1__pt-br__v3.png)
+Os compradores descobrem vendedores principalmente em três lugares:
 
-Cada aba mostra um tipo diferente de conteúdo. Toque em uma aba para alternar.
+- **A aba de lives**, com as lives acontecendo agora e as que vão começar
+- **A aba Loja**, com os anúncios de preço fixo
+- **A busca**, para quem já sabe o que procura
 
-## A aba Ofertas
+## A aba de lives
 
-A aba **Ofertas** mostra produtos de shows que estão acontecendo agora ou que vão começar em breve. É o lugar para navegar pelos itens que você pode comprar.
+Na aba de lives, o topo mostra algumas seções para navegar. A primeira é **Para Você**, com lives escolhidas de acordo com o que cada pessoa costuma assistir e comprar. Quando há lives acontecendo, aparece também a seção **Ao Vivo**. As outras seções são categorias, que podem mudar de acordo com as lives do momento.
 
-## A aba Explore
+Por isso, dois compradores podem ver lives diferentes na mesma tela. Isso é normal: o conteúdo é personalizado para cada pessoa.
 
-A aba **Explore** mostra shows ao vivo e shows que vão começar em breve. É a forma principal de descobrir novos vendedores.
+## A aba Loja
 
-No topo da aba Explore, há subcategorias que mudam ao longo do dia. Quais subcategorias aparecem depende dos shows ativos no momento, então a lista que você vê pode ser diferente da lista de outro comprador.
-
-## A aba Seguir
-
-A aba **Seguir** mostra shows ao vivo e próximos dos vendedores que você já segue. Quando você ainda não segue ninguém, a aba também sugere vendedores com a frase "Você pode se interessar por estes vendedores".
-
-Se você ainda não tem vendedores favoritos, a aba mostra a mensagem "Ainda não há nada aqui" com um botão "Explorar Lives" que te leva direto para a aba Explore.
+A aba **Loja** mostra os anúncios de preço fixo, que podem ser comprados a qualquer momento, sem precisar esperar uma live. Os anúncios que você cria na Loja aparecem nessa aba e também nos resultados de busca de produtos.
 
 ## Como funciona a busca
 
-Quando você toca na busca, dois sub-filtros aparecem no topo: **Membros** e **Shows**.
+O campo de busca fica no topo da aba de lives. Ao buscar, o comprador escolhe entre três abas:
 
-![Tela de busca com as duas abas Membros e Shows](./assets/mockups/how-discoverability-works-on-jamble__screen-2__pt-br__v3.png)
+- **Lives**: procura lives pelo título
+- **Produtos**: procura produtos, incluindo os anúncios da Loja
+- **Membros**: procura vendedores e outros usuários pelo nome
 
-- **Membros** procura por vendedores e outros usuários pelo nome
-- **Shows** procura por shows pelo título ou pelo conteúdo
+Na aba **Produtos**, dá para refinar os resultados com os filtros disponíveis.
 
-Para procurar produtos, abra um show ou uma categoria e use os filtros disponíveis. Você pode filtrar por **Categoria**, **Marcas**, **Cor**, **Condição**, **Tamanho**, **Preço** e **Tipo de venda**. Os resultados podem ser ordenados por **Relevância**, **Mais recentes**, **Mais antigos**, **Mais caros** ou **Mais baratos**.
+## Buscas salvas
 
-## Pesquisas salvas
+Na aba **Produtos** da busca, o comprador pode salvar uma busca para voltar a ela depois com um toque, sem precisar digitar tudo de novo. As buscas salvas aparecem na tela de busca, na lista de pesquisas ou buscas salvas.
 
-Depois de fazer uma busca, a Jamble pode te oferecer salvar essa pesquisa.
+Salvar uma busca é útil para quem procura sempre uma marca, uma coleção ou um tipo de produto.
 
-![Tela que oferece salvar a pesquisa para receber atualizações sobre o que você procura](./assets/mockups/how-discoverability-works-on-jamble__screen-3__pt-br__v3.png)
+## Seguidores e notificações
 
-A tela diz: "Salve esta pesquisa para ficar atualizado sobre o que você está procurando sem precisar pesquisar novamente. O Jamble funciona melhor assim!"
+Quando um comprador segue você, ele pode receber uma notificação quando você entra ao vivo ou agenda uma live, se a notificação **Lives de quem eu sigo** estiver ligada. Compradores também podem salvar uma live agendada para receber um lembrete quando ela começar.
 
-Você tem duas opções:
+Quanto mais seguidores você tem, mais pessoas ficam sabendo das suas lives.
 
-- **Salvar esta pesquisa** mantém a pesquisa para você poder voltar a ela depois
-- **Farei isso mais tarde** fecha a tela sem salvar
+## Como ser encontrado com mais facilidade
 
-Salvar pesquisas é útil quando você está procurando uma marca, um tamanho ou um tipo de produto específico e quer voltar a ver os resultados sem refazer a busca toda vez.
-
-## Recomendações personalizadas
-
-A Jamble adapta o conteúdo do início ao seu comportamento no app. Quanto mais você usa a Jamble, mais o conteúdo nas três abas reflete o que você costuma procurar e assistir.
-
-Isso significa que duas pessoas que abrem a Jamble ao mesmo tempo podem ver shows e produtos diferentes na mesma aba. Não há nada de errado com isso. É como o app personaliza a sua experiência.
+- **Capriche na capa.** Use uma imagem nítida e bem iluminada que mostre o que você vai vender
+- **Escreva um título claro.** Diga o que vai ter na live, como a coleção, a marca ou o tipo de produto. Isso ajuda quem busca por lives
+- **Escolha a categoria certa.** Assim sua live aparece para quem navega por aquela categoria
+- **Faça lives com regularidade.** Um horário fixo ajuda seus seguidores a criar o hábito de assistir
+- **Agende suas lives com antecedência.** Assim os compradores podem salvar a live e receber um lembrete
+- **Compartilhe suas lives.** Use o botão **Compartilhar** para divulgar o link nas suas redes e para seus contatos
+- **Anuncie na Loja.** Seus anúncios ficam visíveis o tempo todo, mesmo quando você não está ao vivo
 
 ## Perguntas frequentes
 
-**Por que as subcategorias da aba Explore mudam?**
-As subcategorias do Explore dependem dos shows ativos no momento. Se ninguém está transmitindo uma categoria agora, ela não aparece. Quando alguém começa um show daquela categoria, ela pode reaparecer.
+**Por que as seções da aba de lives mudam?**
+As seções de categoria dependem das lives disponíveis no momento. A seção **Ao Vivo** aparece quando há lives acontecendo.
 
-**Por que a minha aba Seguir está vazia?**
-A aba Seguir só mostra shows dos vendedores que você já segue. Se você ainda não segue ninguém, ou se nenhum dos vendedores que você segue tem show ao vivo ou agendado no momento, a aba mostra a mensagem "Ainda não há nada aqui" com o botão "Explorar Lives".
+**O conteúdo é o mesmo para todo mundo?**
+Não. A seção **Para Você** é personalizada pela atividade de cada pessoa no app. Por isso, dois compradores podem ver lives diferentes.
 
-**Posso buscar produtos diretamente na busca principal?**
-A busca principal tem duas abas: **Membros** e **Shows**. Para encontrar produtos específicos, use os filtros dentro de um show ou de uma categoria. Os filtros disponíveis são Categoria, Marcas, Cor, Condição, Tamanho, Preço e Tipo de venda.
+**Meus anúncios da Loja aparecem na busca?**
+Sim. Eles aparecem na aba **Loja** e nos resultados da aba **Produtos** da busca.
 
-**Como volto a uma pesquisa que salvei?**
-Pesquisas salvas ficam disponíveis na tela de busca. Quando você abre a busca de novo, a Jamble lembra das pesquisas que você salvou para você poder voltar a elas com um toque.
+**Como um comprador encontra meu perfil?**
+Pela aba **Membros** da busca, pelo seu nome de usuário, ou tocando no seu nome em uma live ou em um anúncio.
 
-**O conteúdo do início é o mesmo para todo mundo?**
-Não. O conteúdo é personalizado pela sua atividade no app. Por isso, dois compradores podem ver shows e produtos diferentes na mesma aba ao mesmo tempo.
+**Como volto a uma busca que salvei?**
+Abra a busca. Suas buscas salvas aparecem na tela de busca, na aba **Produtos**.
 
 ## Precisa de ajuda?
 
-Entre em contato pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app.

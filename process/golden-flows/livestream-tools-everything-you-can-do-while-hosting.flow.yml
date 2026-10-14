@@ -23,8 +23,8 @@ content_contract:
   must_answer:
     - "what controls the host has during a show"
     - "how to add a product live"
-    - "how to configure show settings without ending the live"
-    - "what the audience can interact with"
+    - "how to configure live settings without ending the live"
+    - "how to end the live and find the Sua Live dashboard"
   forbidden_terms:
     - "regex:\\bauction\\b"
     - "regex:\\bleil[aã]o\\b"
@@ -34,18 +34,17 @@ content_contract:
 
 mockup_plan:
   required: true
+  # Wave 2 (2026-10-14): article merged with show-management-for-sellers and
+  # running-simultaneous-sales-during-your-show. screen-overview and
+  # show-settings-menu were removed (labels no longer match iOS 5.10.1: the
+  # live menu is now server-driven). add-products-sheet re-rendered as v3
+  # ("lives anteriores", invented icons removed).
   screens:
-    - name: screen-overview
-      purpose: "Annotated overview of every host control on the live screen"
-      source: ios_required
     - name: product-list-tabs
-      purpose: "Show the product list tabs (live, queued, sold) the host uses"
+      purpose: "Show the product list tabs (Próximos, Não vendido, Vendido) the host uses"
       source: ios_required
     - name: add-products-sheet
-      purpose: "Show the bottom sheet to add products mid-show"
-      source: ios_required
-    - name: show-settings-menu
-      purpose: "Show the host settings menu accessible without ending the show"
+      purpose: "Show the action sheet to add products mid-live (Nova listagem rápida, Clonar listagens de lives anteriores)"
       source: ios_required
 
 icons_required: []

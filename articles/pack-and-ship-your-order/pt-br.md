@@ -1,107 +1,95 @@
-# Embale e Envie Seu Pedido
+# Embale e envie seu pedido
 
 ## O que você vai aprender
 
-Como preparar e enviar um pedido depois que um comprador compra o seu produto: embalar o item, imprimir a etiqueta, deixar no Correios e acompanhar a entrega. O objetivo é sair da venda até o "Enviado" com segurança e no prazo.
+O caminho completo de um pedido depois da venda: gerar a etiqueta, embalar, postar nos Correios e acompanhar a entrega até o pedido ser concluído.
 
 ## Antes de começar
 
 Você precisa de:
-- Uma venda confirmada (status **Confirmed** na tela do pedido)
-- Suas preferências de envio configuradas (veja **Edite suas preferências de envio**)
-- Uma impressora (térmica ou comum) para a etiqueta
-- Material de embalagem apropriado ao produto (caixa ou envelope, fita, proteção interna)
+- Uma venda confirmada. Nas vendas da live, toque em **Confirmar Vendas** no painel da live depois que ela terminar. As vendas da Loja precisam ser confirmadas por você uma a uma
+- Suas configurações de envio prontas. Veja [Configurações de envio](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288082)
+- Uma impressora comum ou térmica
+- Material de embalagem adequado ao item
 
-## Seu prazo
+## Seu prazo para enviar
 
-Depois de confirmar a venda, você tem **3 dias úteis** para deixar o pacote no Correios. Esse prazo é fixo e aparece no topo da tela do pedido.
+O prazo para enviar costuma ser de cerca de 10 dias depois que a venda é confirmada. Em situações excepcionais, como uma greve dos Correios, ele pode ser estendido para até 20 dias. O prazo exato aparece sempre no pedido, em Prazo de envio.
 
-![Banner de prazo com o aviso Envie o pacote rapidamente, prazo de envio em 2 dias e data limite 24/04/2026](./assets/mockups/pack-and-ship-your-order__shipping-deadline__pt-br__v2.png)
+Se o prazo passar, o pedido mostra **Envio atrasado**. Você ainda pode enviar, mas faça isso o quanto antes: depois de alguns dias, a venda é cancelada e o comprador é reembolsado automaticamente.
 
-Se o pacote não for postado dentro da janela, a venda pode ser cancelada automaticamente e o comprador é reembolsado. Quanto antes você envia, melhor sua reputação de vendedor.
+## Passo 1: Encontre o pacote
 
-## Passo 1: Abra o pedido e gere a etiqueta
+Você vê todos os seus pacotes em **Envios**, nos ajustes do app (seção **Vender**), ou em **Envios** no Seller Hub. Também dá para abrir o painel da sua live.
 
-No app, vá em **Configurações** e toque em **My Sales**. Abra o pedido que está em **Confirmed**.
+Cada pacote mostra o status do que falta fazer, por exemplo **Etiqueta pendente** ou **Pronto para enviar**. Na Loja, se aparecer **Revisar vendas pendentes**, confirme a venda primeiro, dentro do prazo mostrado no app.
 
-Na tela do pedido você vê o comprador, o produto, o valor e um cartão de status com o botão **Gerar etiqueta de envio**. Toque no botão para criar a etiqueta.
+## Passo 2: Gere a etiqueta
 
-![Tela de detalhes do pedido com status Confirmado, barra de progresso e botão roxo Gerar etiqueta de envio](./assets/mockups/pack-and-ship-your-order__order-detail-ready-to-ship__pt-br__v2.png)
+1. Se o pacote mostrar **Adicionar NF** ou **Isentar NF**, conclua a etapa da nota fiscal
+2. Toque em **Adicionar Etiqueta**
+3. Quando a etiqueta estiver pronta, abra em **Ver Etiqueta**
 
-A etiqueta é calculada pelo sistema da Jamble com base no perfil de envio do produto e no endereço do comprador. Você não precisa ir ao site dos Correios nem criar nada manualmente. Detalhes em **Gere e imprima etiquetas de envio**.
+No Seller Hub, use **Imprimir Etiqueta**. O passo a passo completo está em [Gere e imprima etiquetas de envio](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288141). Se aparecer algum erro, veja [Resolver erros na geração de etiquetas](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288145).
 
-## Passo 2: Embale o item com cuidado
+## Passo 3: Embale o item
 
-Antes de colar a etiqueta, embale o item de verdade. Cinco minutos aqui evitam horas de disputa depois.
+- Use uma caixa ou envelope do tamanho certo, sem sobrar muito espaço
+- Proteja itens frágeis com plástico bolha ou papel amassado
+- Cartas e colecionáveis vão em sleeve e toploader antes da embalagem
+- Feche todas as aberturas com fita larga
 
-- Caixa ou envelope acolchoado do tamanho certo. Pacote largo demais o item se mexe; apertado demais quebra nas dobras
-- Proteção interna para itens frágeis: plástico bolha, papel kraft amassado, flocos de enchimento
-- Cartas e colecionáveis em toploader + sleeve antes de entrar na caixa
-- Fita de embalagem forte, fechando todas as aberturas
+Se o comprador levou vários itens na mesma live, todos vão juntos no mesmo pacote, com uma etiqueta só. Veja [Envios agrupados](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288138).
 
-Para dicas por categoria, veja **Diretrizes de embalagem**.
+Mais dicas em [Diretrizes de embalagem](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288140).
 
-## Passo 3: Imprima e cole a etiqueta
+## Passo 4: Imprima e cole a etiqueta
 
-Imprima a etiqueta no formato que você configurou nas preferências:
+Imprima no formato que você escolheu nas preferências e cole a etiqueta na maior face plana do pacote. Não coloque fita por cima do código de barras e não escreva sobre a etiqueta.
 
-- **Meia página (PDF)**: imprime em folha A4, você corta e cola com fita
-- **Página inteira (PDF)**: imprime em folha A4, dobra e cola com fita
-- **Térmica 4×6**: sai pronta da impressora térmica, é só descolar e aplicar
+## Passo 5: Leve aos Correios
 
-Cole a etiqueta numa superfície plana do pacote, sem dobras e sem fita por cima do código de barras. O leitor dos Correios precisa enxergar o código.
+Leve o pacote a uma agência ou ponto de postagem dos Correios. Para achar um lugar perto de você, abra o pacote em **Envios** e veja **Ponto de entrega mais próximo**, com a opção **Ver no mapa**. No Seller Hub, use **Encontrar um ponto de postagem**.
 
-## Passo 4: Leve aos Correios
+Guarde o comprovante de postagem até o pedido ser concluído.
 
-Qualquer agência dos Correios aceita. Entregue no balcão, o atendente escaneia a etiqueta e te dá um comprovante de postagem.
+## Passo 6: Acompanhe a entrega
 
-**Guarde o comprovante até o pedido ser concluído.** Se o comprador alegar que não recebeu, esse papel é sua prova de envio.
+Quando os Correios registram o pacote, o pedido passa para **Enviado** e o rastreio aparece para você e para o comprador. Em **Envios**, os status mais comuns são:
 
-## Passo 5: Acompanhe o rastreio
+- **Pronto para enviar**: a etiqueta foi gerada e falta postar
+- **Enviado**: o pacote está a caminho
+- **Entregue**: o pacote chegou ao comprador
+- **Falha na entrega**: os Correios não conseguiram entregar. Veja o rastreio para os próximos passos
+- **Devolvido**: o pacote voltou para você. Veja [O que fazer se o envio for devolvido](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288132)
 
-Assim que os Correios escaneiam a etiqueta, o status do pedido muda para **Enviado** e a Jamble puxa o rastreamento automaticamente. Você e o comprador veem o código na tela do pedido.
+Às vezes o rastreio para de atualizar depois da primeira leitura. Abra o pacote em **Envios** e toque em **Atualizar rastreio** (no Android, **Atualizar**). Se continuar parado, fale com o suporte. Veja também [O que fazer se um pacote estiver atrasado](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288128).
 
-![Tela do pedido com status Enviado, Em entrega na barra roxa e código de rastreio OQ451782034BR](./assets/mockups/pack-and-ship-your-order__mark-as-shipped__pt-br__v2.png)
+## Passo 7: Conclusão do pedido
 
-Status que você vai ver ao longo da entrega:
-
-- **Pre-transit**: etiqueta criada, pacote ainda não escaneado
-- **In transit**: pacote a caminho
-- **Delivered**: chegou no endereço
-- **Returned**: Correios estão devolvendo para você
-
-Se o rastreio não atualizar depois de 5 dias úteis, veja **O que fazer se o pacote estiver atrasado**.
-
-## Passo 6: Aguarde a confirmação do comprador
-
-Depois da entrega, o comprador tem **3 dias** para confirmar o conteúdo. Se ele não fizer nada, o pedido é concluído automaticamente e o pagamento cai na sua carteira.
-
-O valor fica disponível para saque depois da conclusão. O prazo de retirada para sua conta bancária depende do seu ciclo de payout, veja **Entenda o ciclo de pagamento**.
+Depois da entrega, o comprador pode confirmar que recebeu. Se ele não confirmar, o pedido é concluído automaticamente alguns dias depois da entrega. Com o pedido concluído, o valor segue para a sua carteira. Saiba mais em [Como você recebe seus ganhos](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288155).
 
 ## Boas práticas
 
-- **Embala antes de gerar a etiqueta.** Se o pacote ficou maior ou mais pesado do que o perfil previa, você ajusta o peso antes de pagar a etiqueta e evita ajuste de frete depois
-- **Foto do pacote pronto.** Alguns vendedores tiram foto do pacote fechado com a etiqueta visível. Vira prova extra em caso de disputa
-- **Evite fim de semana.** Agências dos Correios perto do feriado ficam cheias. Leva o pacote na segunda ou terça para o rastreio começar cedo
-- **Não escreva à mão em cima da etiqueta.** Qualquer marcação pode bloquear a leitura automática do código
+- **Gere a etiqueta logo depois da venda.** Não deixe para o último dia do prazo
+- **Tire uma foto do pacote fechado** com a etiqueta visível. Ajuda se houver alguma dúvida depois
+- **Confira o endereço do comprador** na etiqueta antes de colar
+- **Se não conseguir enviar,** use **Cancelar venda** no pedido em vez de deixar o prazo passar. O comprador é reembolsado no mesmo método de pagamento. Cancelamentos frequentes podem restringir sua conta
 
 ## Perguntas frequentes
 
-**E se o peso real for diferente do perfil de envio?**
-Ajuste o peso na tela do pedido antes de gerar a etiqueta. O sistema recalcula o frete com o valor correto. Se você já gerou a etiqueta errada, veja **Altere ou corrija sua etiqueta de envio**.
+**E se o pacote real for maior ou mais pesado do que o informado no produto?**
+Fale com o suporte antes de gerar a etiqueta. Veja [Faça um ajuste de envio](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288137).
 
-**Posso usar um outro transportador que não seja os Correios?**
-Na Jamble Brasil a integração oficial é com os Correios (PAC e SEDEX). Se você precisar usar outro transportador, entre em contato com o suporte antes de postar.
+**Posso usar outra transportadora?**
+Não. Todas as etiquetas da Jamble são dos Correios.
 
-**O comprador vê o meu endereço?**
-Não. O comprador vê o endereço de origem só como cidade e estado, nunca o endereço completo.
+**Posso usar uma etiqueta que eu mesmo comprei?**
+Não. Use sempre a etiqueta gerada pela Jamble. É ela que conecta o rastreio ao pedido.
 
-**Posso editar a etiqueta depois de imprimir?**
-Se o pacote ainda não foi postado, sim. Abra o pedido, cancele a etiqueta atual e gere uma nova. Detalhes em **Altere ou corrija sua etiqueta de envio**.
-
-**E se o pacote for devolvido para mim?**
-Quando os Correios devolvem o pacote (endereço incompleto, não retirado, etc.), o status do pedido muda e você vê o motivo na tela. Veja **O que fazer se um pacote é devolvido**.
+**Errei algo na etiqueta. Posso gerar outra?**
+Não pelo app. Fale com o suporte antes de postar. Veja [Faça um ajuste de envio](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288137).
 
 ## Precisa de ajuda?
 
-Fale com o time pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app.

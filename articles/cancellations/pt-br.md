@@ -1,29 +1,63 @@
-Os cancelamentos no Jamble são definidos de acordo com o status do pedido, a etapa de processamento e as obrigações legais aplicáveis.
+# Cancelamentos
 
-## Política geral
+Veja quando você mesmo pode cancelar uma compra, quando o cancelamento acontece automaticamente e como pedir ajuda para cancelar.
 
-Após a confirmação de uma compra, ela se torna vinculante. Cancelamentos não são garantidos e são avaliados com base na abertura do produto e no status do pedido no momento da solicitação.
+## O que você vai aprender
 
-Um cancelamento pode ser processado nas seguintes situações:
+- Como cancelar uma compra da Loja
+- O que fazer para cancelar uma compra feita em uma live
+- Quando a compra é cancelada automaticamente
+- Como funciona o reembolso de uma compra cancelada
 
-- O vendedor não consegue cumprir o pedido
-- O vendedor não envia o pedido dentro de 15 dias após a confirmação
-- O pedido está em trânsito há mais de 30 dias
-- O cancelamento é exigido por leis aplicáveis de proteção ao consumidor
-- Se o produto foi aberto (por exemplo, um pack aberto), não é possível cancelar
-- Se o produto está lacrado (pack não aberto), podemos cancelar o pedido
-- Se a solicitação ocorrer após 7 dias e o pedido ainda não foi enviado
-- Se a solicitação ocorrer após 7 dias e o pedido já foi enviado:
-   - o comprador não deve retirar o pedido, o pacote será devolvido ao remetente e cancelaremos o pedido quando o vendedor receber o produto de volta
+## Cancelar uma compra da Loja
 
----
+Você pode cancelar enquanto o vendedor ainda não confirmou a venda:
 
-## Um pedido de cancelamento pode ser recusado nos seguintes casos:
+1. Abra o seu perfil e toque em **Minhas compras**.
+2. Abra o pedido.
+3. Toque em **Cancelar pedido** e confirme.
 
-- A solicitação é feita mais de 7 dias após a criação do pedido
-- O pedido já foi concluído (Completed)
-- O produto foi aberto (considerado como usado)
-- O pedido foi marcado como entregue (Delivered) pela transportadora
-- O comprador solicita cancelamento por insatisfação
+Depois que o vendedor confirma, o botão não aparece mais. Se você precisar cancelar, fale com o vendedor pelas **Mensagens** ou com o nosso suporte.
 
-A Jamble se reserva o direito de recusar solicitações de cancelamento que não atendam às condições acima.
+## Cancelar uma compra feita em uma live
+
+Não é possível cancelar pelo app uma compra feita em uma live. Depois que a live termina, o vendedor confirma as vendas. Se você precisar cancelar:
+
+- Fale com o vendedor pelas **Mensagens**. O vendedor pode cancelar a venda e você recebe o reembolso
+- Ou fale com o nosso suporte, que ajuda você com o pedido
+
+## Quando a compra é cancelada automaticamente
+
+- **Pagamento não concluído:** se você ganhar um produto na live e não pagar a tempo, a compra é cancelada
+- **Live sem confirmação:** o vendedor confirma as vendas depois que a live termina. Se ele não confirmar a tempo, a compra é cancelada e você recebe o reembolso
+- **Loja sem confirmação:** se o vendedor não confirmar a venda dentro do prazo que aparece no app, a compra é cancelada e você é reembolsado
+- **Envio fora do prazo:** se o vendedor não enviar dentro do prazo de envio que aparece no pedido, a compra é cancelada alguns dias depois e você é reembolsado
+
+## Itens abertos na live
+
+Em produtos como pacotes de cartas, o app pergunta, depois do pagamento, se você permite que o vendedor abra o item na live. O app mostra o que muda quando o item é aberto antes de você escolher. Se você não responder, o item fica lacrado.
+
+## Depois de receber o produto
+
+Se você recebeu o produto e quer desistir da compra, ou se houver algum problema, fale com o nosso suporte o quanto antes. O suporte analisa o seu pedido de acordo com os [Termos de Uso](https://www.jamble.com/terms). Veja também [Devoluções e Reembolsos](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/10374377).
+
+## Reembolso de uma compra cancelada
+
+- O reembolso volta para a mesma forma de pagamento usada na compra
+- Costuma levar até 5 dias úteis, dependendo do banco ou cartão
+- Se você usou um cupom, ele volta para o seu saldo
+
+## Perguntas frequentes
+
+**Fiz uma oferta na live por engano. Posso cancelar?**
+Uma oferta enviada é um compromisso de compra. Se você ganhar, fale com o vendedor ou com o suporte o quanto antes.
+
+**O vendedor cancelou a minha compra. E agora?**
+Você recebe o reembolso automaticamente na mesma forma de pagamento. O pedido aparece como **Cancelado** em **Minhas compras**.
+
+**Como peço ajuda ao suporte?**
+Vá em **Ajustes** > **Contate o suporte** > **Ajuda com pedidos** e escolha o pedido.
+
+## Precisa de ajuda?
+
+Fale com a gente pelo chat do app.

@@ -1,166 +1,160 @@
-# Cards and Collectibles, Best Practices for Sellers
+# Cards and Collectibles: Best Practices for Sellers
 
-## What you'll learn
+## What you will learn
 
-This guide covers best practices for selling trading cards, collectible figures, and related items on Jamble in Brazil. You'll learn how to describe condition accurately, take photos that sell, set up your listings, and use Pack Opening for sealed boosters.
+This guide brings together best practices for selling collectible cards, stickers, diecast cars and figures on Jamble. You will see which fields the listing asks for in each category, how to choose the right condition, how to take photos that sell and how **Abertura ao Vivo** (Live opening) works for sealed products.
 
 ## Before you start
 
 You need:
+
 - An approved seller account on Jamble
-- Cards or collectibles to sell with clear knowledge of their condition
-- Good lighting and a plain dark background for photos
+- The items in hand, to check each one's condition
+- Good light and a plain background for photos
 
-## What a complete listing looks like
+## Collectible categories
 
-A well-built listing puts everything the buyer needs in just a few fields. Here's a real example filled in for a Charizard VMAX, Shining Fates.
+When you create a product, you choose the **Categoria** (Category). For collectibles, the main ones are:
 
-![New product screen filled with Charizard VMAX, Shining Fates, NM, category Pokémon TCG, condition New without Tags, Card profile, $90.00](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cards-and-collectibles-best-practices-for-sellers__sample-listing__en__v2.png)
+- **TCG:** Cartas de Pokémon (Pokémon cards), Magic: The Gathering, Cartas de Yu-Gi-Oh!, Cartas de One Piece, Cartas de Lorcana and Outros TCG (Other TCG)
+- **Cards Esportivos** (Sports cards): soccer, basketball, American football, baseball, hockey, racing, combat sports and other sports cards
+- **Figurinhas** (Stickers): single stickers, packs, boxes and albums
+- **Carros Miniatura** (Diecast cars): Hot Wheels, Matchbox, Maisto, Burago, Greenlight, Mini GT, Tarmac Works, Kyosho and Outros Diecast (Other diecast)
+- **Bonecos** (Figures): Funko Pop!, Action Figures and Outros Bonecos (Other figures)
 
-The **Title** includes the card name, set, and condition shorthand (NM). The **Category** is Trading Cards Pokémon TCG. The **Condition** is New without Tags with a detail note. The **Shipping Profile** is **Card** for a single card in a toploader. The **Starting price** is $90.00.
+Always choose the most specific category. The listing fields and conditions change with the category.
 
-Use this structure as a template for any valuable card. The more specific the title, the easier buyers find you in search.
+## The fields of each category
 
-## What falls in this category
+After you choose the category, the app shows the fields for that category. The main ones are:
 
-- **Trading Card Games (TCG)**, Pokémon, Magic: The Gathering, Yu-Gi-Oh!, One Piece, and more
-- **Sealed products**, booster packs, booster boxes, starter decks, bundles
-- **Collectible figures**, Funko Pop!, action figures, model kits
-- **Diecast cars**, Hot Wheels, Matchbox, Mini GT, Majorette
-- **Other collectibles**, stickers, albums, pins, limited editions
+**TCG**
+- **Condição** (Condition) and **Tipo** (Type) (required). Type says whether it is a Carta Individual (Single card) or a sealed product, such as Booster Pack, Booster Box, Elite Trainer Box or Tin
+- **Idioma** (Language)
+- **Raridade** (Rarity) (in Pokémon and Lorcana, for single cards)
+- **Serviço de Classificação** (Grading service) and **Nota** (Grade), for graded cards (PSA, Beckett, CGC or SGC)
 
-## Condition guidelines for cards
+**Cards Esportivos**
+- **Condição** and **Tipo** (required), for example Carta Individual, Booster Pack, Hobby Box or Blaster Box
+- **Marca** (Brand), **Idioma** and **Autografado** (Signed)
+- **Serviço de Classificação** and **Nota**, for graded cards
 
-Cards require specific condition standards. Jamble uses five levels. Here's each one mapped to the TCG market vocabulary (Mint, NM, LP, MP, HP).
+**Figurinhas**
+- **Condição** (required)
+- **Formato** (Format), for example Figurinha Avulsa (Single sticker), Pacotinho (Lacrado) (Sealed pack), Caixa (Lacrada) (Sealed box) or Álbum Completo (Complete album)
+- **Coleção** (Collection)
 
-![Condition guide with five levels for TCG cards, from PSA 10 Mint down to HP Heavily Played](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cards-and-collectibles-best-practices-for-sellers__condition-guide__en__v2.png)
+**Carros Miniatura**
+- **Condição** and **Escala** (Scale) (required), for example 1:64 or 1:43
 
-Each level has a typical price range. **New with Tags** equals Mint or PSA 10. **New without Tags** is Near Mint. **Very Good** is Light Play, still playable. **Good** is Moderately Played. **Satisfactory** is Heavily Played, with creases or tears.
+**Bonecos**
+- **Condição** (required)
+- For Funko Pop!: **Formato**, **Coleção**, **Variante Chase** (Chase variant) and **Exclusivo** (Exclusive)
+- For Action Figures: **Coleção** and **Escala** (required)
 
-Be honest. TCG buyers open disputes fast if the card arrives worse than described.
+The more fields you fill in, the easier it is for buyers to find your item in search and trust the listing.
 
-### Types of card imperfections
+## Choose the right condition
 
-When describing condition, watch for these common imperfections:
+The **Condição** options depend on the category:
 
-- **Edge wear**, loss of color or material along edges and corners
-- **Scratching**, marks on the card surface from handling
-- **Scuffing**, groups of light scratches or clouding on the surface
-- **Surface wear**, material loss showing inner layers through the image
-- **Bends and creases**, lines or ridges from folding or pressure
-- **Printing defects**, miscuts, off-centering, ink blurs. In some cases, they ADD value for collectors
+- **TCG and Cards Esportivos:** Novo (New), Mint, Quase Mint (Near Mint), Pouco Usado (Lightly Played), Muito Usado (Heavily Played), Danificado (Damaged)
+- **Carros Miniatura:** Novo, Mint, Quase Mint, Danificado
+- **Figurinhas and Bonecos:** Mint, Quase Mint, Bom (Good), Danificado
 
-## Condition guidelines for figures and boxes
+Each option shows a description in the app. Some tips:
 
-For Funko Pop figures, action figures, and boxed items, box condition matters as much as item condition. Use the same five levels adapted:
+- **Sealed product:** use **Novo** in TCG, Cards Esportivos and Carros Miniatura
+- **Single card with no marks:** **Mint** or **Quase Mint**
+- **White edges, scratches or creases:** **Pouco Usado** or **Muito Usado**
+- **Dented box or blister:** the packaging counts. Choose one level lower and show the defect in the photos
 
-- **New with Tags**, box and item perfect. No dents, tears, or marks. All corners sharp
-- **New without Tags**, box may have 1 or 2 minor imperfections (small dent, tiny tear) but the item inside is perfect
-- **Very Good**, box shows some signs of wear but the item inside is in great shape. Minor shelf wear
-- **Good**, box has visible damage (dents, tears, crushing) but the item inside is intact
-- **Satisfactory**, box is heavily damaged (torn, crushed, sun damage) but the item inside is still functional
+When in doubt, choose one level lower. [See all conditions by category](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288101).
 
-**For "out of box" (OOB) collectors:** if you're selling the figure without its original box, mention it clearly in the title and description.
+## Photos that sell
 
-## How to take photos that sell
+![Four photos comparing what to do and what to avoid: dark background with sharp focus and the back with a visible toploader, against flash glare on a foil card and a blurry photo](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cards-and-collectibles-best-practices-for-sellers__photo-checklist__en__v2.png)
 
-The photo decides the sale. Use a plain dark background, top-down lighting, and sharp focus on every image.
+Use a plain background, soft light from above and sharp focus. Avoid flash on holographic or foil cards, because the glare hides the artwork.
 
-![Four photos comparing good practices versus practices to avoid, dark background with sharp focus versus camera flash hotspot and out of focus](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cards-and-collectibles-best-practices-for-sellers__photo-checklist__en__v2.png)
+**Single cards**
+1. Front of the card, whole and in focus
+2. Back of the card
+3. Close-up of defects: edges, scratches, creases
+4. The card in its sleeve or toploader
+5. For graded cards, the label with the grade
 
-On the left, **Do**. Plain dark background with sharp focus on the card front. Card back and toploader visible to prove protection. On the right, **Avoid**. Camera flash hotspot on holographic or foil cards that wipes out the artwork. Out of focus and off-center photo that hides the real condition.
+**Sealed products (boosters, boxes, packs)**
+1. Front and back of the packaging
+2. The seal or wrap, to show it has not been opened
+3. Any damage to the packaging
 
-### For individual cards
+**Boxed cars and figures**
+1. Front of the box or blister
+2. Sides, back and corners
+3. Any damage: dents, tears, fading
+4. The item out of the box, if you sell it without packaging (say so in the title)
 
-1. **Front of the card**, well-lit, in focus, showing the full card face
-2. **Back of the card**, shows back condition and authenticity
-3. **Close-up of any flaws**, edge wear, scratches, bends
-4. **Card in sleeve or toploader**, shows how it's stored and protected
-5. **Multiple cards**, if selling a lot, show all cards laid out
+## Live opening
 
-### For sealed products (boosters, boxes)
+For products in your live, you can turn on **Abertura ao Vivo**: "Este item lacrado será aberto durante o show assim que for comprado" (This sealed item will be opened during the show once purchased). The option appears on sealed items, such as booster packs, boxes and other sealed TCG products, and also in the other collectible categories.
 
-1. **Front of the packaging**, show the full product
-2. **Back**, shows product details and set info
-3. **Seal and wrapping**, prove the product is sealed and unopened
-4. **Any damage to packaging**, dents, tears, or wrap issues
+How it works:
 
-### For collectible figures
+1. When you create the live product, turn on **Abertura ao Vivo**
+2. After paying, the buyer chooses whether you open the item in the live (**Abrir**, Open) or whether they prefer to receive it sealed (**Manter lacrado**, Keep sealed)
+3. If the buyer does not answer, the item stays sealed
+4. In your sold list, each purchase shows the buyer's choice, such as **Aberto** (Open) or **Lacrado** (Sealed)
 
-1. **Front of box**, full view showing the figure and box art
-2. **Sides and back**, shows box condition from all angles
-3. **Close-up of corners**, boxes are judged by their corners
-4. **Any damage**, dents, tears, sun fading, sticker residue
-5. **The figure itself**, if visible through the box window, or if OOB
+Only open the item when the buyer chooses **Abrir**. If they choose to open, you open it on camera and ship what came out of the pack. If they choose to keep it sealed, ship the product closed.
 
-## Pack Opening, opening boosters during the show
+Tips for a good opening:
 
-Jamble supports **Pack Opening**, a special mode for collectible items like booster packs. You open the pack live during your show, and buyers see what's inside in real time.
+- **Build anticipation.** Do not rush to reveal the cards
+- **Show each card to the camera.** Hold it steady and close, so everyone can read the name and see the art
+- **Say the buyer's name.** They are watching the opening of their purchase
 
-To enable it, open the create product screen, scroll to the **Pack Opening** section, and turn the toggle on.
+## During the live
 
-![Pack Opening toggle on with subtitle Open packs during the Live and description about Pokémon booster packs](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cards-and-collectibles-best-practices-for-sellers__pack-opening-toggle__en__v2.png)
+- **Say what you are showing.** Not everyone is an expert. Name the card, the set, the rarity and the condition
+- **Plan the order.** Start with lower value items and keep the best for the middle or end of the live
+- **Use Real-time offers for rare items.** Competition between buyers tends to raise the value of highly wanted cards. For common items in volume, **Comprar Agora** (Buy now) is faster
 
-The **Pack Opening** toggle turns the product into a booster opened live. The buyer receives the cards pulled from the pack, not the pack itself.
+## Title and shipping
 
-Pack Opening is one of the most exciting formats on Jamble. Tips for a great opening:
-
-- **Build suspense.** Don't rush through packs. Let your audience enjoy the reveal
-- **React genuinely.** Your excitement about pulls is contagious
-- **Show cards to the camera.** Hold them steady and close so buyers can read the name and see the art
-- **Use the right shipping profile.** Individual cards use the **Card** profile. Sealed packs use **Booster**
-
-## Selling individual cards and figures
-
-- **Describe what you're showing.** Not everyone watching is an expert. Name the card, the set, the rarity
-- **Mention condition clearly.** "This is Near Mint, light edge wear on the top right corner"
-- **Group cards by value.** Start with lower-value items to warm up the audience, save the best for later
-- **Use Real-time offers for rare items.** A PSA 10 Charizard will get more through competition than a fixed price
-
-## Listing tips
-
-### Title
-
-Include the card name, the set, and any important details.
-
-- **Good:** "Charizard VMAX, Shining Fates, NM"
+**Title:** include the name, the set and the detail that matters.
+- **Good:** "Charizard VMAX, Shining Fates, Quase Mint"
 - **Bad:** "Rare Pokémon card"
 
-### Shipping profiles
-
-- **Single cards or small lots**, **Card** profile
-- **Booster packs or card bundles**, **Booster** profile
-- **Booster boxes**, **Small Bundles** or **Medium Bundles**
-- **Funko Pop figures**, **Bulkier Items** (in box) or **Standard Apparel** (OOB)
+**Perfil de envio** (Shipping profile): choose **Automático** (Automatic) so the app calculates weight and size from the item type, **Informar peso e tamanho** (Enter weight and size) to pick the ranges yourself, or a shipping profile you created.
 
 ## Important tips
 
-- **Use sleeves and toploaders.** Always protect cards in sleeves during storage and shipping. Buyers expect cards to arrive protected
-- **Ship carefully.** Wrap cards in a cardboard sandwich or rigid mailer. Never ship cards in regular envelopes without protection
-- **Disclose any modifications.** Signed cards, altered art, or re-sleeved graded cards must be clearly described
-- **Know your market.** Brazilian collectors are passionate about Pokémon, One Piece, and Yu-Gi-Oh!. Know what's trending in the local market
-- **Sealed product authenticity.** Make sure sealed products are from authorized distributors. Tampered or resealed products are prohibited
+- **Protect your cards.** Use a sleeve and toploader and pack them between firm cardboard. Never ship loose cards in a plain envelope
+- **Declare any modification.** Signed, altered or custom art cards must be clear in the listing
+- **Only sell original products.** Counterfeit, tampered or resealed products are not allowed
+- **Only open with the buyer's choice.** With Live opening, always follow the option the buyer chose
 
-## Common questions
+## Frequently asked questions
 
 **Do I need to grade my cards before selling?**
-No. Many collectors buy raw (ungraded) cards on Jamble. Just describe the condition accurately. Graded cards (PSA, BGS, CGC) typically sell for more, but grading is optional.
+No. Many buyers look for ungraded cards. Describe the condition carefully. If the card is graded, fill in **Serviço de Classificação** and **Nota**.
 
 **Can I sell cards from any TCG?**
-Yes. Pokémon, Magic, Yu-Gi-Oh!, One Piece, and other TCGs are all welcome on Jamble. Select the appropriate category when listing.
+Yes. Pokémon, Magic, Yu-Gi-Oh!, One Piece, Lorcana and other TCGs are welcome. If your game is not on the list, use **Outros TCG**.
 
-**How should I ship individual cards?**
-Put the card in a penny sleeve, then a toploader or rigid card holder. Wrap the toploader in a small piece of cardboard for extra protection. Use the **Card** shipping profile.
+**Which condition do I use for a sealed booster?**
+Use **Novo**.
 
-**What's the best sell mode for rare cards?**
-For valuable or sought-after cards, **Real-time offers** often gets the best price. The competition between buyers drives the price up. For bulk commons or standard items, **Buy It Now** is more efficient.
+**Can the buyer choose not to open the product?**
+Yes. After paying, they choose **Abrir** or **Manter lacrado**. If they do not answer, the item stays sealed.
 
-**Can I sell opened booster packs?**
-No. Once a booster pack is opened, you sell the individual cards inside, not the empty pack. Sealed product must be genuinely sealed and unopened.
+**Can I sell a booster that has already been opened?**
+Not as sealed. Once it is opened, sell the cards that came out of the pack.
 
-**How does Pack Opening work during a show?**
-Turn on the **Pack Opening** toggle when setting up the product. During the show, you open the pack on camera and the contents go to the buyer. It's one of the most popular formats on Jamble.
+**How do I ship single cards?**
+Put the card in a sleeve and then in a toploader, and protect it with cardboard. When you create the product, use **Automático** for the shipping profile or enter weight and size.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Talk to us through the app chat.

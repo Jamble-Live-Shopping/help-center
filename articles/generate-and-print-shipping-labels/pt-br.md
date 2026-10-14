@@ -14,7 +14,7 @@ Você precisa de:
 
 ## Como funciona a geração da etiqueta
 
-Depois que a venda está confirmada, você gera a etiqueta dos Correios pelo app ou pelo Seller Hub, no computador. As vendas feitas em live já chegam confirmadas. As vendas da Loja precisam ser confirmadas por você antes.
+Depois que a venda está confirmada, você gera a etiqueta dos Correios pelo app ou pelo Seller Hub, no computador. Nas vendas da live, toque em **Confirmar Vendas** no painel da live depois que ela terminar. As vendas da Loja são confirmadas uma a uma, em **Revisar vendas pendentes**.
 
 A etiqueta inclui:
 

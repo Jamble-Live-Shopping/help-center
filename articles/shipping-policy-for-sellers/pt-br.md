@@ -26,7 +26,7 @@ Os envios da Jamble são feitos pelos **Correios**, com a etiqueta gerada pelo a
 
 O prazo para enviar costuma ser de cerca de 10 dias depois que a venda é confirmada. Em situações excepcionais, como uma greve dos Correios, ele pode ser estendido para até 20 dias. O prazo exato aparece sempre no pedido, em **Prazo de envio**. Envie o quanto antes, sem esperar o último dia.
 
-- **Vendas em live** já chegam confirmadas, então o prazo começa na hora da venda
+- **Vendas em live** precisam ser confirmadas por você no painel da live, em **Confirmar Vendas**, depois que a live termina. O prazo de envio começa quando você confirma, não na hora da compra
 - **Vendas na Loja** precisam ser confirmadas por você dentro do prazo mostrado no app. O prazo de envio começa quando você confirma
 
 ## O que acontece se você atrasar

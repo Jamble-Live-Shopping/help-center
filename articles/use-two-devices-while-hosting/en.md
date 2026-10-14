@@ -1,93 +1,97 @@
-# Use two devices while hosting
+# Use two devices during your live
 
 ## What you'll learn
 
-This guide explains how to use a second phone while you host a live show on Jamble. One phone broadcasts your video. The other becomes a remote control that shows the products, chat, and sale tools. You stay focused on the camera and don't have to juggle everything on one screen.
+This guide shows how to use a second device during your live. One device broadcasts the video. The other becomes a remote control, with the products, the chat, and the sales tools. That way you don't have to do everything on one screen and you stay focused on the camera. The second device can be another phone or your computer, through the Seller Hub.
 
 ## Before you start
 
-You will need:
-
+You'll need:
 - An approved seller account on Jamble
-- Two iPhones with the Jamble app installed
-- The same account logged in on both iPhones
-- A stable internet connection on both devices
+- Two devices with the same Jamble account: two phones with the app, or a phone and a computer with the Seller Hub
+- A stable connection on both devices
 
 ## How it works
 
-When you open the same live show on the second phone (logged into the same account), the app asks what you want to do with that device. You choose between broadcasting from the new phone or using it as a remote control.
+When you open the same live on a second device, the app asks what you want to do with it: use it as a remote control or broadcast from it instead.
 
-Only one phone broadcasts video at a time. The other phone runs in remote mode: the camera is off on that device, but you keep seeing the show and you can use the controls.
+Only one device broadcasts video at a time. The other one stays as a remote control: its camera is off, but you keep watching the live and using the controls.
 
-## Step by step
+## Step by step on your phone
 
-### Step 1: Start the show on your main phone
+### Step 1: start the live on your main device
 
-Start the show as you normally would on the phone you want to use as the camera. That is the device that broadcasts the video to viewers.
+Start the live as usual on the phone that will be your camera.
 
-### Step 2: Open the same show on the second phone
+### Step 2: open the same live on the second phone
 
-On the second phone, open the app and join the same live show. Because you are already broadcasting from the main phone, Jamble shows a card titled *Remote Control* with two buttons:
+On the second phone, open the app with the same account and join the same live. A choice shows:
 
-![Remote Control card with the buttons Use as a remote and Livestream from this device](./assets/mockups/use-two-devices-while-hosting__remote-control-picker__en__v3.png)
+![Remote Control card with the Use as a remote and Livestream from this device buttons](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/use-two-devices-while-hosting__remote-control-picker__en__v3.png)
 
-The two buttons are:
+On iPhone, the **Controle remoto** (Remote control) card shows:
+- **Use como um controle remoto** (Use as a remote): this phone becomes the live's remote, with the camera off
+- **Transmissão ao vivo a partir deste dispositivo** (Livestream from this device): the broadcast moves to this phone
 
-- *Use as a remote*: the second phone becomes a control panel for the show. The camera is off on this phone.
-- *Livestream from this device*: the video broadcast switches to this phone. The main phone automatically becomes the remote.
+On Android, the **Outro dispositivo está transmitindo** (Another device is broadcasting) notice shows:
+- **Ficar como controle remoto** (Stay as remote control): this phone becomes the live's remote
+- **Assumir transmissão** (Take over): the broadcast moves to this phone
 
-### Step 3: Use the second phone as a remote
+### Step 3: use the remote
 
-Tap *Use as a remote*. The second phone opens the show interface with the camera off and an indicator in the top right corner that signals remote mode.
+On the remote, you see the live and have the same controls as the live screen:
+- Read and answer the chat without looking away from the camera
+- Pin products and organize the queue
+- Start and follow sales
+- Use the live menu
 
-![Remote control mode with the indicator in the top right corner of the live show](./assets/mockups/use-two-devices-while-hosting__close-remote-button__en__v3.png)
+On iPhone, a remote control button shows at the top right. Tap it to leave remote mode on this phone.
 
-From the remote phone you can:
+![Remote control button at the top right of the live](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/use-two-devices-while-hosting__close-remote-button__en__v3.png)
 
-- Read and reply to chat without leaving the camera frame
-- Pin products and manage the queue
-- Start and run sales (Buy It Now, Flash Sales, real-time offers)
-- Track current offer amounts and sale status
-- Block or moderate users in chat
+On Android, to leave, open the live menu and tap **Fechar Live** (Close live). The live stays on air on the broadcasting device.
 
-When you want to leave remote mode on this phone, tap the indicator in the top right corner.
+### Step 4: move the broadcast to the other device (optional)
 
-### Step 4: Switch the broadcast to the other phone (optional)
+To move the camera to the other device, choose **Transmissão ao vivo a partir deste dispositivo** (Livestream from this device; on Android, **Assumir transmissão**, Take over) on the device that will broadcast. The video switches devices right away and the previous one becomes the remote.
 
-If you want to switch which phone is on camera, open the *Remote Control* card again on the phone you want to use as the camera and tap *Livestream from this device*. The video broadcast switches devices immediately, and the phone that was broadcasting automatically becomes the remote.
+This helps when your main phone's battery is running low or when you want to change the camera angle.
 
-This helps when the main phone is running low on battery or when you want to change camera angles mid-show.
+## Use your computer as a remote
 
-## What happens if your main phone goes offline
+You can also control the live from your computer, in the Seller Hub. Open your live's page in the browser while your phone broadcasts: the computer stays as a remote, with products, sales, and chat on a bigger screen. If you want, the computer can also take over the broadcast.
 
-If the broadcasting phone loses its connection (battery dead, app closed, weak Wi-Fi), the remote phone shows a dark overlay with the text *Hold on* followed by *Your main device seems offline* and a spinning indicator while the app tries to restore the stream:
+See how to access and use the Seller Hub in [Seller Hub: sell from your computer](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588489).
 
-![Hold on overlay with the message Your main device seems offline and a spinning indicator](./assets/mockups/use-two-devices-while-hosting__host-offline-overlay__en__v3.png)
+## If the main device drops
 
-While that overlay is up, you can hand off the broadcast to the remote phone. Open the *Remote Control* card again on that phone and tap *Livestream from this device*. The show keeps going without you having to stop it.
+If the broadcasting device loses its connection (battery, app closed, bad internet), the remote shows the **Aguarde** (Hold on) notice with the sentence **Seu dispositivo principal parece estar off-line** (Your main device seems offline).
+
+![Hold on notice with the sentence Your main device seems offline](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/use-two-devices-while-hosting__host-offline-overlay__en__v3.png)
+
+You can wait for the main device to come back or move the broadcast to the remote and keep the live going. If no one broadcasts for a long time, the live may end automatically.
 
 ## Practical tips
 
-- *Use your best camera as the main device.* The broadcasting phone should be the one with the better camera and the more stable internet connection.
-- *Keep the remote phone within reach.* Put it on a table or stand next to you so you can reach the chat and the products without turning the camera.
-- *Both devices must be logged into the same account.* This feature does not work across different accounts. To invite another seller, use co-host.
-- *Swap devices if the battery is running low.* Instead of stopping the show to charge, hand off the broadcast to the second phone.
-- *Two devices is not the same as co-host.* Two devices = one person using two phones. Co-host = two different sellers in the same show. To bring in another seller, use the co-host option.
+- **Use the best camera to broadcast.** The main device should have the best camera and the most stable connection
+- **Keep the remote close.** On a table or stand next to you, so you can reach the chat and products
+- **Use the same account on both.** To bring another person into your broadcast, use Live Duo
+- **Switch devices if the battery runs out.** Instead of stopping the live, move the broadcast to the other device
 
-## Common questions
+## Frequently asked questions
 
-*Can I connect more than two devices?*
-You can have more than one phone connected, but only one broadcasts video at a time. The others act as remote controls.
+**Can I connect more than two devices?**
+You can open the live on more than one device, but only one broadcasts video at a time. The others work as remotes.
 
-*Does the remote phone use a lot of battery?*
-Less than the broadcasting phone, since the camera is off. It is still connected to the show, so it does use some battery.
+**Do viewers notice I'm using two devices?**
+No. They only see the video from the device that is broadcasting.
 
-*Can viewers tell I'm using two phones?*
-No. Viewers only see the video from whichever phone is currently broadcasting. Switching devices does not show on their side.
+**Does closing the remote end the live?**
+No. The live keeps going on the broadcasting device. To end the live, use **Encerrar Live** (End live) in the menu.
 
-*What if I close the app on my main phone by mistake?*
-The show enters a waiting state while the system tries to reconnect. You can reopen the show on the same phone, or hand off the broadcast to the remote phone and pick up where you left off.
+**Is this the same as Live Duo?**
+No. Two devices is one person using two devices. Live Duo puts another person in your broadcast. See [Invite a co-host (Live Duo)](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288117).
 
 ## Need help?
 
-Reach us through the in-app chat or by email at support@jambleapp.com.
+Talk to us through the in-app chat.

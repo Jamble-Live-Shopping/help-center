@@ -12,7 +12,7 @@ last_sync: 2026-04-22T00:00:00Z
 locales:
   pt-br:
     title: 'Envios Agrupados'
-    description: 'Como a Jamble junta vários itens do mesmo comprador em um único pacote e como gerar uma etiqueta para todos.'
+    description: 'Como a Jamble junta vários itens do mesmo comprador em um pacote, como fica o frete e como gerar uma etiqueta só.'
   en:
     title: 'Bundled Shipments'
-    description: 'How Jamble groups multiple items from the same buyer into one package and how to generate a single label for all of them.'
+    description: 'How Jamble groups several items from the same buyer into one parcel, how shipping works and how to make one label.'
