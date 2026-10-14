@@ -2,71 +2,69 @@
 
 ## O que você vai aprender
 
-Este guia mostra exatamente quanto a Jamble cobra por venda, como a taxa é calculada e quanto cai na sua carteira no final. Sem letras miúdas.
+Este guia mostra quanto a Jamble cobra por venda, como a comissão é calculada e quanto entra na sua carteira.
 
-## A estrutura de taxas
+## A comissão da Jamble
 
-A Jamble cobra **14% de comissão** sobre cada venda. Esse valor é descontado automaticamente antes dos seus ganhos entrarem na carteira. Você nunca paga nada manualmente.
+A comissão padrão da Jamble é de **10%** sobre o preço do produto vendido. Ela é descontada automaticamente antes de o valor entrar na sua carteira. Você nunca precisa pagar nada manualmente.
 
-### O que está incluído nos 14%
-
-A comissão de 14% cobre dois custos:
-
-- **Taxa da plataforma**, por usar a plataforma de live shopping da Jamble, as ferramentas de venda e o acesso aos compradores
-- **Processamento de pagamento**, o custo de processar com segurança o pagamento do comprador via Pagar.me (PIX, cartão de crédito, boleto)
-
-Você vê uma única dedução de 14%. Não existe taxa de processamento por cima, está tudo incluído.
+A comissão vale para vendas em lives e para vendas na Loja.
 
 ### Como funciona na prática
 
-Exemplo com uma venda de R$ 100,00 (ex.: uma carta Charizard):
+Exemplo com uma venda de R$ 100,00:
 
-![Detalhamento de uma venda de R$ 100,00 na Jamble, comissão de 14% (R$ 14,00) e ganho líquido de R$ 86,00](./assets/mockups/jamble-seller-fees-and-commissions__seller-fee-breakdown__pt-br__v2.png)
+- Preço de venda: **R$ 100,00**
+- Comissão da Jamble (10%): **R$ 10,00**
+- Você recebe: **R$ 90,00**
 
-**Seus ganhos líquidos = Preço de venda × 86%**
+**Seus ganhos = preço de venda × 90%**
 
 ### E o frete?
 
-O frete é **separado** dos seus ganhos. O comprador paga o frete no checkout, por cima do preço do produto. Esse valor vai direto para a transportadora (Correios). A Jamble não cobra comissão sobre o frete.
+O frete é pago pelo comprador, à parte, e **não entra no cálculo da comissão**. Ele não reduz seus ganhos.
 
-![Tela mostrando o que o comprador paga, o frete e o ganho líquido do vendedor após a taxa Jamble de 14%](./assets/mockups/jamble-seller-fees-and-commissions__seller-fees-breakdown__pt-br__v2.png)
+### E as taxas de pagamento?
+
+A taxa de processamento do pagamento (Pix ou cartão) é paga pelo comprador e aparece no resumo do pedido antes de ele pagar. Ela não é descontada dos seus ganhos.
 
 ## Quando a comissão é cobrada?
 
-A comissão é descontada **quando a venda é concluída**, ou seja, depois que o comprador recebe e confirma o item. Sua carteira sempre mostra apenas o valor líquido, nunca o bruto.
+A comissão é descontada **quando a venda é concluída**, depois que o comprador recebe o item. Sua carteira mostra sempre o valor que você recebe, já sem a comissão.
 
-Se um pedido for **cancelado ou reembolsado**, nenhuma comissão é cobrada. É como se a venda nunca tivesse acontecido.
+Se um pedido for **cancelado ou reembolsado**, nenhuma comissão é cobrada.
+
+## Onde ver as taxas de cada venda
+
+Abra a venda no app ou em **Vendas** no Seller Hub. Você vê o preço do produto, as taxas da Jamble e o valor que você recebe.
+
+## Outros custos
+
+- **Sem mensalidade e sem taxa para anunciar.** Você só paga a comissão quando vende
+- **Sacar não tem custo.** O saque para a sua conta bancária é gratuito
+- **Recebimento Antecipado é opcional.** Se você ativar, recebe mais rápido as vendas pagas no cartão, com uma pequena taxa sobre esses pagamentos. A taxa aparece antes de você ativar
 
 ## Dicas importantes
 
-- **Defina seus preços considerando os 14%.** Se você quer ganhar R$ 86,00, venda por R$ 100,00. Fórmula rápida: ganhos desejados ÷ 0,86 = preço a definir
-- **Não existem taxas ocultas.** Os 14% são a única taxa. Sem mensalidade, sem taxa de listagem, sem taxa de manutenção de conta
-- **Frete não afeta seus ganhos.** O comprador paga o frete à parte. Sua comissão é calculada só sobre o preço do produto
-- **Volume não muda a taxa.** Vendendo 1 item ou 100, a comissão continua 14%
+- **Defina seus preços considerando a comissão.** Se você quer receber R$ 90,00, venda por R$ 100,00. Fórmula rápida: valor que você quer receber ÷ 0,90 = preço de venda
+- **O frete não afeta seus ganhos.** O comprador paga o frete à parte
 
 ## Perguntas frequentes
 
 **Qual porcentagem a Jamble cobra?**
-14% do preço de venda. Isso cobre a taxa da plataforma e o processamento de pagamento.
-
-**Existem outras taxas?**
-Não. A comissão de 14% é a única taxa. Não há taxa de listagem, mensalidade nem cobranças ocultas.
+A comissão padrão é de 10% do preço do produto vendido.
 
 **Pago comissão sobre o frete?**
-Não. O frete é pago pelo comprador e vai direto para a transportadora. A comissão é calculada apenas sobre o preço do produto.
+Não. A comissão é calculada só sobre o preço do produto.
+
+**Quem paga a taxa do Pix ou do cartão?**
+O comprador. Ela aparece no resumo do pedido antes do pagamento e não sai dos seus ganhos.
 
 **E se o pedido for cancelado?**
 Nenhuma comissão é cobrada em pedidos cancelados ou reembolsados.
 
-**Os 14% são descontados antes ou depois de eu ver meus ganhos?**
-Antes. Sua carteira sempre mostra o valor líquido (após os 14% descontados). Você não precisa calcular nem pagar a comissão.
+**A comissão é descontada antes ou depois de eu ver meus ganhos?**
+Antes. Sua carteira mostra sempre o valor que você recebe, já sem a comissão.
 
-**Posso ver o detalhamento das taxas de cada venda?**
-Sim. Abra o pedido em **My Sales** e você verá o detalhamento: preço do produto, Jamble Fees (o valor da comissão em R$) e o líquido que você recebe.
-
-**A taxa de comissão pode mudar?**
-A taxa atual é 14%. A Jamble avisará com antecedência se isso mudar.
-
-## Precisa de ajuda?
-
-Fale com a gente pelo chat do app ou envie um email para support@jambleapp.com.
+**A comissão pode mudar?**
+Se houver mudança, a Jamble avisa com antecedência.

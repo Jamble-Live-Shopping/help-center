@@ -39,7 +39,7 @@ Scenario: you have a Nike Air Max in sizes 40, 41, and 42, all in black.
 
 You need 3 listings. To avoid retyping the same details three times, use **Clone Past Shows Listings** from the add-product menu inside your show.
 
-![Add-product menu inside a show with the Clone Past Shows Listings option visible](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/variants-for-sellers-sizes-and-colors__screen-2__en__v3.png)
+![Add-product menu inside a show with the Clone Past Shows Listings option visible](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/variants-for-sellers-sizes-and-colors__screen-2__en__v4.png)
 
 Recommended flow:
 

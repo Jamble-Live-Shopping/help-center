@@ -1,0 +1,18 @@
+intercom_id: 13440855
+slug: pack-opening-specificity
+collection_id: 18025631
+
+# Imported from live Intercom on 2026-10-13 (article previously edited only in the Intercom UI).
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+default_locale: pt-br
+
+state: published
+last_sync: 2026-08-21T09:33:39Z
+
+locales:
+  pt-br:
+    title: '2. Especificidades de abertura de packs'
+    description: 'Regras rígidas e limitações de reembolso para evitar abusos nesses produtos.'
+  en:
+    title: '2. Pack Opening Specificity'
+    description: 'Strict rules and refunds to protect abuse on these products'

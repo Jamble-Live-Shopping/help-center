@@ -30,7 +30,7 @@ The section shows three fields to fill in when the **Flash sale** toggle is on.
 
 - **Price.** The full price of the product. The discount is calculated from here.
 - **Discount (%).** The percentage off. You can set any value between 10 and 90 percent. On a $200.00 product with a 30 percent discount, the buyer pays $140.00.
-- **Timer (Seconds).** How long the Flash Sale lasts. Minimum **30 seconds**, maximum **300 seconds** (5 minutes). The default is 60 seconds.
+- **Timer (Seconds).** How long the Flash Sale lasts. You choose it within the limits shown in the app.
 
 Save the listing. The Flash Sale is configured and ready to be activated during your show.
 
@@ -84,7 +84,7 @@ Jamble's fee is calculated on the **discounted price**, not the original price. 
 
 - **Build excitement first.** Before starting, talk about the product. Show it up close, explain why it's special. Then say "Flash Sale starting now". This gets more buyers ready to act.
 - **30 to 50 percent works well.** A small discount doesn't feel urgent enough. 30 to 50 percent creates real excitement. Make sure the final price still works for you, that's what you earn.
-- **Give buyers enough time.** 30 seconds is the minimum. For higher-priced items, use 60 seconds or more so buyers have time to decide and complete the purchase.
+- **Give buyers enough time.** For higher-priced items, use at least a minute so buyers have time to decide and complete the purchase.
 - **Use Flash Sales to re-energize your show.** If audience energy dips mid-show, a surprise Flash Sale brings attention back. Don't overuse them, one or two per show keeps them special.
 - **Announce it before starting.** "Flash Sale in 10 seconds" gets viewers paying attention and ready to act when the timer starts.
 - **You decide at start time.** Even if it's configured, you can choose to start as regular Buy It Now instead. This gives you flexibility during the show.
@@ -113,7 +113,7 @@ No. The Flash Sale product stays pinned until it ends. Wait for it to end, then 
 There's a brief grace period. If a buyer initiated a purchase just before the timer ended, the payment can still process.
 
 **How long can a Flash Sale last?**
-Minimum 30 seconds, maximum 5 minutes (300 seconds). The default is 60 seconds.
+You choose the duration when setting up the product, within the limits shown in the app.
 
 **Can I change the discount percentage during a Flash Sale?**
 No. The discount and timer are set when you create the listing. To change them, edit the listing before starting.

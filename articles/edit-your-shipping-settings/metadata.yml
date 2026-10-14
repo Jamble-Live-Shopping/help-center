@@ -3,22 +3,14 @@ slug: edit-your-shipping-settings
 collection_id: 19177937
 
 # Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
-default_locale: pt-BR
+default_locale: pt-br
 
 state: published
 author_id: 7980507
 last_sync: 2026-04-22T00:00:00Z
 
-titles:
-  pt-BR: Edite Suas Configurações de Envio
-  en: Edit Your Shipping Settings
-
-descriptions:
-  pt-BR: Atualize seu endereço de envio, troque o formato da etiqueta e ajuste o seguro do pacote nas suas Preferências de envio.
-  en: Update your shipping address, change your label format, and adjust package insurance in your Shipping Preferences.
-
 locales:
-  pt-BR:
+  pt-br:
     title: 'Edite Suas Configurações de Envio'
     description: 'Atualize seu endereço de envio, troque o formato da etiqueta e ajuste o seguro do pacote nas suas Preferências de envio.'
   en:

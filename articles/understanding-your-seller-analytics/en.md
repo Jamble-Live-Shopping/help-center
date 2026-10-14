@@ -36,7 +36,7 @@ When you end a show, the summary appears automatically. At the top, you'll see t
 ### The four SUMMARY numbers
 
 - **TOTAL**: gross revenue from all sales during the show, summing the full price each buyer paid
-- **AFTER FEES**: net amount after Jamble's 14% fee. Important: this number does **not** include the product cost, shipping out of your pocket, packaging, taxes, or any refunds. It's the amount Jamble sends to you, nothing beyond that
+- **AFTER FEES**: net amount after Jamble's standard 10% fee. Important: this number does **not** include the product cost, shipping out of your pocket, packaging, taxes, or any refunds. It's the amount Jamble sends to you, nothing beyond that
 - **SOLD**: number of products sold in the show
 - **BUYERS**: number of unique buyers (one person who bought three items counts as 1 buyer)
 
@@ -46,7 +46,7 @@ You'll notice the **RESUMO** header is localized in pt-BR, but the four tile lab
 
 ### What to look at on the summary
 
-- Compare TOTAL and AFTER FEES to see how much Jamble's fee takes (14% of TOTAL)
+- Compare TOTAL and AFTER FEES to see how much Jamble's fee takes (10% of TOTAL, with the standard commission)
 - Compare SOLD and BUYERS: if SOLD is much bigger than BUYERS, you're moving multiple items per buyer, a healthy basket signal
 - Scroll below the summary card to see the list of confirmed sales and the items that did not sell
 
@@ -108,7 +108,7 @@ No. There is no export feature in the app today.
 Not directly. You can estimate it by comparing the viewer count during the live (top-right of the host screen) with the BUYERS number on the post-show summary.
 
 **Is AFTER FEES what I actually keep at the end?**
-No. AFTER FEES is the **net amount after Jamble's 14% fee**, before any of your other costs. To land on your real result, subtract product cost, shipping you pay, packaging, taxes, and any refunds.
+No. AFTER FEES is the **net amount after Jamble's standard 10% fee**, before any of your other costs. To land on your real result, subtract product cost, shipping you pay, packaging, taxes, and any refunds.
 
 **Why do TOTAL, AFTER FEES, SOLD, and BUYERS render in English on the pt-BR app?**
 It's a translation backlog item in the app. The numbers themselves are yours, in your show's currency. Only the labels are still in English.

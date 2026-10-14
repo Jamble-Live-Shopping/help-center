@@ -1,18 +1,13 @@
 intercom_id: 14288141
 slug: generate-and-print-shipping-labels
 collection_id: 19177937
-default_locale: pt-BR
+default_locale: pt-br
 state: published
 author_id: 7980507
 last_sync: 2026-04-22T00:00:00Z
-titles:
-  pt-BR: Gere e Imprima Etiquetas de Envio
-  en: Generate and Print Shipping Labels
-descriptions:
-  pt-BR: Como gerar, baixar e imprimir a etiqueta de envio de um pedido na Jamble. Formatos disponiveis e dicas de impressao.
-  en: How to generate, download and print a shipping label for an order on Jamble. Available formats and printing tips.
+
 locales:
-  pt-BR:
+  pt-br:
     title: 'Gere e Imprima Etiquetas de Envio'
     description: 'Como gerar, baixar e imprimir a etiqueta de envio de um pedido na Jamble. Formatos disponiveis e dicas de impressao.'
   en:

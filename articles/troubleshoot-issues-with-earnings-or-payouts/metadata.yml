@@ -3,17 +3,12 @@ slug: troubleshoot-issues-with-earnings-or-payouts
 collection_id: 19177938
 
 # Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror (currency aside).
-default_locale: pt-BR
+default_locale: pt-br
 
 state: published
 author_id: 7980499
 last_sync: 2026-04-21T00:00:00Z
-titles:
-  pt-BR: Resolver Problemas de Pagamento ou Saque
-  en: Troubleshoot Issues with Earnings or Payouts
-descriptions:
-  pt-BR: Resolva os problemas mais comuns com ganhos e saques na Jamble antes de contactar o suporte.
-  en: Solve the most common issues with earnings and payouts on Jamble before contacting support.
+
 locales:
   pt-br:
     title: 'Resolver Problemas de Pagamento ou Saque'

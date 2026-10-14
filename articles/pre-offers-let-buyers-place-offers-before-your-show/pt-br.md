@@ -13,7 +13,7 @@ A Pré-oferta deixa o comprador ofertar em um produto antes do show ir ao vivo. 
 
 ## Quando a Pré-oferta aparece
 
-A Pré-oferta só fica disponível em produtos que vão ser vendidos no modo **Oferta em tempo real** ou **Sudden Death**, com quantidade igual a **1**. Modos como **Comprar agora** (preço fixo) e **Sorteio** não aceitam Pré-oferta, e mais de uma unidade do mesmo item também não.
+A Pré-oferta só fica disponível em produtos que vão ser vendidos no modo **Oferta em tempo real** ou **Morte Súbita**, com quantidade igual a **1**. O modo **Comprar agora** (preço fixo) não aceita Pré-oferta, e mais de uma unidade do mesmo item também não.
 
 Do lado do comprador, a Pré-oferta aparece nos cards de produtos de shows futuros: ao navegar pelo calendario de shows agendados, cada produto elegivel mostra um botão **Enviar oferta** abaixo da lista.
 

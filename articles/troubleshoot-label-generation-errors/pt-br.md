@@ -19,9 +19,9 @@ Você precisa de:
 **Causas comuns e soluções:**
 
 1. **Endereço de envio ausente**
-   - Vá em **Settings > Shipping Preferences** e verifique se seu endereço está completo
+   - Vá em **Preferências de envio** e verifique se seu endereço está completo
    - CEP, rua, número, cidade e estado devem estar todos preenchidos
-   - Tente atualizar seu CEP — o app preenche automaticamente o endereço a partir do código postal
+   - Tente atualizar seu CEP, o app preenche automaticamente o endereço a partir do código postal
 
 2. **CEP inválido**
    - Certifique-se de que seu CEP é um código postal brasileiro válido de 8 dígitos
@@ -30,14 +30,14 @@ Você precisa de:
 
 3. **Problema no endereço do comprador**
    - Se o endereço do comprador está incompleto ou inválido, a etiqueta não pode ser gerada
-   - Entre em contato com o suporte — eles podem falar com o comprador para corrigir o endereço
+   - Entre em contato com o suporte, eles podem falar com o comprador para corrigir o endereço
 
 4. **Incompatibilidade de perfil de envio**
    - Se o perfil de envio do produto não corresponde a um serviço válido dos Correios para a rota (origem → destino), a etiqueta pode falhar
    - Verifique se o perfil de envio atribuído ao produto é apropriado para seu tamanho e peso reais
 
 5. **Problema temporário no serviço**
-   - O sistema de etiquetas usa um serviço externo (Melhor Envio) para gerar etiquetas dos Correios. Se este serviço estiver temporariamente indisponível, a geração falhará
+   - O sistema de etiquetas usa um serviço parceiro para gerar etiquetas dos Correios. Se este serviço estiver temporariamente indisponível, a geração falhará
    - Aguarde alguns minutos e tente novamente. Se persistir após 30 minutos, entre em contato com o suporte
 
 ### Erro: Etiqueta gerada mas parece errada
@@ -46,20 +46,20 @@ Você precisa de:
 
 **O que verificar:**
 
-1. **Endereço do remetente errado** — Seu endereço na etiqueta deve corresponder ao endereço em Settings. Se não corresponder, atualize seu endereço em **Settings > Shipping Preferences** antes de gerar novas etiquetas
-2. **Formato de etiqueta errado** — Se o tamanho do PDF não corresponde à sua impressora, mude o formato em **Settings > Shipping Preferences** (Half Page, Full Page ou Thermal 4x6)
-3. **Itens listados errados** — Se a declaração de conteúdo lista itens errados, pode ser um problema de agrupamento. Verifique se os produtos corretos estão no pacote certo
+1. **Endereço do remetente errado**: Seu endereço na etiqueta deve corresponder ao endereço nas suas Preferências de envio. Se não corresponder, atualize seu endereço em **Preferências de envio** antes de gerar novas etiquetas
+2. **Formato de etiqueta errado**: Se o tamanho do PDF não corresponde à sua impressora, mude o formato em **Preferências de envio** (Meia página, Página inteira ou Térmica)
+3. **Itens listados errados**: Se a declaração de conteúdo lista itens errados, pode ser um problema de agrupamento. Verifique se os produtos corretos estão no pacote certo
 
 ### Erro: Não consigo imprimir ou compartilhar a etiqueta
 
-**Como aparece:** A etiqueta abre mas o botão Print não funciona ou o menu de compartilhamento não aparece.
+**Como aparece:** A etiqueta abre mas o botão de imprimir não funciona ou o menu de compartilhamento não aparece.
 
 **O que tentar:**
 
-1. **Verifique sua conexão com a internet** — O PDF da etiqueta precisa ser baixado. Uma conexão lenta ou instável pode impedir o carregamento
-2. **Aguarde o PDF carregar completamente** — O visualizador mostra uma pré-visualização. Certifique-se de que o PDF completo carregou antes de tocar em Print
-3. **Tente novamente** — Feche a tela da etiqueta e reabra. O PDF pode precisar ser baixado novamente
-4. **Salve e imprima de outro dispositivo** — Use o menu de compartilhamento para enviar o PDF por email ou salvar em Arquivos, depois imprima de um computador
+1. **Verifique sua conexão com a internet**: O PDF da etiqueta precisa ser baixado. Uma conexão lenta ou instável pode impedir o carregamento
+2. **Aguarde o PDF carregar completamente**: O visualizador mostra uma pré-visualização. Certifique-se de que o PDF completo carregou antes de tocar em imprimir
+3. **Tente novamente**: Feche a tela da etiqueta e reabra. O PDF pode precisar ser baixado novamente
+4. **Salve e imprima de outro dispositivo**: Use o menu de compartilhamento para salvar o PDF em Arquivos, ou entre no Seller Hub pelo computador e imprima em **Envios**, com **Imprimir Etiqueta**
 
 ## Quando contatar o suporte
 
@@ -83,7 +83,7 @@ Entre em contato com o suporte se:
 Entre em contato com o suporte. Se a etiqueta foi comprada mas não pôde ser usada, eles podem processar um reembolso do custo da etiqueta.
 
 **Posso gerar uma etiqueta pelo computador?**
-Atualmente, as etiquetas são geradas apenas pelo app mobile da Jamble. Você pode exportar o PDF e imprimir de qualquer dispositivo.
+Sim. No Seller Hub (jamble.com/seller/dashboard), abra **Envios** para gerar e imprimir suas etiquetas direto do computador.
 
 **O serviço de etiquetas está fora do ar. O que devo fazer?**
 Aguarde e tente novamente mais tarde. Se já passou de uma hora, entre em contato com o suporte. Enquanto isso, você pode gerar sua própria etiqueta dos Correios externamente e adicionar o número de rastreio ao pedido manualmente.

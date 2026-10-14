@@ -1,0 +1,16 @@
+intercom_id: 17588933
+slug: buy-in-the-loja-cart-and-offers
+collection_id: 11348923
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+default_locale: pt-br
+
+state: draft
+
+locales:
+  pt-br:
+    title: 'Comprar na Loja: carrinho e ofertas'
+    description: 'Compre a qualquer momento sem live, junte produtos no carrinho e faça ofertas aos vendedores.'
+  en:
+    title: 'Buy in the Loja: cart and offers'
+    description: 'Buy anytime without a live, put products in your cart and make offers to sellers.'

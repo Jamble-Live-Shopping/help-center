@@ -10,10 +10,11 @@ author_id: 7980499
 last_sync: 2026-04-21T00:00:00Z
 reviewers:
   - aymar
+
 locales:
   pt-br:
-    title: Como Listar Produtos na Jamble
-    description: Crie uma listagem com campos obrigatórios, preço em R$, quantidade, pré-ofertas, fotos e perfil de envio.
+    title: 'Como Listar Produtos na Jamble'
+    description: 'Crie anúncios em uma live, na Loja ou pelo computador: campos, modo de venda, quantidade e envio.'
   en:
-    title: How to List Products on Jamble
-    description: Create a listing with required fields, R$ pricing, quantity, pre-offers, photos, and shipping profile.
+    title: 'How to List Products on Jamble'
+    description: 'Create listings in a live, in the Loja or on a computer: fields, sell mode, quantity and shipping.'

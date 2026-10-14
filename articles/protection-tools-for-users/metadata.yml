@@ -1,0 +1,18 @@
+intercom_id: 10383931
+slug: protection-tools-for-users
+collection_id: 11348936
+
+# Imported from live Intercom on 2026-10-13 (article previously edited only in the Intercom UI).
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+default_locale: pt-br
+
+state: published
+last_sync: 2026-08-21T09:33:43Z
+
+locales:
+  pt-br:
+    title: '3. Denúncia e bloqueio de usuários'
+    description: 'Ferramentas para ajudar a manter a plataforma segura, justa e respeitosa para todos'
+  en:
+    title: '3. Protection Tools for Users'
+    description: 'Tools to help keep the platform safe, fair, and respectful for everyone'

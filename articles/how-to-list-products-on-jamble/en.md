@@ -1,107 +1,72 @@
 # How to List Products on Jamble
 
-## What you'll learn
+## What you will learn
 
-This guide explains how to create a product listing for a Jamble show without guessing which fields matter. It covers the required fields, optional details, pricing rules, quantity, pre-offers, and shipping profile.
+This guide explains how to create a product listing on Jamble: the fields you fill in, the sell modes, quantity and the shipping profile.
 
-## Contents
+## Where you create your listings
 
-- Before you start
-- Required fields
-- Photos and product details
-- Selling mode and price
-- Quantity and pre-offers
-- Shipping profile
-- Save and review
-- Related articles
+- **In a live:** open your scheduled live and add the products you will sell live
+- **In the Loja (shop):** create listings that are for sale at any time, without a live. In the app, tap the **+** on your profile and choose **Criar anúncio na Loja**
+- **On a computer:** in the Seller Hub, use the **+**, then **Criar Novo Produto**. To create many products at once, use **Importar CSV**. To reuse products, use **Clonar de Lives Anteriores**
 
-## Before you start
+See [Seller Hub: sell from your computer](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588489) for the computer details.
 
-You need:
+## The listing fields
 
-- A seller account on Jamble
-- A show where you want to sell the product
-- The product details you want buyers to see
-- Photos on your phone, if you want to add them while listing
+![Quick listing form showing the Select a photo row, a product title, a category row and the description field above the disabled Add product button](./assets/mockups/how-to-list-products-on-jamble__listing-basics__en__v3.png)
 
-## Required fields
+- **Title:** up to 40 characters. Use the item's name and its most important detail, such as set, model or size
+- **Category:** required. Choose the category and subcategory that best describe the item
+- **Condition:** the options change by category. Choose the one that honestly describes the item
+- **Photos:** show the exact item you are selling, front and back when it makes sense, and any defect, seal or box
+- **Description:** up to 120 characters, for details the photos do not show
+- **Other details:** some categories ask for extra fields, such as language, rarity, grade, brand, size or color. Fill in the ones that apply
 
-When you create a product for a show, focus on the required fields first:
+If a required field is missing, the app tells you before saving.
 
-1. **Title** - maximum 60 characters. Use the item name plus the detail buyers need most, such as set, model, size, color, or condition.
-2. **Selling mode** - choose how the product will be sold during the show.
-3. **Price or starting price** - the app uses the local currency for Brazil and blocks starting prices below $5.
-4. **Shipping profile** - choose the profile that matches the item after packaging.
+## Sell mode and price
 
-![Quick listing form showing the Select a Photo row, a product title, a category row, and the description field above the disabled Add Listing button](./assets/mockups/how-to-list-products-on-jamble__listing-basics__en__v3.png)
+For products in a live, you choose how to sell:
 
-If a required field is missing, the app keeps the listing from being saved until you fill it.
+- **Oferta em tempo real** (real-time offer): buyers compete for the item with offers. The price is the starting price
+- **Morte súbita** (sudden death): timed offers with no extra time at the end. The price is the starting price
+- **Comprar agora** (buy now): fixed price, the buyer buys right away
 
-## Photos and product details
+![Sell mode section with Real-time offers selected, Starts at and Duration fields visible, and Buy now and Sudden death below](./assets/mockups/how-to-list-products-on-jamble__selling-mode-price__en__v3.png)
 
-Photos are optional in the quick listing flow, but they usually make the listing easier to trust.
+The minimum price is $5. In Loja listings, the price is always fixed.
 
-Good product photos show:
+You can also enter a **Preço de Varejo** (retail price), shown crossed out next to your price. Only use it if it is the item's real reference price.
 
-- The exact item being sold
-- Front and back, when relevant
-- Any wear, flaw, seal, tag, label, or box detail buyers should know
-- The item on a clean background
+## Quantity, lot and pre-offers
 
-The description field is optional and limited to 120 characters. Use it for details that photos do not show clearly, such as material, fit, condition notes, missing accessories, or included items.
+- **Quantidade** (quantity): how many identical units you have, from 1 to 1,000
+- **Lote** (lot): turn it on when the listing is a set of units sold together, and enter the **Unidades do lote** (units in the lot)
+- **Pre-offers:** only available when the quantity is 1
 
-Optional product details can include category, size, color, brand, condition, and retail price. Fill the fields that help buyers understand the item; skip fields that do not apply.
-
-## Selling mode and price
-
-Jamble supports these selling modes for show listings:
-
-- **Real Time Offer**, use it when you want buyers to compete with offers during the live show. The price is the starting price.
-- **Sudden Death**, use it when you want an offer format with a timer and no extra-time mechanic. The price is the starting price.
-- **Buy It Now**, use it when you want a fixed price that buyers can accept immediately.
-
-![Selling mode section with Real Time Offer selected, Start at and Timer fields visible, and Buy It Now and Sudden Death listed below](./assets/mockups/how-to-list-products-on-jamble__selling-mode-price__en__v3.png)
-
-For Real Time Offer and Sudden Death, the app validates the starting price and the timer. For Buy It Now, the price is the fixed purchase price.
-
-You can also add a retail price when it helps buyers understand the reference value. Do not use retail price as a discount promise unless you can support it.
-
-## Quantity and pre-offers
-
-Quantity is optional and defaults to 1. For eligible selling modes, Jamble allows quantity up to 1,000 units.
-
-If quantity is greater than 1, the pre-offer toggle turns off. Use pre-offers only when the listing has one unit and the selected selling mode supports it.
-
-![Quantity section with a stepper, Enable Pre-Offer toggle, and Shipping Profile row selected below](./assets/mockups/how-to-list-products-on-jamble__quantity-shipping__en__v3.png)
+![Quantity section with minus and plus controls, Enable Pre-offer toggle and the selected Shipping profile row below](./assets/mockups/how-to-list-products-on-jamble__quantity-shipping__en__v3.png)
 
 ## Shipping profile
 
-The shipping profile is required. Choose it based on the packaged item, not just the item without packaging.
+The shipping profile tells Jamble the package's weight and size and sets the shipping the buyer pays. Choose **Automático**, **Informar peso e tamanho** or one of your custom profiles. Think about the item once packed. See [Choose a Shipping Profile](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288104).
 
-Examples:
+## Before saving
 
-- A single card can use a smaller profile than a boxed collectible.
-- Sneakers with the original box may need more room than sneakers shipped without the box.
-- A bundle may need a larger profile than one item.
+Check that:
 
-The shipping profile influences the shipping cost shown to buyers, so do not oversize or undersize it.
+- The title is specific and up to 40 characters
+- The category and condition are correct
+- The sell mode and price are how you want them
+- The shipping profile matches the packed item
+- The photos and description show the real product
 
-## Save and review
-
-Before saving, check:
-
-- Title is specific and under 60 characters.
-- Selling mode matches how you want to sell the item.
-- Price or starting price is in the local currency and at least $5.
-- Shipping profile matches the packaged item.
-- Photos and description match the actual product.
-
-After saving, review the product in the show list before going live. If something is wrong, edit the listing before selling it.
+After saving, review the product in the list before going live. If something is wrong, edit the listing before selling.
 
 ## Related articles
 
-- Choose Quantities When Listing Products
-- Buy It Now: Sell at a Fixed Price
-- Pre-Offers: Let Buyers Place Offers Before Your Show
-- Creating and Managing Real Time Offers
-- Troubleshoot Shipping Costs as a Seller
+- [Choose Quantities When Listing Products](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288094)
+- [Buy It Now, Sell at a Fixed Price](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288112)
+- [Pre-offers](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288122)
+- [How Real-time Offers Work](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288115)
+- [Listing Guidelines](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288106)

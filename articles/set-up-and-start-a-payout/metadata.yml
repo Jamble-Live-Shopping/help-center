@@ -3,24 +3,16 @@ slug: set-up-and-start-a-payout
 collection_id: 19177938
 
 # Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
-default_locale: pt-BR
+default_locale: pt-br
 
 state: published
 author_id: 7980507
 last_sync: 2026-04-21T00:00:00Z
 
-titles:
-  pt-BR: Configurar e Iniciar um Saque
-  en: Set Up and Start a Payout
-
-descriptions:
-  pt-BR: Registre seus dados bancarios na Jamble e saque seus ganhos para sua conta via PIX, com o passo a passo completo.
-  en: Register your bank details on Jamble and withdraw your earnings to your bank account via PIX, with the full step-by-step.
-
 locales:
-  pt-BR:
+  pt-br:
     title: 'Configurar e Iniciar um Saque'
-    description: 'Registre seus dados bancarios na Jamble e saque seus ganhos para sua conta via PIX, com o passo a passo completo.'
+    description: 'Cadastre sua conta de recebimento e saque seus ganhos para a sua conta bancária, passo a passo.'
   en:
     title: 'Set Up and Start a Payout'
-    description: 'Register your bank details on Jamble and withdraw your earnings to your bank account via PIX, with the full step-by-step.'
+    description: 'Register your payout account and withdraw your earnings to your bank account, step by step.'

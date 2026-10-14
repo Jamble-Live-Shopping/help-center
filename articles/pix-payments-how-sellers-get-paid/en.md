@@ -1,140 +1,78 @@
-# PIX Payments, How Sellers Get Paid
+# How you get paid
 
-## What you'll learn
+## What you will learn
 
-This guide explains how payments work for sellers on Jamble. You'll learn how your earnings are calculated, how to register your bank account, how to withdraw to your account via PIX, and how to resolve payment issues.
+This guide explains the path of your money on Jamble, from the sale to your bank account: when the amount becomes available, how long it takes and how to withdraw.
 
-## Before you start
+## The path, from sale to bank
 
-You need:
-- An approved seller account on Jamble
-- A Brazilian bank account (checking or savings)
-- Your CPF (or CNPJ if you sell as a company)
+1. **The buyer pays.** Payment is made at checkout, by Pix or card.
+2. **You ship the order.** You create the label and post the package.
+3. **The order is completed.** The buyer confirms receipt or, if they do not, the order is completed automatically a few days after delivery.
+4. **The payment is released.** The timing depends on the payment method (see below).
+5. **The amount becomes available to withdraw.** When the order is completed and the payment is released, the amount moves to **Disponível para saque** (available to withdraw).
+6. **You withdraw.** Tap **Sacar** (withdraw) and the amount goes to your registered bank account.
 
-## How sellers get paid on Jamble
+## How long until the payment is released
 
-When a buyer purchases a product from you during a show, the money doesn't go directly to your bank account. Here's the flow:
+Average timings, after the buyer pays:
 
-1. **The buyer pays.** The total amount (product + shipping) is paid at checkout.
-2. **Jamble holds the funds.** The money is safely held while you send the order.
-3. **You send the order.** You generate the label, pack the item, and take it to a post office.
-4. **The buyer receives.** They confirm receipt, or delivery is automatically confirmed by tracking.
-5. **Your earnings become available.** The amount moves from "Pending" to "Available for withdrawal" in your wallet.
-6. **You request a withdrawal.** Tap **Withdraw** and the money is sent to your bank via PIX.
+- **Pix:** about 1 day
+- **Card:** up to 30 days
+- **Card with Recebimento Antecipado (early payout) on:** about 15 days, with an additional fee of about 1% on card payments
 
-## Your earnings breakdown
+The amount only becomes available to withdraw when both things happen: the payment is released **and** the order is completed. See [Recebimento Antecipado (early payout) and installments](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588903).
 
-Jamble charges **14% commission** on each sale. This fee is automatically deducted before the money enters your wallet.
+## What your wallet shows
 
-**Example:**
-- You sell an item for $100
-- Jamble commission: $14
-- Your earnings: $86
+Open **Ajustes** (settings) and tap **Minha carteira** (my wallet), or open **Carteira** in the Seller Hub.
 
-The buyer pays shipping separately. Shipping costs are not deducted from your earnings.
+- **Disponível para saque:** the amount you can withdraw now
+- **Vendas pendentes** (pending sales): payments not released yet and sales still in progress (in delivery, waiting for confirmation). Tap **Sobre vendas pendentes** to see the timing for each one
+- **Dados bancários** (bank details): the account that receives your withdrawals
 
-## Step by step
+## How much you receive
 
-### Step 1: Register your bank account
+Jamble's standard commission is 10% of the product price. It is deducted before the amount reaches your wallet, so your wallet always shows what you receive.
 
-Before receiving any withdrawal, you need to register your bank details with Pagar.me, Jamble's payment processor.
+Example: on a $100.00 sale, you receive $90.00. Shipping is paid by the buyer and does not reduce your earnings. See [Jamble Seller Fees and Commissions](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288149).
 
-Go to your profile, tap **Settings**, then **My wallet**.
+## How to withdraw
 
-If your bank account hasn't been registered yet, you'll see a **Register Bank** button at the bottom of the screen.
+When your balance under **Disponível para saque** is above the minimum shown in your wallet, tap **Sacar** and confirm. Withdrawals are free and the money usually arrives within 5 business days, depending on your bank. Follow it in the **Histórico de saques** (withdrawal history).
 
-![My wallet screen header with back arrow, clock and help icons, balance sections and Register Bank button](./assets/mockups/pix-payments-how-sellers-get-paid__wallet-header__en__v2.png)
+The full step-by-step is in [Set Up and Start a Payout](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288148).
 
-Tap **Register Bank** and choose:
-- **Individual** if you sell as an individual (CPF)
-- **Company** if you sell as a company (CNPJ)
+## Key tips
 
-A form opens for you to fill in:
-- Your identity information (name, CPF or CNPJ)
-- Your bank details (bank, branch, account number, account type)
-
-Complete and submit. Once verified, your bank account is linked and ready to receive withdrawals.
-
-### Step 2: Check your wallet
-
-After completing sales, open **My wallet** to see your earnings. The screen shows three sections:
-
-- **Available for withdrawal**, the amount you can withdraw now
-- **Pending**, the amount from recent sales still waiting for delivery confirmation
-- **Bank Details**, the registered account that will receive the withdrawal
-
-If you need to update your bank account, tap **Update** next to your details.
-
-### Step 3: Request a withdrawal
-
-When you have available balance, the **Withdraw** button becomes active at the top of the screen.
-
-![My wallet screen with available balance for withdrawal, pending amount, bank details and Withdraw button](./assets/mockups/pix-payments-how-sellers-get-paid__my-wallet__en__v2.png)
-
-Tap **Withdraw**. A confirmation appears. This action is irreversible and available every 24h.
-
-Confirm to request the withdrawal via PIX. The full available amount is sent to your registered bank account.
-
-**Important about timing.** The withdrawal arrives in your account in **2 to 5 business days**. Jamble processes the request immediately and sends it to Pagar.me, which forwards it to your bank via PIX. The exact timeframe depends on your bank.
-
-### Step 4: Track your withdrawal history
-
-To see all previous withdrawals, scroll down on the wallet screen to the **Payment history** section.
-
-Each withdrawal shows:
-- **Withdrawal ID**
-- **Amount** in $
-- **Status**, which can be Created, Processing, Pending, Completed, Failed, or Canceled
-- **Date**
-
-Tap a withdrawal to see details, including the reason in case of failure.
-
-## When your earnings become available
-
-Your earnings don't become available immediately. Here's the timeline:
-
-- **Buyer purchases your item.** The amount enters **Pending**.
-- **You send the order.** The amount remains **Pending**.
-- **Buyer receives and confirms.** The amount moves to **Available for withdrawal**.
-- **Delivery confirmed automatically.** If the buyer doesn't confirm manually, the system confirms once tracking shows delivery, and the amount moves to **Available for withdrawal**.
-
-## Important tips
-
-- **Register your bank account before your first show.** This is the most common mistake by new sellers. If you sell without bank details, your earnings are held until you complete registration.
-- **One withdrawal per 24h.** After requesting a withdrawal, you need to wait 24h to request another.
-- **Timeframe of 2 to 5 business days.** PIX is initiated immediately, but the credit to your account depends on your bank. Plan with this timeframe in mind.
-- **Keep your bank details updated.** If you change banks, update your details in the wallet before requesting a withdrawal. Withdrawals with incorrect details fail and the amount returns to your wallet.
-- **Check your wallet after each delivery.** After sending orders, follow up to see when the amount moves from "Pending" to "Available for withdrawal".
+- **Register your payout account before your first live.** You need it to host lives and to withdraw
+- **Ship quickly.** The sooner the order is delivered and completed, the sooner the amount is available
+- **Each sale has its own pace.** Each order moves forward on its own, depending on delivery and payment method
+- **Keep your bank details up to date.** Wrong details make the withdrawal fail
 
 ## Frequently asked questions
 
-**How long does a PIX withdrawal take?**
-The withdrawal arrives in your account in 2 to 5 business days. Jamble initiates processing immediately, but the credit depends on Pagar.me and your bank.
+**Why is my money under Vendas pendentes?**
+The order is not completed yet, or the payment has not been released yet. The amount moves to **Disponível para saque** when both happen.
 
-**Is there a minimum amount to withdraw?**
-The **Withdraw** button only becomes active when there's available balance. The minimum amount is set in your profile by the system.
+**Do I get paid if the buyer does not confirm receipt?**
+Yes. If the buyer does not confirm, the order is completed automatically a few days after delivery.
 
-**What if my withdrawal fails?**
-If a withdrawal fails, the money returns to your wallet. Tap the withdrawal in the history to see the reason. Common causes: incorrect bank details, closed account, or invalid CPF/CNPJ. Correct and try again.
+**Can I withdraw the amount under Vendas pendentes?**
+No. Only the amount under **Disponível para saque** can be withdrawn.
 
-**Why do I have funds in "Pending"?**
-Funds remain Pending until the buyer confirms delivery. This protects both you and the buyer. After confirmation (manual by the buyer or automatic by tracking), the amount moves to Available for withdrawal.
+**Is the withdrawal made by Pix?**
+No. The withdrawal is a transfer to your registered bank account. You cannot withdraw to a Pix key.
 
-**How is the 14% commission calculated?**
-The commission is 14% of the product's sale price. Shipping is paid by the buyer and doesn't enter the commission calculation.
+**What if the buyer reports a problem with the order?**
+Our support team reviews the case. The amount for that order is held until the case is resolved.
 
-**Can I change my bank account?**
-Yes. Go to **My wallet** and tap **Update** next to your details. This opens the registration form for you to enter the new account.
+**What if the sale is cancelled?**
+The buyer is refunded and the amount for that sale does not reach your wallet.
 
-**Why does my wallet show "Register Bank" instead of "Withdraw"?**
-Your bank details haven't been registered yet. Tap **Register Bank** to complete registration with Pagar.me and link your account.
-
-**What happens if the buyer doesn't confirm delivery?**
-If the buyer doesn't confirm manually, the system confirms automatically once tracking shows delivery. Your funds move to Available for withdrawal.
-
-**Can I withdraw to a PIX key (CPF, email, phone)?**
-The withdrawal goes to the bank account you registered in the Pagar.me form (bank + branch + account number). It's not possible to withdraw directly to a PIX key.
+**I switched from CPF to CNPJ. Why do I see two accounts?**
+After a registration change, your wallet may show the **Conta atual** (current account) and the **Conta anterior** (previous account). The previous account's balance is released as usual and you can withdraw it separately.
 
 ## Need help?
 
-Talk to us via the app chat or send an email to support@jambleapp.com.
+Talk to us through the in-app chat.

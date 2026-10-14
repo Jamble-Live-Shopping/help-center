@@ -36,7 +36,7 @@ Quando voce encerra um show, o resumo aparece automaticamente. No topo, voce ve 
 ### Os quatro numeros do RESUMO
 
 - **TOTAL**: receita bruta de todas as vendas durante o show, somando o preco cheio que cada comprador pagou
-- **AFTER FEES**: valor liquido depois da taxa Jamble de 14%. Importante: este numero **nao** inclui o custo do produto, frete que sai do seu bolso, embalagem, impostos, eventuais reembolsos. E o valor que sai da Jamble para voce, nada alem disso
+- **AFTER FEES**: valor liquido depois da taxa padrão da Jamble de 10%. Importante: este numero **nao** inclui o custo do produto, frete que sai do seu bolso, embalagem, impostos, eventuais reembolsos. E o valor que sai da Jamble para voce, nada alem disso
 - **SOLD**: numero de produtos vendidos no show
 - **BUYERS**: numero de compradores unicos (uma pessoa que comprou tres itens conta como 1 buyer)
 
@@ -46,7 +46,7 @@ Voce vai notar que o cabecalho **RESUMO** aparece em portugues, mas os quatro ro
 
 ### O que olhar no resumo
 
-- Compare TOTAL e AFTER FEES para ver quanto a taxa Jamble retira (14% do TOTAL)
+- Compare TOTAL e AFTER FEES para ver quanto a taxa Jamble retira (10% do TOTAL, na comissão padrão)
 - Compare SOLD e BUYERS: se SOLD e bem maior que BUYERS, voce esta vendendo varios itens por comprador, sinal saudavel de cesta cheia
 - Role abaixo do card de resumo para ver a lista das vendas confirmadas e dos itens que ficaram sem comprador
 
@@ -108,7 +108,7 @@ Nao. Nao existe funcao de exportar no app hoje.
 Nao diretamente. Voce pode estimar comparando a contagem de espectadores durante a live (no canto direito da tela do host) com o numero BUYERS no resumo pos-show.
 
 **O AFTER FEES ja e o que sobra para mim no final?**
-Nao. AFTER FEES e o **valor liquido depois da taxa Jamble de 14%**, antes de qualquer outro custo seu. Para chegar ao seu resultado real, subtraia o custo do produto, frete que voce paga, embalagem, impostos e eventuais reembolsos.
+Nao. AFTER FEES e o **valor liquido depois da taxa padrão da Jamble de 10%**, antes de qualquer outro custo seu. Para chegar ao seu resultado real, subtraia o custo do produto, frete que voce paga, embalagem, impostos e eventuais reembolsos.
 
 **Por que TOTAL, AFTER FEES, SOLD e BUYERS aparecem em ingles na minha versao em portugues?**
 E uma pendencia de traducao do app. Os numeros sao seus, em R$. So os rotulos ainda estao em ingles.

@@ -1,27 +1,28 @@
 # Start Selling on Jamble
 
-## What you'll learn
+## What you will learn
 
-This guide walks you through each step to become a seller on Jamble, from downloading the app to receiving your payment after your first show. Follow in order and you'll be ready to sell live.
+This guide takes you through each step to become a seller on Jamble, from downloading the app to getting paid after your first show. Follow them in order and you will be ready to sell live.
 
 ## Jump to a step
 
 - [Step 1: Download the app and create your account](#passo-1)
-- [Step 2: Apply to Sell Live](#passo-2)
-- [Step 3: Build a profile that builds trust](#passo-3)
+- [Step 2: Apply to sell live](#passo-2)
+- [Step 3: Build a profile buyers trust](#passo-3)
 - [Step 4: Add your bank details to get paid](#passo-4)
-- [Step 5: Set up how you'll ship](#passo-5)
+- [Step 5: Set up how you will ship](#passo-5)
 - [Step 6: List your products before the show](#passo-6)
 - [Step 7: Schedule your first show](#passo-7)
-- [Step 8: Go Live and sell](#passo-8)
-- [Step 9: Ship orders and withdraw your earnings](#passo-9)
+- [Step 8: Go live and sell](#passo-8)
+- [Step 9: Ship your orders and withdraw your earnings](#passo-9)
 
 ## Before you start
 
-You'll need:
-- A smartphone (iPhone or Android) with the Jamble app installed
+You need:
+
+- A smartphone (iPhone or Android) with the Jamble app installed. Once approved, you can also use a computer, with the Seller Hub
 - A valid CPF
-- A bank account that accepts PIX
+- A bank account in your name or in your company's name
 - Products you want to sell (collectibles like Pokémon TCG, Hot Wheels, One Piece TCG, Magic)
 
 ## Step 1: Download the app and create your account {#passo-1}
@@ -30,156 +31,167 @@ Download Jamble from the App Store (iPhone) or Google Play Store (Android). Open
 
 ![Jamble welcome screen with signup options by email and phone](./assets/mockups/start-selling-on-jamble__welcome-signup__en.png)
 
-The process is quick:
-- Enter your **Phone Number** and confirm the code that arrives via SMS or WhatsApp
-- Enter your **Email** and verify the code
-- Add your **CPF** (11 digits, no punctuation)
+The flow is quick:
 
-Done, your buyer account is created. Now you need to request access as a Live seller.
+- Enter your **phone number** and confirm the code sent by SMS or WhatsApp
+- Enter your **email** and verify the code
+- Add your **CPF** (11 digits, no dots)
 
-## Step 2: Apply to Sell Live {#passo-2}
+That's it, your buyer account is created. Now you need to apply to sell live.
 
-In the app, open the menu and look for the screen titled **Become a Live Seller**. You'll see three benefits:
+## Step 2: Apply to sell live {#passo-2}
 
-- **Elevate Earnings, Effortlessly**
-- **Instant Access to Buyers**
-- **Dedicated Seller Support**
+On your profile, tap **Candidate-se para vender ao vivo** (apply to sell live) to open the form. It takes about 5 minutes and asks for:
 
-Tap **Apply to Sell Live** to open the form. If you want to wait, tap **Do it later**.
-
-The form takes about 5 minutes and asks:
-
-- Your name and contact information
+- Your name and contact details
 - What you sell (Pokémon TCG, Hot Wheels, One Piece TCG, etc.)
-- Your social media (Instagram or other profiles where you already sell, if any)
+- Your social networks, if you have any
 
-Our team reviews each application and may take up to 14 days to give a final answer. You'll be notified via app notification, email, and SMS when you're approved.
+In most cases you get an answer quickly, but it can take up to 14 days. You are notified when your application is approved.
 
-## Step 3: Build a profile that builds trust {#passo-3}
+## Step 3: Build a profile buyers trust {#passo-3}
 
-After you apply, you can start preparing your profile so buyers recognize your shop.
+Once you have applied, you can already prepare your profile so buyers recognize your shop.
 
 Go to **Profile** and add:
-- **A profile photo**, a photo of you or your brand logo
-- **A username**, something buyers will remember (no special characters like ?,;/+&! and no word "jamble")
-- **A short bio**, a description of what you sell (ex: "Sealed and graded PSA Pokémon TCG")
+
+- **A profile photo**, a photo of you or your brand's logo
+- **A username**, something buyers will remember (no special characters like ?,;/+&! and without the word "jamble")
+- **A short bio**, describing what you sell (e.g. "Sealed Pokémon TCG and PSA graded cards")
 
 This is what buyers see when they visit your shop or join your show. A complete profile builds trust and attracts more viewers.
 
 ## Step 4: Add your bank details to get paid {#passo-4}
 
-To receive your earnings, you need to add your bank details. Go to **Profile > Settings > Seller Wallet** and tap **Add bank details**.
+To receive your earnings, you need to register your payout account. Open **Ajustes** (settings) and tap **Minha carteira** (my wallet).
 
-Then select the option that matches your situation:
-- **Individual (CPF)** for individuals
-- **Business (CNPJ)** for companies
+Then choose the registration type:
 
-You'll need to add some personal information and your bank details (bank name, branch code, account number, and account type).
+- **CPF**, if you sell as an individual
+- **CNPJ**, if you sell as a company
 
-**Important:** check all information before saving. The account type cannot be changed later. Similarly, the CNPJ number cannot be updated, if you need to change it you'll have to create a new account.
+You will enter your personal and bank details (bank, branch, account number and type). You may be asked for an identity verification. If so, follow the on-screen instructions.
+
+**Important:** check all the information before saving. If you need to switch between CPF and CNPJ later, use **Mudar de entidade (CPF/CNPJ)** in your wallet.
 
 **This step is required to go live for the first time.**
 
-## Step 5: Set up how you'll ship {#passo-5}
+## Step 5: Set up how you will ship {#passo-5}
 
-Go to **Seller Settings** to set up how you'll ship your products. On Jamble, shipping is done through Correios, Brazil's postal service.
+Go to your seller **Ajustes** to set how you will ship your products. On Jamble, shipping is done through Correios.
 
 What you set up:
 
 - **Label format**, choose the size of your shipping labels:
-  - Half Page (8.5 x 11), works with standard printers
-  - Full Page (8.5 x 11)
-  - Thermal (4 x 6), if you have a thermal printer
-- **Shipping preferences**, choose which Correios option you prefer: SEDEX, PAC, Mini PAC
+   - Half page (8.5 x 11), works with regular printers
+   - Full page (8.5 x 11)
+   - Thermal (4 x 6), if you have a thermal printer
+- **Shipping preferences**, choose the Correios services you offer. **SEDEX** is always on, and you can turn on **PAC** and **Mini** (for small, light items)
 
-**How shipping is charged:** you don't set the shipping price. When the buyer completes the purchase, Jamble calculates the cost automatically based on package size, weight, and buyer location. The buyer pays for shipping at checkout. You just need to assign the right shipping profile (size category) to each product when you list it.
+**How shipping is charged:** you do not set the shipping price. When the buyer checks out, Jamble calculates the cost automatically based on the package size, weight and the buyer's location. The buyer pays shipping at checkout. You only need to choose the right shipping profile for each product when you list it.
 
 ## Step 6: List your products before the show {#passo-6}
 
-Before going live, list the products you want to sell. For each product, you provide:
+Before going live, add the products you want to sell. For each product, you enter:
 
-- **Title**, be specific (ex: "Pokémon Booster Pack, Paldea Evolved, sealed", not just "Pokémon")
-- **Photos**, clear images showing the actual item
+- **Title**, be specific (e.g. "Pokémon Booster Pack, Paldea Evolved, sealed", not just "Pokémon")
+- **Photos**, clear images showing the real item
 - **Description**, condition, PSA grade, card language, details that matter
-- **Sale type**, understand each option (Real-time offers, Buy It Now, Flash Sale)
-- **Price and Time**, the starting or fixed price and sale duration
-- **Shipping profile**, the size that matches your package type (XS, S, M, L, XL, etc.)
+- **Category and condition**, the condition options change by category
+- **Sale type**, Oferta em tempo real (real-time offer), Morte súbita (sudden death) or Comprar agora (buy now, which can have a flash sale)
+- **Price and time**, the starting or fixed price and the sale duration
+- **Shipping profile**, the package's weight and size: **Automático**, **Informar peso e tamanho** or one of your own profiles
 
-**How to set the price:** if you'll use Real-time offers, you can start with a low price (as low as $1) to attract more buyers. The final price is decided by competition between buyers. For Buy It Now (fixed price), set the price you want to receive.
+On a computer, in the Seller Hub, you can also create many products at once from a spreadsheet (**Importar CSV**).
+
+You can also sell without going live: create listings in the **Loja** (shop), which are for sale at any time. In the app, tap the **+** on your profile and choose **Criar anúncio na Loja**.
+
+**How to set the price:** if you use real-time offers, you can start with a low price (from $5) to attract more buyers. The final price is decided by competition between buyers. For Comprar agora (fixed price), set the amount you want to receive.
 
 ## Step 7: Schedule your first show {#passo-7}
 
-Tap the create button to schedule a live show.
+On your profile, tap **Agendar uma Live** (schedule a live). On a computer, use the **+**, then **Agendar Live**, in the Seller Hub.
 
 ![Create a Show form with fields for title, date, time, category, and cover upload](./assets/mockups/start-selling-on-jamble__create-show__en.png)
 
 Tips to prepare your show:
-- **Title**, tell buyers what to expect (ex: "PSA 9 and 10 Pokémon, live booster opening")
+
+- **Title**, tell buyers what to expect (e.g. "PSA 9 and 10 graded Pokémon, live booster openings")
 - **Time**, evenings and weekends usually bring more viewers
-- **Show cover**, a photo that clearly shows what you'll sell. It's the first thing buyers see
-- **Recurrence**, set when your show will repeat to gain visibility and build audience habit
+- **Show cover**, a photo that clearly shows what you will sell. It is the first thing buyers see
+- **Repeat**, set when your show repeats to gain visibility and build a habit with your audience
 
-## Step 8: Go Live and sell {#passo-8}
+## Step 8: Go live and sell {#passo-8}
 
-When it's show time, open your scheduled show and tap **Go Live**. Your camera turns on and you're live.
+At showtime, open your scheduled live and tap **Iniciar Live** (start live). Your camera turns on and you are live. You can also host your live from a computer, in the Seller Hub.
 
 During the show, you can:
-- **Start a Real-time offer**, where buyers compete by making offers
-- **Sell with Buy It Now**, fixed price and instant purchase
-- **Create a Flash Sale**, a limited-time discount
+
+- **Start a real-time offer**, where buyers compete with offers
+- **Sell with Comprar agora**, fixed price and instant purchase
+- **Run a flash sale**, a time-limited discount
 - **Chat with your audience** in real time
 
-You don't need to show your face. Many sellers just point the camera at the products and talk about them.
+You do not need to show your face. Many sellers point the camera only at the products and talk about them.
 
-## Step 9: Ship orders and withdraw your earnings {#passo-9}
+## Step 9: Ship your orders and withdraw your earnings {#passo-9}
 
-As soon as the show ends, you see a dashboard with all sales that need to be **confirmed within 5 days**. If they're not confirmed, they're automatically canceled.
+Sales made in a live arrive already confirmed. As soon as the live ends, you see a dashboard with all the packages to ship. You also find your packages under **Envios** (shipments), in the app and in the Seller Hub. **Loja** sales need to be confirmed by you within the time shown in the app.
 
-You can open this dashboard later in: **Profile > Settings > Past Shows**
+The shipping deadline is usually about 10 days after the sale is confirmed. In exceptional situations, such as a Correios strike, it can be extended to up to 20 days. The exact deadline always shows on the order, under **Prazo de envio**.
 
-For each confirmed order:
-1. **Generate the shipping label**, Jamble creates the Correios label automatically
-2. **Pack the item carefully** and attach the label
-3. **Take the package** to a Correios location
+For each package:
 
-When the buyer receives the item, your earnings begin their hold period. Payments are processed via Pagar.me and depend on 2 factors:
-- **Payment verification period:** credit and debit card is 30 days, PIX is 1 day
-- **Order completion:** the order needs to be delivered to the buyer's address and receipt confirmed in the app. The buyer has 3 days to confirm, if they don't, the order is completed automatically
+1. **Create the shipping label** by tapping **Adicionar Etiqueta** (if asked, complete the invoice step first)
+2. **Pack the item carefully** and stick on the label
+3. **Take the package** to a Correios post office
 
-After you start the withdrawal by tapping **Withdraw**, wait up to 3 days for the bank response:
-- **Status completed**, bank accepted, you receive in up to 5 business days
-- **Status failed**, bank rejected or there's an error in your bank details, check the error code in the withdrawal
+Your earnings become available when two conditions are met: the order is completed and the payment is released. Do not count the payment time only from when the product is received:
 
-## Important tips
+- **Payment release:** depends on the payment method and the conditions of your account. Delivery confirmation does not replace this step
+- **Order completion:** receipt is confirmed in the app or the order is completed automatically under the confirmation rules
 
-- **Register a correct shipping address.** This is required to go live
-- **Start with 5 to 10 products.** You don't need a huge inventory. A few well-presented items make a great first show
-- **Interact with your audience.** Greet viewers by name, answer questions, be yourself. Personal connection is what makes live selling work
-- **Ship fast.** Fast shipping gets good reviews, which brings more buyers to your next shows
+When you have an available balance, tap **Sacar** (withdraw). The money goes to your bank account and usually arrives within 5 business days, depending on your bank. Follow it in the **Histórico de saques** (withdrawal history):
+
+- **Completed status**, the transfer was marked as completed; check the credit in your registered account
+- **Failed status**, the bank rejected it or there is an error in your bank details, check the error on the withdrawal
+
+## Key tips
+
+- **Register a correct shipping address.** It is required to go live
+- **Start with 5 to 10 products.** You do not need a huge stock. A few well-presented items make a great first show
+- **Interact with your audience.** Greet viewers by name, answer questions, be yourself. The personal connection is what makes live selling work
+- **Ship quickly.** Fast shipping brings good reviews, which bring more buyers to your next shows
 
 ## Frequently asked questions
 
 **How long does the application review take?**
-Up to 14 days. You'll be notified via app notification, email, and SMS when you're approved.
+In most cases you get an answer quickly, but it can take up to 14 days. You are notified when you are approved.
 
-**What if my application is rejected? Can I try again?**
-Yes, you can apply again (maximum of 2 applications total). Review the feedback, improve your application, and try again.
+**What if my application is not approved?**
+Contact our support team through the in-app chat to find out the next steps.
+
+**Can I sell from my computer?**
+Yes. Once approved, sign in to the Seller Hub at jamble.com/seller/dashboard with the same phone number as your account. There you create products, host lives, print labels and withdraw your earnings. [See how to use the Seller Hub](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588489).
+
+**Do I need to go live to sell?**
+No. You can sell in the **Loja**, with listings that are for sale at any time, at a fixed price.
 
 **Do I need special equipment?**
-No. Your smartphone is enough. Good lighting helps, sell near a window or use a lamp. A phone stand or tripod makes it easier to show products.
+No. Your smartphone is enough. Good lighting helps, so sell near a window or use a lamp. A phone stand or tripod makes it easier to show your products.
 
 **How much does Jamble charge?**
-Jamble charges a 14% commission on each sale. This covers the platform, payment processing, and buyer support.
+Jamble's standard commission is 10% of the price of the product sold. The payment processing fee is paid by the buyer.
 
 **When do I get paid?**
-Quick view: credit and debit card payments have a 30-day hold, PIX has a 1-day hold, plus up to 3 days for bank processing. Details in Step 9.
+First, the order needs to be completed and the payment released. Then you request a withdrawal of the available balance and follow it in your wallet. [See the payment and withdrawal steps](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288155).
 
 **Can I sell anything?**
-Jamble focuses on collectibles (Pokémon TCG, Hot Wheels, One Piece TCG, Magic, diecast, etc.). Illegal, counterfeit, or dangerous items are not allowed. Check the Terms of Use, section 10 on acceptable use.
+Jamble focuses on collectibles (Pokémon TCG, Hot Wheels, One Piece TCG, Magic, diecast, etc.). Illegal, counterfeit or dangerous items are not allowed. See the Terms of Use, section 10 on acceptable use.
 
 **Who pays for shipping?**
-The buyer pays for shipping. The cost is calculated automatically based on package size and buyer location.
+The buyer pays for shipping. The cost is calculated automatically based on the package size and the buyer's location.
 
 ## Need help?
 
-Contact us via the in-app chat or email support@jambleapp.com.
+Talk to us through the in-app chat or email [support@jambleapp.com](mailto:support@jambleapp.com).

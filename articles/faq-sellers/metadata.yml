@@ -1,0 +1,18 @@
+intercom_id: 10825003
+slug: faq-sellers
+collection_id: 11348948
+
+# Imported from live Intercom on 2026-10-13 (article previously edited only in the Intercom UI).
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+default_locale: pt-br
+
+state: published
+last_sync: 2026-09-13T12:34:57Z
+
+locales:
+  pt-br:
+    title: 'FAQ Vendedores'
+    description: 'Perguntas frequentes dos nossos vendedores 🏷️'
+  en:
+    title: 'Seller FAQ'
+    description: 'Questions from our sellers'

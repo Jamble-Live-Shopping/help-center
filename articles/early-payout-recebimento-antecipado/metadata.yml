@@ -1,0 +1,16 @@
+intercom_id: 17588903
+slug: early-payout-recebimento-antecipado
+collection_id: 19177938
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+default_locale: pt-br
+
+state: draft
+
+locales:
+  pt-br:
+    title: 'Recebimento Antecipado e parcelamento'
+    description: 'Receba as vendas no cartão em cerca de 15 dias e permita que seus compradores parcelem no cartão.'
+  en:
+    title: 'Recebimento Antecipado (early payout) and installments'
+    description: 'Get card sales in about 15 days and let your buyers pay in card installments.'

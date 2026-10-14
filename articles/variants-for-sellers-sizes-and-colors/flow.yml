@@ -88,7 +88,7 @@ mockup_plan:
       review_checks:
         - labels_match_xcstrings
         - no_invented_ui_state
-      # Four action sheet labels all map verbatim to xcstrings. The purple
+      # Three action sheet labels (giveaways were removed in Jul 2026) all map verbatim to xcstrings. The purple
       # `.action.highlight` styling on the Clone row is an editorial liberty
       # (the article highlights this entry visually); the TEXT is verbatim
       # xcstrings so no allowlist needed for text content.
@@ -99,9 +99,6 @@ mockup_plan:
         - selector: ".sheet .action.highlight"
           source: xcstrings
           key: "Clone Past Shows Listings"
-        - selector: ".sheet .action.last"
-          source: xcstrings
-          key: "Create Credits Giveaway"
         - selector: ".cancel"
           source: xcstrings
           key: "Cancel"

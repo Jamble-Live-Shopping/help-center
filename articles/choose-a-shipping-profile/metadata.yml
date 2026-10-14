@@ -8,10 +8,11 @@ default_locale: pt-br
 state: published
 author_id: 7980499
 last_sync: 2026-04-21T00:00:00Z
+
 locales:
   pt-br:
     title: 'Escolher um Perfil de Envio'
-    description: 'Como os 11 perfis de envio da Jamble funcionam, qual escolher para cada produto e como o perfil afeta o frete que o comprador paga.'
+    description: 'Automático, peso e tamanho ou seus próprios perfis: como escolher e como o perfil define o frete.'
   en:
     title: 'Choose a Shipping Profile'
-    description: "How Jamble's 11 shipping profiles work, which one to pick per product, and how the profile affects the shipping your buyer pays."
+    description: 'Automatic, weight and size or your own profiles: how to choose and how the profile sets shipping.'

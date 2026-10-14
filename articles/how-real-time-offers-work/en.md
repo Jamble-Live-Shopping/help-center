@@ -1,119 +1,106 @@
 # How Real-time Offers Work
 
-## What you'll learn
+## What you will learn
 
-Real-time offers are the heart of live selling on Jamble. When you start a sale during your show, buyers compete by placing offers in real time, and the highest offer wins. This guide walks through exactly how the system works, from setting up the sale to what happens when the timer ends.
+Real-time offers are the heart of live selling on Jamble. When you start a sale during your live, buyers compete by making offers, and the highest offer wins. This guide shows how it works, from setting up the product to the buyer's payment.
 
 ## Before you start
 
 - You need an approved seller account on Jamble
-- You need a live show running or scheduled
-- You need at least one product listed in your show
+- You need a scheduled or running live
+- You need at least one product in your live
 
-## The three sell modes
+## The sell modes
 
-When you list a product on Jamble, you choose one of three sell modes. Each one creates a different buying experience:
+When you add a product to your live, you choose a sell mode:
 
-- **Real-time offers**, buyers compete by placing offers, the timer extends when new offers come in, and the highest offer wins
-- **Sudden Death**, same as Real-time offers, but the timer does NOT extend, when time runs out the sale ends with no second chance
-- **Buy It Now**, fixed price, buyers purchase instantly at the price you set, no competition
+- **Oferta em tempo real** (real-time offer): buyers compete with offers, the timer extends when offers come in at the end, and the highest offer wins
+- **Morte súbita** (sudden death): same as a real-time offer, but the timer does **not** extend. When time runs out, the sale ends
+- **Comprar agora** (buy now): fixed price, the buyer buys right away at the price you set
 
-This article focuses on the two competitive modes, **Real-time offers** and **Sudden Death**.
+This article covers the two modes with offers: **Oferta em tempo real** and **Morte súbita**.
 
 ## Step 1: Set up the product
 
-When creating or editing a product for your show, select **Real-time offers** (or **Sudden Death**) as the sell mode. You'll see two fields to fill in.
+When creating or editing the product, choose **Oferta em tempo real** or **Morte súbita** as the sell mode and fill in:
 
-![Sell mode screen with Real-time offers selected, showing Starting price and Timer fields](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-real-time-offers-work__sell-mode-picker__en__v2.png)
+![Sell mode screen with Real-time offers selected, Starting price and Duration fields visible](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-real-time-offers-work__sell-mode-picker__en__v3.png)
 
-The **Starting price** field sets the minimum amount for the first offer (minimum $1). The **Timer (Seconds)** field controls how long the sale lasts, between 5 and 90 seconds. The default is 15 seconds.
+- **Starting price:** the amount of the first offer. The minimum is $5
+- **Timer:** how long the sale lasts, in seconds
 
-Once both fields are filled, save the product and it becomes available to start during your show.
+## Step 2: Start the sale during your live
 
-## Step 2: Start the sale during your show
+When you are live, find the product in your list and start the sale. The product shows on screen for everyone, the timer starts and buyers can make offers.
 
-When you're live, find the product in your list and tap **Start**. The product appears on screen for all viewers, the timer begins counting down, and buyers can start placing offers.
+![Live sale card with a Charizard Holo PSA 9 product, current offer, timer at 0:18 and offer button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-real-time-offers-work__real-time-offer-card__en__v2.png)
 
-![Live sale card with Charizard Holo PSA 9 product, current offer $29, timer at 0:18 and Bid $30 button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-real-time-offers-work__real-time-offer-card__en__v2.png)
+You can have one sale running at a time. To start the next one, wait for the current sale to end.
 
-The current offer shows in green at the center of the card. The purple **Bid $30** button lets buyers beat the current offer with one tap. The bid counter at the bottom shows how many buyers have already joined.
+## Step 3: The timer extends at the end (Oferta em tempo real)
 
-Keep narrating the product while buyers offer. More energy means more competition.
+If an offer comes in during the last seconds, the timer goes back to a few seconds. This gives other buyers a chance to respond. The sale ends when the timer reaches zero with no new offer.
 
-## Step 3: The timer extends when new offers come in
+With **Morte súbita**, the timer does not extend. When it reaches zero, the sale ends, even if someone made an offer in the last second. It is a good way to speed up your live.
 
-This is the rule that defines Real-time offers. Whenever a buyer places an offer near the end of the timer, the timer **extends** by a few seconds. That gives other buyers a chance to respond.
+## How much each offer goes up
 
-The sale only ends when the timer reaches zero **with no new offers**. This mechanic is what pushes the price up.
+Each new offer has to beat the previous one by a minimum amount, which grows as the price goes up. The app shows the next offer amount on the button.
 
-## Sudden Death: the no-extension variant
+The $1 step no longer exists.
 
-Sudden Death is the same competitive format, but the timer **does not extend**. When it hits zero, the sale ends, even if someone bid in the last second.
+**Oferta máxima** (max offer): the buyer can set a maximum, and the app makes offers for them automatically, step by step, up to that limit.
 
-![Sudden Death card with Hot Wheels Redline 1968 product, no-extension badge, timer at 0:02 and current offer $17](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-real-time-offers-work__sudden-death-card__en__v2.png)
-
-The card shows the **SUDDEN DEATH, NO TIME ADDED** badge at the top, the timer in red during its final countdown, and the line **When the timer hits zero, it's over** right below the button. The urgency creates a race for the last second, great for fast sales and shifting the energy of your show.
-
-## Real-time offers vs Sudden Death
-
-The two competitive modes look the same, but the timer rule changes the outcome completely. Here's the side-by-side:
-
-![Comparison chart Real-time offers vs Sudden Death covering timer extension, final price, duration, best use and pre-offers](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-real-time-offers-work__comparison-chart__en__v2.png)
-
-Use **Real-time offers** for rare items, high-value pieces, or products where you want to maximize the price. Use **Sudden Death** for items with an established market price, large lots, or moments in the show where you need to speed things up.
-
-Many sellers mix both modes in the same show to vary the rhythm.
+If two offers have the same amount, the one that came in first wins.
 
 ## Step 4: The sale ends
 
-When the timer hits zero (with no new offer in Real-time offers, or directly in Sudden Death), three things happen:
+When the timer reaches zero:
 
-- The highest offer wins, the leading buyer gets the product
-- Payment is processed automatically on the buyer's card
-- The sale appears in your orders list like any other sale
+- The highest offer wins
+- The winning buyer has a few minutes to complete the payment, by Pix or card
+- The sale shows in your sales list, already confirmed
 
-If no one placed an offer, the product is unsold and can be restarted later in the show.
+If the payment is not completed in time, the sale is cancelled and you can put the product up for sale again. If nobody makes an offer, the product stays unsold and can be started again later.
 
 ## Pre-offers
 
-Both **Real-time offers** and **Sudden Death** support **pre-offers**, which let buyers place an offer on the product **before** your show starts.
+Both modes accept **pre-offers**: buyers can make an offer on the product **before** your live starts. When you start the sale, the pre-offers already count, and the live audience competes against them.
 
-When you list a product with pre-offers enabled, buyers can see it in your upcoming show and leave an offer in advance. When you start the sale during the show, the pre-offers become the opening offers, and the live audience competes against them.
+Pre-offers are only available when the product's quantity is **1**. See [Pre-offers](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288122).
 
-**Important:** pre-offers are only available when the product quantity is **1**.
+## Key tips
 
-## Important tips
+- **Start with a low starting price.** $5 attracts more offers, and competition pushes the final price up
+- **But only use a price you accept.** If only one person makes an offer, the product sells at that price
+- **Talk while the timer runs.** Describe the product and encourage your audience
+- **Mix both modes in the same live** to vary the pace
+- **15 to 30 seconds usually works well.** Too short and buyers do not react, too long and they lose interest
+- **Turn on pre-offers for your best products**
 
-- **Start with a low starting price**, $1 attracts more offers. Buyers feel like they're getting a deal, and competition pushes the final price up
-- **Talk while the timer runs**, describe the product, build excitement, encourage viewers. "Going once, who else wants it?" works
-- **Mix both modes in the same show**, switch between Real-time offers and Sudden Death to change the rhythm and keep buyers engaged
-- **15 to 30 seconds is the sweet spot for duration**, too short and buyers can't react, too long and viewers lose interest
-- **Enable pre-offers on your best products**, buyers who pre-offer are more likely to show up live and compete
-- **Watch your low starting price**, make sure you're comfortable selling at that price in case only one person bids
+## Frequently asked questions
 
-## Common questions
+**What is the minimum starting price?**
+$5, for Oferta em tempo real and Morte súbita.
 
-**What's the minimum starting price?**
-$1 for both Real-time offers and Sudden Death (the minimum is set per market currency).
+**What is the timer range?**
+You choose it when creating the product, within the limits shown in the app.
 
-**What's the timer range?**
-Minimum 5 seconds, maximum 90 seconds. The default is 15 seconds.
+**Why can't I offer just $1 more anymore?**
+Steps are now progressive: the minimum amount of each new offer grows as the price goes up. The app always shows the next offer amount.
 
 **Can I cancel a sale after it starts?**
-Yes. You can cancel an active sale during your show. The product goes back to your list and can be restarted.
+Yes. You can cancel a running sale. The product goes back to the list and can be started again.
 
-**What happens if the buyer's payment fails?**
-If the winning buyer's payment doesn't go through, the sale may be canceled and the product can be restarted.
+**What happens if the buyer does not pay?**
+The sale is cancelled and you can put the product up for sale again.
 
-**Can I run multiple sales at the same time?**
-Yes. You can have multiple products running simultaneously during your show, for example one with Real-time offers and another with Buy It Now.
+**Can I run several sales at the same time?**
+No. One sale runs on screen at a time. **Comprar agora** products you have already shown stay available to buy in your live while there is stock.
 
 **Is there a commission on sales?**
-Yes. Jamble takes 14% of the final sale price regardless of the sell mode. The commission is deducted before payout via PIX.
-
-**Can I restrict who can place offers?**
-Yes. When setting up a sale, you can pick the audience: all buyers, only your followers, or only past buyers.
+Yes. Jamble's standard commission is 10% of the final price, in every sell mode. It is deducted before the amount reaches your wallet.
 
 ## Need help?
 
-Contact us through the app chat or email support@jambleapp.com.
+Talk to us through the in-app chat.

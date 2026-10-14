@@ -111,7 +111,6 @@ The clone is a **new product** in your show. You can edit any field on the clone
 ## Rules and limitations
 
 - **You can't clone the same product twice** into the same show. If a product has already been cloned into your current show, it appears greyed out with **(Added)** and can't be selected again
-- **Giveaway products can't be cloned.** If a product was set up as a giveaway, it won't appear in the clone selection
 - **You can select from multiple shows.** When using Clone from Shows, you can browse different shows and select products from each before importing them all at once
 - **Import from Shop is only available during a live show.** If you want to bring shop products into a show before going live, use Clone from Shows instead (if those products also exist in another show)
 - **Edits on a clone are independent.** Changing the price, title, or any detail on a cloned product does not affect the original

@@ -19,9 +19,10 @@ Este guia te acompanha em cada etapa para se tornar um vendedor na Jamble, desde
 ## Antes de começar
 
 Você precisa de:
-- Um smartphone (iPhone ou Android) com o app da Jamble instalado
+
+- Um smartphone (iPhone ou Android) com o app da Jamble instalado. Depois de aprovado, você também pode usar o computador, pelo Seller Hub
 - Um CPF válido
-- Uma conta bancária que aceite PIX
+- Uma conta bancária no seu nome ou no nome da sua empresa
 - Produtos que você quer vender (colecionáveis como Pokémon TCG, Hot Wheels, One Piece TCG, Magic)
 
 ## Passo 1: Baixe o app e crie sua conta {#passo-1}
@@ -31,6 +32,7 @@ Baixe a Jamble na App Store (iPhone) ou Google Play Store (Android). Abra o app 
 ![Tela de boas-vindas da Jamble com opções de cadastro por email e telefone](./assets/mockups/start-selling-on-jamble__welcome-jamble__pt-br.png)
 
 O fluxo é rápido:
+
 - Digite seu **Número de Telefone** e confirme o código que chega por SMS ou WhatsApp
 - Informe seu **E-mail** e verifique o código
 - Adicione seu **CPF** (11 dígitos, sem pontos)
@@ -39,27 +41,20 @@ Pronto, sua conta de comprador está criada. Agora você precisa pedir acesso co
 
 ## Passo 2: Candidate-se para vender ao vivo {#passo-2}
 
-No app, abra o menu e procure a tela com o título **Torne-se um vendedor ao vivo**. Você vai ver três benefícios:
-
-- **Aumente os ganhos, sem esforço**
-- **Acesso instantâneo aos compradores**
-- **Suporte dedicado ao vendedor**
-
-Toque em **Inscreva-se como vendedor Live** para abrir o formulário. Se quiser adiar, toque em **Faça isso mais tarde**.
-
-O formulário leva cerca de 5 minutos e pergunta:
+No seu perfil, toque em **Candidate-se para vender ao vivo** para abrir o formulário. Ele leva cerca de 5 minutos e pergunta:
 
 - Seu nome e informações de contato
 - O que você vende (Pokémon TCG, Hot Wheels, One Piece TCG, etc.)
-- Suas redes sociais (Instagram ou outros perfis onde você já vende, se tiver)
+- Suas redes sociais, se tiver
 
-Nossa equipe analisa cada inscrição e pode levar até 14 dias para dar uma resposta final. Você será avisado por notificação no app, email e SMS quando for aprovado.
+Na maioria dos casos, a resposta é rápida, mas pode levar até 14 dias. Você é avisado por notificação quando a inscrição for aprovada.
 
 ## Passo 3: Monte um perfil que gera confiança {#passo-3}
 
 Depois de se inscrever, você já pode preparar seu perfil para que os compradores reconheçam sua loja.
 
 Vá em **Perfil** e adicione:
+
 - **Uma foto de perfil**, uma foto sua ou o logo da sua marca
 - **Um nome de usuário**, algo que os compradores vão lembrar (sem caracteres especiais como ?,;/+&! e sem a palavra "jamble")
 - **Uma bio curta**, uma descrição do que você vende (ex: "Pokémon TCG selados e graded PSA")
@@ -68,15 +63,16 @@ Vá em **Perfil** e adicione:
 
 ## Passo 4: Adicione seus dados bancários para receber {#passo-4}
 
-Para receber seus ganhos, você precisa cadastrar seus dados bancários. Vá em **Perfil > Ajustes > Carteira do Vendedor** e toque em **Adicionar dados bancários**.
+Para receber seus ganhos, você precisa cadastrar sua conta de recebimento. Abra **Ajustes** e toque em **Minha carteira**.
 
-Depois, selecione a opção que corresponde ao seu caso:
-- **Pessoa Física (CPF)** para pessoas físicas
-- **Pessoa Jurídica (CNPJ)** para empresas
+Depois, escolha o tipo de cadastro:
 
-Você vai precisar adicionar algumas informações pessoais e seus dados bancários (nome do banco, código da agência, número da conta e tipo de conta).
+- **CPF**, se você vende como pessoa física
+- **CNPJ**, se você vende como empresa
 
-**Importante:** confira todas as informações antes de salvar. O tipo de cadastro não pode ser alterado depois. Da mesma forma, o número do CNPJ não pode ser atualizado, se precisar mudar você terá que criar uma nova conta.
+Você vai informar seus dados pessoais e bancários (banco, agência, número e tipo de conta). Pode ser pedida uma verificação de identidade. Nesse caso, siga as instruções na tela.
+
+**Importante:** confira todas as informações antes de salvar. Se precisar trocar entre CPF e CNPJ depois, use **Mudar de entidade (CPF/CNPJ)** na carteira.
 
 **Este passo é obrigatório para ir ao vivo pela primeira vez.**
 
@@ -87,12 +83,12 @@ Vá em **Ajustes** de vendedor para definir como você vai enviar seus produtos.
 O que você configura:
 
 - **Formato da etiqueta**, escolha o tamanho das etiquetas de envio:
-  - Meia página (8,5 x 11), funciona com impressoras comuns
-  - Página inteira (8,5 x 11)
-  - Térmica (4 x 6), se você tem impressora térmica
-- **Preferências de envio**, escolha qual modalidade dos Correios você prefere: SEDEX, PAC, Mini PAC
+   - Meia página (8,5 x 11), funciona com impressoras comuns
+   - Página inteira (8,5 x 11)
+   - Térmica (4 x 6), se você tem impressora térmica
+- **Preferências de envio**, escolha os serviços dos Correios que você oferece. O **SEDEX** fica sempre ativo, e você pode ativar o **PAC** e o **Mini** (para itens pequenos e leves)
 
-**Como o frete é cobrado:** você não define o preço do frete. Quando o comprador finaliza a compra, a Jamble calcula o custo automaticamente com base no tamanho do pacote, peso e localização do comprador. O comprador paga o frete no checkout. Você só precisa atribuir o perfil de envio certo (categoria de tamanho) a cada produto na hora de listar.
+**Como o frete é cobrado:** você não define o preço do frete. Quando o comprador finaliza a compra, a Jamble calcula o custo automaticamente com base no tamanho do pacote, peso e localização do comprador. O comprador paga o frete no checkout. Você só precisa escolher o perfil de envio certo para cada produto na hora de listar.
 
 ## Passo 6: Liste seus produtos antes do show {#passo-6}
 
@@ -101,19 +97,25 @@ Antes de ir ao vivo, cadastre os produtos que quer vender. Para cada produto, vo
 - **Título**, seja específico (ex: "Pokémon Booster Pack, Paldea Evolved, selado", não apenas "Pokémon")
 - **Fotos**, imagens claras mostrando o item real
 - **Descrição**, estado, grade PSA, idioma da carta, detalhes que importam
-- **Tipo de venda**, entenda cada modalidade (Ofertas em tempo real, Comprar agora, Venda relâmpago)
+- **Categoria e condição**, as opções de condição mudam conforme a categoria
+- **Tipo de venda**, Oferta em tempo real, Morte súbita ou Comprar agora (que pode ter uma Venda relâmpago)
 - **Preço e Tempo**, o preço inicial ou fixo e a duração da venda
-- **Perfil de envio**, o tamanho que corresponde ao tipo de pacote (XS, S, M, L, XL, etc.)
+- **Perfil de envio**, o peso e o tamanho do pacote: **Automático**, **Informar peso e tamanho** ou um perfil seu
 
-**Como definir o preço:** se você vai usar Ofertas em tempo real, pode começar com um preço baixo (até R$ 1) para atrair mais compradores. O preço final é decidido pela competição entre compradores. Para Comprar agora (preço fixo), coloque o valor que você quer receber.
+No computador, pelo Seller Hub, você também pode criar vários produtos de uma vez com uma planilha (**Importar CSV**).
+
+Você também pode vender sem fazer live: crie anúncios na **Loja**, que ficam à venda a qualquer momento. No app, toque no **+** do seu perfil e escolha **Criar anúncio na Loja**.
+
+**Como definir o preço:** se você vai usar Ofertas em tempo real, pode começar com um preço baixo (a partir de R$ 5) para atrair mais compradores. O preço final é decidido pela competição entre compradores. Para Comprar agora (preço fixo), coloque o valor que você quer receber.
 
 ## Passo 7: Agende seu primeiro show {#passo-7}
 
-Toque no botão de criar para agendar um show ao vivo.
+No seu perfil, toque em **Agendar uma Live**. No computador, use o **+** e depois **Agendar Live** no Seller Hub.
 
 ![Formulário Criar um Show com campos de título, data, hora, categoria e upload de capa](./assets/mockups/start-selling-on-jamble__create-show__pt-br.png)
 
 Dicas para preparar seu show:
+
 - **Título**, diga aos compradores o que esperar (ex: "Pokémon graded PSA 9 e 10, abertura de boosters ao vivo")
 - **Horário**, noites e fins de semana costumam trazer mais espectadores
 - **Capa do show**, uma foto que mostre claramente o que você vai vender. É a primeira coisa que os compradores veem
@@ -121,9 +123,10 @@ Dicas para preparar seu show:
 
 ## Passo 8: Entre ao vivo e venda {#passo-8}
 
-Na hora do show, abra o show agendado e toque em **Vá ao vivo**. Sua câmera liga e você está ao vivo.
+Na hora do show, abra a live agendada e toque em **Iniciar Live**. Sua câmera liga e você está ao vivo. Você também pode fazer a live pelo computador, pelo Seller Hub.
 
 Durante o show, você pode:
+
 - **Iniciar uma Oferta em tempo real**, onde os compradores competem fazendo ofertas
 - **Vender com Comprar agora**, preço fixo e compra imediata
 - **Criar uma Venda relâmpago**, um desconto por tempo limitado
@@ -133,21 +136,24 @@ Você não precisa mostrar o rosto. Muitos vendedores apontam a câmera só para
 
 ## Passo 9: Envie os pedidos e saque seus ganhos {#passo-9}
 
-Assim que o show termina, você vê um painel com todas as vendas que precisam ser **confirmadas em até 5 dias**. Se não forem confirmadas, são canceladas automaticamente.
+As vendas feitas em live já chegam confirmadas. Assim que a live termina, você vê um painel com todos os pacotes para enviar. Você também encontra seus pacotes em **Envios**, no app e no Seller Hub. As vendas da **Loja** precisam ser confirmadas por você dentro do prazo mostrado no app.
 
-Você pode abrir esse painel depois em: **Perfil > Ajustes > Shows Anteriores**
+O prazo para enviar costuma ser de cerca de 10 dias depois que a venda é confirmada. Em situações excepcionais, como uma greve dos Correios, ele pode ser estendido para até 20 dias. O prazo exato aparece sempre no pedido, em **Prazo de envio**.
 
-Para cada pedido confirmado:
-1. **Gere a etiqueta de envio**, a Jamble cria a etiqueta dos Correios automaticamente
+Para cada pacote:
+
+1. **Gere a etiqueta de envio**, tocando em **Adicionar Etiqueta** (se pedir, conclua antes a etapa da nota fiscal)
 2. **Embale o item com cuidado** e cole a etiqueta
 3. **Leve o pacote** a uma agência dos Correios
 
-Quando o comprador recebe o item, seus ganhos começam o prazo para ficarem disponíveis. Os pagamentos são processados via Pagar.me e dependem de 2 fatores:
-- **Prazo de verificação do pagamento:** cartão de crédito e débito é 30 dias, PIX é 1 dia
-- **Conclusão do pedido:** o pedido precisa ser entregue no endereço do comprador e o recebimento confirmado no app. O comprador tem 3 dias para confirmar, se não confirmar, o pedido é concluído automaticamente
+Seus ganhos ficam disponíveis quando duas condições forem atendidas: o pedido estiver concluído e o pagamento estiver liberado. O prazo de pagamento não deve ser contado apenas a partir do recebimento do produto:
 
-Depois que você inicia o saque tocando em **Sacar**, aguarde até 3 dias para a resposta do banco:
-- **Status concluído**, banco aceitou, você recebe em até 5 dias úteis
+- **Liberação do pagamento:** depende do meio de pagamento e das condições aplicáveis à sua conta. A confirmação da entrega não substitui essa etapa
+- **Conclusão do pedido:** o recebimento é confirmado no app ou o pedido é concluído automaticamente conforme as regras de confirmação
+
+Quando houver saldo disponível, toque em **Sacar**. O valor vai para a sua conta bancária e costuma chegar em até 5 dias úteis, dependendo do banco. Acompanhe no **Histórico de saques**:
+
+- **Status concluído**, a transferência foi marcada como concluída; confira o crédito na conta cadastrada
 - **Status falhou**, banco rejeitou ou há erro nos dados bancários, confira o código de erro no saque
 
 ## Dicas importantes
@@ -160,19 +166,25 @@ Depois que você inicia o saque tocando em **Sacar**, aguarde até 3 dias para a
 ## Perguntas frequentes
 
 **Quanto tempo leva a análise da inscrição?**
-Até 14 dias. Você será avisado por notificação no app, email e SMS quando for aprovado.
+Na maioria dos casos, a resposta é rápida, mas pode levar até 14 dias. Você é avisado por notificação quando for aprovado.
 
-**E se minha inscrição for rejeitada? Posso tentar de novo?**
-Sim, você pode se inscrever mais uma vez (máximo de 2 inscrições no total). Revise o feedback, melhore sua candidatura e tente de novo.
+**E se minha inscrição não for aprovada?**
+Fale com o nosso suporte pelo chat do app para saber os próximos passos.
+
+**Posso vender pelo computador?**
+Sim. Depois de aprovado, entre no Seller Hub em jamble.com/seller/dashboard com o mesmo telefone da sua conta. Lá você cria produtos, faz lives, imprime etiquetas e saca seus ganhos. [Veja como usar o Seller Hub](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/17588489).
+
+**Preciso fazer live para vender?**
+Não. Você pode vender na **Loja**, com anúncios que ficam à venda a qualquer momento, a preço fixo.
 
 **Preciso de equipamento especial?**
 Não. Seu smartphone já basta. Boa iluminação ajuda, venda perto de uma janela ou use uma luminária. Um suporte ou tripé para o celular facilita na hora de mostrar os produtos.
 
 **Quanto a Jamble cobra?**
-A Jamble cobra uma comissão de 14% sobre cada venda. Isso cobre a plataforma, o processamento de pagamento e o suporte ao comprador.
+A comissão padrão da Jamble é de 10% sobre o preço do produto vendido. A taxa de processamento do pagamento é paga pelo comprador.
 
 **Quando eu recebo meu pagamento?**
-Resumo: cartão de crédito e débito têm retenção de 30 dias, PIX tem retenção de 1 dia, mais até 3 dias para o processamento bancário. Detalhes no Passo 9.
+Primeiro, o pedido precisa estar concluído e o pagamento liberado. Depois, você solicita o saque do saldo disponível e acompanha o processamento na carteira. [Veja as etapas de pagamento e saque](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288155).
 
 **Posso vender qualquer coisa?**
 A Jamble foca em colecionáveis (Pokémon TCG, Hot Wheels, One Piece TCG, Magic, diecast, etc.). Itens ilegais, falsificados ou perigosos não são permitidos. Confira os Termos de Uso, seção 10 sobre uso aceitável.
@@ -182,4 +194,4 @@ O comprador paga o frete. O custo é calculado automaticamente com base no taman
 
 ## Precisa de ajuda?
 
-Fale com a gente pelo chat do app ou envie um email para support@jambleapp.com.
+Fale com a gente pelo chat do app ou envie um email para [support@jambleapp.com](mailto:support@jambleapp.com).

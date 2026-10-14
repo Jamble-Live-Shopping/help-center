@@ -1,0 +1,18 @@
+intercom_id: 10374343
+slug: status-explained
+collection_id: 11348923
+
+# Imported from live Intercom on 2026-10-13 (article previously edited only in the Intercom UI).
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+default_locale: pt-br
+
+state: published
+last_sync: 2026-08-21T09:33:37Z
+
+locales:
+  pt-br:
+    title: '2. Status do Pedido'
+    description: 'O que significa o status “investigação”?'
+  en:
+    title: '2. Status Explained'
+    description: 'What "investigation" status mean?'

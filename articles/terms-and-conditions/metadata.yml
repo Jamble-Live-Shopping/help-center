@@ -1,0 +1,18 @@
+intercom_id: 10383936
+slug: terms-and-conditions
+collection_id: 11348936
+
+# Imported from live Intercom on 2026-10-13 (article previously edited only in the Intercom UI).
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+default_locale: pt-br
+
+state: published
+last_sync: 2026-08-21T09:33:43Z
+
+locales:
+  pt-br:
+    title: '4. Termos de Uso'
+    description: ''
+  en:
+    title: '4. Terms and Conditions'
+    description: 'Terms of Use'

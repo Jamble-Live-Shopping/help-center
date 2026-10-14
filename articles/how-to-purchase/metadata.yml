@@ -1,0 +1,18 @@
+intercom_id: 10870621
+slug: how-to-purchase
+collection_id: 11348923
+
+# Imported from live Intercom on 2026-10-13 (article previously edited only in the Intercom UI).
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+default_locale: pt-br
+
+state: published
+last_sync: 2026-08-21T09:33:35Z
+
+locales:
+  pt-br:
+    title: '1. Como Comprar?'
+    description: 'O que você precisa para comprar, como pagar com Pix ou cartão e como funcionam as ofertas nas lives.'
+  en:
+    title: '1. How to purchase?'
+    description: 'What you need to buy, how to pay by Pix or card and how offers work in lives.'

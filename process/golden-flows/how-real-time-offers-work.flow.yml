@@ -38,12 +38,6 @@ mockup_plan:
     - name: real-time-offer-card
       purpose: "Show the offer card buyers see during the show"
       source: ios_required
-    - name: sudden-death-card
-      purpose: "Show the sudden-death variant of the offer card"
-      source: ios_required
-    - name: comparison-chart
-      purpose: "Comparison chart between the three sell modes"
-      source: composite
 
 icons_required: []
 icons_fallback_feather: false

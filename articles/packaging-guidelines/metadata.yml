@@ -4,12 +4,7 @@ collection_id: 19177937
 default_locale: pt-br
 state: published
 author_id: 7980507
-titles:
-  pt-BR: Diretrizes de Embalagem
-  en: Packaging Guidelines
-descriptions:
-  pt-BR: 'Como embalar cartas, slabs graduadas e diecast para envio pelos Correios sem danos. Checklist, faça e evite, tamanhos de caixa.'
-  en: 'How to package cards, graded slabs, and diecast for Correios shipping without damage. Checklist, do and skip, box sizes.'
+
 locales:
   pt-br:
     title: 'Diretrizes de Embalagem'

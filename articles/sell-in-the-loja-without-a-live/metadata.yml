@@ -1,0 +1,16 @@
+intercom_id: 17588854
+slug: sell-in-the-loja-without-a-live
+collection_id: 19177935
+
+# Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
+default_locale: pt-br
+
+state: draft
+
+locales:
+  pt-br:
+    title: 'Vender na Loja, sem live'
+    description: 'Crie anúncios que ficam à venda o tempo todo, receba ofertas e confirme as vendas da Loja.'
+  en:
+    title: 'Sell in the Loja, without a live'
+    description: 'Create listings that are for sale all the time, get offers and confirm your Loja sales.'
