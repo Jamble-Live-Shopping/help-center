@@ -106,7 +106,7 @@ On a computer, in the Seller Hub, you can also create many products at once from
 
 You can also sell without going live: create listings in the **Loja** (shop), which are for sale at any time. In the app, tap the **+** on your profile and choose **Criar anúncio na Loja**.
 
-**How to set the price:** if you use real-time offers, you can start with a low price (from R$ 5) to attract more buyers. The final price is decided by competition between buyers. For Comprar agora (fixed price), set the amount you want to receive.
+**How to set the price:** if you use real-time offers, you can start with a low price (from $5) to attract more buyers. The final price is decided by competition between buyers. For Comprar agora (fixed price), set the amount you want to receive.
 
 ## Step 7: Schedule your first show {#passo-7}
 

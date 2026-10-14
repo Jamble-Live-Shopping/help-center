@@ -35,7 +35,7 @@ Open **Ajustes** (settings) and tap **Minha carteira** (my wallet), or open **Ca
 
 Jamble's standard commission is 10% of the product price. It is deducted before the amount reaches your wallet, so your wallet always shows what you receive.
 
-Example: on a R$ 100.00 sale, you receive R$ 90.00. Shipping is paid by the buyer and does not reduce your earnings. See [Jamble Seller Fees and Commissions](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288149).
+Example: on a $100.00 sale, you receive $90.00. Shipping is paid by the buyer and does not reduce your earnings. See [Jamble Seller Fees and Commissions](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288149).
 
 ## How to withdraw
 

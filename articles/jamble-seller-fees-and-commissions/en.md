@@ -12,11 +12,11 @@ The commission applies to sales in lives and to sales in the Loja (shop).
 
 ### How it works in practice
 
-Example with a R$ 100.00 sale:
+Example with a $100.00 sale:
 
-- Sale price: **R$ 100.00**
-- Jamble commission (10%): **R$ 10.00**
-- You receive: **R$ 90.00**
+- Sale price: **$100.00**
+- Jamble commission (10%): **$10.00**
+- You receive: **$90.00**
 
 **Your earnings = sale price × 90%**
 
@@ -46,7 +46,7 @@ Open the sale in the app or under **Vendas** (Sales) in the Seller Hub. You see 
 
 ## Key tips
 
-- **Set your prices with the commission in mind.** If you want to receive R$ 90.00, sell for R$ 100.00. Quick formula: amount you want to receive ÷ 0.90 = sale price
+- **Set your prices with the commission in mind.** If you want to receive $90.00, sell for $100.00. Quick formula: amount you want to receive ÷ 0.90 = sale price
 - **Shipping does not affect your earnings.** The buyer pays shipping separately
 
 ## Frequently asked questions

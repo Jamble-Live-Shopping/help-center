@@ -1,106 +1,75 @@
-# Como Funcionam os Cancelamentos de Pedidos
+# Como funcionam os cancelamentos de pedidos
 
 ## O que você vai aprender
 
-Este guia explica como pedidos podem ser cancelados na Jamble — quando o comprador cancela, quando você cancela como vendedor e o que acontece automaticamente se você não enviar no prazo.
+Quando você pode cancelar um pedido na Jamble, o que dispara um cancelamento automático e quanto tempo leva para o reembolso aparecer no seu método de pagamento.
 
 ## Antes de começar
 
 Você precisa de:
-- Uma conta de vendedor aprovada na Jamble
-- Um pedido ativo de um comprador
+- Um pedido que ainda não foi confirmado pelo vendedor (status **Criado**), OU
+- Um pedido que já passou do prazo do vendedor (cancelamento automático)
 
-## Como funciona o cancelamento na Jamble
+## Quando você pode cancelar
 
-Existem três formas de cancelar um pedido:
+Você pode cancelar um pedido **antes do vendedor confirmar a venda**, ou seja, enquanto o status estiver **Criado**.
 
-1. **Comprador cancela diretamente** — o comprador pode cancelar antes de você confirmar a venda
-2. **Você cancela como vendedor** — você cancela o pedido (item perdido, danificado, comprador pediu, etc.)
-3. **Cancelamento automático** — o sistema cancela se você não confirmar ou enviar dentro do prazo
+Depois que o vendedor confirma o pedido, o botão **Cancelar pedido** desaparece. Nesse caso, peça ao vendedor pelo chat do app para cancelar em seu nome, ou aguarde os prazos automáticos descritos mais abaixo.
 
-## Quando o comprador cancela
-
-Compradores podem cancelar um pedido **apenas antes de você confirmar a venda** — enquanto o pedido ainda está no status "Criado".
-
-Se o comprador cancelar nesta etapa:
-- O pedido é encerrado automaticamente
-- O comprador recebe reembolso integral
-- Você não precisa fazer nada — o cancelamento acontece sem seu envolvimento
-- Não existe etapa de "aceitar ou recusar". O cancelamento do comprador é imediato
-
-**Depois que você confirma a venda, o comprador não pode mais cancelar diretamente.** Se o comprador quiser cancelar após a confirmação, ele precisa entrar em contato com você pelo chat do app, e você pode cancelar em nome dele usando o motivo "Buyer requested cancellation".
-
-## Quando você precisa cancelar como vendedor
-
-Se você precisa cancelar um pedido (item perdido, danificado ou impossibilidade de envio), veja como:
+## Como cancelar um pedido
 
 ### Passo 1: Abra o pedido
 
-Vá às suas vendas e encontre o pedido que precisa cancelar.
+Vá em **Compras** e toque no pedido que quer cancelar. Se ele ainda estiver no status **Criado**, você verá o botão **Cancelar pedido** no topo da tela de detalhes.
 
-### Passo 2: Inicie o cancelamento
+![Tela de detalhe do pedido com status Criado e botão Cancelar pedido em vermelho no topo do card de status](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-order-cancellations-work__order-detail-cancel-button__pt-br__v3.png)
 
-Toque na opção de cancelar. Você verá uma tela com o título **"What's making you cancel?"**
+Toque em **Cancelar pedido** para iniciar o cancelamento.
 
-![Tela de seleção de motivo de cancelamento: "What's making you cancel?" com 5 opções de radio button e botão Enviar](./assets/mockups/how-order-cancellations-work__cancel-reason-picker__pt-br.png)
+### Passo 2: Confirme o cancelamento
 
-### Passo 3: Selecione um motivo e envie
+Uma folha aparece com o título **Cancelar este pedido** e a mensagem explicando o que vai acontecer:
 
-Escolha o motivo que melhor descreve sua situação e toque em **Submit**.
+![Folha de confirmação Cancelar este pedido com mensagem sobre o pedido sendo fechado e dois botões Sim eu cancelo e Não voltar](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-order-cancellations-work__cancel-order-bulletin-sheet__pt-br__v3.png)
 
-Um alerta de confirmação aparece:
+Toque em **Sim, eu cancelo** para confirmar, ou em **Não, voltar** para sair sem cancelar. Não há etapa de aprovação do vendedor: o cancelamento acontece imediatamente.
 
-![Diálogo de confirmação de cancelamento de venda com aviso sobre cancelamentos abusivos](./assets/mockups/how-order-cancellations-work__cancel-sale-confirmation__pt-br.png)
+### Passo 3: Acompanhe o reembolso
 
-Toque em **Cancel Sale** para confirmar, ou **Don't Cancel** para voltar.
+Depois de confirmar, o pedido passa para o status **Cancelado** e o card de status mostra o prazo de reembolso:
 
-### Passo 4: Aguarde a análise
+![Tela de detalhe do pedido com status Cancelado e mensagem informando que o reembolso chega em até 5 dias úteis](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-order-cancellations-work__order-canceled-refund-status__pt-br__v3.png)
 
-Após enviar, a equipe da Jamble analisa seu pedido em até **2 horas**. Uma vez aprovado, o comprador é reembolsado e o pedido é encerrado.
+O valor é estornado para o método de pagamento usado na compra **em até 5 dias úteis**.
 
 ## Cancelamentos automáticos
 
-O sistema cancela pedidos automaticamente nestas situações:
+A Jamble cancela um pedido automaticamente em duas situações, sem você precisar fazer nada:
 
-| Situação | Prazo | O que acontece |
-|----------|-------|---------------|
-| Você não confirma uma nova venda | 3 dias | Pedido auto-cancelado, comprador reembolsado |
-| Você confirma mas não envia | 10 dias | Pedido move para status "Ship Timeout" |
-| Ship Timeout + período de carência | 5 dias adicionais | Pedido auto-reembolsado se ainda não enviado |
-| Comprador não confirma recebimento após entrega | 3 dias | Pedido auto-completado (não é cancelamento — você recebe o pagamento) |
+- **O vendedor não confirma em 3 dias.** Você é reembolsado e o pedido é encerrado.
+- **O vendedor confirma mas não envia em 10 dias.** O pedido vai para um estado de atraso de envio e, se ainda assim o item não for postado, você é reembolsado automaticamente.
 
-**O prazo mais importante é a janela de 10 dias para envio.** Depois de confirmar uma venda, você tem 10 dias para gerar a etiqueta e enviar o pacote. Se perder esse prazo, o pedido pode ser automaticamente cancelado e o comprador reembolsado.
-
-## Dicas importantes
-
-- **Confirme vendas rapidamente.** Você tem 3 dias, mas não espere — compradores estão empolgados com a compra
-- **Envie dentro de 10 dias.** Este é o prazo definitivo. Perdê-lo dispara cancelamento automático
-- **Se o comprador pedir cancelamento após confirmação, use o motivo "Buyer requested cancellation".** Isso deixa claro que o cancelamento não foi culpa sua
-- **Cancelamentos repetidos têm consequências.** Cancelamentos abusivos ou excessivos podem levar a restrições temporárias ou suspensão da conta
-- **Comunique-se com o comprador.** Se houver atraso, mande mensagem pelo chat do app. Transparência previne disputas
+Em ambos os casos, o reembolso chega no método de pagamento original em até 5 dias úteis após o cancelamento.
 
 ## Perguntas frequentes
 
-**O comprador pode cancelar depois que eu confirmei a venda?**
-Não. Depois que você confirma, o comprador não pode cancelar diretamente. Ele pode pedir para você cancelar em nome dele, ou contatar o suporte. Se você concordar em cancelar, use o motivo "Buyer requested cancellation".
+**Posso cancelar depois que o vendedor confirmou a venda?**
+Não diretamente. Quando o status sai de Criado, o botão Cancelar pedido não aparece mais. Fale com o vendedor pelo chat para pedir o cancelamento, ou contate o suporte se ele não responder.
 
-**O que acontece com meus ganhos quando um pedido é cancelado?**
-O comprador é reembolsado. Nenhuma comissão é cobrada sobre pedidos cancelados — a transação é totalmente revertida.
+**Em quanto tempo recebo o reembolso?**
+Em até 5 dias úteis no método de pagamento usado na compra. O prazo começa a contar a partir do momento em que o pedido fica com status Cancelado.
 
-**Cancelamentos prejudicam minha reputação?**
-Depende do motivo. Cancelamentos com "Buyer requested" têm menos impacto. Cancelamentos por "Unable to ship" ou "Item lost" são mais sérios se acontecem frequentemente.
+**Para onde vai o reembolso?**
+Sempre para o mesmo método de pagamento da compra original. Não é possível redirecionar para outro cartão ou outra forma de pagamento.
 
-**Posso cancelar um pedido depois de enviado?**
-Uma vez que o pacote está em trânsito, o cancelamento é complexo. Contate o suporte — eles podem coordenar uma devolução com o comprador se necessário.
+**Vou pagar alguma taxa?**
+Não. Quando um pedido é cancelado, o valor é estornado por completo, incluindo frete.
 
-**Para que serve a análise de 2 horas?**
-Quando você cancela um pedido, a equipe da Jamble analisa para garantir que tudo seja tratado corretamente — o comprador recebe reembolso, a etiqueta é anulada se aplicável, e o pedido é encerrado.
+**E se o item já foi enviado?**
+Se o pacote já está em trânsito, o cancelamento direto pelo app não é mais possível. Entre em contato com o suporte e a Jamble coordena uma devolução com o vendedor se for o caso.
 
-**O que acontece se eu nunca confirmar uma venda?**
-Após 3 dias, o pedido é automaticamente cancelado e o comprador reembolsado. Isso conta negativamente na sua reputação como vendedor.
-
-**Quantos cancelamentos são demais?**
-Não há número fixo, mas o sistema monitora padrões. Cancelamentos frequentes podem resultar em avisos e eventualmente restrições temporárias.
+**O cancelamento aparece no histórico do vendedor?**
+Sim. Cancelamentos por prazo expirado contam contra a reputação do vendedor. Cancelamentos pedidos pelo comprador antes da confirmação têm impacto neutro.
 
 ## Precisa de ajuda?
 

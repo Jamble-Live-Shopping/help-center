@@ -26,7 +26,7 @@ When creating or editing the product, choose **Oferta em tempo real** or **Morte
 
 ![Sell mode screen with Real-time offers selected, Starting price and Duration fields visible](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-real-time-offers-work__sell-mode-picker__en__v3.png)
 
-- **Starting price:** the amount of the first offer. The minimum is R$ 5
+- **Starting price:** the amount of the first offer. The minimum is $5
 - **Timer:** how long the sale lasts, in seconds
 
 ## Step 2: Start the sale during your live
@@ -47,7 +47,7 @@ With **Morte súbita**, the timer does not extend. When it reaches zero, the sal
 
 Each new offer has to beat the previous one by a minimum amount, which grows as the price goes up. The app shows the next offer amount on the button.
 
-The R$ 1 step no longer exists.
+The $1 step no longer exists.
 
 **Oferta máxima** (max offer): the buyer can set a maximum, and the app makes offers for them automatically, step by step, up to that limit.
 
@@ -71,7 +71,7 @@ Pre-offers are only available when the product's quantity is **1**. See [Pre-off
 
 ## Key tips
 
-- **Start with a low starting price.** R$ 5 attracts more offers, and competition pushes the final price up
+- **Start with a low starting price.** $5 attracts more offers, and competition pushes the final price up
 - **But only use a price you accept.** If only one person makes an offer, the product sells at that price
 - **Talk while the timer runs.** Describe the product and encourage your audience
 - **Mix both modes in the same live** to vary the pace
@@ -81,12 +81,12 @@ Pre-offers are only available when the product's quantity is **1**. See [Pre-off
 ## Frequently asked questions
 
 **What is the minimum starting price?**
-R$ 5, for Oferta em tempo real and Morte súbita.
+$5, for Oferta em tempo real and Morte súbita.
 
 **What is the timer range?**
 You choose it when creating the product, within the limits shown in the app.
 
-**Why can't I offer just R$ 1 more anymore?**
+**Why can't I offer just $1 more anymore?**
 Steps are now progressive: the minimum amount of each new offer grows as the price goes up. The app always shows the next offer amount.
 
 **Can I cancel a sale after it starts?**

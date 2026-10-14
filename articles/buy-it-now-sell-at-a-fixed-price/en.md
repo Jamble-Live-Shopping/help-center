@@ -19,15 +19,19 @@ Once you have shown the product, it stays available to buy in your live while th
 
 ### Step 1: Choose the sell mode
 
+![Sell mode screen with three options: Real Time Offer, Sudden Death, and Buy It Now selected](./assets/mockups/buy-it-now-sell-at-a-fixed-price__screen-1__en__v3.png)
+
 When creating or editing a product for your live, choose **Comprar agora** as the sell mode.
 
 ### Step 2: Set the price
 
-Enter the fixed price. It is exactly what the buyer pays for the product, plus shipping. The minimum price is R$ 5.
+Enter the fixed price. It is exactly what the buyer pays for the product, plus shipping. The minimum price is $5.
 
 You can also enter a **Preço de Varejo** (retail price, optional), shown crossed out next to your price.
 
 ### Step 3: Show the product during your live
+
+![Buy It Now banner at the top of the show: translucent purple background, cart icon, Buy It Now label, and a stock pill showing 3 left](./assets/mockups/buy-it-now-sell-at-a-fixed-price__screen-2__en__v3.png)
 
 During the live, open your product list and put the product on screen. Buyers can buy right away.
 
@@ -36,6 +40,8 @@ During the live, open your product list and put the product on screen. Buyers ca
 Each purchase lowers the available quantity. When all units are sold, the product shows as sold out.
 
 ## Comprar agora with a flash sale
+
+![Flash Sale banner at the top of the show: translucent green background, lightning icon, Flash Sale • 30% OFF label, and a stock pill showing 2 left](./assets/mockups/buy-it-now-sell-at-a-fixed-price__screen-3__en__v3.png)
 
 You can give a time-limited discount on a **Comprar agora** product with a **Venda relâmpago** (flash sale):
 

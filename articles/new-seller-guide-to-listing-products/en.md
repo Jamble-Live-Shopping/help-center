@@ -16,7 +16,7 @@ A quick guide to creating your first listings on Jamble, with tips to sell more.
 2. **Category and condition:** the category is required, and the condition options change by category
 3. **Photos:** of the real item you will ship
 4. **Sell mode:** Oferta em tempo real (real-time offer), Morte súbita (sudden death) or Comprar agora (buy now)
-5. **Price:** from R$ 5
+5. **Price:** from $5
 6. **Shipping profile:** the weight and size of the finished package
 
 ## Titles that sell
@@ -56,7 +56,7 @@ On sealed products, like boosters, you can turn on **Abertura ao Vivo** (live op
 Not on every listing, but they make a big difference. Buyers make many more offers on items they can see well.
 
 **What is the minimum price?**
-R$ 5.
+$5.
 
 **Can I change a listing after creating it?**
 Yes, as long as the product has not been sold.

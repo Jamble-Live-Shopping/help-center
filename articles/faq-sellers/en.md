@@ -37,11 +37,11 @@ You can start without your own audience and learn the format. Followers help you
 
 Jamble's standard commission is **10% of the price of the product sold**. Shipping is paid by the buyer and is not part of the commission.
 
-**Example:** on a R$ 100.00 sale, the standard commission is R$ 10.00 and you receive R$ 90.00. There is no monthly fee and no fee to list products.
+**Example:** on a $100.00 sale, the standard commission is $10.00 and you receive $90.00. There is no monthly fee and no fee to list products.
 
 The payment processing fee is paid by the buyer and does not come out of your earnings. [See the fee breakdown](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288149).
 
-**To work out your profit:** the R$ 90.00 in the example is what you earn after the standard commission. Also count the cost of the product and the packaging. If you turn on an optional service, such as Recebimento Antecipado (early payout), check the fee shown in your wallet before you do.
+**To work out your profit:** the $90.00 in the example is what you earn after the standard commission. Also count the cost of the product and the packaging. If you turn on an optional service, such as Recebimento Antecipado (early payout), check the fee shown in your wallet before you do.
 
 ---
 

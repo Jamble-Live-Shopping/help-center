@@ -35,7 +35,7 @@ For products in a live, you choose how to sell:
 
 ![Sell mode section with Real-time offers selected, Starts at and Duration fields visible, and Buy now and Sudden death below](./assets/mockups/how-to-list-products-on-jamble__selling-mode-price__en__v3.png)
 
-The minimum price is R$ 5. In Loja listings, the price is always fixed.
+The minimum price is $5. In Loja listings, the price is always fixed.
 
 You can also enter a **Preço de Varejo** (retail price), shown crossed out next to your price. Only use it if it is the item's real reference price.
 

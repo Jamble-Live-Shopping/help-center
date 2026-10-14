@@ -19,6 +19,8 @@ Depois que você mostrou o produto, ele continua disponível para compra na sua 
 
 ### Passo 1: Escolha o modo de venda
 
+![Tela Modo de venda com três opções: Oferta em tempo real, Morte súbita e Comprar agora selecionado](./assets/mockups/buy-it-now-sell-at-a-fixed-price__screen-1__pt-br__v3.png)
+
 Ao criar ou editar um produto da sua live, escolha **Comprar agora** como modo de venda.
 
 ### Passo 2: Defina o preço
@@ -29,6 +31,8 @@ Você também pode informar um **Preço de Varejo** (opcional), que aparece risc
 
 ### Passo 3: Mostre o produto durante a live
 
+![Faixa Comprar agora no topo do show: fundo roxo translúcido, ícone de carrinho, rótulo Comprar agora e etiqueta de estoque com 3 restantes](./assets/mockups/buy-it-now-sell-at-a-fixed-price__screen-2__pt-br__v3.png)
+
 Durante a live, abra a sua lista de produtos e coloque o produto na tela. Os compradores podem comprar na hora.
 
 ### Passo 4: Acompanhe as vendas
@@ -36,6 +40,8 @@ Durante a live, abra a sua lista de produtos e coloque o produto na tela. Os com
 Cada compra reduz a quantidade disponível. Quando todas as unidades são vendidas, o produto aparece como esgotado.
 
 ## Comprar agora com Venda relâmpago
+
+![Faixa Venda relâmpago no topo do show: fundo verde translúcido, ícone de raio, rótulo Venda relâmpago • 30% OFF e etiqueta de estoque com 2 restantes](./assets/mockups/buy-it-now-sell-at-a-fixed-price__screen-3__pt-br__v3.png)
 
 Você pode dar um desconto por tempo limitado em um produto **Comprar agora** com uma **Venda relâmpago**:
 
