@@ -11,8 +11,8 @@ last_sync: 2026-08-21T09:33:37Z
 
 locales:
   pt-br:
-    title: '2. Status e acompanhamento do pedido'
+    title: 'Status e acompanhamento do pedido'
     description: 'O que significa cada status do pedido, o prazo de envio e como acompanhar a entrega no app.'
   en:
-    title: '2. Order status and tracking'
+    title: 'Order status and tracking'
     description: 'What each order status means, the shipping deadline and how to track the delivery in the app.'

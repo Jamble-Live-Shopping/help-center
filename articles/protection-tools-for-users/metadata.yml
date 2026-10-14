@@ -11,8 +11,8 @@ last_sync: 2026-08-21T09:33:43Z
 
 locales:
   pt-br:
-    title: '3. Denúncia e bloqueio de usuários'
+    title: 'Denúncia e bloqueio de usuários'
     description: 'Como denunciar e bloquear usuários, o que acontece ao ser bloqueado de uma live e o que é Acesso restrito.'
   en:
-    title: '3. Reporting and blocking users'
+    title: 'Reporting and blocking users'
     description: 'How to report and block users, what happens when you are blocked from a live and what Acesso restrito means.'

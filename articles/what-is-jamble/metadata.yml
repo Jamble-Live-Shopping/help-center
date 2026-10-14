@@ -11,8 +11,8 @@ last_sync: 2026-08-21T09:33:33Z
 
 locales:
   pt-br:
-    title: '1. O que é a Jamble?'
+    title: 'O que é a Jamble?'
     description: 'Como a Jamble funciona para quem compra e para quem vende: lives, Loja, pagamentos no app e entrega.'
   en:
-    title: '1. What is Jamble?'
+    title: 'What is Jamble?'
     description: 'How Jamble works for buyers and sellers: lives, the Loja, in-app payments and delivery.'
