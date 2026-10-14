@@ -11,7 +11,7 @@ How to invite other people to sell on Jamble, when a referral counts and where t
 3. The referral is completed when they make their first sale within the deadline, to a buyer other than you.
 4. You both get a reward.
 
-The reward amounts and conditions show on the app's referral screen, under **Indicar vendedores** (refer sellers).
+The reward amounts and conditions always show on the app's referral screen, under **Indicar vendedores** (refer sellers). They can change during special events, such as double dates.
 
 ## Who can refer sellers
 
@@ -29,7 +29,7 @@ Send your link or code through WhatsApp, Instagram or any other app. The link al
 
 ### Step 3: They sign up as a seller
 
-They use your code, sign up as a seller and need to be approved. Then they have **30 days** to make their first sale.
+They use your code, sign up as a seller and need to be approved. Then they have a set time to make their first sale, shown on the referral screen.
 
 ### Step 4: The referral is completed
 
@@ -55,7 +55,7 @@ Under **Suas Indicações** (your referrals), you see:
 The amounts and conditions show on the app's referral screen, under **Indicar vendedores**.
 
 **How long do they have to make their first sale?**
-30 days after using your code.
+The deadline shows on the app's referral screen.
 
 **I can't refer sellers. Why?**
 To refer new sellers, you need a sales history on Jamble. If you have questions about your account, contact support.

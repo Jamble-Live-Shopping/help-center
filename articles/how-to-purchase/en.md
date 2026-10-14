@@ -84,7 +84,7 @@ Once your account is activated, slide the purple button to send an offer.
 When the seller starts the sale, the product shows to everyone in the live:
 
 - The first offer is at the starting price set by the seller
-- Each new offer goes up by a minimum amount, which grows as the price goes up: R$ 5 on products below R$ 105 and larger amounts above that. The button always shows the next offer amount
+- Each new offer goes up by a minimum amount, which grows as the price goes up. The button always shows the next offer amount
 - You can also set an **Oferta máxima** (max offer): the app makes offers for you automatically up to that limit
 
 ## The timer

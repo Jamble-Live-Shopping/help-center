@@ -8,7 +8,7 @@ This guide explains the path of your money on Jamble, from the sale to your bank
 
 1. **The buyer pays.** Payment is made at checkout, by Pix or card.
 2. **You ship the order.** You create the label and post the package.
-3. **The order is completed.** The buyer confirms receipt or, if they do not, the order is completed automatically 3 days after delivery.
+3. **The order is completed.** The buyer confirms receipt or, if they do not, the order is completed automatically a few days after delivery.
 4. **The payment is released.** The timing depends on the payment method (see below).
 5. **The amount becomes available to withdraw.** When the order is completed and the payment is released, the amount moves to **Disponível para saque** (available to withdraw).
 6. **You withdraw.** Tap **Sacar** (withdraw) and the amount goes to your registered bank account.
@@ -39,7 +39,7 @@ Example: on a R$ 100.00 sale, you receive R$ 90.00. Shipping is paid by the buye
 
 ## How to withdraw
 
-When you have more than R$ 5 under **Disponível para saque**, tap **Sacar** and confirm. Withdrawals are free and the money usually arrives within 5 business days, depending on your bank. Follow it in the **Histórico de saques** (withdrawal history).
+When your balance under **Disponível para saque** is above the minimum shown in your wallet, tap **Sacar** and confirm. Withdrawals are free and the money usually arrives within 5 business days, depending on your bank. Follow it in the **Histórico de saques** (withdrawal history).
 
 The full step-by-step is in [Set Up and Start a Payout](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288148).
 
@@ -56,7 +56,7 @@ The full step-by-step is in [Set Up and Start a Payout](https://intercom.help/ja
 The order is not completed yet, or the payment has not been released yet. The amount moves to **Disponível para saque** when both happen.
 
 **Do I get paid if the buyer does not confirm receipt?**
-Yes. If the buyer does not confirm, the order is completed automatically 3 days after delivery.
+Yes. If the buyer does not confirm, the order is completed automatically a few days after delivery.
 
 **Can I withdraw the amount under Vendas pendentes?**
 No. Only the amount under **Disponível para saque** can be withdrawn.

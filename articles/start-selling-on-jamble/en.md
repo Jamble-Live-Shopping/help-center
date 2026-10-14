@@ -136,9 +136,9 @@ You do not need to show your face. Many sellers point the camera only at the pro
 
 ## Step 9: Ship your orders and withdraw your earnings {#passo-9}
 
-Sales made in a live arrive already confirmed. As soon as the live ends, you see a dashboard with all the packages to ship. You also find your packages under **Envios** (shipments), in the app and in the Seller Hub. **Loja** sales need to be confirmed by you within 3 days.
+Sales made in a live arrive already confirmed. As soon as the live ends, you see a dashboard with all the packages to ship. You also find your packages under **Envios** (shipments), in the app and in the Seller Hub. **Loja** sales need to be confirmed by you within the time shown in the app.
 
-You have up to 20 days to ship after the sale is confirmed. The exact deadline shows on the order, under **Prazo de envio**.
+The shipping deadline is usually about 10 days after the sale is confirmed. In exceptional situations, such as a Correios strike, it can be extended to up to 20 days. The exact deadline always shows on the order, under **Prazo de envio**.
 
 For each package:
 

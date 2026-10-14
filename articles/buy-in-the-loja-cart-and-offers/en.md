@@ -41,14 +41,14 @@ To send an offer, you need a card and an address on file. The offer amount does 
 
 - The seller can accept, decline or propose another price
 - If the seller does not answer, the offer expires after 3 days
-- You can make up to 3 offers on the same product
+- You can make a limited number of offers on the same product
 - You follow everything in your **Mensagens** (messages)
 
 **When your offer is accepted**, you get a notice and pay at checkout, at the agreed price. There is no automatic charge. You have up to 2 days to pay. After that, the offer is cancelled.
 
 ## After your purchase
 
-The seller confirms the product is available and prepares the shipment. If they do not confirm within 3 days, the purchase is cancelled and you are refunded automatically.
+The seller confirms the product is available and prepares the shipment. If they do not confirm in time, the purchase is cancelled and you are refunded automatically.
 
 You follow your order and its tracking in the app.
 

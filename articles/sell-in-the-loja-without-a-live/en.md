@@ -51,12 +51,12 @@ When you get an offer, it shows up in your **Mensagens** (messages). You can:
 - **Recusar** (decline): the offer is closed
 - **Contrapor** (counter, called **Contraproposta** on Android): you propose another price to the buyer
 
-An offer with no answer expires after 3 days. Each buyer can make up to 3 offers on the same product.
+An offer with no answer expires after 3 days. Each buyer can make a limited number of offers on the same product.
 
 ## When someone buys
 
 1. **Confirm the sale.** Open **Envios** (shipments) in the app or in the Seller Hub and tap **Revisar vendas pendentes** (review pending sales). For each sale, choose **Confirmar** or **Recusar**. If you decline, the buyer is refunded.
-2. **Do it within 3 days.** If the sale is not confirmed in time, it is cancelled and the buyer is refunded automatically.
+2. **Do it within the time shown in the app.** If the sale is not confirmed in time, it is cancelled and the buyer is refunded automatically.
 3. **Create the label and ship.** Once confirmed, you create the label like for any other sale. The shipping deadline starts when you confirm, and the date shows on the order under **Prazo de envio**.
 
 If a buyer takes several of your products in the same purchase, they are shipped together.

@@ -136,9 +136,9 @@ Você não precisa mostrar o rosto. Muitos vendedores apontam a câmera só para
 
 ## Passo 9: Envie os pedidos e saque seus ganhos {#passo-9}
 
-As vendas feitas em live já chegam confirmadas. Assim que a live termina, você vê um painel com todos os pacotes para enviar. Você também encontra seus pacotes em **Envios**, no app e no Seller Hub. As vendas da **Loja** precisam ser confirmadas por você em até 3 dias.
+As vendas feitas em live já chegam confirmadas. Assim que a live termina, você vê um painel com todos os pacotes para enviar. Você também encontra seus pacotes em **Envios**, no app e no Seller Hub. As vendas da **Loja** precisam ser confirmadas por você dentro do prazo mostrado no app.
 
-Você tem até 20 dias para enviar depois que a venda é confirmada. O prazo exato aparece no pedido, em **Prazo de envio**.
+O prazo para enviar costuma ser de cerca de 10 dias depois que a venda é confirmada. Em situações excepcionais, como uma greve dos Correios, ele pode ser estendido para até 20 dias. O prazo exato aparece sempre no pedido, em **Prazo de envio**.
 
 Para cada pacote:
 

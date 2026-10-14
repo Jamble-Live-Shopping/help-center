@@ -24,14 +24,14 @@ Os envios da Jamble são feitos pelos **Correios**, com a etiqueta gerada pelo a
 
 ## Prazo de envio
 
-Depois que a venda é confirmada, você tem **até 20 dias** para postar o pacote. O prazo exato aparece no pedido, em **Prazo de envio**. Envie o quanto antes, sem esperar o último dia.
+O prazo para enviar costuma ser de cerca de 10 dias depois que a venda é confirmada. Em situações excepcionais, como uma greve dos Correios, ele pode ser estendido para até 20 dias. O prazo exato aparece sempre no pedido, em **Prazo de envio**. Envie o quanto antes, sem esperar o último dia.
 
 - **Vendas em live** já chegam confirmadas, então o prazo começa na hora da venda
-- **Vendas na Loja** precisam ser confirmadas por você em até 3 dias. O prazo de envio começa quando você confirma
+- **Vendas na Loja** precisam ser confirmadas por você dentro do prazo mostrado no app. O prazo de envio começa quando você confirma
 
 ## O que acontece se você atrasar
 
-Se o prazo passar sem envio, o pedido aparece como **Envio atrasado**. Você ainda tem 5 dias para enviar. Depois disso, a venda é cancelada e o comprador é reembolsado automaticamente.
+Se o prazo passar sem envio, o pedido aparece como **Envio atrasado**. Envie o quanto antes: depois de alguns dias, a venda é cancelada e o comprador é reembolsado automaticamente.
 
 Atrasos frequentes também prejudicam sua reputação como vendedor e podem gerar restrições na conta.
 
@@ -116,10 +116,10 @@ O comprador. O valor é calculado automaticamente e aparece no checkout.
 Hoje, as etiquetas da Jamble são dos Correios.
 
 **Quantos dias tenho para enviar?**
-Até 20 dias depois que a venda é confirmada. O prazo exato aparece no pedido, em **Prazo de envio**.
+Costuma ser de cerca de 10 dias depois que a venda é confirmada, e pode chegar a até 20 dias em situações excepcionais, como uma greve dos Correios. O prazo exato aparece no pedido, em **Prazo de envio**.
 
 **E se eu não conseguir enviar no prazo?**
-O pedido aparece como **Envio atrasado** e você ainda tem 5 dias para enviar. Depois disso, a venda é cancelada e o comprador é reembolsado.
+O pedido aparece como **Envio atrasado**. Envie o quanto antes: depois de alguns dias, a venda é cancelada e o comprador é reembolsado.
 
 **E se o comprador reclamar do frete?**
 O frete depende do perfil de envio, do peso, do tamanho e da distância. Confira se o perfil de envio do produto está correto. Se algo parecer errado, fale com o suporte.

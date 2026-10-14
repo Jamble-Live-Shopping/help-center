@@ -39,8 +39,8 @@ Each purchase lowers the available quantity. When all units are sold, the produc
 
 You can give a time-limited discount on a **Comprar agora** product with a **Venda relâmpago** (flash sale):
 
-- The discount ranges from 10% to 90%
-- The duration ranges from 30 seconds to 10 minutes
+- You choose the discount percentage
+- You choose the duration
 - Buyers see the discounted price and a timer
 
 See [Flash Sales](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288107).

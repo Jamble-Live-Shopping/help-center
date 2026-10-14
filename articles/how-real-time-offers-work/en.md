@@ -27,7 +27,7 @@ When creating or editing the product, choose **Oferta em tempo real** or **Morte
 ![Sell mode screen with Real-time offers selected, Starting price and Duration fields visible](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-real-time-offers-work__sell-mode-picker__en__v3.png)
 
 - **Starting price:** the amount of the first offer. The minimum is R$ 5
-- **Duration:** how long the sale lasts, between 5 and 90 seconds. The default is 15 seconds
+- **Timer:** how long the sale lasts, in seconds
 
 ## Step 2: Start the sale during your live
 
@@ -39,13 +39,13 @@ You can have one sale running at a time. To start the next one, wait for the cur
 
 ## Step 3: The timer extends at the end (Oferta em tempo real)
 
-If an offer comes in during the last seconds, the timer goes back to a few seconds, between 5 and 20, depending on the product's price. This gives other buyers a chance to respond. The sale ends when the timer reaches zero with no new offer.
+If an offer comes in during the last seconds, the timer goes back to a few seconds. This gives other buyers a chance to respond. The sale ends when the timer reaches zero with no new offer.
 
 With **Morte súbita**, the timer does not extend. When it reaches zero, the sale ends, even if someone made an offer in the last second. It is a good way to speed up your live.
 
 ## How much each offer goes up
 
-Each new offer has to beat the previous one by a minimum amount, which grows as the price goes up. On products below R$ 105, each offer goes up R$ 5. Above that, the step grows gradually, and on high-value products it is never more than 5% of the price. The app shows the next offer amount on the button.
+Each new offer has to beat the previous one by a minimum amount, which grows as the price goes up. The app shows the next offer amount on the button.
 
 The R$ 1 step no longer exists.
 
@@ -84,10 +84,10 @@ Pre-offers are only available when the product's quantity is **1**. See [Pre-off
 R$ 5, for Oferta em tempo real and Morte súbita.
 
 **What is the timer range?**
-5 to 90 seconds. The default is 15 seconds.
+You choose it when creating the product, within the limits shown in the app.
 
 **Why can't I offer just R$ 1 more anymore?**
-Steps are now progressive: R$ 5 on products below R$ 105 and larger amounts as the price goes up. The app always shows the next offer amount.
+Steps are now progressive: the minimum amount of each new offer grows as the price goes up. The app always shows the next offer amount.
 
 **Can I cancel a sale after it starts?**
 Yes. You can cancel a running sale. The product goes back to the list and can be started again.

@@ -11,7 +11,7 @@ How to invite friends to shop on Jamble, what you both get and when a referral c
 3. Your friend gets a shipping coupon for their first purchases.
 4. When your friend makes purchases within the deadline, you get a reward too.
 
-The amounts and conditions show on the app's referral screen, under **Indicar compradores** (refer buyers).
+The amounts and conditions always show on the app's referral screen, under **Indicar compradores** (refer buyers). They can change during special events, such as double dates.
 
 ## Step by step
 
@@ -25,11 +25,11 @@ Send the link or code through WhatsApp, Instagram or any other app.
 
 ### Step 3: Your friend uses the code
 
-Your friend needs to use the code within **14 days** of creating their account. If the link does not apply the code on its own, they can tap **Tenho um código de convite** (I have an invite code) and type it in.
+Your friend needs to use the code soon after creating their account, within the time shown in the app. If the link does not apply the code on its own, they can tap **Tenho um código de convite** (I have an invite code) and type it in.
 
 ### Step 4: The referral is completed
 
-The referral counts when your friend makes their first purchases within 14 days. You follow everything under **Suas Indicações** (your referrals).
+The referral counts when your friend makes their first purchases within the deadline. You follow everything under **Suas Indicações** (your referrals).
 
 ## Shipping coupons
 
@@ -49,7 +49,7 @@ The referral counts when your friend makes their first purchases within 14 days.
 The amounts and conditions show on the app's referral screen, under **Indicar compradores**.
 
 **How long does my friend have to use the code?**
-14 days after creating their account.
+Soon after creating their account, within the time shown in the app.
 
 **My friend already had the app installed. Does the link work?**
 If the code is not applied on its own, your friend can tap **Tenho um código de convite** and type the code.

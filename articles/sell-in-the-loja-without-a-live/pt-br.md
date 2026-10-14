@@ -51,12 +51,12 @@ Quando você recebe uma oferta, ela aparece nas suas **Mensagens**. Você pode:
 - **Recusar**: a oferta é encerrada
 - **Contrapor** (no Android, **Contraproposta**): você propõe outro valor ao comprador
 
-Uma oferta sem resposta expira em 3 dias. Cada comprador pode fazer até 3 ofertas no mesmo produto.
+Uma oferta sem resposta expira em 3 dias. Cada comprador pode fazer um número limitado de ofertas no mesmo produto.
 
 ## Quando alguém compra
 
 1. **Confirme a venda.** Abra **Envios** no app ou no Seller Hub e toque em **Revisar vendas pendentes**. Para cada venda, escolha **Confirmar** ou **Recusar**. Se você recusar, o comprador é reembolsado.
-2. **Faça isso em até 3 dias.** Se a venda não for confirmada nesse prazo, ela é cancelada e o comprador é reembolsado automaticamente.
+2. **Faça isso dentro do prazo mostrado no app.** Se a venda não for confirmada a tempo, ela é cancelada e o comprador é reembolsado automaticamente.
 3. **Gere a etiqueta e envie.** Depois de confirmar, você gera a etiqueta como em qualquer outra venda. O prazo de envio começa quando você confirma, e a data aparece no pedido, em **Prazo de envio**.
 
 Se o comprador levar vários produtos seus na mesma compra, eles são enviados juntos.

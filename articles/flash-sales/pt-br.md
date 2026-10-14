@@ -30,7 +30,7 @@ A seção mostra três campos a preencher quando o toggle **Venda relâmpago** e
 
 - **Preço.** O preço cheio do produto. O desconto é calculado a partir daqui.
 - **Desconto (%).** A porcentagem de desconto. Você pode definir qualquer valor entre 10 e 90 por cento. Em um produto de R$ 200,00 com 30 por cento de desconto, o comprador paga R$ 140,00.
-- **Duração (segundos).** Quanto tempo a venda relâmpago dura. Mínimo **30 segundos**, máximo **600 segundos** (10 minutos). O padrão é 60 segundos.
+- **Duração (segundos).** Quanto tempo a venda relâmpago dura. Você escolhe dentro dos limites mostrados no app.
 
 Salve a listagem. A venda relâmpago está configurada e pronta para ser ativada durante seu show.
 
@@ -84,7 +84,7 @@ A taxa Jamble é calculada sobre o **preço com desconto**, não sobre o preço 
 
 - **Crie empolgação primeiro.** Antes de iniciar, fale do produto. Mostre de perto, explique por que é especial. Depois diga "venda relâmpago começando agora". Mais compradores ficam prontos para agir.
 - **30 a 50 por cento funciona bem.** Um desconto pequeno não cria urgência suficiente. 30 a 50 por cento gera empolgação real. Garanta que o preço final ainda funciona para você, é o que você ganha.
-- **Dê tempo aos compradores.** 30 segundos é o mínimo. Para itens mais caros, use 60 segundos ou mais para que os compradores tenham tempo de decidir e completar a compra.
+- **Dê tempo aos compradores.** Para itens mais caros, use pelo menos um minuto para que os compradores tenham tempo de decidir e completar a compra.
 - **Use vendas relâmpago para reanimar o show.** Se a energia cair no meio do show, uma venda relâmpago surpresa traz a atenção de volta. Não exagere, uma ou duas por show mantém o efeito.
 - **Anuncie antes de começar.** "Venda relâmpago em 10 segundos" deixa os espectadores prontos para agir quando o cronômetro liga.
 - **Você decide na hora.** Mesmo configurada, você pode escolher iniciar como Comprar agora normal. Isso te dá flexibilidade durante o show.
@@ -113,7 +113,7 @@ Não. O produto da venda relâmpago fica fixado até terminar. Espere terminar e
 Há um breve período de tolerância. Se o comprador iniciou a compra logo antes do cronômetro acabar, o pagamento ainda pode ser processado.
 
 **Quanto tempo uma venda relâmpago pode durar?**
-Mínimo 30 segundos, máximo 10 minutos (600 segundos). O padrão é 60 segundos.
+Você escolhe a duração ao configurar o produto, dentro dos limites mostrados no app.
 
 **Posso mudar a porcentagem de desconto durante a venda relâmpago?**
 Não. O desconto e a duração são definidos quando você cria a listagem. Para mudar, edite a listagem antes de iniciar.

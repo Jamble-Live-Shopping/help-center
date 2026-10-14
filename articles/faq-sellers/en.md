@@ -140,7 +140,7 @@ Sellers are responsible for:
 - Confirming Loja (shop) sales (sales made in a live arrive already confirmed)
 - Choosing the invoice (nota fiscal) preference
 - Creating the shipping label
-- Posting the items on time. You have up to 20 days after the sale is confirmed, and the exact deadline shows on the order, under **Prazo de envio**
+- Posting the items on time. The deadline is usually about 10 days after confirmation, and can go up to 20 days in exceptional situations, such as a Correios strike. The exact deadline shows on the order, under **Prazo de envio**
 
 1. Check the items in each order. If it is a Loja sale, confirm the sale first.
 2. Fill in the tax information requested in the app, according to your registration.
@@ -195,4 +195,4 @@ Yes, in the Seller Hub. Click the **+**, then **Importar CSV**, download the tem
 
 No. You can create listings in the **Loja** (shop), which are for sale at any time at a fixed price. In the app, tap the "+" button on your profile and choose **Criar anúncio na Loja**. In the Seller Hub, use **Criar Novo Produto** and choose **Marketplace**. [See how to sell in the Loja](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588854).
 
-When someone buys from your Loja, you need to confirm the sale within 3 days. If the sale is not confirmed in time, the buyer is refunded.
+When someone buys from your Loja, you need to confirm the sale within the time shown in the app. If the sale is not confirmed in time, the buyer is refunded.

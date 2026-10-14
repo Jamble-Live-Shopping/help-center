@@ -39,8 +39,8 @@ Cada compra reduz a quantidade disponível. Quando todas as unidades são vendid
 
 Você pode dar um desconto por tempo limitado em um produto **Comprar agora** com uma **Venda relâmpago**:
 
-- O desconto vai de 10% a 90%
-- A duração vai de 30 segundos a 10 minutos
+- Você escolhe a porcentagem de desconto
+- Você escolhe a duração
 - Os compradores veem o preço com desconto e um cronômetro
 
 Veja [Vendas relâmpago](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288107).

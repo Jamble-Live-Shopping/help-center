@@ -198,7 +198,7 @@ Os vendedores são responsáveis por:
 - Confirmar as vendas da Loja (as vendas feitas em live já chegam confirmadas)
 - Selecionar a preferência de nota fiscal
 - Gerar a etiqueta de envio
-- Postar os itens dentro do prazo. Você tem até 20 dias depois que a venda é confirmada, e o prazo exato aparece no pedido, em **Prazo de envio**
+- Postar os itens dentro do prazo. Ele costuma ser de cerca de 10 dias depois da confirmação, e pode chegar a até 20 dias em situações excepcionais, como uma greve dos Correios. O prazo exato aparece no pedido, em **Prazo de envio**
 
 1. Confira os itens de cada pedido. Se for uma venda da Loja, confirme a venda primeiro.
 2. Preencha as informações fiscais solicitadas no app, conforme o seu cadastro.
@@ -277,4 +277,4 @@ Não. Você pode criar anúncios na **Loja**, que ficam à venda a qualquer mome
 
 ​
 
-Quando alguém compra na Loja, você precisa confirmar a venda em até 3 dias. Se a venda não for confirmada nesse prazo, o comprador é reembolsado.
+Quando alguém compra na Loja, você precisa confirmar a venda dentro do prazo mostrado no app. Se a venda não for confirmada a tempo, o comprador é reembolsado.

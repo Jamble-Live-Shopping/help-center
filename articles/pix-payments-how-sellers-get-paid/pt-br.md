@@ -8,7 +8,7 @@ Este guia explica o caminho do seu dinheiro na Jamble, da venda até a sua conta
 
 1. **O comprador paga.** O pagamento é feito no checkout, com Pix ou cartão.
 2. **Você envia o pedido.** Você gera a etiqueta e posta o pacote.
-3. **O pedido é concluído.** O comprador confirma o recebimento ou, se não confirmar, o pedido é concluído automaticamente 3 dias depois da entrega.
+3. **O pedido é concluído.** O comprador confirma o recebimento ou, se não confirmar, o pedido é concluído automaticamente alguns dias depois da entrega.
 4. **O pagamento é liberado.** O prazo depende da forma de pagamento (veja abaixo).
 5. **O valor fica disponível para saque.** Quando o pedido está concluído e o pagamento está liberado, o valor entra em **Disponível para saque**.
 6. **Você saca.** Toque em **Sacar** e o valor vai para a sua conta bancária cadastrada.
@@ -39,7 +39,7 @@ Exemplo: em uma venda de R$ 100,00, você recebe R$ 90,00. O frete é pago pelo 
 
 ## Como sacar
 
-Quando você tiver mais de R$ 5 em **Disponível para saque**, toque em **Sacar** e confirme. O saque é gratuito e o valor costuma chegar em até 5 dias úteis, dependendo do seu banco. Acompanhe no **Histórico de saques**.
+Quando você tiver saldo em **Disponível para saque** acima do valor mínimo mostrado na carteira, toque em **Sacar** e confirme. O saque é gratuito e o valor costuma chegar em até 5 dias úteis, dependendo do seu banco. Acompanhe no **Histórico de saques**.
 
 O passo a passo completo está em [Configurar e Iniciar um Saque](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288148).
 
@@ -56,7 +56,7 @@ O passo a passo completo está em [Configurar e Iniciar um Saque](https://interc
 O pedido ainda não foi concluído, ou o pagamento ainda não foi liberado. O valor passa para **Disponível para saque** quando as duas coisas acontecem.
 
 **Recebo se o comprador não confirmar o recebimento?**
-Sim. Se o comprador não confirmar, o pedido é concluído automaticamente 3 dias depois da entrega.
+Sim. Se o comprador não confirmar, o pedido é concluído automaticamente alguns dias depois da entrega.
 
 **Posso sacar o valor de Vendas pendentes?**
 Não. Só o valor em **Disponível para saque** pode ser sacado.

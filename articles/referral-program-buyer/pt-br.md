@@ -11,7 +11,7 @@ Como convidar amigos para comprar na Jamble, o que vocês ganham e quando a indi
 3. O seu amigo ganha um cupom de frete para as primeiras compras.
 4. Quando o seu amigo faz compras dentro do prazo, você também ganha uma recompensa.
 
-Os valores e as condições aparecem na tela de indicações do app, em **Indicar compradores**.
+Os valores e as condições aparecem sempre na tela de indicações do app, em **Indicar compradores**. Eles podem mudar em ações especiais, como as datas duplas.
 
 ## Passo a passo
 
@@ -25,11 +25,11 @@ Envie o link ou o código pelo WhatsApp, Instagram ou qualquer outro app.
 
 ### Passo 3: O seu amigo usa o código
 
-O seu amigo precisa usar o código em até **14 dias** depois de criar a conta. Se o link não aplicar o código sozinho, ele pode tocar em **Tenho um código de convite** e digitar o código.
+O seu amigo precisa usar o código logo depois de criar a conta, dentro do prazo mostrado no app. Se o link não aplicar o código sozinho, ele pode tocar em **Tenho um código de convite** e digitar o código.
 
 ### Passo 4: A indicação é concluída
 
-A indicação conta quando o seu amigo faz as primeiras compras dentro de 14 dias. Você acompanha tudo em **Suas Indicações**.
+A indicação conta quando o seu amigo faz as primeiras compras dentro do prazo. Você acompanha tudo em **Suas Indicações**.
 
 ## Os cupons de frete
 
@@ -49,7 +49,7 @@ A indicação conta quando o seu amigo faz as primeiras compras dentro de 14 dia
 Os valores e as condições aparecem na tela de indicações do app, em **Indicar compradores**.
 
 **Quanto tempo meu amigo tem para usar o código?**
-14 dias depois de criar a conta.
+Logo depois de criar a conta, dentro do prazo mostrado no app.
 
 **Meu amigo já tinha o app instalado. O link funciona?**
 Se o código não for aplicado sozinho, o seu amigo pode tocar em **Tenho um código de convite** e digitar o código.

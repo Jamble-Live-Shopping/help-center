@@ -41,14 +41,14 @@ Para enviar uma oferta, você precisa ter um cartão e um endereço cadastrados.
 
 - O vendedor pode aceitar, recusar ou propor outro valor
 - Se o vendedor não responder, a oferta expira em 3 dias
-- Você pode fazer até 3 ofertas no mesmo produto
+- Você pode fazer um número limitado de ofertas no mesmo produto
 - Você acompanha tudo nas suas **Mensagens**
 
 **Quando a oferta é aceita**, você recebe um aviso e paga pelo checkout, com o valor combinado. Não há cobrança automática. Você tem até 2 dias para pagar. Depois desse prazo, a oferta é cancelada.
 
 ## Depois da compra
 
-O vendedor confirma que o produto está disponível e prepara o envio. Se ele não confirmar em até 3 dias, a compra é cancelada e você é reembolsado automaticamente.
+O vendedor confirma que o produto está disponível e prepara o envio. Se ele não confirmar a tempo, a compra é cancelada e você é reembolsado automaticamente.
 
 Você acompanha o pedido e o rastreio no app.
 

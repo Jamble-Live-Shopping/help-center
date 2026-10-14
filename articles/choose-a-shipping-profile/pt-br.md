@@ -20,7 +20,6 @@ Você escolhe o perfil de envio ao criar ou editar um anúncio, em **Perfil de e
 
 Se você envia sempre os mesmos tipos de pacote, crie seus próprios perfis com o peso e as medidas reais. Depois, é só escolher o perfil ao criar o anúncio.
 
-- Você pode ter até 20 perfis personalizados
 - Crie e gerencie seus perfis nas configurações de envio do app, ou em **Envios** e depois **Perfis de Envio** no Seller Hub
 - Se você editar um perfil, o frete dos anúncios que usam esse perfil é atualizado. Vendas já feitas não mudam
 - Se você apagar um perfil, os anúncios que usam esse perfil vão precisar de um novo

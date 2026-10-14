@@ -20,7 +20,6 @@ You choose the shipping profile when you create or edit a listing, under **Perfi
 
 If you always ship the same kinds of package, create your own profiles with the real weight and measurements. Then just pick the profile when you create the listing.
 
-- You can have up to 20 custom profiles
 - Create and manage your profiles in the app's shipping settings, or under **Envios** and then **Perfis de Envio** in the Seller Hub
 - If you edit a profile, shipping is updated on the listings that use it. Sales already made do not change
 - If you delete a profile, the listings that use it will need a new one

@@ -11,7 +11,7 @@ Como convidar outras pessoas para vender na Jamble, quando a indicação conta e
 3. A indicação é concluída quando ela faz a primeira venda dentro do prazo, para um comprador que não seja você.
 4. Vocês dois ganham uma recompensa.
 
-Os valores e as condições da recompensa aparecem na tela de indicações do app, em **Indicar vendedores**.
+Os valores e as condições da recompensa aparecem sempre na tela de indicações do app, em **Indicar vendedores**. Eles podem mudar em ações especiais, como as datas duplas.
 
 ## Quem pode indicar vendedores
 
@@ -29,7 +29,7 @@ Envie o seu link ou código pelo WhatsApp, Instagram ou qualquer outro app. O li
 
 ### Passo 3: A pessoa se cadastra como vendedora
 
-Ela usa o seu código, se cadastra como vendedora e precisa ser aprovada. Depois, tem **30 dias** para fazer a primeira venda.
+Ela usa o seu código, se cadastra como vendedora e precisa ser aprovada. Depois, ela tem um prazo para fazer a primeira venda, mostrado na tela de indicações.
 
 ### Passo 4: A indicação é concluída
 
@@ -55,7 +55,7 @@ Em **Suas Indicações**, você vê:
 Os valores e as condições aparecem na tela de indicações do app, em **Indicar vendedores**.
 
 **Quanto tempo a pessoa tem para fazer a primeira venda?**
-30 dias depois de usar o seu código.
+O prazo aparece na tela de indicações do app.
 
 **Não consigo indicar vendedores. Por quê?**
 Para indicar novos vendedores, você precisa já ter um histórico de vendas na Jamble. Se tiver dúvidas sobre a sua conta, fale com o suporte.

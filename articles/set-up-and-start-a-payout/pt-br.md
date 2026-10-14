@@ -34,7 +34,7 @@ Depois do cadastro, a carteira mostra seus **Dados bancários**. Confira se o no
 
 ## Passo 4: Saque seus ganhos
 
-Quando você tiver mais de R$ 5 em **Disponível para saque**, o botão **Sacar** fica ativo. Toque nele e confirme. Todo o saldo disponível é enviado para a sua conta bancária cadastrada.
+Quando o saldo em **Disponível para saque** passa do valor mínimo mostrado na carteira, o botão **Sacar** fica ativo. Toque nele e confirme. Todo o saldo disponível é enviado para a sua conta bancária cadastrada.
 
 O valor costuma chegar em até 5 dias úteis, dependendo do seu banco.
 
@@ -68,7 +68,7 @@ Por transferência para a conta bancária cadastrada. Ao tocar em **Sacar**, tod
 Costuma chegar em até 5 dias úteis, dependendo do seu banco.
 
 **Tem valor mínimo?**
-Sim. Você precisa ter mais de R$ 5 em **Disponível para saque** para o botão **Sacar** ficar ativo.
+Sim. O valor mínimo aparece na carteira. Quando o seu saldo disponível passa desse valor, o botão **Sacar** fica ativo.
 
 **Com que frequência posso sacar?**
 Você pode sacar sempre que tiver saldo disponível. Depois de um saque, aguarde um pouco: o app mostra quando você poderá sacar de novo.

@@ -3,7 +3,8 @@
 - Os cupons dão desconto no **frete** da sua compra
 - O desconto é aplicado automaticamente no checkout, sem nenhuma ação sua
 - Alguns cupons valem só para compras em lives e outros só para compras na Loja
-- Os cupons têm uma data de validade
+- Os cupons têm uma data de validade, que aparece em cada cupom
+- Os valores dos cupons podem mudar em ações especiais, como as datas duplas
 
 **Onde vejo meus cupons?**
 
@@ -15,9 +16,9 @@ Abra a tela de **Cupons** no app. Lá você encontra:
 
 **Como ganho cupons?**
 
-- **Indicação:** quando você indica um amigo pelo programa de indicação. Válido por 30 dias
-- **Batalha:** quando o seu time vence uma batalha durante uma live. Válido por 7 dias
-- **Boas-vindas:** quando você cria sua conta. Válido por 6 horas
+- **Indicação:** quando você indica um amigo pelo programa de indicação
+- **Batalha:** quando o seu time vence uma batalha durante uma live
+- **Boas-vindas:** quando você cria sua conta
 - **Suporte:** quando a nossa equipe de suporte concede um cupom para você
 
 **Gemas são cupons?**

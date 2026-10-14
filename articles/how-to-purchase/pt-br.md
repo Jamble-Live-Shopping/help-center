@@ -84,7 +84,7 @@ Depois de ativar a conta, deslize o botão roxo para enviar uma oferta.
 Quando o vendedor inicia a venda, o produto aparece para todos na live:
 
 - A primeira oferta é pelo preço inicial definido pelo vendedor
-- Cada nova oferta aumenta um valor mínimo, que cresce conforme o preço sobe: R$ 5 em produtos abaixo de R$ 105 e valores maiores acima disso. O botão sempre mostra o valor da próxima oferta
+- Cada nova oferta aumenta um valor mínimo, que cresce conforme o preço sobe. O botão sempre mostra o valor da próxima oferta
 - Você também pode definir uma **Oferta máxima**: o app oferta por você automaticamente até esse limite
 
 ## O cronômetro

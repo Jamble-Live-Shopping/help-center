@@ -24,14 +24,14 @@ Jamble shipments go through **Correios**, with the label created in the app or i
 
 ## Shipping deadline
 
-Once the sale is confirmed, you have **up to 20 days** to post the package. The exact deadline shows on the order, under **Prazo de envio**. Ship as soon as you can, without waiting for the last day.
+The shipping deadline is usually about 10 days after the sale is confirmed. In exceptional situations, such as a Correios strike, it can be extended to up to 20 days. The exact deadline always shows on the order, under **Prazo de envio**. Ship as soon as you can, without waiting for the last day.
 
 - **Live sales** arrive already confirmed, so the deadline starts at the time of the sale
-- **Loja (shop) sales** need to be confirmed by you within 3 days. The shipping deadline starts when you confirm
+- **Loja (shop) sales** need to be confirmed by you within the time shown in the app. The shipping deadline starts when you confirm
 
 ## What happens if you are late
 
-If the deadline passes without shipping, the order shows as **Envio atrasado** (late shipment). You still have 5 days to ship. After that, the sale is cancelled and the buyer is refunded automatically.
+If the deadline passes without shipping, the order shows as **Envio atrasado** (late shipment). Ship as soon as you can: after a few days, the sale is cancelled and the buyer is refunded automatically.
 
 Frequent delays also hurt your seller reputation and can lead to account restrictions.
 
@@ -116,10 +116,10 @@ The buyer. The amount is calculated automatically and shows at checkout.
 Today, Jamble labels are Correios labels.
 
 **How many days do I have to ship?**
-Up to 20 days after the sale is confirmed. The exact deadline shows on the order, under **Prazo de envio**.
+Usually about 10 days after the sale is confirmed, and up to 20 days in exceptional situations, such as a Correios strike. The exact deadline shows on the order, under **Prazo de envio**.
 
 **What if I cannot ship on time?**
-The order shows as **Envio atrasado** and you still have 5 days to ship. After that, the sale is cancelled and the buyer is refunded.
+The order shows as **Envio atrasado**. Ship as soon as you can: after a few days, the sale is cancelled and the buyer is refunded.
 
 **What if the buyer complains about shipping?**
 Shipping depends on the shipping profile, weight, size and distance. Check that the product's shipping profile is correct. If something looks wrong, contact support.

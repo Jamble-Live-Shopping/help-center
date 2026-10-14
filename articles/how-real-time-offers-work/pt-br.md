@@ -27,7 +27,7 @@ Ao criar ou editar o produto, escolha **Oferta em tempo real** ou **Morte súbit
 ![Tela Modo de venda com Oferta em tempo real selecionada, campos Preço inicial e Duração visíveis](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/how-real-time-offers-work__sell-mode-picker__pt-br__v3.png)
 
 - **Preço inicial:** o valor da primeira oferta. O mínimo é R$ 5
-- **Duração:** quanto tempo a venda dura, entre 5 e 90 segundos. O padrão é 15 segundos
+- **Timer:** quanto tempo a venda dura, em segundos
 
 ## Passo 2: inicie a venda durante a live
 
@@ -39,13 +39,13 @@ Você pode ter uma venda em andamento por vez. Para iniciar a próxima, espere a
 
 ## Passo 3: o cronômetro estende no final (Oferta em tempo real)
 
-Se uma oferta chega nos últimos segundos, o cronômetro volta para alguns segundos, entre 5 e 20, conforme o valor do produto. Isso dá aos outros compradores a chance de responder. A venda termina quando o cronômetro chega a zero sem nenhuma nova oferta.
+Se uma oferta chega nos últimos segundos, o cronômetro volta para alguns segundos. Isso dá aos outros compradores a chance de responder. A venda termina quando o cronômetro chega a zero sem nenhuma nova oferta.
 
 Na **Morte súbita**, o cronômetro não estende. Quando chega a zero, a venda acaba, mesmo que alguém tenha ofertado no último segundo. É uma boa opção para acelerar o ritmo da live.
 
 ## Quanto cada oferta aumenta
 
-Cada nova oferta precisa superar a anterior por um valor mínimo, que cresce conforme o preço sobe. Em produtos abaixo de R$ 105, cada oferta aumenta R$ 5. Acima disso, o aumento fica maior aos poucos, e em produtos de valor alto ele nunca passa de 5% do preço. O app mostra no botão o valor da próxima oferta.
+Cada nova oferta precisa superar a anterior por um valor mínimo, que cresce conforme o preço sobe. O app mostra no botão o valor da próxima oferta.
 
 Não existe mais o aumento de R$ 1.
 
@@ -84,10 +84,10 @@ As pré-ofertas só estão disponíveis quando a quantidade do produto é **1**.
 R$ 5, para Oferta em tempo real e Morte súbita.
 
 **Qual é a duração do cronômetro?**
-De 5 a 90 segundos. O padrão é 15 segundos.
+Você escolhe ao criar o produto, dentro dos limites mostrados no app.
 
 **Por que não dá mais para ofertar só R$ 1 a mais?**
-Os aumentos agora são progressivos: R$ 5 em produtos abaixo de R$ 105 e valores maiores conforme o preço sobe. O app sempre mostra o valor da próxima oferta.
+Os aumentos agora são progressivos: o valor mínimo de cada nova oferta cresce conforme o preço sobe. O app sempre mostra o valor da próxima oferta.
 
 **Posso cancelar uma venda depois que ela começou?**
 Sim. Você pode cancelar uma venda em andamento. O produto volta para a lista e pode ser iniciado de novo.

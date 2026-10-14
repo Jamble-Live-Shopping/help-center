@@ -34,7 +34,7 @@ After registering, your wallet shows your **Dados bancários** (bank details). C
 
 ## Step 4: Withdraw your earnings
 
-When you have more than R$ 5 under **Disponível para saque**, the **Sacar** (withdraw) button becomes active. Tap it and confirm. Your whole available balance is sent to your registered bank account.
+When your balance under **Disponível para saque** is above the minimum shown in your wallet, the **Sacar** (withdraw) button becomes active. Tap it and confirm. Your whole available balance is sent to your registered bank account.
 
 The money usually arrives within 5 business days, depending on your bank.
 
@@ -68,7 +68,7 @@ By transfer to your registered bank account. When you tap **Sacar**, your whole 
 It usually arrives within 5 business days, depending on your bank.
 
 **Is there a minimum?**
-Yes. You need more than R$ 5 under **Disponível para saque** for the **Sacar** button to become active.
+Yes. The minimum shows in your wallet. Once your available balance is above it, the **Sacar** button becomes active.
 
 **How often can I withdraw?**
 Whenever you have an available balance. After a withdrawal, wait a little: the app shows when you can withdraw again.
