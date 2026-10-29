@@ -8,7 +8,7 @@ Este guia explica como criar um anúncio de produto na Jamble: os campos que voc
 
 - **Em uma live:** abra a live agendada e adicione os produtos que você vai vender ao vivo
 - **Na Loja:** crie anúncios que ficam à venda a qualquer momento, sem live. No app, toque no **+** do seu perfil e escolha **Criar anúncio na Loja**
-- **No computador:** no Seller Hub, use o **+** e depois **Criar Novo Produto**. Para criar muitos produtos de uma vez, use **Importar CSV**. Para reaproveitar produtos, use **Clonar de Lives Anteriores**
+- **No computador:** no Seller Hub, use o **+** e depois **Criar Novo Produto**. Para criar muitos produtos de uma vez, use **Importar CSV**. Para trazer produtos da sua Loja ou de lives anteriores, use **Clonar anúncios**
 
 Veja [Seller Hub: venda pelo computador](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/17588489) para os detalhes do computador.
 
@@ -19,7 +19,7 @@ Veja [Seller Hub: venda pelo computador](https://intercom.help/jamble-bb4bea116b
 - **Título:** até 40 caracteres. Use o nome do item e o detalhe mais importante, como coleção, modelo ou tamanho
 - **Categoria:** obrigatória. Escolha a categoria e a subcategoria que melhor descrevem o item
 - **Condição:** as opções mudam conforme a categoria. Escolha a que descreve o item com honestidade
-- **Fotos:** mostre o item exato que você vende, com frente e verso quando fizer sentido, e qualquer defeito, lacre ou caixa
+- **Fotos:** mostre o item exato que você vende, com frente e verso quando fizer sentido, e qualquer defeito, lacre ou caixa. Recomendamos fotos verticais na proporção **2:3**, com o produto no centro: em alguns lugares, como as listas com fotos pequenas, a foto aparece quadrada e as bordas são cortadas
 - **Descrição:** até 120 caracteres, para detalhes que as fotos não mostram
 - **Outros detalhes:** algumas categorias pedem campos extras, como idioma, raridade, nota de avaliação, marca, tamanho ou cor. Preencha os que se aplicam
 

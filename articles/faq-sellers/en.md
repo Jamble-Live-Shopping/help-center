@@ -105,7 +105,7 @@ Open your live and add your products. For each product, you enter:
 - The sale duration, when there is one
 - The shipping profile, with the parcel's weight and size
 
-On a computer, the Seller Hub also lets you create many products at once from a spreadsheet (**Importar CSV**) and reuse products from past lives (**Clonar de Lives Anteriores**). [See how to list products](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288093).
+On a computer, the Seller Hub also lets you create many products at once from a spreadsheet (**Importar CSV**) and bring products from your Shop or from past lives into a live (**Clonar anúncios**). [See how to list products](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288093).
 
 ## How do real-time offers work?
 
@@ -189,7 +189,7 @@ Yes. On your live's page in the Seller Hub, click **Iniciar Live** and choose **
 
 ## Can I import my products from a spreadsheet?
 
-Yes, in the Seller Hub. Click the **+**, then **Importar CSV**, download the template, fill it in and upload the file. The products go into a scheduled live. Each file can have up to 200 rows.
+Yes, in the Seller Hub. Click the **+**, then **Importar CSV**, download the template, fill it in and upload the file. You choose whether the products go to the **Marketplace**, for sale in your Shop without a live, or into a scheduled live. Each file can have up to 200 rows.
 
 ## Do I need to be live to sell?
 

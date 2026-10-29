@@ -8,7 +8,7 @@ This guide explains how to create a product listing on Jamble: the fields you fi
 
 - **In a live:** open your scheduled live and add the products you will sell live
 - **In the Loja (shop):** create listings that are for sale at any time, without a live. In the app, tap the **+** on your profile and choose **Criar anúncio na Loja**
-- **On a computer:** in the Seller Hub, use the **+**, then **Criar Novo Produto**. To create many products at once, use **Importar CSV**. To reuse products, use **Clonar de Lives Anteriores**
+- **On a computer:** in the Seller Hub, use the **+**, then **Criar Novo Produto**. To create many products at once, use **Importar CSV**. To bring products from your Shop or past lives, use **Clonar anúncios**
 
 See [Seller Hub: sell from your computer](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588489) for the computer details.
 
@@ -19,7 +19,7 @@ See [Seller Hub: sell from your computer](https://intercom.help/jamble-bb4bea116
 - **Title:** up to 40 characters. Use the item's name and its most important detail, such as set, model or size
 - **Category:** required. Choose the category and subcategory that best describe the item
 - **Condition:** the options change by category. Choose the one that honestly describes the item
-- **Photos:** show the exact item you are selling, front and back when it makes sense, and any defect, seal or box
+- **Photos:** show the exact item you are selling, front and back when it makes sense, and any defect, seal or box. We recommend vertical photos in a **2:3** ratio, with the product in the center: in some places, like lists with small photos, the photo shows as a square and the edges are cropped
 - **Description:** up to 120 characters, for details the photos do not show
 - **Other details:** some categories ask for extra fields, such as language, rarity, grade, brand, size or color. Fill in the ones that apply
 

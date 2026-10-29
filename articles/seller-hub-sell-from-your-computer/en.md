@@ -20,7 +20,7 @@ If you sign in to the app with Google or Apple, you can also use **Entrar com Go
 
 ## What you find in the menu
 
-![Seller Hub in the browser, with the + button open showing Schedule a Live, Create New Listing, Clone from Past Lives and Import CSV](./assets/mockups/seller-hub-sell-from-your-computer__menu__en.png)
+![Seller Hub in the browser, with the + button open showing Schedule a Live, Create New Listing, Clone listings and Import CSV](./assets/mockups/seller-hub-sell-from-your-computer__menu__en__v2.png)
 
 - **Visão Geral** (Overview): a summary of your account and your next lives
 - **Lives**: schedule, edit and follow your lives
@@ -40,20 +40,24 @@ At the top of the screen, the **+** button gathers the most used shortcuts:
 
 - **Agendar Live**: create a new live
 - **Criar Novo Produto**: choose **Marketplace** to sell anytime, without a live, or add the product to a live
-- **Clonar de Lives Anteriores**: reuse products from past lives
+- **Clonar anúncios** (clone listings): bring products from your Shop or from past lives into a live
 - **Importar CSV**: create many products at once from a spreadsheet
 
 ## Import products from a spreadsheet
 
 ![Import listings from a CSV window with the live chosen under Import Into Live, the drop area and the Download XLSX Template and Upload CSV buttons](./assets/mockups/seller-hub-sell-from-your-computer__csv-import__en.png)
 
-With the CSV import, you create many products at once. The products go into a scheduled live, so schedule the live first.
+With the CSV import, you create many products at once. You choose where they go:
+
+- **Marketplace**: the products are for sale in your Shop, anytime, without a live
+- **A scheduled live**: the products go into the live. In that case, schedule the live first
 
 1. Click the **+**, then **Importar CSV**.
-2. Click **Baixar Modelo XLSX** (download the template) and open it in Excel or another spreadsheet program.
-3. Pick the tab for your products' category and fill in one row per product.
-4. Save the file as **CSV**.
-5. In the Seller Hub, pick the live under **Importar para a Live** and upload the file.
+2. Under **Onde você quer vender?** (where do you want to sell), pick **Marketplace** or one of your scheduled lives.
+3. Click **Baixar Modelo XLSX** (download the template) and open it in Excel or another spreadsheet program.
+4. Pick the tab for your products' category and fill in one row per product.
+5. Save the file as **CSV**.
+6. Go back to the Seller Hub and upload the file.
 
 Before any product is created, the Seller Hub shows a preview. If a row has an error, the preview points out what to fix. Each file can have up to 200 rows and 2 MB. For more products, split them into several files.
 

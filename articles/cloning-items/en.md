@@ -2,97 +2,83 @@
 
 ## What you'll learn
 
-This guide explains how to clone products on Jamble. Cloning lets you quickly add products from your previous shows or your shop into a new show, without creating each listing from scratch. You'll learn the two cloning methods, how to use each one, and what gets copied when you clone.
+This guide explains how to clone products on Jamble. Cloning lets you quickly add products from your previous lives or from your Shop into a live, without creating each listing from scratch. You'll learn the two cloning sources, how to use each one, and what gets copied when you clone.
 
 ## Before you start
 
 You need:
 - An approved seller account on Jamble
-- A show to add products to
-- Existing products in another show or in your shop profile
+- A scheduled or ongoing live to add products to
+- Existing products in another live, or listings in your Shop
 
 ## Why clone instead of creating new listings
 
-If you're selling similar items across multiple shows, or re-running products that didn't sell in a previous show, creating each listing from scratch is slow and repetitive.
+If you're selling similar items across multiple lives, or listing again products that didn't sell, creating each listing from scratch is slow and repetitive.
 
-Cloning copies all the details from an existing product (title, description, price, photos, category, size, color, condition, shipping profile, and sell mode) into your new show. You can then edit any detail on the clone without affecting the original.
+Cloning copies the details of an existing product (title, description, price, photos, category, size, color, condition, and shipping profile) into your live. You can then edit any detail on the clone without affecting the original.
 
-## The two cloning methods
+## The two cloning sources
 
-Jamble offers two ways to bring existing products into a show. Compare the two methods below:
+Everything starts on the same screen, **Clone listings**:
 
-![Comparison table of the two cloning methods: Clone from Shows (source: your other shows, use: reuse listings between shows) and Import from Shop (source: your shop profile, use: only during a live show)](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cloning-items__methods-comparison__en__v2.png)
+- **From your shop:** bring the listings you have in your Shop into the live. This option shows at the top of the screen when you have listings in your Shop
+- **Or clone from past lives:** pick products from any of your other lives
 
-**Clone from Shows** works at any time (before or during the show). **Import from Shop** is only available during a live show.
+Both sources work before the live and during the live.
 
-## Method 1: Clone from Shows
+**Where it's available:** the **From your shop** source is in the iPhone app and in the Seller Hub. In the Android app, for now, you can only clone from past lives.
 
-This is the most common way to clone. It lets you pick products from any of your other shows and copy them into the current one.
+## Where to find it
 
-### Where to find it
+**In the app:** open your live and tap the **+** button. You'll see an action sheet. Tap **Clone listings**. You also find **Clone listings** right after you create a live.
 
-You can access Clone from Shows from two places:
+![iOS action sheet with three options to add products to your live: New Quickie Listing, Clone listings, and Cancel](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cloning-items__add-products-action-sheet__en__v3.png)
 
-**From the show preview** (before going live): open your show and tap the **+** button (or the add product option). You'll see an action sheet.
+On Android, use the option to clone from past shows, in the same menu.
 
-**During a live show:** tap the **+** button while live.
+**In the Seller Hub:** open the live and click **Clone listings**.
 
-![iOS action sheet with three options to add products to your show: New Quickie Listing, Clone Past Shows Listings, and Cancel](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cloning-items__add-products-action-sheet__en__v2.png)
+## Clone from your Shop
 
-Tap **Clone Past Shows Listings** to open the cloning screen.
+1. On the **Clone listings** screen, tap **From your shop**.
+2. On the **Clone shop listings** screen, you see your Shop listings with photo, title, price, and quantity. Use **Search listings** to find a listing by name.
+3. Tap the listings you want to bring in.
+4. Tap **Clone N listings**.
 
-### Step 1: Browse your shows
+A listing cloned from the Shop joins the live as **Real-time offers**, with the Shop price as the starting amount. Review the sell mode and the price before you go live.
 
-After tapping **Clone Past Shows Listings**, you see a list of your shows, both past and upcoming. Each show displays its title, date, and product count.
+**Important:** the original listing stays for sale in your Shop. If the product sells in the live, update or remove the Shop listing so you don't sell the same product twice.
 
-### Step 2: Select products from a show
+## Clone from past lives
 
-Tap a show to see its products. You'll see the screen title change to **Select Listings** with the show's details at the top. Each product shows its image, title, quantity available, and price.
+### Step 1: Browse your lives
+
+On the **Clone listings** screen, under **Or clone from past lives**, you see a list of your lives, both past and upcoming. Each live displays its title, date, and product count.
+
+### Step 2: Select products from a live
+
+Tap a live to see its products. The **Select Listings** screen shows the live's details at the top. Each product shows its image, title, quantity available, and price.
 
 ![Select Listings screen with Fashion Finds Friday show details at top, three products (Nike Air Max 90 selected, Vintage T-shirt unselected, Levis 501 Jeans marked as Added) and Clone button at the bottom](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cloning-items__select-listings__en__v2.png)
 
-Tap a product to select it, a checkmark appears. Products that have already been cloned into your current show appear greyed out with **(Added)** and can't be selected again.
+Tap a product to select it, a checkmark appears. Products that have already been cloned into your current live appear greyed out with **(Added)** and can't be selected again.
 
-You can go back and select products from **multiple shows** before importing. The counter at the bottom tracks how many products you've selected in total.
+You can go back and select products from **multiple lives** before cloning. The counter at the bottom shows how many products you've selected in total.
 
-### Step 3: Import the products
+### Step 3: Clone the products
 
-When you're done selecting products, tap **Clone N listing** at the bottom (where N is the number of selected products). The selected products are copied into your current show.
-
-## Method 2: Import from Shop
-
-If you have products in your shop profile (marketplace listings), you can bring them directly into a live show.
-
-### Where to find it
-
-During a live show only: tap the **+** button while you're live. You'll see an option called **Import from Shop**.
-
-**Note:** Import from Shop is only available during a live show, not from the show preview screen.
-
-### Step 1: Browse your shop products
-
-After tapping **Import from Shop**, you see a grid of your marketplace products, showing image, title, price, and size.
-
-![Import Listings from Shop screen with grid of three selected products (Nike Air Max $200, Leather Bag $150, Silver Ring $45) and Import 3 products button](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/cloning-items__import-shop-grid__en__v2.png)
-
-### Step 2: Select products
-
-Tap products to select them. A numbered badge appears on each selected product, showing the selection order (1, 2, 3...).
-
-### Step 3: Import
-
-Tap **Import N products** to bring the selected products into your live show.
+When you're done selecting, tap **Clone N listings** at the bottom (where N is the number of selected products). The selected products are copied into your live.
 
 ## What gets copied when you clone
 
-When you clone a product, **all product details are copied**:
+When you clone a product, these details are copied:
 
 - Title
 - Description
 - Photos
 - Price and retail price
-- Sell mode (Real-time offers, Sudden Death, or Buy It Now)
-- Flash Sale settings (if enabled)
+- Sell mode (Real-time offers, Sudden Death, or Buy It Now), when you clone from a past live
+- Flash Sale settings (if enabled), when you clone from a past live
 - Shipping profile
 - Category (gender, category, subcategory)
 - Size and color
@@ -100,41 +86,41 @@ When you clone a product, **all product details are copied**:
 - Brand
 - Quantity
 
-The clone is a **new product** in your show. You can edit any field on the clone without affecting the original.
+The clone is a **new product** in your live. You can edit any field on the clone without affecting the original.
 
 ## What does NOT get copied
 
 - **Sale history**, the cloned product starts fresh with no offers or purchases
-- **Position in the show**, the clone is added at the end of your product list
+- **Position in the live**, the clone is added at the end of your product list
 - **Sold status**, even if the original was sold, the clone starts as available
 
 ## Rules and limitations
 
-- **You can't clone the same product twice** into the same show. If a product has already been cloned into your current show, it appears greyed out with **(Added)** and can't be selected again
-- **You can select from multiple shows.** When using Clone from Shows, you can browse different shows and select products from each before importing them all at once
-- **Import from Shop is only available during a live show.** If you want to bring shop products into a show before going live, use Clone from Shows instead (if those products also exist in another show)
+- **You can't clone the same product twice** into the same live. If a product has already been cloned into your current live, it appears greyed out with **(Added)** and can't be selected again
+- **You can select from multiple lives.** Browse different lives and select products from each before cloning them all at once
+- **You can't clone into a live that has ended**
 - **Edits on a clone are independent.** Changing the price, title, or any detail on a cloned product does not affect the original
 
 ## Important tips
 
-- **Clone to save time.** If you regularly sell similar items, clone from your last show and just update what changed (price, size, condition)
-- **Use Clone from Shows for unsold items.** Had a product that didn't sell in your last show? Clone it into your next show, no need to recreate it
-- **Edit after cloning.** Cloning copies everything, but you should still review each clone. Make sure the price, condition, and photos are accurate for this specific show
+- **Clone to save time.** If you regularly sell similar items, clone from your last live and just update what changed (price, size, condition)
+- **Clone unsold items.** Had a product that didn't sell in your last live? Clone it into your next one, no need to recreate it
+- **Review after cloning.** Make sure the price, sell mode, condition, and photos are right for this live
 - **Clone and edit is faster than creating new.** Even if you need to change several fields, starting from a clone is faster than filling in the entire form from scratch
 
 ## Common questions
 
-**Does cloning duplicate my inventory?**
-The clone is a new listing. It doesn't share inventory with the original, it's an independent product with its own quantity and sales.
+**Does cloning duplicate my stock?**
+The clone is a new listing. It doesn't share stock with the original. That's why, when you clone from the Shop, the Shop listing stays for sale: if the product sells in one of them, update the other.
 
-**Can I clone products from someone else's show?**
-No. You can only clone your own products from your own shows and your own shop profile.
+**Can I clone products from another seller?**
+No. You can only clone your own products, from your lives and your Shop.
 
-**Can I clone during a show?**
-Yes. Both Clone from Shows and Import from Shop are available while you're live. This is useful if you forgot to add a product before going live, or if a buyer asks about something from a previous show.
+**Can I clone during a live?**
+Yes. You can clone from your Shop and from past lives while you're live. This is useful if you forgot to add a product or if a buyer asks about something from a previous live.
 
-**Is there a limit to how many products I can clone at once?**
-There's no specific limit. You can select as many products as you want from your shows or shop and import them all at once.
+**Why don't I see the From your shop option?**
+It only shows when you have listings in your Shop. In the Android app, it isn't available yet: use the iPhone app or the Seller Hub.
 
 **Can I clone a product and change its sell mode?**
 Yes. After cloning, you can edit the clone and change any field, including the sell mode. For example, you could clone a Buy It Now product and change it to Real-time offers.

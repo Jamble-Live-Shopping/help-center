@@ -14,7 +14,7 @@ Como vendedor, você não precisa fazer nada para participar. Tudo acontece auto
 
 Os compradores ganham gemas usando o app. Tudo fica na aba **Ganhos**:
 
-- **Assistindo lives**: na seção **Assista e ganhe**, o app acompanha o tempo assistido no dia. É só converter esse tempo em gemas antes da meia-noite
+- **Assistindo lives**: o app conta o tempo assistido no dia. Nas versões mais recentes do app, as gemas de cada meta são resgatadas automaticamente na tela da live, enquanto o comprador assiste. Se alguma recompensa ainda não tiver sido resgatada, é só converter o tempo na seção **Assista e ganhe** antes da meia-noite
 - **Completando desafios**: a aba mostra desafios e outras ações que dão gemas, como convidar amigos
 
 As formas de ganhar gemas podem mudar com o tempo. As opções disponíveis aparecem sempre na aba **Ganhos**.

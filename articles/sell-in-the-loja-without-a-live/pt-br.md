@@ -55,7 +55,7 @@ Uma oferta sem resposta expira em 3 dias. Cada comprador pode fazer um número l
 
 ## Quando alguém compra
 
-1. **Confirme a venda.** Abra **Envios** no app ou no Seller Hub e toque em **Revisar vendas pendentes**. Para cada venda, escolha **Confirmar** ou **Recusar**. Se você recusar, o comprador é reembolsado.
+1. **Confirme a venda.** Abra **Envios** no app ou no Seller Hub e toque em **Revisar vendas pendentes**. Para cada venda, escolha **Confirmar** ou **Recusar**. Se você recusar, o comprador é reembolsado. Na sua lista de vendas, o filtro **Aguardando sua confirmação** mostra só as vendas da Loja que ainda esperam a sua resposta.
 2. **Faça isso dentro do prazo mostrado no app.** Se a venda não for confirmada a tempo, ela é cancelada e o comprador é reembolsado automaticamente.
 3. **Gere a etiqueta e envie.** Depois de confirmar, você gera a etiqueta como em qualquer outra venda. O prazo de envio começa quando você confirma, e a data aparece no pedido, em **Prazo de envio**.
 

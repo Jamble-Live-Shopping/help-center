@@ -55,7 +55,7 @@ An offer with no answer expires after 3 days. Each buyer can make a limited numb
 
 ## When someone buys
 
-1. **Confirm the sale.** Open **Envios** (shipments) in the app or in the Seller Hub and tap **Revisar vendas pendentes** (review pending sales). For each sale, choose **Confirmar** or **Recusar**. If you decline, the buyer is refunded.
+1. **Confirm the sale.** Open **Envios** (shipments) in the app or in the Seller Hub and tap **Revisar vendas pendentes** (review pending sales). For each sale, choose **Confirmar** or **Recusar**. If you decline, the buyer is refunded. In your sales list, the **Aguardando sua confirmação** (awaiting your confirmation) filter shows only the Loja sales still waiting for your answer.
 2. **Do it within the time shown in the app.** If the sale is not confirmed in time, it is cancelled and the buyer is refunded automatically.
 3. **Create the label and ship.** Once confirmed, you create the label like for any other sale. The shipping deadline starts when you confirm, and the date shows on the order under **Prazo de envio**.
 

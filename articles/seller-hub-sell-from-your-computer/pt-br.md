@@ -20,7 +20,7 @@ Se você entra no app com Google ou Apple, também pode usar **Entrar com Google
 
 ## O que você encontra no menu
 
-![Seller Hub no navegador, com o botão + aberto mostrando Agendar Live, Criar Novo Produto, Clonar de Lives Anteriores e Importar CSV](./assets/mockups/seller-hub-sell-from-your-computer__menu__pt-br.png)
+![Seller Hub no navegador, com o botão + aberto mostrando Agendar Live, Criar Novo Produto, Clonar anúncios e Importar CSV](./assets/mockups/seller-hub-sell-from-your-computer__menu__pt-br__v2.png)
 
 - **Visão Geral**: um resumo da sua conta e das suas próximas lives
 - **Lives**: agende, edite e acompanhe suas lives
@@ -40,20 +40,24 @@ No topo da tela, o botão **+** reúne os atalhos mais usados:
 
 - **Agendar Live**: crie uma nova live
 - **Criar Novo Produto**: escolha **Marketplace** para vender a qualquer momento, sem live, ou adicione o produto a uma live
-- **Clonar de Lives Anteriores**: reaproveite produtos de lives passadas
+- **Clonar anúncios**: traga para uma live produtos da sua Loja ou de lives anteriores
 - **Importar CSV**: crie vários produtos de uma vez a partir de uma planilha
 
 ## Importar produtos por planilha
 
 ![Janela Importar produtos por CSV com a live escolhida em Importar para a Live, a área para arrastar o arquivo e os botões Baixar Modelo XLSX e Subir CSV](./assets/mockups/seller-hub-sell-from-your-computer__csv-import__pt-br.png)
 
-Com a importação por CSV, você cria muitos produtos de uma vez. Os produtos entram em uma live agendada, então agende a live antes.
+Com a importação por CSV, você cria muitos produtos de uma vez. Você escolhe para onde eles vão:
+
+- **Marketplace**: os produtos ficam à venda na sua Loja, a qualquer momento, sem live
+- **Uma live agendada**: os produtos entram na live. Nesse caso, agende a live antes
 
 1. Clique no **+** e depois em **Importar CSV**.
-2. Clique em **Baixar Modelo XLSX** e abra o modelo no Excel ou em outro programa de planilhas.
-3. Escolha a aba da categoria dos seus produtos e preencha uma linha por produto.
-4. Salve o arquivo no formato **CSV**.
-5. No Seller Hub, escolha a live em **Importar para a Live** e envie o arquivo.
+2. Em **Onde você quer vender?**, escolha **Marketplace** ou uma das suas lives agendadas.
+3. Clique em **Baixar Modelo XLSX** e abra o modelo no Excel ou em outro programa de planilhas.
+4. Escolha a aba da categoria dos seus produtos e preencha uma linha por produto.
+5. Salve o arquivo no formato **CSV**.
+6. Volte ao Seller Hub e envie o arquivo.
 
 Antes de criar qualquer produto, o Seller Hub mostra uma prévia. Se alguma linha tiver erro, a prévia aponta o que corrigir. Cada arquivo pode ter até 200 linhas e 2 MB. Para mais produtos, divida em vários arquivos.
 
