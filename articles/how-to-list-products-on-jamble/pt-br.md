@@ -19,7 +19,7 @@ Veja [Seller Hub: venda pelo computador](https://intercom.help/jamble-bb4bea116b
 - **Título:** até 40 caracteres. Use o nome do item e o detalhe mais importante, como coleção, modelo ou tamanho
 - **Categoria:** obrigatória. Escolha a categoria e a subcategoria que melhor descrevem o item
 - **Condição:** as opções mudam conforme a categoria. Escolha a que descreve o item com honestidade
-- **Fotos:** mostre o item exato que você vende, com frente e verso quando fizer sentido, e qualquer defeito, lacre ou caixa
+- **Fotos:** mostre o item exato que você vende, com frente e verso quando fizer sentido, e qualquer defeito, lacre ou caixa. Recomendamos fotos verticais na proporção **2:3**, com o produto no centro: em alguns lugares, como as listas com fotos pequenas, a foto aparece quadrada e as bordas são cortadas
 - **Descrição:** até 120 caracteres, para detalhes que as fotos não mostram
 - **Outros detalhes:** algumas categorias pedem campos extras, como idioma, raridade, nota de avaliação, marca, tamanho ou cor. Preencha os que se aplicam
 
