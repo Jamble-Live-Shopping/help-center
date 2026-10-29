@@ -15,7 +15,7 @@ Cada compra na Jamble tem um status que mostra em que etapa o seu pedido está, 
 2. Toque em **Minhas compras**. Você também encontra essa opção em **Ajustes**.
 3. Toque no pedido para ver os detalhes, o endereço de entrega e o rastreio.
 
-Na lista, você pode filtrar os pedidos por etapa, como **Aguardando Envio**, **Em Entrega** ou **Concluído**.
+Na lista, você pode filtrar os pedidos por etapa, como **Aguardando o vendedor** (compras da Loja que o vendedor ainda não confirmou), **Aguardando Envio**, **Em Entrega** ou **Concluído**.
 
 ## O que significa cada status
 

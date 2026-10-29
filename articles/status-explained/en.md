@@ -15,7 +15,7 @@ Each purchase on Jamble has a status that shows which step your order is at, fro
 2. Tap **Minhas compras** (My purchases). You also find this option in **Ajustes** (Settings).
 3. Tap the order to see the details, the shipping address and the tracking.
 
-In the list, you can filter your orders by step, such as **Aguardando Envio** (Awaiting shipment), **Em Entrega** (In delivery) or **Concluído** (Completed).
+In the list, you can filter your orders by step, such as **Aguardando o vendedor** (Awaiting the seller, for Loja purchases the seller has not confirmed yet), **Aguardando Envio** (Awaiting shipment), **Em Entrega** (In delivery) or **Concluído** (Completed).
 
 ## What each status means
 
