@@ -145,7 +145,7 @@ Abra a sua live e adicione os produtos. Para cada produto, você informa:
 
 ​
 
-No computador, o Seller Hub também permite criar vários produtos de uma vez com uma planilha (**Importar CSV**) e reaproveitar produtos de lives anteriores (**Clonar de Lives Anteriores**). [Veja como listar produtos](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288093-como-listar-produtos-na-jamble).
+No computador, o Seller Hub também permite criar vários produtos de uma vez com uma planilha (**Importar CSV**) e trazer para uma live produtos da sua Loja ou de lives anteriores (**Clonar anúncios**). [Veja como listar produtos](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288093-como-listar-produtos-na-jamble).
 
 ​
 
@@ -267,7 +267,7 @@ Sim. Na página da sua live no Seller Hub, clique em **Iniciar Live** e escolha 
 
 ## Posso importar meus produtos por planilha?
 
-Sim, pelo Seller Hub. Clique no **+**, depois em **Importar CSV**, baixe o modelo, preencha e envie o arquivo. Os produtos entram em uma live agendada. Cada arquivo pode ter até 200 linhas.
+Sim, pelo Seller Hub. Clique no **+**, depois em **Importar CSV**, baixe o modelo, preencha e envie o arquivo. Você escolhe se os produtos vão para o **Marketplace**, à venda na sua Loja sem live, ou para uma live agendada. Cada arquivo pode ter até 200 linhas.
 
 ​
 
