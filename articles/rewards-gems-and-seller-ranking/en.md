@@ -14,7 +14,7 @@ As a seller, you don't need to do anything to take part. It all happens automati
 
 Buyers earn gems by using the app. Everything is in the **Ganhos** (Rewards) tab:
 
-- **Watching lives**: in the **Assista e ganhe** (Watch & Earn) section, the app tracks the time watched during the day. Buyers just convert that time into gems before midnight
+- **Watching lives**: the app counts the time watched during the day. In the latest app versions, the gems for each milestone are claimed automatically on the live screen while the buyer watches. If a reward hasn't been claimed yet, buyers just convert the time in the **Assista e ganhe** (Watch & Earn) section before midnight
 - **Completing challenges**: the tab shows challenges and other actions that give gems, such as inviting friends
 
 The ways to earn gems can change over time. The available options always appear in the **Ganhos** (Rewards) tab.
