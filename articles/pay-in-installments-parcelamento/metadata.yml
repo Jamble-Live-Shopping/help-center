@@ -1,4 +1,4 @@
-# Publish on or after Oct 16 2026 (installments launch); the text works before and after.
+# Installments live since Oct 16 2026; article corrected in PR #135.
 intercom_id: 17588992
 slug: pay-in-installments-parcelamento
 collection_id: 11348923
@@ -6,7 +6,7 @@ collection_id: 11348923
 # Primary source = pt-br per Language Priority Policy. EN is a 1:1 mirror.
 default_locale: pt-br
 
-state: draft
+state: published
 
 locales:
   pt-br:
