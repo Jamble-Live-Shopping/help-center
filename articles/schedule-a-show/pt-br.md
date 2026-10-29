@@ -25,7 +25,7 @@ Toque em **Adicionar imagem de capa** e escolha uma opção:
 - **Importar da biblioteca**: usa uma foto do seu celular
 - **Explorar capas**: busca uma imagem pronta dentro do app
 
-A capa aparece em formato vertical nos cards das lives. Uma foto dos produtos reais da live costuma atrair mais compradores do que uma imagem genérica.
+A capa aparece em formato vertical nos cards das lives. Recomendamos uma imagem vertical na proporção **2:3**, com o mais importante no centro, porque as bordas podem ser cortadas em algumas telas. Uma foto dos produtos reais da live costuma atrair mais compradores do que uma imagem genérica.
 
 ### Detalhes da Live
 

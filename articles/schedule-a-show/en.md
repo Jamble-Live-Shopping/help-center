@@ -25,7 +25,7 @@ Tap **Adicionar imagem de capa** (Add a cover image) and pick an option:
 - **Importar da biblioteca** (Import from library): uses a photo from your phone
 - **Explorar capas** (Explore covers): searches a ready-made image inside the app
 
-The cover shows in a vertical format on live cards. A photo of the real products in the live usually attracts more buyers than a generic image.
+The cover shows in a vertical format on live cards. We recommend a vertical image in a **2:3** ratio, with the most important part in the center, because the edges can be cropped on some screens. A photo of the real products in the live usually attracts more buyers than a generic image.
 
 ### Detalhes da Live (Live details)
 
