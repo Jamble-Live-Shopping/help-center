@@ -13,11 +13,16 @@ Na Loja, você compra produtos a qualquer momento, com preço fixo, sem precisar
 ![Página de um produto da Loja com preço, preço de varejo riscado e os botões Fazer oferta e Adicionar](./assets/mockups/buy-in-the-loja-cart-and-offers__product-page__pt-br.png)
 
 1. Abra o produto.
-2. Toque em **Adicionar** para colocar no carrinho.
-3. Abra o **Carrinho** e toque em **Finalizar compra**.
-4. Escolha o endereço e a forma de pagamento e confirme.
+2. Escolha como comprar:
+   - **Comprar agora**, no Android, para comprar só esse produto
+   - **Adicionar** no iPhone, ou o ícone do carrinho no Android, para colocar no carrinho. Depois, abra o **Carrinho** e toque em **Finalizar compra**
+3. Escolha o endereço e a forma de pagamento e confirme.
 
 O resumo do pedido mostra o preço, o frete e as taxas antes de você pagar.
+
+## Montar um pacote com o mesmo vendedor
+
+No Android, a página do produto mostra **Compre um pacote**, para economizar no frete. Toque em **Criar pacote**, adicione outros produtos do mesmo vendedor com **Adicionar ao pacote** e toque em **Finalizar compra** para pagar tudo de uma vez.
 
 ## Como funciona o carrinho
 
