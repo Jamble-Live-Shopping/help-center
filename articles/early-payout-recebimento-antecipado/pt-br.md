@@ -14,6 +14,12 @@ O valor de uma venda fica disponível para saque quando o pagamento é liberado 
 
 Há uma taxa adicional de aproximadamente 1%, aplicada **apenas aos pagamentos com cartão**. Vendas pagas com Pix não têm essa taxa.
 
+## Taxas e saques
+
+- **Na carteira**, o valor de vendas pendentes já aparece com a taxa estimada descontada
+- **A taxa é descontada da sua carteira** e pode reduzir um saque posterior, inclusive por vendas anteriores. Uma taxa já descontada não é cobrada de novo
+- **Se a venda for cancelada ou reembolsada** depois da antecipação, a taxa já cobrada não é devolvida, salvo nos casos previstos em lei
+
 ## Parcelamento para os seus compradores
 
 Quando o Recebimento Antecipado está ativado, os seus compradores podem parcelar as compras elegíveis no cartão. O número de parcelas e o acréscimo aparecem para o comprador antes de ele pagar.
@@ -34,6 +40,9 @@ Não. É opcional. Sem ele, você continua recebendo normalmente, nos prazos pad
 
 **A taxa vale para vendas no Pix?**
 Não. A taxa de aproximadamente 1% vale apenas para pagamentos com cartão.
+
+**Por que meu saque ficou menor do que eu esperava?**
+As taxas de antecipação são descontadas da carteira e podem reduzir um saque, inclusive por vendas anteriores ou por vendas que foram reembolsadas depois. Confira os detalhes na sua carteira.
 
 **Posso desativar depois?**
 Não. Ativar o Recebimento Antecipado não pode ser desfeito.

@@ -18,6 +18,8 @@ Entrar no site não cria uma conta nova e não muda nada no seu perfil.
 
 Se você entra no app com Google ou Apple, também pode usar **Entrar com Google** ou **Entrar com Apple**.
 
+Se aparecer a mensagem **Desative sua VPN**, desligue a VPN do computador ou do navegador e recarregue a página. O Seller Hub não funciona com uma VPN ativada. No app, nada muda.
+
 ## O que você encontra no menu
 
 ![Seller Hub no navegador, com o botão + aberto mostrando Agendar Live, Criar Novo Produto, Clonar anúncios e Importar CSV](./assets/mockups/seller-hub-sell-from-your-computer__menu__pt-br__v2.png)
@@ -99,6 +101,9 @@ Sim. É a mesma conta, então produtos, lives, vendas e mensagens aparecem nos d
 
 **Posso criar uma conta ou pedir para vender pelo site?**
 Não. A conta e a solicitação para vender são feitas pelo app. Depois de aprovado, você entra no Seller Hub com a mesma conta.
+
+**O Seller Hub mostra "Desative sua VPN". O que eu faço?**
+Desligue a VPN do computador ou do navegador e recarregue a página. Com a VPN desligada, o Seller Hub abre normalmente.
 
 **Como peço ajuda?**
 No menu do Seller Hub, clique em **Pedir Ajuda** para falar com o nosso suporte.

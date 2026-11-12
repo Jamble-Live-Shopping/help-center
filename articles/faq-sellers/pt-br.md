@@ -259,6 +259,10 @@ Sim. Pelo **Seller Hub**, em jamble.com/seller/dashboard, você cria produtos, a
 
 ​
 
+**O Seller Hub mostra "Desative sua VPN".** O Seller Hub não funciona no navegador com uma VPN ativada. Desligue a VPN e recarregue a página.
+
+​
+
 ## Posso fazer live pelo computador?
 
 Sim. Na página da sua live no Seller Hub, clique em **Iniciar Live** e escolha **Transmitir** para usar a câmera do computador. Se você usa o OBS Studio, siga o guia **Transmitir com OBS** no Seller Hub. Você também pode transmitir pelo celular e usar o computador como controle remoto.

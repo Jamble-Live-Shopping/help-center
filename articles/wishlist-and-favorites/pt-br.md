@@ -13,13 +13,13 @@ Quando as notificações estão ligadas, a Jamble avisa quando a live salva come
 Onde encontrar suas lives salvas:
 
 - **No iPhone**: abra seu perfil, toque no ícone de engrenagem e escolha **Lives salvas**
-- **No Android**: abra seu perfil e toque na aba **Salvos**
+- **No Android**: abra seu perfil e toque na aba **Favoritos**
 
 Para tirar uma live da lista, toque de novo no botão de salvar.
 
 ## Salvar um produto
 
-Na página de um produto, toque no ícone de salvar (no Android, **Salvar Item**). O ícone muda para mostrar que o produto foi salvo. Para remover, toque de novo.
+Toque no coração, no card do produto ou na página do produto. O coração fica preenchido quando o produto está salvo. Para remover, toque de novo.
 
 No iPhone, os produtos salvos ficam na aba **Favoritos** do seu perfil.
 
@@ -49,7 +49,7 @@ Sem as notificações, tudo continua salvo, mas você só vê as novidades quand
 ## Perguntas frequentes
 
 **Onde ficam as lives que eu salvei?**
-No iPhone, em ajustes (ícone de engrenagem no perfil) > **Lives salvas**. No Android, na aba **Salvos** do seu perfil.
+No iPhone, em ajustes (ícone de engrenagem no perfil) > **Lives salvas**. No Android, na aba **Favoritos** do seu perfil.
 
 **Onde ficam os produtos que eu salvei?**
 No iPhone, na aba **Favoritos** do seu perfil.
@@ -58,7 +58,7 @@ No iPhone, na aba **Favoritos** do seu perfil.
 Salvar guarda o produto para você ver depois. A pré-oferta é uma oferta feita antes da live começar, que entra automaticamente quando a venda abrir. Os produtos com pré-oferta ficam na aba **Ofertas**.
 
 **Posso remover algo que salvei?**
-Sim. Toque de novo no botão ou no ícone de salvar.
+Sim. Toque de novo no botão de salvar ou no coração.
 
 **Vou receber um aviso quando uma live salva começar?**
 Sim, se as notificações de **Lives salvas** estiverem ligadas e as notificações da Jamble estiverem permitidas no seu celular.

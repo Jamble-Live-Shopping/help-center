@@ -183,6 +183,8 @@ Go to Profile > Settings > Contact customer support.
 
 Yes. With the **Seller Hub**, at jamble.com/seller/dashboard, you create products, schedule and host lives, confirm sales, print labels and withdraw your earnings, all in your browser. You sign in with the same phone number as your app account. [See how to use the Seller Hub](https://intercom.help/jamble-bb4bea116bbe/en/articles/17588489).
 
+**The Seller Hub shows "Desative sua VPN" (turn off your VPN).** The Seller Hub does not work in the browser with a VPN on. Turn off the VPN and reload the page.
+
 ## Can I go live from my computer?
 
 Yes. On your live's page in the Seller Hub, click **Iniciar Live** and choose **Transmitir** to use your computer's camera. If you use OBS Studio, follow the **Transmitir com OBS** guide in the Seller Hub. You can also stream from your phone and use your computer as a remote control.

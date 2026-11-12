@@ -13,13 +13,13 @@ When notifications are on, Jamble lets you know when the saved live starts.
 Where to find your saved lives:
 
 - **On iPhone**: open your profile, tap the gear icon and choose **Lives salvas** (Bookmarked shows)
-- **On Android**: open your profile and tap the **Salvos** (Saved) tab
+- **On Android**: open your profile and tap the **Favoritos** (Favorites) tab
 
 To take a live off the list, tap the save button again.
 
 ## Save a product
 
-On a product page, tap the save icon (on Android, **Salvar Item** (Save item)). The icon changes to show the product was saved. To remove it, tap again.
+Tap the heart, on the product card or on the product page. The heart is filled when the product is saved. To remove it, tap again.
 
 On iPhone, saved products are in the **Favoritos** (Bookmarks) tab of your profile.
 
@@ -49,7 +49,7 @@ Without notifications, everything stays saved, but you only see updates when you
 ## Frequently asked questions
 
 **Where are the lives I saved?**
-On iPhone, in the settings (gear icon on your profile) > **Lives salvas** (Bookmarked shows). On Android, in the **Salvos** (Saved) tab of your profile.
+On iPhone, in the settings (gear icon on your profile) > **Lives salvas** (Bookmarked shows). On Android, in the **Favoritos** (Favorites) tab of your profile.
 
 **Where are the products I saved?**
 On iPhone, in the **Favoritos** (Bookmarks) tab of your profile.
@@ -58,7 +58,7 @@ On iPhone, in the **Favoritos** (Bookmarks) tab of your profile.
 Saving keeps the product for you to see later. A pre-offer is an offer made before the live starts, placed automatically when the sale opens. Products with a pre-offer are in the **Ofertas** (Offers) tab.
 
 **Can I remove something I saved?**
-Yes. Tap the save button or icon again.
+Yes. Tap the save button or the heart again.
 
 **Will I get an alert when a saved live starts?**
 Yes, if the **Lives salvas** (Bookmarked shows) notifications are on and Jamble notifications are allowed on your phone.
