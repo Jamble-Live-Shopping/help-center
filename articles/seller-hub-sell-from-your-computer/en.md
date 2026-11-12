@@ -18,6 +18,8 @@ Signing in on the website does not create a new account and does not change anyt
 
 If you sign in to the app with Google or Apple, you can also use **Entrar com Google** or **Entrar com Apple**.
 
+If you see the message **Desative sua VPN** (turn off your VPN), turn off the VPN on your computer or browser and reload the page. The Seller Hub does not work with a VPN on. Nothing changes in the app.
+
 ## What you find in the menu
 
 ![Seller Hub in the browser, with the + button open showing Schedule a Live, Create New Listing, Clone listings and Import CSV](./assets/mockups/seller-hub-sell-from-your-computer__menu__en__v2.png)
@@ -99,6 +101,9 @@ Yes. It is the same account, so products, lives, sales and messages show up on b
 
 **Can I create an account or apply to sell on the website?**
 No. Your account and your application to sell are done in the app. Once approved, you sign in to the Seller Hub with the same account.
+
+**The Seller Hub shows "Desative sua VPN". What do I do?**
+Turn off the VPN on your computer or browser and reload the page. With the VPN off, the Seller Hub opens normally.
 
 **How do I get help?**
 In the Seller Hub menu, click **Pedir Ajuda** (get help) to talk to our support team.
