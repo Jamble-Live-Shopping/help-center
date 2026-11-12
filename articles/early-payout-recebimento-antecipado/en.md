@@ -14,6 +14,12 @@ A sale's amount becomes available to withdraw when the payment is released and t
 
 There is an additional fee of about 1%, applied **only to card payments**. Sales paid with Pix do not have this fee.
 
+## Fees and withdrawals
+
+- **In your wallet**, the pending sales amount already has the estimated fee taken off
+- **The fee is taken from your wallet** and can reduce a later withdrawal, including for earlier sales. A fee already taken is not charged again
+- **If the sale is canceled or refunded** after the early payout, the fee already charged is not returned, except where required by law
+
 ## Installments for your buyers
 
 When Recebimento Antecipado is on, your buyers can pay for eligible card purchases in installments. The number of installments and the surcharge are shown to the buyer before they pay.
@@ -34,6 +40,9 @@ No. It is optional. Without it, you keep getting paid as usual, on the standard 
 
 **Does the fee apply to Pix sales?**
 No. The fee of about 1% only applies to card payments.
+
+**Why was my withdrawal lower than I expected?**
+Early payout fees are taken from your wallet and can reduce a withdrawal, including for earlier sales or for sales that were refunded later. Check the details in your wallet.
 
 **Can I turn it off later?**
 No. Turning on Recebimento Antecipado cannot be undone.
