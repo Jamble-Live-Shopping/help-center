@@ -2,6 +2,9 @@
 # Wave 2 rewrite (2026-10-14) against production (iOS 5.10.1, Android v5.10.0,
 # backend origin/main). Covers saved lives (iOS Ajustes > Lives salvas,
 # Android profile tab Salvos), saved products (iOS profile tab Favoritos),
+# Updated 2026-11-12 for iOS 5.11 and Android v5.11.0: both apps save a product
+# with a heart (card and product page) and the Android saved-lives tab is now
+# Favoritos (profile_tab_bookmarks). "coração" is no longer forbidden.
 # pre-offers (profile tab Ofertas), saved searches and the Lives salvas
 # notification. The three previous mockups were removed: they showed a heart
 # icon that is not the 5.10.1 save icon (bookmark), a "Lista de desejos" title
@@ -21,26 +24,24 @@ source_of_truth:
     - PROFILE/View Models/ProfileBottomViewModel.swift  # wishlist tabs only on own profile
     - PROFILE/ProfileSettings/ProfileSettingsV2ViewController.swift  # Bookmarked shows (pt Lives salvas) settings entry, Notifications entry
     - BOOKMARKS/Views/BookmarkShowsViewController.swift  # saved lives screen
-    - PRODUCT/Views/SwiftUI/Components/ProductPhotosSection.swift  # bookmark icon on product photo
+    - PRODUCT/Views/SwiftUI/Components/ProductPhotosSection.swift  # icon-heart-outline / icon-heart-fill on product photo (5.11)
     - RESOURCES/Localizable.xcstrings
   backend_files:
     - src/services/notification_service.py  # Lives section toggles incl. Lives salvas
     - src/routers/product.py  # save_search / get_saved_searches
   legal: []
   support_context:
-    - "Android v5.10.0: profile_tab_bookmarks=Salvos renders BookmarkedShowsScreen (saved lives); prebid_tab_title=Ofertas renders MyOffersScreen; product_detail_action_bookmark=Salvar Item; bookmark_show_save_cta=Salvar"
+    - "Android v5.11.0: profile_tab_bookmarks=Favoritos renders BookmarkedShowsScreen (saved lives); prebid_tab_title=Ofertas renders MyOffersScreen; product card and product page save with a heart (SharedBookmarkHeart); bookmark_show_save_cta=Salvar"
 
 content_contract:
   must_answer:
     - "Lives salvas"
     - "Favoritos"
     - "Ofertas"
-    - "Salvos"
   forbidden_terms:
     - "regex:\\bauction\\b"
     - "regex:\\bleil[aã]o\\b"
     - "Programas marcados"
-    - "coração"
   must_not_say:
     - "Internal notification scheduling implementation"
     - "Backend service names"
