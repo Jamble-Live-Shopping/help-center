@@ -97,11 +97,13 @@ Use um fundo liso, luz suave vinda de cima e foco nítido. Evite o flash em cart
 
 ## Abertura ao Vivo
 
-Nos produtos da sua live, você pode ativar **Abertura ao Vivo**: "Este item lacrado será aberto durante o show assim que for comprado". A opção aparece nos itens lacrados, como booster packs, boxes e outros produtos selados de TCG, e também nas outras categorias de colecionáveis.
+Ao criar um produto, você diz se ele pode ser aberto na live, na pergunta **Abrir em Live**: responda **Sim** ou **Não**. Nos produtos de cartas e TCG, como booster packs, boxes e outros itens lacrados, a resposta é obrigatória. Dependendo da versão do app, a mesma opção pode aparecer como o botão **Abertura ao Vivo**.
+
+**Importante:** só os itens abertos com a autorização do comprador não podem ser reembolsados por arrependimento. Se o comprador escolher receber lacrado, ou não responder, o item segue as regras normais de cancelamento e reembolso. Por isso, responda **Sim** apenas nos itens que você vai abrir na live. Veja as regras para o comprador em [Abertura de itens ao vivo](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/13440855).
 
 Como funciona:
 
-1. Ao criar o produto da live, ative **Abertura ao Vivo**
+1. Ao criar o produto, responda **Sim** em **Abrir em Live** (ou ative **Abertura ao Vivo**)
 2. Depois de pagar, o comprador escolhe se quer que você abra o item na live (**Abrir**) ou se prefere receber lacrado (**Manter lacrado**)
 3. Se o comprador não responder, o item fica lacrado
 4. Na sua lista de vendidos, cada compra mostra a escolha do comprador, como **Aberto** ou **Lacrado**
