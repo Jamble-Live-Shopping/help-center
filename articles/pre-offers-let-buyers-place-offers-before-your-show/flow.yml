@@ -12,11 +12,11 @@ job_to_be_done: "Explain when and how a buyer can place an offer before a show s
 
 source_of_truth:
   ios_files:
-    - PRE-BID/Views/PreBidViewController.swift
+    - PRE-BID/PreBidModalViewController.swift
     - PRE-BID/Views/PreBidConfirmationViewController.swift
     - PRE-BID/Views/PreBidListViewController.swift
     - PRE-BID/Views/PreBidListPageViewController.swift
-    - PRE-BID/View Models/PreBidViewModel.swift
+    - PRE-BID/View Models/PreBidModalViewModel.swift
     - PRE-BID/Models/PreBidSectionType.swift
     - AUCTION/Views/Components/CalendarProductCell.swift
     - AUCTION/Views/ProductsCalendarDayViewController.swift

@@ -14,25 +14,34 @@ intent:
     - Seller understands quantity, pre-offer eligibility, and shipping profile impact.
     - Article uses source-backed mockups for the central listing flow without reusing stale cross-slug images.
 source_of_truth:
+  # Released apps only: iOS tag 5.11, Android tag v5.11.0, backend origin/main (prod).
+  # Since 5.11 the listing form is server-driven: field titles, placeholders, toggle copy and
+  # attribute values are served by the backend product builder (get_product_edition_fields),
+  # so they are declared below as source=backend. Only chrome and sale-type rows stay in xcstrings.
   code:
     ios_files:
-      - PRODUCT/View Models/CreateProductViewModel.swift
       - PRODUCT/Views/CreateProductViewController.swift
-      - PRODUCT/Views/Components/SelectPhotoHeaderView.swift
-      - PRODUCT/Views/Components/SelectPhotoFirstCell.swift
-      - PRODUCT/Views/Components/CreateProductTitleCell.swift
-      - PRODUCT/Views/Components/CreateProductDescriptionCell.swift
-      - PRODUCT/Views/Components/ProductAttributeCell.swift
-      - PRODUCT/Views/Components/SellModeDefaultCell.swift
-      - PRODUCT/Views/Components/SellModeToogleView.swift
-      - PRODUCT/Views/Components/SellModeTextFieldView.swift
-      - PRODUCT/Views/Components/CreateProductQuantityCell.swift
-      - PRODUCT/Views/Components/PreBidToggleCell.swift
-      - PRODUCT/Models/ProductShippingProfile.swift
-      - PRODUCT/Models/ProductOperationMode.swift
+      - PRODUCT/Views/SwiftUI/CreateProductView.swift
+      - PRODUCT/Views/SwiftUI/SaleTypeSectionView.swift
+      - PRODUCT/Views/SwiftUI/Components/CreateProductPhotosSectionView.swift
+      - PRODUCT/Views/SwiftUI/Components/CreateProductFieldTitleView.swift
+      - PRODUCT/Views/SwiftUI/Components/CreateProductAttributeRowView.swift
+      - PRODUCT/Views/SwiftUI/Components/CreateProductToggleSectionView.swift
+      - PRODUCT/Views/SwiftUI/Components/CreateProductQuantitySectionView.swift
+      - PRODUCT/View Models/CreateProductViewModel.swift
+      - SERVICE/API/Repository/Modules/Product/Model/Response/ProductEditionFieldModels.swift
+      - SHIPPING/Add Edit Shipping Address/Views/Components/FloatingLabelTextField.swift
+      - UTILS/COMPONENTS/SwiftUI/JambleNavigationBar.swift
       - LIVE_SHOPPING/Show/Model/ShowSaleType.swift
       - EXTENSIONS/Price.swift
-    backend_files: []
+    backend_files:
+      - jamble_backend/src/services/product_service.py
+      - jamble_backend/src/entities/shipping_infos.py
+      - jamble_backend/src/entities/item_spec.py
+      - jamble_backend/src/product_attributes/configs/attributes/category.json
+      - jamble_backend/src/product_attributes/configs/attributes/condition.json
+      - jamble_backend/src/product_attributes/configs/attributes/item_type.json
+      - jamble_backend/src/product_attributes/configs/categories/pokemon_cards.json
   content:
     existing_articles:
       - articles/how-to-list-products-on-jamble/en.md
@@ -60,15 +69,18 @@ resolved_decisions:
     rationale: Shipping guidance is limited to selecting the profile that fits the packaged item and avoids unsourced carrier/cost formulas.
 mockup_plan:
   required: true
-  rationale: Central seller workflow article. Mockups show the listing form, sale-mode pricing, and quantity/pre-offer/shipping sections with iOS-backed labels and layout.
+  rationale: Central seller workflow article. Mockups show the 5.11 server-driven listing form (photos/title/description, sale type and price, quantity/lot/pre-offers/category/shipping) with labels traced to iOS 5.11 xcstrings or the prod backend builder.
   screens:
     - name: listing-basics
-      # Layout anchor:
-      #   files: CreateProductViewController.swift:37-68,71-166,323-377,740-767,868-877; SelectPhotoHeaderView.swift:19-57,79-104; SelectPhotoFirstCell.swift:18-31,61-87; CreateProductTitleCell.swift:28-45; CreateProductDescriptionCell.swift:23-40,52-60,118-175; ProductAttributeCell.swift:64-70,82-101,116-124.
-      #   parents: topContainerView horizontal stack above collectionView; PHOTOS section horizontal group; ProductAttributeCell mainStackView left + chevron trailing.
-      #   key placements: title left and close control trailing; photo add tile first, then selected photo cells; category selected value appears below its smaller label; description uses dashed inner background.
-      #   forbidden layouts: no stale gallery grid from another slug; no horizontal category label/value row; no invented required-photo state.
-      purpose: Show the seller where photos, title, category, and description appear in the new listing form.
+      # Layout anchor (iOS 5.11 SwiftUI form):
+      #   files: CreateProductView.swift:30-45 (nav bar, isModal false, back control leading), 100-135 (sorted server fields + dividers), 170-178 (photos), 248-268 (text field block), 211-226 (Save button);
+      #          CreateProductPhotosSectionView.swift:17-60; FloatingLabelTextField.swift (56pt field, floating XS label, red * when required).
+      #   server order (product_service.py get_product_edition_fields): photos(0, media) | title(1) + description(2) (identity) | sale_settings(3).
+      #   dividers: medium (8pt full width) between sections, small (1pt inset 16) inside a section.
+      #   key placements: photo title leading, "3 recomendadas" trailing brand; add tile first, thumbnails with xmark at top-right;
+      #                   "Detalhes do Produto" is the title-field header, the description field has no header.
+      #   forbidden layouts: no "Nova listagem rápida" header, no dashed description box, no category row in this block.
+      purpose: Show the top of the 5.11 listing form, photos, product title and description, with the Save button.
       source: ios_required
       review_checks:
         - labels_match_xcstrings
@@ -76,57 +88,78 @@ mockup_plan:
         - layout_matches_ios_source
       html_must_contain:
         en:
-          - New Quickie Listing
-          - Select a Photo
+          - Create New Listing
+          - Choose a picture
+          - 3 recommended
+          - Product Details
           - Title
-          - Category
-          - Description (optional)
+          - Description
+          - Save
         pt-br:
-          - Nova listagem rápida
-          - Selecione uma foto
+          - Criar Novo Anúncio
+          - Selecionar uma Foto
+          - 3 recomendadas
+          - Detalhes do Produto
           - Título
-          - Categoria
-          - Descrição (opcional)
+          - Descrição
+          - Salvar
       visible_text:
-        - selector: ".nav-title"
-          source: xcstrings
-          key: "New Quickie Listing"
-        - selector: ".section-title-main"
-          source: xcstrings
-          key: "Select a Photo"
-        - selector: ".section-right"
-          source: xcstrings
-          key: "3 recommended"
-        - selector: ".field-label"
-          source: xcstrings
-          key: "Title"
+        - selector: ".photos-title"
+          source: backend
+          path: "jamble_backend/src/services/product_service.py:2931"
+          locale_values:
+            en: "Choose a picture"
+            pt-br: "Selecionar uma Foto"
+        # iOS plural key "%lld recommended" (CreateProductPhotosSectionView.swift:24). The validator only reads
+        # stringUnit values, not plural variations, so the resolved plural is declared via locale_values.
+        - selector: ".rec"
+          source: backend
+          path: "PRODUCT/Views/SwiftUI/Components/CreateProductPhotosSectionView.swift:24 (xcstrings plural %lld recommended)"
+          locale_values:
+            en: "3 recommended"
+            pt-br: "3 recomendadas"
+        - selector: ".details-title"
+          source: backend
+          path: "jamble_backend/src/services/product_service.py:2942"
+          locale_values:
+            en: "Product Details"
+            pt-br: "Detalhes do Produto"
+        - selector: ".tf-title .ph"
+          source: backend
+          path: "jamble_backend/src/services/product_service.py:2943"
+          locale_values:
+            en: "Title"
+            pt-br: "Título"
+        - selector: ".req"
+          source: swift_literal
+          path: "PRODUCT/Views/SwiftUI/Components/CreateProductFieldTitleView.swift:15-18"
+          value: "*"
         - selector: ".field-value"
           source: user_content
-        - selector: ".attr-title"
+        - selector: ".tf-desc .ph"
+          source: backend
+          path: "jamble_backend/src/services/product_service.py:2955"
+          locale_values:
+            en: "Description"
+            pt-br: "Descrição"
+        - selector: ".save"
           source: xcstrings
-          key: "Category"
-        - selector: ".attr-value"
-          source: user_content
-        - selector: ".desc-hint"
-          source: xcstrings
-          key: "Description (optional)"
-        - selector: ".desc-sub"
-          source: xcstrings
-          key: "Include size, condition, and other details to sell faster"
+          key: "Save"
       visible_text_allowlist:
-        - selector: ".footer"
-          reason: "Create button uses String(localized: \"Add Listing\"); xcstrings has pt-BR only, and EN falls back to the key per ProductOperationMode.swift:14-20."
-        - selector: ".delete-dot"
-          reason: Photo remove control is represented by an icon glyph; SelectPhotoCell uses image/button chrome, not localized copy.
-        - selector: ".photo-add"
-          reason: Plus tile uses icon-only add affordance from SelectPhotoFirstCell; the plus glyph is not user-facing localized copy.
+        - selector: ".nav-title"
+          reason: "Title is LocalizedStringKey \"Create New Listing\" (CreateProductView.swift navigationTitle, show context). xcstrings has pt-BR only (Criar Novo Anúncio); EN renders the key itself, which the validator cannot resolve as an en localization."
+        - selector: ".xmark"
+          reason: Photo remove control is the SF Symbol xmark.circle.fill, icon only.
+        - selector: ".tile-add"
+          reason: Add-photo tile is the SF Symbol plus, icon only.
     - name: selling-mode-price
-      # Layout anchor:
-      #   files: CreateProductViewController.swift:404-412,833-839; SellModeDefaultCell.swift:47-59,67-147,152-227; ShowSaleType.swift:17-57.
-      #   parents: SELL_MODE collection sections render one SellModeDefaultCell per available type; each cell has topView with icon/title/subtitle/radio and selected AUCTION bottomStackView.
-      #   key placements: icon is leading 24x24, title/subtitle are middle column, radio is trailing 18x18, selected AUCTION inputs are below the row as two equal-width fields.
-      #   forbidden layouts: no picker modal; no deprecated Compra Direta/Pre-Bid labels; no invented mode ordering.
-      purpose: Show sale-mode choices and the start price/timer fields for Real Time Offer.
+      # Layout anchor (iOS 5.11):
+      #   files: SaleTypeSectionView.swift:24-31 (types = ShowSaleType.allCases filtered by server allowed_values), 34-56 (rows spaced 24, editor under the selected row),
+      #          150-160 (AUCTION editor: Start at + Timer side by side, spacing 12), 228-256 (row: 24pt icon tinted gray.t500, title/subtitle, 18pt radio trailing);
+      #          ShowSaleType.swift (titles, subtitles, icons). Server allowed_values for show listings: AUCTION, BUY_IT_NOW, SUDDEN_DEATH (product_service.py:3032-3039).
+      #   key placements: radio trailing, editor fields are FloatingLabelTextField, Timer shows unit suffix "seg"/"sec"; default start price is the currency minimum (R$ 5).
+      #   forbidden layouts: no "Duração (segundos)" or "Timer (Seconds)" label, no picker modal, no giveaway row.
+      purpose: Show the three sale types and the start price and timer fields for Oferta em tempo real.
       source: ios_required
       review_checks:
         - icons_match_ios_source
@@ -143,29 +176,29 @@ mockup_plan:
           - Buy It Now
           - Sudden Death
           - Start at
-          - Timer (Seconds)
+          - Timer
         pt-br:
           - Oferta em tempo real
           - Comprar agora
           - Morte súbita
-          - Comece em
-          - Duração (segundos)
+          - Começar em
+          - Temporizador
       visible_text:
-        - selector: ".nav-title"
-          source: xcstrings
-          key: "New Quickie Listing"
         - selector: ".sale-auction .sale-title"
           source: xcstrings
           key: "Auction"
         - selector: ".sale-auction .sale-subtitle"
           source: xcstrings
           key: "The last bidder wins at the end of the time."
-        - selector: ".sale-auction .mini-field:nth-child(1) .mini-label"
+        - selector: ".sale-auction .mini-start .mini-label"
           source: xcstrings
           key: "Start at"
-        - selector: ".sale-auction .mini-field:nth-child(2) .mini-label"
+        - selector: ".sale-auction .mini-timer .mini-label"
           source: xcstrings
-          key: "Timer (Seconds)"
+          key: "Timer"
+        - selector: ".sale-auction .unit"
+          source: xcstrings
+          key: "sec"
         - selector: ".sale-bin .sale-title"
           source: xcstrings
           key: "Buy It Now"
@@ -178,18 +211,27 @@ mockup_plan:
         - selector: ".sale-sd .sale-subtitle"
           source: xcstrings
           key: "No added time, even if someone bids. "
+        - selector: ".save"
+          source: xcstrings
+          key: "Save"
       visible_text_allowlist:
-        - selector: ".footer"
-          reason: "Create button uses String(localized: \"Add Listing\"); xcstrings has pt-BR only, and EN falls back to the key per ProductOperationMode.swift:14-20."
+        - selector: ".nav-title"
+          reason: "Title is LocalizedStringKey \"Create New Listing\" (CreateProductView.swift navigationTitle, show context). xcstrings has pt-BR only (Criar Novo Anúncio); EN renders the key itself, which the validator cannot resolve as an en localization."
+        - selector: ".tf-value.num"
+          reason: "Default values from SaleTypeSectionView.defaults(for:): starting price = currency minimum (R$ 5, formatted by Price.swift getPriceString) and 15 s timer."
         - selector: ".sale-icon img"
           reason: Icon alt text names source assets for validator anchoring, not user-visible localized copy.
     - name: quantity-shipping
-      # Layout anchor:
-      #   files: CreateProductViewController.swift:378-386,396-403,774-820,854-857; CreateProductQuantityCell.swift:26-39,80-127; PreBidToggleCell.swift:31-58,67-99; ProductAttributeCell.swift:64-70,82-101,116-124; ProductShippingProfile.swift:10-43.
-      #   parents: QUANTITY cell has title top and centered minus/value/plus hStack; PRE_BID_TOGGLE has title/subtitle leading and UISwitch trailing; SHIPPING_PROFILE uses ProductAttributeCell vertical selected-label pattern.
-      #   key placements: quantity controls are centered below label; pre-offer switch is trailing; selected shipping profile value is below small label with chevron trailing.
-      #   forbidden layouts: no right-side value row for shipping profile; no unchecked pre-offer toggle when illustrating eligibility; no carrier/cost formula.
-      purpose: Show quantity, pre-offer, and shipping profile controls together.
+      # Layout anchor (iOS 5.11):
+      #   files: CreateProductQuantitySectionView.swift:28-112 (title leading, bordered minus | value | plus stepper trailing);
+      #          CreateProductToggleSectionView.swift:44-62 (extended layout: title, then description + switch);
+      #          CreateProductAttributeRowView.swift:16-44 (title + red * when required, value below, chevron icon-arrow-right-light trailing).
+      #   server order for a Pokémon single card in a show (product_service.py): quantity(4), Lote(5), Ativar pré-ofertas(7) [qty_price] | Categoria(8),
+      #   Condição(11), Tipo(12), Perfil de envio (placed right after Tipo) [classification], optional attributes follow.
+      #   Pré-ofertas toggle is only served for Oferta em tempo real / Morte súbita with quantity 1 (product_service.py:2886-2905).
+      #   Perfil de envio value = "Automático (<peso> · <dimensões>)" from shipping_infos.title_with_parcel + item_spec CARD spec.
+      #   forbidden layouts: no "Ativar Pré-oferta?" / "Perfil de remessa" labels, no weight-range shipping value, no carrier/cost formula.
+      purpose: Show quantity, lot, pre-offers, category, condition, type and shipping profile in the 5.11 form.
       source: ios_required
       review_checks:
         - labels_match_xcstrings
@@ -198,37 +240,109 @@ mockup_plan:
       html_must_contain:
         en:
           - Quantity
-          - Enable Pre-Offer?
-          - Offers can be placed before the show starts
-          - Shipping Profile
+          - Bundle
+          - Enable offers
+          - Category
+          - Condition
+          - Shipping profile
         pt-br:
           - Quantidade
-          - Ativar Pré-oferta?
-          - As ofertas podem ser feitas antes do início da live
-          - Perfil de remessa
+          - Lote
+          - Ativar pré-ofertas
+          - Categoria
+          - Condição
+          - Perfil de envio
       visible_text:
-        - selector: ".nav-title"
-          source: xcstrings
-          key: "New Quickie Listing"
         - selector: ".quantity-title"
-          source: xcstrings
-          key: "Quantity"
+          source: backend
+          path: "jamble_backend/src/services/product_service.py:2980"
+          locale_values:
+            en: "Quantity"
+            pt-br: "Quantidade"
+        - selector: ".bundle-title"
+          source: backend
+          path: "jamble_backend/src/services/product_service.py:2998"
+          locale_values:
+            en: "Bundle"
+            pt-br: "Lote"
+        - selector: ".bundle-desc"
+          source: backend
+          path: "jamble_backend/src/services/product_service.py:2999-3002"
+          locale_values:
+            en: "Several identical units sold as one listing"
+            pt-br: "Várias unidades idênticas vendidas como um único anúncio"
         - selector: ".prebid-title"
+          source: backend
+          path: "jamble_backend/src/services/product_service.py:3059"
+          locale_values:
+            en: "Enable offers"
+            pt-br: "Ativar pré-ofertas"
+        - selector: ".prebid-desc"
+          source: backend
+          path: "jamble_backend/src/services/product_service.py:3060-3063"
+          locale_values:
+            en: "Allow users to make offers before the live starts"
+            pt-br: "Permitir que usuários façam ofertas antes do início da live"
+        - selector: ".row-category .attr-name"
+          source: backend
+          path: "jamble_backend/src/services/product_service.py:3124"
+          locale_values:
+            en: "Category"
+            pt-br: "Categoria"
+        - selector: ".row-category .attr-value"
+          source: backend
+          path: "jamble_backend/src/product_attributes/configs/attributes/category.json (POKEMON_CARDS)"
+          locale_values:
+            en: "Pokemon Cards"
+            pt-br: "Cartas de Pokémon"
+        - selector: ".row-condition .attr-name"
+          source: backend
+          path: "jamble_backend/src/product_attributes/configs/attributes/condition.json (title)"
+          locale_values:
+            en: "Condition"
+            pt-br: "Condição"
+        - selector: ".row-condition .attr-value"
+          source: backend
+          path: "jamble_backend/src/product_attributes/configs/attributes/condition.json (NEAR_MINT)"
+          locale_values:
+            en: "Near Mint"
+            pt-br: "Quase Mint"
+        - selector: ".row-type .attr-name"
+          source: backend
+          path: "jamble_backend/src/product_attributes/configs/attributes/item_type.json (title)"
+          locale_values:
+            en: "Type"
+            pt-br: "Tipo"
+        - selector: ".row-type .attr-value"
+          source: backend
+          path: "jamble_backend/src/product_attributes/configs/attributes/item_type.json (CARD)"
+          locale_values:
+            en: "Card"
+            pt-br: "Carta Individual"
+        - selector: ".row-shipping .attr-name"
+          source: backend
+          path: "jamble_backend/src/services/product_service.py:3340"
+          locale_values:
+            en: "Shipping profile"
+            pt-br: "Perfil de envio"
+        - selector: ".row-shipping .attr-value"
+          source: backend
+          path: "jamble_backend/src/entities/shipping_infos.py:47-56 + src/entities/item_spec.py:68 (CARD 2 g, 8.8 x 6.3 x 0.05 cm)"
+          locale_values:
+            en: "Automatic (2 g · 8,8 × 6,3 × 0,05 cm)"
+            pt-br: "Automático (2 g · 8,8 × 6,3 × 0,05 cm)"
+        - selector: ".req"
+          source: swift_literal
+          path: "PRODUCT/Views/SwiftUI/Components/CreateProductFieldTitleView.swift:15-18"
+          value: "*"
+        - selector: ".save"
           source: xcstrings
-          key: "Enable Pre-Bid?"
-        - selector: ".prebid-subtitle"
-          source: xcstrings
-          key: "Bids can be placed before the show starts"
-        - selector: ".attr-title"
-          source: xcstrings
-          key: "Shipping Profile"
-        - selector: ".attr-value"
-          source: user_content
+          key: "Save"
       visible_text_allowlist:
-        - selector: ".footer"
-          reason: "Create button uses String(localized: \"Add Listing\"); xcstrings has pt-BR only, and EN falls back to the key per ProductOperationMode.swift:14-20."
-        - selector: ".round-btn"
-          reason: Plus/minus controls are SF Symbol buttons in iOS; mockup text glyphs are icon stand-ins, not localized copy.
+        - selector: ".nav-title"
+          reason: "Title is LocalizedStringKey \"Create New Listing\" (CreateProductView.swift navigationTitle, show context). xcstrings has pt-BR only (Criar Novo Anúncio); EN renders the key itself, which the validator cannot resolve as an en localization."
+        - selector: ".step-btn"
+          reason: Minus/plus are SF Symbol buttons, icon only.
 icons_required:
   - icon-real-time-offer
   - sell-mode-buy_it_now

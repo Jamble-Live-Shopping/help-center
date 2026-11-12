@@ -14,13 +14,17 @@ See [Seller Hub: sell from your computer](https://intercom.help/jamble-bb4bea116
 
 ## The listing fields
 
-![Quick listing form showing the Select a photo row, a product title, a category row and the description field above the disabled Add product button](./assets/mockups/how-to-list-products-on-jamble__listing-basics__en__v3.png)
+This is the top of the **Criar Novo Anúncio** (create new listing) form:
 
-- **Title:** up to 40 characters. Use the item's name and its most important detail, such as set, model or size
+![Create New Listing form with the Choose a picture section, the Title field under Product Details, the Description field and the Save button](./assets/mockups/how-to-list-products-on-jamble__listing-basics__en__v4.png)
+
+Fields with an asterisk (**\***) are required.
+
+- **Title:** required, under **Detalhes do Produto** (product details). Use the item's name and its most important detail, such as set, model or size
 - **Category:** required. Choose the category and subcategory that best describe the item
 - **Condition:** the options change by category. Choose the one that honestly describes the item
 - **Photos:** show the exact item you are selling, front and back when it makes sense, and any defect, seal or box. We recommend vertical photos in a **2:3** ratio, with the product in the center: in some places, like lists with small photos, the photo shows as a square and the edges are cropped
-- **Description:** up to 120 characters, for details the photos do not show
+- **Description:** optional and short, for details the photos do not show
 - **Other details:** some categories ask for extra fields, such as language, rarity, grade, brand, size or color. Fill in the ones that apply
 
 If a required field is missing, the app tells you before saving.
@@ -33,7 +37,9 @@ For products in a live, you choose how to sell:
 - **Morte súbita** (sudden death): timed offers with no extra time at the end. The price is the starting price
 - **Comprar agora** (buy now): fixed price, the buyer buys right away
 
-![Sell mode section with Real-time offers selected, Starts at and Duration fields visible, and Buy now and Sudden death below](./assets/mockups/how-to-list-products-on-jamble__selling-mode-price__en__v3.png)
+![Sell modes with Real Time Offer selected, Start at and Timer fields, and the Buy It Now and Sudden Death options below](./assets/mockups/how-to-list-products-on-jamble__selling-mode-price__en__v4.png)
+
+For **Oferta em tempo real** and **Morte súbita**, fill in **Começar em** (start at, the starting price) and the **Temporizador** (timer). For **Comprar agora**, fill in the **Preço** (price).
 
 The minimum price is $5. In Loja listings, the price is always fixed.
 
@@ -41,21 +47,25 @@ You can also enter a **Preço de Varejo** (retail price), shown crossed out next
 
 ## Quantity, lot and pre-offers
 
-- **Quantidade** (quantity): how many identical units you have, from 1 to 1,000
+- **Quantidade** (quantity): how many identical units you have. Use the minus and plus buttons or type the number
 - **Lote** (lot): turn it on when the listing is a set of units sold together, and enter the **Unidades do lote** (units in the lot)
-- **Pre-offers:** only available when the quantity is 1
+- **Ativar pré-ofertas** (enable pre-offers): only shows for **Oferta em tempo real** and **Morte súbita**, when the quantity is 1
 
-![Quantity section with minus and plus controls, Enable Pre-offer toggle and the selected Shipping profile row below](./assets/mockups/how-to-list-products-on-jamble__quantity-shipping__en__v3.png)
+Right below are the category, the item details and the shipping profile:
+
+![Form with Quantity, the Bundle and Enable offers switches, and the Category, Condition, Type and Shipping profile rows with Automatic selected](./assets/mockups/how-to-list-products-on-jamble__quantity-shipping__en__v4.png)
+
+Tap a row, such as **Condição** (condition) or **Perfil de envio** (shipping profile), to pick another option.
 
 ## Shipping profile
 
-The shipping profile tells Jamble the package's weight and size and sets the shipping the buyer pays. Choose **Automático**, **Informar peso e tamanho** or one of your custom profiles. Think about the item once packed. See [Choose a Shipping Profile](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288104).
+The shipping profile tells Jamble the package's weight and size and sets the shipping the buyer pays. With **Automático**, the app shows in parentheses the weight and size used for the item type. You can choose **Automático**, **Informar peso e tamanho** or one of your custom profiles. Think about the item once packed. See [Choose a Shipping Profile](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288104).
 
 ## Before saving
 
 Check that:
 
-- The title is specific and up to 40 characters
+- The title is short and specific
 - The category and condition are correct
 - The sell mode and price are how you want them
 - The shipping profile matches the packed item

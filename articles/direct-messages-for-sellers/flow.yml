@@ -1,26 +1,64 @@
 # Flow contract for the DM seller article. v2 rewrite scope.
 # See process/templates/article-flow.yml for field documentation.
 # See process/00-RUNBOOK.md for the canonical 8-phase workflow.
+#
+# Fidelity fix 2026-11-13 against released prod: iOS 5.11 (tag 5.11),
+# Android v5.11.0 and backend origin/main. Activity has six filters on both
+# apps (All, Messages, Unread, Purchases, Sales, Archived; iOS pt-BR shows the
+# archived filter as "Concluído", Android as "Arquivadas"). Archive is a long
+# press on iOS and a left swipe on Android. A deleted message is removed from
+# the thread (no "Mensagem cancelada" placeholder). Composer: 500 characters
+# on both apps, photos 6 per send on iOS (gallery only), 10 on Android
+# (gallery or camera). Picture push body is "Te enviou uma foto".
+# The per-conversation rate-limit FAQ was removed: it described a limit that does
+# not apply to DMs, and DM limits are internal (content rule).
+# Screens dm-product-card, product-message-thread and user-profile-header were
+# dropped: their old HTML sources were placeholders (invented layout, no real
+# product header, no real profile header) and were never rendered or
+# referenced. Only activity-tabs was rebuilt from 5.11 code.
 
 workflow: article-v2
 mode: v2_rewrite
 audience: seller_br
 
-job_to_be_done: "Ajudar vendedores a responder compradores sem perder o contexto do show ou do pedido"
+job_to_be_done: "Ajudar vendedores a responder compradores sem perder o contexto do produto ou do pedido"
 
 source_of_truth:
   ios_files:
-    # Activity tab and inbox (where sellers see DMs)
-    - DISCOUNT/Views/ActivityViewController.swift
-    # DM thread view + product/transaction conversation header
-    - DM/Views/ConversationViewController.swift
-    # User profile DM CTA
-    - PROFILE/Views/UserProfileHeaderView.swift
+    # Activity screen: title, search, filter pills, page per filter
+    - ACTIVITY/ActivityList/View/ActivityListViewController.swift
+    - ACTIVITY/ActivityList/Models/ActivityType.swift
+    # Filter predicates (Messages = no transaction, Sales = seller + transaction), archive context menu
+    - ACTIVITY/ActivityPage/ViewModels/ActivityViewModel.swift
+    - ACTIVITY/ActivityPage/Views/ActivityViewController.swift
+    # Conversation row: unread grey background, brand date, 8pt brand dot
+    - ACTIVITY/ActivityPage/Views/Components/GroupMessageCell.swift
+    # Thread: composer (gallery button, 6-photo picker), long-press copy/delete, read status
+    - MESSAGE/UI/MessageViewController.swift
+    - MESSAGE/ViewModel/MessageViewModel.swift
+    - MESSAGE/UI/Views/MessageStatusRowView.swift
+    - MESSAGE/UI/Headers/MessageProductHeader.swift
+    # Follow + Message buttons on someone else's profile
+    - PROFILE/Views/ProfileHeaderViewController.swift
+    # Product page chat entry (shop products only)
+    - PRODUCT/Views/SwiftUI/Components/ProductProfileSection.swift
+    - RESOURCES/Localizable.xcstrings
   backend_files:
-    # DM scope: who can message whom, when
-    - jamble_backend/src/services/conversation_service.py
+    # send_message gating (block, moderation, membership), thread creation, push body
+    - src/services/message_service.py
+    # Offer threads created or reused per buyer + seller + product
+    - src/services/purchase_intent_service.py
+    # Every created/confirmed transaction attaches a thread
+    - src/schemas/transaction.py
+    # Product sheet "Enviar mensagem ao vendedor" only on shop products
+    - src/schemas/product_options.py
+    # Profile sheet Block / Unblock
+    - src/schemas/user_options.py
+    # Notification settings Atividade > Mensagens toggle
+    - src/services/notification_service.py
   legal: []
-  support_context: []
+  support_context:
+    - "Android v5.11.0: ActivityType ALL/MESSAGES/UNREAD/PURCHASES/SALES/ARCHIVED (pt Todos, Mensagens, Não lidas, Compras, Vendas, Arquivadas); SwipeToArchiveRow (swipe left, Arquivar/Desarquivar); MessageInput MAX_PICTURES_PER_SEND=10 with Tirar foto / Importar foto; character_limit_reached 500; delete_message Excluir mensagem; ProfileActions Follow + Message pair; ProductSellerSection Mensagem"
 
 content_contract:
   must_answer:
@@ -31,39 +69,74 @@ content_contract:
     - "safety rules and what kinds of messages are not allowed"
 
   forbidden_terms:
-    # Internal codenames and unreleased automations should never appear.
-    # These are deterministic strings, hard fail on grep.
     - "regex:\\bauction\\b"
     - "regex:\\bleil[aã]o\\b"
+    - "Mensagem cancelada"
+    - "Acabou de te enviar uma foto"
 
   must_not_say:
     - "Internal moderation tooling and admin-only override paths"
     - "Unreleased automation features (e.g. auto-replies, AI suggestions)"
     - "Backend service names and database schema details"
+    - "Sending limits or moderation thresholds (internal)"
 
+# Layout anchor (activity-tabs):
+#   Source files: ACTIVITY/ActivityList/View/ActivityListViewController.swift
+#   (titleLabel 50pt high, leading 12; PageViewController bubble cells height 36,
+#   margin 14, itemSpacing 8, selected .black bg + white text, unselected white bg
+#   + #DADDE3 border, body M semibold), GroupMessageCell.swift (container inset
+#   8/4, radius 12; avatar 64x64 radius 12 at leading 8; title 14 semibold black;
+#   preview 14 medium twitterGrey; date 60 wide trailing 8, centerY top+20,
+#   #A4A8AC or brand when unread; seenView 8x8 brand trailing 8 centerY;
+#   unread background customGrey #F0F1F5).
+#   Cropped: navigation bar items (search, help) and tab bar are not shown.
+#   Forbidden layouts: pills with equal flex widths, dot on the left, avatar as circle.
 mockup_plan:
   required: true
   screens:
     - name: activity-tabs
-      purpose: "Show where seller sees buyer messages in the Activity tab and how filters work"
+      purpose: "Activity screen as seen on iOS 5.11: title, the bubble filter row with All selected, and three conversation rows, the first one unread (grey background, brand date, brand dot)."
       source: ios_required
-    - name: dm-product-card
-      purpose: "Show the product-conversation header: product image, price, and thread context"
-      source: ios_required
-    - name: product-message-thread
-      purpose: "Show a full DM thread anchored to a product, illustrating buyer/seller exchange"
-      source: ios_required
-    - name: user-profile-header
-      purpose: "Show the Message CTA on a user profile, the entry point for plain DMs"
-      source: ios_required
+      review_checks:
+        - icons_match_ios_source
+        - labels_match_xcstrings
+        - no_invented_ui_state
+        - layout_matches_ios_source
+      html_must_contain:
+        pt-br:
+          - "Atividade"
+          - "Todos"
+          - "Mensagens"
+          - "Não lido"
+          - "Concluído"
+          - "Você: "
+        en:
+          - "Activity"
+          - "All"
+          - "Messages"
+          - "Unread"
+          - "Archived"
+          - "You: "
+      html_must_not_contain:
+        - "<img"
+        - "<svg"
+        - "icon-"
+        - "Arquivados"
 
-icons_required:
-  - live_send_message      # send action in DM composer
-  - icon-chat-star         # chat moderation reference
+icons_required: []
 icons_fallback_feather: false
 
 currency_required: false   # DM article does not document prices
 
-risk_flags:
-  - "Confirm with Aymar which buyer-to-seller DM rules are live versus planned (gating affects must_not_say scope)"
-  - "Confirm with support team whether product-conversation auto-creation behavior changed in any recent release"
+toc_required: false  # sections read top-down; short H2 blocks
+
+risk_flags: []
+resolved_decisions:
+  - risk: "Confirm which buyer-to-seller DM rules are live versus planned"
+    decided_by: "code check (Claude) for Vaimiti"
+    decided_at: "2026-11-13"
+    rationale: "Checked backend origin/main message_service.send_message and perform_can_send_message_checks, schemas/product_options.py and schemas/user_options.py, plus iOS 5.11 ProfileHeaderViewController / ProductProfileSection and Android v5.11.0 ProfileActions / ProductSellerSection. Live rules: any logged-in user can open a DM from another user's profile (Follow + Message on both apps); buyers can message from a shop product (product sheet message_seller only when the product has no show_id); a receiver's block stops the sender (block_exists); personal data, off-platform contacts and offensive content are refused with a user-visible error; any sending limits are internal and not documented. The article states only the user-visible parts (profile and product entry points, blocking, personal data and offensive messages blocked) and drops the old rate-limit FAQ. No planned-only rule is described."
+  - risk: "Confirm whether product-conversation auto-creation changed in a recent release"
+    decided_by: "code check (Claude) for Vaimiti"
+    decided_at: "2026-11-13"
+    rationale: "Checked backend origin/main purchase_intent_service.get_group_message_for_new_offer (an offer reuses or creates the buyer + seller + product thread), message_service.send_message (first message from a product page creates a product thread), message_service.attach_group_message_to_transaction (transaction created/confirmed post-action; shop sales reuse the existing product thread, show sales open their own thread) and iOS 5.11 ProductViewModel.openChat / MakeOfferSheet. Current behavior: product threads come from an offer or from a buyer messaging about a shop product; every sale gets an order thread. The article now describes exactly that and no longer says a conversation is created when someone contacts you through your profile (that thread only exists after the first message). Release-to-release history of this behavior was not reconstructed; the article describes the current prod state only."

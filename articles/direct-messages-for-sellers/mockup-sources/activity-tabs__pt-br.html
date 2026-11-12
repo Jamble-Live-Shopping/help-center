@@ -1,11 +1,32 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+/* Source: iOS 5.11 ACTIVITY/ActivityList/View/ActivityListViewController.swift (title + PageViewController bubble filters)
+   and ACTIVITY/ActivityPage/Views/Components/GroupMessageCell.swift (conversation rows). Nav bar items cropped out. */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; }
-.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; }
-
-.phone { padding: 20px 0 28px; }
-.tab-row { display: flex; gap: 10px; padding: 8px 16px 18px; }
-.tab { flex: 1; padding: 10px 12px; text-align: center; border-radius: 20px; background: #F3F4F8; color: #6B7A92; font-size: 14px; font-weight: 600; }
-.tab.active { background: #162233; color: #FFFFFF; }
-.tab-content { margin: 0 16px; padding: 40px 16px; text-align: center; background: #F9FAFC; border: 1px dashed #DADDE3; border-radius: 12px; color: #A0A7B7; font-size: 13px; line-height: 18px; }
-</style></head><body><div class="phone"><div class="tab-row"><div class="tab active">Todos</div><div class="tab">Nao lido</div><div class="tab">Compras</div><div class="tab">Vendas</div></div><div class="tab-content">Lista de conversas abaixo</div></div></body></html>
+.phone { width: 320px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding: 8px 0 12px; }
+.title { height: 50px; display: flex; align-items: center; padding: 0 12px; font-size: 24px; font-weight: 500; letter-spacing: -0.24px; color: #000000; }
+.filters { display: flex; gap: 8px; padding: 10px 8px 12px; white-space: nowrap; overflow: hidden; }
+.pill { flex: 0 0 auto; height: 36px; border-radius: 18px; padding: 0 14px; display: flex; align-items: center; font-size: 16px; font-weight: 600; border: 1px solid #DADDE3; background: #FFFFFF; color: #000000; }
+.pill.on { background: #000000; color: #FFFFFF; }
+.list { padding: 0 8px; }
+.row { position: relative; display: flex; align-items: center; padding: 8px; margin: 4px 0; border-radius: 12px; background: #FFFFFF; }
+.row.unread { background: #F0F1F5; }
+.avatar { width: 64px; height: 64px; border-radius: 12px; flex-shrink: 0; }
+.a1 { background: linear-gradient(135deg, #C9B8FB 0%, #7E53F8 100%); }
+.a2 { background: linear-gradient(135deg, #FDE2B8 0%, #F79009 100%); }
+.a3 { background: linear-gradient(135deg, #BDE7D0 0%, #22A06B 100%); }
+.info { flex: 1; min-width: 0; margin: 0 76px 0 8px; }
+.name { font-size: 14px; font-weight: 600; color: #000000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.preview { margin-top: 5px; font-size: 14px; font-weight: 500; color: #566371; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.date { position: absolute; right: 8px; top: 10px; width: 60px; height: 20px; line-height: 20px; text-align: right; font-size: 14px; font-weight: 600; color: #A4A8AC; }
+.row.unread .date { color: #7E53F8; }
+.dot { position: absolute; right: 8px; top: 50%; margin-top: -4px; width: 8px; height: 8px; border-radius: 4px; background: #7E53F8; }
+</style></head><body><div class="phone">
+<div class="title">Atividade</div>
+<div class="filters"><div class="pill on">Todos</div><div class="pill">Mensagens</div><div class="pill">Não lido</div><div class="pill">Compras</div><div class="pill">Vendas</div><div class="pill">Concluído</div></div>
+<div class="list">
+<div class="row unread"><div class="avatar a1"></div><div class="info"><div class="name">Lucas Cards</div><div class="preview">Ainda tem essa carta?</div></div><div class="date">14:32</div><div class="dot"></div></div>
+<div class="row"><div class="avatar a2"></div><div class="info"><div class="name">Marina TCG</div><div class="preview">Você: Envio amanhã!</div></div><div class="date">12/11</div></div>
+<div class="row"><div class="avatar a3"></div><div class="info"><div class="name">Rafa Colecionáveis</div><div class="preview">Recebi, obrigado!</div></div><div class="date">10/11</div></div>
+</div>
+</div></body></html>
