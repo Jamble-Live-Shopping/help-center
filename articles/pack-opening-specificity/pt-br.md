@@ -33,6 +33,8 @@ Um item aberto ao vivo com a sua autorização não é reembolsado só porque:
 
 Se houver um problema real com o item, por exemplo se ele não corresponde ao que foi anunciado, fale com o suporte.
 
+As regras completas estão nos [Termos de Uso](https://www.jamble.com/terms). Confira sempre a versão mais recente.
+
 ## Para vendedores
 
 - Abra ao vivo somente os itens com abertura autorizada pelo comprador
