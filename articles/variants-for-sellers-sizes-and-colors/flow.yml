@@ -3,15 +3,17 @@
 #
 # This article is a v2_rewrite that RESCOPES the topic. The original v1
 # was fashion-focused (size charts + color picker), but Jamble Brazil is
-# collectibles-only (72% Pokemon TCG, 21% Diecast, 7% other, GMV-weighted).
+# collectibles-heavy.
 # More importantly, the iOS app has NO "variant" surface: each product has
 # exactly ONE size and ONE color (PRODUCT/Models/ProductSize.swift,
 # PRODUCT/Models/ProductColor.swift) and ONE quantity field.
 #
 # Sellers who carry multi-size or multi-color inventory must create one
-# listing per size/color combination and use "Clone Past Shows Listings"
-# (xcstrings key: "Clone Past Shows Listings" -> pt-BR "Clonar listagens
-# de shows anteriores") to speed up subsequent listings. The article
+# listing per size/color combination and use "Clone listings"
+# (xcstrings key: "Clone listings" -> pt-BR "Clonar anúncios", iOS 5.11)
+# to speed up subsequent listings. Updated 2026-11-13: size/color labels
+# now come from the backend product builder (Tamanho único, Outros
+# tamanhos, Colorido). The article
 # documents this code-faithful flow.
 
 workflow: article-v2
@@ -26,10 +28,10 @@ source_of_truth:
     - PRODUCT/Models/ProductSize.swift
     - PRODUCT/Models/ProductColor.swift
     - PRODUCT/Views/CreateProductViewController.swift
-    - PRODUCT/Views/SelectProductAttributeViewController.swift
+    - PRODUCT/Views/SwiftUI/Components/CreateProductAttributeRowView.swift  # 5.11: server-driven Size/Color rows
     - LIVE_SHOPPING/Host/View/ShowHostViewController.swift
     - SERVICE/API/Repository/Modules/Product/ProductRepository.swift
-    - SERVICE/API/Repository/Modules/Product/Model/Request/ProductTemplate.swift
+    - SERVICE/API/Repository/Modules/Product/Model/Response/CreateProductResponse.swift
     - RESOURCES/Localizable.xcstrings
   backend_files: []
   legal: []
@@ -83,7 +85,7 @@ mockup_plan:
         - selector: ".group:nth-of-type(2) .row-value"
           source: user_content
     - name: screen-2
-      purpose: "Show host action sheet with Clone Past Shows Listings option highlighted (the code-faithful 'speed up multi-size listings' path)"
+      purpose: "Show host action sheet with the Clone listings option highlighted (the code-faithful 'speed up multi-size listings' path)"
       source: ios_required
       review_checks:
         - labels_match_xcstrings
@@ -98,7 +100,7 @@ mockup_plan:
           key: "New Quickie Listing"
         - selector: ".sheet .action.highlight"
           source: xcstrings
-          key: "Clone Past Shows Listings"
+          key: "Clone listings"
         - selector: ".cancel"
           source: xcstrings
           key: "Cancel"
@@ -142,10 +144,10 @@ currency_required: false
 toc_required: false
 
 risk_flags:
-  - "Article title contains 'Variantes' (slug-mandated wording, batch real-2 intake), but Jamble iOS has no 'variant' surface: each product has one size + one color + one quantity. Article body explicitly clarifies this in opening section to avoid setting wrong expectations. BR market is collectibles (72% Pokemon TCG, 21% Diecast, 7% other, GMV-weighted 2026-04-19), so multi-size or multi-color inventory is uncommon. The 'workaround' documented (one listing per size/color, use Clone Past Shows Listings to speed up) is code-faithful."
+  - "Article title contains 'Variantes' (slug-mandated wording, batch real-2 intake), but Jamble iOS has no 'variant' surface: each product has one size + one color + one quantity. Article body explicitly clarifies this in opening section to avoid setting wrong expectations. Most BR listings are collectibles, so multi-size or multi-color inventory is uncommon. The 'workaround' documented (one listing per size/color, use Clone listings to speed up) is code-faithful."
 
 resolved_decisions:
   - risk: "Article title contains 'Variantes' but iOS has no variant surface"
     decided_by: "Aymar (worker batch real-2, 2026-05-11)"
     decided_at: "2026-05-11"
-    rationale: "Slug mandated by intake (intercom_id 14288105 already published with that title in 2026-04 v1). Renaming the slug breaks the Intercom mapping. Article rescopes the body to be code-faithful: one-size-one-color reality, the Clone Past Shows Listings workaround, and the BR collectibles context where variants are rare. The remaining risk is the lingering title wording; reviewers can rename the slug in a follow-up if Intercom mapping is re-keyed."
+    rationale: "Slug mandated by intake (intercom_id 14288105 already published with that title in 2026-04 v1). Renaming the slug breaks the Intercom mapping. Article rescopes the body to be code-faithful: one-size-one-color reality, the Clone listings workaround, and the BR collectibles context where variants are rare. The remaining risk is the lingering title wording; reviewers can rename the slug in a follow-up if Intercom mapping is re-keyed."

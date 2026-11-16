@@ -12,12 +12,10 @@ source_of_truth:
   ios_files:
     # Sale type enum: titles, subtitles, icon names for the 3 modes
     - LIVE_SHOPPING/Show/Model/ShowSaleType.swift
-    # Picker cell that renders each sell-mode option in the create-product flow
-    - PRODUCT/Views/Components/SellModeDefaultCell.swift
+    # Sale type picker + Flash sale toggle in the 5.11 SwiftUI create-product flow
+    - PRODUCT/Views/SwiftUI/SaleTypeSectionView.swift
     # In-show banner shown to buyers when a Buy It Now product is pinned
     - LIVE_SHOPPING/SaleView/View/Components/ShowBuyItNowBannerView.swift
-    # Flash Sale toggle row that lives under the Buy It Now option
-    - PRODUCT/Views/Components/SellModeToogleView.swift
     # BRL price floor and ceiling for the price input field
     - EXTENSIONS/Price.swift
     # Marketplace vs Live product type mapping (BIN = Marketplace)
