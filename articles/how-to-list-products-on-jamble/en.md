@@ -26,6 +26,7 @@ Fields with an asterisk (**\***) are required.
 - **Photos:** show the exact item you are selling, front and back when it makes sense, and any defect, seal or box. We recommend vertical photos in a **2:3** ratio, with the product in the center: in some places, like lists with small photos, the photo shows as a square and the edges are cropped
 - **Description:** optional and short, for details the photos do not show
 - **Other details:** some categories ask for extra fields, such as language, rarity, grade, brand, size or color. Fill in the ones that apply
+- **Abrir em Live** (open on live): on sealed items, like boosters and boxes, answer **Sim** (yes) if you will open the item in the live, or **Não** (no) if you will ship it sealed. For cards and TCG, an answer is required. In older app versions, this option shows as the **Abertura ao Vivo** (live opening) switch. See more in [Cards and Collectibles: Best Practices for Sellers](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288099)
 
 If a required field is missing, the app tells you before saving.
 

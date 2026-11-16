@@ -26,6 +26,7 @@ Os campos com asterisco (**\***) são obrigatórios.
 - **Fotos:** mostre o item exato que você vende, com frente e verso quando fizer sentido, e qualquer defeito, lacre ou caixa. Recomendamos fotos verticais na proporção **2:3**, com o produto no centro: em alguns lugares, como as listas com fotos pequenas, a foto aparece quadrada e as bordas são cortadas
 - **Descrição:** opcional e curta, para detalhes que as fotos não mostram
 - **Outros detalhes:** algumas categorias pedem campos extras, como idioma, raridade, nota de avaliação, marca, tamanho ou cor. Preencha os que se aplicam
+- **Abrir em Live:** em itens lacrados, como boosters e boxes, responda **Sim** se você vai abrir o item na live, ou **Não** se vai enviar lacrado. Nas cartas e TCG, a resposta é obrigatória. Em versões mais antigas do app, essa opção aparece como o botão **Abertura ao Vivo**. Veja mais em [Cards e Colecionáveis: Boas Práticas para Vendedores](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/14288099)
 
 Se faltar um campo obrigatório, o app avisa antes de salvar.
 

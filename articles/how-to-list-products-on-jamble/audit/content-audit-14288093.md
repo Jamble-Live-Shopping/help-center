@@ -27,7 +27,7 @@ Intercom ID: 14288093
 | Lote / Unidades do lote | jamble_backend product_service.py | Current | 2026-11-13 | content | live_in_backend |
 | R$ 5 minimum price | iOS Price.swift + validation message | Current, visible to users | 2026-11-13 | content | live_in_ios |
 | Title 40 / description 120 / quantity 1 to 1.000 | jamble_backend product_service.py | Enforced but not shown in UI | 2026-11-13 | content | removed from body |
-| Abrir em Live radio | jamble_backend product_service.py | 5.11.1+ only | 2026-11-13 | content | not mentioned |
+| Abrir em Live radio | jamble_backend product_service.py | 5.11.1+ (live since Nov 9 Android / Nov 12 iOS) | 2026-11-16 | content | mentioned as a field, with the older toggle name |
 
 ## Verdict
 
