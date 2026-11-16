@@ -4,6 +4,14 @@ The Seller Hub is Jamble for sellers on a computer. In your browser, you can cre
 
 It is the same account as the app. What you do on your computer shows up on your phone, and the other way around.
 
+## Video: the Seller Hub step by step
+
+This video is in Portuguese.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QFtArpCl3qA" title="YouTube" frameborder="0" allowfullscreen></iframe>
+
+If the video does not load, watch it on [YouTube](https://www.youtube.com/watch?v=QFtArpCl3qA).
+
 ## Who can use it
 
 The Seller Hub is for people who already sell on Jamble. If you are not a seller yet, apply in the app. See [Apply to Sell on Jamble](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288078).
@@ -87,6 +95,12 @@ If you use OBS Studio, the Seller Hub has a step-by-step guide under **Transmiti
 - On Windows, use Chrome. On Mac, use Safari
 - Pick your microphone in Jamble, because the Virtual Camera does not carry OBS audio
 - Run a private test, with no viewers, before going live
+
+Watch the basic OBS setup in 10 minutes (in Portuguese):
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mDLtpAccl24" title="YouTube" frameborder="0" allowfullscreen></iframe>
+
+If the video does not load, watch it on [YouTube](https://www.youtube.com/watch?v=mDLtpAccl24).
 
 ## Frequently asked questions
 
