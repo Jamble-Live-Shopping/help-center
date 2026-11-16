@@ -97,9 +97,9 @@ Use um fundo liso, luz suave vinda de cima e foco nítido. Evite o flash em cart
 
 ## Abertura ao Vivo
 
-Ao criar um produto, você diz se ele pode ser aberto na live, na pergunta **Abrir em Live**: responda **Sim** ou **Não**. Nos produtos de cartas e TCG, como booster packs, boxes e outros itens lacrados, a resposta é obrigatória. Dependendo da versão do app, a mesma opção pode aparecer como o botão **Abertura ao Vivo**.
+Ao criar um produto, você diz se ele pode ser aberto na live, na pergunta **Abrir em Live**: responda **Sim** ou **Não**. Nos produtos de cartas e TCG, como booster packs, boxes e outros itens lacrados, a resposta é obrigatória. Em versões mais antigas do app, a mesma opção aparece como o botão **Abertura ao Vivo**.
 
-**Importante:** só os itens abertos com a autorização do comprador não podem ser reembolsados por arrependimento. Se o comprador escolher receber lacrado, ou não responder, o item segue as regras normais de cancelamento e reembolso. Por isso, responda **Sim** apenas nos itens que você vai abrir na live. Veja as regras para o comprador em [Abertura de itens ao vivo](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/13440855).
+**Importante:** só os itens abertos com a autorização do comprador não podem ser reembolsados por arrependimento. Se o comprador escolher receber lacrado, ou não responder, o item segue as regras normais de cancelamento e reembolso. Por isso, responda **Sim** apenas nos itens que você vai abrir na live. Veja as regras para o comprador em [Abertura de itens ao vivo](https://intercom.help/jamble-bb4bea116bbe/pt-BR/articles/13440855). As regras completas estão nos [Termos de Uso](https://www.jamble.com/terms); confira sempre a versão mais recente.
 
 Como funciona:
 
