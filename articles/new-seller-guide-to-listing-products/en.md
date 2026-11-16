@@ -41,7 +41,7 @@ A quick guide to creating your first listings on Jamble, with tips to sell more.
 
 ## Sealed products opened live
 
-On sealed products, like boosters, you can turn on **Abertura ao Vivo** (live opening). After paying, the buyer chooses whether the item is opened during the live or shipped sealed. If they do not answer, the item stays sealed.
+On sealed products, like boosters, answer **Sim** (yes) to the **Abrir em Live** (open on live) question if you want to open the item in the live. In older app versions, this option shows as the **Abertura ao Vivo** (live opening) switch. After paying, the buyer chooses whether the item is opened during the live or shipped sealed. If they do not answer, the item stays sealed.
 
 ## Key tips
 
@@ -61,7 +61,7 @@ $5.
 **Can I change a listing after creating it?**
 Yes, as long as the product has not been sold.
 
-**What is Abertura ao Vivo?**
+**What is Abrir em Live?**
 It is an option for sealed products. After paying, the buyer chooses whether the item is opened during the live or shipped sealed.
 
 ## Need help?
