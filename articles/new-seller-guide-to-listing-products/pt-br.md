@@ -41,7 +41,7 @@ Um guia rápido para criar seus primeiros anúncios na Jamble, com dicas para ve
 
 ## Produtos lacrados abertos na live
 
-Em produtos lacrados, como boosters, você pode ativar **Abertura ao Vivo**. Depois de pagar, o comprador escolhe se quer que o item seja aberto na live ou enviado lacrado. Se ele não responder, o item fica lacrado.
+Em produtos lacrados, como boosters, responda **Sim** na pergunta **Abrir em Live** se você quer abrir o item na live. Em versões mais antigas do app, essa opção aparece como o botão **Abertura ao Vivo**. Depois de pagar, o comprador escolhe se quer que o item seja aberto na live ou enviado lacrado. Se ele não responder, o item fica lacrado.
 
 ## Dicas importantes
 
@@ -61,7 +61,7 @@ R$ 5.
 **Posso mudar um anúncio depois de criar?**
 Sim, enquanto o produto não for vendido.
 
-**O que é Abertura ao Vivo?**
+**O que é Abrir em Live?**
 É uma opção para produtos lacrados. Depois de pagar, o comprador escolhe se o item é aberto na live ou enviado lacrado.
 
 ## Precisa de ajuda?

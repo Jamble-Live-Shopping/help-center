@@ -33,6 +33,8 @@ An item opened live with your permission is not refunded just because:
 
 If there is a real problem with the item, for example if it does not match what was listed, contact support.
 
+The full rules are in the [Terms of Use](https://www.jamble.com/terms). Always check the latest version.
+
 ## For sellers
 
 - Only open live the items the buyer allowed to be opened

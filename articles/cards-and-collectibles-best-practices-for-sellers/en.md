@@ -97,9 +97,9 @@ Use a plain background, soft light from above and sharp focus. Avoid flash on ho
 
 ## Live opening
 
-When you create a product, you say whether it can be opened in the live, with the **Abrir em Live** (open on live) question: answer **Sim** (yes) or **Não** (no). For card and TCG products, such as booster packs, boxes and other sealed items, an answer is required. Depending on your app version, the same option may show as the **Abertura ao Vivo** (live opening) switch.
+When you create a product, you say whether it can be opened in the live, with the **Abrir em Live** (open on live) question: answer **Sim** (yes) or **Não** (no). For card and TCG products, such as booster packs, boxes and other sealed items, an answer is required. In older app versions, the same option shows as the **Abertura ao Vivo** (live opening) switch.
 
-**Important:** only items opened with the buyer's permission cannot be refunded for a change of mind. If the buyer chooses to receive the item sealed, or does not answer, the item follows the normal cancellation and refund rules. So answer **Sim** only for items you will open in the live. See the buyer rules in [Opening items live](https://intercom.help/jamble-bb4bea116bbe/en/articles/13440855).
+**Important:** only items opened with the buyer's permission cannot be refunded for a change of mind. If the buyer chooses to receive the item sealed, or does not answer, the item follows the normal cancellation and refund rules. So answer **Sim** only for items you will open in the live. See the buyer rules in [Opening items live](https://intercom.help/jamble-bb4bea116bbe/en/articles/13440855). The full rules are in the [Terms of Use](https://www.jamble.com/terms); always check the latest version.
 
 How it works:
 

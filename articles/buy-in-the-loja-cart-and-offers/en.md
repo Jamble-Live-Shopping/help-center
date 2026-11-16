@@ -10,19 +10,19 @@ In the Loja (shop), you buy products at any time, at a fixed price, without join
 
 ## Buy a product
 
-![Loja product page with the price, a crossed-out retail price and the Make an Offer and Add buttons](./assets/mockups/buy-in-the-loja-cart-and-offers__product-page__en.png)
+![Loja product page with the price, a crossed-out retail price, the cart icon and the Make an Offer and Buy Now buttons](./assets/mockups/buy-in-the-loja-cart-and-offers__product-page__en__v2.png)
 
 1. Open the product.
 2. Choose how to buy:
-   - **Comprar agora** (buy now), on Android, to buy just this product
-   - **Adicionar** (add) on iPhone, or the cart icon on Android, to put it in your cart. Then open the **Carrinho** (cart) and tap **Finalizar compra** (checkout)
+   - **Comprar agora** (buy now) to buy just this product (on iPhone, the button shows as **Compre agora**)
+   - The **cart icon** to put it in your cart. Then open the **Carrinho** (cart) and tap **Finalizar compra** (checkout)
 3. Choose your address and payment method and confirm.
 
 The order summary shows the price, shipping and fees before you pay.
 
 ## Build a bundle from the same seller
 
-On Android, the product page shows **Compre um pacote** (buy a bundle), to save on shipping. Tap **Criar pacote** (create bundle), add other products from the same seller with **Adicionar ao pacote** (add to bundle) and tap **Finalizar compra** (checkout) to pay for everything at once.
+The product page shows **Compre um pacote** (buy a bundle), to save on shipping. Tap **Criar pacote** (create bundle), add other products from the same seller with **Adicionar ao pacote** (add to bundle) and tap **Finalizar compra** (checkout) to pay for everything at once.
 
 ## How the cart works
 
