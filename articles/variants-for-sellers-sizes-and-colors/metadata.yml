@@ -12,7 +12,7 @@ last_sync: 2026-05-11T00:00:00Z
 locales:
   pt-br:
     title: 'Variantes para Vendedores, Tamanhos e Cores'
-    description: 'Cada produto na Jamble tem um tamanho e uma cor. Veja como listar varios tamanhos do mesmo item usando Clonar listagens de shows anteriores.'
+    description: 'Cada produto tem um tamanho e uma cor. Veja como listar vários tamanhos do mesmo item com Clonar anúncios.'
   en:
     title: 'Variants for Sellers, Sizes and Colors'
-    description: 'Each product on Jamble has one size and one color. Use Clone Past Shows Listings to speed up listing the same item in multiple sizes.'
+    description: 'Each product has one size and one color. See how to list the same item in several sizes with Clone listings.'

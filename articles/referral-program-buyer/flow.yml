@@ -23,7 +23,6 @@ job_to_be_done: "Help buyers understand the referral program: how the reward wor
 source_of_truth:
   ios_files:
     - DISCOUNT/Views/ReferralView.swift
-    - DISCOUNT/Views/ReferralViewController.swift
     - DISCOUNT/Views/ReferralInviteListView.swift
     - DISCOUNT/Views/ReferralInviteListViewController.swift
     - DISCOUNT/View Models/ReferralViewModel.swift

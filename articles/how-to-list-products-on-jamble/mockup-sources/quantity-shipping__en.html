@@ -1,77 +1,96 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; color: #162233; }
-.phone { width: 340px; min-height: 640px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; position: relative; padding-bottom: 76px; }
-.top { height: 58px; display: flex; align-items: center; padding: 16px 16px 6px; gap: 12px; }
-.nav-title { flex: 1; font-size: 18px; font-weight: 700; line-height: 24px; color: #162233; }
-.close { width: 24px; height: 24px; color: #162233; display: flex; align-items: center; justify-content: center; }
-.collection { padding-top: 2px; }
-.footer { position: absolute; left: 16px; right: 16px; bottom: 8px; height: 52px; border-radius: 26px; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 600; background: #F3F4F8; border: 0.5px solid #D8DCE8; color: #7D8BA6; }
-.footer.enabled { background: #7E53F8; color: #fff; border-color: #7E53F8; }
-.section-header { height: 48px; display: flex; align-items: center; justify-content: space-between; padding: 16px 16px 8px; }
-.section-title { display: flex; align-items: center; gap: 4px; min-width: 0; }
-.section-title-main { font-size: 16px; font-weight: 600; color: #162233; letter-spacing: 0.1px; }
-.section-title-extra { font-size: 13px; color: #6D7A95; }
-.section-right { font-size: 15px; font-weight: 600; color: #7E53F8; text-align: right; }
-.photo-row { display: flex; gap: 8px; padding: 0 16px 16px; overflow: hidden; }
-.photo-cell { width: 94px; height: 94px; flex: 0 0 94px; border-radius: 4px; overflow: hidden; position: relative; border: 0.5px solid #D8DCE8; background: #F4F5F8; }
-.photo-add { display: flex; align-items: center; justify-content: center; color: #162233; }
-.photo-add svg { width: 21px; height: 21px; }
-.photo-a { background: linear-gradient(135deg, #30243B 0%, #7551B8 56%, #E8D7FF 100%); }
-.photo-a::after { content: ""; position: absolute; inset: 14px 24px 18px; border-radius: 10px; background: linear-gradient(160deg, #FFFFFF 0%, #CED4E8 100%); box-shadow: 0 8px 20px rgba(0,0,0,.18); }
-.photo-b { background: linear-gradient(135deg, #101624 0%, #20385E 55%, #EFCB5F 100%); }
-.photo-b::after { content: ""; position: absolute; left: 22px; right: 22px; top: 12px; bottom: 12px; border-radius: 5px; border: 2px solid rgba(255,255,255,.85); background: rgba(255,255,255,.18); }
-.photo-c { background: linear-gradient(135deg, #EEE8DF 0%, #B07C54 52%, #2B1B12 100%); }
-.delete-dot { position: absolute; top: 6px; right: 6px; width: 30px; height: 30px; border-radius: 50%; background: #fff; border: 0.5px solid #E0E2E8; display: flex; align-items: center; justify-content: center; color: #434B5E; font-size: 16px; font-weight: 700; }
-.field { height: 74px; margin: 16px 16px 8px; border-radius: 8px; border: 1px solid #E9EAEF; background: #FAFBFC; padding: 12px 14px; display: flex; flex-direction: column; justify-content: center; }
-.field-label { font-size: 17px; font-weight: 600; color: #4F6079; line-height: 22px; }
-.field-value { font-size: 17px; font-weight: 600; color: #162233; line-height: 22px; margin-top: 2px; }
-.desc { height: 110px; margin: 8px 16px 16px; border-radius: 8px; background: #fff; box-shadow: 0 0 5px #E8EAEF; padding: 6px; }
-.desc-inner { height: 100%; border-radius: 4px; border: 0.5px dashed #7D8BA6; background: #FAFBFC; padding: 14px 16px; }
-.desc-hint { font-size: 17px; font-weight: 500; color: #4F6079; line-height: 24px; }
-.desc-sub { margin-top: 6px; font-size: 12px; color: #4F6079; line-height: 16px; }
-.attr-row { height: 74px; display: flex; align-items: center; gap: 16px; padding: 0 16px; }
-.attr-stack { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 2px; }
-.attr-title { display: flex; align-items: center; gap: 4px; color: #4F6079; font-size: 17px; font-weight: 600; line-height: 22px; }
-.attr-title.selected { font-size: 13px; font-weight: 400; line-height: 18px; }
-.attr-optional { font-size: 13px; font-weight: 400; color: #6D7A95; }
-.attr-value { font-size: 17px; font-weight: 600; color: #162233; line-height: 22px; }
-.chev { width: 20px; height: 20px; flex: 0 0 20px; display: flex; align-items: center; justify-content: center; color: #9AA5B8; }
-.divider { height: 8px; background: #F4F5F8; }
-.sell-mode { padding-bottom: 8px; }
-.sale-cell { background: #fff; border-bottom: 1px solid #F0F1F5; }
-.sale-top { min-height: 66px; display: flex; align-items: center; padding: 12px 16px; gap: 16px; }
-.sale-icon { width: 24px; height: 24px; color: #5F66F6; flex: 0 0 24px; }
+body { font-family: -apple-system, "SF Pro Display", BlinkMacSystemFont, system-ui, sans-serif; background: #F9FAFC; display: flex; justify-content: center; padding: 12px; color: #172133; }
+/* Tokens from UTILS/COMPONENTS/Color/JambleColor.swift: content.primary #172133 (Gray.t900), content.secondary #6B7A91 (t600), content.tertiary #A1A8B8 (t400), content.disabled #BDC2CC (t300), content.brand #7D54F7 (Brand.t500), content.negative #D92E21 (Red.t600), border.primary #BDC2CC, border.secondary #D9DEE3, border.tertiary #E8EBF0, bg.secondary #FAFAFC, jamble.gray.t500 #828CA3 */
+.phone { width: 340px; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 20px rgba(126,83,248,0.08); border: 1px solid #E9EAEF; overflow: hidden; padding-bottom: 12px; }
+/* JambleNavigationBar(isModal: false): back control leading (left_arrow_icon 28pt + 4 padding, -8 leading), title body L semibold */
+.top { display: flex; align-items: center; gap: 12px; padding: 16px 16px 0 8px; height: 52px; }
+.back { width: 36px; height: 36px; padding: 4px; flex: 0 0 36px; }
+.back svg { width: 28px; height: 28px; display: block; }
+.nav-title { flex: 1; font-size: 18px; font-weight: 600; line-height: 24px; color: #172133; }
+.form { padding-top: 16px; }
+.sec { padding: 0 16px; }
+.div-m { height: 8px; background: #E8EBF0; margin: 24px 0; }
+.div-s { height: 1px; background: #E8EBF0; margin: 16px 16px; }
+.ftitle { font-size: 16px; font-weight: 600; color: #172133; line-height: 21px; }
+.req { color: #D92E21; font-size: 16px; font-weight: 600; }
+/* CreateProductPhotosSectionView */
+.photos-head { display: flex; align-items: baseline; justify-content: space-between; }
+.rec { font-size: 14px; font-weight: 600; color: #7D54F7; }
+.photo-row { display: flex; gap: 8px; margin-top: 8px; height: 110px; overflow: hidden; }
+.tile { width: 94px; height: 94px; flex: 0 0 94px; border-radius: 8px; position: relative; overflow: hidden; }
+.tile-add { background: #FAFAFC; border: 1px solid #E8EBF0; display: flex; align-items: center; justify-content: center; color: #6B7A91; }
+.tile-add svg { width: 18px; height: 18px; }
+.ph-a { background: linear-gradient(135deg, #30243B 0%, #7551B8 56%, #E8D7FF 100%); }
+.ph-a::after { content: ""; position: absolute; inset: 14px 24px 18px; border-radius: 6px; background: linear-gradient(160deg, #FFFFFF 0%, #CED4E8 100%); box-shadow: 0 8px 20px rgba(0,0,0,.18); }
+.ph-b { background: linear-gradient(135deg, #101624 0%, #20385E 55%, #EFCB5F 100%); }
+.ph-b::after { content: ""; position: absolute; left: 22px; right: 22px; top: 12px; bottom: 12px; border-radius: 5px; border: 2px solid rgba(255,255,255,.85); background: rgba(255,255,255,.18); }
+.xmark { position: absolute; top: 4px; right: 4px; width: 20px; height: 20px; z-index: 2; }
+.xmark svg { width: 20px; height: 20px; display: block; }
+/* FloatingLabelTextField: 56pt min height, radius 8, border.secondary, label XS when floating, M when empty */
+.tf { position: relative; min-height: 56px; border: 1px solid #D9DEE3; border-radius: 8px; background: #FFFFFF; }
+.tf-label { position: absolute; left: 16px; top: 8px; font-size: 12px; color: #A1A8B8; line-height: 16px; white-space: nowrap; }
+.tf-label.empty { top: 18px; font-size: 16px; line-height: 20px; }
+.tf-value { padding: 26px 16px 8px; font-size: 16px; color: #172133; line-height: 20px; white-space: nowrap; overflow: hidden; }
+.tf-value.num { padding-top: 24px; }
+.tf.multi { min-height: 56px; }
+.unit { color: #A1A8B8; font-weight: 600; margin-left: 4px; }
+.gap8 { height: 8px; }
+/* SaleTypeSectionView: rows spaced 24, icon 24 tinted jamble.gray.t500, radio 18 */
+.sale-list { display: flex; flex-direction: column; gap: 24px; }
+.sale-top { display: flex; align-items: center; gap: 12px; }
+.sale-icon { width: 24px; height: 24px; flex: 0 0 24px; }
 .sale-icon img { width: 24px; height: 24px; display: block; }
-.sale-copy { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; }
-.sale-title { font-size: 17px; font-weight: 600; color: #162233; line-height: 22px; }
-.sale-subtitle { font-size: 13px; font-weight: 400; color: #4F6079; line-height: 18px; margin-top: 2px; }
-.radio { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid #7D8BA6; flex: 0 0 18px; display: flex; align-items: center; justify-content: center; }
-.radio.on { border-color: #162233; }
-.radio.on::after { content: ""; width: 10px; height: 10px; border-radius: 50%; background: #162233; display: block; }
-.sale-inputs { display: flex; gap: 16px; padding: 0 16px 12px 56px; }
-.mini-field { flex: 1; height: 74px; border-radius: 8px; border: 1px solid #E9EAEF; background: #FAFBFC; padding: 11px 12px; display: flex; flex-direction: column; justify-content: center; }
-.mini-label { font-size: 14px; color: #4F6079; line-height: 18px; }
-.mini-value { margin-top: 6px; font-size: 17px; font-weight: 600; color: #162233; line-height: 22px; }
-.quantity-cell { height: 74px; margin: 16px 16px 8px; display: flex; flex-direction: column; align-items: stretch; }
-.quantity-title { font-size: 17px; font-weight: 600; color: #162233; line-height: 22px; }
-.quantity-controls { margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 12px; }
-.round-btn { width: 32px; height: 32px; border-radius: 16px; border: 0; background: #F3F4F8; display: flex; align-items: center; justify-content: center; color: #162233; font-size: 22px; line-height: 32px; }
-.qty-value { min-width: 32px; text-align: center; font-size: 17px; font-weight: 600; color: #162233; }
-.prebid-cell { height: 74px; display: flex; align-items: center; padding: 0 16px; gap: 16px; }
-.prebid-copy { flex: 1; min-width: 0; }
-.prebid-title { font-size: 17px; font-weight: 600; color: #162233; line-height: 22px; }
-.prebid-subtitle { font-size: 15px; color: #4F6079; line-height: 20px; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.switch { width: 51px; height: 31px; border-radius: 16px; background: #7E53F8; padding: 2px; display: flex; justify-content: flex-end; flex: 0 0 51px; }
+.sale-copy { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.sale-title { font-size: 16px; font-weight: 600; color: #172133; line-height: 21px; }
+.sale-subtitle { font-size: 14px; color: #6B7A91; line-height: 18px; }
+.radio { width: 18px; height: 18px; flex: 0 0 18px; border-radius: 50%; border: 1.5px solid #BDC2CC; display: flex; align-items: center; justify-content: center; }
+.radio.on { border-color: #7D54F7; }
+.radio.on::after { content: ""; width: 10px; height: 10px; border-radius: 50%; background: #7D54F7; }
+.sale-inputs { display: flex; gap: 12px; margin-top: 8px; }
+.sale-inputs .tf { flex: 1; }
+/* CreateProductQuantitySectionView: title leading, bordered stepper trailing */
+.qty-row { display: flex; align-items: center; gap: 12px; }
+.qty-row .ftitle { flex: 1; }
+.stepper { display: flex; align-items: center; height: 44px; padding: 0 8px; gap: 8px; border: 1px solid #D9DEE3; border-radius: 8px; }
+.step-btn { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; }
+.step-btn svg { width: 14px; height: 14px; }
+.step-btn.off { color: #BDC2CC; }
+.step-btn.onc { color: #172133; }
+.vsep { width: 1px; align-self: stretch; background: #D9DEE3; }
+.qty-val { width: 40px; text-align: center; font-size: 16px; font-weight: 600; color: #172133; }
+/* CreateProductToggleSectionView extended layout: title, then description + switch */
+.tg-body { display: flex; align-items: center; gap: 16px; margin-top: 8px; padding-right: 4px; }
+.tg-desc { flex: 1; font-size: 14px; color: #6B7A91; line-height: 18px; }
+.switch { width: 51px; height: 31px; flex: 0 0 51px; border-radius: 16px; background: #E9E9EB; padding: 2px; display: flex; justify-content: flex-start; }
+.switch.on { background: #7D54F7; justify-content: flex-end; }
 .switch-dot { width: 27px; height: 27px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.24); }
+/* CreateProductAttributeRowView: title (+ required asterisk), value below S regular secondary, chevron trailing */
+.attr-row { display: flex; align-items: center; min-height: 42px; gap: 8px; }
+.attr-stack { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.attr-title { display: flex; gap: 4px; align-items: baseline; }
+.attr-value { font-size: 14px; color: #6B7A91; line-height: 18px; }
+.chev { width: 18px; height: 19px; flex: 0 0 18px; color: #A1A8B8; }
+.chev svg { width: 18px; height: 19px; display: block; }
+.save { margin: 16px 16px 0; height: 56px; border-radius: 28px; background: #7D54F7; color: #FFFFFF; font-size: 18px; font-weight: 600; display: flex; align-items: center; justify-content: center; }
 </style></head><body>
 <div class="phone">
-  <div class="top"><div class="nav-title">New Quickie Listing</div><div class="close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div></div>
-  <div class="collection">
-    <div class="quantity-cell"><div class="quantity-title">Quantity</div><div class="quantity-controls"><div class="round-btn">−</div><div class="qty-value">1</div><div class="round-btn">+</div></div></div>
-    <div class="prebid-cell"><div class="prebid-copy"><div class="prebid-title">Enable Pre-Offer?</div><div class="prebid-subtitle">Offers can be placed before the show starts</div></div><div class="switch"><div class="switch-dot"></div></div></div>
-    <div class="divider"></div>
-    <div class="attr-row"><div class="attr-stack"><div class="attr-title selected">Shipping Profile</div><div class="attr-value">0.18 kg - 0.32 kg (Small Box)</div></div><div class="chev"><svg viewBox="0 0 8 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 1 7 7 1 13"/></svg></div></div>
+  <div class="top"><div class="back"><!-- icon: left_arrow_icon, Assets.xcassets/left_arrow_icon.imageset (Frame 33970.svg), template-tinted content.primary --><svg viewBox="0 0 40 40" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M23.3805 31.3726C24.2085 32.2091 25.5519 32.2091 26.3799 31.3726C27.2067 30.5373 27.2067 29.1839 26.3799 28.3486L18.1162 20L26.3799 11.6514C27.2067 10.8161 27.2067 9.4627 26.3799 8.62739C25.5519 7.79087 24.2085 7.79087 23.3805 8.62739L13.6201 18.488C12.7933 19.3233 12.7933 20.6767 13.6201 21.512L23.3805 31.3726Z" fill="#172133"/></svg></div><div class="nav-title">Create New Listing</div></div>
+  <div class="form">
+    <div class="sec"><div class="qty-row"><div class="ftitle quantity-title">Quantity</div><div class="stepper"><div class="step-btn off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M4 12h16"/></svg></div><div class="vsep"></div><div class="qty-val">1</div><div class="vsep"></div><div class="step-btn onc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 4v16M4 12h16"/></svg></div></div></div></div>
+    <div class="div-s"></div>
+    <div class="sec bundle"><div class="ftitle bundle-title">Bundle</div><div class="tg-body"><div class="tg-desc bundle-desc">Several identical units sold as one listing</div><div class="switch"><div class="switch-dot"></div></div></div></div>
+    <div class="div-s"></div>
+    <div class="sec prebid"><div class="ftitle prebid-title">Enable offers</div><div class="tg-body"><div class="tg-desc prebid-desc">Allow users to make offers before the live starts</div><div class="switch on"><div class="switch-dot"></div></div></div></div>
+    <div class="div-m"></div>
+    <div class="sec"><div class="attr-row row-category"><div class="attr-stack"><div class="attr-title"><span class="ftitle attr-name">Category</span><span class="req">*</span></div><div class="attr-value">Pokemon Cards</div></div><div class="chev"><!-- icon: icon-arrow-right-light, Assets.xcassets/icon/icon-arrow-right-light.imageset --><svg viewBox="0 0 18 19" fill="none"><path d="M6.31608 3.08228C5.89464 3.52533 5.89464 4.24365 6.31608 4.6867L10.8947 9.50001L6.3161 14.3133C5.89465 14.7563 5.89465 15.4747 6.3161 15.9177C6.73754 16.3608 7.42084 16.3608 7.84228 15.9177L13.1823 10.304C13.1933 10.2925 13.204 10.2807 13.2144 10.2688C13.6051 9.82377 13.5949 9.12983 13.1839 8.69773L7.84227 3.08229C7.42083 2.63924 6.73753 2.63924 6.31608 3.08228Z" fill="currentColor"/></svg></div></div></div>
+    <div class="div-s"></div>
+    <div class="sec"><div class="attr-row row-condition"><div class="attr-stack"><div class="attr-title"><span class="ftitle attr-name">Condition</span><span class="req">*</span></div><div class="attr-value">Near Mint</div></div><div class="chev"><!-- icon: icon-arrow-right-light, Assets.xcassets/icon/icon-arrow-right-light.imageset --><svg viewBox="0 0 18 19" fill="none"><path d="M6.31608 3.08228C5.89464 3.52533 5.89464 4.24365 6.31608 4.6867L10.8947 9.50001L6.3161 14.3133C5.89465 14.7563 5.89465 15.4747 6.3161 15.9177C6.73754 16.3608 7.42084 16.3608 7.84228 15.9177L13.1823 10.304C13.1933 10.2925 13.204 10.2807 13.2144 10.2688C13.6051 9.82377 13.5949 9.12983 13.1839 8.69773L7.84227 3.08229C7.42083 2.63924 6.73753 2.63924 6.31608 3.08228Z" fill="currentColor"/></svg></div></div></div>
+    <div class="div-s"></div>
+    <div class="sec"><div class="attr-row row-type"><div class="attr-stack"><div class="attr-title"><span class="ftitle attr-name">Type</span><span class="req">*</span></div><div class="attr-value">Card</div></div><div class="chev"><!-- icon: icon-arrow-right-light, Assets.xcassets/icon/icon-arrow-right-light.imageset --><svg viewBox="0 0 18 19" fill="none"><path d="M6.31608 3.08228C5.89464 3.52533 5.89464 4.24365 6.31608 4.6867L10.8947 9.50001L6.3161 14.3133C5.89465 14.7563 5.89465 15.4747 6.3161 15.9177C6.73754 16.3608 7.42084 16.3608 7.84228 15.9177L13.1823 10.304C13.1933 10.2925 13.204 10.2807 13.2144 10.2688C13.6051 9.82377 13.5949 9.12983 13.1839 8.69773L7.84227 3.08229C7.42083 2.63924 6.73753 2.63924 6.31608 3.08228Z" fill="currentColor"/></svg></div></div></div>
+    <div class="div-s"></div>
+    <div class="sec"><div class="attr-row row-shipping"><div class="attr-stack"><div class="attr-title"><span class="ftitle attr-name">Shipping profile</span><span class="req">*</span></div><div class="attr-value">Automatic (2 g · 8,8 × 6,3 × 0,05 cm)</div></div><div class="chev"><!-- icon: icon-arrow-right-light, Assets.xcassets/icon/icon-arrow-right-light.imageset --><svg viewBox="0 0 18 19" fill="none"><path d="M6.31608 3.08228C5.89464 3.52533 5.89464 4.24365 6.31608 4.6867L10.8947 9.50001L6.3161 14.3133C5.89465 14.7563 5.89465 15.4747 6.3161 15.9177C6.73754 16.3608 7.42084 16.3608 7.84228 15.9177L13.1823 10.304C13.1933 10.2925 13.204 10.2807 13.2144 10.2688C13.6051 9.82377 13.5949 9.12983 13.1839 8.69773L7.84227 3.08229C7.42083 2.63924 6.73753 2.63924 6.31608 3.08228Z" fill="currentColor"/></svg></div></div></div>
+    <div class="div-s"></div>
   </div>
-  <div class="footer enabled">Add Listing</div>
+  <div class="save">Save</div>
 </div></body></html>

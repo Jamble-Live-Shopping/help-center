@@ -2,7 +2,7 @@
 
 ## What you'll learn
 
-This guide explains how direct messages (DMs) work for sellers on Jamble. You'll learn how to access your messages, communicate with buyers about orders, send photos, and manage your inbox. DMs are your main channel for communicating with buyers outside of live shows.
+This guide explains how direct messages (DMs) work for sellers on Jamble. You'll learn how to access your messages, communicate with buyers about products and orders, send photos, and organize your inbox. DMs are your main channel for communicating with buyers outside of lives.
 
 ## Before you start
 
@@ -11,18 +11,24 @@ You need:
 
 ## Where to find your messages
 
-All your conversations are in the **Activity** tab — one of the main tabs at the bottom of your screen.
+All your conversations are in the **Activity** tab, one of the main tabs at the bottom of your screen. At the top of the Activity screen you see the filters and, right below, your conversation list:
 
-![Activity screen with tab bar showing All, Unread, Purchases, and Sales tabs with conversation list below](./assets/mockups/direct-messages-for-sellers__activity-tabs__en.png)
+![Activity screen with the All, Messages and Unread filters and the conversation list with one unread conversation highlighted](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/direct-messages-for-sellers__activity-tabs__en__v3.png)
 
-At the top, you'll see filter tabs to organize your conversations:
+The **All** filter is selected by default. A conversation with a new message shows a **gray background**, a purple time and a **purple dot** on the right.
 
-- ****All**** — Every conversation you have
-- ****Unread**** — Only conversations with new messages you haven't read
-- ****Purchases**** — Conversations about items you bought from other sellers
-- ****Sales**** — Conversations about items you sold — this is your main tab as a seller
-- ****Archived**** — Conversations you've archived
-As a seller, the **Sales** tab is where you'll spend most of your time. It shows all conversations related to your sales — buyer questions, order confirmations, and shipping discussions.
+Swipe the filters sideways to see all of them:
+
+- **All**: every conversation you have
+- **Messages**: conversations that are not about an order, such as questions and offers about your products
+- **Unread**: conversations with new messages you haven't read yet
+- **Purchases**: conversations about orders you bought from other sellers
+- **Sales**: conversations about orders you sold
+- **Archived**: conversations you've archived
+
+As a seller, use **Messages** to answer questions before a purchase and **Sales** to follow orders that were already placed.
+
+To find a specific conversation, tap the **magnifying glass** at the top of the Activity screen and search by name, product, order number or message.
 
 ## Types of conversations
 
@@ -30,41 +36,37 @@ Not all conversations look the same. There are three types:
 
 ### Direct messages
 
-When someone taps **"Message"** on your profile, it creates a simple one-on-one conversation — just you and the other person chatting. There's no product or order attached.
+When someone taps **Message** on your profile, it opens a simple conversation between the two of you, with no product or order attached.
 
 ### Product conversations
 
-When a buyer makes an offer on one of your products, a conversation is automatically created with the **product details at the top**. You can discuss the product, negotiate, and manage offers within this conversation.
+When a buyer messages you from one of your shop products, or makes an offer on a product, the conversation shows **the product at the top**. You can answer questions about the product and respond to the buyer's offer in that same conversation.
 
-![Product message thread showing product card with image, name, price, and conversation between buyer and seller](./assets/mockups/direct-messages-for-sellers__product-message-thread__en.png)
+### Order conversations
 
-### Transaction conversations
+After a sale, a conversation with the buyer shows up automatically with the **order details**. If you were already chatting about that shop product, the order is added to the same conversation. This is where you coordinate shipping and answer questions after the sale.
 
-When a sale is completed, a conversation is created (or updated) with the **transaction details** — product info, order status, and shipping address. This is where you coordinate shipping and handle any post-sale questions.
-
-The conversation includes action buttons for confirming orders, reviewing details, and managing the transaction.
+Depending on the order stage, the conversation shows action buttons related to that order.
 
 ## How to start a conversation
 
 ### Message someone first
 
-You can message any user on Jamble:
+You can message another Jamble user:
 
 1. Go to their **profile**
-2. Tap the **"Message"** button (next to the "Follow" button)
+2. Tap the **Message** button (next to the **Follow** button)
 3. Type your message and send
 
-![user-profile-header showing @username with 1.2k followers and Follow and Message action buttons](./assets/mockups/direct-messages-for-sellers__user-profile-header__en.png)
-
-If you've already chatted with this person, it opens your existing conversation. If not, a new conversation is created when you send your first message.
+If you've already chatted with this person, your existing conversation opens. If not, a new conversation is created when you send your first message.
 
 ### Automatic conversations
 
-You don't always need to start a conversation yourself. Jamble automatically creates conversations when:
+You don't always need to start a conversation yourself. A conversation shows up in your Activity tab when:
 
-- A buyer **makes an offer** on your product
-- A buyer **completes a purchase** from you
-- Someone **contacts you** through your profile
+- A buyer **messages you** about one of your shop products
+- A buyer **makes an offer** on one of your products
+- A buyer **buys** from you
 
 ## What you can send
 
@@ -74,87 +76,91 @@ Type a message up to **500 characters** and tap the send button. Messages are de
 
 ### Photos
 
-Tap the **camera icon** next to the text field to send photos:
+Tap the **photo icon** next to the text field to send photos:
 
-- **On iOS**: Select up to **6 photos** from your gallery
-- **On Android**: Select up to **10 photos** from your gallery, or **take a photo** directly with your camera
+- **On iPhone**: select up to **6 photos** from your gallery
+- **On Android**: select up to **10 photos** from your gallery, or **take a photo** directly with your camera
 
-Photos are useful for showing product details, packaging, shipping labels, or answering buyer questions about condition.
+Photos are useful for showing product details, packaging, or answering buyer questions about the item's condition.
 
 ### What you can't send
 
-DMs are for text and photos only. You cannot send voice messages, videos, files, or links with previews.
+DMs accept text and photos only. You can't send voice messages, videos or files.
 
-## Managing your inbox
+## Organizing your inbox
 
 ### Unread indicators
 
 When you have unread messages:
-- A **badge** appears on the Activity tab showing the number of unread conversations
-- Unread conversations appear with a **colored dot** next to them
-- Unread conversations have a **slightly different background** to stand out
+- A **number** appears on the Activity tab
+- The unread conversation shows a **gray background** and a **purple dot** next to it
 
 ### Archiving conversations
 
 To archive a conversation you don't need right now:
 
-1. **Long press** on the conversation in your list
-2. Select **"Archive"**
+- **On iPhone**: long press the conversation in your list and tap **Archive**
+- **On Android**: swipe the conversation to the left and tap **Archive**
 
-The conversation moves to the **Archived** tab. To bring it back, go to the Archived tab, long press the conversation, and select **"Unarchive"**.
+The conversation moves to the **Archived** filter. To bring it back, open that filter, use the same gesture on the conversation and tap **Unarchive**.
 
 ### Deleting a message
 
 If you sent a message by mistake:
 
-1. **Long press** on the message you want to delete
-2. Select **"Delete"**
+1. **Long press** the message you want to delete
+2. Tap the option to **delete** the message
 
-The other person will see **"Message unsent"** instead of your original message. You can only delete your own messages.
+The message is removed from the conversation. You can only delete your own messages.
+
+### Read receipts
+
+Below your last message you see the time it was sent. When the other person reads it, a **read icon** appears next to the time.
 
 ## Notifications
 
-You receive a **push notification** for every new message in a private conversation. The notification shows:
+You receive a **notification** for every new message in a private conversation. The notification shows:
 
 - The sender's name
-- The message preview (or "Just sent you a photo" for image messages)
-- The product image if the conversation is about a specific product
+- The message text (or "Just sent you a photo" for photo messages)
+- The product image, if the conversation is about a product
 
 Tap the notification to go directly to that conversation.
 
-If you're not receiving notifications, make sure notifications are enabled for Jamble in your phone's settings.
+If you're not receiving notifications, make sure notifications are enabled for Jamble in your phone's settings and that the **Messages** option is turned on in the app's notification settings.
+
+## Staying safe in conversations
+
+- **Keep conversations on Jamble.** Messages with personal details, such as a phone number or email, or with invitations to continue the conversation on other platforms, are blocked and never reach the buyer
+- **Offensive messages are blocked too.** Always keep the conversation respectful
+- **Blocked users can't message you.** If someone is being inappropriate, open their profile, tap the options menu and choose **Block**
 
 ## Important tips
 
-- **Respond quickly to buyer questions.** Fast responses build trust and can make the difference between a sale and a lost buyer. Check your Activity tab regularly
-- **Use the Sales tab.** It filters to show only conversations about your sales, so you can focus on what matters
-- **Send photos to answer questions.** If a buyer asks about product condition, a quick photo is worth a thousand words
-- **Don't share personal information.** Keep conversations within Jamble. Don't share personal phone numbers, email addresses, or social media accounts in DMs
-- **Check your Archived tab occasionally.** You might have archived a conversation that later needs follow-up (shipping issue, return request)
-- **Blocked users can't message you.** If someone is being inappropriate, you can block them from their profile — they won't be able to send you messages anymore
+- **Respond quickly to buyer questions.** Fast responses build trust and can make the difference between a sale and a lost buyer
+- **Use the Messages and Sales filters.** They separate pre-purchase questions from order conversations
+- **Send photos to answer questions.** If a buyer asks about the product's condition, a quick photo settles it
+- **Check your archived conversations occasionally.** You might have archived a conversation that later needs follow-up, such as a shipping issue
 
 ## Common questions
 
 **Can buyers message me before buying anything?**
-Yes. Anyone can tap "Message" on your profile to start a conversation, even if they've never purchased from you.
+Yes. A buyer can tap **Message** on your profile or message you from one of your shop products, even if they've never purchased from you.
 
 **Do I get a conversation for every sale automatically?**
-Yes. Every completed transaction automatically creates a conversation between you and the buyer, with the product and order details attached.
+Yes. After each sale, a conversation with the buyer shows up with the order details.
 
-**Can I message all my past buyers at once?**
-No. Jamble doesn't have a broadcast or bulk messaging feature. You can only message buyers one by one through their individual conversations.
-
-**Is there a limit to how many messages I can send?**
-There's a rate limit to prevent spam — you can send a few messages per conversation every few seconds. Normal conversation speed is never affected. If you're sending messages too fast, slow down briefly and try again.
+**Can I message all my buyers at once?**
+No. Jamble doesn't have a bulk messaging feature. You message each buyer in their own conversation.
 
 **Can I see if the buyer read my message?**
-Yes. You can see when your last message has been read by the other person.
+Yes. When the other person reads your last message, a read icon appears next to the time.
 
-**What's the difference between the show chat and DMs?**
-The show chat is public — everyone in your live show sees the messages. DMs are private — only you and the other person can see the conversation. Use DMs for personal communication with specific buyers.
+**What's the difference between the live chat and DMs?**
+The live chat is public: everyone in the live sees the messages. DMs are private: only you and the other person can see the conversation. Use DMs to talk to a specific buyer.
 
-**Are DMs available on both iOS and Android?**
-Yes. The messaging feature works on both platforms with the same functionality.
+**Are DMs available on both iPhone and Android?**
+Yes. Messaging works on both platforms. Some details differ, such as the photo limit per send and the gesture to archive a conversation.
 
 ## Need help?
 

@@ -1,34 +1,64 @@
 # Code Audit — how-to-list-products-on-jamble
 
-Date: 2026-05-12
+Date: 2026-11-13 (5.11 fidelity pass; previous audit 2026-05-12)
 Intercom ID: 14288093
 
-## Source Review
+Sources (released only): iOS tag `5.11` (`Jamble/`), Android tag `v5.11.0`, `jamble_backend` `origin/main` (prod).
 
-| Source | Evidence | Article impact |
+## What changed in 5.11
+
+The iOS listing form is now SwiftUI and server-driven (`PRODUCT/Views/SwiftUI/CreateProductView.swift`). Field titles, placeholders, toggle copy and attribute values come from `jamble_backend/src/services/product_service.py` `get_product_edition_fields`; Android v5.11.0 consumes the same endpoint. Only the nav title, Save button, photo helper and sale-type rows are localized in iOS `Localizable.xcstrings`. The old UIKit cells (`SelectPhotoHeaderView`, `CreateProductDescriptionCell`, `PreBidToggleCell`, `ProductShippingProfile`) no longer exist in 5.11.
+
+## Label map (old -> 5.11)
+
+| Mockup | Old label | 5.11 label (pt-BR / EN) | Source |
+| --- | --- | --- | --- |
+| all | Nova listagem rápida / New Quickie Listing | Criar Novo Anúncio / Create New Listing | iOS `CreateProductView.swift` navigationTitle, xcstrings (pt-BR only, EN = key) |
+| all | Adicionar produto / Add Listing | Salvar / Save | iOS `CreateProductView.swift` saveButtonTitle, xcstrings `Save` |
+| listing-basics | Selecione uma foto / Select a Photo | Selecionar uma Foto / Choose a picture | jamble_backend `product_service.py:2931` |
+| listing-basics | 3 recomendado / 3 recommended | 3 recomendadas / 3 recommended | iOS `CreateProductPhotosSectionView.swift:24`, xcstrings plural `%lld recommended` |
+| listing-basics | Título (label) | Detalhes do Produto (header) + Título* (placeholder) / Product Details + Title* | jamble_backend `product_service.py:2942-2943` |
+| listing-basics | Descrição (opcional) + helper line | Descrição / Description (placeholder, no helper) | jamble_backend `product_service.py:2955` |
+| listing-basics | Categoria row | moved to quantity-shipping mockup (server order puts it after pre-offers) | jamble_backend `product_service.py:3124` |
+| selling-mode-price | Comece em | Começar em / Start at | xcstrings `Start at` (`SaleTypeSectionView.swift:152`) |
+| selling-mode-price | Duração (segundos) / Timer (Seconds) | Temporizador + unit seg / Timer + sec | xcstrings `Timer`, `sec` (`SaleTypeSectionView.swift:155`) |
+| selling-mode-price | A última oferta vence ao final do tempo (no period) / The last offerer wins... | A última oferta vence ao final do tempo. / The last offer wins when the time runs out. | xcstrings key `The last bidder wins at the end of the time.` |
+| selling-mode-price | ...even if someone make an offer. | Sem tempo adicional, mesmo que alguém dê uma oferta. / No added time, even if someone makes an offer. | xcstrings key `No added time, even if someone bids. ` |
+| selling-mode-price | Radio dark, start R$ 75,00 | Radio brand purple, default start R$ 5 (currency minimum) | `SaleTypeSectionView.swift:136-147,228-256` |
+| quantity-shipping | Quantidade with centered round buttons | Quantidade title left, bordered minus/value/plus right | `CreateProductQuantitySectionView.swift`; title jamble_backend `product_service.py:2980` |
+| quantity-shipping | (absent) | Lote / Bundle + description toggle | jamble_backend `product_service.py:2998-3002` |
+| quantity-shipping | Ativar Pré-oferta? / Enable Pre-Bid? + As ofertas podem ser feitas antes do início da live | Ativar pré-ofertas / Enable offers + Permitir que usuários façam ofertas antes do início da live | jamble_backend `product_service.py:3059-3063` |
+| quantity-shipping | Perfil de remessa / Shipping Profile, value "0.18 kg - 0.32 kg (Small Box)" | Perfil de envio* / Shipping profile*, value Automático (2 g · 8,8 × 6,3 × 0,05 cm) | jamble_backend `product_service.py:3340`, `src/entities/shipping_infos.py:47-56`, `src/entities/item_spec.py:68` |
+| quantity-shipping | (absent) | Categoria* Cartas de Pokémon, Condição* Quase Mint, Tipo* Carta Individual | jamble_backend `configs/attributes/category.json`, `condition.json`, `item_type.json`, `configs/categories/pokemon_cards.json` |
+
+## Article claims
+
+| Claim | Source | Verdict |
 | --- | --- | --- |
-| `CreateProductViewModel.swift:167-180` | Title is capped at 60 characters and description at 120 characters. | Article states the exact limits. |
-| `CreateProductViewModel.swift:528-545` | Quick upload sections include photos, title, description, sell mode, quantity, pre-bid toggle, shipping profile, category, size, color, brand, condition, retail price. | Article separates required and optional fields without inventing a full screen. |
-| `CreateProductViewModel.swift:780-804,836-858` | Required-field check includes title, quantity, price, shipping profile, category where present, and save assigns product fields. | Article says the app blocks saving when required fields are missing. |
-| `CreateProductViewModel.swift:307-323,591-596,706-713,873-878` | Quantity clamps to 1..1000 for sell modes; quantity greater than 1 disables pre-offers; pre-offer is only added when eligible. | Article documents quantity/pre-offer interaction. |
-| `CreateProductViewModel.swift:892-938` | Auction/Sudden Death/Buy It Now validate starting price against `currency.minPrice`; flash sale fields have separate validations. | Article describes price/start price safely. |
-| `SellModeDefaultCell.swift:181-227` | Real-time offer, Sudden Death, and Buy It Now fields are configured with Start at/Price and timers. | Article summarizes mode differences without duplicating UI. |
-| `CreateProductViewController.swift:323-412,740-888` | Quick listing sections route photos, title, description, sell mode, quantity, pre-offer toggle, shipping profile, and category cells. | Three mockups now show the central form areas instead of leaving the article text-only. |
-| `SelectPhotoHeaderView.swift:19-57,79-104` + `SelectPhotoFirstCell.swift:18-31,61-87` | Photo header label, 3 recommended helper, and add-photo tile placement. | Listing-basics mockup uses the actual photo row shape and localized labels. |
-| `ProductAttributeCell.swift:64-70,82-101,116-124` | Attribute rows use a vertical small label plus selected value and trailing chevron. | Category and shipping profile rows avoid the horizontal label/value false-negative class from batch real-2. |
-| `CreateProductQuantityCell.swift:26-39,80-127` + `PreBidToggleCell.swift:31-58,67-99` | Quantity has a centered minus/value/plus control; pre-offer toggle has title/subtitle leading and switch trailing. | Quantity-shipping mockup mirrors the iOS parent layout and visible copy. |
-| `ProductShippingProfile.swift:10-18,24-43` | Shipping profile carries title, description, and min/max weight display. | Article says profile should match the packaged item. |
-| `Price.swift:194-222` | BRL symbol is R$, min price is 5.0, max price is 5000.0. | Article uses R$ and states R$ 5,00 minimum. |
+| Required fields carry a red asterisk | `CreateProductFieldTitleView.swift:15-18`, `FloatingLabelTextField.swift` placeholder + `*` | MATCH |
+| Title required, under Detalhes do Produto | `product_service.py:2939-2949` (required=True) | MATCH |
+| Description optional | `product_service.py:2951-2961` (required=False) | MATCH |
+| Three sale types in a live: Oferta em tempo real, Comprar agora, Morte súbita | `product_service.py` allowed_sale_types; `ShowSaleType.swift` | MATCH |
+| Começar em + Temporizador for offers modes, Preço for Comprar agora | `SaleTypeSectionView.swift:149-170` | MATCH |
+| Minimum price R$ 5 | `Price.swift` BRL minPrice 5; shown to users as "Valor mínimo: R$ 5" (`CreateProductViewModel.swift:256-268`) and as the default start value | MATCH |
+| Store listings use a fixed price | `product_service.py` non-show branch serves a single `price` field | MATCH |
+| Preço de Varejo optional | `product_service.py:3090-3104` | MATCH |
+| Lote + Unidades do lote | `product_service.py:2994-3031` | MATCH |
+| Ativar pré-ofertas only for Oferta em tempo real / Morte súbita with quantity 1 | `product_service.py:2886-2906` | MATCH |
+| Perfil de envio options Automático / Informar peso e tamanho / custom profiles; Automático shows weight and size in parentheses | `product_service.py:3128-3210`, `shipping_infos.py:47-56` | MATCH |
+| Criar anúncio na Loja entry | xcstrings `Create a Store listing` = Criar anúncio na Loja | MATCH |
 
-## Negative Scan
+## Removed code-only numbers
 
-| Removed claim | Reason |
-| --- | --- |
-| Cross-slug mockup images | Existing images referenced `new-seller-guide-to-listing-products`, not this article. |
-| USD price examples | Brazil help center must use R$. |
-| Product list/store absolute claim | The code supports multiple product upload modes; the article now focuses on show listing without saying every product is always listed only in a show. |
-| Flash Sale as universal Buy It Now behavior | Flash sale validation exists, but this central listing article now points to the dedicated Buy It Now article instead of over-documenting. |
+Title 40 and description 120 character caps and the quantity range 1 to 1.000 are enforced in code (`max_length`, `max_value`) but never displayed in the 5.11 UI, so they were removed from the article per content rules.
+
+## Not verified
+
+- Seller Hub labels (Criar Novo Produto, Importar CSV, Clonar anúncios) were not re-checked in this pass (web, out of scope of the 5.11 app sources).
+- The 2:3 product photo recommendation is an editorial decision from an earlier commit, not re-verified against app code.
+- Visual fidelity is code-only (no simulator capture in this pass).
+- 5.11 apps get the legacy "Abertura ao Vivo" toggle for openable items; the "Abrir em Live" radio is 5.11.1+ only. Neither is shown or described in this article.
 
 ## Verdict
 
-Ship-ready. The article is source-backed, replaces stale imagery with three iOS-anchored mockups, and uses visible_text contracts for localized labels.
+Labels in all three mockups trace to iOS 5.11 xcstrings or the prod backend builder; no open MISMATCH.

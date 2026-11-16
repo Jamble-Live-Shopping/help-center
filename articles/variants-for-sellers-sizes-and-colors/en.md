@@ -2,87 +2,84 @@
 
 ## What you'll learn
 
-How size and color work when listing products on Jamble, and how to handle the same item in multiple sizes or colors using the **Clone Past Shows Listings** option.
+How size and color work when listing products on Jamble, and how to sell the same item in several sizes or colors with the **Clone listings** option.
 
 ## Before you start
 
 You need:
 
 - An approved seller account on Jamble
-- A show with products to list
+- A live with products to list
 
-## The core rule, one product, one size, one color
+## The main rule: one product, one size, one color
 
-On Jamble, each listing has **one size** and **one color**. There is no "variants" field in the app, and no editor that lets you tag multiple sizes on a single listing.
+On Jamble, each listing has **one size** and **one color**. There is no "variants" field in the app, and no way to mark several sizes in the same listing.
 
-If you sell the same item in more than one size or color, you create **one listing per combination**. For example, a t-shirt in sizes S, M, and L becomes three listings, each with its own price, photos, quantity, **Size**, and **Color**.
+If you sell the same item in more than one size or color, create **one listing for each combination**. For example, a T-shirt in sizes S, M and L becomes three listings, each with its own price, photos, quantity, **Size** and **Color**.
 
-Brazil context: most of the GMV in the country is collectibles (Pokemon cards, Diecast), where items rarely vary by size or color. The "one product, one size, one color" rule still applies, but you'll rarely need to create multiple listings for the same item.
+Most collectibles, such as cards and diecast models, have no size or color. In those cases, you don't need to worry about this rule.
 
-## Where size and color appear in the form
+## Where size and color show up in the form
 
-When creating a product, you'll see two cells: **Size** and **Color**. The **Size** field only appears after you select the full category (Gender, Category, Subcategory). The **Color** field is always available.
+In fashion categories, such as clothing and footwear, the product creation form shows the **Size** and **Color** fields once you choose the item's category.
 
-![Size and Color cells in the product creation form, each with a selected value](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/variants-for-sellers-sizes-and-colors__screen-1__en__v3.png)
+![Size and Color fields in the product creation form, each with a selected value](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/variants-for-sellers-sizes-and-colors__screen-1__en__v3.png)
 
-Tap each cell to open the picker. Size shows category-dependent options (for example, S, M, L for t-shirts; US numbers for shoes). Color shows the available color grid.
+Tap each field to choose. The **Size** options depend on the category (for example, S, M and L for T-shirts, or shoe sizes for footwear). For **Color**, you pick from the list of colors.
 
 ## Set the listing quantity
 
-The **Quantity** cell defines how many **identical** units the listing covers, with the same size and the same color. The default is 1. The minimum is 1 and the maximum is **1,000** per listing.
+The **Quantity** field sets how many **identical** units the listing has, with the same size and the same color.
 
-If you have 5 size-S t-shirts in the same color, make one listing with quantity 5. If those 5 t-shirts span different sizes, you need 5 separate listings, each with quantity 1.
+If you have 5 size S T-shirts in the same color, create one listing with quantity 5. If the 5 T-shirts are in different sizes, you need 5 separate listings, each with quantity 1.
 
-## List the same item across multiple sizes
+## List the same item in several sizes
 
-Scenario: you have a Nike Air Max in sizes 40, 41, and 42, all in black.
+Example: you have a Nike Air Max in sizes 40, 41 and 42, all in black.
 
-You need 3 listings. To avoid retyping the same details three times, use **Clone Past Shows Listings** from the add-product menu inside your show.
+You need 3 listings. To avoid typing the same details three times, use **Clone listings** in the live's add-products menu.
 
-![Add-product menu inside a show with the Clone Past Shows Listings option visible](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/variants-for-sellers-sizes-and-colors__screen-2__en__v4.png)
+![The live's add-products menu with the Clone listings option highlighted](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/variants-for-sellers-sizes-and-colors__screen-2__en__v5.png)
 
-Recommended flow:
+Step by step:
 
-1. Create the first listing in full (photos, title, description, price, **Quantity**, **Size** 40, **Color**).
-2. In the next show (or in the same show, by re-opening the add-product menu), tap **Clone Past Shows Listings** to reimport the listing.
-3. Edit only the **Size** and the title on the copy. Save.
+1. Create the first complete listing (photos, title, description, price, **Quantity**, **Size** 40 and **Color**).
+2. In your next live, or in the same live, open the add-products menu and tap **Clone listings** to bring in a copy of the listing.
+3. In the copy, change only the **Size** and the title. Save.
 4. Repeat for sizes 41 and 42.
 
-Cloning brings photos, description, price, brand, and category from the original. You only change what needs to be different, in this case, the size.
+The copy brings the photos, description, price, category and other details of the original listing. You only change what needs to be different, in this case, the size. See more in [Duplicate (Clone) Products](https://intercom.help/jamble-bb4bea116bbe/en/articles/14288110).
 
-## The result, multiple listings of the same item in the show
+## The result: several listings of the same item in the live
 
-In the show, the three sizes appear as three distinct products in the seller's product list. Buyers pick the one that fits, and Jamble shows the size of each product during the live sale.
+In the live, the three sizes show up as three different products in your list. Buyers choose the one that fits them, and the size of each product shows during the sale.
 
-![Seller products list inside a show, with three Nike Air Max listings in sizes 40, 41, and 42](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/variants-for-sellers-sizes-and-colors__screen-3__en__v3.png)
+![Seller's product list inside a live, with three listings of the same Nike Air Max in sizes 40, 41 and 42](https://raw.githubusercontent.com/Jamble-Live-Shopping/help-center/main/assets/mockups/variants-for-sellers-sizes-and-colors__screen-3__en__v3.png)
 
-Each listing has its own quantity. When a unit is sold, that listing's count drops by 1; when it hits zero, that size is marked sold out, without affecting the others.
+Each listing has its own quantity. When a unit sells, that listing's quantity goes down. When it reaches zero, only that size is sold out, without affecting the others.
 
 ## Important tips
 
-- **Put the size in the title.** Buyers scroll fast during shows. "Nike Air Max 90, 42, black" is immediately clear.
-- **Use "Multi" for multi-colored items.** If the item has more than one prominent color (a patterned t-shirt, a multicolor sneaker), pick **Multi** in the color grid instead of one single color.
-- **Use "One Size" for universal items.** Hats, bags, and most accessories use **One Size**.
-- **Use "Others" for sizes outside the list.** If the exact size of your item isn't in the options (for example, EUR 46), pick **Others** and mention the exact size in the title or description.
-- **Check before cloning.** After cloning, always review photo, price, and size before publishing the copy. Cloning keeps everything from the original, including things you may want to change.
+- **Put the size in the title.** Buyers look quickly during a live. "Nike Air Max 90, 42, black" is clear right away
+- **Use Multi for items with several colors.** If the item has more than one main color, such as a printed T-shirt, choose **Multi** instead of a single color
+- **Use One Size for universal items.** Caps, bags and most accessories use **One Size**
+- **Use Other Size when yours is not in the list.** Choose **Other Size** and put the exact size in the title or description
+- **Review the copy before publishing.** The copy keeps everything from the original. Check the photo, price and size before saving
 
-## Common questions
+## Frequently asked questions
 
-**Can I add multiple sizes to one listing?**
-No. Each listing has exactly one size. If you have the same item in several sizes, create one listing per size. Use **Clone Past Shows Listings** to speed it up.
+**Can I put several sizes in the same listing?**
+No. Each listing has one size. If you have the same item in several sizes, create one listing for each size. Use **Clone listings** to save time.
 
-**Can I select multiple colors for one listing?**
-No. Each listing has one color. If the item has several colors, select **Multi**.
+**Can I choose several colors in the same listing?**
+No. Each listing has one color. If the item has several colors, choose **Multi**.
 
 **Why don't I see the Size field?**
-The Size field only appears after you select the full category (Gender, Category, Subcategory). If any of the three is missing, the field is not displayed.
+The **Size** field shows up in fashion categories, such as clothing and footwear, once you choose the item's category. In categories like cards and collectibles, it doesn't show up.
 
 **Are size and color required?**
-For show listings, they're optional but strongly recommended. Buyers use this information to decide; without it, the listing saves, but converts less.
-
-**Is a variants feature coming?**
-Jamble has no variants field today. If one is added in the future, this article will be updated. For now, the official path is the one above.
+No, but we recommend filling them in. Buyers use this information to decide.
 
 ## Need help?
 
-Reach out via the in-app chat or email support@jambleapp.com.
+Contact our support team in the app, under Profile > Settings > Contact customer support.
